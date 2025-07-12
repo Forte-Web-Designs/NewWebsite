@@ -1,0 +1,151 @@
+import Image from 'next/image';
+import { OptimizedImage } from '@/components/images/OptimizedImage';
+import LightButton from '@/components/LightButton';
+
+const data = [
+  {
+    title: "Introducing Forte Solutions™",
+    description: "We believe small businesses deserve more than cookie-cutter websites. Forte Solutions™ is our complete ecosystem — combining strategy, handcrafted design, optimized performance, and long-term care into one seamless experience."
+  },
+  {
+    title: "Forte Growth™",
+    description: "Our most popular all-in-one monthly plan. For $200/month, you get a custom-coded website, hosting, and Forte Care™ baked in — so your site stays fast, fresh, and fully supported as your business grows."
+  },
+  {
+    title: "Forte Essential™",
+    description: "A simpler, budget-friendly version of our custom-coded sites. Same clean code, just fewer pages and features—perfect for startups or local service providers."
+  },
+  {
+    title: "Forte Pro™",
+    description: "Our premium handcrafted website. Built for scalability, elite SEO performance, and lasting speed. Designed from the ground up to be a revenue-generating asset."
+  },
+  {
+    title: "Forte SiteRefresh™",
+    description: "Already have a site? We'll modernize your design, clean up code, and boost performance — without rebuilding from scratch."
+  },
+  {
+    title: "Forte Guarantee™",
+    description: "If you're not 100% satisfied with your design, we'll revise it until you are — or refund your payment. No risk, no pressure."
+  },
+];
+
+export default function ServicesPage() {
+  return (
+    <div className=" overflow-hidden">
+      {/* Hero Section */}
+      <section className="py-16 md:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className='max-w-3xl mx-auto text-center sm:gap-[24px] gap-[22px] grid'>
+            <div className="flex gap-2 md:justify-center items-center ">
+              <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} />
+              <span className="text-[#8D9DFF] sm:text-[24px] text-[12px] font-normal leading-[12px] sm:leading-[24px] ">Complete Ecosystem</span>
+            </div>
+            <div className="">
+              <h1 className="font-roboto font-medium text-[32px] sm:text-[62px] sm:leading-[62px] leading-[40px] tracking-[-1.24px] sm:text-center text-start align-middle text-black dark:text-[#FFFFFF]">
+                {data[0].title}
+              </h1>
+            </div>
+            <div className="">
+              <p className="font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262]  dark:text-[#B4B4B4]">
+                {data[0].description}
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      {/* Why Business Owners Choose Forte */}
+      <section className="py-9   md:px-10 sm:px-6 lg:px-0 md:py-16">
+        <div className="container mx-auto xxl:px-8 sm:px-6 lg:px-8 px-4  grid gap-[40px] ">
+          <h2 className="font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal align-middle text-center text-black dark:text-[#FFFFFF]">
+            Why Business Owners Choose Forte
+          </h2>
+
+          <div className="grid md:grid-cols-3  md:py-8 md:justify-around  mx-auto sm:gap-[20px] gap-[40px] text-center">
+            <div className="text-center mx-auto">
+              <h3 className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]" >
+                Strategic design that converts visitors to customers
+              </h3>
+            </div>
+
+            <div className="text-center">
+              <h3 className="tfont-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]">
+                Lightning-fast performance and ironclad security
+              </h3>
+            </div>
+
+            <div className="text-center">
+              <h3 className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]">
+                Friendly, U.S.-based support you can actually talk to
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Explore the Forte Solutions Lineup */}
+      <section className="pt-16 px-2 sm:px-6 lg:px-8">
+        <div className="container mx-auto xxl:px-8 sm:px-6 lg:px-8 px-4 grid gap-[48px]">
+          <div className="">
+            <h2 className="font-inter-display font-medium sm:text-[38px] text-[26px] leading-[30px] sm:leading-[38px] tracking-normal align-middle  text-gray-900 dark:text-white ">
+              Explore the Forte Solutions™ Lineup
+            </h2>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-12 bg-gray-50  rounded-xl dark:border-[#101010]   dark:bg-[#101010]  px-5 py-6 md:p-14 ">
+
+            <div className="flex items-center justify-center lg:order-2">
+              <OptimizedImage src="/images/services/logo-solutions.svg" alt="logo" width={230} priority height={285.58} className="lg:w-[446.44px] lg:h-[593px]" />
+            </div>
+            {/* Left Column - Service Details */}
+            <div className="md:order-1 space-y-8 md:mt-0 p-[20px] sm:px-[40px] sm:py-[60px] grid gap-[24px]">
+              {data.slice(1).map((item, index) => (
+                <div key={index} className='grid gap-[13px]'>
+                  <h3 className="font-inter font-medium sm:text-[26px] text-[18px] leading-[24px] sm:leading-[32px] tracking-normal align-middle dark:text-[#EEEEEE] text-black">{item.title}</h3>
+                  <p className="text-[#626262] dark:text-[#B4B4B4] font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] tracking-normal align-middle">
+                    {item.description}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Let's Make Your Website a Growth Tool */}
+      <section className=" lg:container mx-auto  px-0 sm:px-0 lg:px-8 ">
+        <div className='lg:container mx-auto  my-36 p-[10px] relative border border-[#5C5C5C] rounded-2xl   md:mx-auto'>
+
+          <OptimizedImage src="/images/services/growth-left-m.svg" alt="logo" width={122} height={122} priority className="absolute -top-[92px] left-0 z-10 md862:hidden block" />
+          <OptimizedImage src="/images/services/growth-left.png" alt="growth decoration" width={250} priority height={198} className="absolute -top-[70px] -left-[59px] z-10 md862:block hidden" />
+          <div className="container mx-auto ">
+            <div
+              className="rounded-2xl px-8 pt-16 pb-[52px] md:px-[180px] text-center relative bg-[url('/images/services/bg-growth.png')] bg-cover bg-center md:overflow-hidden"
+              style={{
+                background: 'linear-gradient(135deg, #1e3a8a 0%, #3730a3 50%, #581c87 100%)'
+              }}
+            >
+              <div className="relative z-10 grid gap-[40px]">
+                <div className="grid gap-[12px]">
+                  <h2 className="font-inter-display font-medium sm:text-[38px] text-[26px] leading-[30px] sm:leading-[38px] tracking-normal text-center align-middle text-white">
+                    Let&apos;s Make Your Website a Growth Tool
+                  </h2>
+
+                  <p className="text-gray-200  max-w-3xl mx-auto font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] tracking-normal text-center align-middle">
+                    Most companies think of their website just as a pretty business card. With a Forte website, every element is optimized specifically to support and grow your business.
+                  </p>
+                </div>
+
+                <div className="flex justify-center  flex-row">
+                  <LightButton href="/pricing">Explore Plans</LightButton>
+                </div>
+              </div>
+            </div>
+          </div>
+          <OptimizedImage src="/images/services/growth-right-m.svg" alt="logo" width={119} priority height={119} className="absolute -bottom-12 right-0 z-10 md862:hidden block" />
+          <OptimizedImage src="/images/services/growth-right.png" alt="growth" width={198} priority height={198} className="absolute -bottom-12 -right-[4.5rem] z-10 md862:block hidden" />
+        </div>
+      </section>
+    </div>
+  );
+}
