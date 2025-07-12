@@ -105,12 +105,14 @@ export default function Header() {
 
   // Dropdown items for About section
   const aboutDropdownItems = [
+    { label: 'About Us', href: '/about' },
     { label: 'Our Work', href: '/about/work' },
     { label: 'FAQs', href: '/about/faqs' }
   ];
 
   // Dropdown items for Services section
   const serviceDropdownItem = [
+    { label: 'Services', href: '/services' },
     { label: 'Website Design', href: '/services/webDesign' },
     { label: 'SEO', href: '/services/seo' },
     { label: 'Google PPC Ads', href: '/services/ads' },
@@ -119,6 +121,7 @@ export default function Header() {
 
   // Dropdown items for Forte Solutions section
   const forteDropdownItems = [
+    { label: 'Forte Solutions™', href: '/solutions' },
     { label: 'The Forte Method™', href: '/solutions/method' },
     { label: 'Forte Care™', href: '/solutions/care' },
     { label: 'Free Forte SiteCheckup™', href: '/solutions/seotool' },
@@ -148,7 +151,7 @@ export default function Header() {
               <nav className="hidden lg:flex items-center space-x-8">
                 <Dropdown
                   items={aboutDropdownItems}
-                  width="105px"
+                  width="130px"
                   trigger={
                     <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                       <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
@@ -157,7 +160,7 @@ export default function Header() {
                 />
                 <Dropdown
                   items={serviceDropdownItem}
-                  width="250px"
+                  width="270px"
                   trigger={
                     <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                       <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
@@ -167,7 +170,7 @@ export default function Header() {
 
                 <Dropdown
                   items={forteDropdownItems}
-                  width="220px"
+                  width="240px"
                   trigger={
                     <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                       <HeaderLink href="/solutions" showIcon={true}>Forte Solutions™</HeaderLink>
@@ -249,7 +252,7 @@ export default function Header() {
             <nav className="hidden lg:flex items-center space-x-8">
               <Dropdown
                 items={aboutDropdownItems}
-                width="105px"
+                width="130px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                     <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
@@ -258,7 +261,7 @@ export default function Header() {
               />
               <Dropdown
                 items={serviceDropdownItem}
-                width="250px"
+                width="270px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                     <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
@@ -268,7 +271,7 @@ export default function Header() {
 
               <Dropdown
                 items={forteDropdownItems}
-                width="220px"
+                width="240px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                     <HeaderLink href="/solutions" showIcon={true}>Forte Solutions™</HeaderLink>
@@ -410,6 +413,20 @@ export default function Header() {
                     <div className="pl-6 space-y-3">
                       <div className="flex items-center justify-between w-full">
                         <Link
+                          href="/about"
+                          className={`text-2xl block py-2 ${pathname === '/about' ? 'text-[#8D9DFF]' : 'text-white'
+                            }`}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          About Us
+                        </Link>
+                        {pathname === '/about' && (
+                          <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                        )}
+                      </div>
+
+                      <div className="flex items-center justify-between w-full">
+                        <Link
                           href="/about/work"
                           className={`text-2xl block py-2 ${pathname === '/about/work' ? 'text-[#8D9DFF]' : 'text-white'
                             }`}
@@ -445,6 +462,7 @@ export default function Header() {
                   >
                     <div className="pl-6 space-y-3">
                       {[
+                        { href: '/services', text: 'Services' },
                         { href: '/services/webDesign', text: 'Website Design' },
                         { href: '/services/seo', text: 'SEO' },
                         { href: '/services/ads', text: 'Google PPC Ads' },
@@ -474,6 +492,7 @@ export default function Header() {
                   >
                     <div className="pl-6 space-y-3">
                       {[
+                        { href: '/solutions', text: 'Forte Solutions™' },
                         { href: '/solutions/method', text: 'The Forte Method™' },
                         { href: '/solutions/care', text: 'Forte Care™' },
                         { href: '/solutions/seotool', text: 'Free Forte SiteCheckup™' }

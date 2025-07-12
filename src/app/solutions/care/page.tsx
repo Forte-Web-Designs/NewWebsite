@@ -305,7 +305,8 @@ export default function ServicePage() {
             >
               <button
                 onClick={() => toggle(index)}
-                className="w-[100%] flex justify-between items-center text-left sm:p-0 px-6 py-7"
+                className="w-[100%] flex justify-between items-center text-left sm:p-0 px-6 py-7 cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
+                data-clickable
               >
                 <span className="font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle text-[#000000] dark:text-[white]">{faq.title}</span>
                 <Icon

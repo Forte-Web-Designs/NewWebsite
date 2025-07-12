@@ -63,19 +63,19 @@ export default function ServicesPage() {
           </h2>
 
           <div className="grid md:grid-cols-3  md:py-8 md:justify-around  mx-auto sm:gap-[20px] gap-[40px] text-center">
-            <div className="text-center mx-auto">
+            <div className="text-center mx-auto p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
               <h3 className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]" >
                 Strategic design that converts visitors to customers
               </h3>
             </div>
 
-            <div className="text-center">
+            <div className="text-center p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
               <h3 className="tfont-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]">
                 Lightning-fast performance and ironclad security
               </h3>
             </div>
 
-            <div className="text-center">
+            <div className="text-center p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
               <h3 className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]">
                 Friendly, U.S.-based support you can actually talk to
               </h3>
@@ -100,7 +100,7 @@ export default function ServicesPage() {
             {/* Left Column - Service Details */}
             <div className="md:order-1 space-y-8 md:mt-0 p-[20px] sm:px-[40px] sm:py-[60px] grid gap-[24px]">
               {data.slice(1).map((item, index) => (
-                <div key={index} className='grid gap-[13px]'>
+                <div key={index} className='grid gap-[13px] p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]'>
                   <h3 className="font-inter font-medium sm:text-[26px] text-[18px] leading-[24px] sm:leading-[32px] tracking-normal align-middle dark:text-[#EEEEEE] text-black">{item.title}</h3>
                   <p className="text-[#626262] dark:text-[#B4B4B4] font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] tracking-normal align-middle">
                     {item.description}

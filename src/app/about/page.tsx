@@ -105,9 +105,9 @@ export default function Website2() {
               <h1 className="font-display font-medium sm:text-[38px] text-[32px] leading-10 text-[white] text-center">What Makes Us Different</h1>
             </div>
           </BackgroundImage>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-6 gap-0 mt-5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 md:gap-6 gap-4 mt-5">
             {bulletsData.map((data, index) => (
-              <div className="flex gap-4 items-center p-4  rounded-lg " key={index}>
+              <div className="flex gap-4 items-center p-4 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]" key={index}>
                 <OptimizedImage src={data.image} alt="icon" width={35} height={35} />
                 <p className="font-medium text-[13.56px] font-display leading-[18.2px] dark:text-white text-gray-600">
                   {data.content}
@@ -136,25 +136,25 @@ export default function Website2() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-6 items-start text-center">
 
               {/* Card 1 */}
-              <div className="flex flex-col items-center space-y-3 sm:px-4">
+              <div className="flex flex-col items-center space-y-3 sm:px-4 p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]">
                 <OptimizedImage src="/images/about/Group 21.png" alt="Local" width={28} height={28} />
                 <p className="text-sm dark:text-white text-gray-600 ">Local Businesses (Contractors, Dentists, Cafes—you name it)</p>
               </div>
 
               {/* Card 2 */}
-              <div className="flex flex-col items-center space-y-3 sm:px-4">
+              <div className="flex flex-col items-center space-y-3 sm:px-4 p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]">
                 <OptimizedImage src="/images/about/Vector (5).png" alt="B2B" width={33} height={28} />
                 <p className="text-sm dark:text-white text-gray-600 ">B2B services (consultants, agencies, software providers)</p>
               </div>
 
               {/* Card 3 */}
-              <div className="flex flex-col items-center space-y-3 sm:px-4">
+              <div className="flex flex-col items-center space-y-3 sm:px-4 p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]">
                 <OptimizedImage src="/images/about/Vector (6).png" alt="Education" width={38} height={28} />
                 <p className="text-sm dark:text-white text-gray-600 ">Education & training programs</p>
               </div>
 
               {/* Card 4 */}
-              <div className="flex flex-col items-center space-y-3 sm:px-4">
+              <div className="flex flex-col items-center space-y-3 sm:px-4 p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]">
                 <OptimizedImage src="/images/about/Vector (7).png" alt="Clinics" width={32} height={25} />
                 <p className="text-sm dark:text-white text-gray-600 ">Clinics, nonprofits, travel brands, and more</p>
               </div>

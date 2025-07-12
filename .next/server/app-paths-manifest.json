@@ -1,7 +1,8 @@
 {
-  "/solutions/website-maintenance/page": "app/solutions/website-maintenance/page.js",
-  "/solutions/competitive-analysis/page": "app/solutions/competitive-analysis/page.js",
-  "/page": "app/page.js",
-  "/solutions/care/page": "app/solutions/care/page.js",
-  "/about/page": "app/about/page.js"
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/services/webDesign/page": "app/services/webDesign/page.js",
+  "/services/page": "app/services/page.js",
+  "/pricing/page": "app/pricing/page.js",
+  "/services/seo/page": "app/services/seo/page.js",
+  "/page": "app/page.js"
 }

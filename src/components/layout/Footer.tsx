@@ -66,7 +66,9 @@ export default function Footer() {
     },
     {
       heading: "Resources",
-      points: ["Free Forte SmileDesign"]
+      points: [
+        { text: "Free Forte SiteCheckup™", href: "/solutions/seotool" }
+      ]
     }
   ];
   // #a1adf8

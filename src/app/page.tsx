@@ -156,8 +156,8 @@ export default function Home() {
                 <div className="">
                   <div className="mb-6 gap-[25px] grid">
                     <div className="rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent">
-                      <p className="font-sans font-normal text-[12px] sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] align-middle [background-clip:text] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,#1C3AF6_0%,#8495FF_100%)]">
-                        It's not just a name. It's our standard.
+                      <p className="font-sans font-normal text-[12px] sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] align-middle text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
+                        25+ Businesses Growing with Forte
                       </p>
                     </div>
                     <h1 className="font-display font-medium text-[38px] sm:text-[70px] leading-[40px] sm:leading-[74px] tracking-[-0.04em] align-middle text-black">
@@ -184,9 +184,9 @@ export default function Home() {
                 <div className="rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
                   <p
                     className="font-sans font-normal 
-  text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] align-middle [background-clip:text] [-webkit-text-fill-color:transparent] [background-image:linear-gradient(90deg,#1C3AF6_0%,#8495FF_100%)]"
+  text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] align-middle text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]"
                   >
-                    It's not just a name. It's our standard.
+                    25+ Businesses Growing with Forte
                   </p>
                 </div>
                 <h1 className="font-display font-medium text-[38px] sm:text-[70px] leading-[40px] sm:leading-[74px] tracking-[-0.04em] align-middle text-black dark:text-white">

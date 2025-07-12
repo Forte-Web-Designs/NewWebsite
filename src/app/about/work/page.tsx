@@ -33,58 +33,70 @@ export default function SolutionsPage() {
 
       <section className="container mx-auto flex flex-col md:gap-5 gap-10 items-center sm:px-0 px-5 md:py-0 py-14">
         <div className="flex lg:flex-row flex-col md:gap-5 gap-10">
-          <OptimizedImage
-            src="/images/work/project-1.webp"
-            width={600}
-            height={400}
-            alt="Modern business solutions - Forte"
-            className="lg:w-[387px] lg:h-auto sm:h-[387px] h-[190px] rounded object-top"
-            priority
-          />
-          <OptimizedImage
-            src="/images/work/project-2.webp"
-            width={600}
-            height={400}
-            alt="Modern business solutions - Forte"
-            className="lg:w-[793px] lg:h-auto sm:h-[387px] h-[190px] rounded object-top"
-            priority
-          />
+          <a href="https://example1.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+            <OptimizedImage
+              src="/images/work/project-1.webp"
+              width={600}
+              height={400}
+              alt="Modern business solutions - Forte"
+              className="lg:w-[387px] lg:h-auto sm:h-[387px] h-[190px] rounded object-top"
+              priority
+            />
+          </a>
+          <a href="https://example2.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+            <OptimizedImage
+              src="/images/work/project-2.webp"
+              width={600}
+              height={400}
+              alt="Modern business solutions - Forte"
+              className="lg:w-[793px] lg:h-auto sm:h-[387px] h-[190px] rounded object-top"
+              priority
+            />
+          </a>
         </div>
         <div className="flex lg:flex-row-reverse flex-col md:gap-5 gap-10">
-          <OptimizedImage
-            src="/images/work/project-4.webp"
-            width={600}
-            height={400}
-            alt="Modern business solutions - Forte"
-            className="lg:w-[387px] lg:h-auto h-[190px] rounded object-top"
-            priority
-          />
-          <OptimizedImage
-            src="/images/work/project-3.webp"
-            width={600}
-            height={400}
-            alt="Modern business solutions - Forte"
-            className="lg:w-[793px] lg:h-auto h-[190px] rounded object-top"
-            priority
-          />
+          <a href="https://example4.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+            <OptimizedImage
+              src="/images/work/project-4.webp"
+              width={600}
+              height={400}
+              alt="Modern business solutions - Forte"
+              className="lg:w-[387px] lg:h-auto h-[190px] rounded object-top"
+              priority
+            />
+          </a>
+          <a href="https://example3.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+            <OptimizedImage
+              src="/images/work/project-3.webp"
+              width={600}
+              height={400}
+              alt="Modern business solutions - Forte"
+              className="lg:w-[793px] lg:h-auto h-[190px] rounded object-top"
+              priority
+            />
+          </a>
         </div>
         <div className="flex lg:flex-row flex-col md:gap-5 gap-10">
-          <OptimizedImage
-            src="/images/work/project-5.webp"
-            width={600}
-            height={400}
-            alt="Modern business solutions - Forte"
-            className="lg:w-[387px] lg:h-auto h-[190px] rounded object-top"
-            priority
-          />
-          <OptimizedImage
-            src="/images/work/project-6.webp"
-            width={600}
-            height={400}
-            alt="Modern business solutions - Forte"
-            className="lg:w-[793px] lg:h-auto h-[190px] rounded object-top"
-            priority
-          />
+          <a href="https://example5.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+            <OptimizedImage
+              src="/images/work/project-5.webp"
+              width={600}
+              height={400}
+              alt="Modern business solutions - Forte"
+              className="lg:w-[387px] lg:h-auto h-[190px] rounded object-top"
+              priority
+            />
+          </a>
+          <a href="https://example6.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+            <OptimizedImage
+              src="/images/work/project-6.webp"
+              width={600}
+              height={400}
+              alt="Modern business solutions - Forte"
+              className="lg:w-[793px] lg:h-auto h-[190px] rounded object-top"
+              priority
+            />
+          </a>
         </div>
       </section>
 

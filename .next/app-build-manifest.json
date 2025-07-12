@@ -12,25 +12,30 @@
       "static/css/app/page.css",
       "static/chunks/app/page.js"
     ],
-    "/solutions/competitive-analysis/page": [
+    "/solutions/method/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/solutions/competitive-analysis/page.js"
+      "static/chunks/app/solutions/method/page.js"
     ],
-    "/solutions/website-maintenance/page": [
+    "/services/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/solutions/website-maintenance/page.js"
+      "static/chunks/app/services/page.js"
     ],
-    "/solutions/care/page": [
+    "/services/webDesign/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/solutions/care/page.js"
+      "static/chunks/app/services/webDesign/page.js"
     ],
-    "/about/page": [
+    "/services/seo/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/about/page.js"
+      "static/chunks/app/services/seo/page.js"
+    ],
+    "/pricing/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/pricing/page.js"
     ]
   }
 }

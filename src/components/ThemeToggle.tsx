@@ -27,6 +27,7 @@ export function ThemeToggle() {
           : 'bg-[#323232] border-[#666666] border-opacity-50 hover:border-[#888888]'
         }`}
       aria-label={`Switch to ${theme === 'light' ? 'dark' : 'light'} mode`}
+      data-clickable
     >
       <span className={`absolute inset-0 rounded-[66.67px] ${theme === 'light'
           ? 'bg-gradient-to-r from-white to-[#E4E4E4]'

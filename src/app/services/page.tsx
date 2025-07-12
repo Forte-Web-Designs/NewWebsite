@@ -67,7 +67,7 @@ export default function ServicePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10 gap-5 ">
             {cardsData.map((card, index) => (
-              <div key={index} className="space-y-3 md:pt-8 pt-3 pe-3">
+              <div key={index} className="space-y-3 md:pt-8 pt-6 pe-3 p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]">
                 <h3 className="sm:text-3xl text-2xl text-gray-900 dark:text-white  ">{card.title}</h3>
                 <p className="text-lg text-gray-600 dark:text-gray-400 md:py-4 py-3">{card.desc}</p>
                 <Link href="#" className="text-lg flex items-center  gap-3 text-primary-700 dark:text-blue-200  hover:underline">

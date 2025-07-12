@@ -22,6 +22,39 @@ export default function ResponsiveSlider({
   const [activeIndex, setActiveIndex] = useState(0);
   const containerRef = useRef<HTMLDivElement>(null);
 
+  // Auto-play functionality
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % items.length);
+    }, 4000); // Change slide every 4 seconds
+
+    return () => clearInterval(timer);
+  }, [items.length]);
+
+  // Sync visual scroll with activeIndex changes (for autoplay)
+  useEffect(() => {
+    if (containerRef.current) {
+      const isDesktop = window.innerWidth >= 1024;
+
+      if (isDesktop) {
+        const { clientHeight, scrollHeight } = containerRef.current;
+        const maxScroll = scrollHeight - clientHeight;
+        const targetScroll = (activeIndex / (items.length - 1)) * maxScroll;
+        containerRef.current.scrollTo({
+          top: targetScroll,
+          behavior: "smooth",
+        });
+      } else {
+        const { clientWidth } = containerRef.current;
+        const targetScroll = activeIndex * clientWidth;
+        containerRef.current.scrollTo({
+          left: targetScroll,
+          behavior: "smooth",
+        });
+      }
+    }
+  }, [activeIndex, items.length]);
+
   const scrollToCard = (index: number) => {
     setActiveIndex(index);
     if (containerRef.current) {

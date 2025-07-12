@@ -85,8 +85,22 @@
   a,
   input[type="button"],
   input[type="submit"],
-  select {
-    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxOCAxMEw3IDEyTDEgMTlWMVoiIGZpbGw9IiNGRjYzNDciIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIwLjgiLz4KPC9zdmc+Cg=="), pointer !important;
+  select,
+  .slick-arrow,
+  .slider-thumb,
+  [data-clickable] {
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxOCAxMEw3IDEyTDEgMTlWMVoiIGZpbGw9IiNGRjYzNDciIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg=="), pointer !important;
+  }
+
+  /* Hover effects for better interactivity feedback */
+  button:hover,
+  .button:hover,
+  [role="button"]:hover,
+  a:hover,
+  .cursor-pointer:hover,
+  [data-clickable]:hover {
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNSAxLjVMMjEuNSAxMkw4LjUgMTQuNUwxLjUgMjIuNVYxLjVaIiBmaWxsPSIjMDA5OUZGIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMS41Ii8+Cjwvc3ZnPgo="), pointer !important;
+    @apply transition-all duration-200 transform scale-105;
   }
 
   /* Subtle focus outlines */

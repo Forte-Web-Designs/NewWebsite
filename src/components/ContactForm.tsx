@@ -187,7 +187,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                 {/* Submit Button */}
                 <div className="text-center">
                   <DarkButton type="submit">
-                    Schedual Concseltation
+                    Schedule Consultation
                   </DarkButton>
                 </div>
               </form>

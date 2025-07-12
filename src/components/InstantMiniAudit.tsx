@@ -358,7 +358,8 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                       setResults(null);
                       setWebsiteUrl("");
                     }}
-                    className="text-white/80 hover:text-white text-sm underline transition-colors duration-300"
+                    className="text-white/80 hover:text-white text-sm underline transition-colors duration-300 cursor-pointer"
+                    data-clickable
                   >
                     🔄 Try a different website
                   </button>

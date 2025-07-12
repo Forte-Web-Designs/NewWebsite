@@ -264,12 +264,13 @@ const MobileServicesSlider: React.FC<MobileServicesSliderProps> = ({ isDark }) =
             <button
               key={index}
               type="button"
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${index === currentSlide
+              className={`w-3 h-3 rounded-full transition-all duration-300 cursor-pointer ${index === currentSlide
                   ? 'bg-[#f4f4f4] dark:bg-white'
                   : 'bg-gray-300 dark:bg-gray-700 hover:bg-gray-400 dark:hover:bg-gray-600'
                 }`}
               aria-label={`Go to slide ${index + 1}`}
               onClick={() => goToSlide(index)}
+              data-clickable
             />
           ))}
         </div>
