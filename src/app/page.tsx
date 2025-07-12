@@ -31,7 +31,7 @@ export default function Home() {
       });
       
       // Route high-performing sites to Forte Care™ page
-      if (seoScore && seoScore >= 8) {
+      if (seoScore && seoScore >= 7) {
         params.append('type', 'protection');
         window.location.href = `/solutions/care?${params.toString()}`;
       } else {

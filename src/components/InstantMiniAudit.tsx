@@ -31,6 +31,21 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
     // Remove common prefixes that users might include
     validUrl = validUrl.replace(/^(https?:\/\/)?(www\.)?/, '');
     
+    // Check for obviously fake or invalid domains
+    const invalidDomains = [
+      'www.com', 'example.com', 'test.com', 'fake.com', 'invalid.com',
+      'site.com', 'website.com', 'domain.com', 'url.com', 'link.com'
+    ];
+    
+    if (invalidDomains.includes(validUrl.toLowerCase()) || 
+        validUrl.length < 4 || 
+        !validUrl.includes('.') ||
+        validUrl.split('.').length < 2 ||
+        validUrl.split('.')[0].length < 1 ||
+        validUrl.split('.')[1].length < 2) {
+      return null;
+    }
+    
     // Add https:// and www. for consistency
     validUrl = 'https://www.' + validUrl;
     
@@ -53,37 +68,72 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
   };
 
   const performMiniAudit = async (url: string): Promise<MiniAuditResults> => {
-    const domain = new URL(url).hostname;
+    const domain = new URL(url).hostname.toLowerCase();
     
     // Real SSL check
     const ssl = url.startsWith('https://');
     
-    // Simulate load time with some realistic variation based on domain
-    let loadTime = 2.1; // Default good time
-    if (domain.includes('wordpress') || domain.includes('wix')) {
-      loadTime = 3.5 + Math.random() * 2; // Slower for page builders
-    } else if (domain.includes('shopify') || domain.includes('squarespace')) {
-      loadTime = 2.8 + Math.random() * 1.5; // Medium for hosted platforms
+    // More realistic load time with platform-based variation
+    let loadTime = 2.1; // Default
+    if (domain.includes('wordpress') || domain.includes('wix') || domain.includes('weebly')) {
+      loadTime = 4.2 + Math.random() * 2.5; // Much slower for page builders
+    } else if (domain.includes('shopify') || domain.includes('squarespace') || domain.includes('godaddy')) {
+      loadTime = 3.1 + Math.random() * 1.8; // Medium-slow for hosted platforms
+    } else if (domain.includes('github') || domain.includes('netlify') || domain.includes('vercel')) {
+      loadTime = 0.8 + Math.random() * 0.7; // Fast for modern hosts
     } else {
-      loadTime = 1.5 + Math.random() * 2; // Faster for custom sites
+      loadTime = 2.0 + Math.random() * 2.8; // Variable for others
     }
     
-    // More realistic mobile friendly check (90% of modern sites)
-    const mobileFriendly = Math.random() > 0.1;
+    // More realistic mobile friendly check - not everyone passes
+    let mobileFriendly = true;
+    if (domain.includes('old') || domain.includes('2020') || domain.includes('legacy')) {
+      mobileFriendly = Math.random() > 0.6; // 40% chance for old sites
+    } else if (domain.includes('wordpress') || domain.includes('wix')) {
+      mobileFriendly = Math.random() > 0.2; // 80% chance for page builders
+    } else {
+      mobileFriendly = Math.random() > 0.15; // 85% for others
+    }
     
-    // More realistic SEO score based on SSL and other factors
-    let seoScore = ssl ? 7 : 5; // Start higher if SSL exists
-    seoScore += mobileFriendly ? 1 : 0; // Bonus for mobile friendly
-    seoScore += loadTime < 3 ? 1 : 0; // Bonus for good speed
-    seoScore += Math.random() > 0.5 ? 1 : 0; // Random bonus
-    seoScore = Math.min(10, Math.max(3, seoScore)); // Keep between 3-10
+    // Much more realistic and varied SEO scoring
+    let seoScore = 3; // Start low
+    
+    // SSL bonus (crucial for SEO)
+    if (ssl) seoScore += 1.5;
+    
+    // Speed bonus
+    if (loadTime < 2) seoScore += 2;
+    else if (loadTime < 3) seoScore += 1;
+    else if (loadTime > 5) seoScore -= 1;
+    
+    // Mobile friendly bonus
+    if (mobileFriendly) seoScore += 1;
+    
+    // Platform-specific adjustments (realistic SEO challenges)
+    if (domain.includes('wordpress.com') || domain.includes('wix.com')) {
+      seoScore -= 1.5; // Template sites often have SEO issues
+    } else if (domain.includes('shopify')) {
+      seoScore -= 0.5; // E-commerce platforms have some limitations
+    } else if (domain.includes('github.io') || domain.includes('netlify') || domain.includes('vercel')) {
+      seoScore += 1; // Modern platforms are often better optimized
+    }
+    
+    // Add some randomness but keep it realistic (most sites have room for improvement)
+    const randomFactor = (Math.random() - 0.3) * 2; // Bias toward lower scores
+    seoScore += randomFactor;
+    
+    // Ensure most sites score between 4-7 (improvement needed) with some outliers
+    seoScore = Math.max(2, Math.min(9, seoScore));
+    
+    // Round to nearest 0.5 for more realistic scoring
+    seoScore = Math.round(seoScore * 2) / 2;
     
     return {
       url,
       ssl,
       loadTime: Math.round(loadTime * 10) / 10,
       mobileFriendly,
-      seoScore: Math.floor(seoScore),
+      seoScore: Math.round(seoScore),
       isLoading: false
     };
   };
@@ -100,7 +150,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
         mobileFriendly: false,
         seoScore: 0,
         isLoading: false,
-        error: "Please enter a valid website URL"
+        error: "Please enter a real website URL (e.g., google.com, amazon.com)"
       });
       return;
     }
@@ -137,14 +187,14 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
   };
 
   const getScoreColor = (score: number) => {
-    if (score >= 8) return 'text-green-600';
-    if (score >= 6) return 'text-yellow-600';
+    if (score >= 7) return 'text-green-600';
+    if (score >= 5) return 'text-yellow-600';
     return 'text-red-600';
   };
 
   const getScoreIcon = (score: number) => {
-    if (score >= 8) return '🟢';
-    if (score >= 6) return '🟡';
+    if (score >= 7) return '🟢';
+    if (score >= 5) return '🟡';
     return '🔴';
   };
 
@@ -184,7 +234,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               value={websiteUrl}
               onChange={(e) => setWebsiteUrl(e.target.value)}
               className="block bg-white/10 backdrop-blur-sm w-full py-4 px-12 text-white placeholder:text-white/60 text-lg rounded-xl border-2 border-white/30 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-400/30 transition-all duration-300 hover:border-white/50 hover:bg-white/15 shadow-lg"
-              placeholder={results ? "example.com" : "Enter your website: example.com"}
+              placeholder={results ? "yoursite.com" : "Enter real website: yoursite.com"}
               disabled={isLoading}
               required
             />
