@@ -30,11 +30,12 @@ export default function Home() {
         autorun: 'true'
       });
       
-      // Route high-performing sites to Forte Care™ page
-      if (seoScore && seoScore >= 7) {
-        params.append('type', 'protection');
-        window.location.href = `/solutions/care?${params.toString()}`;
+      // Route high-performing sites to competitive analysis page
+      if (seoScore && seoScore >= 8) {
+        params.append('type', 'high-performer');
+        window.location.href = `/solutions/competitive-analysis?${params.toString()}`;
       } else {
+        // Regular audit for sites that need improvement
         window.location.href = `/solutions/seotool?${params.toString()}`;
       }
     }, 200);
@@ -576,115 +577,119 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Stats Section - Redesigned for Better Visual Clarity */}
       <section className="bg-[#FFFFFF] dark:bg-[#000000] py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="rounded-[20px] pt-[16px] px-[16px] pb-[8px]  sm:pt-[48px] sm:px-[48px] sm:pb-[8px] bg-[#F4F4F4] dark:bg-[#101010]">
-            <div className="flex flex-wrap -mx-4">
-              <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 px-4">
-                <div className="grid gap-5 sm:gap-10">
-                  <div className="flex justify-start gap-1">
-                    <Icon
-                      name="star-icon"
-                      alt="star-icon"
-                      className="w-[18px] h-[18px] mt-1"
-                    />
-                    <p className="font-sans font-normal text-[12px] sm:text-2xl leading-6 tracking-[-0.24px]  align-middle text-[#8D9DFF] ">
-                      Why Businesses Choose Forte
-                    </p>
-                  </div>
-                  <div className="">
-                    <h4 className="text-[32px] sm:text-[62px] leading-[36px] sm:leading-[62px] font-medium text-start font-Roboto text-[#000000] dark:text-[#F1F1EF]">
-                      Results That Speak for Themselves
-                    </h4>
-                  </div>
-                  <div className="">
-                    <p className="text-[#626262] font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] tracking-normal align-middle dark:text-[#B4B4B4]">
-                      From fast builder sites to handcrafted custom builds,
-                      Forte Web Designs helps small businesses grow online with
-                      clean, high-performance websites—delivered with clarity,
-                      speed, and care.
-                    </p>
-                  </div>
+          {/* Header Section with Background */}
+          <div className="text-center mb-12 md:mb-16">
+            <div className="inline-flex items-center gap-2 bg-[#F4F4F4] dark:bg-[#101010] px-4 py-2 rounded-full mb-6">
+              <Icon
+                name="star-icon"
+                alt="star-icon"
+                className="w-[18px] h-[18px]"
+              />
+              <p className="font-sans font-normal text-[14px] sm:text-lg text-[#8D9DFF]">
+                Why Businesses Choose Forte
+              </p>
+            </div>
+            <h2 className="text-[32px] sm:text-[56px] lg:text-[62px] leading-[36px] sm:leading-[56px] lg:leading-[62px] font-medium font-Roboto text-[#000000] dark:text-[#F1F1EF] mb-6">
+              Results That Speak for Themselves
+            </h2>
+            <div className="max-w-4xl mx-auto bg-[#F4F4F4] dark:bg-[#101010] p-6 sm:p-8 rounded-xl">
+              <p className="text-[#626262] font-inter font-normal text-[16px] sm:text-[18px] leading-[20px] sm:leading-[24px] dark:text-[#B4B4B4]">
+                From fast builder sites to handcrafted custom builds,
+                Forte Web Designs helps small businesses grow online with
+                clean, high-performance websites—delivered with clarity,
+                speed, and care.
+              </p>
+            </div>
+          </div>
+
+          {/* Stats Cards Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            {/* Client Satisfaction Card */}
+            <div className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">100%</h3>
+                  <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
+                    Client Satisfaction<br />Guarantee
+                  </p>
                 </div>
               </div>
-              <div className="w-full sm:w-full md:w-full lg:w-1/2 px-4 mt-5  sm:mt-0 ">
-                <div className="flex md:justify-normal justify-between align-bottom items-end gap-[16px] sm:gap-[24px]">
-                  <div className="main-div w-full ">
-                    <h4 className="grid font-roboto font-normal text-[21px] sm:text-[36px] leading-[100%] tracking-[-0.24px] text-center align-middle text-[#203FFC] gap-[4px] dark:text-[#8F9FFF]">
-                      100%{" "}
-                      <span className="font-roboto font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-center align-middle text-[#203FFC] dark:text-[#8F9FFF]">
-                        Client Satisfaction <br /> Guarantee
-                      </span>
-                    </h4>
-                    <div className="w-[100%] h-[200px] bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#F4F4F4_138%)] flex justify-center items-center align-middle mt-2 dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-[8px]"></div>
-                  </div>
-                  <div className="main-div  w-full">
-                    <h4 className="grid font-roboto font-normal  text-[21px] sm:text-[36px] leading-[100%] tracking-[-0.24px] text-center align-middle text-[#203FFC] gap-[4px] dark:text-[#8F9FFF]">
-                      25+{" "}
-                      <span className="font-roboto font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-center align-middle text-[#203FFC] dark:text-[#8F9FFF]">
-                        Businesses Growing <br />with Forte
-                      </span>
-                    </h4>
-                    <div className="w-[100%] h-[250px] bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#F4F4F4_138%)]  flex justify-center items-center align-middle mt-2 dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-[8px]"></div>
-                  </div>
-                  <div className="main-div  w-full">
-                    <h4 className="grid font-roboto font-normal  text-[21px] sm:text-[36px] leading-[100%] tracking-[-0.24px] text-center align-middle text-[#203FFC] gap-[4px] dark:text-[#8F9FFF]">
-                      1000s{" "}
-                      <span className="font-roboto font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-center align-middle text-[#203FFC] dark:text-[#8F9FFF]">
-                        Of Leads Generated
-                      </span>
-                    </h4>
-                    <div className="w-[100%] h-[300px] bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#F4F4F4_138%)]  flex justify-center items-center align-middle mt-2 dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-[8px]"></div>
-                  </div>
+            </div>
+
+            {/* Growing Businesses Card */}
+            <div className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">25+</h3>
+                  <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
+                    Businesses Growing<br />with Forte
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Leads Generated Card */}
+            <div className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
+                <div className="text-center">
+                  <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">1000s</h3>
+                  <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
+                    Of Leads Generated
+                  </p>
                 </div>
               </div>
             </div>
           </div>
-          <div className="flex flex-wrap -mx-4 mt-[20px]">
-            <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 px-4">
-              <div className="sm:rounded-[20px] rounded-tr-[20px] rounded-tl-[20px] sm:p-[16px] px-[16px] pt-[16px] pb-[8px]  bg-[#F4F4F4] dark:bg-[#101010]">
-                <div className="main-div order-2 sm:order-1">
-                  {isDark ? (
-                    <OptimizedImage
-                      src="/images/home/Frame9.png"
-                      width={581}
-                      height={338}
-                      alt="grafh"
-                      className="w-full h-auto"
-                      priority={true}
-                    />
-                  ) : (
-                    <OptimizedImage
-                      src="/images/home/Frame10.png"
-                      width={581}
-                      height={338}
-                      alt="grafh"
-                      className="w-full h-auto"
-                      priority={true}
-                    />
-                  )}
-                </div>
-                <div className="my-[20px] order-1 sm:order-2 sm:p-[24px] p-[16px]">
-                  <h4 className="font-inter-display font-medium text-[32px] sm:text-[38px] leading-[36px] sm:leading-[38px] tracking-normal align-middle ms-2">
-                    24/7 Monitoring & Performance Tracking
-                  </h4>
-                </div>
+
+          {/* Performance & Support Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Monitoring Card */}
+            <div className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 border border-[#E5E5E5] dark:border-[#262626] shadow-sm hover:shadow-md transition-all duration-300">
+              <div className="mb-6">
+                {isDark ? (
+                  <OptimizedImage
+                    src="/images/home/Frame9.png"
+                    width={581}
+                    height={338}
+                    alt="Performance monitoring graph"
+                    className="w-full h-auto rounded-lg"
+                    priority={true}
+                  />
+                ) : (
+                  <OptimizedImage
+                    src="/images/home/Frame10.png"
+                    width={581}
+                    height={338}
+                    alt="Performance monitoring graph"
+                    className="w-full h-auto rounded-lg"
+                    priority={true}
+                  />
+                )}
+              </div>
+              <div className="bg-[#F8F9FA] dark:bg-[#1a1a1a] p-6 rounded-lg border border-[#E5E5E5] dark:border-[#333]">
+                <h3 className="font-inter-display font-semibold text-[22px] sm:text-[26px] leading-tight text-[#000000] dark:text-[#F4F4F4]">
+                  24/7 Monitoring & Performance Tracking
+                </h3>
               </div>
             </div>
-            <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 px-4">
-              <div className="sm:rounded-[20px] rounded-b-[20px] sm:p-[16px] px-[16px] pt-[16px] pb-[8px]  bg-[#F4F4F4] dark:bg-[#101010] grid align-middle justify-between items-center w-full h-[100%] sm:gap-[0px] gap-[32px]">
-                <div className="main-div sm:p-[24px] p-[16px]">
-                  <h4 className="font-inter-display font-medium text-[32px] sm:text-[38px] leading-[36px] sm:leading-[38px] tracking-normal align-middle text-[#000000] dark:text-[#F4F4F4] lg:py-0 md:py-0 sm:py-8">
-                    0% Cookie Cutter Templates Used
-                  </h4>
-                </div>
-                <hr className="dark:border-[1px] dark:border-[#262626] " />
-                <div className="sm:p-[24px] p-[16px] ">
-                  <h4 className="font-inter-display font-medium text-[32px] sm:text-[38px] leading-[36px] sm:leading-[38px] tracking-normal align-middle ">
-                    100% U.S. Based Support
-                  </h4>
-                </div>
+
+            {/* Support Features Card */}
+            <div className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 border border-[#E5E5E5] dark:border-[#262626] shadow-sm hover:shadow-md transition-all duration-300 flex flex-col">
+              <div className="flex-1 bg-[#F8F9FA] dark:bg-[#1a1a1a] p-6 rounded-lg border border-[#E5E5E5] dark:border-[#333] mb-6 flex items-center justify-center min-h-[120px]">
+                <h3 className="font-inter-display font-semibold text-[22px] sm:text-[26px] leading-tight text-[#000000] dark:text-[#F4F4F4] text-center">
+                  0% Cookie Cutter Templates Used
+                </h3>
+              </div>
+              
+              <div className="w-full h-[2px] bg-gradient-to-r from-[#E5E5E5] via-[#203FFC] to-[#E5E5E5] dark:from-[#333] dark:via-[#8F9FFF] dark:to-[#333] my-4"></div>
+              
+              <div className="flex-1 bg-[#F8F9FA] dark:bg-[#1a1a1a] p-6 rounded-lg border border-[#E5E5E5] dark:border-[#333] flex items-center justify-center min-h-[120px]">
+                <h3 className="font-inter-display font-semibold text-[22px] sm:text-[26px] leading-tight text-[#000000] dark:text-[#F4F4F4] text-center">
+                  100% U.S. Based Support
+                </h3>
               </div>
             </div>
           </div>

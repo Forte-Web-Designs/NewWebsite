@@ -13,31 +13,37 @@ const cardsData = [
     title: "Custom Website Design & Builds",
     desc: "We hand-code every site from scratch—no builders or templates. This means faster load times, better SEO, and a unique online presence for your business.",
     linkText: "See how we build",
+    href: "/services/webDesign",
   },
   {
     title: "Forte Care™ Maintenance Plan",
     desc: "Unlimited edits, priority support, ongoing optimization, and peace of mind—our signature plan ensures your site keeps performing long after launch.",
     linkText: "Learn About Forte Care",
+    href: "/solutions/care",
   },
   {
     title: "SEO Setup & Optimization",
     desc: "We take care of the technical SEO that actually matters—structure, tags, speed, and keyword targeting—so your site ranks and brings in traffic.",
     linkText: "Boost My Visibility",
+    href: "/services/seo",
   },
   {
     title: "Google PPC Ads",
     desc: "We craft and manage Google Ads campaigns that target the right people at the right time—boosting your traffic and maximizing ROI.",
     linkText: "Boost My Traffic",
+    href: "/services/ads",
   },
   {
     title: "Website Audits & Reviews",
     desc: "Not sure how your site is doing? We'll run a full performance and SEO audit—and give you a clear, actionable improvement plan.",
     linkText: "Run a Free Audit",
+    href: "/solutions/seotool",
   },
   {
     title: "Social Media Marketing",
     desc: "From strategy to content, we help you show up consistently, connect with your audience, and turn likes into leads.",
     linkText: "Boost My Socials",
+    href: "/services/socialMedia",
   },
 ];
 
@@ -70,7 +76,7 @@ export default function ServicePage() {
               <div key={index} className="space-y-3 md:pt-8 pt-6 pe-3 p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]">
                 <h3 className="sm:text-3xl text-2xl text-gray-900 dark:text-white  ">{card.title}</h3>
                 <p className="text-lg text-gray-600 dark:text-gray-400 md:py-4 py-3">{card.desc}</p>
-                <Link href="#" className="text-lg flex items-center  gap-3 text-primary-700 dark:text-blue-200  hover:underline">
+                <Link href={card.href} className="text-lg flex items-center  gap-3 text-primary-700 dark:text-blue-200  hover:underline">
                   {card.linkText}
 
                   <Icon
