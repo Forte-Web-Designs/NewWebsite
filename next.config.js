@@ -2,8 +2,10 @@
 
 const nextConfig = {
   reactStrictMode: true,
-  // swcMinify is deprecated and enabled by default in Next.js 13+
+  output: 'export', // Enable static export for Netlify
+  trailingSlash: true, // Ensures proper routing on static hosts
   images: {
+    unoptimized: true, // Required for static export
     domains: ['images.unsplash.com', 'source.unsplash.com'],
     formats: ['image/avif', 'image/webp'],
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
@@ -11,12 +13,10 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
-  // optimizeFonts is deprecated in Next.js 15 - removed
   compiler: {
     // Eliminates more dead code
     removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Removed experimental optimizeCss to fix critters module error
 };
 
 module.exports = nextConfig;
