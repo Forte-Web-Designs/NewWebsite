@@ -37,21 +37,38 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log("Form submitted:", formData);
-    setIsSubmitting(false);
-    
-    // Reset form
-    setFormData({
-      name: "",
-      email: "",
-      phone: "",
-      service: "",
-      company: "",
-      message: "",
-    });
+    try {
+      // Netlify form submission
+      const formData = new FormData(e.target as HTMLFormElement);
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        // Success - reset form
+        setFormData({
+          name: "",
+          email: "",
+          phone: "",
+          service: "",
+          company: "",
+          message: "",
+        });
+        
+        // Show success message (you can customize this)
+        alert("Thank you! Your message has been sent successfully. We'll get back to you soon!");
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      alert("Sorry, there was an error sending your message. Please try again or contact us directly.");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
   // useEffect(() => {
   //   const darkModeEnabled = document.documentElement.classList.contains("dark");
