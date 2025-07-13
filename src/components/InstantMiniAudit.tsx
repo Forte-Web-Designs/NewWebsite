@@ -471,7 +471,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                 <div className="text-xs text-white/70 mt-3 space-y-1">
                   {isNavigating ? (
                     <div className="text-green-300">
-                      🚀 <strong>Starting comprehensive analysis...</strong>
+                      🚀 <strong>Starting comprehensive analysis... Results will appear on the page below!</strong>
                     </div>
                   ) : (
                     <>
