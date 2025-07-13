@@ -135,17 +135,17 @@ function CompetitiveAnalysisContent() {
         </div>
       )}
       
-      <section className="container max-w-7xl mx-auto flex flex-col md:items-center items-start px-5 py-16 md:py-24">
-        <div className="grid gap-[24px] justify-center items-center">
-          <span className="text-[#FF6B35] sm:text-[24px] text-[12px] font-normal leading-[12px] sm:leading-[24px] flex gap-2 sm:justify-center justify-start">
-            <Icon name="star" className="sm:h-6 sm:w-6 h-[14px] w-[14px]" />
+      <section className="container max-w-7xl mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="grid gap-6 sm:gap-8 justify-center items-center text-center w-full">
+          <span className="text-[#FF6B35] text-sm sm:text-lg md:text-xl lg:text-2xl font-normal flex items-center justify-center gap-2">
+            <Icon name="star" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
             Competitive Intelligence for High Performers
           </span>
 
-          <h1 className="font-roboto font-medium text-[32px] sm:text-[62px] sm:leading-[62px] leading-[40px] tracking-[-1.24px] sm:text-center text-start align-middle text-black dark:text-[#FFFFFF]">
+          <h1 className="font-roboto font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight text-black dark:text-[#FFFFFF] max-w-4xl mx-auto">
             Advanced Competitive Analysis
           </h1>
-          <p className="lg:w-[794px] md:w-[740px] w-[90%] font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262] dark:text-[#B4B4B4]">
+          <p className="max-w-4xl mx-auto font-inter font-normal text-sm sm:text-base lg:text-lg leading-relaxed tracking-normal text-center text-[#626262] dark:text-[#B4B4B4]">
             Your site already performs well—but your competitors are studying you. 
             Our specialized analysis reveals the advanced strategies they're planning to use against you, 
             and exactly how to stay ahead.
@@ -153,47 +153,47 @@ function CompetitiveAnalysisContent() {
         </div>
 
         {/* Case Studies Section */}
-        <div className="w-full mt-16">
-          <h2 className="text-center text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
+        <div className="w-full mt-12 sm:mt-16">
+          <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-black dark:text-white mb-2">
             🏆 High Performers Who Stayed Ahead
           </h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 px-4">
             Real results from websites that started with high scores like yours
           </p>
           
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 px-4">
             {caseStudies.map((study, index) => (
-              <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:scale-105 transition-all duration-300">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="font-bold text-lg text-black dark:text-white">{study.company}</h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">{study.industry}</p>
+              <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:scale-105 transition-all duration-300">
+                <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start mb-4 gap-2">
+                  <div className="flex-1">
+                    <h3 className="font-bold text-base sm:text-lg text-black dark:text-white">{study.company}</h3>
+                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">{study.industry}</p>
                   </div>
-                  <div className="text-right">
+                  <div className="text-left sm:text-right">
                     <div className="text-xs text-gray-500">Initial Score</div>
                     <div className="text-lg font-bold text-green-600">{study.initialScore}</div>
                   </div>
                 </div>
                 
                 <div className="bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-900/30 dark:to-blue-900/30 rounded-lg p-3 mb-4">
-                  <div className="text-lg font-bold text-green-700 dark:text-green-400">{study.improvement}</div>
+                  <div className="text-base sm:text-lg font-bold text-green-700 dark:text-green-400">{study.improvement}</div>
                   <div className="text-xs text-gray-600 dark:text-gray-400">in {study.timeframe}</div>
                 </div>
                 
                 <div className="space-y-3">
                   <div>
                     <div className="text-xs font-semibold text-red-600 dark:text-red-400 uppercase">Challenge</div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300">{study.challenge}</div>
+                    <div className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{study.challenge}</div>
                   </div>
                   
                   <div>
                     <div className="text-xs font-semibold text-blue-600 dark:text-blue-400 uppercase">Solution</div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300">{study.solution}</div>
+                    <div className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{study.solution}</div>
                   </div>
                   
                   <div>
                     <div className="text-xs font-semibold text-green-600 dark:text-green-400 uppercase">Results</div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300">{study.results}</div>
+                    <div className="text-xs sm:text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{study.results}</div>
                   </div>
                 </div>
               </div>
@@ -202,33 +202,33 @@ function CompetitiveAnalysisContent() {
         </div>
 
         {/* Competitive Factors Section */}
-        <div className="w-full mt-16">
-          <h2 className="text-center text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
+        <div className="w-full mt-12 sm:mt-16 px-4">
+          <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-bold text-black dark:text-white mb-2">
             🔍 What We Analyze Beyond Basic SEO
           </h2>
-          <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
+          <p className="text-center text-sm sm:text-base text-gray-600 dark:text-gray-400 mb-6 sm:mb-8">
             The advanced factors that separate leaders from followers
           </p>
           
-          <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
             {competitiveFactors.map((factor, index) => (
-              <div key={index} className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
-                <div className="text-3xl mb-3">{factor.icon}</div>
-                <h3 className="font-bold text-lg text-black dark:text-white mb-2">{factor.title}</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{factor.description}</p>
+              <div key={index} className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-xl p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-all duration-300">
+                <div className="text-2xl sm:text-3xl mb-3">{factor.icon}</div>
+                <h3 className="font-bold text-base sm:text-lg text-black dark:text-white mb-2">{factor.title}</h3>
+                <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400 leading-relaxed">{factor.description}</p>
               </div>
             ))}
           </div>
         </div>
 
         {/* SEO Audit Tool Section */}
-        <div className="w-full mt-16">
-          <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-2xl p-8 border border-orange-400/30">
-            <div className="text-center mb-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
+        <div className="w-full mt-12 sm:mt-16 px-4">
+          <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 rounded-2xl p-4 sm:p-6 lg:p-8 border border-orange-400/30">
+            <div className="text-center mb-6 sm:mb-8">
+              <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-black dark:text-white mb-2">
                 🎯 Get Your Competitive Intelligence Report
               </h2>
-              <p className="text-gray-600 dark:text-gray-400">
+              <p className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
                 Start your specialized analysis below - we'll identify exactly what your competitors are planning
               </p>
             </div>
@@ -246,7 +246,7 @@ function CompetitiveAnalysisContent() {
 
         {/* Results Section */}
         {auditResults && (
-          <div ref={resultsRef} className="w-full mt-16">
+          <div ref={resultsRef} className="w-full mt-12 sm:mt-16 px-4">
             <SEOResults 
               results={auditResults} 
               auditedUrl={auditedUrl}

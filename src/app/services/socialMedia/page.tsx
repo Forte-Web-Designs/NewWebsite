@@ -69,32 +69,32 @@ export default function ServicePage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="py-16 md:py-24 md:text-center flex flex-col md:items-center">
-        <span className="sm:text-2xl text-xs font-normal font-roboto flex md:items-center sm:gap-1.5 gap-1 text-primary-1000 px-5 md:mx-auto">
-          <Icon name="star" className="sm:h-6 sm:w-6 h-[14px] w-[14px]" />
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+        <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-normal font-roboto flex items-center gap-2 text-primary-1000 mb-4 sm:mb-6">
+          <Icon name="star" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
           Hey there! 👋
         </span>
-        <h1 className="md:text-[62px] text-[36px] md:max-w-[794px] font-medium font-roboto md:mt-7 mt-5 w-full max-[767px]:leading-[40px] dark:text-secondary-1000 md:text-center px-5">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight max-w-4xl dark:text-secondary-1000 mb-4 sm:mb-6">
           Social Media That Actually Works for Your Business
         </h1>
-        <p className="md:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 lg:w-[840px] md:w-[715px] w-[97%] md:mt-6 mt-5 md:text-center text-primary-1400 max-[767px]:leading-[18px] px-5 leading-[22px]">
+        <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 max-w-3xl leading-relaxed">
           Staying active on social media keeps you top-of-mind with customers—but who has time for that? We handle your social presence so you can focus on what you do best: running your business.
         </p>
       </section>
 
-      <section className="w-full dark:bg-black bg-white md:py-40 py-10 md:px-4 overflow-hidden">
+      <section className="w-full dark:bg-black bg-white py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <div className="max-w-6xl mx-auto grid grid-cols-1 gap-8 items-start">
-            <div className="col-span-6 lg:col-span-3  border border-[#5C5C5C] rounded-2xl p-2">
+          <div className="grid grid-cols-1 gap-6 sm:gap-8 items-start">
+            <div className="border border-[#5C5C5C] rounded-2xl p-2">
               <BackgroundImage
                 src="/images/services/web-service-back.png"
                 alt="Banner description"
-                className="rounded-xl p-6 text-center md:py-16 py-12 md:px-10"
+                className="rounded-xl p-6 sm:p-8 md:p-10 lg:p-16 text-center"
               >
-                <h1 className="font-medium text-white md:text-4xl text-[38px]">
+                <h1 className="font-medium text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6">
                   Why Social Media Actually Matters
                 </h1>
-                <p className="md:text-[18px] text-[14px] font-normal font-inter md:mt-5 mt-4 text-white max-[767px]:leading-[18px] leading-[22px]">
+                <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-white leading-relaxed max-w-3xl mx-auto">
                   Great websites attract visitors. Great social feeds keep them engaged. Together, they build trust and turn followers into customers. We help you create content that actually connects with your local audience and supports your business goals.
                 </p>
               </BackgroundImage>
@@ -103,25 +103,25 @@ export default function ServicePage() {
         </div>
       </section>
 
-      <section className=" dark:bg-black text-white py-24 px-4 min-h-scree items-center justify-center">
-        <div className="text-center mb-10">
-          <h2 className="text-3xl  font-medium text-gray-900 dark:text-white text-center md:mb-8">
+      <section className="dark:bg-black text-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col items-center justify-center">
+        <div className="text-center mb-8 sm:mb-10 md:mb-12">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 dark:text-white">
             What You Get With Our Social Media Management:
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-1  max-w-6xl mx-auto w-full items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto w-full items-center">
           {/* Left Column */}
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-4 sm:gap-6">
             <div
               className="inline-block p-[1px] rounded-[20px]"
               style={{
                 background: `linear-gradient(${isMobile ? gradientConfig.leftColumn.mobile : gradientConfig.leftColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
-                <h5 className="md:text-[26px] text-[18px]">Content That Connects</h5>
-                <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
+                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">Content That Connects</h5>
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                   Posts designed to reflect your brand and actually engage your local audience
                 </p>
               </div>
@@ -133,9 +133,9 @@ export default function ServicePage() {
                 background: `linear-gradient(${isMobile ? gradientConfig.leftColumn.mobile : gradientConfig.leftColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
-                <h5 className="md:text-[26px] text-[18px]">Smart Planning</h5>
-                <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
+                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">Smart Planning</h5>
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                   Monthly calendars that keep your message consistent and on-brand
                 </p>
               </div>
@@ -143,18 +143,18 @@ export default function ServicePage() {
           </div>
 
           {/* Center Column */}
-          <div className="flex flex-col  items-center gap-1">
+          <div className="flex flex-col items-center gap-4 sm:gap-6">
             <div
               className="inline-block p-[1px] rounded-[20px]"
               style={{
                 background: `linear-gradient(${isMobile ? gradientConfig.centerTop.mobile : gradientConfig.centerTop.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A] w-[100%]">
-                <h5 className="md:text-[26px] text-[18px]">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A] w-full">
+                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">
                   Platform Management
                 </h5>
-                <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                   Facebook, Instagram, and Google Business Profile covered
                 </p>
               </div>
@@ -165,14 +165,14 @@ export default function ServicePage() {
                 background: `linear-gradient(${isMobile ? gradientConfig.centerMiddle.mobile : gradientConfig.centerMiddle.desktop}, #203FFC 100%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-14 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)]   border dark:border-[#1A1A1A] text-lg  w-full">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-8 sm:p-10 md:p-12 lg:p-14 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)] border dark:border-[#1A1A1A] w-full">
                 {/* Replaced large shape image with modern icon design */}
-                <div className="flex justify-center items-center w-[270px] h-[250px] mx-auto relative">
+                <div className="flex justify-center items-center w-48 sm:w-56 md:w-64 lg:w-[270px] h-40 sm:h-48 md:h-56 lg:h-[250px] mx-auto relative">
                   <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full animate-spin" style={{animationDuration: '10s'}}></div>
                   <div className="absolute inset-6 bg-gradient-to-l from-blue-500/30 to-cyan-500/30 rounded-full animate-spin" style={{animationDuration: '8s', animationDirection: 'reverse'}}></div>
                   <div className="relative z-10 text-center">
-                    <div className="text-5xl mb-4">🚀</div>
-                    <div className="text-lg font-semibold">Social Growth</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4">🚀</div>
+                    <div className="text-base sm:text-lg font-semibold">Social Growth</div>
                   </div>
                 </div>
               </div>
@@ -183,11 +183,11 @@ export default function ServicePage() {
                 background: `linear-gradient(${isMobile ? gradientConfig.centerBottom.mobile : gradientConfig.centerBottom.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A] w-[100%]">
-                <h5 className="md:text-[26px] text-[18px]">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A] w-full">
+                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">
                   Performance Reports
                 </h5>
-                <p className="text-[18px] mt-3 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                   Simple stats to show growth, engagement, and ROI
                 </p>
               </div>
@@ -195,18 +195,18 @@ export default function ServicePage() {
           </div>
 
           {/* Right Column */}
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-4 sm:gap-6">
             <div
               className="inline-block p-[1px] rounded-[20px]"
               style={{
                 background: `linear-gradient(${isMobile ? gradientConfig.rightColumn.mobile : gradientConfig.rightColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
-                <h5 className="md:text-[26px] text-[18px]">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
+                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">
                   We Handle the Conversations
                 </h5>
-                <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                   We monitor and respond to comments and messages professionally
                 </p>
               </div>
@@ -217,9 +217,9 @@ export default function ServicePage() {
                 background: `linear-gradient(${isMobile ? gradientConfig.rightColumn.mobile : gradientConfig.rightColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
-                <h5 className="md:text-[26px] text-[18px]">Local Focus</h5>
-                <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
+                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">Local Focus</h5>
+                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                   Everything we do is tailored to your local market and ideal customers
                 </p>
               </div>
@@ -228,30 +228,30 @@ export default function ServicePage() {
         </div>
       </section>
 
-      <section className=" dark:bg-black bg-white pb-32">
-        <div className=" md:container mx-auto flex flex-col gap-3 lg:pt-32 lg:pb-14 sm:py-24 py-16 sm:items-center items-start xl:px-16 lg:px-10 px-4">
-          <h2 className="md:text-[38px] text-[26px] font-medium font-inter text-black dark:text-secondary-1000 lg:mb-9 md:mb-6 mb-1">
+      <section className="dark:bg-black bg-white py-16 sm:py-20 md:py-24 lg:py-32">
+        <div className="container mx-auto flex flex-col gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 xl:px-16 items-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter text-black dark:text-secondary-1000 text-center mb-4 sm:mb-6 md:mb-9">
             Quick Questions...
           </h2>
 
           {faqData?.map((faq, index) => (
             <div
               key={index}
-              className="dark:bg-primary-1150 bg-secondary-1350 sm:p-8 p-4 rounded-2xl transition-all duration-300 w-full"
+              className="dark:bg-primary-1150 bg-secondary-1350 p-4 sm:p-6 md:p-8 rounded-2xl transition-all duration-300 w-full max-w-4xl"
             >
               <div
                 className="flex justify-between items-center cursor-pointer"
                 onClick={() => toggleAccordion(index)}
               >
-                <h2 className="sm:text-[26px] text-[20px] max-[640px]:leading-7 font-medium font-inter dark:text-secondary-1050 text-black">
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black leading-tight pr-4">
                   {faq.question}
                 </h2>
-                <button className="transform transition-transform duration-300">
+                <button className="transform transition-transform duration-300 flex-shrink-0">
                   <svg
                     viewBox="0 0 7 13"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`sm:h-[14px] h-[11px] sm:w-2 w-[6px] transition-transform duration-300 ${expandedIndex === index ? "rotate-[270deg]" : "rotate-90"
+                    className={`h-3 w-2 sm:h-[14px] sm:w-2 transition-transform duration-300 ${expandedIndex === index ? "rotate-[270deg]" : "rotate-90"
                       }`}
                   >
                     <path
@@ -264,25 +264,25 @@ export default function ServicePage() {
                 </button>
               </div>
               <div
-                className={`overflow-hidden transition-all duration-300 md:w-auto w-[86%] ${expandedIndex === index ? "max-h-[500px] mt-3" : "max-h-0"
+                className={`overflow-hidden transition-all duration-300 ${expandedIndex === index ? "max-h-[500px] mt-3 sm:mt-4" : "max-h-0"
                   }`}
               >
-                <p className="sm:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 text-primary-1400 md:leading-[22px] leading-[18px]">
+                <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
             </div>
           ))}
         </div>
-        <div className="flex justify-center flex-col sm:flex-row mx-auto">
+        <div className="flex justify-center mt-8 sm:mt-12 px-4">
           <LightButton href="/contact">Contact Us</LightButton>
         </div>
       </section>
-      <section className="dark:bg-black bg-white pb-32 text-center">
-        <h2 className="md:text-[38px] text-[26px] font-medium font-inter text-black dark:text-secondary-1000 lg:mb-9 md:mb-6 mb-1">
+      <section className="dark:bg-black bg-white py-16 sm:py-20 md:py-24 lg:py-32 text-center px-4 sm:px-6 lg:px-8">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter text-black dark:text-secondary-1000 mb-6 sm:mb-8">
           Ready to Get Started?
         </h2>
-        <p className="mt-6 md:w-[60%] mx-auto text-lg leading-6 text-gray-600 dark:text-gray-400 text-center  px-4">
+        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-8 sm:mb-12">
           Our social media plans are simple and designed for busy business owners. Pick what works for your goals, or let's chat about a custom solution!
         </p>
 

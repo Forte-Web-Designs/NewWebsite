@@ -36,50 +36,49 @@ export default function ServicesPage() {
       <SectionBackgroundAnimation />
       <div className="relative z-10">
         {/* Hero Section */}
-        <section className="py-16 md:py-24">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className='max-w-3xl mx-auto text-center sm:gap-[24px] gap-[22px] grid'>
-            <div className="flex gap-2 md:justify-center items-center ">
+          <div className='max-w-3xl mx-auto text-center grid gap-6 sm:gap-8'>
+            <div className="flex gap-2 justify-center items-center">
               <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} />
-              <span className="text-[#8D9DFF] sm:text-[24px] text-[12px] font-normal leading-[12px] sm:leading-[24px] ">Complete Ecosystem</span>
+              <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-xl font-normal">Complete Ecosystem</span>
             </div>
-            <div className="">
-              <h1 className="font-roboto font-medium text-[32px] sm:text-[62px] sm:leading-[62px] leading-[40px] tracking-[-1.24px] sm:text-center text-start align-middle text-black dark:text-[#FFFFFF]">
+            <div>
+              <h1 className="font-roboto font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight text-center text-black dark:text-[#FFFFFF]">
                 {data[0].title}
               </h1>
             </div>
-            <div className="">
-              <p className="font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262]  dark:text-[#B4B4B4]">
+            <div>
+              <p className="font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-center text-[#626262] dark:text-[#B4B4B4]">
                 {data[0].description}
               </p>
             </div>
           </div>
-
         </div>
       </section>
 
       {/* Why Business Owners Choose Forte */}
-      <section className="py-9   md:px-10 sm:px-6 lg:px-0 md:py-16">
-        <div className="container mx-auto xxl:px-8 sm:px-6 lg:px-8 px-4  grid gap-[40px] ">
-          <h2 className="font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal align-middle text-center text-black dark:text-[#FFFFFF]">
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 grid gap-8 sm:gap-10 md:gap-12">
+          <h2 className="font-inter-display font-medium text-2xl sm:text-3xl md:text-4xl leading-tight text-center text-black dark:text-[#FFFFFF]">
             Why Business Owners Choose Forte
           </h2>
 
-          <div className="grid md:grid-cols-3  md:py-8 md:justify-around  mx-auto sm:gap-[20px] gap-[40px] text-center">
-            <div className="text-center mx-auto p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
-              <h3 className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]" >
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 text-center max-w-6xl mx-auto">
+            <div className="p-4 sm:p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
+              <h3 className="font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight text-center dark:text-[#EEEEEE] text-[black]">
                 Strategic design that converts visitors to customers
               </h3>
             </div>
 
-            <div className="text-center p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
-              <h3 className="tfont-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]">
+            <div className="p-4 sm:p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
+              <h3 className="font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight text-center dark:text-[#EEEEEE] text-[black]">
                 Lightning-fast performance and ironclad security
               </h3>
             </div>
 
-            <div className="text-center p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
-              <h3 className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal text-center align-middle dark:text-[#EEEEEE] text-[black]">
+            <div className="p-4 sm:p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#0C0C0C]">
+              <h3 className="font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight text-center dark:text-[#EEEEEE] text-[black]">
                 Friendly, U.S.-based support you can actually talk to
               </h3>
             </div>

@@ -66,20 +66,20 @@ export default function Website2() {
     <div className="relative">
       <SectionBackgroundAnimation />
       <div className="relative z-10">
-        <section className="pt-16 md:pt-24">
+        <section className="pt-12 sm:pt-16 md:pt-20 lg:pt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center ">
-            <div className="flex gap-2 mb-5 justify-center  md:mb-8">
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="flex gap-2 mb-4 sm:mb-6 md:mb-8 justify-center">
               <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} />
-              <span className="text-[#8D9DFF] text-sm font-normal md:text-lg  md:text-[#8D9DFF]">
+              <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">
                 About
               </span>
             </div>
-            <h1 className="sm:text-4xl text-3xl  sm:w-[85%] w-[95%]  tracking-tight text-gray-900 dark:text-white md:text-5xl md:mx-auto text-center ">
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium tracking-tight text-gray-900 dark:text-white text-center">
               Forte Web Designs
             </h1>
-            <p className="mt-6 sm:text-lg text-sm leading-6 text-gray-600 dark:text-gray-400 text-center ">
-              Hey, I’m Seth — the founder of Forte Web Designs. I started this company in 2024 because I saw a major gap in the web design world.
+            <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 text-center">
+              Hey, I'm Seth — the founder of Forte Web Designs. I started this company in 2024 because I saw a major gap in the web design world.
             </p>
           </div>
         </div>

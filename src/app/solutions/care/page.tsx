@@ -171,15 +171,15 @@ export default function ServicePage() {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-1  max-w-6xl mx-auto w-full items-center">
-          <div className="flex flex-col gap-1">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-1 max-w-6xl mx-auto w-full items-center px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-2 md:gap-1">
             <div
               className="inline-block p-[1px] rounded-[20px]"
               style={{
                 background: `linear-gradient(${isMobile ? gradientConfig.leftColumn.mobile : gradientConfig.leftColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] md:h-[150px] md:py-12 font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] min-h-[120px] md:h-[150px] flex items-center justify-center font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center">
                 Speed Optimization & Performance Checks
               </div>
             </div>
@@ -189,19 +189,19 @@ export default function ServicePage() {
                 background: `linear-gradient(${isMobile ? gradientConfig.leftColumn.mobile : gradientConfig.leftColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] md:h-[150px] md:py-12 font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] min-h-[120px] md:h-[150px] flex items-center justify-center font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center">
                 Quarterly Performance Reports
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center gap-1">
+          <div className="flex flex-col items-center gap-2 md:gap-1">
             <div
               className="inline-block p-[1px] w-full rounded-[20px]"
               style={{
                 background: `linear-gradient(${isMobile ? gradientConfig.centerTop.mobile : gradientConfig.centerTop.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] w-full font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] w-full font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center flex items-center justify-center min-h-[60px]">
                 Unlimited Content Edits
               </div>
             </div>
@@ -211,8 +211,8 @@ export default function ServicePage() {
                 background: `linear-gradient(${isMobile ? gradientConfig.centerMiddle.mobile : gradientConfig.centerMiddle.desktop}, #203FFC 100%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)]   border dark:border-[#1A1A1A] text-lg  w-full">
-                <OptimizedImage src="/images/services/Shape Holo.png" alt="logo" width={270} priority height={250} className="lg:w-[270px] lg:h-[250px] mx-auto" />
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)] border dark:border-[#1A1A1A] w-full flex items-center justify-center">
+                <OptimizedImage src="/images/services/Shape Holo.png" alt="logo" width={200} priority height={180} className="w-48 h-40 sm:w-56 sm:h-48 md:w-64 md:h-56 lg:w-[270px] lg:h-[250px]" />
               </div>
             </div>
             <div
@@ -221,20 +221,20 @@ export default function ServicePage() {
                 background: `linear-gradient(${isMobile ? gradientConfig.centerBottom.mobile : gradientConfig.centerBottom.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A]  w-full font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] w-full font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center flex items-center justify-center min-h-[60px]">
                 Monthly Site Backups
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-2 md:gap-1">
             <div
               className="inline-block p-[1px] rounded-[20px]"
               style={{
                 background: `linear-gradient(${isMobile ? gradientConfig.rightColumn.mobile : gradientConfig.rightColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] md:h-[150px] md:py-12 font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] min-h-[120px] md:h-[150px] flex items-center justify-center font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center">
                 Hosting Management & Uptime Monitoring
               </div>
             </div>
@@ -244,7 +244,7 @@ export default function ServicePage() {
                 background: `linear-gradient(${isMobile ? gradientConfig.rightColumn.mobile : gradientConfig.rightColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
               }}
             >
-              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] md:h-[150px] md:py-12 font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle">
+              <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] min-h-[120px] md:h-[150px] flex items-center justify-center font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center">
                 Broken Link Fixes
               </div>
             </div>

@@ -1,14 +1,6 @@
 import LightButton from "@/components/LightButton";
 import { Icon } from "@/components/images/Icon";
-import { OptimizedImage } from "@/component            <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-primary-1400 dark:text-primary-1050 leading-relaxed mb-6 sm:mb-8 max-w-3xl mx-auto">
-              We don't believe in one-size-fits-all websites. Every site we build
-              is hand-coded for speed, strategy, and long-term success. Your
-              business deserves a web presence that's not just beautiful—but built
-              to perform.
-            </p>
-            <div className="flex justify-center">
-              <LightButton href="/contact">Get Started</LightButton>
-            </div>OptimizedImage";
+import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { TestimonialSlider } from "@/components/work/TestimonialSlider";
 import { SectionBackgroundAnimation } from "@/components/animations/BackgroundAnimation";
 import { Metadata } from "next";
