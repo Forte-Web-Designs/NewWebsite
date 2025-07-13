@@ -5,17 +5,17 @@ import { useEffect, useState } from "react";
 const testimonials = [
   {
     text: `Seth at Forte Web Designs built our site from scratch! We've already seen a noticeable increase in leads and conversions. Hands down the best investment we've made for our business.`,
-    author: "James Carter",
+    author: "Seth",
     role: "Owner of Carter HVAC",
   },
   {
     text: `We saw a 2x increase in online leads after working with Forte Web Designs. Their team is incredibly professional and results-driven.`,
-    author: "Sarah Lee",
+    author: "Forte Web Designs",
     role: "Founder of Lee & Co. Legal",
   },
   {
     text: `Working with Seth and Forte Web Designs was a game changer for our startup. They not only built a stunning website but helped us understand how to convert traffic into sales.`,
-    author: "Daniel Kim",
+    author: "Seth",
     role: "CEO of SparkCommerce",
   },
 ];

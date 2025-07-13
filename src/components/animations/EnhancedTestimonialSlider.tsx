@@ -7,19 +7,19 @@ import AnimatedCard from "@/components/animations/AnimatedCard";
 const testimonials = [
   {
     text: `Seth built our site from scratch! We've already seen a noticeable increase in leads and conversions. Hands down the best investment we've made for our business.`,
-    author: "James Carter",
+    author: "Seth",
     role: "Owner of Carter HVAC",
     rating: 5,
   },
   {
     text: `We saw a 2x increase in online leads after working with Forte Web Designs. Their team is incredibly professional and results-driven.`,
-    author: "Sarah Lee",
+    author: "Forte Web Designs",
     role: "Founder of Lee & Co. Legal",
     rating: 5,
   },
   {
     text: `Working with Seth was a game changer for our startup. He not only built a stunning website but helped us understand how to convert traffic into sales.`,
-    author: "Daniel Kim",
+    author: "Seth",
     role: "CEO of SparkCommerce",
     rating: 5,
   },

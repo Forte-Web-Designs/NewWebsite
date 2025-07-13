@@ -207,18 +207,18 @@ export default function Home() {
                             25+ Businesses Growing with Forte
                           </p>
                         </div>
-                      <LazyScrollReveal direction="up" delay={600}>
+                      <LazyScrollReveal direction="up" delay={200}>
                         <h1 className="font-display font-medium text-[38px] sm:text-[70px] leading-[40px] sm:leading-[74px] tracking-[-0.04em] align-middle text-black dark:text-white">
                           Your Business Deserves a Website That <br /><span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Actually Works for You</span>
                         </h1>
                       </LazyScrollReveal>
-                      <LazyScrollReveal direction="up" delay={800}>
+                      <LazyScrollReveal direction="up" delay={300}>
                         <p className="font-display font-medium text-[14px] sm:text-[20px] leading-[100%] tracking-[0%] align-middle text-[#626262] dark:text-white">
                           Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
                         </p>
                       </LazyScrollReveal>
                     </div>
-                    <LazyScrollReveal direction="up" delay={1000}>
+                    <LazyScrollReveal direction="up" delay={400}>
                       <div className="flex justify-start flex-col sm:flex-row">
                         <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
                       </div>

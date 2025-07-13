@@ -20,6 +20,8 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showSuccess, setShowSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -36,6 +38,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setSubmitError(null);
     
     try {
       // Netlify form submission
@@ -48,7 +51,8 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
       });
 
       if (response.ok) {
-        // Success - reset form
+        // Success - show success message and reset form
+        setShowSuccess(true);
         setFormData({
           name: "",
           email: "",
@@ -58,14 +62,16 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           message: "",
         });
         
-        // Show success message (you can customize this)
-        alert("Thank you! Your message has been sent successfully. We'll get back to you soon!");
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          setShowSuccess(false);
+        }, 5000);
       } else {
         throw new Error("Form submission failed");
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      alert("Sorry, there was an error sending your message. Please try again or contact us directly.");
+      setSubmitError("Sorry, there was an error sending your message. Please try again or contact us directly at seth@fortewebdesigns.com");
     } finally {
       setIsSubmitting(false);
     }
@@ -143,12 +149,46 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               {/* Form */}
               <SimpleScrollReveal direction="up" delay={400}>
                 <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+                  
+                  {/* Success Message */}
+                  {showSuccess && (
+                    <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg backdrop-blur-sm">
+                      <div className="flex items-center gap-3">
+                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-green-400 font-semibold">Message Sent Successfully!</h3>
+                          <p className="text-green-300 text-sm">Thank you for contacting us. We'll get back to you within 24 hours.</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Error Message */}
+                  {submitError && (
+                    <div className="mb-6 p-4 bg-red-500/20 border border-red-500/50 rounded-lg backdrop-blur-sm">
+                      <div className="flex items-center gap-3">
+                        <div className="w-6 h-6 bg-red-500 rounded-full flex items-center justify-center flex-shrink-0">
+                          <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </div>
+                        <div>
+                          <h3 className="text-red-400 font-semibold">Submission Failed</h3>
+                          <p className="text-red-300 text-sm">{submitError}</p>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
                   <form 
                     name="contact" 
                     method="POST" 
                     data-netlify="true" 
                     data-netlify-honeypot="bot-field"
-                    action="/thank-you"
                     onSubmit={handleSubmit} 
                     className="space-y-6"
                   >

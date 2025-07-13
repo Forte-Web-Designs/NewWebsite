@@ -126,7 +126,7 @@ export default function SolutionsPage() {
             to perform.
           </p>
           <div className="mt-5">
-            <LightButton href="/contact">Contact Us</LightButton>
+            <LightButton href="/contact">Seth</LightButton>
           </div>
         </div>
       </section>
