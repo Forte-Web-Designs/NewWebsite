@@ -157,79 +157,168 @@ export default function Home() {
         <HeroBackgroundAnimation className="opacity-60" />
         
         <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-[#7f8bdb00] to-[#FFFFFF] dark:bg-gradient-to-b dark:from-[#0c0f265a] dark:to-[#000000] z-0"></div>
-        <div className="container lg:flex-row flex-col flex mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10 gap-2 sm:gap-3 pt-3 sm:pt-5 pr-2 sm:pr-3 pb-3 sm:pb-5 pl-2 sm:pl-5 rounded-[16px] sm:rounded-[22px] border border-[#DCDCDC] bg-white shadow-[0px_44px_44px_-30px_#00000026] dark:bg-[#0C0C0C] dark:border-[#323232] dark:shadow-[0px_44px_44px_30px_#00000026]">
-          <div className="w-full max-w-[98%] grid lg:grid-cols-2 items-center gap-2 sm:gap-2.5 rounded-[8px] sm:rounded-[10px] border border-[#DCDCDC] bg-[#F8F8F8] bg-[url('/images/home/banner-bg.png')] bg-cover bg-center bg-no-repeat p-2 sm:p-3 dark:border-[#323232] dark:bg-[#141414] dark:bg-[url('/images/home/dark-banner-bg.png')]">
-            <SimpleScrollReveal direction="left" delay={200}>
-              <div className="px-2 sm:px-0">
-                <div className="mb-4 sm:mb-6 gap-4 sm:gap-[25px] grid">
-                    <div className="rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
-                      <p
-                        className="font-sans font-normal 
-text-[11px] sm:text-[12px] md:text-[16px] leading-[14px] sm:leading-[12px] md:leading-[18px] tracking-[-0.24px] align-middle text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]"
-                      >
-                        25+ Businesses Growing with Forte
-                      </p>
-                    </div>
-                  <SimpleScrollReveal direction="up" delay={200}>
-                    <h1 className="font-display font-medium text-[28px] sm:text-[38px] md:text-[52px] lg:text-[70px] leading-[32px] sm:leading-[40px] md:leading-[56px] lg:leading-[74px] tracking-[-0.04em] align-middle text-black dark:text-white">
-                      Your Business Deserves a Website That <br className="hidden sm:block" /><span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Actually Works for You</span>
-                    </h1>
-                  </SimpleScrollReveal>
-                  <SimpleScrollReveal direction="up" delay={300}>
-                    <p className="font-display font-medium text-[13px] sm:text-[14px] md:text-[18px] lg:text-[20px] leading-[16px] sm:leading-[18px] md:leading-[22px] lg:leading-[24px] tracking-[0%] align-middle text-[#626262] dark:text-white">
-                      Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
+        <div className="container mx-auto px-3 sm:px-4 md:px-6 lg:px-8 relative z-10">
+          
+          {/* Mobile Hero Content - Streamlined Layout */}
+          <div className="lg:hidden">
+            {/* Mobile Hero Text Section */}
+            <div className="mb-8">
+              <SimpleScrollReveal direction="up" delay={200}>
+                <div className="text-center space-y-6">
+                  <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
+                    <p className="font-sans font-normal text-[12px] leading-[14px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
+                      25+ Businesses Growing with Forte
                     </p>
-                  </SimpleScrollReveal>
-                </div>
-                <SimpleScrollReveal direction="up" delay={400}>
-                  <div className="flex justify-start flex-col sm:flex-row">
+                  </div>
+                  
+                  <h1 className="font-display font-medium text-[28px] sm:text-[36px] leading-[32px] sm:leading-[40px] tracking-[-0.04em] text-black dark:text-white px-4">
+                    Your Business Deserves a Website That <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Actually Works for You</span>
+                  </h1>
+                  
+                  <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-[#626262] dark:text-white px-4 max-w-2xl mx-auto">
+                    Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
+                  </p>
+                  
+                  <div className="flex justify-center pt-4">
                     <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
+                  </div>
+                </div>
+              </SimpleScrollReveal>
+            </div>
+            
+            {/* Mobile Portfolio Showcase - Clean and Focused */}
+            <div className="px-4">
+              <SimpleScrollReveal direction="up" delay={400}>
+                <div className="relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-xl">
+                  {/* Portfolio Header */}
+                  <div className="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 px-4 py-3 border-b border-gray-200 dark:border-gray-600">
+                    <div className="flex items-center gap-2">
+                      <div className="flex gap-1.5">
+                        <div className="w-3 h-3 rounded-full bg-red-400"></div>
+                        <div className="w-3 h-3 rounded-full bg-yellow-400"></div>
+                        <div className="w-3 h-3 rounded-full bg-green-400"></div>
+                      </div>
+                      <div className="flex-1 text-center">
+                        <p className="text-sm font-medium text-gray-600 dark:text-gray-300">Portfolio Showcase</p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Main Portfolio Image */}
+                  <div className="p-3">
+                    <OptimizedImage
+                      src={sliderImages[0].src}
+                      width={400}
+                      height={300}
+                      alt="Forte Web Designs Portfolio Showcase"
+                      className="w-full h-auto rounded-lg"
+                      priority={true}
+                    />
+                  </div>
+                  
+                  {/* Portfolio Navigation Dots */}
+                  <div className="flex justify-center gap-2 pb-4">
+                    {sliderImages.map((_, index) => (
+                      <div
+                        key={index}
+                        className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                          index === 0 
+                            ? 'bg-primary-500 w-6' 
+                            : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+                        }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </SimpleScrollReveal>
+            </div>
+          </div>
+
+          {/* Desktop Hero Content - Side by Side */}
+          <div className="hidden lg:block">
+            <div className="rounded-[22px] border border-[#DCDCDC] bg-white shadow-[0px_44px_44px_-30px_#00000026] dark:bg-[#0C0C0C] dark:border-[#323232] dark:shadow-[0px_44px_44px_30px_#00000026] pt-5 pr-3 pb-5 pl-5">
+              <div className="grid lg:grid-cols-2 items-center gap-8 rounded-[10px] border border-[#DCDCDC] bg-[#F8F8F8] bg-[url('/images/home/banner-bg.png')] bg-cover bg-center bg-no-repeat p-6 dark:border-[#323232] dark:bg-[#141414] dark:bg-[url('/images/home/dark-banner-bg.png')]">
+                
+                {/* Left Column - Content */}
+                <SimpleScrollReveal direction="left" delay={200}>
+                  <div className="space-y-8">
+                    <div className="space-y-6">
+                      <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
+                        <p className="font-sans font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
+                          25+ Businesses Growing with Forte
+                        </p>
+                      </div>
+                      
+                      <SimpleScrollReveal direction="up" delay={200}>
+                        <h1 className="font-display font-medium text-[70px] leading-[74px] tracking-[-0.04em] text-black dark:text-white">
+                          Your Business Deserves a Website That <br /><span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Actually Works for You</span>
+                        </h1>
+                      </SimpleScrollReveal>
+                      
+                      <SimpleScrollReveal direction="up" delay={300}>
+                        <p className="font-display font-medium text-[20px] leading-[28px] tracking-[0%] text-[#626262] dark:text-white max-w-lg">
+                          Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
+                        </p>
+                      </SimpleScrollReveal>
+                    </div>
+                    
+                    <SimpleScrollReveal direction="up" delay={400}>
+                      <div className="flex justify-start">
+                        <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
+                      </div>
+                    </SimpleScrollReveal>
+                  </div>
+                </SimpleScrollReveal>
+
+                {/* Right Column - Interactive Slider */}
+                <SimpleScrollReveal direction="right" delay={300}>
+                  <div className="relative">
+                    <div className="relative rounded-xl shadow-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700">
+                      <Slider ref={sliderRef} {...sliderSettings}>
+                        {sliderImages.map((item) => (
+                          <div key={item.id}>
+                            <OptimizedImage
+                              src={item.src}
+                              width={626}
+                              height={619}
+                              alt={`Portfolio Showcase ${item.id}`}
+                              className="w-full h-auto"
+                              priority={item.id === 1}
+                            />
+                          </div>
+                        ))}
+                      </Slider>
+                    </div>
+                    
+                    {/* Thumbnail Navigation */}
+                    <div className="flex justify-center gap-3 mt-6">
+                      {sliderImages.map((item, index) => (
+                        <button
+                          key={item.id}
+                          className={`relative rounded-lg overflow-hidden transition-all duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-primary-500 ${
+                            currentSlide === index
+                              ? "ring-2 ring-black dark:ring-white shadow-lg scale-105"
+                              : "opacity-70 hover:opacity-100 shadow-md"
+                          }`}
+                          onClick={() => handleThumbnailClick(index)}
+                          aria-label={`View portfolio example ${index + 1}`}
+                        >
+                          <OptimizedImage
+                            src={item.src}
+                            width={60}
+                            height={60}
+                            alt={`Thumbnail ${item.id}`}
+                            className="w-15 h-15 object-cover"
+                          />
+                        </button>
+                      ))}
+                    </div>
                   </div>
                 </SimpleScrollReveal>
               </div>
-            </SimpleScrollReveal>
-                <div className="relative w-full max-w-[90vw] sm:w-[75vw] lg:w-full mx-auto mt-4 lg:mt-0">
-                  {/* Main Slider - Clean and Prominent */}
-                  <div className="relative rounded-lg shadow-xl overflow-hidden p-1 sm:p-2 mb-3 sm:mb-4 w-full max-w-full">
-                    <Slider ref={sliderRef} {...sliderSettings}>
-                      {sliderImages.map((item) => (
-                        <div key={item.id}>
-                          <OptimizedImage
-                            src={item.src}
-                            width={626}
-                            height={619}
-                            alt={`Slide ${item.id}`}
-                            className="w-full h-auto max-w-full"
-                            priority={item.id === 1}
-                          />
-                        </div>
-                      ))}
-                    </Slider>
-                  </div>
-                </div>
-              </div>
-              {/* Thumbnail Navigation */}
-              <div className="flex flex-row lg:flex-col gap-1 sm:gap-2 w-full align-baseline items-center justify-center max-w-full lg:max-w-[5%] mx-auto">
-                {sliderImages.map((item, index) => (
-                  <div
-                    key={item.id}
-                    className={`cursor-pointer rounded-md overflow-hidden transition-all duration-300 grid w-[40px] sm:w-[50px] hover:scale-110 hover:shadow-lg ${currentSlide === index
-                        ? "ring-2 ring-[#000000] dark:ring-[#FFFFFF]"
-                        : "opacity-70 hover:opacity-100"
-                      }`}
-                    onClick={() => handleThumbnailClick(index)}
-                  >
-                    <OptimizedImage
-                      src={item.src}
-                      width={50}
-                      height={50}
-                      alt={`Thumbnail ${item.id}`}
-                      className="w-[40px] h-[40px] sm:w-[50px] sm:h-[50px] object-cover"
-                    />
-                  </div>
-                ))}
-              </div>
             </div>
+          </div>
+        </div>
           </section>
 
           {/* Website Audit CTA Section */}
