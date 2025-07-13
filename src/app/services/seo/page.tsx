@@ -316,9 +316,14 @@ export default function SeoDesignPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Ready to Start Ranking?
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Choose the SEO plan that fits your goals and budget. All plans include transparent reporting and real results.
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-6">
+              Add Forte SEO™ to your existing Forte Foundation™ or Pro™ website. Choose the plan that matches your growth goals.
             </p>
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-2xl mx-auto">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                💡 <strong>Small Business Tip:</strong> Most local businesses see great results starting with Foundation + SEO Essential™ ($500/month total)
+              </p>
+            </div>
           </div>
           <PricingPage serviceType="seo" />
         </div>

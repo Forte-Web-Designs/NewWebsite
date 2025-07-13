@@ -370,6 +370,11 @@ export default function ServicePage() {
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-8 sm:mb-12">
           Add Forte Social™ to your existing Forte Foundation™ or Pro™ website. Plans start at just +$200/month and scale with your growth goals.
         </p>
+        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-2xl mx-auto mb-8">
+          <p className="text-sm text-gray-600 dark:text-gray-400">
+            💡 <strong>Small Business Tip:</strong> Most restaurants and service businesses love Foundation + Social Essential™ ($400/month total)
+          </p>
+        </div>
 
         <div className="text-left">
           <PricingPage serviceType="social" />

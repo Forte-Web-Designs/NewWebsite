@@ -387,9 +387,16 @@ export function PricingPage({ serviceType }: { serviceType?: 'website' | 'seo' |
               {headerSubtitle}
             </p>
             {!serviceType && (
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-4">
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-4 mb-6">
                 Every Forte™ website comes with Forte Care™ included, plus you can add SEO, PPC, and Social Media services as your business grows.
               </p>
+            )}
+            {!serviceType && (
+              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 max-w-2xl mx-auto">
+                <p className="text-sm text-green-700 dark:text-green-300">
+                  🏢 <strong>Perfect for Small Businesses:</strong> Start at just $200/month and add services when you're ready to grow. No huge upfront costs!
+                </p>
+              </div>
             )}
           </div>
         </SimpleScrollReveal>
