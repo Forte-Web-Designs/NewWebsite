@@ -21,7 +21,7 @@ const pricingPlans: PricingPlan[] = [
     id: 'foundation',
     name: 'Forte Foundation™',
     price: '$200/month',
-    subtitle: '12-Month Minimum',
+    subtitle: 'Perfect Starting Point',
     isPopular: true,
     ctaText: 'Start Building',
     including: [
@@ -41,7 +41,7 @@ const pricingPlans: PricingPlan[] = [
     id: 'pro',
     name: 'Forte Pro™',
     price: '$350/month',
-    subtitle: '12-Month Minimum',
+    subtitle: 'Best Value for Growth',
     ctaText: 'Go Premium',
     ctaMarginTop: 'mt-20',
     including: [
@@ -175,6 +175,88 @@ const servicePricingPlans: PricingPlan[] = [
       'Paid Social Ads: +$300/mo',
       'Influencer Outreach: +$250/mo',
       'Video Content: +$200/mo'
+    ]
+  }
+];
+
+// Ecosystem Package Bundles - Complete Solutions
+const ecosystemPackages: PricingPlan[] = [
+  {
+    id: 'starter',
+    name: 'Forte Starter™',
+    price: '$200/month',
+    subtitle: 'Perfect for New Businesses',
+    ctaText: 'Get Started',
+    including: [
+      'Forte Foundation™ Website (5 pages)',
+      'Domain + Premium Hosting',
+      'Forte Care™ Support Included',
+      'Mobile-Responsive & SEO-Ready',
+      'Forte Guarantee™'
+    ],
+    addons: [
+      'Add SEO: +$300/mo',
+      'Add PPC: +$400/mo',
+      'Add Social: +$200/mo'
+    ]
+  },
+  {
+    id: 'growth',
+    name: 'Forte Growth™',
+    price: '$500/month',
+    subtitle: 'Most Popular Choice • Save $100/mo',
+    isPopular: true,
+    ctaText: 'Start Growing',
+    including: [
+      'Forte Foundation™ Website (5 pages)',
+      'Forte SEO Essential™ Package',
+      'Technical SEO + On-Page Optimization',
+      'Monthly SEO Reports & Strategy',
+      'Forte Care™ Support Included'
+    ],
+    addons: [
+      'Upgrade to Pro Site: +$150/mo',
+      'Add PPC: +$400/mo',
+      'Add Social: +$200/mo'
+    ]
+  },
+  {
+    id: 'brand-boost',
+    name: 'Forte Brand Boost™',
+    price: '$700/month',
+    subtitle: 'Complete Brand Presence • Save $200/mo',
+    ctaText: 'Build Brand',
+    including: [
+      'Forte Foundation™ Website (5 pages)',
+      'Forte SEO Essential™ Package',
+      'Forte Social Essential™ (2 platforms)',
+      '12 Custom Posts + Content Calendar',
+      'Unified Brand Strategy'
+    ],
+    addons: [
+      'Upgrade to Pro Site: +$150/mo',
+      'Add PPC: +$400/mo',
+      'Upgrade to SEO Growth: +$200/mo'
+    ]
+  },
+  {
+    id: 'dominate',
+    name: 'Forte Dominate™',
+    price: '$1,200/month',
+    subtitle: 'Full Digital Ecosystem • Save $400/mo',
+    ctaText: 'Dominate Market',
+    ctaMarginTop: 'mt-8',
+    including: [
+      'Forte Pro™ Website (10 pages)',
+      'Forte SEO Growth™ (4 blog posts/mo)',
+      'Forte PPC Starter™ Campaign',
+      'Forte Social Essential™ Management',
+      'Complete Forte Ecosystem™'
+    ],
+    addons: [
+      'Upgrade PPC to Growth: +$250/mo',
+      'Upgrade Social to Growth: +$150/mo',
+      'Add Extra Services as Needed'
     ]
   }
 ];
@@ -327,7 +409,7 @@ function PricingCard({ plan }: PricingCardProps) {
   );
 }
 
-export function PricingPage({ serviceType }: { serviceType?: 'website' | 'seo' | 'ppc' | 'social' } = {}) {
+export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'website' | 'seo' | 'ppc' | 'social', showEcosystem?: boolean } = {}) {
   // Determine which plans to show based on service type
   let plansToShow: PricingPlan[];
   let headerTitle: string;
@@ -350,9 +432,12 @@ export function PricingPage({ serviceType }: { serviceType?: 'website' | 'seo' |
       headerSubtitle = 'Extend your Forte website presence to social media and build a loyal community.';
       break;
     default:
-      plansToShow = pricingPlans;
-      headerTitle = 'Start Your Forte™ Ecosystem';
-      headerSubtitle = 'Choose your foundation plan, then add services as your business grows.';
+      // Show ecosystem packages if requested, otherwise show individual plans
+      plansToShow = showEcosystem ? ecosystemPackages : pricingPlans;
+      headerTitle = showEcosystem ? 'Complete Forte™ Ecosystem Packages' : 'Start Your Forte™ Ecosystem';
+      headerSubtitle = showEcosystem 
+        ? 'Choose a complete solution that grows with your business. Each package includes everything you need to succeed online.'
+        : 'Choose your foundation plan, then add services as your business grows.';
   }
 
   // Desktop order: As provided

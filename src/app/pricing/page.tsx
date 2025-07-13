@@ -134,6 +134,55 @@ export default function Pricing() {
         </div>
         <PricingPage />
         
+        {/* Ecosystem Packages Section */}
+        <div className="px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/20">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                🎯 Prefer Complete Packages?
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-6">
+                Choose a pre-built package that includes everything you need. Perfect for businesses that want a complete solution without building their own stack.
+              </p>
+              <div className="bg-amber-50 dark:bg-amber-900/20 rounded-lg p-4 max-w-2xl mx-auto">
+                <p className="text-sm text-amber-700 dark:text-amber-300">
+                  💡 <strong>Save Time:</strong> These packages are carefully designed based on what works best for businesses at different growth stages.
+                </p>
+              </div>
+            </div>
+            <PricingPage showEcosystem={true} />
+            
+            {/* Package Comparison */}
+            <div className="mt-16 text-center">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 max-w-4xl mx-auto">
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+                  Package vs. Individual Plans
+                </h3>
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="text-left">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">✅ Choose Packages If:</h4>
+                    <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                      <li>• You want a complete solution from day one</li>
+                      <li>• You prefer not to think about add-ons</li>
+                      <li>• You want proven combinations that work</li>
+                      <li>• You're ready for multiple services now</li>
+                    </ul>
+                  </div>
+                  <div className="text-left">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">⚡ Choose Individual If:</h4>
+                    <ul className="text-sm text-gray-600 dark:text-gray-400 space-y-2">
+                      <li>• You want to start small and grow gradually</li>
+                      <li>• You have a tight budget to begin with</li>
+                      <li>• You only need specific services right now</li>
+                      <li>• You like building your own custom stack</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         {/* Additional Help Section */}
         <div className="px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-4xl mx-auto text-center">
