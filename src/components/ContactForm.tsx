@@ -62,10 +62,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           message: "",
         });
         
-        // Hide success message after 5 seconds
-        setTimeout(() => {
-          setShowSuccess(false);
-        }, 5000);
+        // Success message will stay visible until user interacts again
       } else {
         throw new Error("Form submission failed");
       }
@@ -159,10 +156,19 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                         </div>
-                        <div>
+                        <div className="flex-1">
                           <h3 className="text-green-400 font-semibold">Message Sent Successfully!</h3>
                           <p className="text-green-300 text-sm">Thank you for contacting us. We'll get back to you within 24 hours.</p>
                         </div>
+                        <button
+                          onClick={() => setShowSuccess(false)}
+                          className="text-green-300 hover:text-white transition-colors ml-2"
+                          aria-label="Dismiss success message"
+                        >
+                          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                          </svg>
+                        </button>
                       </div>
                     </div>
                   )}

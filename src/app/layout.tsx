@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import BackToTopButton from "@/components/BackToTopButton";
 import { ThemeProvider } from "./providers/ThemeProvider";
 
 const roboto = Roboto({
@@ -125,6 +126,7 @@ export default function RootLayout({
             </main>
           </div>
           <Footer />
+          <BackToTopButton />
         </ThemeProvider>
       </body>
     </html>

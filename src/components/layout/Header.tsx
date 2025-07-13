@@ -86,6 +86,7 @@ const MobileExpandableMenu = ({ title, children, defaultExpanded = false, isActi
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
   const { theme, mounted } = useTheme();
   const pathname = usePathname();
 
@@ -102,6 +103,17 @@ export default function Header() {
       document.body.style.overflow = 'unset';
     };
   }, [mobileMenuOpen]);
+
+  // Sticky header functionality
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollY = window.scrollY;
+      setIsSticky(scrollY > 100); // Become sticky after scrolling 100px
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Dropdown items for About section
   const aboutDropdownItems = [
@@ -131,10 +143,18 @@ export default function Header() {
   // Don't render theme-dependent content until mounted
   if (!mounted) {
     return (
-      <header className="py-4">
-        <div>
-          <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex items-center justify-between">
+      <>
+        {/* Spacer div to prevent content jumping when header becomes sticky */}
+        {isSticky && <div className="h-20"></div>}
+        
+        <header className={`transition-all duration-300 ${
+          isSticky 
+            ? 'fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
+            : 'py-4'
+        }`}>
+          <div>
+            <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex items-center justify-between">
               {/* Desktop Logo - Hidden on mobile */}
               <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
                 <OptimizedImage
@@ -221,14 +241,23 @@ export default function Header() {
           </div>
         </div>
       </header>
+      </>
     );
   }
 
   return (
-    <header className="py-4">
-      <div>
-        <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between">
+    <>
+      {/* Spacer div to prevent content jumping when header becomes sticky */}
+      {isSticky && <div className="h-20"></div>}
+      
+      <header className={`transition-all duration-300 ${
+        isSticky 
+          ? 'fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
+          : 'py-4'
+      }`}>
+        <div>
+          <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between">
             {/* Desktop Logo - Hidden on mobile */}
             <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
               <OptimizedImage
@@ -537,5 +566,6 @@ export default function Header() {
         </div>
       </div>
     </header>
+    </>
   );
 }
