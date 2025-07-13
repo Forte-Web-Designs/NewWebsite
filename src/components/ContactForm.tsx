@@ -41,12 +41,20 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
     setSubmitError(null);
     
     try {
-      // Netlify form submission
-      const formData = new FormData(e.target as HTMLFormElement);
+      // Get form data directly from the form element
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      // Add form name for Netlify
+      formData.append('form-name', 'contact');
       
       const response = await fetch("/", {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          // Add mobile-specific headers
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        },
         body: new URLSearchParams(formData as any).toString(),
       });
 
@@ -61,6 +69,25 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           company: "",
           message: "",
         });
+        
+        // On mobile, scroll to bottom so user can see success message
+        if (window.innerWidth < 640) {
+          setTimeout(() => {
+            const successElement = document.querySelector('[data-success-message]');
+            if (successElement) {
+              successElement.scrollIntoView({ 
+                behavior: 'smooth',
+                block: 'center'
+              });
+            } else {
+              // Fallback: scroll to bottom
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: 'smooth'
+              });
+            }
+          }, 100);
+        }
         
         // Success message will stay visible until user interacts again
       } else {
@@ -147,9 +174,11 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               <SimpleScrollReveal direction="up" delay={400}>
                 <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
                   
-                  {/* Success Message */}
+                  {/* Success Message - Positioned at bottom on mobile */}
                   {showSuccess && (
-                    <div className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg backdrop-blur-sm">
+                    <div 
+                      data-success-message
+                      className="fixed sm:relative bottom-4 sm:bottom-auto left-4 right-4 sm:left-auto sm:right-auto sm:mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg backdrop-blur-sm z-50 shadow-xl sm:shadow-none">
                       <div className="flex items-center gap-3">
                         <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

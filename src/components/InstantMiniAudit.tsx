@@ -301,16 +301,16 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
         
         {/* Enhanced Call to Action Button */}
         {!results && !isLoading && (
-          <div className="text-center">
+          <div className="text-center px-2">
             <button
               type="submit"
               disabled={!websiteUrl.trim()}
-              className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white px-8 py-4 rounded-xl text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-xl disabled:shadow-none border border-blue-500/50 hover:border-blue-400/50"
+              className="w-full sm:w-auto bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-gray-600 disabled:to-gray-700 disabled:cursor-not-allowed text-white px-6 sm:px-8 py-3 sm:py-4 rounded-xl text-base sm:text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-xl disabled:shadow-none border border-blue-500/50 hover:border-blue-400/50"
             >
               {websiteUrl.trim() ? (
-                <span className="flex items-center gap-2">
+                <span className="flex items-center justify-center gap-2">
                   <span>🔍 Analyze My Website Now</span>
-                  <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
                 </span>
@@ -319,7 +319,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               )}
             </button>
             {websiteUrl.trim() && (
-              <div className="text-xs text-white/70 mt-2">
+              <div className="text-xs text-white/70 mt-2 px-2">
                 ⚡ Results in 2 seconds • 100% Free • No signup required
               </div>
             )}
@@ -343,12 +343,22 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               </button>
             </div>
           ) : results.isLoading ? (
-            <div className="text-center py-4">
+            <div className="text-center py-4 px-2">
               <div className="animate-pulse text-white/90">
-                <div className="text-lg mb-3 font-medium">🔍 Analyzing {results.url}...</div>
-                <div className="text-sm text-white/70 mb-4">Checking SSL, speed, mobile compatibility, and SEO basics</div>
-                <div className="flex justify-center">
-                  <div className="w-8 h-8 border-3 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+                <div className="text-base sm:text-lg mb-3 font-medium">🔍 Analyzing {results.url}...</div>
+                <div className="text-xs sm:text-sm text-white/70 mb-4">Checking SSL, speed, mobile compatibility, and SEO basics</div>
+                <div className="flex justify-center mb-4">
+                  <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 sm:border-3 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
+                </div>
+                {/* Mobile-optimized progress steps */}
+                <div className="text-xs text-white/60 space-y-1">
+                  <div>⚡ Testing page speed...</div>
+                  <div>📱 Checking mobile compatibility...</div>
+                  <div>🔒 Verifying SSL certificate...</div>
+                  <div>🎯 Analyzing SEO basics...</div>
+                </div>
+              </div>
+            </div>
                 </div>
               </div>
             </div>

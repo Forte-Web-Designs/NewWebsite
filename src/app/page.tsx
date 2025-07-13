@@ -27,6 +27,9 @@ export default function Home() {
   const [isNavigatingToAudit, setIsNavigatingToAudit] = useState(false);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [showOverlay, setShowOverlay] = useState(false);
+  const [overlayTimeout, setOverlayTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [isSwiping, setIsSwiping] = useState(false);
 
   // Minimum distance for swipe detection
   const minSwipeDistance = 50;
@@ -52,37 +55,100 @@ export default function Home() {
     }, 200);
   };
 
-  // Touch event handlers for mobile swipe
+  // Touch event handlers for mobile swipe with better gesture detection
   const onTouchStart = (e: React.TouchEvent) => {
     setTouchEnd(null);
     setTouchStart(e.targetTouches[0].clientX);
+    setIsSwiping(false);
+    // Clear any existing overlay timeout when starting a touch
+    if (overlayTimeout) {
+      clearTimeout(overlayTimeout);
+      setOverlayTimeout(null);
+    }
   };
 
   const onTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
+    const currentX = e.targetTouches[0].clientX;
+    setTouchEnd(currentX);
+    
+    // If user is swiping significantly, mark as swiping and prevent default
+    if (touchStart !== null) {
+      const distance = Math.abs(touchStart - currentX);
+      if (distance > 10) {
+        setIsSwiping(true);
+        e.preventDefault();
+      }
+    }
   };
 
   const onTouchEnd = () => {
-    if (!touchStart || !touchEnd) return;
+    if (!touchStart || !touchEnd) {
+      setIsSwiping(false);
+      setTouchStart(null);
+      setTouchEnd(null);
+      return;
+    }
     
     const distance = touchStart - touchEnd;
     const isLeftSwipe = distance > minSwipeDistance;
     const isRightSwipe = distance < -minSwipeDistance;
 
-    if (isLeftSwipe) {
-      // Swipe left - next slide
-      setCurrentSlide((prevSlide) => 
-        prevSlide === sliderImages.length - 1 ? 0 : prevSlide + 1
-      );
+    if (isLeftSwipe || isRightSwipe) {
+      if (isLeftSwipe) {
+        // Swipe left - next slide
+        setCurrentSlide((prevSlide) => 
+          prevSlide === sliderImages.length - 1 ? 0 : prevSlide + 1
+        );
+      } else if (isRightSwipe) {
+        // Swipe right - previous slide
+        setCurrentSlide((prevSlide) => 
+          prevSlide === 0 ? sliderImages.length - 1 : prevSlide - 1
+        );
+      }
+      // Hide overlay during swipe
+      setShowOverlay(false);
     }
     
-    if (isRightSwipe) {
-      // Swipe right - previous slide
-      setCurrentSlide((prevSlide) => 
-        prevSlide === 0 ? sliderImages.length - 1 : prevSlide - 1
-      );
+    // Reset touch values after a brief delay to allow click detection
+    setTimeout(() => {
+      setIsSwiping(false);
+      setTouchStart(null);
+      setTouchEnd(null);
+    }, 100);
+  };
+
+  // Handle image click to show overlay with delay - only if not swiping
+  const handleImageClick = (e: React.MouseEvent) => {
+    // Only show overlay if this was a tap/click, not the end of a swipe
+    if (!isSwiping && touchStart === null && touchEnd === null) {
+      e.stopPropagation();
+      setShowOverlay(true);
+      
+      // Auto-hide overlay after 3 seconds if not clicked
+      const timeout = setTimeout(() => {
+        setShowOverlay(false);
+      }, 3000);
+      
+      setOverlayTimeout(timeout);
     }
   };
+
+  // Handle overlay button click
+  const handleOverlayClick = () => {
+    if (overlayTimeout) {
+      clearTimeout(overlayTimeout);
+    }
+    window.location.href = '/about/work';
+  };
+
+  // Clean up timeout on unmount
+  useEffect(() => {
+    return () => {
+      if (overlayTimeout) {
+        clearTimeout(overlayTimeout);
+      }
+    };
+  }, [overlayTimeout]);
 
   const sliderItems = [
     {
@@ -254,71 +320,81 @@ export default function Home() {
                   
                   {/* Mobile Portfolio Slider */}
                   <div className="relative p-3">
-                    <Link href="/work" className="block group">
-                      <div className="relative rounded-lg overflow-hidden">
-                        {/* Slider Container */}
+                    <div 
+                      className="relative rounded-lg overflow-hidden cursor-pointer" 
+                      onClick={handleImageClick}
+                    >
+                      {/* Slider Container */}
+                      <div 
+                        className="relative w-full h-[200px] sm:h-[250px] overflow-hidden rounded-lg"
+                        onTouchStart={onTouchStart}
+                        onTouchMove={onTouchMove}
+                        onTouchEnd={onTouchEnd}
+                        style={{ touchAction: 'pan-y' }} // Allow vertical scrolling but handle horizontal gestures
+                      >
                         <div 
-                          className="relative w-full h-[200px] sm:h-[250px] overflow-hidden rounded-lg"
-                          onTouchStart={onTouchStart}
-                          onTouchMove={onTouchMove}
-                          onTouchEnd={onTouchEnd}
+                          className="flex transition-transform duration-500 ease-in-out h-full"
+                          style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                         >
-                          <div 
-                            className="flex transition-transform duration-500 ease-in-out h-full"
-                            style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-                          >
-                            {sliderImages.map((item, index) => (
-                              <div key={item.id} className="w-full h-full flex-shrink-0">
-                                <OptimizedImage
-                                  src={item.src}
-                                  width={400}
-                                  height={250}
-                                  alt={`Portfolio Example ${index + 1}`}
-                                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                  priority={index === 0}
-                                />
-                              </div>
-                            ))}
-                          </div>
+                          {sliderImages.map((item, index) => (
+                            <div key={item.id} className="w-full h-full flex-shrink-0">
+                              <OptimizedImage
+                                src={item.src}
+                                width={400}
+                                height={250}
+                                alt={`Portfolio Example ${index + 1}`}
+                                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+                                priority={index === 0}
+                              />
+                            </div>
+                          ))}
                         </div>
+                      </div>
 
-                        {/* Overlay with View Work Text */}
-                        <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 rounded-lg flex items-center justify-center">
-                          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 dark:bg-gray-900/90 px-4 py-2 rounded-full">
-                            <span className="text-sm font-semibold text-gray-900 dark:text-white">View Our Work →</span>
-                          </div>
-                        </div>
-
-                        {/* Navigation Arrows */}
-                        <button 
+                      {/* Overlay with View Work Button */}
+                      <div className={`absolute inset-0 bg-black/40 transition-all duration-300 rounded-lg flex items-center justify-center ${
+                        showOverlay ? 'opacity-100' : 'opacity-0 pointer-events-none'
+                      }`}>
+                        <button
                           onClick={(e) => {
-                            e.preventDefault();
-                            const prevSlide = currentSlide === 0 ? sliderImages.length - 1 : currentSlide - 1;
-                            setCurrentSlide(prevSlide);
+                            e.stopPropagation();
+                            handleOverlayClick();
                           }}
-                          className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 dark:bg-gray-800/80 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white dark:hover:bg-gray-700 transition-all duration-200 z-10"
-                          aria-label="Previous image"
+                          className="bg-white/95 dark:bg-gray-900/95 px-6 py-3 rounded-full shadow-lg hover:bg-white dark:hover:bg-gray-800 transition-all duration-200 transform hover:scale-105"
                         >
-                          <svg className="w-4 h-4 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                          </svg>
-                        </button>
-
-                        <button 
-                          onClick={(e) => {
-                            e.preventDefault();
-                            const nextSlide = currentSlide === sliderImages.length - 1 ? 0 : currentSlide + 1;
-                            setCurrentSlide(nextSlide);
-                          }}
-                          className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 dark:bg-gray-800/80 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white dark:hover:bg-gray-700 transition-all duration-200 z-10"
-                          aria-label="Next image"
-                        >
-                          <svg className="w-4 h-4 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
+                          <span className="text-lg font-semibold text-gray-900 dark:text-white">View Our Work →</span>
                         </button>
                       </div>
-                    </Link>
+
+                      {/* Navigation Arrows */}
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const prevSlide = currentSlide === 0 ? sliderImages.length - 1 : currentSlide - 1;
+                          setCurrentSlide(prevSlide);
+                        }}
+                        className="absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 dark:bg-gray-800/80 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white dark:hover:bg-gray-700 transition-all duration-200 z-20"
+                        aria-label="Previous image"
+                      >
+                        <svg className="w-4 h-4 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                        </svg>
+                      </button>
+
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const nextSlide = currentSlide === sliderImages.length - 1 ? 0 : currentSlide + 1;
+                          setCurrentSlide(nextSlide);
+                        }}
+                        className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 bg-white/80 dark:bg-gray-800/80 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white dark:hover:bg-gray-700 transition-all duration-200 z-20"
+                        aria-label="Next image"
+                      >
+                        <svg className="w-4 h-4 text-gray-700 dark:text-gray-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </button>
+                    </div>
                   </div>
                   
                   {/* Interactive Navigation Dots */}
@@ -380,7 +456,7 @@ export default function Home() {
                 {/* Right Column - Interactive Slider */}
                 <SimpleScrollReveal direction="right" delay={300}>
                   <div className="relative">
-                    <Link href="/work" className="block group">
+                    <Link href="/about/work" className="block group">
                       <div className="relative rounded-xl shadow-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 cursor-pointer">
                         <Slider ref={sliderRef} {...sliderSettings}>
                           {sliderImages.map((item) => (

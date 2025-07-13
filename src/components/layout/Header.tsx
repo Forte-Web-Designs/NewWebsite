@@ -149,7 +149,7 @@ export default function Header() {
         
         <header className={`transition-all duration-300 ${
           isSticky 
-            ? 'fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
+            ? 'fixed top-0 left-0 right-0 z-[60] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
             : 'py-4'
         }`}>
           <div>
@@ -252,7 +252,7 @@ export default function Header() {
       
       <header className={`transition-all duration-300 ${
         isSticky 
-          ? 'fixed top-0 left-0 right-0 z-50 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
+          ? 'fixed top-0 left-0 right-0 z-[60] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
           : 'py-4'
       }`}>
         <div>

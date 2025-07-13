@@ -149,81 +149,94 @@ export default function SEOAuditTool({
   };
 
   return (
-    <div className="w-full">
-      {/* Website Audit Tool */}
-      <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4 lg:gap-0 border border-[#FFFFFF14] rounded-xl p-[6px]">
-        {/* Toggle Buttons */}
-        <div className="flex bg-[#3448BF] rounded-xl p-1 border border-[#858585] mx-auto lg:mx-0">
-          <button
-            onClick={() => setSelectedDevice("Desktop")}
-            className={`px-4 lg:px-6 py-2 rounded-xl text-sm font-medium transition-all ${
-              selectedDevice === "Desktop"
-                ? "bg-[#081B8B] rounded-xl text-white"
-                : "text-[#D6DCFF]"
-            }`}
-            disabled={isLoading}
-          >
-            Desktop
-          </button>
+    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6">
+      {/* Website Audit Tool - Mobile Optimized */}
+      <div className="flex flex-col gap-4 border border-[#FFFFFF14] rounded-xl p-4 sm:p-6 bg-gradient-to-r from-[#081B8B]/20 to-[#3448BF]/20">
+        {/* Toggle Buttons - Mobile Centered */}
+        <div className="flex justify-center">
+          <div className="flex bg-[#3448BF] rounded-xl p-1 border border-[#858585] w-fit">
+            <button
+              onClick={() => setSelectedDevice("Desktop")}
+              className={`px-4 sm:px-6 py-2 rounded-xl text-sm font-medium transition-all ${
+                selectedDevice === "Desktop"
+                  ? "bg-[#081B8B] rounded-xl text-white"
+                  : "text-[#D6DCFF]"
+              }`}
+              disabled={isLoading}
+            >
+              Desktop
+            </button>
 
-          <button
-            onClick={() => setSelectedDevice("Mobile")}
-            className={`px-4 py-[10px] rounded-xl text-sm font-medium transition-all ${
-              selectedDevice === "Mobile"
-                ? "bg-[#081B8B] text-white"
-                : "text-[#D6DCFF]"
-            }`}
-            disabled={isLoading}
-          >
-            Mobile
-          </button>
+            <button
+              onClick={() => setSelectedDevice("Mobile")}
+              className={`px-4 sm:px-6 py-2 rounded-xl text-sm font-medium transition-all ${
+                selectedDevice === "Mobile"
+                  ? "bg-[#081B8B] text-white"
+                  : "text-[#D6DCFF]"
+              }`}
+              disabled={isLoading}
+            >
+              Mobile
+            </button>
+          </div>
         </div>
 
-        {/* Input Field */}
-        <div className="flex-1 lg:mx-8 mx-2">
-          <input
-            type="url"
-            placeholder="Enter your website's URL (e.g., example.com)"
-            value={websiteUrl}
-            onChange={(e) => setWebsiteUrl(e.target.value)}
-            className="w-full px-4 py-3 bg-transparent text-white placeholder-white focus:outline-none text-sm lg:text-base"
-            disabled={isLoading}
-            onKeyPress={(e) => {
-              if (e.key === 'Enter') {
-                runAudit();
-              }
-            }}
-          />
-        </div>
+        {/* Input and Button Section - Stacked on Mobile */}
+        <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 sm:items-center">
+          {/* Input Field */}
+          <div className="flex-1">
+            <input
+              type="url"
+              placeholder="Enter your website's URL (e.g., example.com)"
+              value={websiteUrl}
+              onChange={(e) => setWebsiteUrl(e.target.value)}
+              className="w-full px-4 py-3 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:bg-white/20 text-sm sm:text-base rounded-lg border border-white/20 focus:border-white/50 transition-all"
+              disabled={isLoading}
+              onKeyPress={(e) => {
+                if (e.key === 'Enter') {
+                  runAudit();
+                }
+              }}
+            />
+          </div>
 
-        {/* Run Audit Button */}
-        <button
-          onClick={runAudit}
-          disabled={isLoading || !websiteUrl.trim()}
-          className={`px-4 lg:px-6 py-3 rounded-xl font-medium transition-all text-sm lg:text-base ${
-            isLoading || !websiteUrl.trim()
-              ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
-              : 'bg-[#081B8B] hover:bg-[#061559] text-white'
-          }`}
-        >
-          {isLoading ? (
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-              <span className="hidden lg:inline">Analyzing...</span>
-              <span className="lg:hidden">...</span>
-            </div>
-          ) : (
-            'Run Audit'
-          )}
-        </button>
+          {/* Run Audit Button */}
+          <button
+            onClick={runAudit}
+            disabled={isLoading || !websiteUrl.trim()}
+            className={`w-full sm:w-auto px-6 py-3 rounded-xl font-medium transition-all text-sm sm:text-base min-w-[140px] ${
+              isLoading || !websiteUrl.trim()
+                ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                : 'bg-[#081B8B] hover:bg-[#061559] text-white shadow-lg hover:shadow-xl'
+            }`}
+          >
+            {isLoading ? (
+              <div className="flex items-center justify-center gap-2">
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                <span>Analyzing...</span>
+              </div>
+            ) : (
+              'Run Audit'
+            )}
+          </button>
+        </div>
       </div>
 
-      {/* Loading Message */}
+      {/* Loading Message - Mobile Optimized */}
       {isLoading && loadingMessage && (
-        <div className="mt-4 text-center">
-          <p className="text-white/80 text-xs lg:text-sm animate-pulse px-2">
-            {loadingMessage}
-          </p>
+        <div className="mt-6 text-center">
+          <div className="bg-[#081B8B]/20 rounded-xl p-4 sm:p-6 border border-white/10 mx-4 sm:mx-0">
+            <div className="flex items-center justify-center gap-3 mb-4">
+              <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              <span className="text-white font-medium text-sm sm:text-base">Analyzing Your Website</span>
+            </div>
+            <p className="text-white/80 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+              {loadingMessage}
+            </p>
+            <div className="mt-3 text-xs text-white/60">
+              This usually takes 10-15 seconds
+            </div>
+          </div>
         </div>
       )}
     </div>
