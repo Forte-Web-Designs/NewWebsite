@@ -359,9 +359,6 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                 </div>
               </div>
             </div>
-                </div>
-              </div>
-            </div>
           ) : (
             <div className="space-y-4">
               <div className="text-center mb-4">
