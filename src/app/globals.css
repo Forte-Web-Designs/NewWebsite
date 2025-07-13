@@ -88,7 +88,19 @@
   select,
   .slick-arrow,
   .slider-thumb,
-  [data-clickable] {
+  [data-clickable],
+  .accordion-trigger,
+  .tab-button,
+  .nav-button,
+  .step-indicator,
+  .pagination-button,
+  .toggle-button,
+  .card-clickable,
+  .slider-nav,
+  .slider-dot,
+  .dropdown-trigger,
+  .menu-item,
+  .interactive {
     cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxOCAxMEw3IDEyTDEgMTlWMVoiIGZpbGw9IiNGRjYzNDciIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg=="), pointer !important;
   }
 
@@ -98,7 +110,19 @@
   [role="button"]:hover,
   a:hover,
   .cursor-pointer:hover,
-  [data-clickable]:hover {
+  [data-clickable]:hover,
+  .accordion-trigger:hover,
+  .tab-button:hover,
+  .nav-button:hover,
+  .step-indicator:hover,
+  .pagination-button:hover,
+  .toggle-button:hover,
+  .card-clickable:hover,
+  .slider-nav:hover,
+  .slider-dot:hover,
+  .dropdown-trigger:hover,
+  .menu-item:hover,
+  .interactive:hover {
     cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNSAxLjVMMjEuNSAxMkw4LjUgMTQuNUwxLjUgMjIuNVYxLjVaIiBmaWxsPSIjMDA5OUZGIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMS41Ii8+Cjwvc3ZnPgo="), pointer !important;
     @apply transition-all duration-200 transform scale-105;
   }

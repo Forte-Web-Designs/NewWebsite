@@ -134,8 +134,8 @@ export default function Website2() {
                   {/* Personal Stats/Highlights */}
                   <div className="grid grid-cols-3 md:grid-cols-3 gap-3 sm:gap-6 w-full max-w-lg text-center">
                     <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10">
-                      <div className="text-lg sm:text-2xl font-bold text-white">USA</div>
-                      <div className="text-xs sm:text-sm text-gray-400">Based</div>
+                      <div className="text-lg sm:text-2xl font-bold text-white">100%</div>
+                      <div className="text-xs sm:text-sm text-gray-400">USA Based</div>
                     </div>
                     <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10">
                       <div className="text-lg sm:text-2xl font-bold text-white">100%</div>
