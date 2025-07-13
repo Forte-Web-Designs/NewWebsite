@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import { Icon } from './images/Icon';
 import { LazyLoadingStates } from './animations/LazyAnimations';
 
@@ -17,9 +17,10 @@ interface MiniAuditResults {
 interface InstantMiniAuditProps {
   onFullAuditClick: (url: string, seoScore?: number) => void;
   isNavigating?: boolean;
+  autoRunUrl?: string; // URL to auto-run on component mount
 }
 
-export default function InstantMiniAudit({ onFullAuditClick, isNavigating = false }: InstantMiniAuditProps) {
+export default function InstantMiniAudit({ onFullAuditClick, isNavigating = false, autoRunUrl }: InstantMiniAuditProps) {
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [results, setResults] = useState<MiniAuditResults | null>(null);
   const [isLoading, setIsLoading] = useState(false);
@@ -167,13 +168,14 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
     };
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = useCallback(async (e: React.FormEvent | null, urlOverride?: string) => {
+    if (e) e.preventDefault();
     
-    const validatedUrl = validateUrl(websiteUrl);
+    const urlToValidate = urlOverride || websiteUrl;
+    const validatedUrl = validateUrl(urlToValidate);
     if (!validatedUrl) {
       setResults({
-        url: websiteUrl,
+        url: urlToValidate,
         ssl: false,
         loadTime: 0,
         mobileFriendly: false,
@@ -213,7 +215,18 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
     } finally {
       setIsLoading(false);
     }
-  };
+  }, [websiteUrl]);
+
+  // Auto-run functionality
+  useEffect(() => {
+    if (autoRunUrl && autoRunUrl.trim()) {
+      setWebsiteUrl(autoRunUrl);
+      // Trigger the audit automatically after setting the URL
+      setTimeout(() => {
+        handleSubmit(null, autoRunUrl);
+      }, 500);
+    }
+  }, [autoRunUrl, handleSubmit]);
 
   const getScoreColor = (score: number) => {
     if (score >= 7) return 'text-green-600';

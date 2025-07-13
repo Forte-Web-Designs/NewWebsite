@@ -149,7 +149,7 @@ export default function SolutionsPage() {
             to perform.
           </p>
           <div className="mt-5">
-            <LightButton href="/contact">Seth</LightButton>
+            <LightButton href="/contact">Contact Us</LightButton>
           </div>
         </div>
       </section>

@@ -252,7 +252,7 @@ export default function Header() {
       
       <header className={`transition-all duration-300 ${
         isSticky 
-          ? 'fixed top-0 left-0 right-0 z-[60] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
+          ? 'fixed top-0 left-0 right-0 z-[100] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
           : 'py-4'
       }`}>
         <div>
@@ -323,11 +323,11 @@ export default function Header() {
             </nav>
 
             {/* Mobile Header */}
-            <div className="lg:hidden flex items-center justify-between w-full relative z-[70]">
+            <div className="lg:hidden flex items-center justify-between w-full relative z-[101]">
               {/* Mobile Menu Button and Small Logo */}
               <div className="flex items-center w-full gap-[10px]">
                 <button
-                  className="text-gray-700 dark:text-gray-300 transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-110 cursor-pointer z-[80]"
+                  className="text-gray-700 dark:text-gray-300 transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-110 cursor-pointer z-[99998] relative"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   aria-label="Mobile menu"
                 >
@@ -404,7 +404,7 @@ export default function Header() {
 
           {/* Mobile Menu - Full Screen Overlay */}
           {mobileMenuOpen && (
-            <div className="lg:hidden fixed inset-0 z-[9999] flex flex-col"
+            <div className="lg:hidden fixed inset-0 z-[999999] flex flex-col min-h-screen w-full"
               style={{
                 background: theme === "light"
                   ? "linear-gradient(146deg, #FFFFFF 0%, rgb(69 84 179) 100%)"
@@ -421,10 +421,10 @@ export default function Header() {
               ></div>
 
               {/* Mobile Header repeated in overlay for consistency */}
-              <div className="flex items-center justify-between p-4 sm:p-6 border-b border-white/20">
+              <div className="flex items-center justify-between p-4 sm:p-6 border-b border-white/20 bg-black/10 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
                   <button
-                    className="text-white transition-all duration-300 hover:text-blue-300 hover:scale-110"
+                    className="text-white transition-all duration-300 hover:text-blue-300 hover:scale-110 z-[9999999]"
                     onClick={() => setMobileMenuOpen(false)}
                     aria-label="Close mobile menu"
                   >
@@ -432,7 +432,7 @@ export default function Header() {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                     </svg>
                   </button>
-                  <Link href="/" prefetch={true} className="flex items-center transition-all duration-300 hover:scale-105">
+                  <Link href="/" prefetch={true} className="flex items-center transition-all duration-300 hover:scale-105" onClick={() => setMobileMenuOpen(false)}>
                     <OptimizedImage
                       src="/images/home/Group.png"
                       alt="Forte Logo (Mobile)"
@@ -447,10 +447,10 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="flex-1 p-4 sm:p-6 overflow-y-auto"
+              <div className="flex-1 p-4 sm:p-6 overflow-y-auto min-h-0 bg-black/5 backdrop-blur-sm"
                 style={{
                   paddingTop: '2rem',
-                  maxHeight: 'calc(100vh - 100px)'
+                  height: 'calc(100vh - 80px)'
                 }}
               >
                 <nav className="flex flex-col space-y-4">
@@ -595,9 +595,3 @@ export default function Header() {
               </div>
             </div>
           )}
-        </div>
-      </div>
-    </header>
-    </>
-  );
-}

@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 
 const testimonials = [
   {
-    text: `Seth at Forte Web Designs built our site from scratch! We've already seen a noticeable increase in leads and conversions. Hands down the best investment we've made for our business.`,
+    text: `Seth built our site from scratch! We've already seen a noticeable increase in leads and conversions. Hands down the best investment we've made for our business.`,
     author: "Seth",
     role: "Owner of Carter HVAC",
   },
@@ -14,7 +14,7 @@ const testimonials = [
     role: "Founder of Lee & Co. Legal",
   },
   {
-    text: `Working with Seth and Forte Web Designs was a game changer for our startup. They not only built a stunning website but helped us understand how to convert traffic into sales.`,
+    text: `Working with Seth was a game changer for our startup. They not only built a stunning website but helped us understand how to convert traffic into sales.`,
     author: "Seth",
     role: "CEO of SparkCommerce",
   },

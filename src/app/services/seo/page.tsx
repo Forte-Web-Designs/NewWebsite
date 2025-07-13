@@ -204,15 +204,24 @@ export default function SeoDesignPage() {
 
         <div className="md:grid md:grid-cols-2 flex flex-col items-center dark:bg-primary-1150 rounded-[20px] md:gap-5 gap-3 mt-5 bg-secondary-1350">
           <div className="flex justify-center items-center md:p-[60px] p-5">
-            {/* Replaced large shape image with scalable SVG design */}
+            {/* SEO Growth Animation */}
             <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-full animate-pulse"></div>
-              <div className="absolute inset-4 bg-gradient-to-tr from-blue-400/30 to-indigo-500/30 rounded-full animate-pulse delay-300"></div>
-              <div className="absolute inset-8 bg-gradient-to-bl from-cyan-400/40 to-blue-500/40 rounded-full animate-pulse delay-700"></div>
-              <div className="relative z-10 text-center">
-                <div className="text-4xl md:text-6xl mb-4">📈</div>
-                <div className="text-lg font-semibold text-gray-800 dark:text-white">SEO Growth</div>
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/30 via-blue-600/40 to-purple-600/30 animate-pulse shadow-2xl">
+                <div className="absolute inset-2 rounded-full bg-gradient-to-tr from-blue-400/20 to-indigo-500/30 animate-pulse delay-300">
+                  <div className="absolute inset-4 rounded-full bg-gradient-to-bl from-cyan-400/20 to-blue-500/25 animate-pulse delay-700">
+                  </div>
+                </div>
               </div>
+              <div className="relative z-10 text-center bg-white/90 dark:bg-gray-800/90 rounded-full p-8 shadow-xl backdrop-blur-sm">
+                <div className="text-4xl md:text-5xl mb-3">📈</div>
+                <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                  SEO Growth
+                </div>
+              </div>
+              {/* Floating particles for dynamic effect */}
+              <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-500"></div>
+              <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce delay-1000"></div>
+              <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping delay-1500"></div>
             </div>
           </div>
           <div className="flex flex-col md:gap-14 gap-6 lg:p-[60px] md:p-10 sm:p-8 p-5 pr-0">

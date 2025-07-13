@@ -84,15 +84,73 @@ export default function Website2() {
           </div>
         </div>
       </section>
-      <section className="dark:bg-black">
-        {/* Header Section */}
-        <div className="wrapper ">
-          <section>
-            <div className="divider w-[2px] h-[100px] bg-[linear-gradient(180deg,#FFFFFF_0%,#132696_100%)] mx-auto mt-8 mb-6"></div>
-            <div className=" container bg-[#101010] md:w-[90%] w-[95%]  lg:py-48 md:py-40 sm:py-32 py-20 justify-center rounded-xl text-center items-center mx-auto">
-              <h2 className="font-normal text-sm mx-auto  text-gray-700 text-center">Seth’s Pitcure here</h2>
+      <section className="dark:bg-black bg-gray-50">
+        {/* Professional Headshot Section */}
+        <div className="wrapper">
+          <section className="py-16 md:py-24">
+            <div className="divider w-[2px] h-[100px] bg-[linear-gradient(180deg,#FFFFFF_0%,#132696_100%)] mx-auto mt-8 mb-12"></div>
+            
+            {/* Modern Headshot Container */}
+            <div className="container mx-auto max-w-4xl px-4">
+              <div className="relative bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 dark:from-gray-950 dark:via-gray-900 dark:to-gray-950 rounded-3xl p-8 md:p-16 lg:p-20 shadow-2xl border border-gray-700/30">
+                
+                {/* Background Gradient Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-purple-600/10 rounded-3xl"></div>
+                
+                {/* Content */}
+                <div className="relative z-10 flex flex-col items-center text-center space-y-8">
+                  
+                  {/* Professional Headshot */}
+                  <div className="relative group">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-full blur opacity-60 group-hover:opacity-80 animate-pulse"></div>
+                    <div className="relative w-40 h-40 sm:w-48 sm:h-48 md:w-64 md:h-64 lg:w-72 lg:h-72">
+                      <OptimizedImage 
+                        src="/images/about/headshot.jpg" 
+                        alt="Seth - Founder & Lead Developer of Forte Web Designs"
+                        width={288}
+                        height={288}
+                        className="w-full h-full object-cover rounded-full border-4 border-white/20 shadow-2xl"
+                        priority
+                        sizes="(max-width: 640px) 160px, (max-width: 768px) 192px, (max-width: 1024px) 256px, 288px"
+                      />
+                      {/* Professional Badge */}
+                      <div className="absolute -bottom-1 -right-1 sm:-bottom-2 sm:-right-2 bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs md:text-sm font-semibold px-2 py-1 sm:px-3 sm:py-1.5 rounded-full shadow-lg border-2 border-white/20">
+                        Founder
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Professional Title */}
+                  <div className="space-y-3 sm:space-y-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
+                      Seth
+                    </h2>
+                    <p className="text-base sm:text-lg md:text-xl text-blue-400 font-medium">
+                      Founder & Lead Developer
+                    </p>
+                    <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto"></div>
+                  </div>
+                  
+                  {/* Professional Stats/Highlights */}
+                  <div className="grid grid-cols-3 md:grid-cols-3 gap-3 sm:gap-6 w-full max-w-lg text-center">
+                    <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10">
+                      <div className="text-lg sm:text-2xl font-bold text-white">2024</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Founded</div>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10">
+                      <div className="text-lg sm:text-2xl font-bold text-white">100%</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Hand-Coded</div>
+                    </div>
+                    <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10">
+                      <div className="text-lg sm:text-2xl font-bold text-white">Fast</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Performance</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="divider w-[2px] h-[100px] bg-[linear-gradient(180deg,#FFFFFF_0%,#132696_100%)] mx-auto mt-8 mb-6"></div>
+            
+            <div className="divider w-[2px] h-[100px] bg-[linear-gradient(180deg,#FFFFFF_0%,#132696_100%)] mx-auto mt-12 mb-8"></div>
             <p className="text-justify lg:w-[60%] md:w-[70%] sm:w-[90%] w-[95%] mx-auto font-medium sm:text-xl text-lg bg-[linear-gradient(163.76deg,#FFFFFF_26.61%,#B1BCFF_83.14%)] dark:text-transparent text-gray-600 bg-clip-text">Too many small business owners were either overpaying for bloated WordPress sites or stuck with some other website drag and drop builder that quite frankly is a waste of money. Some looked decent… but loaded slow, broke often, or left business owners completely in the dark. That didn’t sit right with me. So I built Forte Web Designs to offer a better way — clean, handcrafted websites that load fast, stay secure, and are built to grow with your business. No cookie-cutter layouts. No surprise tech issues. Just smart design, reliable performance, and real results. Whether you choose the Forte Essential™, the all-in-one Forte Growth™ plan, or go big with a Forte Pro™ custom build, you’re getting a site that’s built to last — and a team that’s in your corner long after launch. We believe websites shouldn’t feel like a luxury or a liability — they should be fast, functional, and built to last.</p>
             {/* <OptimizedImage src="" alt=""/> */}
           </section>

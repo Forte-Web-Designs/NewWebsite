@@ -463,14 +463,21 @@ function SiteCheckUpContent() {
                 }}
               >
                 <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white px-6 py-14 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)] border dark:border-[#1A1A1A] text-lg w-full">
-                  <OptimizedImage
-                    src="/images/forteSolutions/spring.png"
-                    alt="logo"
-                    width={270}
-                    priority
-                    height={250}
-                    className="lg:w-[270px] lg:h-[250px] mx-auto"
-                  />
+                  {/* SEO Growth Animation */}
+                  <div className="w-[270px] h-[250px] mx-auto relative flex items-center justify-center">
+                    <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/30 via-blue-600/40 to-purple-600/30 animate-pulse shadow-2xl"></div>
+                    <div className="absolute inset-6 rounded-full bg-gradient-to-tr from-blue-400/20 to-indigo-500/30 animate-pulse delay-300"></div>
+                    <div className="absolute inset-12 rounded-full bg-gradient-to-bl from-cyan-400/20 to-blue-500/25 animate-pulse delay-700"></div>
+                    <div className="relative z-10 text-center bg-white/90 dark:bg-gray-800/90 rounded-full p-8 shadow-xl backdrop-blur-sm">
+                      <div className="text-4xl md:text-5xl mb-3">📈</div>
+                      <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                        SEO Growth
+                      </div>
+                    </div>
+                    <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-400 rounded-full animate-bounce delay-500"></div>
+                    <div className="absolute top-1/3 right-1/4 w-1.5 h-1.5 bg-purple-400 rounded-full animate-bounce delay-1000"></div>
+                    <div className="absolute bottom-1/3 left-1/3 w-1 h-1 bg-cyan-400 rounded-full animate-ping delay-1500"></div>
+                  </div>
                 </div>
               </div>
               <div

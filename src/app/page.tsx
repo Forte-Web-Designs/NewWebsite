@@ -30,6 +30,20 @@ export default function Home() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [overlayTimeout, setOverlayTimeout] = useState<NodeJS.Timeout | null>(null);
   const [isSwiping, setIsSwiping] = useState(false);
+  const [autoRunUrl, setAutoRunUrl] = useState<string>("");
+
+  // Check for URL parameters on component mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const url = urlParams.get('url');
+      const shouldAutoRun = urlParams.get('autorun') === 'true';
+      
+      if (url && shouldAutoRun) {
+        setAutoRunUrl(url);
+      }
+    }
+  }, []);
 
   // Minimum distance for swipe detection
   const minSwipeDistance = 50;
@@ -565,6 +579,7 @@ export default function Home() {
                   <InstantMiniAudit
                     onFullAuditClick={handleFullAuditClick}
                     isNavigating={isNavigatingToAudit}
+                    autoRunUrl={autoRunUrl}
                   />
                 </div>
 
