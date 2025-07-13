@@ -4,7 +4,6 @@ import { Icon } from "@/components/images/Icon";
 import { useState, useEffect } from "react";
 import { PricingPage } from "@/components/pricing";
 import LightButton from "@/components/LightButton";
-import { BackgroundImage } from "@/components/images/BackgroundImage";
 
 type FAQItem = {
   question: string;
@@ -13,14 +12,24 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "What's the Investment? 💰",
+    question: "What Platforms Do You Manage? 📱",
     answer:
-      "Social media management starts at $200/month and is only available to our website clients. Why? Because we want your brand to feel cohesive—from your homepage to your latest Instagram reel. It's all about consistency and quality that actually converts.",
+      "We focus on the big three that actually drive business: Facebook, Instagram, and Google Business Profile. These are where your local customers spend their time and where consistent posting makes the biggest impact on your bottom line.",
   },
   {
-    question: "Already a Forte Client? 🎉",
+    question: "Do You Handle Comments and Messages? 💬",
     answer:
-      "Perfect! You're already in the family. You'll get the same amazing support you're used to, plus we can seamlessly extend your brand into social media. Just reach out and let's chat about adding social to your growth strategy!",
+      "Absolutely! We monitor your accounts and respond professionally to comments, messages, and reviews. Think of us as your friendly social media team that never sleeps—we keep the conversation going so you don't miss potential customers.",
+  },
+  {
+    question: "How Much Content Do You Post? 📅",
+    answer:
+      "Our Social Media Essential™ plan includes 12 posts per month (3 per week) across your platforms, while Social Media Growth™ includes 20 posts per month (5 per week). All content is designed to engage your local audience and showcase what makes your business special.",
+  },
+  {
+    question: "Can I See What You're Posting Before It Goes Live? 👀",
+    answer:
+      "Of course! We send you a monthly content calendar for approval before anything goes live. You know your business best, so your input ensures every post feels authentically you while maintaining professional quality.",
   },
 ];
 
@@ -82,22 +91,75 @@ export default function ServicePage() {
         </p>
       </section>
 
-      <section className="w-full dark:bg-black bg-white py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8 overflow-hidden">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 gap-6 sm:gap-8 items-start">
-            <div className="border border-[#5C5C5C] rounded-2xl p-2">
-              <BackgroundImage
-                src="/images/services/web-service-back.png"
-                alt="Banner description"
-                className="rounded-xl p-6 sm:p-8 md:p-10 lg:p-16 text-center"
-              >
-                <h1 className="font-medium text-white text-2xl sm:text-3xl md:text-4xl lg:text-5xl mb-4 sm:mb-6">
-                  Why Social Media Actually Matters
-                </h1>
-                <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-white leading-relaxed max-w-3xl mx-auto">
-                  Great websites attract visitors. Great social feeds keep them engaged. Together, they build trust and turn followers into customers. We help you create content that actually connects with your local audience and supports your business goals.
+      <section className="w-full dark:bg-black bg-white py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto text-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium dark:text-secondary-1000 text-black mb-6 sm:mb-8">
+            Here's the Thing About Social Media...
+          </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 dark:bg-primary-1150 bg-secondary-1350 rounded-[20px] w-full">
+            <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-14 p-6 sm:p-8 md:p-10 lg:p-[60px] order-2 lg:order-1 text-left">
+              <div>
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
+                  It's About Building Relationships
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed">
+                  Your customers scroll social media every day. When they see your business sharing helpful tips, community events, or behind-the-scenes moments, you become the obvious choice when they need your services.
                 </p>
-              </BackgroundImage>
+              </div>
+              <div>
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
+                  Consistency Is Everything
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed">
+                  Posting once in a while doesn't cut it. Your audience needs to see you regularly to remember you exist. We keep you visible with content that actually matters to your local community.
+                </p>
+              </div>
+              <div>
+                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
+                  It Supports Everything Else
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-primary-1400 dark:text-primary-1050 leading-relaxed">
+                  Social media makes your website, Google ads, and word-of-mouth marketing work better. When people hear about you, they check you out online—and active social profiles build instant credibility.
+                </p>
+              </div>
+            </div>
+            <div className="flex items-center justify-center p-6 sm:p-8 md:p-10 lg:p-[60px] order-1 lg:order-2">
+              <div className="w-full h-64 sm:h-80 lg:h-96 flex items-center justify-center">
+                <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
+                  {/* Social Media Growth Animation */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-blue-500/20 rounded-full backdrop-blur-sm animate-pulse"></div>
+                  <div className="absolute inset-6 bg-gradient-to-l from-cyan-500/30 via-blue-500/30 to-indigo-500/30 rounded-full backdrop-blur-sm" style={{
+                    animation: 'spin 15s linear infinite'
+                  }}></div>
+                  <div className="absolute inset-12 bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full backdrop-blur-sm" style={{
+                    animation: 'bounce 3s ease-in-out infinite'
+                  }}></div>
+                  
+                  {/* Center content */}
+                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
+                    <div className="text-4xl sm:text-5xl lg:text-6xl mb-3 sm:mb-4" style={{
+                      animation: 'bounce 2s ease-in-out infinite'
+                    }}>📱</div>
+                    <div className="text-sm sm:text-lg lg:text-xl font-semibold dark:text-white text-gray-800">
+                      Social Engagement
+                    </div>
+                  </div>
+
+                  {/* Floating particles */}
+                  <div className="absolute top-8 left-8 w-3 h-3 bg-blue-400 rounded-full animate-ping"></div>
+                  <div className="absolute top-16 right-12 w-2 h-2 bg-purple-400 rounded-full" style={{
+                    animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+                    animationDelay: '0.5s'
+                  }}></div>
+                  <div className="absolute bottom-12 left-16 w-4 h-4 bg-pink-400 rounded-full" style={{
+                    animation: 'ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite',
+                    animationDelay: '1s'
+                  }}></div>
+                  <div className="absolute bottom-8 right-8 w-2 h-2 bg-cyan-400 rounded-full animate-ping" style={{
+                    animationDelay: '1.5s'
+                  }}></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -166,14 +228,37 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-8 sm:p-10 md:p-12 lg:p-14 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)] border dark:border-[#1A1A1A] w-full">
-                {/* Replaced large shape image with modern icon design */}
+                {/* Social Media Growth Animation */}
                 <div className="flex justify-center items-center w-48 sm:w-56 md:w-64 lg:w-[270px] h-40 sm:h-48 md:h-56 lg:h-[250px] mx-auto relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full animate-spin" style={{animationDuration: '10s'}}></div>
-                  <div className="absolute inset-6 bg-gradient-to-l from-blue-500/30 to-cyan-500/30 rounded-full animate-spin" style={{animationDuration: '8s', animationDirection: 'reverse'}}></div>
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-blue-500/20 rounded-full backdrop-blur-sm animate-pulse"></div>
+                  <div className="absolute inset-6 bg-gradient-to-l from-cyan-500/30 via-blue-500/30 to-indigo-500/30 rounded-full backdrop-blur-sm" style={{
+                    animation: 'spin 15s linear infinite'
+                  }}></div>
+                  <div className="absolute inset-12 bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full backdrop-blur-sm" style={{
+                    animation: 'bounce 3s ease-in-out infinite'
+                  }}></div>
+                  
+                  {/* Center content */}
                   <div className="relative z-10 text-center">
-                    <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4">🚀</div>
+                    <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4" style={{
+                      animation: 'bounce 2s ease-in-out infinite'
+                    }}>📱</div>
                     <div className="text-base sm:text-lg font-semibold">Social Growth</div>
                   </div>
+
+                  {/* Floating social icons */}
+                  <div className="absolute top-8 left-8 text-lg animate-ping">💬</div>
+                  <div className="absolute top-16 right-12 text-sm" style={{
+                    animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
+                    animationDelay: '0.5s'
+                  }}>❤️</div>
+                  <div className="absolute bottom-12 left-16 text-lg" style={{
+                    animation: 'ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite',
+                    animationDelay: '1s'
+                  }}>📍</div>
+                  <div className="absolute bottom-8 right-8 text-sm animate-ping" style={{
+                    animationDelay: '1.5s'
+                  }}>🔔</div>
                 </div>
               </div>
             </div>
@@ -280,14 +365,14 @@ export default function ServicePage() {
       </section>
       <section className="dark:bg-black bg-white py-16 sm:py-20 md:py-24 lg:py-32 text-center px-4 sm:px-6 lg:px-8">
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter text-black dark:text-secondary-1000 mb-6 sm:mb-8">
-          Ready to Get Started?
+          Ready to Build Your Social Media Presence?
         </h2>
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-8 sm:mb-12">
-          Our social media plans are simple and designed for busy business owners. Pick what works for your goals, or let's chat about a custom solution!
+          Our Social Media Essential™ and Social Media Growth™ plans are designed to keep you visible and engaged with your local community. Choose the plan that fits your goals, or let's chat about what would work best for your business!
         </p>
 
         <div className="text-left">
-          <PricingPage />
+          <PricingPage serviceType="social" />
         </div>
       </section>
     </>

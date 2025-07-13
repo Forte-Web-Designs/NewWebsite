@@ -4,6 +4,7 @@ import LightButton from "@/components/LightButton";
 import { BackgroundImage } from "@/components/images/BackgroundImage";
 import { Icon } from "@/components/images/Icon";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
+import { PricingPage } from "@/components/pricing";
 import { useState } from "react";
 
 type FAQItem = {
@@ -302,6 +303,21 @@ export default function SeoDesignPage() {
           <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
         </div>
       </div>
+
+      {/* SEO Pricing Section */}
+      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Ready to Start Ranking?
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Choose the SEO plan that fits your goals and budget. All plans include transparent reporting and real results.
+            </p>
+          </div>
+          <PricingPage serviceType="seo" />
+        </div>
+      </section>
     </section>
   );
 }

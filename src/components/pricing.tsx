@@ -76,6 +76,125 @@ const pricingPlans: PricingPlan[] = [
   }
 ];
 
+// Service-specific pricing plans
+const servicePricingPlans: PricingPlan[] = [
+  {
+    id: 'seo-essential',
+    name: 'SEO Essential™',
+    price: '$400/month',
+    subtitle: '3-Month Minimum',
+    ctaText: 'Start Ranking',
+    including: [
+      'Technical SEO Foundation',
+      'Keyword Research & Strategy',
+      'On-Page Optimization',
+      'Monthly Progress Reports'
+    ],
+    addons: [
+      'Content Creation: $150/mo',
+      'Local SEO Boost: $100/mo',
+      'Link Building: $200/mo'
+    ]
+  },
+  {
+    id: 'seo-growth',
+    name: 'SEO Growth™',
+    price: '$750/month',
+    subtitle: '6-Month Minimum',
+    isPopular: true,
+    ctaText: 'Dominate Search',
+    including: [
+      'Everything in SEO Essential™',
+      '4 Optimized Blog Posts/Month',
+      'Local SEO & Google Business Profile',
+      'Competitor Analysis',
+      'Link Building Campaign'
+    ],
+    addons: [
+      'Extra Blog Posts: $75/ea',
+      'Social Media SEO: $150/mo',
+      'E-commerce SEO: $200/mo'
+    ]
+  },
+  {
+    id: 'ppc-starter',
+    name: 'PPC Starter™',
+    price: '$500/month',
+    subtitle: '+ Ad Spend Budget',
+    ctaText: 'Get Customers',
+    including: [
+      'Google Ads Campaign Setup',
+      'Keyword Research & Strategy',
+      'Ad Copy Creation & Testing',
+      'Landing Page Optimization',
+      'Weekly Performance Reports'
+    ],
+    addons: [
+      'Facebook Ads: $200/mo',
+      'Bing Ads: $150/mo',
+      'Conversion Tracking: $100/mo'
+    ]
+  },
+  {
+    id: 'ppc-growth',
+    name: 'PPC Growth™',
+    price: '$900/month',
+    subtitle: '+ Ad Spend Budget',
+    isPopular: true,
+    ctaText: 'Scale Revenue',
+    including: [
+      'Everything in PPC Starter™',
+      'Multi-Platform Campaigns',
+      'Advanced Conversion Tracking',
+      'A/B Testing & Optimization',
+      'Detailed ROI Analysis'
+    ],
+    addons: [
+      'YouTube Ads: $250/mo',
+      'Shopping Campaigns: $200/mo',
+      'Remarketing Setup: $150/mo'
+    ]
+  },
+  {
+    id: 'social-essential',
+    name: 'Social Media Essential™',
+    price: '$300/month',
+    subtitle: 'Website Clients Only',
+    ctaText: 'Boost Engagement',
+    including: [
+      '12 Custom Posts/Month',
+      'Platform Management (2 platforms)',
+      'Content Calendar Planning',
+      'Basic Analytics & Reporting'
+    ],
+    addons: [
+      'Extra Platform: $100/mo',
+      'Stories/Reels: $150/mo',
+      'Community Management: $200/mo'
+    ]
+  },
+  {
+    id: 'social-growth',
+    name: 'Social Media Growth™',
+    price: '$500/month',
+    subtitle: 'Website Clients Only',
+    isPopular: true,
+    ctaText: 'Build Community',
+    including: [
+      '20 Custom Posts/Month',
+      'Platform Management (3 platforms)',
+      'Stories & Reels Creation',
+      'Community Management',
+      'Detailed Growth Analytics'
+    ],
+    addons: [
+      'Paid Social Ads: $300/mo',
+      'Influencer Outreach: $250/mo',
+      'Video Content: $200/mo'
+    ]
+  }
+];
+
 interface FeatureListProps {
   title: string;
   items: string[];
@@ -224,25 +343,51 @@ function PricingCard({ plan }: PricingCardProps) {
   );
 }
 
-export function PricingPage() {
-  // Desktop order: Essential, Growth, Pro
-  const desktopOrder = pricingPlans;
+export function PricingPage({ serviceType }: { serviceType?: 'website' | 'seo' | 'ppc' | 'social' } = {}) {
+  // Determine which plans to show based on service type
+  let plansToShow: PricingPlan[];
+  let headerTitle: string;
+  let headerSubtitle: string;
   
-  // Mobile order: Growth first (most popular), then Essential, then Pro
-  const mobileOrder = [
-    pricingPlans[1], // Growth (Forte Care™)
-    pricingPlans[0], // Essential
-    pricingPlans[2], // Pro
-  ];
+  switch (serviceType) {
+    case 'seo':
+      plansToShow = servicePricingPlans.filter(plan => plan.id.includes('seo'));
+      headerTitle = 'SEO Plans That Get Results';
+      headerSubtitle = 'Choose the SEO strategy that fits your business goals and budget.';
+      break;
+    case 'ppc':
+      plansToShow = servicePricingPlans.filter(plan => plan.id.includes('ppc'));
+      headerTitle = 'PPC Plans That Convert';
+      headerSubtitle = 'Get in front of customers ready to buy with our managed advertising plans.';
+      break;
+    case 'social':
+      plansToShow = servicePricingPlans.filter(plan => plan.id.includes('social'));
+      headerTitle = 'Social Media Plans That Engage';
+      headerSubtitle = 'Build your community and turn followers into customers.';
+      break;
+    default:
+      plansToShow = pricingPlans;
+      headerTitle = 'Choose the Plan That Works for You';
+      headerSubtitle = 'All of Our Plans Are Strategically Designed to Fit Your Needs.';
+  }
 
-  const includedFeatures = [
+  // Desktop order: As provided
+  const desktopOrder = plansToShow;
+  
+  // Mobile order: Popular first if available, otherwise same order
+  const popularPlan = plansToShow.find(plan => plan.isPopular);
+  const mobileOrder = popularPlan 
+    ? [popularPlan, ...plansToShow.filter(plan => !plan.isPopular)]
+    : plansToShow;
+
+  const includedFeatures = serviceType === 'website' || !serviceType ? [
     'Hand-Coded Website – built from scratch, no page builders or templates',
     'Responsive Design – optimized for all devices and screen sizes',
     'High-Speed Performance – 98–100 Google PageSpeed scores',
     'Security First – no WordPress, no plugins, no vulnerabilities',
     'SEO-Ready – structured for visibility and rankings',
     'Human Support – when you call, you talk to the developer (not a bot)'
-  ];
+  ] : undefined;
 
   return (
     <section className="py-16 md:py-24">
@@ -252,37 +397,41 @@ export function PricingPage() {
         <SimpleScrollReveal direction="up" delay={200}>
           <div className="text-center mb-16">
             <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-              Choose the Plan That Works for You
+              {headerTitle}
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              All of Our Plans Are Strategically Designed to Fit Your Needs.
+              {headerSubtitle}
             </p>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-4">
-              We offer three smart paths to launch your new website—tailored to how you prefer to build, grow, and scale your business.
-            </p>
+            {!serviceType && (
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-4">
+                We offer three smart paths to launch your new website—tailored to how you prefer to build, grow, and scale your business.
+              </p>
+            )}
           </div>
         </SimpleScrollReveal>
 
-        {/* What's Included With Every Plan */}
-        <SimpleScrollReveal direction="up" delay={400}>
-          <div className="mb-16 bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 md:p-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              What's Included With Every Plan
-            </h2>
-            <div className="grid md:grid-cols-2 gap-4">
-              {includedFeatures.map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <Icon
-                    name="star-icon"
-                    alt="checkmark"
-                    className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"
-                  />
-                  <p className="text-gray-700 dark:text-gray-300">{feature}</p>
-                </div>
-              ))}
+        {/* What's Included With Every Plan - Only show for website plans */}
+        {includedFeatures && (
+          <SimpleScrollReveal direction="up" delay={400}>
+            <div className="mb-16 bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 md:p-12">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                What's Included With Every Plan
+              </h2>
+              <div className="grid md:grid-cols-2 gap-4">
+                {includedFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-start gap-3">
+                    <Icon
+                      name="star-icon"
+                      alt="checkmark"
+                      className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"
+                    />
+                    <p className="text-gray-700 dark:text-gray-300">{feature}</p>
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </SimpleScrollReveal>
+          </SimpleScrollReveal>
+        )}
 
         {/* Desktop Grid */}
         <div className="hidden lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto md:w-[full] w-fit mb-16">
@@ -302,43 +451,45 @@ export function PricingPage() {
           ))}
         </div>
 
-        {/* Forte Care™ Section */}
-        <SimpleScrollReveal direction="up" delay={600}>
-          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 md:p-12">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                Forte Care™: The Secret to Long-Term ROI
-              </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-                Most websites go live and get forgotten. With Forte Care™, yours stays fresh, fast, and always working for your business. 
-                You'll get unlimited edits, analytics monitoring, performance checks, and ongoing optimization—all handled by us.
-              </p>
-              
-              <div className="grid md:grid-cols-3 gap-6 mb-8">
-                <div className="text-center">
-                  <div className="text-2xl mb-2">📈</div>
-                  <p className="text-gray-700 dark:text-gray-300">Get regular site improvements without lifting a finger</p>
+        {/* Forte Care™ Section - Only show for website plans */}
+        {(!serviceType || serviceType === 'website') && (
+          <SimpleScrollReveal direction="up" delay={600}>
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 md:p-12">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                  Forte Care™: The Secret to Long-Term ROI
+                </h2>
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+                  Most websites go live and get forgotten. With Forte Care™, yours stays fresh, fast, and always working for your business. 
+                  You'll get unlimited edits, analytics monitoring, performance checks, and ongoing optimization—all handled by us.
+                </p>
+                
+                <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="text-center">
+                    <div className="text-2xl mb-2">📈</div>
+                    <p className="text-gray-700 dark:text-gray-300">Get regular site improvements without lifting a finger</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl mb-2">🛠</div>
+                    <p className="text-gray-700 dark:text-gray-300">Receive unlimited content edits and updates</p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl mb-2">🚨</div>
+                    <p className="text-gray-700 dark:text-gray-300">Have a direct line to support when it matters most</p>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <div className="text-2xl mb-2">🛠</div>
-                  <p className="text-gray-700 dark:text-gray-300">Receive unlimited content edits and updates</p>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl mb-2">🚨</div>
-                  <p className="text-gray-700 dark:text-gray-300">Have a direct line to support when it matters most</p>
-                </div>
+
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                  Whether you're launching something new or leveling up an existing site, we're here to make sure your investment keeps paying off—month after month.
+                </p>
+
+                <Link href="/solutions/care" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+                  Learn more about Forte Care™ →
+                </Link>
               </div>
-
-              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                Whether you're launching something new or leveling up an existing site, we're here to make sure your investment keeps paying off—month after month.
-              </p>
-
-              <Link href="/solutions/care" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
-                Learn more about Forte Care™ →
-              </Link>
             </div>
-          </div>
-        </SimpleScrollReveal>
+          </SimpleScrollReveal>
+        )}
         
       </div>
     </section>
