@@ -534,7 +534,7 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                     className="w-[18px] h-[18px]"
                   />
                   <p className="font-sans font-normal text-[14px] sm:text-lg text-[#8D9DFF]">
-                    Why Businesses Choose Forte
+                    Why Businesses Choose Forte Web Designs
                   </p>
                 </div>
                 <h2 className="text-[32px] sm:text-[56px] lg:text-[62px] leading-[36px] sm:leading-[56px] lg:leading-[62px] font-medium font-Roboto text-[#000000] dark:text-[#F1F1EF] mb-6">
@@ -667,7 +667,7 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                         className="w-[18px] h-[18px] mt-1"
                       />
                       <p className="font-sans font-normal text-[12px] sm:text-2xl leading-6 tracking-[-0.24px]  align-middle text-[#8D9DFF] ">
-                        Proudly US Based Company
+                        Proudly a USA Based Company
                       </p>
                     </div>
                     <div className="">
