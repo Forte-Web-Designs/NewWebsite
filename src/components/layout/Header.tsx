@@ -323,11 +323,11 @@ export default function Header() {
             </nav>
 
             {/* Mobile Header */}
-            <div className="lg:hidden flex items-center justify-between w-full relative z-[60]">
+            <div className="lg:hidden flex items-center justify-between w-full relative z-[70]">
               {/* Mobile Menu Button and Small Logo */}
               <div className="flex items-center w-full gap-[10px]">
                 <button
-                  className="text-gray-700 dark:text-gray-300 transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-110 cursor-pointer"
+                  className="text-gray-700 dark:text-gray-300 transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-110 cursor-pointer z-[80]"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                   aria-label="Mobile menu"
                 >
@@ -404,7 +404,7 @@ export default function Header() {
 
           {/* Mobile Menu - Full Screen Overlay */}
           {mobileMenuOpen && (
-            <div className="lg:hidden fixed inset-0 z-50 flex flex-col pt-20"
+            <div className="lg:hidden fixed inset-0 z-[9999] flex flex-col"
               style={{
                 background: theme === "light"
                   ? "linear-gradient(146deg, #FFFFFF 0%, rgb(69 84 179) 100%)"
@@ -420,7 +420,39 @@ export default function Header() {
                 }}
               ></div>
 
-              <div className="flex-1 p-6 overflow-y-auto relative z-10">
+              {/* Mobile Header repeated in overlay for consistency */}
+              <div className="flex items-center justify-between p-4 sm:p-6 border-b border-white/20">
+                <div className="flex items-center gap-4">
+                  <button
+                    className="text-white transition-all duration-300 hover:text-blue-300 hover:scale-110"
+                    onClick={() => setMobileMenuOpen(false)}
+                    aria-label="Close mobile menu"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="w-8 h-8 transition-transform duration-300 hover:rotate-90">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                  </button>
+                  <Link href="/" prefetch={true} className="flex items-center transition-all duration-300 hover:scale-105">
+                    <OptimizedImage
+                      src="/images/home/Group.png"
+                      alt="Forte Logo (Mobile)"
+                      width={18}
+                      height={24}
+                      priority
+                    />
+                  </Link>
+                </div>
+                <div className="flex items-center gap-4">
+                  <ThemeToggle />
+                </div>
+              </div>
+
+              <div className="flex-1 p-4 sm:p-6 overflow-y-auto"
+                style={{
+                  paddingTop: '2rem',
+                  maxHeight: 'calc(100vh - 100px)'
+                }}
+              >
                 <nav className="flex flex-col space-y-4">
                   {/* Home */}
                   <div className="flex items-center justify-between py-4">

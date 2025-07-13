@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 const testimonials = [
   {
@@ -22,16 +22,90 @@ const testimonials = [
 
 export const TestimonialSlider = () => {
   const [index, setIndex] = useState(0);
+  const [isUserInteracting, setIsUserInteracting] = useState(false);
+  const [startX, setStartX] = useState(0);
+  const [isDragging, setIsDragging] = useState(false);
+  const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const interval = setInterval(() => {
-      setIndex((prev) => (prev + 1) % testimonials.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
+    if (!isUserInteracting) {
+      const interval = setInterval(() => {
+        setIndex((prev) => (prev + 1) % testimonials.length);
+      }, 4000);
+      return () => clearInterval(interval);
+    }
+  }, [isUserInteracting]);
+
+  // Resume auto-sliding after user interaction ends
+  useEffect(() => {
+    if (isUserInteracting) {
+      const timer = setTimeout(() => {
+        setIsUserInteracting(false);
+      }, 5000); // Resume after 5 seconds of no interaction
+      return () => clearTimeout(timer);
+    }
+  }, [isUserInteracting]);
+
+  const handleTouchStart = (e: React.TouchEvent) => {
+    setStartX(e.touches[0].clientX);
+    setIsDragging(true);
+    setIsUserInteracting(true);
+  };
+
+  const handleTouchEnd = (e: React.TouchEvent) => {
+    if (!isDragging) return;
+    
+    const endX = e.changedTouches[0].clientX;
+    const diff = startX - endX;
+    
+    if (Math.abs(diff) > 50) { // Minimum swipe distance
+      if (diff > 0) {
+        // Swipe left - next slide
+        setIndex((prev) => (prev + 1) % testimonials.length);
+      } else {
+        // Swipe right - previous slide
+        setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+      }
+    }
+    
+    setIsDragging(false);
+  };
+
+  const handleMouseDown = (e: React.MouseEvent) => {
+    setStartX(e.clientX);
+    setIsDragging(true);
+    setIsUserInteracting(true);
+  };
+
+  const handleMouseUp = (e: React.MouseEvent) => {
+    if (!isDragging) return;
+    
+    const endX = e.clientX;
+    const diff = startX - endX;
+    
+    if (Math.abs(diff) > 50) { // Minimum drag distance
+      if (diff > 0) {
+        // Drag left - next slide
+        setIndex((prev) => (prev + 1) % testimonials.length);
+      } else {
+        // Drag right - previous slide
+        setIndex((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+      }
+    }
+    
+    setIsDragging(false);
+  };
 
   return (
-    <div className="relative w-full max-w-3xl mx-auto h-80 overflow-hidden">
+    <div 
+      ref={containerRef}
+      className="relative w-full max-w-3xl mx-auto h-80 overflow-hidden cursor-grab active:cursor-grabbing"
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onMouseDown={handleMouseDown}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={() => setIsDragging(false)}
+    >
       {testimonials.map((t, i) => {
         const isActive = i === index;
         return (
