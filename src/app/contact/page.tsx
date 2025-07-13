@@ -12,11 +12,14 @@ export default function Pricing() {
   return (
     <div className="relative">
       <SectionBackgroundAnimation />
-      <section className="my-20 relative z-10">
-        <span className="lg:flex  sm:text-2xl text-xs font-normal font-roboto hidden items-center sm:gap-2 gap-1 text-primary-1000 justify-center mb-6">
-          <Icon name="star" className="sm:h-6 sm:w-6 h-[14px] w-[14px]" />
-          Ready to Get Started?
-        </span>
+      <section className="py-12 sm:py-16 md:py-20 relative z-10 px-4 sm:px-6 lg:px-8">
+        {/* Hero Section - Mobile Optimized */}
+        <div className="text-center mb-8 sm:mb-12">
+          <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">
+            <Icon name="star" className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
+            Ready to Get Started?
+          </span>
+        </div>
         <ContactForm />
       </section>
     </div>

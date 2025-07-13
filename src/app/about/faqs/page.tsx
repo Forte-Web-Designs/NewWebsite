@@ -118,73 +118,80 @@ export default function SolutionsPage() {
   };
 
   return (
-    <section className="container max-w-7xl mx-auto flex flex-col pt-16 pb-20 md:pt-24 md:pb-64">
-      <span className="sm:text-2xl text-xs font-normal font-roboto flex items-center sm:gap-2 gap-1 text-primary-1000 px-5">
-        <Icon name="star" className="sm:h-6 sm:w-6 h-[14px] w-[14px]" />
-        FAQs
-      </span>
-      <h1 className="md:text-[62px] text-[38px] font-medium font-roboto mt-6 w-[90%] max-[767px]:leading-[40px] dark:text-secondary-1000 px-5">
-        Got Questions? We've Got Answers!
-      </h1>
-
-      <div className="sm:py-16 py-6 flex gap-3 overflow-x-auto no-scrollbar pb-3 ml-5">
-        {buttons.map((button) => (
-          <button
-            key={button.id}
-            onClick={() => handleCategoryChange(button.label)}
-            className={`text-[14px] sm:text-[16px] font-normal font-roboto flex items-center gap-2 sm:gap-3 p-2 sm:p-3 pr-3 sm:pr-4 rounded-xl sm:rounded-2xl whitespace-nowrap flex-shrink-0 ${activeButton === button.label
-                ? "text-white bg-gradient-to-r from-secondary-1150 to-primary-1200"
-                : "dark:text-secondary-1000 dark:bg-primary-1150 text-primary-1150 bg-secondary-1000"
-              }`}
-          >
-            {activeButton === button.label ? (
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 18 19"
-                fill="none"
-                className="w-[14px] h-[14px] sm:w-6 sm:h-6 flex-shrink-0"
-              >
-                <path
-                  d="M8.75348 17.8554C7.72056 14.2308 3.94416 10.4686 0.305928 9.43954C-0.101976 9.30845 -0.101976 9.02006 0.305928 8.88242C3.95074 7.84682 7.72056 4.09116 8.76005 0.460019C8.8719 0.0602019 9.14164 0.0602019 9.25349 0.460019C10.2864 4.09116 14.0628 7.84682 17.6945 8.88242C18.1024 9.01351 18.1024 9.30845 17.6945 9.43954C14.0562 10.4686 10.2798 14.2308 9.24691 17.8554C9.13506 18.2618 8.86532 18.2618 8.75348 17.8554Z"
-                  fill="white"
-                />
-              </svg>
-            ) : (
-              <Icon
-                name="star"
-                className="w-[14px] h-[14px] sm:w-6 sm:h-6 flex-shrink-0"
-              />
-            )}
-            {button.label}
-          </button>
-        ))}
+    <section className="container max-w-7xl mx-auto flex flex-col px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
+      {/* Hero Section - Mobile Optimized */}
+      <div className="text-center lg:text-left mb-8 sm:mb-12">
+        <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center lg:justify-start gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">
+          <Icon name="star" className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
+          FAQs
+        </span>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000">
+          Got Questions? We've Got Answers!
+        </h1>
       </div>
 
-      <div className="flex flex-col gap-2 sm:py-2 py-7 px-5">
+      {/* Category Buttons - Mobile Optimized */}
+      <div className="mb-8 sm:mb-12">
+        <div className="flex gap-2 sm:gap-3 overflow-x-auto no-scrollbar pb-2 -mx-1">
+          {buttons.map((button) => (
+            <button
+              key={button.id}
+              onClick={() => handleCategoryChange(button.label)}
+              className={`text-xs sm:text-sm md:text-base font-normal font-roboto flex items-center gap-1 sm:gap-2 px-3 py-2 sm:px-4 sm:py-3 rounded-lg sm:rounded-xl whitespace-nowrap flex-shrink-0 transition-all duration-200 ${activeButton === button.label
+                  ? "text-white bg-gradient-to-r from-secondary-1150 to-primary-1200 shadow-lg"
+                  : "dark:text-secondary-1000 dark:bg-primary-1150 text-primary-1150 bg-secondary-1000 hover:bg-opacity-80"
+                }`}
+            >
+              {activeButton === button.label ? (
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 18 19"
+                  fill="none"
+                  className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0"
+                >
+                  <path
+                    d="M8.75348 17.8554C7.72056 14.2308 3.94416 10.4686 0.305928 9.43954C-0.101976 9.30845 -0.101976 9.02006 0.305928 8.88242C3.95074 7.84682 7.72056 4.09116 8.76005 0.460019C8.8719 0.0602019 9.14164 0.0602019 9.25349 0.460019C10.2864 4.09116 14.0628 7.84682 17.6945 8.88242C18.1024 9.01351 18.1024 9.30845 17.6945 9.43954C14.0562 10.4686 10.2798 14.2308 9.24691 17.8554C9.13506 18.2618 8.86532 18.2618 8.75348 17.8554Z"
+                    fill="white"
+                  />
+                </svg>
+              ) : (
+                <Icon
+                  name="star"
+                  className="w-3 h-3 sm:w-4 sm:h-4 md:w-5 md:h-5 flex-shrink-0"
+                />
+              )}
+              <span className="text-xs sm:text-sm md:text-base">{button.label}</span>
+            </button>
+          ))}
+        </div>
+      </div>
+
+      {/* FAQ Accordion - Mobile Optimized */}
+      <div className="space-y-3 sm:space-y-4 mb-8 sm:mb-12">
         {faqData[activeButton]?.map((faq, index) => (
           <div
             key={index}
-            className="dark:bg-primary-1150 sm:p-8 p-4 rounded-2xl transition-all duration-300 bg-secondary-1350"
+            className="dark:bg-primary-1150 bg-secondary-1350 p-4 sm:p-6 lg:p-8 rounded-lg sm:rounded-xl lg:rounded-2xl transition-all duration-300 shadow-sm hover:shadow-md"
           >
             <button
-              className="flex justify-between md:items-center cursor-pointer w-full text-left"
+              className="flex justify-between items-start gap-4 cursor-pointer w-full text-left"
               onClick={() => toggleAccordion(index)}
             >
-              <h2 className="sm:text-[26px] text-[18px] max-[767px]:leading-6 max-[767px]:w-[85%] font-medium font-inter dark:text-secondary-1050 text-primary-1150">
+              <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-inter dark:text-secondary-1050 text-primary-1150 leading-tight pr-2">
                 {faq.question}
               </h2>
-              <span className="transform transition-transform duration-300 max-[767px]:h-[22px] max-[767px]:w-[6px]">
+              <span className="flex-shrink-0 mt-1">
                 <svg
                   viewBox="0 0 7 13"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`sm:h-[14px] h-[11px] sm:w-2 w-[6px] transition-transform duration-300 ${expandedIndex === index ? "rotate-[270deg]" : "rotate-90"
+                  className={`w-3 h-3 sm:w-4 sm:h-4 transition-transform duration-300 ${expandedIndex === index ? "rotate-[270deg]" : "rotate-90"
                     }`}
                 >
                   <path
                     d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
-                  0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
-                  7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
+                    0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
+                    7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
                     className="fill-gray-900 dark:fill-white"
                   />
                 </svg>
@@ -192,11 +199,11 @@ export default function SolutionsPage() {
             </button>
             <div
               className={`overflow-hidden transition-all duration-300 ${expandedIndex === index
-                  ? "max-h-[500px] sm:mt-3 mt-2"
+                  ? "max-h-[1000px] mt-3 sm:mt-4"
                   : "max-h-0"
                 }`}
             >
-              <p className="sm:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 text-primary-1250 max-[767px]:leading-[20px] max-[767px]:w-[90%]">
+              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1250 leading-relaxed">
                 {faq.answer}
               </p>
             </div>
@@ -204,7 +211,8 @@ export default function SolutionsPage() {
         ))}
       </div>
 
-      <div className="sm:mt-12 px-5">
+      {/* CTA Button - Mobile Optimized */}
+      <div className="flex justify-center">
         <LightButton href="/contact">Ready to Get Started? Let's Chat!</LightButton>
       </div>
     </section>

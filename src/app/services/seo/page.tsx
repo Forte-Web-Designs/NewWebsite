@@ -32,23 +32,27 @@ export default function SeoDesignPage() {
   };
 
   return (
-    <section className="container max-w-7xl mx-auto flex flex-col md:items-center items-start py-16 md:py-28">
-      <span className="sm:text-2xl text-xs font-normal font-roboto flex items-center sm:gap-2 gap-1 text-primary-1000 px-5">
-        <Icon name="star" className="sm:h-6 sm:w-6 h-[14px] w-[14px]" />
-        Hi there! 👋
-      </span>
-      <h1 className="md:text-[62px] text-[36px] md:max-w-[794px] font-medium font-roboto md:mt-6 mt-5 w-[100%] max-[768px]:leading-[40px] leading-[66px] dark:text-secondary-1000 md:text-center px-5">
-        Tired of Being Invisible on Google?
-      </h1>
-      <p className="md:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 text-primary-1400 lg:w-[824px] md:w-[740px] w-full md:mt-5 mt-4 md:text-center md:leading-[22px] leading-4 px-5">
-        Let's be real - if customers can't find you online, you don't exist. Our SEO gets you found by people who are ready to buy what you sell.
-      </p>
+    <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
+      {/* Hero Section - Mobile Optimized */}
+      <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+        <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">
+          <Icon name="star" className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
+          Hi there! 👋
+        </span>
+        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6 max-w-4xl mx-auto">
+          Tired of Being Invisible on Google?
+        </h1>
+        <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
+          Let's be real - if customers can't find you online, you don't exist. Our SEO gets you found by people who are ready to buy what you sell.
+        </p>
+      </div>
 
-      <div className="w-full lg:pt-[17rem] lg:pb-[6rem] md:py-36 sm:py-28 py-28 flex flex-col md:gap-5 gap-9 pl-5 pr-4">
-        <div className="dark:bg-[radial-gradient(50.48%_57.98%_at_5.98%_5.37%,_#1A1A1A_0%,_rgba(21,21,21,0.5)_50%,_rgba(16,16,16,0)_100%)] bg-[radial-gradient(50.48%_57.98%_at_5.98%_5.37%,_#f4f4f4_0%,_rgba(244,244,244,0.5)_50%,_rgba(244,244,244,0)_100%)] md:pl-[48px] md:pt-[27px] pl-[28px] pt-[20px] md:rounded-tl-3xl rounded-tl-xl md:w-[692px] w-full">
-          <div className="flex justify-between items-center">
-            <div>
-              <p className="md:text-[14px] text-[11px] bg-secondary-1250 md:py-[6px] md:px-4 py-[1px] px-2 rounded-[34px] dark:text-white text-secondary-1050">
+      {/* Main Content Section - Mobile Optimized */}
+      <div className="py-12 sm:py-16 lg:py-24 space-y-6 sm:space-y-8 lg:space-y-12">
+        <div className="dark:bg-[radial-gradient(50.48%_57.98%_at_5.98%_5.37%,_#1A1A1A_0%,_rgba(21,21,21,0.5)_50%,_rgba(16,16,16,0)_100%)] bg-[radial-gradient(50.48%_57.98%_at_5.98%_5.37%,_#f4f4f4_0%,_rgba(244,244,244,0.5)_50%,_rgba(244,244,244,0)_100%)] p-4 sm:p-6 lg:p-8 rounded-tl-lg sm:rounded-tl-xl lg:rounded-tl-3xl w-full max-w-4xl">
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
+            <div className="flex-1">
+              <p className="text-xs sm:text-sm bg-secondary-1250 py-1 px-2 sm:py-2 sm:px-4 rounded-full dark:text-white text-secondary-1050 inline-block mb-3 sm:mb-4">
                 users
               </p>
             </div>

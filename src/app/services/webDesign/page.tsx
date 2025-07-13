@@ -17,88 +17,88 @@ export default function WebsiteDesignPage() {
     <div className="relative">
       <SectionBackgroundAnimation />
       <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="py-16 md:py-24">
-        <div className="container max-w-7xl mx-auto flex flex-col md:items-center items-start px-4 sm:px-6 lg:px-8">
-          <div className="inline-flex items-center gap-2 bg-[#F4F4F4] dark:bg-[#101010] px-4 py-2 rounded-full mb-6">
-            <Icon name="star" className="h-4 w-4 sm:h-6 sm:w-6" />
-            <span className="text-[#8D9DFF] text-sm font-normal sm:text-lg">
-              Results by Design
-            </span>
-          </div>
-          
-          <h1 className="text-[36px] md:text-[56px] lg:text-[62px] font-medium font-roboto leading-[40px] md:leading-[56px] lg:leading-[62px] dark:text-white md:text-center text-start mb-6 max-w-5xl">
-            Stop Settling for Cookie-Cutter Templates
-          </h1>
-          
-          <div className="max-w-4xl mx-auto bg-[#F4F4F4] dark:bg-[#101010] p-6 sm:p-8 rounded-xl mb-8">
-            <p className="text-[16px] md:text-[18px] font-normal font-inter dark:text-[#B4B4B4] text-[#626262] leading-[22px] md:leading-[26px] md:text-center text-start">
-              While your competitors struggle with slow, template-based websites, you could be dominating search results with a 
-              lightning-fast, hand-coded site that converts visitors into customers. Here's why custom beats templates—every single time.
-            </p>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-4 mb-8">
-            <LightButton href="/contact">Get My Custom Quote</LightButton>
-            <Link
-              className="inline-flex items-center text-[#203FFC] dark:text-[#8D9DFF] border-b border-[#203FFC] dark:border-[#8D9DFF] hover:border-[#8D9DFF] transition-colors text-center justify-center px-4 py-2"
-              href="/solutions/seotool"
-            >
-              See How My Current Site Ranks (FREE)
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Performance Stats Section */}
-      <section className="py-16 bg-[#F8F9FA] dark:bg-[#0A0A0A]">
-        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-[28px] md:text-[36px] font-medium font-roboto dark:text-white mb-4">
-              The Numbers Don't Lie
-            </h2>
-            <p className="text-[16px] md:text-[18px] text-[#626262] dark:text-[#B4B4B4] max-w-2xl mx-auto">
-              While template sites struggle to keep up, our custom-coded websites deliver measurable results
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
-            <div className="bg-white dark:bg-[#101010] p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
-              <h3 className="text-[48px] lg:text-[56px] font-bold font-roboto bg-gradient-to-r from-[#203FFC] to-[#8D9DFF] bg-clip-text text-transparent mb-4 leading-tight">
-                98–100
-              </h3>
-              <p className="text-[16px] md:text-[18px] font-semibold dark:text-white text-[#000000] mb-2">
-                Google PageSpeed Score
+        {/* Hero Section - Mobile Optimized */}
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+          <div className="container max-w-7xl mx-auto text-center">
+            <div className="inline-flex items-center gap-1 sm:gap-2 bg-[#F4F4F4] dark:bg-[#101010] px-3 py-2 sm:px-4 sm:py-2 rounded-full mb-4 sm:mb-6">
+              <Icon name="star" className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
+              <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-lg font-normal">
+                Results by Design
+              </span>
+            </div>
+            
+            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight dark:text-white mb-4 sm:mb-6 max-w-5xl mx-auto">
+              Stop Settling for Cookie-Cutter Templates
+            </h1>
+            
+            <div className="max-w-4xl mx-auto bg-[#F4F4F4] dark:bg-[#101010] p-4 sm:p-6 lg:p-8 rounded-lg sm:rounded-xl mb-6 sm:mb-8">
+              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-[#B4B4B4] text-[#626262] leading-relaxed">
+                While your competitors struggle with slow, template-based websites, you could be dominating search results with a 
+                lightning-fast, hand-coded site that converts visitors into customers. Here's why custom beats templates—every single time.
               </p>
-              <p className="text-[14px] text-[#626262] dark:text-[#B4B4B4]">
-                vs. 30-60 for most templates
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8">
+              <LightButton href="/contact">Get My Custom Quote</LightButton>
+              <Link
+                className="inline-flex items-center text-[#203FFC] dark:text-[#8D9DFF] border-b border-[#203FFC] dark:border-[#8D9DFF] hover:border-[#8D9DFF] transition-colors text-center justify-center px-4 py-2 text-sm sm:text-base"
+                href="/solutions/seotool"
+              >
+                See How My Current Site Ranks (FREE)
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Performance Stats Section - Mobile Optimized */}
+        <section className="py-12 sm:py-16 md:py-20 bg-[#F8F9FA] dark:bg-[#0A0A0A]">
+          <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium font-roboto dark:text-white mb-3 sm:mb-4">
+                The Numbers Don't Lie
+              </h2>
+              <p className="text-sm sm:text-base md:text-lg text-[#626262] dark:text-[#B4B4B4] max-w-3xl mx-auto">
+                While template sites struggle to keep up, our custom-coded websites deliver measurable results
               </p>
             </div>
             
-            <div className="bg-white dark:bg-[#101010] p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
-              <h3 className="text-[48px] lg:text-[56px] font-bold font-roboto bg-gradient-to-r from-[#203FFC] to-[#8D9DFF] bg-clip-text text-transparent mb-4 leading-tight">
-                2x
-              </h3>
-              <p className="text-[16px] md:text-[18px] font-semibold dark:text-white text-[#000000] mb-2">
-                Faster Load Times
-              </p>
-              <p className="text-[14px] text-[#626262] dark:text-[#B4B4B4]">
-                Under 2 seconds vs. 4-8 seconds
-              </p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+              <div className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-lg sm:rounded-xl border border-[#E5E5E5] dark:border-[#262626] shadow-sm text-center">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-roboto bg-gradient-to-r from-[#203FFC] to-[#8D9DFF] bg-clip-text text-transparent mb-3 sm:mb-4 leading-tight">
+                  98–100
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg font-semibold dark:text-white text-[#000000] mb-2">
+                  Google PageSpeed Score
+                </p>
+                <p className="text-xs sm:text-sm text-[#626262] dark:text-[#B4B4B4]">
+                  vs. 30-60 for most templates
+                </p>
+              </div>
+              
+              <div className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-lg sm:rounded-xl border border-[#E5E5E5] dark:border-[#262626] shadow-sm text-center">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-roboto bg-gradient-to-r from-[#203FFC] to-[#8D9DFF] bg-clip-text text-transparent mb-3 sm:mb-4 leading-tight">
+                  2x
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg font-semibold dark:text-white text-[#000000] mb-2">
+                  Faster Load Times
+                </p>
+                <p className="text-xs sm:text-sm text-[#626262] dark:text-[#B4B4B4]">
+                  Under 2 seconds vs. 4-8 seconds
+                </p>
+              </div>
+              
+              <div className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-lg sm:rounded-xl border border-[#E5E5E5] dark:border-[#262626] shadow-sm text-center sm:col-span-2 lg:col-span-1">
+                <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-roboto bg-gradient-to-r from-[#203FFC] to-[#8D9DFF] bg-clip-text text-transparent mb-3 sm:mb-4 leading-tight">
+                  Zero
+                </h3>
+                <p className="text-sm sm:text-base md:text-lg font-semibold dark:text-white text-[#000000] mb-2">
+                  Security Vulnerabilities
+                </p>
+                <p className="text-xs sm:text-sm text-[#626262] dark:text-[#B4B4B4]">
+                  No plugins = no risk
+                </p>
+              </div>
             </div>
-            
-            <div className="bg-white dark:bg-[#101010] p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
-              <h3 className="text-[48px] lg:text-[56px] font-bold font-roboto bg-gradient-to-r from-[#203FFC] to-[#8D9DFF] bg-clip-text text-transparent mb-4 leading-tight">
-                Zero
-              </h3>
-              <p className="text-[16px] md:text-[18px] font-semibold dark:text-white text-[#000000] mb-2">
-                Security Vulnerabilities
-              </p>
-              <p className="text-[14px] text-[#626262] dark:text-[#B4B4B4]">
-                No plugins = no risk
-              </p>
-            </div>
-          </div>
         </div>
       </section>
 

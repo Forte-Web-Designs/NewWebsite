@@ -53,47 +53,55 @@ export default function ServicePage() {
     <div className="relative">
       <SectionBackgroundAnimation />
       <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <div className="flex gap-2 mb-5 md:justify-center md:mb-8">
-              <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} />
-              <span className="text-[#8D9DFF] text-md font-normal md:text-lg  md:text-blue-400">Solutions That Drive Growth</span>
-            </div>
-            <h1 className="sm:text-4xl  sm:w-[60%] w-[75%]  tracking-tight text-gray-900 dark:text-white md:text-5xl md:mx-auto md:text-center text-start">
-              Stop Throwing Money at Marketing That Doesn't Work
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400 md:text-center text-start">
-              Tired of "marketing experts" who disappear with your money? We're different. Every service we offer is designed to bring you real customers and measurable results. No fluff, no false promises, just growth.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="pt-16 pb-40  md:px-10 sm:px-6 lg:px-0">
-        <div className='container mx-auto xxl:px-8 sm:px-6 lg:px-8 px-4'>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 md:gap-10 gap-5 ">
-            {cardsData.map((card, index) => (
-              <div key={index} className="space-y-3 md:pt-8 pt-6 pe-3 p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]">
-                <h3 className="sm:text-3xl text-2xl text-gray-900 dark:text-white  ">{card.title}</h3>
-                <p className="text-lg text-gray-600 dark:text-gray-400 md:py-4 py-3">{card.desc}</p>
-                <Link href={card.href} className="text-lg flex items-center  gap-3 text-primary-700 dark:text-blue-200  hover:underline">
-                  {card.linkText}
-
-                  <Icon
-                    name="rightarrow"
-                    alt="right arrow icon"
-                    className="w-[7px] h-[12px] "
-                  />
-
-                </Link>
+        {/* Hero Section - Mobile Optimized */}
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center">
+              <div className="flex items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
+                <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
+                <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">Solutions That Drive Growth</span>
               </div>
-            ))}
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight mb-4 sm:mb-6">
+                Stop Throwing Money at Marketing That Doesn't Work
+              </h1>
+              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
+                Tired of "marketing experts" who disappear with your money? We're different. Every service we offer is designed to bring you real customers and measurable results. No fluff, no false promises, just growth.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+
+        {/* Services Grid - Mobile Optimized */}
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-7xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+              {cardsData.map((card, index) => (
+                <div 
+                  key={index} 
+                  className="group p-4 sm:p-6 lg:p-8 rounded-lg sm:rounded-xl border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414] hover:shadow-md transition-all duration-300 hover:border-primary-700 dark:hover:border-blue-400"
+                >
+                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 leading-tight">
+                    {card.title}
+                  </h3>
+                  <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4 sm:mb-6">
+                    {card.desc}
+                  </p>
+                  <Link 
+                    href={card.href} 
+                    className="inline-flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg text-primary-700 dark:text-blue-200 hover:underline font-medium group-hover:text-primary-800 dark:group-hover:text-blue-100 transition-colors duration-200"
+                  >
+                    {card.linkText}
+                    <Icon
+                      name="rightarrow"
+                      alt="right arrow icon"
+                      className="w-2 h-3 sm:w-[7px] sm:h-[12px] transition-transform duration-200 group-hover:translate-x-1"
+                    />
+                  </Link>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );
