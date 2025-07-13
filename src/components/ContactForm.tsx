@@ -143,7 +143,22 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               {/* Form */}
               <SimpleScrollReveal direction="up" delay={400}>
                 <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form 
+                    name="contact" 
+                    method="POST" 
+                    data-netlify="true" 
+                    data-netlify-honeypot="bot-field"
+                    action="/thank-you"
+                    onSubmit={handleSubmit} 
+                    className="space-y-6"
+                  >
+                    {/* Hidden fields for Netlify */}
+                    <input type="hidden" name="form-name" value="contact" />
+                    <div style={{ display: 'none' }}>
+                      <label>
+                        Don't fill this out if you're human: <input name="bot-field" />
+                      </label>
+                    </div>
                   <div className="grid md:grid-cols-2 gap-6">
                     {/* Your Name */}
                     <SimpleAnimatedInput

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Contact Form - Netlify Detection</title>
+</head>
+<body>
+  <!-- This form is for Netlify form detection during build process -->
+  <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="company" />
+    <select name="service">
+      <option value="Custom Website Design">Custom Website Design</option>
+      <option value="SEO Services">SEO Services</option>
+      <option value="Social Media Management">Social Media Management</option>
+      <option value="Google PPC Ads">Google PPC Ads</option>
+      <option value="Website Maintenance">Website Maintenance</option>
+      <option value="Forte Care™">Forte Care™</option>
+      <option value="Other">Other</option>
+    </select>
+    <textarea name="message"></textarea>
+  </form>
+</body>
+</html>
