@@ -131,7 +131,7 @@ export default function Website2() {
                     <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full mx-auto"></div>
                   </div>
                   
-                  {/* Professional Stats/Highlights */}
+                  {/* Personal Stats/Highlights */}
                   <div className="grid grid-cols-3 md:grid-cols-3 gap-3 sm:gap-6 w-full max-w-lg text-center">
                     <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10">
                       <div className="text-lg sm:text-2xl font-bold text-white">2024</div>
@@ -139,11 +139,11 @@ export default function Website2() {
                     </div>
                     <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10">
                       <div className="text-lg sm:text-2xl font-bold text-white">100%</div>
-                      <div className="text-xs sm:text-sm text-gray-400">Hand-Coded</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Passionate</div>
                     </div>
                     <div className="bg-white/5 backdrop-blur-sm rounded-xl sm:rounded-2xl p-3 sm:p-4 border border-white/10">
-                      <div className="text-lg sm:text-2xl font-bold text-white">Fast</div>
-                      <div className="text-xs sm:text-sm text-gray-400">Performance</div>
+                      <div className="text-lg sm:text-2xl font-bold text-white">Growth</div>
+                      <div className="text-xs sm:text-sm text-gray-400">Focused</div>
                     </div>
                   </div>
                 </div>
