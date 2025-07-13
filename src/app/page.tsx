@@ -527,6 +527,123 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Forte Ecosystem Section */}
+      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={200}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                The Forte™ Ecosystem: Built to Grow With You
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                Start with a Forte Foundation™ website, then add services as your business grows. 
+                Every service works together seamlessly for maximum results.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-3xl mb-4">🌐</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Forte Foundation™
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                  Your website + Forte Care™ included
+                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-semibold">
+                  $200/month
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={400}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-3xl mb-4">🔍</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  + Forte SEO™
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                  Get found on Google
+                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-semibold">
+                  +$300-500/month
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={500}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-3xl mb-4">🎯</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  + Forte PPC™
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                  Drive immediate traffic
+                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-semibold">
+                  +$400-650/month
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={600}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-3xl mb-4">📱</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  + Forte Social™
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                  Build your community
+                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-semibold">
+                  +$200-350/month
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+
+          <SimpleScrollReveal direction="up" delay={700}>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    Why the Ecosystem Approach Works
+                  </h3>
+                  <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span>Seamless integration between all services</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span>Consistent branding and messaging across all channels</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span>Forte Care™ maintains the foundation for all other services</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span>Add services as you grow - no need to switch providers</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="lg:w-1/3">
+                  <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl p-6 text-white text-center">
+                    <div className="text-2xl font-bold mb-2">Example:</div>
+                    <div className="text-sm opacity-90 mb-3">Foundation + SEO + Social</div>
+                    <div className="text-3xl font-bold">$700/month</div>
+                    <div className="text-sm opacity-90 mt-2">Complete digital presence</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
       {/* Website Audit CTA Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
         {/* Background decoration */}

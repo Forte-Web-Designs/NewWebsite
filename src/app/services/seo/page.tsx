@@ -14,14 +14,19 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "How Long Does It Take? 🤔",
+    question: "How Does Forte SEO™ Pricing Work? 💰",
     answer:
-      "Some clients see improvements in just a few weeks. Others, especially in competitive markets, may need a few months of consistent SEO to see results. But we'll always be transparent about what's realistic—and we track everything so you can see progress clearly.",
+      "Forte SEO™ requires an active Forte Foundation™ ($200/mo) or Forte Pro™ ($350/mo) website. Then add Forte SEO Essential™ (+$300/mo) or Forte SEO Growth™ (+$500/mo). For example: Foundation + SEO Essential = $500/mo total.",
   },
   {
-    question: "Ready to Get Started? 🚀",
+    question: "How Long Does It Take? 🤔",
     answer:
-      "Awesome! Getting started is super easy. Just reach out and we'll chat about your business goals and show you exactly how we can help you get found online. No pressure, just honest advice about what'll work best for you.",
+      "Some clients see improvements in just a few weeks. Others, especially in competitive markets, may need a few months of consistent Forte SEO™ to see results. We're always transparent about what's realistic and track everything so you can see progress clearly.",
+  },
+  {
+    question: "What's the Difference Between Essential and Growth? 📈",
+    answer:
+      "Forte SEO Essential™ focuses on technical foundations and on-page optimization. Forte SEO Growth™ includes everything in Essential plus 4 blog posts per month, local SEO, competitor analysis, and link building campaigns.",
   },
 ];
 

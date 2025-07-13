@@ -1,8 +1,16 @@
+"use client";
+
 import LightButton from "@/components/LightButton";
 import { Icon } from "@/components/images/Icon";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { PricingPage } from "@/components/pricing";
 import { Metadata } from "next";
+import { useState } from "react";
+
+type FAQItem = {
+  question: string;
+  answer: string;
+};
 
 export const metadata: Metadata = {
   title: "Google Ads That Actually Work",
@@ -10,7 +18,31 @@ export const metadata: Metadata = {
     "Professional Google Ads management that gets results. We help small businesses get found and grow with targeted PPC campaigns.",
 };
 
+const faqData: FAQItem[] = [
+  {
+    question: "How Does Forte PPC™ Pricing Work? 💰",
+    answer:
+      "Forte PPC™ requires an active Forte Foundation™ ($200/mo) or Forte Pro™ ($350/mo) website. Then add Forte PPC Starter™ (+$400/mo) or Forte PPC Growth™ (+$650/mo) plus your ad spend budget. For example: Foundation + PPC Starter = $600/mo + ad spend.",
+  },
+  {
+    question: "What's Included in Ad Management? 🎯",
+    answer:
+      "Both plans include full campaign setup, keyword research, ad copy creation, landing page optimization, and detailed reporting. Forte PPC Growth™ adds multi-platform campaigns, advanced tracking, and detailed ROI analysis.",
+  },
+  {
+    question: "How Much Should I Budget for Ad Spend? 💵",
+    answer:
+      "We typically recommend starting with $1,000-3,000/month in ad spend, depending on your market and goals. Our management fee is separate from your ad budget - we'll help you determine the right spend level for maximum ROI.",
+  },
+];
+
 export default function GooglePPCAdsPage() {
+  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
+
+  const toggleAccordion = (index: number) => {
+    setExpandedIndex(expandedIndex === index ? null : index);
+  };
+
   return (
     <section className="container max-w-7xl mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
       <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-normal font-roboto flex items-center gap-2 text-primary-1000 mb-4 sm:mb-6">
@@ -199,15 +231,64 @@ export default function GooglePPCAdsPage() {
         </LightButton>
       </div>
 
+      {/* FAQ Section */}
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32">
+        <div className="container mx-auto flex flex-col gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 xl:px-16 items-center">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter text-black dark:text-secondary-1000 text-center mb-4 sm:mb-6 md:mb-9">
+            Quick Questions...
+          </h2>
+
+          {faqData?.map((faq, index) => (
+            <div
+              key={index}
+              className="dark:bg-primary-1150 bg-secondary-1350 p-4 sm:p-6 md:p-8 rounded-2xl transition-all duration-300 w-full max-w-4xl"
+            >
+              <div
+                className="flex justify-between items-center cursor-pointer"
+                onClick={() => toggleAccordion(index)}
+              >
+                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black leading-tight pr-4">
+                  {faq.question}
+                </h2>
+                <button className="transform transition-transform duration-300 flex-shrink-0">
+                  <svg
+                    viewBox="0 0 7 13"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                    className={`h-3 w-2 sm:h-[14px] sm:w-2 transition-transform duration-300 ${expandedIndex === index ? "rotate-[270deg]" : "rotate-90"
+                      }`}
+                  >
+                    <path
+                      d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
+                  0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
+                  7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
+                      className="fill-gray-900 dark:fill-white"
+                    />
+                  </svg>
+                </button>
+              </div>
+              <div
+                className={`overflow-hidden transition-all duration-300 ${expandedIndex === index ? "max-h-[500px] mt-3 sm:mt-4" : "max-h-0"
+                  }`}
+              >
+                <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed">
+                  {faq.answer}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* PPC Pricing Section */}
       <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Ready to Get More Customers?
+              Ready to Drive More Traffic?
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Choose the PPC plan that fits your advertising goals. All plans include professional campaign management and detailed reporting.
+              Add Forte PPC™ to your existing Forte Foundation™ or Pro™ website. Plans start at just +$400/month plus your ad spend budget.
             </p>
           </div>
           <PricingPage serviceType="ppc" />

@@ -18,60 +18,44 @@ interface PricingPlan {
 
 const pricingPlans: PricingPlan[] = [
   {
-    id: 'essential',
-    name: 'Forte Essential™ Plan',
-    price: '$2,000',
-    subtitle: '+ $50/mo hosting & support',
-    ctaText: 'Launch Fast',
-    including: [
-      'Up to 5 Custom-Coded Pages',
-      'Mobile-Responsive & SEO-Ready',
-      'Domain + Hosting Setup',
-      'Forte Guarantee™'
-    ],
-    addons: [
-      'Forte Care™: $150/mo',
-      'Extra Pages: $100/ea',
-      'Blog Setup: $250'
-    ]
-  },
-  {
-    id: 'growth',
-    name: 'Forte Growth™ Plan',
+    id: 'foundation',
+    name: 'Forte Foundation™',
     price: '$200/month',
-    subtitle: '$0 Down | 12-Month Minimum',
+    subtitle: '12-Month Minimum',
     isPopular: true,
-    ctaText: 'Get Started',
+    ctaText: 'Start Building',
     including: [
-      '5 Page Custom-Coded Site',
-      'Domain + Hosting Setup',
+      '5-Page Custom-Coded Website',
+      'Domain + Premium Hosting',
       'Forte Care™ Included',
-      'Lifetime Technical Support',
+      'Mobile-Responsive & SEO-Ready',
       'Forte Guarantee™'
     ],
     addons: [
-      'Extra Pages: $100/ea',
-      'Blog Setup: $250'
+      'Forte SEO Essential™: +$300/mo',
+      'Forte PPC Starter™: +$400/mo',
+      'Forte Social Essential™: +$200/mo'
     ]
   },
   {
     id: 'pro',
-    name: 'Forte Pro™ Plan',
-    price: '$5,000',
-    subtitle: '+ $50/mo hosting',
-    ctaText: 'Build Custom',
+    name: 'Forte Pro™',
+    price: '$350/month',
+    subtitle: '12-Month Minimum',
+    ctaText: 'Go Premium',
     ctaMarginTop: 'mt-20',
     including: [
-      '10 Page Custom-Coded Site',
-      'Premium Hosting',
-      '1 Year of Forte Care™ Included',
-      'Google Analytics Setup',
-      'SEO Optimization + VIP Support',
+      '10-Page Custom-Coded Website',
+      'Domain + Premium Hosting',
+      'Enhanced Forte Care™ Included',
+      'Google Analytics + Advanced SEO Setup',
+      'Priority Support & Monthly Strategy Calls',
       'Forte Guarantee™'
     ],
     addons: [
-      'Extra Pages: $100/ea',
-      'Blog Setup: $250'
+      'Forte SEO Growth™: +$500/mo',
+      'Forte PPC Growth™: +$650/mo',
+      'Forte Social Growth™: +$350/mo'
     ]
   }
 ];
@@ -80,104 +64,104 @@ const pricingPlans: PricingPlan[] = [
 const servicePricingPlans: PricingPlan[] = [
   {
     id: 'seo-essential',
-    name: 'SEO Essential™',
-    price: '$400/month',
-    subtitle: '3-Month Minimum',
-    ctaText: 'Start Ranking',
+    name: 'Forte SEO Essential™',
+    price: '+$300/month',
+    subtitle: 'Requires Forte Foundation™ or Pro™',
+    ctaText: 'Boost Rankings',
     including: [
       'Technical SEO Foundation',
       'Keyword Research & Strategy',
       'On-Page Optimization',
-      'Monthly Progress Reports'
+      'Monthly Forte SEO Reports™'
     ],
     addons: [
-      'Content Creation: $150/mo',
-      'Local SEO Boost: $100/mo',
-      'Link Building: $200/mo'
+      'Content Creation: +$150/mo',
+      'Local SEO Boost: +$100/mo',
+      'Link Building: +$200/mo'
     ]
   },
   {
     id: 'seo-growth',
-    name: 'SEO Growth™',
-    price: '$750/month',
-    subtitle: '6-Month Minimum',
+    name: 'Forte SEO Growth™',
+    price: '+$500/month',
+    subtitle: 'Requires Forte Foundation™ or Pro™',
     isPopular: true,
     ctaText: 'Dominate Search',
     including: [
-      'Everything in SEO Essential™',
+      'Everything in Forte SEO Essential™',
       '4 Optimized Blog Posts/Month',
       'Local SEO & Google Business Profile',
       'Competitor Analysis',
-      'Link Building Campaign'
+      'Advanced Forte SEO Reports™'
     ],
     addons: [
-      'Extra Blog Posts: $75/ea',
-      'Social Media SEO: $150/mo',
-      'E-commerce SEO: $200/mo'
+      'Extra Blog Posts: +$75/ea',
+      'E-commerce SEO: +$200/mo',
+      'Video SEO: +$150/mo'
     ]
   },
   {
     id: 'ppc-starter',
-    name: 'PPC Starter™',
-    price: '$500/month',
-    subtitle: '+ Ad Spend Budget',
+    name: 'Forte PPC Starter™',
+    price: '+$400/month',
+    subtitle: 'Requires Forte Foundation™ + Ad Budget',
     ctaText: 'Get Customers',
     including: [
       'Google Ads Campaign Setup',
       'Keyword Research & Strategy',
       'Ad Copy Creation & Testing',
       'Landing Page Optimization',
-      'Weekly Performance Reports'
+      'Weekly Forte PPC Reports™'
     ],
     addons: [
-      'Facebook Ads: $200/mo',
-      'Bing Ads: $150/mo',
-      'Conversion Tracking: $100/mo'
+      'Facebook Ads: +$200/mo',
+      'Bing Ads: +$150/mo',
+      'Conversion Tracking: +$100/mo'
     ]
   },
   {
     id: 'ppc-growth',
-    name: 'PPC Growth™',
-    price: '$900/month',
-    subtitle: '+ Ad Spend Budget',
+    name: 'Forte PPC Growth™',
+    price: '+$650/month',
+    subtitle: 'Requires Forte Pro™ + Ad Budget',
     isPopular: true,
     ctaText: 'Scale Revenue',
     including: [
-      'Everything in PPC Starter™',
+      'Everything in Forte PPC Starter™',
       'Multi-Platform Campaigns',
       'Advanced Conversion Tracking',
       'A/B Testing & Optimization',
-      'Detailed ROI Analysis'
+      'Advanced Forte PPC Reports™'
     ],
     addons: [
-      'YouTube Ads: $250/mo',
-      'Shopping Campaigns: $200/mo',
-      'Remarketing Setup: $150/mo'
+      'YouTube Ads: +$250/mo',
+      'Shopping Campaigns: +$200/mo',
+      'Remarketing Setup: +$150/mo'
     ]
   },
   {
     id: 'social-essential',
-    name: 'Social Media Essential™',
-    price: '$300/month',
-    subtitle: 'Website Clients Only',
+    name: 'Forte Social Essential™',
+    price: '+$200/month',
+    subtitle: 'Requires Forte Foundation™ or Pro™',
     ctaText: 'Boost Engagement',
     including: [
       '12 Custom Posts/Month',
       'Platform Management (2 platforms)',
       'Content Calendar Planning',
-      'Basic Analytics & Reporting'
+      'Monthly Forte Social Reports™'
     ],
     addons: [
-      'Extra Platform: $100/mo',
-      'Stories/Reels: $150/mo',
-      'Community Management: $200/mo'
+      'Extra Platform: +$100/mo',
+      'Stories/Reels: +$150/mo',
+      'Community Management: +$200/mo'
     ]
   },
   {
     id: 'social-growth',
-    name: 'Social Media Growth™',
-    price: '$500/month',
-    subtitle: 'Website Clients Only',
+    name: 'Forte Social Growth™',
+    price: '+$350/month',
+    subtitle: 'Requires Forte Foundation™ or Pro™',
     isPopular: true,
     ctaText: 'Build Community',
     including: [
@@ -185,12 +169,12 @@ const servicePricingPlans: PricingPlan[] = [
       'Platform Management (3 platforms)',
       'Stories & Reels Creation',
       'Community Management',
-      'Detailed Growth Analytics'
+      'Advanced Forte Social Reports™'
     ],
     addons: [
-      'Paid Social Ads: $300/mo',
-      'Influencer Outreach: $250/mo',
-      'Video Content: $200/mo'
+      'Paid Social Ads: +$300/mo',
+      'Influencer Outreach: +$250/mo',
+      'Video Content: +$200/mo'
     ]
   }
 ];
@@ -352,23 +336,23 @@ export function PricingPage({ serviceType }: { serviceType?: 'website' | 'seo' |
   switch (serviceType) {
     case 'seo':
       plansToShow = servicePricingPlans.filter(plan => plan.id.includes('seo'));
-      headerTitle = 'SEO Plans That Get Results';
-      headerSubtitle = 'Choose the SEO strategy that fits your business goals and budget.';
+      headerTitle = 'Forte SEO™ Add-On Plans';
+      headerSubtitle = 'Boost your Forte Foundation™ or Pro™ website with professional SEO that actually gets results.';
       break;
     case 'ppc':
       plansToShow = servicePricingPlans.filter(plan => plan.id.includes('ppc'));
-      headerTitle = 'PPC Plans That Convert';
-      headerSubtitle = 'Get in front of customers ready to buy with our managed advertising plans.';
+      headerTitle = 'Forte PPC™ Add-On Plans';
+      headerSubtitle = 'Drive immediate traffic to your Forte website with managed Google Ads that convert.';
       break;
     case 'social':
       plansToShow = servicePricingPlans.filter(plan => plan.id.includes('social'));
-      headerTitle = 'Social Media Plans That Engage';
-      headerSubtitle = 'Build your community and turn followers into customers.';
+      headerTitle = 'Forte Social™ Add-On Plans';
+      headerSubtitle = 'Extend your Forte website presence to social media and build a loyal community.';
       break;
     default:
       plansToShow = pricingPlans;
-      headerTitle = 'Choose the Plan That Works for You';
-      headerSubtitle = 'All of Our Plans Are Strategically Designed to Fit Your Needs.';
+      headerTitle = 'Start Your Forte™ Ecosystem';
+      headerSubtitle = 'Choose your foundation plan, then add services as your business grows.';
   }
 
   // Desktop order: As provided
@@ -381,12 +365,12 @@ export function PricingPage({ serviceType }: { serviceType?: 'website' | 'seo' |
     : plansToShow;
 
   const includedFeatures = serviceType === 'website' || !serviceType ? [
-    'Hand-Coded Website – built from scratch, no page builders or templates',
+    'Hand-Coded Website – built from scratch with the Forte™ methodology',
+    'Forte Care™ Included – ongoing maintenance, updates, and optimization',
     'Responsive Design – optimized for all devices and screen sizes',
-    'High-Speed Performance – 98–100 Google PageSpeed scores',
+    'High-Speed Performance – 98–100 Google PageSpeed scores guaranteed',
     'Security First – no WordPress, no plugins, no vulnerabilities',
-    'SEO-Ready – structured for visibility and rankings',
-    'Human Support – when you call, you talk to the developer (not a bot)'
+    'SEO-Ready Foundation – structured for visibility and ready for Forte SEO™ add-ons'
   ] : undefined;
 
   return (
@@ -404,11 +388,48 @@ export function PricingPage({ serviceType }: { serviceType?: 'website' | 'seo' |
             </p>
             {!serviceType && (
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-4">
-                We offer three smart paths to launch your new website—tailored to how you prefer to build, grow, and scale your business.
+                Every Forte™ website comes with Forte Care™ included, plus you can add SEO, PPC, and Social Media services as your business grows.
               </p>
             )}
           </div>
         </SimpleScrollReveal>
+
+        {/* Ecosystem Requirement Section - Only show for service plans */}
+        {serviceType && serviceType !== 'website' && (
+          <SimpleScrollReveal direction="up" delay={400}>
+            <div className="mb-16 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-8 md:p-12">
+              <div className="max-w-4xl mx-auto text-center">
+                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                  🏗️ Built on Your Forte™ Foundation
+                </h2>
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                  All Forte™ add-on services require an active Forte Foundation™ or Forte Pro™ website plan. 
+                  This ensures seamless integration, consistent branding, and maximum results from every service.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 flex items-center gap-3">
+                    <span className="text-2xl">🌐</span>
+                    <span className="text-gray-700 dark:text-gray-300">Forte Foundation™ ($200/mo)</span>
+                  </div>
+                  <span className="text-gray-500 dark:text-gray-400 text-xl">+</span>
+                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4 flex items-center gap-3">
+                    <span className="text-2xl">
+                      {serviceType === 'seo' ? '🔍' : serviceType === 'ppc' ? '🎯' : '📱'}
+                    </span>
+                    <span className="text-gray-700 dark:text-gray-300">
+                      {serviceType === 'seo' ? 'Forte SEO™' : 
+                       serviceType === 'ppc' ? 'Forte PPC™' : 
+                       'Forte Social™'} Add-on
+                    </span>
+                  </div>
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+                  Don't have a Forte™ website yet? <Link href="/pricing" className="text-blue-600 dark:text-blue-400 hover:underline">Start with a foundation plan →</Link>
+                </p>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        )}
 
         {/* What's Included With Every Plan - Only show for website plans */}
         {includedFeatures && (
@@ -457,30 +478,29 @@ export function PricingPage({ serviceType }: { serviceType?: 'website' | 'seo' |
             <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 md:p-12">
               <div className="max-w-4xl mx-auto text-center">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                  Forte Care™: The Secret to Long-Term ROI
+                  Why Forte Care™ Is Included With Every Plan
                 </h2>
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-                  Most websites go live and get forgotten. With Forte Care™, yours stays fresh, fast, and always working for your business. 
-                  You'll get unlimited edits, analytics monitoring, performance checks, and ongoing optimization—all handled by us.
+                  Your Forte™ website isn't just built and forgotten. Forte Care™ ensures your site stays fast, secure, and optimized while providing the foundation for our SEO, PPC, and Social Media services to work effectively.
                 </p>
                 
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                   <div className="text-center">
-                    <div className="text-2xl mb-2">📈</div>
-                    <p className="text-gray-700 dark:text-gray-300">Get regular site improvements without lifting a finger</p>
+                    <div className="text-2xl mb-2">🛡️</div>
+                    <p className="text-gray-700 dark:text-gray-300">Continuous security monitoring and performance optimization</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl mb-2">🛠</div>
-                    <p className="text-gray-700 dark:text-gray-300">Receive unlimited content edits and updates</p>
+                    <div className="text-2xl mb-2">🔧</div>
+                    <p className="text-gray-700 dark:text-gray-300">Unlimited content updates and technical support</p>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl mb-2">🚨</div>
-                    <p className="text-gray-700 dark:text-gray-300">Have a direct line to support when it matters most</p>
+                    <div className="text-2xl mb-2">📊</div>
+                    <p className="text-gray-700 dark:text-gray-300">Monthly reports and recommendations for growth</p>
                   </div>
                 </div>
 
                 <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
-                  Whether you're launching something new or leveling up an existing site, we're here to make sure your investment keeps paying off—month after month.
+                  When you're ready to add Forte SEO™, Forte PPC™, or Forte Social™, your maintained website foundation ensures maximum results from every service.
                 </p>
 
                 <Link href="/solutions/care" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">

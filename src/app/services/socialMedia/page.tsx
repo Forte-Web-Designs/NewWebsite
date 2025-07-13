@@ -17,19 +17,19 @@ const faqData: FAQItem[] = [
       "We focus on the big three that actually drive business: Facebook, Instagram, and Google Business Profile. These are where your local customers spend their time and where consistent posting makes the biggest impact on your bottom line.",
   },
   {
-    question: "Do You Handle Comments and Messages? 💬",
+    question: "How Does Forte Social™ Pricing Work? 💰",
     answer:
-      "Absolutely! We monitor your accounts and respond professionally to comments, messages, and reviews. Think of us as your friendly social media team that never sleeps—we keep the conversation going so you don't miss potential customers.",
+      "Forte Social™ requires an active Forte Foundation™ ($200/mo) or Forte Pro™ ($350/mo) website. Then add Forte Social Essential™ (+$200/mo) or Forte Social Growth™ (+$350/mo). For example: Foundation + Social Essential = $400/mo total.",
   },
   {
     question: "How Much Content Do You Post? 📅",
     answer:
-      "Our Social Media Essential™ plan includes 12 posts per month (3 per week) across your platforms, while Social Media Growth™ includes 20 posts per month (5 per week). All content is designed to engage your local audience and showcase what makes your business special.",
+      "Forte Social Essential™ includes 12 posts per month (3 per week) across 2 platforms, while Forte Social Growth™ includes 20 posts per month (5 per week) across 3 platforms, plus Stories and Reels creation.",
   },
   {
-    question: "Can I See What You're Posting Before It Goes Live? 👀",
+    question: "Do You Handle Comments and Messages? 💬",
     answer:
-      "Of course! We send you a monthly content calendar for approval before anything goes live. You know your business best, so your input ensures every post feels authentically you while maintaining professional quality.",
+      "Absolutely! Both plans include professional monitoring and response to comments, messages, and reviews. Forte Social Growth™ also includes full community management to keep your audience engaged.",
   },
 ];
 
@@ -368,7 +368,7 @@ export default function ServicePage() {
           Ready to Build Your Social Media Presence?
         </h2>
         <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-8 sm:mb-12">
-          Our Social Media Essential™ and Social Media Growth™ plans are designed to keep you visible and engaged with your local community. Choose the plan that fits your goals, or let's chat about what would work best for your business!
+          Add Forte Social™ to your existing Forte Foundation™ or Pro™ website. Plans start at just +$200/month and scale with your growth goals.
         </p>
 
         <div className="text-left">
