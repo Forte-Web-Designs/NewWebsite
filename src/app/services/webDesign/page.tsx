@@ -2,6 +2,7 @@ import LightButton from "@/components/LightButton";
 import DarkButton from "@/components/DarkButton";
 import { BackgroundImage } from "@/components/images/BackgroundImage";
 import { Icon } from "@/components/images/Icon";
+import { PricingPage } from "@/components/pricing";
 import { Metadata } from "next";
 import Link from "next/link";
 import { SectionBackgroundAnimation } from "@/components/animations/BackgroundAnimation";
@@ -294,51 +295,135 @@ export default function WebsiteDesignPage() {
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-[32px] md:text-[42px] font-medium font-roboto dark:text-white mb-6">
-              Common Questions About Custom Websites
+              Quick Questions...
             </h2>
           </div>
 
           <div className="space-y-6">
-            <div className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626]">
-              <h3 className="text-[22px] font-semibold dark:text-white mb-4">
-                "Isn't custom more expensive than templates?"
-              </h3>
-              <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
-                Think of it as an investment, not a cost. Our custom sites typically pay for themselves within 3-6 months through 
-                higher conversions, better SEO rankings, and lower advertising costs. Plus, you'll save thousands on ongoing maintenance.
-              </p>
-            </div>
+            <details className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626] group">
+              <summary className="flex justify-between items-center cursor-pointer list-none">
+                <h3 className="text-[22px] font-semibold dark:text-white">
+                  How Does Forte Website™ Pricing Work? 💰
+                </h3>
+                <svg
+                  viewBox="0 0 7 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-3 w-2 transition-transform duration-300 group-open:rotate-[270deg] rotate-90 flex-shrink-0"
+                >
+                  <path
+                    d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
+                0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
+                7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
+                    className="fill-gray-900 dark:fill-white"
+                  />
+                </svg>
+              </summary>
+              <div className="mt-4">
+                <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
+                  Choose Forte Foundation™ ($200/mo) for a 5-page website or Forte Pro™ ($350/mo) for 10 pages. Both include Forte Care™ support, hosting, and our performance guarantee. Add SEO, PPC, or Social Media services when you're ready to grow.
+                </p>
+              </div>
+            </details>
 
-            <div className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626]">
-              <h3 className="text-[22px] font-semibold dark:text-white mb-4">
-                "How long does it take to build?"
-              </h3>
-              <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
-                Most projects take 4-6 weeks from start to finish. While templates might seem faster to set up, 
-                they take months or years to customize properly—and often break in the process.
-              </p>
-            </div>
+            <details className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626] group">
+              <summary className="flex justify-between items-center cursor-pointer list-none">
+                <h3 className="text-[22px] font-semibold dark:text-white">
+                  How Long Does It Take to Build? ⏱️
+                </h3>
+                <svg
+                  viewBox="0 0 7 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-3 w-2 transition-transform duration-300 group-open:rotate-[270deg] rotate-90 flex-shrink-0"
+                >
+                  <path
+                    d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
+                0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
+                7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
+                    className="fill-gray-900 dark:fill-white"
+                  />
+                </svg>
+              </summary>
+              <div className="mt-4">
+                <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
+                  Most Forte™ websites are completed in 4-6 weeks from start to finish. Unlike template sites that take months to customize properly (and often break), our hand-coded approach means it's done right the first time.
+                </p>
+              </div>
+            </details>
 
-            <div className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626]">
-              <h3 className="text-[22px] font-semibold dark:text-white mb-4">
-                "What if I need changes later?"
-              </h3>
-              <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
-                That's what our Forte Care™ plan is for! Unlimited edits, security monitoring, and performance optimization. 
-                Unlike template sites that break when you modify them, our custom code adapts to your changing needs.
-              </p>
-            </div>
+            <details className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626] group">
+              <summary className="flex justify-between items-center cursor-pointer list-none">
+                <h3 className="text-[22px] font-semibold dark:text-white">
+                  What Makes This Better Than Templates? 🚀
+                </h3>
+                <svg
+                  viewBox="0 0 7 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-3 w-2 transition-transform duration-300 group-open:rotate-[270deg] rotate-90 flex-shrink-0"
+                >
+                  <path
+                    d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
+                0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
+                7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
+                    className="fill-gray-900 dark:fill-white"
+                  />
+                </svg>
+              </summary>
+              <div className="mt-4">
+                <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
+                  Templates score 30-60 on Google PageSpeed. Forte™ websites score 98-100. Templates have security vulnerabilities. Forte™ sites have zero (no plugins, no risk). Templates slow down over time. Forte™ sites stay lightning-fast forever.
+                </p>
+              </div>
+            </details>
 
-            <div className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626]">
-              <h3 className="text-[22px] font-semibold dark:text-white mb-4">
-                "Can you really guarantee better performance?"
-              </h3>
-              <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
-                Absolutely. Our custom sites routinely score 98-100 on Google PageSpeed, while template sites typically score 30-60. 
-                If we don't beat your current site's performance by at least 50%, we'll refund your money.
+            <details className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-xl border border-[#E5E5E5] dark:border-[#262626] group">
+              <summary className="flex justify-between items-center cursor-pointer list-none">
+                <h3 className="text-[22px] font-semibold dark:text-white">
+                  What's Included With Forte Care™? 🛡️
+                </h3>
+                <svg
+                  viewBox="0 0 7 13"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-3 w-2 transition-transform duration-300 group-open:rotate-[270deg] rotate-90 flex-shrink-0"
+                >
+                  <path
+                    d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
+                0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
+                7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
+                    className="fill-gray-900 dark:fill-white"
+                  />
+                </svg>
+              </summary>
+              <div className="mt-4">
+                <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
+                  Unlimited content updates, 24/7 security monitoring, performance optimization, backup management, and priority support. Unlike template sites that break when you modify them, Forte™ sites adapt to your changing needs seamlessly.
+                </p>
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      {/* Website Pricing Section */}
+      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              Ready for a Website That Actually Works?
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-6">
+              Choose your Forte Foundation™ and start building a website that converts visitors into customers. Forte Care™ support included with every plan.
+            </p>
+            <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 max-w-2xl mx-auto">
+              <p className="text-sm text-green-700 dark:text-green-300">
+                🏢 <strong>Small Business Friendly:</strong> Start at just $200/month. Add SEO, PPC, and Social Media services as you grow!
               </p>
             </div>
           </div>
+          <PricingPage serviceType="website" />
         </div>
       </section>
       </div>

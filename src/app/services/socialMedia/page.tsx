@@ -19,27 +19,22 @@ const faqData: FAQItem[] = [
   {
     question: "How Does Forte Social™ Pricing Work? 💰",
     answer:
-      "Forte Social™ requires an active Forte Foundation™ ($200/mo) or Forte Pro™ ($350/mo) website. Then add Forte Social Essential™ (+$200/mo) or Forte Social Growth™ (+$350/mo). For example: Foundation + Social Essential = $400/mo total.",
+      "Forte Social™ works as an add-on to your Forte™ website. Choose Forte Social Essential™ (+$200/mo) for consistent posting and engagement, or Forte Social Growth™ (+$350/mo) for advanced content creation and community management. Both require an active Forte Foundation™ or Pro™ website. Save with ecosystem packages - like Forte Brand Boost™ which includes website + SEO + social for just $700/mo (saving $200/mo).",
   },
   {
-    question: "How Much Content Do You Post? 📅",
+    question: "How Much Content Do You Create? 📅",
     answer:
-      "Forte Social Essential™ includes 12 posts per month (3 per week) across 2 platforms, while Forte Social Growth™ includes 20 posts per month (5 per week) across 3 platforms, plus Stories and Reels creation.",
+      "Forte Social Essential™ includes 12 posts per month (3 per week) across 2 platforms, while Forte Social Growth™ includes 20 posts per month (5 per week) across 3 platforms, plus Stories and Reels creation. All content is custom-designed to match your brand and engage your audience.",
   },
   {
-    question: "Do You Handle Comments and Messages? 💬",
+    question: "Do You Handle Customer Interactions? 💬",
     answer:
-      "Absolutely! Both plans include professional monitoring and response to comments, messages, and reviews. Forte Social Growth™ also includes full community management to keep your audience engaged.",
+      "Absolutely! Both plans include professional monitoring and response to comments, messages, and reviews within business hours. Forte Social Growth™ also includes proactive community management to keep your audience engaged and build stronger customer relationships.",
   },
 ];
 
 export default function ServicePage() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
   const [isMobile, setIsMobile] = useState(false);
-
-  const toggleAccordion = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
 
   // Handle responsive gradient directions
   useEffect(() => {
@@ -320,24 +315,21 @@ export default function ServicePage() {
           </h2>
 
           {faqData?.map((faq, index) => (
-            <div
+            <details
               key={index}
-              className="dark:bg-primary-1150 bg-secondary-1350 p-4 sm:p-6 md:p-8 rounded-2xl transition-all duration-300 w-full max-w-4xl"
+              className="dark:bg-primary-1150 bg-secondary-1350 p-4 sm:p-6 md:p-8 rounded-2xl transition-all duration-300 w-full max-w-4xl group"
+              open={index === 0}
             >
-              <div
-                className="flex justify-between items-center cursor-pointer"
-                onClick={() => toggleAccordion(index)}
-              >
+              <summary className="flex justify-between items-center cursor-pointer list-none">
                 <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black leading-tight pr-4">
                   {faq.question}
                 </h2>
-                <button className="transform transition-transform duration-300 flex-shrink-0">
+                <button className="transform transition-transform duration-300 flex-shrink-0 group-open:rotate-[270deg] rotate-90">
                   <svg
                     viewBox="0 0 7 13"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
-                    className={`h-3 w-2 sm:h-[14px] sm:w-2 transition-transform duration-300 ${expandedIndex === index ? "rotate-[270deg]" : "rotate-90"
-                      }`}
+                    className="h-3 w-2 sm:h-[14px] sm:w-2 transition-transform duration-300"
                   >
                     <path
                       d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
@@ -347,16 +339,13 @@ export default function ServicePage() {
                     />
                   </svg>
                 </button>
-              </div>
-              <div
-                className={`overflow-hidden transition-all duration-300 ${expandedIndex === index ? "max-h-[500px] mt-3 sm:mt-4" : "max-h-0"
-                  }`}
-              >
+              </summary>
+              <div className="mt-3 sm:mt-4">
                 <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>
-            </div>
+            </details>
           ))}
         </div>
         <div className="flex justify-center mt-8 sm:mt-12 px-4">

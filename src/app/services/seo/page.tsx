@@ -5,7 +5,6 @@ import { BackgroundImage } from "@/components/images/BackgroundImage";
 import { Icon } from "@/components/images/Icon";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { PricingPage } from "@/components/pricing";
-import { useState } from "react";
 
 type FAQItem = {
   question: string;
@@ -16,27 +15,26 @@ const faqData: FAQItem[] = [
   {
     question: "How Does Forte SEO™ Pricing Work? 💰",
     answer:
-      "Forte SEO™ requires an active Forte Foundation™ ($200/mo) or Forte Pro™ ($350/mo) website. Then add Forte SEO Essential™ (+$300/mo) or Forte SEO Growth™ (+$500/mo). For example: Foundation + SEO Essential = $500/mo total.",
+      "Forte SEO™ works as an add-on to your Forte™ website. Choose Forte SEO Essential™ (+$300/mo) for technical optimization and on-page SEO, or Forte SEO Growth™ (+$500/mo) which includes everything plus content creation, local SEO, and link building. Both require an active Forte Foundation™ or Pro™ website. Save even more with our ecosystem packages - like Forte Growth™ which includes website + SEO for just $500/mo (saving $100/mo).",
   },
   {
-    question: "How Long Does It Take? 🤔",
+    question: "How Long Does It Take to See Results? 🤔",
     answer:
-      "Some clients see improvements in just a few weeks. Others, especially in competitive markets, may need a few months of consistent Forte SEO™ to see results. We're always transparent about what's realistic and track everything so you can see progress clearly.",
+      "SEO is a marathon, not a sprint! Some improvements happen quickly (technical fixes), while others take 3-6 months to fully mature. Local businesses often see improvements in 6-12 weeks, while competitive markets may need 4-6 months. We track everything transparently so you can see progress at every step.",
   },
   {
-    question: "What's the Difference Between Essential and Growth? 📈",
+    question: "What's Included in Essential vs Growth? 📈",
     answer:
-      "Forte SEO Essential™ focuses on technical foundations and on-page optimization. Forte SEO Growth™ includes everything in Essential plus 4 blog posts per month, local SEO, competitor analysis, and link building campaigns.",
+      "Forte SEO Essential™ ($300/mo) includes technical optimization, on-page SEO, keyword research, and monthly reporting. Forte SEO Growth™ ($500/mo) includes everything in Essential plus 4 SEO blog posts monthly, local SEO optimization, competitor analysis, and strategic link building campaigns.",
+  },
+  {
+    question: "Do You Work with All Business Types? 🏢",
+    answer:
+      "Absolutely! We work with restaurants, contractors, professional services, retail stores, and more. Our Forte SEO™ strategies adapt to your industry - whether you need local search dominance or broader market reach. We understand what makes each business type successful online.",
   },
 ];
 
 export default function SeoDesignPage() {
-  const [expandedIndex, setExpandedIndex] = useState<number | null>(0);
-
-  const toggleAccordion = (index: number) => {
-    setExpandedIndex(expandedIndex === index ? null : index);
-  };
-
   return (
     <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Hero Section - Mobile Optimized */}
@@ -265,24 +263,21 @@ export default function SeoDesignPage() {
         </h2>
 
         {faqData?.map((faq, index) => (
-          <div
+          <details 
             key={index}
-            className="dark:bg-primary-1150 bg-secondary-1350 sm:p-8 p-4 rounded-2xl transition-all duration-300 w-full"
+            className="dark:bg-primary-1150 bg-secondary-1350 sm:p-8 p-4 rounded-2xl transition-all duration-300 w-full group"
+            open={index === 0}
           >
-            <div
-              className="flex justify-between items-center cursor-pointer"
-              onClick={() => toggleAccordion(index)}
-            >
+            <summary className="flex justify-between items-center cursor-pointer list-none">
               <h2 className="sm:text-[26px] text-[20px] max-[640px]:leading-7 font-medium font-inter dark:text-secondary-1050 text-black">
                 {faq.question}
               </h2>
-              <button className="transform transition-transform duration-300">
+              <button className="transform transition-transform duration-300 group-open:rotate-[270deg] rotate-90">
                 <svg
                   viewBox="0 0 7 13"
                   fill="none"
                   xmlns="http://www.w3.org/2000/svg"
-                  className={`sm:h-[14px] h-[11px] sm:w-2 w-[6px] transition-transform duration-300 ${expandedIndex === index ? "rotate-[270deg]" : "rotate-90"
-                    }`}
+                  className="sm:h-[14px] h-[11px] sm:w-2 w-[6px] transition-transform duration-300"
                 >
                   <path
                     d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
@@ -292,16 +287,13 @@ export default function SeoDesignPage() {
                   />
                 </svg>
               </button>
-            </div>
-            <div
-              className={`overflow-hidden transition-all duration-300 md:w-auto w-[86%] ${expandedIndex === index ? "max-h-[500px] mt-3" : "max-h-0"
-                }`}
-            >
+            </summary>
+            <div className="mt-3 md:w-auto w-[86%]">
               <p className="sm:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 text-primary-1400 md:leading-[22px] leading-[18px]">
                 {faq.answer}
               </p>
             </div>
-          </div>
+          </details>
         ))}
 
         <div className="sm:mt-10 mt-3">
