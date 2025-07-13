@@ -1,10 +1,7 @@
 "use client";
 
 import { Icon } from "@/components/images/Icon";
-import { useTheme } from "@/app/providers/ThemeProvider";
-import { OptimizedImage } from "@/components/images/OptimizedImage";
-import { useEffect, useState, useRef } from "react";
-import DarkButton from "@/components/DarkButton";
+import { useEffect, useState, useRef, Suspense } from "react";
 import SEOAuditTool from "@/components/SEOAuditTool";
 import SEOResults from "@/components/SEOResults";
 import { useSearchParams } from "next/navigation";
@@ -75,26 +72,16 @@ const competitiveFactors = [
   }
 ];
 
-export default function CompetitiveAnalysis() {
-  const { theme } = useTheme();
+function CompetitiveAnalysisContent() {
   const searchParams = useSearchParams();
   const [selectedDevice, setSelectedDevice] = useState("Desktop");
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [auditResults, setAuditResults] = useState<any>(null);
   const [auditedUrl, setAuditedUrl] = useState("");
-  const [userEmail, setUserEmail] = useState("");
   const [showWelcomeBanner, setShowWelcomeBanner] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
     // Check for URL parameter and pre-fill the website URL
     const urlParam = searchParams.get('url');
     const typeParam = searchParams.get('type');
@@ -111,8 +98,6 @@ export default function CompetitiveAnalysis() {
         }, 8000);
       }
     }
-
-    return () => window.removeEventListener('resize', handleResize);
   }, [searchParams]);
 
   const handleResultsUpdate = (results: any, url: string) => {
@@ -271,5 +256,13 @@ export default function CompetitiveAnalysis() {
         )}
       </section>
     </>
+  );
+}
+
+export default function CompetitiveAnalysis() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CompetitiveAnalysisContent />
+    </Suspense>
   );
 }

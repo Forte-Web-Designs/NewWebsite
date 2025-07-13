@@ -1,11 +1,11 @@
 "use client";
 
-import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { Icon } from "@/components/images/Icon";
 import { useState, useEffect } from "react";
 import { PricingPage } from "@/components/pricing";
 import LightButton from "@/components/LightButton";
 import { BackgroundImage } from "@/components/images/BackgroundImage";
+
 type FAQItem = {
   question: string;
   answer: string;
@@ -13,14 +13,14 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "Pricing & Availability?",
+    question: "What's the Investment? 💰",
     answer:
-      "Social media management starts at $200/month and is only available to our active website clients. Why? Because we want your brand to feel cohesive—from your homepage to your latest Instagram reel. It’s all about consistency and quality.",
+      "Social media management starts at $200/month and is only available to our website clients. Why? Because we want your brand to feel cohesive—from your homepage to your latest Instagram reel. It's all about consistency and quality that actually converts.",
   },
   {
-    question: "What if I am already a Forte web designs client?",
+    question: "Already a Forte Client? 🎉",
     answer:
-      "If you're already a Forte Web Designs client, you're in great hands! You’ll continue to receive dedicated support, regular updates, and access to all the latest features we roll out. Our team is always here to ensure your website stays fast, secure, and aligned with your business goals. If you need changes, upgrades, or just have questions — simply reach out, and we’ll take care of it.",
+      "Perfect! You're already in the family. You'll get the same amazing support you're used to, plus we can seamlessly extend your brand into social media. Just reach out and let's chat about adding social to your growth strategy!",
   },
 ];
 
@@ -72,16 +72,13 @@ export default function ServicePage() {
       <section className="py-16 md:py-24 md:text-center flex flex-col md:items-center">
         <span className="sm:text-2xl text-xs font-normal font-roboto flex md:items-center sm:gap-1.5 gap-1 text-primary-1000 px-5 md:mx-auto">
           <Icon name="star" className="sm:h-6 sm:w-6 h-[14px] w-[14px]" />
-          Stay Active Stay Relevent
+          Hey there! 👋
         </span>
         <h1 className="md:text-[62px] text-[36px] md:max-w-[794px] font-medium font-roboto md:mt-7 mt-5 w-full max-[767px]:leading-[40px] dark:text-secondary-1000 md:text-center px-5">
-          Done-for-You Social Media Management
+          Social Media That Actually Works for Your Business
         </h1>
         <p className="md:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 lg:w-[840px] md:w-[715px] w-[97%] md:mt-6 mt-5 md:text-center text-primary-1400 max-[767px]:leading-[18px] px-5 leading-[22px]">
-          Staying active on social media keeps you top-of-mind—but it’s easy to
-          fall behind. That’s why we offer exclusive social media management for
-          our web clients, keeping your presence consistent, sharp, and
-          local-focused. .
+          Staying active on social media keeps you top-of-mind with customers—but who has time for that? We handle your social presence so you can focus on what you do best: running your business.
         </p>
       </section>
 
@@ -95,14 +92,10 @@ export default function ServicePage() {
                 className="rounded-xl p-6 text-center md:py-16 py-12 md:px-10"
               >
                 <h1 className="font-medium text-white md:text-4xl text-[38px]">
-                  Why Social Media Matters
+                  Why Social Media Actually Matters
                 </h1>
                 <p className="md:text-[18px] text-[14px] font-normal font-inter md:mt-5 mt-4 text-white max-[767px]:leading-[18px] leading-[22px]">
-                  Great websites attract. Great social feeds engage. Together,
-                  they convert. We help small businesses build trust and
-                  credibility through thoughtful posts, community engagement,
-                  and smart strategy—all designed to support your business goals
-                  and grow your brand locally.
+                  Great websites attract visitors. Great social feeds keep them engaged. Together, they build trust and turn followers into customers. We help you create content that actually connects with your local audience and supports your business goals.
                 </p>
               </BackgroundImage>
             </div>
@@ -113,7 +106,7 @@ export default function ServicePage() {
       <section className=" dark:bg-black text-white py-24 px-4 min-h-scree items-center justify-center">
         <div className="text-center mb-10">
           <h2 className="text-3xl  font-medium text-gray-900 dark:text-white text-center md:mb-8">
-            Every Forte Care™ Plan Includes:
+            What You Get With Our Social Media Management:
           </h2>
         </div>
 
@@ -127,11 +120,9 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
-                <h5 className="md:text-[26px] text-[18px]">Content Creation</h5>
-                <p
-                  className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400"
-                >
-                  Posts designed to reflect your brand and drive interaction
+                <h5 className="md:text-[26px] text-[18px]">Content That Connects</h5>
+                <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
+                  Posts designed to reflect your brand and actually engage your local audience
                 </p>
               </div>
             </div>
@@ -143,9 +134,9 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
-                <h5 className="md:text-[26px] text-[18px]">Monthly Planning</h5>
+                <h5 className="md:text-[26px] text-[18px]">Smart Planning</h5>
                 <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
-                  Editorial calendars to keep your messaging focused
+                  Monthly calendars that keep your message consistent and on-brand
                 </p>
               </div>
             </div>
@@ -175,14 +166,15 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-14 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)]   border dark:border-[#1A1A1A] text-lg  w-full">
-                <OptimizedImage
-                  src="/images/services/Shape Holo ring.png"
-                  alt="logo"
-                  width={270}
-                  priority
-                  height={250}
-                  className="lg:w-[270px] lg:h-[250px] mx-auto"
-                />
+                {/* Replaced large shape image with modern icon design */}
+                <div className="flex justify-center items-center w-[270px] h-[250px] mx-auto relative">
+                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 to-purple-500/20 rounded-full animate-spin" style={{animationDuration: '10s'}}></div>
+                  <div className="absolute inset-6 bg-gradient-to-l from-blue-500/30 to-cyan-500/30 rounded-full animate-spin" style={{animationDuration: '8s', animationDirection: 'reverse'}}></div>
+                  <div className="relative z-10 text-center">
+                    <div className="text-5xl mb-4">🚀</div>
+                    <div className="text-lg font-semibold">Social Growth</div>
+                  </div>
+                </div>
               </div>
             </div>
             <div
@@ -212,10 +204,10 @@ export default function ServicePage() {
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
                 <h5 className="md:text-[26px] text-[18px]">
-                  Community Engagement
+                  We Handle the Conversations
                 </h5>
                 <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
-                  We monitor comments and messages so you don’t have to
+                  We monitor and respond to comments and messages professionally
                 </p>
               </div>
             </div>
@@ -228,8 +220,7 @@ export default function ServicePage() {
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A]">
                 <h5 className="md:text-[26px] text-[18px]">Local Focus</h5>
                 <p className="text-[18px] mt-4 md:leading-[22px] leading-[18px] text-gray-600 dark:text-gray-400">
-                  Everything we do is geared toward your specific audience and
-                  location
+                  Everything we do is tailored to your local market and ideal customers
                 </p>
               </div>
             </div>
@@ -289,12 +280,10 @@ export default function ServicePage() {
       </section>
       <section className="dark:bg-black bg-white pb-32 text-center">
         <h2 className="md:text-[38px] text-[26px] font-medium font-inter text-black dark:text-secondary-1000 lg:mb-9 md:mb-6 mb-1">
-          It’s Easy to Get Started
+          Ready to Get Started?
         </h2>
         <p className="mt-6 md:w-[60%] mx-auto text-lg leading-6 text-gray-600 dark:text-gray-400 text-center  px-4">
-          Our social media marketing plans are simple, flexible, and designed
-          for busy professionals. Pick the package that fits your goals, or ask
-          us about a custom solution!
+          Our social media plans are simple and designed for busy business owners. Pick what works for your goals, or let's chat about a custom solution!
         </p>
 
         <div className="text-left">

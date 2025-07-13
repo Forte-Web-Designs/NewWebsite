@@ -3,11 +3,12 @@
 import { Icon } from "@/components/images/Icon";
 import { useTheme } from "@/app/providers/ThemeProvider";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 import DarkButton from "@/components/DarkButton";
 import SEOAuditTool from "@/components/SEOAuditTool";
 import SEOResults from "@/components/SEOResults";
 import { useSearchParams } from "next/navigation";
+import { SectionBackgroundAnimation } from "@/components/animations/BackgroundAnimation";
 
 const tabData = [
   {
@@ -82,7 +83,7 @@ const bottomData = [
   },
 ];
 
-export default function SiteCheckUp() {
+function SiteCheckUpContent() {
   const { theme } = useTheme();
   const searchParams = useSearchParams();
   const [selectedDevice, setSelectedDevice] = useState("Desktop");
@@ -193,16 +194,18 @@ export default function SiteCheckUp() {
 
 
   return (
-    <>
-      {/* Welcome Banner for Mini-Audit Users */}
-      {showMiniAuditWelcome && (
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg shadow-2xl border border-white/20 backdrop-blur-sm animate-bounce">
-          <div className="text-center">
-            <div className="text-sm font-semibold">🎉 Welcome to the Complete Analysis!</div>
-            <div className="text-xs opacity-90">Auto-starting your comprehensive audit...</div>
+    <div className="relative">
+      <SectionBackgroundAnimation />
+      <div className="relative z-10">
+        {/* Welcome Banner for Mini-Audit Users */}
+        {showMiniAuditWelcome && (
+          <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50 bg-gradient-to-r from-green-600 to-blue-600 text-white px-6 py-3 rounded-lg shadow-2xl border border-white/20 backdrop-blur-sm animate-bounce">
+            <div className="text-center">
+              <div className="text-sm font-semibold">🎉 Welcome to the Complete Analysis!</div>
+              <div className="text-xs opacity-90">Auto-starting your comprehensive audit...</div>
+            </div>
           </div>
-        </div>
-      )}
+        )}
       
       <section className="container max-w-7xl mx-auto flex flex-col md:items-center items-start px-5 py-16 md:py-24">
         <div className="grid gap-[24px] justify-center items-center">
@@ -287,15 +290,15 @@ export default function SiteCheckUp() {
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
                 }}
-              >
-                <SEOAuditTool
-                  websiteUrl={websiteUrl}
-                  setWebsiteUrl={setWebsiteUrl}
-                  selectedDevice={selectedDevice}
-                  setSelectedDevice={setSelectedDevice}
-                  onResultsUpdate={handleResultsUpdate}
-                  onResultsReady={scrollToResults}
-                />
+              >                  <SEOAuditTool
+                    websiteUrl={websiteUrl}
+                    setWebsiteUrl={setWebsiteUrl}
+                    selectedDevice={selectedDevice}
+                    setSelectedDevice={setSelectedDevice}
+                    onResultsUpdate={handleResultsUpdate}
+                    onResultsReady={scrollToResults}
+                    setAutoRunTrigger={setAutoRunTrigger}
+                  />
               </div>
             </div>
             
@@ -352,6 +355,8 @@ export default function SiteCheckUp() {
                     selectedDevice={selectedDevice}
                     setSelectedDevice={setSelectedDevice}
                     onResultsUpdate={handleResultsUpdate}
+                    onResultsReady={scrollToResults}
+                    setAutoRunTrigger={setAutoRunTrigger}
                   />
                 </div>
 
@@ -645,6 +650,15 @@ export default function SiteCheckUp() {
           </div>
         </section>
       </section>
-    </>
+      </div>
+    </div>
+  );
+}
+
+export default function SiteCheckUp() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <SiteCheckUpContent />
+    </Suspense>
   );
 }

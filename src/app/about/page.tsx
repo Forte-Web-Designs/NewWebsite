@@ -4,7 +4,8 @@ import { OptimizedImage } from '@/components/images/OptimizedImage';
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { BackgroundImage } from "@/components/images/BackgroundImage";
-import ForteMethodSlider from "@/components/slider/ForteMethodSlider";
+import ForteMethodSteps from "@/components/ForteMethodSteps";
+import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 
 
 export default function Website2() {
@@ -62,8 +63,10 @@ export default function Website2() {
   ];
 
   return (
-    <>
-      <section className="pt-16 md:pt-24">
+    <div className="relative">
+      <SectionBackgroundAnimation />
+      <div className="relative z-10">
+        <section className="pt-16 md:pt-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center ">
             <div className="flex gap-2 mb-5 justify-center  md:mb-8">
@@ -119,7 +122,7 @@ export default function Website2() {
         </section>
 
         {/* Forte Method Slider */}
-        <ForteMethodSlider
+        <ForteMethodSteps
           items={sliderItems}
           title="The|Forte Method™"
           subtitle="A high-performance web design system built for results."
@@ -167,6 +170,7 @@ export default function Website2() {
         </div>
 
       </section>
-    </>
+      </div>
+    </div>
   );
 }

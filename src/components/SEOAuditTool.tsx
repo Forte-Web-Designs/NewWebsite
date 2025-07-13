@@ -1,7 +1,6 @@
 "use client";
 
-import { useState } from 'react';
-import DarkButton from './DarkButton';
+import { useState, useEffect } from 'react';
 
 interface AuditResults {
   desktop: any;
@@ -15,6 +14,7 @@ interface SEOAuditToolProps {
   setSelectedDevice: (device: string) => void;
   onResultsUpdate: (results: AuditResults | null, url: string) => void;
   onResultsReady?: () => void;
+  setAutoRunTrigger?: (triggerFunction: () => void) => void;
 }
 
 export default function SEOAuditTool({ 
@@ -23,11 +23,18 @@ export default function SEOAuditTool({
   selectedDevice, 
   setSelectedDevice,
   onResultsUpdate,
-  onResultsReady
+  onResultsReady,
+  setAutoRunTrigger
 }: SEOAuditToolProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
-  const [loadingStep, setLoadingStep] = useState(0);
+
+  // Register the runAudit function with the parent component for auto-run
+  useEffect(() => {
+    if (setAutoRunTrigger) {
+      setAutoRunTrigger(runAudit);
+    }
+  }, [setAutoRunTrigger]); // Removed websiteUrl dependency to avoid unnecessary re-registrations
 
   const loadingMessages = [
     "Checking your website's connection...",
@@ -68,21 +75,18 @@ export default function SEOAuditTool({
     }
 
     setIsLoading(true);
-    setLoadingStep(0);
     onResultsUpdate(null, validatedUrl);
 
     // Start loading message rotation
-    let messageInterval = setInterval(() => {
-      setLoadingStep(prev => {
-        const nextStep = prev + 1;
-        if (nextStep < loadingMessages.length) {
-          setLoadingMessage(loadingMessages[nextStep]);
-          return nextStep;
+    const messageInterval = setInterval(() => {
+      setLoadingMessage(prev => {
+        const currentIndex = loadingMessages.indexOf(prev);
+        const nextIndex = currentIndex + 1;
+        if (nextIndex < loadingMessages.length) {
+          return loadingMessages[nextIndex];
         } else {
           // Loop back to the last few messages
-          const loopMessage = loadingMessages[loadingMessages.length - 1];
-          setLoadingMessage(loopMessage);
-          return prev;
+          return loadingMessages[loadingMessages.length - 1];
         }
       });
     }, 3000);

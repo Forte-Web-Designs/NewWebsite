@@ -13,14 +13,14 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "How Long Does It Take?",
+    question: "How Long Does It Take? 🤔",
     answer:
-      "Some clients see improvements in just a few weeks. Others, especially in competitive markets, may need a few months of consistent SEO to see results. But we’ll always be transparent about what’s realistic—and we track everything so you can see progress clearly.",
+      "Some clients see improvements in just a few weeks. Others, especially in competitive markets, may need a few months of consistent SEO to see results. But we'll always be transparent about what's realistic—and we track everything so you can see progress clearly.",
   },
   {
-    question: "Want to Learn More?",
+    question: "Ready to Get Started? 🚀",
     answer:
-      "Typically, our websites take 4-6 weeks from initial consultation to launch, depending on complexity.",
+      "Awesome! Getting started is super easy. Just reach out and we'll chat about your business goals and show you exactly how we can help you get found online. No pressure, just honest advice about what'll work best for you.",
   },
 ];
 
@@ -35,14 +35,13 @@ export default function SeoDesignPage() {
     <section className="container max-w-7xl mx-auto flex flex-col md:items-center items-start py-16 md:py-28">
       <span className="sm:text-2xl text-xs font-normal font-roboto flex items-center sm:gap-2 gap-1 text-primary-1000 px-5">
         <Icon name="star" className="sm:h-6 sm:w-6 h-[14px] w-[14px]" />
-        Rank Higher
+        Hi there! 👋
       </span>
       <h1 className="md:text-[62px] text-[36px] md:max-w-[794px] font-medium font-roboto md:mt-6 mt-5 w-[100%] max-[768px]:leading-[40px] leading-[66px] dark:text-secondary-1000 md:text-center px-5">
-        Small Business SEO Services Built for Results
+        Tired of Being Invisible on Google?
       </h1>
       <p className="md:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 text-primary-1400 lg:w-[824px] md:w-[740px] w-full md:mt-5 mt-4 md:text-center md:leading-[22px] leading-4 px-5">
-        Search engine optimization can be confusing and time-consuming—so we
-        make it simple.
+        Let's be real - if customers can't find you online, you don't exist. Our SEO gets you found by people who are ready to buy what you sell.
       </p>
 
       <div className="w-full lg:pt-[17rem] lg:pb-[6rem] md:py-36 sm:py-28 py-28 flex flex-col md:gap-5 gap-9 pl-5 pr-4">
@@ -112,21 +111,17 @@ export default function SeoDesignPage() {
         </div>
         <div className="flex justify-end md:-mt-32">
           <h2 className="md:w-[696px] w-full md:text-[38px] text-[22px] font-medium font-inter max-[767px]:leading-[26px] dark:bg-transparent bg-white relative z-20">
-            At Forte Web Designs, we don’t just build fast, beautiful
-            websites—we also help get them found. Our SEO services are crafted
-            for small businesses who want real results without the agency fluff.
+            Here's the thing - we don't just build beautiful websites. We make sure people can actually find them! Our SEO is designed specifically for small businesses who want real results without the confusing agency jargon.
           </h2>
         </div>
       </div>
 
       <div className="flex flex-col items-center text-center lg:py-48 md:py-36 sm:py-10 py-6 px-5">
         <h2 className="md:text-[38px] text-[26px] font-medium font-inter dark:text-secondary-1000">
-          Who We Help
+          Who We Love Working With
         </h2>
         <p className="text-[18px] font-normal font-inter dark:text-primary-1050 text-primary-1400 max-w-[794px] leading-[22px] sm:mt-8 mt-5">
-          Whether you run a service-based business, a local storefront, or an
-          online brand, we’ve helped all types of small businesses rank better
-          and grow their visibility:
+          Whether you're a local service business, online store, or growing company, we've helped all kinds of businesses get found and grow their customer base:
         </p>
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 md:mt-16 sm:mt-14 mt-6 lg:gap-[5.2rem] md:gap-10 gap-8 max-[768px]:w-[80%]">
@@ -171,31 +166,25 @@ export default function SeoDesignPage() {
 
       <div className="flex flex-col md:items-center lg:py-36 sm:py-28 py-14 px-5">
         <p className="md:text-[38px] text-[26px] font-medium font-inter dark:text-secondary-1000 lg:mb-10 md:mb-9 mb-7 md:leading-[46px] leading-[30px]">
-          What’s Included in Our SEO Approach?
+          What's Inside Our SEO Package?
         </p>
 
         <div className="md:grid md:grid-cols-2 flex flex-col-reverse items-center dark:bg-primary-1150 rounded-[20px] md:gap-5 gap-3 bg-secondary-1350">
           <div className="flex flex-col md:gap-14 gap-6 lg:p-[60px] md:p-10 sm:p-8 p-5 pr-0">
             <div>
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black md:leading-8 leading-6 md:w-auto w-[85%]">
-                1. Strong Technical Foundation
+                1. Rock-Solid Technical Foundation
               </h2>
               <p className="md:text-[18px] text-[14px] font-normal md:leading-[22px] font-inter text-primary-1400 dark:text-primary-1050 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
-                Every site we build is lightning-fast and error-free by design.
-                But we go further—checking for crawl issues, broken links, poor
-                heading structure, and schema markup to make sure search engines
-                understand and trust your site.
+                Every site we build is lightning-fast and error-free by design. But we go deeper—fixing crawl issues, broken links, and adding the technical magic that makes Google trust your site.
               </p>
             </div>
             <div>
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black md:leading-8 leading-6 md:w-auto w-[85%]">
-                2. Strategic Content Planning
+                2. Content That Actually Gets Found
               </h2>
               <p className="md:text-[18px] text-[14px] font-normal md:leading-[22px] font-inter text-primary-1400 dark:text-primary-1050 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
-                We research what your customers are actually searching for, then
-                create (or refine) pages to match those terms. Whether it’s
-                local service pages or blog content, we make sure your site
-                speaks the language of your audience—and Google.
+                We research what your customers are actually searching for, then create content that matches their needs. Whether it's service pages or helpful blog posts, we make sure you show up when it matters.
               </p>
             </div>
           </div>
@@ -211,33 +200,32 @@ export default function SeoDesignPage() {
 
         <div className="md:grid md:grid-cols-2 flex flex-col items-center dark:bg-primary-1150 rounded-[20px] md:gap-5 gap-3 mt-5 bg-secondary-1350">
           <div className="flex justify-center items-center md:p-[60px] p-5">
-            <OptimizedImage
-              src="/images/services/Shape-Holo.png"
-              width={438}
-              height={438}
-              alt="Descriptive text"
-            />
+            {/* Replaced large shape image with scalable SVG design */}
+            <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative flex items-center justify-center">
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-600/20 rounded-full animate-pulse"></div>
+              <div className="absolute inset-4 bg-gradient-to-tr from-blue-400/30 to-indigo-500/30 rounded-full animate-pulse delay-300"></div>
+              <div className="absolute inset-8 bg-gradient-to-bl from-cyan-400/40 to-blue-500/40 rounded-full animate-pulse delay-700"></div>
+              <div className="relative z-10 text-center">
+                <div className="text-4xl md:text-6xl mb-4">📈</div>
+                <div className="text-lg font-semibold text-gray-800 dark:text-white">SEO Growth</div>
+              </div>
+            </div>
           </div>
           <div className="flex flex-col md:gap-14 gap-6 lg:p-[60px] md:p-10 sm:p-8 p-5 pr-0">
             <div>
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black md:leading-8 leading-6 md:w-auto w-[85%]">
-                3. Google Business Profile & Local SEO
+                3. Local SEO That Works
               </h2>
               <p className="md:text-[18px] text-[14px] font-normal font-inter md:leading-[22px] text-primary-1400 dark:text-primary-1050  md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
-                We optimize your presence on Google Maps and across key
-                directories. From reviews to business details, we make sure your
-                listing stands out and shows up when it matters most—especially
-                for near me searches.
+                We optimize your Google Business Profile and local listings so you show up when people search "near me." Perfect for service businesses, local stores, and anyone who serves their community.
               </p>
             </div>
             <div>
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black md:leading-8 leading-6 md:w-auto w-[85%]">
-                4. Backlink Strategy
+                4. Quality Link Building
               </h2>
               <p className="md:text-[18px] text-[14px] font-normal font-inter md:leading-[22px] text-primary-1400 dark:text-primary-1050 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
-                We build links from reputable websites, industry directories,
-                and press sources to boost your authority. No shady spam, no
-                shortcuts—just quality connections that lift your rankings.
+                We build relationships with reputable websites and directories to boost your authority. No spammy shortcuts—just quality connections that Google respects.
               </p>
             </div>
           </div>
@@ -290,7 +278,7 @@ export default function SeoDesignPage() {
         ))}
 
         <div className="sm:mt-10 mt-3">
-          <LightButton href="/contact">Contact Us</LightButton>
+          <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
         </div>
       </div>
     </section>

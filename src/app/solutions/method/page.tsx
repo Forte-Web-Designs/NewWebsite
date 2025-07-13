@@ -23,6 +23,24 @@ export default function SocialMediaManagement() {
         "We write and structure your content for clarity, SEO, and conversions - no fluff",
       icon: "/images/home/outline.svg",
     },
+    {
+      title: "Refine",
+      description:
+        "You review a custom homepage design and give feedback in a collaborative video call",
+      icon: "/images/home/refine.svg",
+    },
+    {
+      title: "Tailor",
+      description:
+        "We hand-code the full site, optimised for mobile, speed, and clean performance",
+      icon: "/images/home/tailor.svg",
+    },
+    {
+      title: "Elevate",
+      description:
+        "We go live, track analytics, and continue refining over time. You grow. We maintain",
+      icon: "/images/home/elevate.svg",
+    },
   ];
 
   return (

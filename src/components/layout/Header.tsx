@@ -149,6 +149,7 @@ export default function Header() {
 
               {/* Desktop Navigation */}
               <nav className="hidden lg:flex items-center space-x-8">
+                <HeaderLink href="/">Home</HeaderLink>
                 <Dropdown
                   items={aboutDropdownItems}
                   width="130px"
@@ -250,6 +251,7 @@ export default function Header() {
 
             {/* Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-8">
+              <HeaderLink href="/">Home</HeaderLink>
               <Dropdown
                 items={aboutDropdownItems}
                 width="130px"

@@ -2,6 +2,7 @@ import LightButton from "@/components/LightButton";
 import { Icon } from "@/components/images/Icon";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { TestimonialSlider } from "@/components/work/TestimonialSlider";
+import { SectionBackgroundAnimation } from "@/components/animations/BackgroundAnimation";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -12,8 +13,10 @@ export const metadata: Metadata = {
 
 export default function SolutionsPage() {
   return (
-    <>
-      <section className="py-16 md:py-24">
+    <div className="relative">
+      <SectionBackgroundAnimation />
+      <div className="relative z-10">
+        <section className="py-16 md:py-24">
         <div className="max-w-fit mx-auto lg:text-center text-left flex flex-col justify-center lg:items-center items-start pl-5 lg:pl-0">
           <span className="md:text-[24px] text-[12px] font-normal font-roboto flex items-center md:gap-2 gap-1 text-primary-1000">
             <Icon name="star" className="md:h-6 md:w-6 h-[14px] w-[14px]" />
@@ -33,7 +36,7 @@ export default function SolutionsPage() {
 
       <section className="container mx-auto flex flex-col md:gap-5 gap-10 items-center sm:px-0 px-5 md:py-0 py-14">
         <div className="flex lg:flex-row flex-col md:gap-5 gap-10">
-          <a href="https://example1.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+          <a href="https://thesouthernlandscapefirm.com/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
             <OptimizedImage
               src="/images/work/project-1.webp"
               width={600}
@@ -43,7 +46,7 @@ export default function SolutionsPage() {
               priority
             />
           </a>
-          <a href="https://example2.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+          <a href="https://triavision.com/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
             <OptimizedImage
               src="/images/work/project-2.webp"
               width={600}
@@ -55,7 +58,7 @@ export default function SolutionsPage() {
           </a>
         </div>
         <div className="flex lg:flex-row-reverse flex-col md:gap-5 gap-10">
-          <a href="https://example4.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+          <a href="https://goodlaborjobs.com/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
             <OptimizedImage
               src="/images/work/project-4.webp"
               width={600}
@@ -65,7 +68,7 @@ export default function SolutionsPage() {
               priority
             />
           </a>
-          <a href="https://example3.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+          <a href="https://ashleymartinministry.com/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
             <OptimizedImage
               src="/images/work/project-3.webp"
               width={600}
@@ -77,7 +80,7 @@ export default function SolutionsPage() {
           </a>
         </div>
         <div className="flex lg:flex-row flex-col md:gap-5 gap-10">
-          <a href="https://example5.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+          <a href="https://donovanbuildersllc.com/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
             <OptimizedImage
               src="/images/work/project-5.webp"
               width={600}
@@ -87,7 +90,7 @@ export default function SolutionsPage() {
               priority
             />
           </a>
-          <a href="https://example6.com" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
+          <a href="https://oakmountainrealtygroup.com/" target="_blank" rel="noopener noreferrer" className="cursor-pointer hover:opacity-90 transition-opacity duration-300">
             <OptimizedImage
               src="/images/work/project-6.webp"
               width={600}
@@ -127,6 +130,7 @@ export default function SolutionsPage() {
           </div>
         </div>
       </section>
-    </>
+      </div>
+    </div>
   );
 }

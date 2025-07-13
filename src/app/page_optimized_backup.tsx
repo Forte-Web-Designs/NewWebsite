@@ -12,18 +12,24 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import MobileServicesSlider from "@/components/slider/MobileServicesSlider";
 import LightButton from "@/components/LightButton";
-import ForteMethodSteps from "@/components/ForteMethodSteps";
+import ForteMethodSlider from "@/components/slider/ForteMethodSlider";
 
-// Import simple animations (no context required)
-import SimpleScrollReveal from "@/components/animations/SimpleScrollReveal";
-import SimpleAnimatedCard from "@/components/animations/SimpleAnimatedCard";
-import SimpleAnimatedCounter from "@/components/animations/SimpleAnimatedCounter";
-import { HeroBackgroundAnimation, SectionBackgroundAnimation } from "@/components/animations/BackgroundAnimation";
+// Import performance optimized animations
+import { AnimationManagerProvider } from "@/components/animations/AnimationManager";
+import {
+  LazyScrollReveal,
+  LazyFloatingElements,
+  LazyAnimatedCard,
+  LazyAnimatedCounter,
+  AnimationProvider
+} from "@/components/animations/LazyAnimations";
+// Debug monitors removed for production-like experience
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef<Slider>(null);
   const [isDark, setIsDark] = useState(false);
+  const [mounted, setMounted] = useState(false);
   const [isNavigatingToAudit, setIsNavigatingToAudit] = useState(false);
 
   const handleFullAuditClick = (url: string, seoScore?: number) => {
@@ -132,6 +138,7 @@ export default function Home() {
   };
 
   useEffect(() => {
+    setMounted(true);
     const darkModeEnabled = document.documentElement.classList.contains("dark");
     setIsDark(darkModeEnabled);
 
@@ -150,44 +157,74 @@ export default function Home() {
   }, []);
 
   return (
-    <>
-      {/* Hero Section */}
-      <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28 lg:pt-32 lg:pb-36">
-        {/* Modern animated background elements */}
-        <HeroBackgroundAnimation className="opacity-60" />
-        
-        <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-[#7f8bdb00] to-[#FFFFFF] dark:bg-gradient-to-b dark:from-[#0c0f265a] dark:to-[#000000] z-0"></div>
-        <div className="container lg:flex-row flex-col flex mx-auto px-4 sm:px-6 lg:px-8 relative z-10 gap-3 pt-5 pr-3 pb-5 pl-5 rounded-[22px] border border-[#DCDCDC] bg-white shadow-[0px_44px_44px_-30px_#00000026] dark:bg-[#0C0C0C] dark:border-[#323232] dark:shadow-[0px_44px_44px_30px_#00000026]">
-          <div className="w-full max-w-[98%] grid lg:grid-cols-2 items-center gap-2.5 rounded-[10px] border border-[#DCDCDC] bg-[#F8F8F8] bg-[url('/images/home/banner-bg.png')] bg-cover bg-center bg-no-repeat p-3 dark:border-[#323232] dark:bg-[#141414] dark:bg-[url('/images/home/dark-banner-bg.png')]">
-            <SimpleScrollReveal direction="left" delay={200}>
-              <div className="">
-                <div className="mb-6 gap-[25px] grid">
-                    <div className="rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
-                      <p
-                        className="font-sans font-normal 
-text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] align-middle text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]"
-                      >
+    <AnimationProvider>
+      <AnimationManagerProvider>
+        {/* Development monitors are now disabled */}
+        {!mounted ? (
+          // Render a server-safe version while mounting to prevent hydration mismatch
+          <div className="min-h-screen">
+            <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28 lg:pt-32 lg:pb-36">
+              <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-[#7f8bdb00] to-[#FFFFFF] z-0"></div>
+              <div className="container lg:flex-row flex-col flex mx-auto px-4 sm:px-6 lg:px-8 relative z-10 gap-3 pt-5 pr-3 pb-5 pl-5 rounded-[22px] border border-[#DCDCDC] bg-white shadow-[0px_44px_44px_-30px_#00000026]">
+                <div className="w-full max-w-[98%] grid lg:grid-cols-2 items-center gap-2.5 rounded-[10px] border border-[#DCDCDC] bg-[#F8F8F8] bg-[url('/images/home/banner-bg.png')] bg-cover bg-center bg-no-repeat p-3">
+                  <div className="">
+                    <div className="mb-6 gap-[25px] grid">
+                      <div className="rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent">
+                        <p className="font-sans font-normal text-[12px] sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] align-middle text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
                         25+ Businesses Growing with Forte
                       </p>
                     </div>
-                  <SimpleScrollReveal direction="up" delay={600}>
-                    <h1 className="font-display font-medium text-[38px] sm:text-[70px] leading-[40px] sm:leading-[74px] tracking-[-0.04em] align-middle text-black dark:text-white">
-                      Your Business Deserves a Website That <br /><span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Actually Works for You</span>
+                    <h1 className="font-display font-medium text-[38px] sm:text-[70px] leading-[40px] sm:leading-[74px] tracking-[-0.04em] align-middle text-black">
+                      Websites That Grow With You —<br /><span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Start Fast. Scale Strong.</span>
                     </h1>
-                  </SimpleScrollReveal>
-                  <SimpleScrollReveal direction="up" delay={800}>
-                    <p className="font-display font-medium text-[14px] sm:text-[20px] leading-[100%] tracking-[0%] align-middle text-[#626262] dark:text-white">
-                      Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
+                    <p className="font-display font-medium text-[14px] sm:text-[20px] leading-[100%] tracking-[0%] align-middle text-[#626262]">
+                      Whether you're launching a new business or ready to level up, Forte Web Designs offers one powerful path: fully custom-coded websites built for speed, security, and long-term growth.
                     </p>
-                  </SimpleScrollReveal>
-                </div>
-                <SimpleScrollReveal direction="up" delay={1000}>
-                  <div className="flex justify-start flex-col sm:flex-row">
-                    <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
                   </div>
-                </SimpleScrollReveal>
+                </div>
               </div>
-            </SimpleScrollReveal>
+            </div>
+          </section>
+        </div>
+      ) : (
+        <>
+          {/* Hero Section */}
+          <section className="relative overflow-hidden pt-16 pb-20 md:pt-24 md:pb-28 lg:pt-32 lg:pb-36">
+            {/* Floating background elements */}
+            <LazyFloatingElements count={8} className="opacity-30" />
+            
+            <div className="absolute top-0 left-0 right-0 h-1/2 bg-gradient-to-b from-[#7f8bdb00] to-[#FFFFFF] dark:bg-gradient-to-b dark:from-[#0c0f265a] dark:to-[#000000] z-0"></div>
+            <div className="container lg:flex-row flex-col flex mx-auto px-4 sm:px-6 lg:px-8 relative z-10 gap-3 pt-5 pr-3 pb-5 pl-5 rounded-[22px] border border-[#DCDCDC] bg-white shadow-[0px_44px_44px_-30px_#00000026] dark:bg-[#0C0C0C] dark:border-[#323232] dark:shadow-[0px_44px_44px_30px_#00000026]">
+              <div className="w-full max-w-[98%] grid lg:grid-cols-2 items-center gap-2.5 rounded-[10px] border border-[#DCDCDC] bg-[#F8F8F8] bg-[url('/images/home/banner-bg.png')] bg-cover bg-center bg-no-repeat p-3 dark:border-[#323232] dark:bg-[#141414] dark:bg-[url('/images/home/dark-banner-bg.png')]">
+                <LazyScrollReveal direction="left" delay={200}>
+                  <div className="">
+                    <div className="mb-6 gap-[25px] grid">
+                        <div className="rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
+                          <p
+                            className="font-sans font-normal 
+    text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] align-middle text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]"
+                          >
+                            25+ Businesses Growing with Forte
+                          </p>
+                        </div>
+                      <LazyScrollReveal direction="up" delay={600}>
+                        <h1 className="font-display font-medium text-[38px] sm:text-[70px] leading-[40px] sm:leading-[74px] tracking-[-0.04em] align-middle text-black dark:text-white">
+                          Your Business Deserves a Website That <br /><span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Actually Works for You</span>
+                        </h1>
+                      </LazyScrollReveal>
+                      <LazyScrollReveal direction="up" delay={800}>
+                        <p className="font-display font-medium text-[14px] sm:text-[20px] leading-[100%] tracking-[0%] align-middle text-[#626262] dark:text-white">
+                          Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
+                        </p>
+                      </LazyScrollReveal>
+                    </div>
+                    <LazyScrollReveal direction="up" delay={1000}>
+                      <div className="flex justify-start flex-col sm:flex-row">
+                        <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
+                      </div>
+                    </LazyScrollReveal>
+                  </div>
+                </LazyScrollReveal>
                 <div className="relative w-[75vw] m-auto lg:w-full">
                   {/* Main Slider - Clean and Prominent */}
                   <div className="relative rounded-lg shadow-xl overflow-hidden p-2 mb-4 w-full max-w-full">
@@ -296,8 +333,8 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
             </div>
           </section>
 
-          {/* Forte Method Steps */}
-          <ForteMethodSteps
+          {/* Forte Method Slider */}
+          <ForteMethodSlider
             items={sliderItems}
             title="The|Forte Method™"
             subtitle="A high-performance web design system built for results."
@@ -305,15 +342,12 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
 
           {/* Services Section */}
           <section
-            className="relative py-16 md:py-24 dark:bg-[#000000]"
+            className="py-16 md:py-24 dark:bg-[#000000]"
             style={{
               backgroundImage: isDark ? "url('/images/home/bg-dark.svg')" : "url('/images/home/bg-img.svg')",
             }}
           >
-            {/* Subtle background animation */}
-            <SectionBackgroundAnimation className="opacity-30" />
-            
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8  ">
               <div className="grid gap-[62px]">
                 <div className="grid gap-[16px]">
                   <div className="flex justify-center gap-1">
@@ -338,22 +372,35 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                 {/* ======== Desktop: Grid version ======== */}
                 <div className="hidden sm:flex flex-wrap -mx-4">
                   <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 px-4">
-                    <SimpleScrollReveal direction="up" delay={200}>
-                      <SimpleAnimatedCard hoverEffect="lift" className="grid gap-[24px] rounded-[16px] px-[20px] sm:px-[100px] py-[20px] sm:py-[50px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,_#101010_0%,_rgba(16,16,16,0)_100%)]">
+                    <LazyScrollReveal direction="up" delay={200}>
+                      <LazyAnimatedCard hoverEffect="lift" className="grid gap-[24px] rounded-[16px] px-[20px] sm:px-[100px] py-[20px] sm:py-[50px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,_#101010_0%,_rgba(16,16,16,0)_100%)]">
                         <div className="flex justify-center">
-                          {/* Replaced Frame images with modern icon */}
-                          <div className="w-[120px] h-[120px] flex items-center justify-center bg-gradient-to-br from-blue-500 to-purple-600 rounded-full">
-                            <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                            </svg>
-                          </div>
+                          {isDark ? (
+                            <OptimizedImage
+                              src="/images/home/Frame8.png"
+                              alt="Dark Frame"
+                              width={120}
+                              height={120}
+                              className="flex"
+                              priority={true}
+                            />
+                          ) : (
+                            <OptimizedImage
+                              src="/images/home/Frame2.png"
+                              alt="Light Frame"
+                              width={120}
+                              height={120}
+                              className="flex"
+                              priority={true}
+                            />
+                          )}
                         </div>
 
                         <h3 className="font-Inter font-medium text-[20px] sm:text-[26px] leading-[36px] sm:leading-8 tracking-normal text-center align-middle">
-                          We Create Digital Experiences People Love
+                          Custom Websites That Get Results
                         </h3>
                         <p className="text-[#626262] font-Inter font-normal text-[14px] sm:text-lg leading-[14px] sm:leading-[22px] tracking-normal text-center align-middle">
-                          Every website we build is designed with your customers in mind. Fast, beautiful, and intuitive - because when people love your site, great things happen.
+                          Hand-coded websites built for speed and performance. No templates means your site stands out and actually converts visitors.
                         </p>
                         <Link href="/pricing" prefetch={true} className="font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] text-center text-[#0024FF] flex gap-[8px] items-center justify-center dark:text-[#B2BDFF] transition-colors hover:text-[#0019CC] dark:hover:text-[#A5C6FF]">
                           See Pricing{" "}
@@ -373,26 +420,39 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                             )}
                           </span>
                         </Link>
-                      </SimpleAnimatedCard>
-                    </SimpleScrollReveal>
+                      </LazyAnimatedCard>
+                    </LazyScrollReveal>
                   </div>
                   <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 px-4">
-                    <SimpleScrollReveal direction="up" delay={400}>
-                      <SimpleAnimatedCard hoverEffect="lift" className="grid gap-[24px] rounded-[16px] px-[20px] sm:px-[100px] py-[20px] sm:py-[50px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,_#101010_0%,_rgba(16,16,16,0)_100%)]">
+                    <LazyScrollReveal direction="up" delay={400}>
+                      <LazyAnimatedCard hoverEffect="lift" className="grid gap-[24px] rounded-[16px] px-[20px] sm:px-[100px] py-[20px] sm:py-[50px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,_#101010_0%,_rgba(16,16,16,0)_100%)]">
                         <div className="flex justify-center">
-                          {/* Replaced Frame images with modern icon */}
-                          <div className="w-[120px] h-[120px] flex items-center justify-center bg-gradient-to-br from-green-500 to-teal-600 rounded-full">
-                            <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192L5.636 18.364M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
-                            </svg>
-                          </div>
+                          {isDark ? (
+                            <OptimizedImage
+                              src="/images/home/Frame7.png"
+                              alt="Dark Frame"
+                              width={120}
+                              height={120}
+                              className="flex"
+                              priority={true}
+                            />
+                          ) : (
+                            <OptimizedImage
+                              src="/images/home/Frame3.png"
+                              alt="Light Frame"
+                              width={120}
+                              height={120}
+                              className="flex"
+                              priority={true}
+                            />
+                          )}
                         </div>
 
                         <h3 className="font-Inter font-medium text-[20px] sm:text-[26px] leading-[36px] sm:leading-8 tracking-normal text-center align-middle">
-                          We're Here Whenever You Need Us
+                          SEO That Actually Gets You Found
                         </h3>
                         <p className="text-[#626262] font-Inter font-normal text-[14px] sm:text-lg leading-[14px] sm:leading-[22px] tracking-normal text-center align-middle">
-                          Think of us as your friendly neighborhood web team. We keep watch over your site so you can focus on what you do best - running your business.
+                          Simple SEO that works. We help the right customers find you when they're searching. Pretty effective stuff.
                         </p>
                         <Link href="/pricing" prefetch={true} className="font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] text-center text-[#0024FF] flex gap-[8px] items-center justify-center dark:text-[#B2BDFF] group transition-colors hover:text-[#0019CC] dark:hover:text-[#A5C6FF]">
                           See Pricing{" "}
@@ -412,26 +472,39 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                             )}
                           </span>
                         </Link>
-                      </SimpleAnimatedCard>
-                    </SimpleScrollReveal>
+                      </LazyAnimatedCard>
+                    </LazyScrollReveal>
                   </div>
                   <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 px-4 mt-5">
-                    <SimpleScrollReveal direction="up" delay={600}>
-                      <SimpleAnimatedCard hoverEffect="lift" className="grid gap-[24px] rounded-[16px] px-[20px] sm:px-[100px] py-[20px] sm:py-[50px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,_#101010_0%,_rgba(16,16,16,0)_100%)]">
+                    <LazyScrollReveal direction="up" delay={600}>
+                      <LazyAnimatedCard hoverEffect="lift" className="grid gap-[24px] rounded-[16px] px-[20px] sm:px-[100px] py-[20px] sm:py-[50px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,_#101010_0%,_rgba(16,16,16,0)_100%)]">
                         <div className="flex justify-center">
-                          {/* Replaced Frame images with modern icon */}
-                          <div className="w-[120px] h-[120px] flex items-center justify-center bg-gradient-to-br from-yellow-500 to-orange-600 rounded-full">
-                            <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                            </svg>
-                          </div>
+                          {isDark ? (
+                            <OptimizedImage
+                              src="/images/home/Frame5.png"
+                              alt="Dark Frame"
+                              width={120}
+                              height={120}
+                              className="flex"
+                              priority={true}
+                            />
+                          ) : (
+                            <OptimizedImage
+                              src="/images/home/Frame1.png"
+                              alt="Light Frame"
+                              width={120}
+                              height={120}
+                              className="flex"
+                              priority={true}
+                            />
+                          )}
                         </div>
 
                         <h3 className="font-Inter font-medium text-[20px] sm:text-[26px] leading-[36px] sm:leading-8 tracking-normal text-center align-middle">
-                          Your Success Makes Us Happy
+                          Google Ads That Pay for Themselves
                         </h3>
                         <p className="text-[#626262] font-Inter font-normal text-[14px] sm:text-lg leading-[14px] sm:leading-[22px] tracking-normal text-center align-middle">
-                          We get excited when our clients' businesses grow. Every project is approached with care, creativity, and a real desire to help you succeed.
+                          Stop wasting money on ads that don't convert. We create Google Ads campaigns that bring you qualified leads at a price that makes sense.
                         </p>
                         <Link href="/pricing" prefetch={true} className="font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] text-center text-[#0024FF] flex gap-[8px] items-center justify-center dark:text-[#B2BDFF] group transition-colors hover:text-[#0019CC] dark:hover:text-[#A5C6FF]">
                           See Pricing{" "}
@@ -451,26 +524,39 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                             )}
                           </span>
                         </Link>
-                      </SimpleAnimatedCard>
-                    </SimpleScrollReveal>
+                      </LazyAnimatedCard>
+                    </LazyScrollReveal>
                   </div>
                   <div className="w-full sm:w-full md:w-1/2 lg:w-1/2 px-4 mt-5">
-                    <SimpleScrollReveal direction="up" delay={800}>
-                      <SimpleAnimatedCard hoverEffect="lift" className="grid gap-[24px] rounded-[16px] px-[20px] sm:px-[100px] py-[20px] sm:py-[50px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,_#101010_0%,_rgba(16,16,16,0)_100%)]">
+                    <LazyScrollReveal direction="up" delay={800}>
+                      <LazyAnimatedCard hoverEffect="lift" className="grid gap-[24px] rounded-[16px] px-[20px] sm:px-[100px] py-[20px] sm:py-[50px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,_#101010_0%,_rgba(16,16,16,0)_100%)]">
                         <div className="flex justify-center">
-                          {/* Replaced Frame images with modern icon */}
-                          <div className="w-[120px] h-[120px] flex items-center justify-center bg-gradient-to-br from-purple-500 to-pink-600 rounded-full">
-                            <svg className="w-16 h-16 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-                            </svg>
-                          </div>
+                          {isDark ? (
+                            <OptimizedImage
+                              src="/images/home/Frame6.png"
+                              alt="Dark Frame"
+                              width={120}
+                              height={120}
+                              className="flex"
+                              priority={true}
+                            />
+                          ) : (
+                            <OptimizedImage
+                              src="/images/home/Frame4.png"
+                              alt="Light Frame"
+                              width={120}
+                              height={120}
+                              className="flex"
+                              priority={true}
+                            />
+                          )}
                         </div>
 
                         <h3 className="font-Inter font-medium text-[20px] sm:text-[26px] leading-[36px] sm:leading-8 tracking-normal text-center align-middle">
-                          We Actually Care About You
+                          Social Media That Builds Real Connections
                         </h3>
                         <p className="text-[#626262] font-Inter font-normal text-[14px] sm:text-lg leading-[14px] sm:leading-[22px] tracking-normal text-center align-middle">
-                          You'll never feel like just another client here. We listen to your ideas and work together to create something special. Honest communication, every step.
+                          Social media that people actually want to engage with. Authentic content that builds trust and brings in customers.
                         </p>
                         <Link href="/pricing" prefetch={true} className="font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] text-center text-[#0024FF] flex gap-[8px] items-center justify-center dark:text-[#B2BDFF] group transition-colors hover:text-[#0019CC] dark:hover:text-[#A5C6FF]">
                           See Pricing{" "}
@@ -490,8 +576,8 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                             )}
                           </span>
                         </Link>
-                      </SimpleAnimatedCard>
-                    </SimpleScrollReveal>
+                      </LazyAnimatedCard>
+                    </LazyScrollReveal>
                   </div>
                 </div>
                 <div className="mt-10 flex flex-wrap gap-3 lg:gap-4  justify-center items-center max-w-5xl  mx-auto">
@@ -551,59 +637,59 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
               {/* Stats Cards Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                 {/* Client Satisfaction Card */}
-                <SimpleScrollReveal direction="up" delay={200}>
-                  <SimpleAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
+                <LazyScrollReveal direction="up" delay={200}>
+                  <LazyAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
                     <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
                       <div className="text-center">
                         <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">
-                          <SimpleAnimatedCounter end={100} suffix="%" />
+                          <LazyAnimatedCounter end={100} suffix="%" />
                         </h3>
                         <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
                           Client Satisfaction<br />Guarantee
                         </p>
                       </div>
                     </div>
-                  </SimpleAnimatedCard>
-                </SimpleScrollReveal>
+                  </LazyAnimatedCard>
+                </LazyScrollReveal>
 
                 {/* Growing Businesses Card */}
-                <SimpleScrollReveal direction="up" delay={400}>
-                  <SimpleAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
+                <LazyScrollReveal direction="up" delay={400}>
+                  <LazyAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
                     <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
                       <div className="text-center">
                         <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">
-                          <SimpleAnimatedCounter end={25} suffix="+" />
+                          <LazyAnimatedCounter end={25} suffix="+" />
                         </h3>
                         <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
                           Businesses Growing<br />with Forte
                         </p>
                       </div>
                     </div>
-                  </SimpleAnimatedCard>
-                </SimpleScrollReveal>
+                  </LazyAnimatedCard>
+                </LazyScrollReveal>
 
                 {/* Leads Generated Card */}
-                <SimpleScrollReveal direction="up" delay={600}>
-                  <SimpleAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
+                <LazyScrollReveal direction="up" delay={600}>
+                  <LazyAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
                     <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
                       <div className="text-center">
                         <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">
-                          <SimpleAnimatedCounter end={1000} suffix="s" />
+                          <LazyAnimatedCounter end={1000} suffix="s" />
                         </h3>
                         <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
                           Of Leads Generated
                         </p>
                       </div>
                     </div>
-                  </SimpleAnimatedCard>
-                </SimpleScrollReveal>
+                  </LazyAnimatedCard>
+                </LazyScrollReveal>
               </div>
 
               {/* Performance & Support Cards */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {/* Monitoring Card */}
-                <SimpleScrollReveal direction="left" delay={200}>
-                  <SimpleAnimatedCard hoverEffect="lift" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
+                <LazyScrollReveal direction="left" delay={200}>
+                  <LazyAnimatedCard hoverEffect="lift" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
                     <div className="mb-6">
                       {isDark ? (
                         <OptimizedImage
@@ -630,12 +716,12 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                         24/7 Monitoring & Performance Tracking
                       </h3>
                     </div>
-                  </SimpleAnimatedCard>
-                </SimpleScrollReveal>
+                  </LazyAnimatedCard>
+                </LazyScrollReveal>
 
                 {/* Support Features Card */}
-                <SimpleScrollReveal direction="right" delay={400}>
-                  <SimpleAnimatedCard hoverEffect="lift" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 border border-[#E5E5E5] dark:border-[#262626] shadow-sm flex flex-col">
+                <LazyScrollReveal direction="right" delay={400}>
+                  <LazyAnimatedCard hoverEffect="lift" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 border border-[#E5E5E5] dark:border-[#262626] shadow-sm flex flex-col">
                     <div className="flex-1 bg-[#F8F9FA] dark:bg-[#1a1a1a] p-6 rounded-lg border border-[#E5E5E5] dark:border-[#333] mb-6 flex items-center justify-center min-h-[120px]">
                       <h3 className="font-inter-display font-semibold text-[22px] sm:text-[26px] leading-tight text-[#000000] dark:text-[#F4F4F4] text-center">
                         0% Cookie Cutter Templates Used
@@ -649,8 +735,8 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
                         100% U.S. Based Support
                       </h3>
                     </div>
-                  </SimpleAnimatedCard>
-                </SimpleScrollReveal>
+                  </LazyAnimatedCard>
+                </LazyScrollReveal>
               </div>
             </div>
           </section>
@@ -762,5 +848,8 @@ text-[12px]  sm:text-[16px] leading-[12px] sm:leading-[18px] tracking-[-0.24px] 
           <PricingPage />
           <ContactForm />
         </>
-    );
-  }
+      )}
+      </AnimationManagerProvider>
+    </AnimationProvider>
+  );
+}

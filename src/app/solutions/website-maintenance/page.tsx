@@ -1,9 +1,7 @@
 "use client";
 
 import { Icon } from "@/components/images/Icon";
-import { useTheme } from "@/app/providers/ThemeProvider";
-import { OptimizedImage } from "@/components/images/OptimizedImage";
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 import DarkButton from "@/components/DarkButton";
 import SEOAuditTool from "@/components/SEOAuditTool";
 import SEOResults from "@/components/SEOResults";
@@ -57,8 +55,7 @@ const riskFactors = [
   "Security vulnerabilities can harm SEO performance"
 ];
 
-export default function WebsiteMaintenance() {
-  const { theme } = useTheme();
+function WebsiteMaintenanceContent() {
   const searchParams = useSearchParams();
   const [selectedDevice, setSelectedDevice] = useState("Desktop");
   const [websiteUrl, setWebsiteUrl] = useState("");
@@ -66,16 +63,8 @@ export default function WebsiteMaintenance() {
   const [auditedUrl, setAuditedUrl] = useState("");
   const [showWelcomeBanner, setShowWelcomeBanner] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
     // Check for URL parameter and pre-fill the website URL
     const urlParam = searchParams.get('url');
     const typeParam = searchParams.get('type');
@@ -92,8 +81,6 @@ export default function WebsiteMaintenance() {
         }, 6000);
       }
     }
-
-    return () => window.removeEventListener('resize', handleResize);
   }, [searchParams]);
 
   const handleResultsUpdate = (results: any, url: string) => {
@@ -139,18 +126,17 @@ export default function WebsiteMaintenance() {
           </span>
 
           <h1 className="font-roboto font-medium text-[32px] sm:text-[62px] sm:leading-[62px] leading-[40px] tracking-[-1.24px] sm:text-center text-start align-middle text-black dark:text-[#FFFFFF]">
-            Website Maintenance & Protection
+            Your Website's Personal Bodyguard
           </h1>
           <p className="lg:w-[794px] md:w-[740px] w-[90%] font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262] dark:text-[#B4B4B4]">
-            Your website is performing well—but that's exactly when you need to protect it most. 
-            Google makes 500+ algorithm updates per year. Without ongoing maintenance, even the best sites lose traffic.
+            Look, websites break. Hackers attack. Google makes 500+ changes per year. While you're busy running your business, who's watching your website? We are! Think of us as your site's 24/7 security team and performance optimizer rolled into one.
           </p>
         </div>
 
         {/* Stats Section */}
         <div className="w-full mt-16">
           <h2 className="text-center text-2xl sm:text-3xl font-bold text-black dark:text-white mb-8">
-            📊 The Reality of Website Performance
+            What Happens When Your Website Breaks?
           </h2>
           
           <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-6">
@@ -167,10 +153,10 @@ export default function WebsiteMaintenance() {
         {/* Risk Factors */}
         <div className="w-full mt-16">
           <h2 className="text-center text-2xl sm:text-3xl font-bold text-black dark:text-white mb-2">
-            ⚠️ What Puts Your Rankings at Risk
+            Your Website Has Daily Enemies
           </h2>
           <p className="text-center text-gray-600 dark:text-gray-400 mb-8">
-            Even high-performing websites face these daily threats
+            Every day you're not monitoring is a day you could lose everything you've built
           </p>
           
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-4 max-w-4xl mx-auto">
@@ -270,5 +256,13 @@ export default function WebsiteMaintenance() {
         )}
       </section>
     </>
+  );
+}
+
+export default function WebsiteMaintenance() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <WebsiteMaintenanceContent />
+    </Suspense>
   );
 }

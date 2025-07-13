@@ -20,20 +20,40 @@ export default function ResponsiveSlider({
   containerHeight = "h-[322px] sm:h-[500px] lg:h-[58vh]"
 }: ResponsiveSliderProps) {
   const [activeIndex, setActiveIndex] = useState(0);
+  const [isAutoPlaying, setIsAutoPlaying] = useState(true);
+  const [isUserInteracting, setIsUserInteracting] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
+  const timerRef = useRef<NodeJS.Timeout | null>(null);
 
-  // Auto-play functionality
+  // Auto-play functionality with pause on user interaction
   useEffect(() => {
-    const timer = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % items.length);
-    }, 4000); // Change slide every 4 seconds
+    if (!isAutoPlaying || isUserInteracting) return;
 
-    return () => clearInterval(timer);
-  }, [items.length]);
+    timerRef.current = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % items.length);
+    }, 3000); // Faster timing - change slide every 3 seconds
+
+    return () => {
+      if (timerRef.current) {
+        clearInterval(timerRef.current);
+      }
+    };
+  }, [items.length, isAutoPlaying, isUserInteracting]);
+
+  // Resume auto-play after user interaction stops
+  useEffect(() => {
+    if (isUserInteracting) {
+      const resumeTimer = setTimeout(() => {
+        setIsUserInteracting(false);
+      }, 5000); // Resume auto-play 5 seconds after last user interaction
+
+      return () => clearTimeout(resumeTimer);
+    }
+  }, [isUserInteracting]);
 
   // Sync visual scroll with activeIndex changes (for autoplay)
   useEffect(() => {
-    if (containerRef.current) {
+    if (containerRef.current && !isUserInteracting) {
       const isDesktop = window.innerWidth >= 1024;
 
       if (isDesktop) {
@@ -53,10 +73,12 @@ export default function ResponsiveSlider({
         });
       }
     }
-  }, [activeIndex, items.length]);
+  }, [activeIndex, items.length, isUserInteracting]);
 
   const scrollToCard = (index: number) => {
     setActiveIndex(index);
+    setIsUserInteracting(true);
+    
     if (containerRef.current) {
       const isDesktop = window.innerWidth >= 1024;
 
@@ -81,7 +103,7 @@ export default function ResponsiveSlider({
 
   useEffect(() => {
     const handleScroll = () => {
-      if (containerRef.current) {
+      if (containerRef.current && !isUserInteracting) {
         const isDesktop = window.innerWidth >= 1024;
 
         if (isDesktop) {
@@ -98,6 +120,10 @@ export default function ResponsiveSlider({
       }
     };
 
+    const handleUserScroll = () => {
+      setIsUserInteracting(true);
+    };
+
     const handleResize = () => {
       if (containerRef.current) {
         containerRef.current.scrollTo(0, 0);
@@ -107,28 +133,59 @@ export default function ResponsiveSlider({
 
     const container = containerRef.current;
     container?.addEventListener("scroll", handleScroll, { passive: true });
+    container?.addEventListener("scroll", handleUserScroll, { passive: true, once: true });
     window.addEventListener("resize", handleResize);
 
     return () => {
       container?.removeEventListener("scroll", handleScroll);
+      container?.removeEventListener("scroll", handleUserScroll);
       window.removeEventListener("resize", handleResize);
     };
-  }, [items.length]);
+  }, [items.length, isUserInteracting]);
 
   return (
     <div className={`w-full lg:w-1/2 md:w-full relative overflow-hidden ${className}`}>
+      {/* Progress indicator for mobile */}
       <div className="absolute top-0 left-0 w-full h-[14px] lg:hidden">
         <div className="h-1 rounded-full overflow-hidden bg-gray-200 w-full dark:bg-gray-800">
-          <div
-            className="h-full transition-all duration-300"
-            style={{
-              width: `${100 / items.length}%`,
-              transform: `translateX(${activeIndex * 100}%)`,
-            }}
-          >
-            <div className="w-full h-1 bg-[linear-gradient(90deg,#FFF_0%,#132696_100%)] rounded-full"></div>
+          {/* Show individual progress segments */}
+          <div className="h-full flex">
+            {items.map((_, index) => (
+              <div
+                key={index}
+                className={`flex-1 h-full transition-all duration-300 ${
+                  index === activeIndex
+                    ? 'bg-[linear-gradient(90deg,#FFF_0%,#132696_100%)]'
+                    : index < activeIndex
+                    ? 'bg-blue-600'
+                    : 'bg-transparent'
+                }`}
+                style={{
+                  marginRight: index < items.length - 1 ? '2px' : '0'
+                }}
+              />
+            ))}
           </div>
         </div>
+      </div>
+
+      {/* Auto-play control button */}
+      <div className="absolute top-4 right-4 z-10">
+        <button
+          onClick={() => setIsAutoPlaying(!isAutoPlaying)}
+          className="w-8 h-8 rounded-full bg-white/80 dark:bg-black/80 border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-white dark:hover:bg-black transition-colors"
+          title={isAutoPlaying ? "Pause auto-play" : "Resume auto-play"}
+        >
+          {isAutoPlaying ? (
+            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zM7 8a1 1 0 012 0v4a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v4a1 1 0 102 0V8a1 1 0 00-1-1z" clipRule="evenodd" />
+            </svg>
+          ) : (
+            <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
+              <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+            </svg>
+          )}
+        </button>
       </div>
 
       <div
@@ -172,18 +229,44 @@ export default function ResponsiveSlider({
         ))}
       </div>
 
+      {/* Progress indicator for desktop */}
       <div className="absolute right-0 top-0 h-[391px] w-[14px] hidden lg:block">
         <div className="w-1 rounded-full overflow-hidden bg-gray-200 h-[391px] dark:bg-gray-800">
-          <div
-            className="w-full transition-all duration-300"
-            style={{
-              height: `${100 / items.length}%`,
-              transform: `translateY(${activeIndex * 100}%)`,
-            }}
-          >
-            <div className="h-full w-1 bg-[linear-gradient(180deg,#FFF_0%,#132696_100%)] rounded-full"></div>
+          {/* Show individual progress segments */}
+          <div className="w-full h-full flex flex-col">
+            {items.map((_, index) => (
+              <div
+                key={index}
+                className={`w-full flex-1 transition-all duration-300 ${
+                  index === activeIndex
+                    ? 'bg-[linear-gradient(180deg,#FFF_0%,#132696_100%)]'
+                    : index < activeIndex
+                    ? 'bg-blue-600'
+                    : 'bg-transparent'
+                }`}
+                style={{
+                  marginBottom: index < items.length - 1 ? '2px' : '0'
+                }}
+              />
+            ))}
           </div>
         </div>
+      </div>
+
+      {/* Navigation dots */}
+      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2 lg:hidden">
+        {items.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => scrollToCard(index)}
+            className={`w-2 h-2 rounded-full transition-all duration-200 ${
+              index === activeIndex
+                ? 'bg-blue-600 dark:bg-blue-400'
+                : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
+            }`}
+            aria-label={`Go to slide ${index + 1}: ${items[index].title}`}
+          />
+        ))}
       </div>
     </div>
   );

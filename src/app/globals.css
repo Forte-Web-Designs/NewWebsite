@@ -89,7 +89,7 @@
   .slick-arrow,
   .slider-thumb,
   [data-clickable] {
-    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxOCAxMEw3IDEyTDEgMTlWMVoiIGZpbGw9IiNGRjYzNDciIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg=="), pointer !important;
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxOCAxMEw3IDEyTDEgMTlWMVoiIGZpbGw9IiNGRjYzNDciIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjIiLz4KPC9zdmc+Cg=="), pointer !important;
   }
 
   /* Hover effects for better interactivity feedback */
@@ -99,7 +99,7 @@
   a:hover,
   .cursor-pointer:hover,
   [data-clickable]:hover {
-    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNSAxLjVMMjEuNSAxMkw4LjUgMTQuNUwxLjUgMjIuNVYxLjVaIiBmaWxsPSIjMDA5OUZGIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMS41Ii8+Cjwvc3ZnPgo="), pointer !important;
+    cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1zbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEuNSAxLjVMMjEuNSAxMkw4LjUgMTQuNUwxLjUgMjIuNVYxLjVaIiBmaWxsPSIjMDA5OUZGIiBzdHJva2U9IiNGRkZGRkYiIHN0cm9rZS13aWR0aD0iMS41Ii8+Cjwvc3ZnPgo="), pointer !important;
     @apply transition-all duration-200 transform scale-105;
   }
 
@@ -110,4 +110,46 @@
   textarea:focus {
     @apply outline-none ring-2 ring-blue-500/50 ring-offset-2 ring-offset-transparent;
   }
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation utility classes */
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animation-fill-forwards {
+  animation-fill-mode: forwards;
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation utility classes */
+.animate-fadeInUp {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+.animation-fill-forwards {
+  animation-fill-mode: forwards;
 }

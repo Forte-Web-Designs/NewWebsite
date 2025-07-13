@@ -4,9 +4,9 @@ import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Our Google PPC Ads Services",
+  title: "Google Ads That Actually Work",
   description:
-    "Professional Ads Services and digital services offered by Forte.",
+    "Professional Google Ads management that gets results. We help small businesses get found and grow with targeted PPC campaigns.",
 };
 
 export default function GooglePPCAdsPage() {
@@ -14,26 +14,26 @@ export default function GooglePPCAdsPage() {
     <section className="container max-w-7xl mx-auto flex flex-col md:items-center items-start px-5 py-16 md:pt-28 md:pb-56">
       <span className="sm:text-2xl text-xs font-normal font-roboto flex items-center sm:gap-2 gap-1 text-primary-1000">
         <Icon name="star" className="sm:h-6 sm:w-6 h-[14px] w-[14px]" />
-        Appear at the top of search results
+        Hey there! 👋
       </span>
       <h1 className="md:text-[62px] text-[36px] max-w-[794px] font-medium font-roboto mt-5 w-[90%] max-[767px]:leading-[40px] dark:text-secondary-1000 md:text-center">
-        Google PPC Ads Management Services
+        Google Ads That Actually Get You Customers
       </h1>
       <p className="md:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 text-primary-1400 lg:w-[794px] md:w-[740px] w-full md:mt-6 mt-5 md:text-center md:leading-[22px] leading-4">
-        Want to get in front of more customers fast? Our Google Ads services
-        help you whether you’re aiming for leads, calls, or purchases—we make
-        sure your budget works harder and goes further.
+        Want to get in front of customers who are ready to buy? Our Google Ads
+        get you found fast, so you can focus on serving great customers instead
+        of waiting for them to find you.
       </p>
 
       <div className="flex flex-col md:items-center md:pt-[14rem] md:pb-[10rem] lg:pt-[17rem] lg:pb-[14rem] pt-24 pb-24">
         <div className="w-full flex flex-col lg:mb-12 md:mb-9 mb-6">
           <h2 className="md:text-[38px] text-[26px] font-medium font-inter dark:text-secondary-1000 max-[767px]:leading-[30px]">
-            Why Choose Our Google Ads Services?
+            Why Our Google Ads Actually Work
           </h2>
           <p className="md:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 md:max-w-[794px] max-w-[95%] sm:mt-6 mt-4 text-primary-1400 md:leading-[22px] leading-4">
-            We don’t just run ads—we create tailored, high-converting campaigns.
-            From setup to optimization, we handle everything so you can focus on
-            growing your business.
+            We don't just throw money at Google and hope for the best. We create
+            smart, targeted campaigns that turn clicks into customers while
+            keeping your budget happy.
           </p>
         </div>
 
@@ -41,38 +41,41 @@ export default function GooglePPCAdsPage() {
           <div className="flex flex-col md:gap-14 sm:gap-5 gap-4 lg:p-[60px] md:p-10 sm:p-8 p-5 pr-0">
             <div>
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black">
-                1. Discovery & Strategy
+                1. We Get to Know Your Business
               </h2>
               <p className="md:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 md:leading-[22px] text-primary-1400 md:mt-3 mt-2 leading-[18px] max-[767px]:w-[90%]">
-                We learn about your business and goals, then create a plan that
-                fits your budget and objectives.
+                First things first - we learn about your goals, your customers,
+                and what success looks like for you. Then we build a strategy that
+                actually fits your budget.
               </p>
             </div>
             <div>
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black">
-                2. Keyword & Audience Targeting
+                2. Smart Targeting That Works
               </h2>
               <p className="md:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 md:leading-[22px] text-primary-1400 md:mt-3 mt-2 leading-[18px] max-[767px]:w-[90%]">
-                We find top keywords and target the right audience to ensure
-                your ads reach the right people.
+                We find the keywords your customers are actually using and target
+                the right people at the right time. No wasted clicks on people who
+                aren't ready to buy.
               </p>
             </div>
             <div>
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black">
-                3. Compelling Ad Copy
+                3. Ads That Actually Convert
               </h2>
               <p className="md:text-[18px] text-[14px] font-normal font-inter text-primary-1400 dark:text-primary-1050 md:leading-[22px] md:mt-3 mt-2 leading-[18px] max-[767px]:w-[90%]">
-                We craft clear, action-driven ads that grab attention and
-                convert.
+                We write clear, compelling ads that speak to your customers'
+                needs and get them to take action. No fluff, just results.
               </p>
             </div>
             <div>
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black">
-                4. Performance Monitoring
+                4. Constant Optimization
               </h2>
               <p className="md:text-[18px] text-[14px] font-normal font-inter text-primary-1400 dark:text-primary-1050 md:leading-[22px] md:mt-3 mt-2 leading-[18px] max-[767px]:w-[90%]">
-                We track performance and optimize continuously to maximize your
-                ROI.
+                We watch your campaigns like a hawk, testing and tweaking to make
+                sure every dollar works harder. You'll see exactly what's working
+                and what's not.
               </p>
             </div>
           </div>
@@ -151,11 +154,11 @@ export default function GooglePPCAdsPage() {
 
           <div>
             <h3 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050">
-              ROI-Focused Strategy
+              ROI That Makes Sense
             </h3>
             <p className="md:text-[18px] text-[14px] md:leading-[22px] leading-[18px] font-normal font-inter dark:text-primary-1050 text-primary-1400 md:mt-3 mt-2">
-              We build ad campaigns that turn clicks into customers—no
-              guesswork, just results.
+              Every campaign is built to turn ad spend into actual revenue. We
+              track what matters and optimize for real business results.
             </p>
           </div>
         </div>
@@ -178,18 +181,21 @@ export default function GooglePPCAdsPage() {
 
           <div>
             <h3 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050">
-              Always Optimizing
+              Always Getting Better
             </h3>
             <p className="md:text-[18px] text-[14px] md:leading-[22px] leading-[18px] font-normal font-inter dark:text-primary-1050 text-primary-1400 md:mt-3 mt-2">
-              We monitor, test, and improve your campaigns to keep performance
-              moving up.
+              We're constantly testing, learning, and improving your campaigns.
+              What worked last month might not work next month - we stay on top
+              of it all.
             </p>
           </div>
         </div>
       </div>
 
       <div className="md:mt-0 mt-5 md:mb-0 mb-2 flex justify-center w-full">
-        <LightButton href="/contact">Contact Us</LightButton>
+        <LightButton href="/contact">
+          Let's Talk About Your Goals
+        </LightButton>
       </div>
     </section>
   );

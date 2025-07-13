@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import LightButton from '@/components/LightButton';
+import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 
 const data = [
   {
@@ -31,9 +32,11 @@ const data = [
 
 export default function ServicesPage() {
   return (
-    <div className=" overflow-hidden">
-      {/* Hero Section */}
-      <section className="py-16 md:py-24">
+    <div className="relative overflow-hidden">
+      <SectionBackgroundAnimation />
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className='max-w-3xl mx-auto text-center sm:gap-[24px] gap-[22px] grid'>
             <div className="flex gap-2 md:justify-center items-center ">
@@ -146,6 +149,7 @@ export default function ServicesPage() {
           <OptimizedImage src="/images/services/growth-right.png" alt="growth" width={198} priority height={198} className="absolute -bottom-12 -right-[4.5rem] z-10 md862:block hidden" />
         </div>
       </section>
+      </div>
     </div>
   );
 }

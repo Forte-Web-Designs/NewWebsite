@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import DarkButton from "./DarkButton";
+import SimpleScrollReveal from "./animations/SimpleScrollReveal";
+import SimpleAnimatedInput from "./animations/SimpleAnimatedInput";
 
 interface ContactFormProps {
   className?: string;
@@ -13,8 +15,11 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
     email: "",
     phone: "",
     service: "",
+    company: "",
     message: "",
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -28,10 +33,25 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
+    setIsSubmitting(true);
+    
+    // Simulate form submission
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
     console.log("Form submitted:", formData);
+    setIsSubmitting(false);
+    
+    // Reset form
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      service: "",
+      company: "",
+      message: "",
+    });
   };
   // useEffect(() => {
   //   const darkModeEnabled = document.documentElement.classList.contains("dark");
@@ -85,112 +105,132 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           />
 
           {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-black/30 z-0" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-0" />
 
           {/* Content */}
           <div className="relative z-10 p-8 md:p-12">
             <div className="max-w-2xl mx-auto">
               {/* Header */}
-              <div className="text-center mb-8">
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  Let&apos;s Build You a Stronger Website
-                </h2>
-                <p className="text-gray-200 text-lg">
-                  We&apos;s show you how your current site stacks up and how we
-                  can make it way better
-                </p>
-              </div>
+              <SimpleScrollReveal direction="up" delay={200}>
+                <div className="text-center mb-8">
+                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">
+                    Let&apos;s Build You a Stronger Website
+                  </h2>
+                  <p className="text-gray-200 text-lg drop-shadow">
+                    We&apos;ll show you how your current site stacks up and how we
+                    can make it way better
+                  </p>
+                </div>
+              </SimpleScrollReveal>
 
               {/* Form */}
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="grid md:grid-cols-2 gap-6">
-                  {/* Your Name */}
-                  <div>
-                    <input
+              <SimpleScrollReveal direction="up" delay={400}>
+                <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {/* Your Name */}
+                    <SimpleAnimatedInput
                       type="text"
                       name="name"
                       placeholder="Your Name"
                       value={formData.name}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-[#FFFFFF14] rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-white/40 focus:bg-white/15 hover:bg-white/15 hover:border-white/30 transition-all duration-300 cursor-pointer"
+                      delay={600}
                     />
-                  </div>
 
-                  {/* Your Email */}
-                  <div>
-                    <input
+                    {/* Your Email */}
+                    <SimpleAnimatedInput
                       type="email"
                       name="email"
                       placeholder="Your Email"
                       value={formData.email}
                       onChange={handleInputChange}
                       required
-                      className="w-full px-4 py-3 bg-white/10 border border-[#FFFFFF14] rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-white/40 focus:bg-white/15 hover:bg-white/15 hover:border-white/30 transition-all duration-300 cursor-pointer"
+                      delay={700}
                     />
                   </div>
-                </div>
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  {/* Your Phone */}
-                  <div>
-                    <input
+                  <div className="grid md:grid-cols-2 gap-6">
+                    {/* Your Phone */}
+                    <SimpleAnimatedInput
                       type="tel"
                       name="phone"
                       placeholder="Your Phone"
                       value={formData.phone}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-[#FFFFFF14]  rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all"
+                      delay={800}
+                    />
+
+                    {/* Company Name */}
+                    <SimpleAnimatedInput
+                      type="text"
+                      name="company"
+                      placeholder="Company Name (Optional)"
+                      value={formData.company}
+                      onChange={handleInputChange}
+                      delay={850}
                     />
                   </div>
 
-                  {/* Select a Service */}
-                  <div>
-                    <input
-                      type="service"
+                  {/* Select a Service - Dropdown - Full Width */}
+                  <div className="relative">
+                    <select
                       name="service"
-                      placeholder="Select a Service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/10 border border-[#FFFFFF14]  rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all"
-                    />
+                      className="w-full px-4 py-3 bg-white/25 backdrop-blur-md border-2 border-white/50 hover:border-white/70 rounded-lg text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400 focus:bg-white/30 focus:shadow-lg focus:shadow-blue-500/20 transition-all duration-300 shadow-md appearance-none"
+                      required
+                    >
+                      <option value="" disabled className="text-gray-900">Select a Service</option>
+                      <option value="Custom Website Design" className="text-gray-900">Custom Website Design</option>
+                      <option value="SEO Services" className="text-gray-900">SEO Services</option>
+                      <option value="Social Media Management" className="text-gray-900">Social Media Management</option>
+                      <option value="Google PPC Ads" className="text-gray-900">Google PPC Ads</option>
+                      <option value="Website Maintenance" className="text-gray-900">Website Maintenance</option>
+                      <option value="Forte Care™" className="text-gray-900">Forte Care™</option>
+                      <option value="Other" className="text-gray-900">Other</option>
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
+                      <svg className="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
                   </div>
-                  {/* <div>
-                <select
-                  name="service"
-                  value={formData.service}
-                  onChange={handleInputChange}
-                  required
-                  className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all"
-                >
-                  <option value="" disabled className="text-gray-800">Select a Service</option>
-                  <option value="custom-website" className="text-gray-800">Custom Website</option>
-                  <option value="wordpress-website" className="text-gray-800">WordPress Website</option>
-                  <option value="seo-services" className="text-gray-800">SEO Services</option>
-                  <option value="social-media" className="text-gray-800">Social Media Management</option>
-                  <option value="google-ppc" className="text-gray-800">Google PPC Ads</option>
-                  <option value="forte-care" className="text-gray-800">Forte Care™ Plan</option>
-                </select>
-              </div> */}
-                </div>
-                <div>
-                  <textarea
+
+                  {/* Message */}
+                  <SimpleAnimatedInput
                     name="message"
                     placeholder="Tell us a bit about your business and what you want to change"
                     value={formData.message}
                     onChange={handleInputChange}
+                    multiline
                     rows={4}
-                    className="w-full px-4 py-3 bg-white/10 border border-[#FFFFFF14]  rounded-lg text-white placeholder-gray-300 focus:outline-none focus:border-white/40 focus:bg-white/15 transition-all resize-none"
+                    delay={1000}
                   />
-                </div>
 
-                {/* Submit Button */}
-                <div className="text-center">
-                  <DarkButton type="submit">
-                    Schedule Consultation
-                  </DarkButton>
+                  {/* Submit Button */}
+                  <SimpleScrollReveal direction="up" delay={1100}>
+                    <div className="text-center">
+                      <DarkButton 
+                        type="submit" 
+                        disabled={isSubmitting}
+                        className={`relative overflow-hidden ${isSubmitting ? 'opacity-80' : ''}`}
+                      >
+                        {isSubmitting ? (
+                          <div className="flex items-center gap-2">
+                            <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                            Sending...
+                          </div>
+                        ) : (
+                          "Schedule Consultation"
+                        )}
+                      </DarkButton>
+                    </div>
+                  </SimpleScrollReveal>
+                </form>
                 </div>
-              </form>
+              </SimpleScrollReveal>
             </div>
           </div>
         </div>

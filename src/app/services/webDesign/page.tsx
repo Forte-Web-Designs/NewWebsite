@@ -4,6 +4,7 @@ import { BackgroundImage } from "@/components/images/BackgroundImage";
 import { Icon } from "@/components/images/Icon";
 import { Metadata } from "next";
 import Link from "next/link";
+import { SectionBackgroundAnimation } from "@/components/animations/BackgroundAnimation";
 
 export const metadata: Metadata = {
   title: "Custom Website Design & Development | Forte Web Designs",
@@ -13,9 +14,11 @@ export const metadata: Metadata = {
 
 export default function WebsiteDesignPage() {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="py-16 md:py-24">
+    <div className="relative">
+      <SectionBackgroundAnimation />
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="py-16 md:py-24">
         <div className="container max-w-7xl mx-auto flex flex-col md:items-center items-start px-4 sm:px-6 lg:px-8">
           <div className="inline-flex items-center gap-2 bg-[#F4F4F4] dark:bg-[#101010] px-4 py-2 rounded-full mb-6">
             <Icon name="star" className="h-4 w-4 sm:h-6 sm:w-6" />
@@ -338,6 +341,7 @@ export default function WebsiteDesignPage() {
           </div>
         </div>
       </section>
-    </>
+      </div>
+    </div>
   );
 }

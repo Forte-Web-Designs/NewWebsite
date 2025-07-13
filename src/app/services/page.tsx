@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { Icon } from "@/components/images/Icon";
 import Link from 'next/link';
 import Image from 'next/image';
+import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 
 export const metadata: Metadata = {
   title: 'Our Services',
@@ -10,48 +11,50 @@ export const metadata: Metadata = {
 
 const cardsData = [
   {
-    title: "Custom Website Design & Builds",
-    desc: "We hand-code every site from scratch—no builders or templates. This means faster load times, better SEO, and a unique online presence for your business.",
-    linkText: "See how we build",
+    title: "Websites That Actually Make You Money",
+    desc: "Forget pretty websites that don't convert. We hand-code lightning-fast sites that turn visitors into customers. No templates, no page builders, just pure performance.",
+    linkText: "Show Me How",
     href: "/services/webDesign",
   },
   {
-    title: "Forte Care™ Maintenance Plan",
-    desc: "Unlimited edits, priority support, ongoing optimization, and peace of mind—our signature plan ensures your site keeps performing long after launch.",
-    linkText: "Learn About Forte Care",
+    title: "Your Website's Personal Bodyguard",
+    desc: "While you sleep, we're monitoring your site 24/7. Unlimited edits, instant fixes, and constant optimization. Think of us as your website's insurance policy.",
+    linkText: "Protect My Investment",
     href: "/solutions/care",
   },
   {
-    title: "SEO Setup & Optimization",
-    desc: "We take care of the technical SEO that actually matters—structure, tags, speed, and keyword targeting—so your site ranks and brings in traffic.",
-    linkText: "Boost My Visibility",
+    title: "Get Found by Customers Who Want to Buy",
+    desc: "Stop being invisible on Google. Our SEO gets you found by people who are actively searching for what you sell. More traffic = more customers = more money.",
+    linkText: "Dominate Google",
     href: "/services/seo",
   },
   {
-    title: "Google PPC Ads",
-    desc: "We craft and manage Google Ads campaigns that target the right people at the right time—boosting your traffic and maximizing ROI.",
-    linkText: "Boost My Traffic",
+    title: "Google Ads That Actually Work",
+    desc: "Tired of burning money on ads that don't convert? We create campaigns that bring you qualified leads who are ready to buy, not just tire-kickers.",
+    linkText: "Stop Wasting Ad Money",
     href: "/services/ads",
   },
   {
-    title: "Website Audits & Reviews",
-    desc: "Not sure how your site is doing? We'll run a full performance and SEO audit—and give you a clear, actionable improvement plan.",
-    linkText: "Run a Free Audit",
+    title: "Find Out What's Killing Your Conversions",
+    desc: "Your website might look good, but is it making you money? Our free audit reveals exactly what's costing you customers (and how to fix it).",
+    linkText: "Get My Free Audit",
     href: "/solutions/seotool",
   },
   {
-    title: "Social Media Marketing",
-    desc: "From strategy to content, we help you show up consistently, connect with your audience, and turn likes into leads.",
-    linkText: "Boost My Socials",
+    title: "Social Media That Actually Sells",
+    desc: "Stop posting into the void. We create social media content that builds real relationships and drives actual sales, not just vanity metrics.",
+    linkText: "Turn Likes Into Sales",
     href: "/services/socialMedia",
   },
 ];
 
 export default function ServicePage() {
   return (
-    <>
-      {/* Hero Section */}
-      <section className="py-16 md:py-24">
+    <div className="relative">
+      <SectionBackgroundAnimation />
+      <div className="relative z-10">
+        {/* Hero Section */}
+        <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <div className="flex gap-2 mb-5 md:justify-center md:mb-8">
@@ -59,10 +62,10 @@ export default function ServicePage() {
               <span className="text-[#8D9DFF] text-md font-normal md:text-lg  md:text-blue-400">Solutions That Drive Growth</span>
             </div>
             <h1 className="sm:text-4xl  sm:w-[60%] w-[75%]  tracking-tight text-gray-900 dark:text-white md:text-5xl md:mx-auto md:text-center text-start">
-              What We Can Do for Your Business
+              Stop Throwing Money at Marketing That Doesn't Work
             </h1>
             <p className="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-400 md:text-center text-start">
-              Whether you need a fast launch or a fully custom build, Forte Web Designs delivers. Every service we offer is crafted to help your business grow online—with faster sites, better visibility, and real-world results.
+              Tired of "marketing experts" who disappear with your money? We're different. Every service we offer is designed to bring you real customers and measurable results. No fluff, no false promises, just growth.
             </p>
           </div>
         </div>
@@ -91,7 +94,7 @@ export default function ServicePage() {
           </div>
         </div>
       </section>
-
-    </>
+      </div>
+    </div>
   );
 }

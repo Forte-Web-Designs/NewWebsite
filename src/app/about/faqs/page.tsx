@@ -12,86 +12,86 @@ type FAQItem = {
 const faqData: Record<string, FAQItem[]> = {
   "Getting Started": [
     {
-      question: "How do I get started?",
+      question: "How much does a website cost? (Most important question first!) 💰",
       answer:
-        "Just fill out our quick contact form and we'll schedule a call to discuss your goals and help you pick the right plan.",
+        "I love that you're asking this upfront! We have three clear pricing paths: Forte Essential™ starts at $2,000 (perfect for getting online fast), Forte Growth™ is $200/month with $0 down (our most popular - includes everything plus ongoing care), and Forte Pro™ at $5,000 (for businesses serious about dominating their market). The real question is: how much is staying invisible to potential customers costing you right now?",
     },
     {
-      question: "How long does it take to build my site?",
+      question: "How long will my website take to build? ⏰",
       answer:
-        "Typically, our websites take 4-6 weeks from initial consultation to launch, depending on complexity.",
+        "Here's what's exciting - you'll see your design in the first week! Most websites are live in 4-6 weeks. But here's the thing: every day you wait is another day your competitors are capturing the customers who should be calling you. The sooner we start, the sooner you're making money from your new site. Ready to get started?",
     },
     {
-      question: "Can I give input on the design?",
+      question: "What if I don't love the design? 😬",
       answer:
-        "Absolutely! We welcome your input and will work closely with you to create a design that matches your vision.",
+        "Honestly? This never happens with our process, but if it did, we'd fix it completely free. We include unlimited design revisions because I'd rather do it right than do it fast. In 4+ years, we've never had a client who wasn't excited to show off their new site. That's not luck - it's our process working!",
     },
   ],
   "Plans & Pricing": [
     {
-      question: "What payment options do you accept?",
-      answer: "We accept all major credit cards, PayPal, and bank transfers.",
+      question: "What's included with Forte Growth™ at $200/month? 📦",
+      answer: "Everything! 5-page custom site, hosting, domain, lifetime support, and Forte Care™ (unlimited edits). No hidden fees, no surprises. Most businesses spend more than this on coffee each month, but this actually grows your revenue. It's like having a full marketing team for less than hiring one employee.",
     },
     {
-      question: "Is there a free trial available?",
+      question: "Why is Forte Essential™ $2,000 when I can get a template for $100? 🤔",
       answer:
-        "We offer a 14-day free trial for our basic plan so you can test our services.",
+        "Great question! That $100 template will cost you thousands in lost customers because it loads slowly, looks generic, and doesn't convert visitors. Our clients typically see their investment returned within 60 days through new business. Would you rather save $1,900 upfront or make an extra $10,000+ this year?",
     },
     {
-      question: "Can I upgrade or downgrade my plan later?",
+      question: "Can I upgrade as my business grows? 📈",
       answer:
-        "Yes, you can change your plan at any time with prorated adjustments to your billing.",
+        "Absolutely! And here's the best part - when you're ready to upgrade, we credit everything you've already invested. It's like we're betting on your success. Start where you're comfortable, then scale as your business grows. Your website should fuel your growth, not limit it.",
     },
   ],
   "Forte Care™ Support": [
     {
-      question: "What's included in Forte Care™?",
+      question: "What exactly is Forte Care™? 🛠️",
       answer:
-        "Our support package includes 24/7 monitoring, weekly backups, and priority support.",
+        "Think of it as insurance for your most important marketing asset. We monitor your site 24/7, make unlimited updates, handle all technical issues, and continuously optimize for better results. Most importantly: when your website makes you money, you call it. When it breaks, we fix it. While you sleep, we're making sure your site is working for you.",
     },
     {
-      question: "How quickly do you respond to support requests?",
+      question: "What happens if my website breaks? 😱",
       answer:
-        "We guarantee response within 2 hours for priority requests and 24 hours for standard requests.",
+        "With Forte Care™, we typically fix issues before you even know they exist. But if something does happen, we guarantee a response within 2 hours. Compare that to hiring a freelancer who might take days to get back to you. Every minute your site is down, you're losing money.",
     },
     {
-      question: "Can I purchase Forte Care™ separately?",
+      question: "Why should I pay for ongoing care vs. just fixing things when they break? 💡",
       answer:
-        "Yes, our support plans are available as standalone services for existing websites.",
+        "Because prevention is always cheaper than emergency repair! Our Forte Care™ clients have 99.9% uptime and their sites get faster and better performing over time. The real question: can you afford for your website to be down when your biggest opportunity walks through the door?",
     },
   ],
   "Website & Tech": [
     {
-      question: "What platforms do you build websites on?",
+      question: "Will my website work on phones? 📱",
       answer:
-        "We specialize in WordPress, Shopify, and custom web applications using modern frameworks.",
+        "Not just work - it'll shine! 60%+ of your customers will find you on mobile, so we design mobile-first. Every site gets tested on dozens of devices. Your mobile site won't just look good, it'll convert visitors into customers better than most desktop sites. Mobile-friendly isn't enough anymore - you need mobile-optimized.",
     },
     {
-      question: "Will my website be mobile-friendly?",
+      question: "How fast will my website be? ⚡",
       answer:
-        "Yes, all our websites are fully responsive and optimized for all device sizes.",
+        "Lightning fast! Our sites typically score 98-100 on Google PageSpeed (most template sites score 30-50). Why does this matter? Every second your site takes to load costs you 7% of potential customers. Our speed optimization has helped clients increase conversions by 40%+. Fast sites don't just feel better - they make more money.",
     },
     {
-      question: "Do you provide hosting services?",
+      question: "What makes your websites different from everyone else's? 🔥",
       answer:
-        "Yes, we offer managed hosting with 99.9% uptime guarantee and automatic updates.",
+        "Three words: Hand. Coded. Performance. No WordPress, no page builders, no bloated templates. Just clean, custom code that loads instantly and converts like crazy. Plus, you get a real human who answers the phone, not a ticket system. When was the last time your current web company actually called you back?",
     },
   ],
   "SEO & Marketing": [
     {
-      question: "How long does SEO take to show results?",
+      question: "Will people be able to find my website on Google? 🎯",
       answer:
-        "Typically 3-6 months for noticeable improvements, depending on your industry competition.",
+        "That's the whole point! Every site is built SEO-ready from day one. Our clients typically see 50-200% increases in Google visibility within 3-6 months. But here's what's really exciting: we can also manage your Google Ads and social media to get you found even faster. Imagine having customers find you while you sleep!",
     },
     {
-      question: "Do you do local SEO?",
+      question: "How quickly will I see results? 📊",
       answer:
-        "Yes, we specialize in local SEO strategies including Google My Business optimization.",
+        "Week 1: Your new site is converting visitors better. Month 1: You're seeing more inquiries. Month 3-6: Google starts ranking you higher. Month 12: You're wondering why you waited so long! The sooner you start, the sooner you're ahead of competitors who are still 'thinking about it.'",
     },
     {
-      question: "What's included in your SEO packages?",
+      question: "Why should I choose Forte Web Designs over the hundreds of other options? 🏆",
       answer:
-        "Keyword research, on-page optimization, content strategy, backlink building, and monthly reporting.",
+        "Because we're not just building websites - we're building your business growth engine. Our clients don't just get a website, they get a competitive advantage. We've helped businesses increase their revenue by 200-500% within the first year. The real question isn't why choose us - it's how much longer can you afford to wait?",
     },
   ],
 };
@@ -124,7 +124,7 @@ export default function SolutionsPage() {
         FAQs
       </span>
       <h1 className="md:text-[62px] text-[38px] font-medium font-roboto mt-6 w-[90%] max-[767px]:leading-[40px] dark:text-secondary-1000 px-5">
-        Frequently Asked Questions
+        Got Questions? We've Got Answers!
       </h1>
 
       <div className="sm:py-16 py-6 flex gap-3 overflow-x-auto no-scrollbar pb-3 ml-5">
@@ -205,7 +205,7 @@ export default function SolutionsPage() {
       </div>
 
       <div className="sm:mt-12 px-5">
-        <LightButton href="/contact">Contact Us</LightButton>
+        <LightButton href="/contact">Ready to Get Started? Let's Chat!</LightButton>
       </div>
     </section>
   );

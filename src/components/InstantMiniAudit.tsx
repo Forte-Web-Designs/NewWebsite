@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { Icon } from './images/Icon';
+import { LazyLoadingStates } from './animations/LazyAnimations';
 
 interface MiniAuditResults {
   url: string;
@@ -232,7 +233,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       {!results && (
         <div className="text-center mb-4">
           <div className="text-xs text-white/70 bg-white/10 rounded-lg p-3 border border-white/20">
-            ✨ <strong>Step 1:</strong> Enter any URL format • <strong>Step 2:</strong> Get mini-audit • <strong>Step 3:</strong> Click for full analysis
+            ✨ <strong>Step 1:</strong> Enter any Website URL • <strong>Step 2:</strong> Get mini-audit • <strong>Step 3:</strong> Click for full analysis
           </div>
         </div>
       )}
@@ -282,6 +283,21 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
             </button>
           </div>
         </div>
+        
+        {/* Loading States */}
+        {isLoading && (
+          <LazyLoadingStates 
+            isLoading={isLoading} 
+            variant="progress"
+            messages={[
+              "Checking your website...",
+              "Testing site speed...",
+              "Analyzing SEO factors...",
+              "Almost done..."
+            ]}
+            className="py-8"
+          />
+        )}
         
         {/* Enhanced Call to Action Button */}
         {!results && !isLoading && (

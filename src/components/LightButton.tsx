@@ -29,7 +29,7 @@ export default function LightButton({
     large: "h-5 w-4"
   };
 
-  const buttonClasses = `p-[5px] bg-indigo-700 w-fit rounded-[70px] inline-flex flex-col justify-center items-center gap-2.5 transition-all duration-300 hover:bg-indigo-600 hover:scale-105 cursor-pointer ${className}`;
+  const buttonClasses = `p-[5px] bg-indigo-700 w-fit rounded-[70px] inline-flex flex-col justify-center items-center gap-2.5 transition-all duration-300 hover:bg-indigo-600 hover:scale-105 hover:shadow-lg cursor-pointer group ${className}`;
   
   const buttonContent = (
     <div
@@ -39,12 +39,12 @@ export default function LightButton({
           "linear-gradient(149deg, #5C73FF 15%, transparent 30%, transparent 100%)",
       }}
     >
-      <div className="px-11 py-3.5  relative bg-[#081B8B] rounded-[61.20px] shadow-[inset_0px_-2px_4px_0px_rgba(0,0,0,0.30)] inline-flex justify-center items-center gap-2.5 overflow-hidden transition-all duration-300 hover:bg-[#0a1f9c]">
-        <div className="w-32 h-12 left-0 right-0 top-4 m-auto absolute bg-blue-600 rounded-full blur-lg transition-all duration-300 hover:bg-blue-500"></div>
+      <div className="px-11 py-3.5  relative bg-[#081B8B] rounded-[61.20px] shadow-[inset_0px_-2px_4px_0px_rgba(0,0,0,0.30)] inline-flex justify-center items-center gap-2.5 overflow-hidden transition-all duration-300 hover:bg-[#0a1f9c] group-hover:shadow-xl">
+        <div className="w-32 h-12 left-0 right-0 top-4 m-auto absolute bg-blue-600 rounded-full blur-lg transition-all duration-300 hover:bg-blue-500 group-hover:scale-110"></div>
         <div className="text-right justify-center text-white text-lg font-medium font-['Roboto'] leading-none z-10">
           {children}
         </div>
-        {showIcon && <Icon name={iconName} className={`${iconSizeClasses[iconSize]} z-10`} />}
+        {showIcon && <Icon name={iconName} className={`${iconSizeClasses[iconSize]} z-10 transition-transform duration-300 group-hover:translate-x-1`} />}
       </div>
     </div>
   );

@@ -1,6 +1,8 @@
 import { Icon } from '@/components/images/Icon';
 import Link from 'next/link';
 import DarkButton from './DarkButton';
+import SimpleScrollReveal from './animations/SimpleScrollReveal';
+import SimpleAnimatedCard from './animations/SimpleAnimatedCard';
 
 interface PricingPlan {
   id: string;
@@ -22,34 +24,34 @@ const pricingPlans: PricingPlan[] = [
     subtitle: '+ $50/mo hosting & support',
     ctaText: 'Launch Fast',
     including: [
-      'Manage Delivery Logs',
-      'Real Time Clinic,s Inventory Tracking',
-      'Receive Sample Requests',
-      'Real-Time Stock Alerts'
+      'Up to 5 Custom-Coded Pages',
+      'Mobile-Responsive & SEO-Ready',
+      'Domain + Hosting Setup',
+      'Forte Guarantee™'
     ],
     addons: [
-      'Forte Care™: $125/mo',
+      'Forte Care™: $150/mo',
       'Extra Pages: $100/ea',
-      'Upgrade to Custom Site (discounted)'
+      'Blog Setup: $250'
     ]
   },
   {
     id: 'growth',
     name: 'Forte Growth™ Plan',
-    price: '$200',
-    subtitle: '',
+    price: '$200/month',
+    subtitle: '$0 Down | 12-Month Minimum',
     isPopular: true,
     ctaText: 'Get Started',
     including: [
       '5 Page Custom-Coded Site',
-      'Hosting & .com Domain',
-      'Forte Care™ (Unlimited Edits, Hosting, Support)',
-      'Life-time Support',
+      'Domain + Hosting Setup',
+      'Forte Care™ Included',
+      'Lifetime Technical Support',
       'Forte Guarantee™'
     ],
     addons: [
-      'Add Blog: +$250(one time)',
-      'Extra Pages: $100/ea'
+      'Extra Pages: $100/ea',
+      'Blog Setup: $250'
     ]
   },
   {
@@ -62,13 +64,14 @@ const pricingPlans: PricingPlan[] = [
     including: [
       '10 Page Custom-Coded Site',
       'Premium Hosting',
-      'Forte Guarantee™',
-      'Real-Time Stock Alerts'
+      '1 Year of Forte Care™ Included',
+      'Google Analytics Setup',
+      'SEO Optimization + VIP Support',
+      'Forte Guarantee™'
     ],
     addons: [
-      'Forte Care™: +$125/mo',
-      'Add Blog: +$250(one time)',
-      'Upgrade to Custom Site (discounted)'
+      'Extra Pages: $100/ea',
+      'Blog Setup: $250'
     ]
   }
 ];
@@ -109,13 +112,16 @@ interface PricingCardProps {
 
 function PricingCard({ plan }: PricingCardProps) {
   // Base classes that are common to all cards
-  const baseCardClasses = "gap-[24px] sm:gap-[48px] grid rounded-xl sm:p-10 sm:pr-6 pr-10 pl-10 pt-10 pb-20 border border-gray-300 bg-[#FFFFFF] dark:border dark:border-[#353535] hover:shadow-[0_4px_40px_0_#203FFC] cursor-pointer w-full";
+  const baseCardClasses = "gap-[24px] sm:gap-[48px] grid rounded-xl sm:p-10 sm:pr-6 pr-10 pl-10 pt-10 pb-20 border border-gray-300 bg-[#FFFFFF] dark:border dark:border-[#353535] cursor-pointer w-full transition-all duration-300";
 
   // Only add different classes
   const cardClasses = `${baseCardClasses} ${plan.id === 'growth'
     ? "z-10 relative dark:bg-[#101010]"
     : "dark:bg-black relative"
     }`;
+
+  // Determine hover effect based on plan
+  const hoverEffect = plan.isPopular ? 'scale' : 'lift';
 
   // Base title classes
   const baseTitleClasses = "font-inter-display font-normal text-[24px] tracking-[-0.24px] text-start align-middle text-black dark:text-white";
@@ -128,7 +134,10 @@ function PricingCard({ plan }: PricingCardProps) {
     }`;
 
   return (
-    <div className={cardClasses}>
+    <SimpleAnimatedCard 
+      hoverEffect={hoverEffect} 
+      className={cardClasses}
+    >
       {plan.isPopular && (
         <div className="absolute top-[-20px] left-0 w-full h-[40px] gap-1.5 pt-[8px] pr-[16px] pl-[16px] bg-[#203FFC] rounded-tl-[10px] rounded-tr-[10px] z-0 flex justify-start align-middle">
           <span>
@@ -205,26 +214,132 @@ function PricingCard({ plan }: PricingCardProps) {
       <div className="flex flex-col sm:flex-row">
         <div className={`flex  justify-center sm:justify-start mt-5 ${plan.ctaMarginTop || ''}`}>
           <Link href="/contact" prefetch={true}>
-            <DarkButton>
+            <DarkButton className="group-hover:scale-105 transition-transform duration-300">
               {plan.ctaText}
             </DarkButton>
           </Link>
         </div>
       </div>
-    </div>
+    </SimpleAnimatedCard>
   );
 }
 
 export function PricingPage() {
+  // Desktop order: Essential, Growth, Pro
+  const desktopOrder = pricingPlans;
+  
+  // Mobile order: Growth first (most popular), then Essential, then Pro
+  const mobileOrder = [
+    pricingPlans[1], // Growth (Forte Care™)
+    pricingPlans[0], // Essential
+    pricingPlans[2], // Pro
+  ];
+
+  const includedFeatures = [
+    'Hand-Coded Website – built from scratch, no page builders or templates',
+    'Responsive Design – optimized for all devices and screen sizes',
+    'High-Speed Performance – 98–100 Google PageSpeed scores',
+    'Security First – no WordPress, no plugins, no vulnerabilities',
+    'SEO-Ready – structured for visibility and rankings',
+    'Human Support – when you call, you talk to the developer (not a bot)'
+  ];
+
   return (
     <section className="py-16 md:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        
+        {/* Header Section */}
+        <SimpleScrollReveal direction="up" delay={200}>
+          <div className="text-center mb-16">
+            <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              Choose the Plan That Works for You
+            </h1>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              All of Our Plans Are Strategically Designed to Fit Your Needs.
+            </p>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mt-4">
+              We offer three smart paths to launch your new website—tailored to how you prefer to build, grow, and scale your business.
+            </p>
+          </div>
+        </SimpleScrollReveal>
 
-        <div className="grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto md:w-[full] w-fit">
-          {pricingPlans.map((plan) => (
-            <PricingCard key={plan.id} plan={plan} />
+        {/* What's Included With Every Plan */}
+        <SimpleScrollReveal direction="up" delay={400}>
+          <div className="mb-16 bg-gray-50 dark:bg-gray-900 rounded-2xl p-8 md:p-12">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              What's Included With Every Plan
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {includedFeatures.map((feature, index) => (
+                <div key={index} className="flex items-start gap-3">
+                  <Icon
+                    name="star-icon"
+                    alt="checkmark"
+                    className="w-5 h-5 text-green-500 mt-0.5 flex-shrink-0"
+                  />
+                  <p className="text-gray-700 dark:text-gray-300">{feature}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </SimpleScrollReveal>
+
+        {/* Desktop Grid */}
+        <div className="hidden lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto md:w-[full] w-fit mb-16">
+          {desktopOrder.map((plan, index) => (
+            <SimpleScrollReveal key={plan.id} direction="up" delay={200 + (index * 200)}>
+              <PricingCard plan={plan} />
+            </SimpleScrollReveal>
           ))}
         </div>
+        
+        {/* Mobile Grid */}
+        <div className="grid lg:hidden xl:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto md:w-[full] w-fit mb-16">
+          {mobileOrder.map((plan, index) => (
+            <SimpleScrollReveal key={plan.id} direction="up" delay={200 + (index * 200)}>
+              <PricingCard plan={plan} />
+            </SimpleScrollReveal>
+          ))}
+        </div>
+
+        {/* Forte Care™ Section */}
+        <SimpleScrollReveal direction="up" delay={600}>
+          <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 md:p-12">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                Forte Care™: The Secret to Long-Term ROI
+              </h2>
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+                Most websites go live and get forgotten. With Forte Care™, yours stays fresh, fast, and always working for your business. 
+                You'll get unlimited edits, analytics monitoring, performance checks, and ongoing optimization—all handled by us.
+              </p>
+              
+              <div className="grid md:grid-cols-3 gap-6 mb-8">
+                <div className="text-center">
+                  <div className="text-2xl mb-2">📈</div>
+                  <p className="text-gray-700 dark:text-gray-300">Get regular site improvements without lifting a finger</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-2">🛠</div>
+                  <p className="text-gray-700 dark:text-gray-300">Receive unlimited content edits and updates</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl mb-2">🚨</div>
+                  <p className="text-gray-700 dark:text-gray-300">Have a direct line to support when it matters most</p>
+                </div>
+              </div>
+
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                Whether you're launching something new or leveling up an existing site, we're here to make sure your investment keeps paying off—month after month.
+              </p>
+
+              <Link href="/solutions/care" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+                Learn more about Forte Care™ →
+              </Link>
+            </div>
+          </div>
+        </SimpleScrollReveal>
+        
       </div>
     </section>
   );
