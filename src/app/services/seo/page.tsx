@@ -193,12 +193,20 @@ export default function SeoDesignPage() {
             </div>
           </div>
           <div className="flex justify-center items-center md:p-[60px] p-5">
-            <OptimizedImage
-              src="/images/services/seo-approach.png"
-              width={438}
-              height={438}
-              alt="Descriptive text"
-            />
+            {/* Animated SEO Foundation Circle - Same style as SEO Growth */}
+            <div className="w-[300px] h-[300px] md:w-[400px] md:h-[400px] relative flex items-center justify-center">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-br from-green-500/30 via-emerald-600/40 to-teal-600/30 animate-pulse shadow-2xl"></div>
+              <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-green-400/20 to-emerald-500/30 animate-pulse delay-300"></div>
+              <div className="relative z-10 text-center bg-white/90 dark:bg-gray-800/90 rounded-full p-8 shadow-xl backdrop-blur-sm">
+                <div className="text-4xl md:text-5xl mb-3">🏗️</div>
+                <div className="text-lg md:text-xl font-bold bg-gradient-to-r from-green-600 to-emerald-600 bg-clip-text text-transparent">
+                  Foundation
+                </div>
+              </div>
+              <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-green-400 rounded-full animate-bounce delay-500"></div>
+              <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 bg-emerald-400 rounded-full animate-bounce delay-1000"></div>
+              <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-teal-400 rounded-full animate-bounce delay-700"></div>
+            </div>
           </div>
         </div>
 

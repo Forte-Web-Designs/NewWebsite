@@ -212,7 +212,20 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)] border dark:border-[#1A1A1A] w-full flex items-center justify-center">
-                <OptimizedImage src="/images/services/Shape Holo.png" alt="logo" width={200} priority height={180} className="w-48 h-40 sm:w-56 sm:h-48 md:w-64 md:h-56 lg:w-[270px] lg:h-[250px]" />
+                {/* Animated Care Circle - Same style as SEO Growth */}
+                <div className="w-48 h-40 sm:w-56 sm:h-48 md:w-64 md:h-56 lg:w-[270px] lg:h-[250px] relative flex items-center justify-center">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/30 via-blue-600/40 to-purple-600/30 animate-pulse shadow-2xl"></div>
+                  <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-blue-400/20 to-indigo-500/30 animate-pulse delay-300"></div>
+                  <div className="relative z-10 text-center bg-white/90 dark:bg-gray-800/90 rounded-full p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl backdrop-blur-sm">
+                    <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2 sm:mb-3 md:mb-4">🛡️</div>
+                    <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                      Care
+                    </div>
+                  </div>
+                  <div className="absolute top-1/4 left-1/4 w-2 h-2 sm:w-3 sm:h-3 bg-blue-400 rounded-full animate-bounce delay-500"></div>
+                  <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full animate-bounce delay-1000"></div>
+                  <div className="absolute top-1/3 right-1/3 w-1 h-1 sm:w-1.5 sm:h-1.5 bg-indigo-400 rounded-full animate-bounce delay-700"></div>
+                </div>
               </div>
             </div>
             <div
@@ -268,7 +281,21 @@ export default function ServicePage() {
             </div>
 
             <div className="col-span-6 lg:col-span-3 relative border border-[#5C5C5C] rounded-[16px] grid gap-[24px]">
-              <OptimizedImage src="/images/services/Shape Holo star.png" alt="logo" width={150} priority height={119} className="absolute -top-16 -right-12 z-10  lg:block hidden" />
+              {/* Animated Star Excellence Circle - Top Right */}
+              <div className="absolute -top-16 -right-12 z-10 lg:block hidden">
+                <div className="w-[150px] h-[119px] relative flex items-center justify-center">
+                  <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-yellow-500/30 via-orange-600/40 to-red-600/30 animate-pulse shadow-2xl"></div>
+                  <div className="absolute inset-3 rounded-full bg-gradient-to-tr from-yellow-400/20 to-orange-500/30 animate-pulse delay-500"></div>
+                  <div className="relative z-10 text-center bg-white/90 dark:bg-gray-800/90 rounded-full p-4 shadow-xl backdrop-blur-sm">
+                    <div className="text-3xl mb-1">⭐</div>
+                    <div className="text-sm font-bold bg-gradient-to-r from-yellow-600 to-orange-600 bg-clip-text text-transparent">
+                      Quality
+                    </div>
+                  </div>
+                  <div className="absolute top-1/3 right-1/4 w-2 h-2 bg-yellow-400 rounded-full animate-bounce delay-700"></div>
+                  <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-orange-400 rounded-full animate-bounce delay-1200"></div>
+                </div>
+              </div>
               <div
                 className="rounded-xl p-6"
                 style={{

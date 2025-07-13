@@ -137,13 +137,20 @@ export default function SocialMediaManagement() {
       {/* $0 Down Offer Section - Mobile Optimized */}
       <div className="flex flex-col w-full justify-center items-center text-center py-12 sm:py-16">
         <div className="mb-6 sm:mb-8 lg:mb-12">
-          <OptimizedImage
-            src="/images/services/Shape-Holo-Mini.png"
-            width={230}
-            height={230}
-            alt="Forte Web Designs Shape"
-            className="w-20 h-20 sm:w-28 sm:h-28 md:w-36 md:h-36 lg:w-56 lg:h-56 mx-auto"
-          />
+          {/* Animated Method Circle - Same style as SEO Growth */}
+          <div className="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 lg:w-80 lg:h-80 relative flex items-center justify-center mx-auto">
+            <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/30 via-blue-600/40 to-purple-600/30 animate-pulse shadow-2xl"></div>
+            <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-blue-400/20 to-indigo-500/30 animate-pulse delay-300"></div>
+            <div className="relative z-10 text-center bg-white/90 dark:bg-gray-800/90 rounded-full p-6 sm:p-8 md:p-10 lg:p-12 shadow-xl backdrop-blur-sm">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl mb-2 sm:mb-3 md:mb-4">🚀</div>
+              <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+                Method
+              </div>
+            </div>
+            <div className="absolute top-1/4 left-1/4 w-2 h-2 sm:w-3 sm:h-3 bg-blue-400 rounded-full animate-bounce delay-500"></div>
+            <div className="absolute bottom-1/3 right-1/4 w-1.5 h-1.5 sm:w-2 sm:h-2 bg-purple-400 rounded-full animate-bounce delay-1000"></div>
+            <div className="absolute top-1/3 right-1/3 w-1 h-1 sm:w-1.5 sm:h-1.5 bg-indigo-400 rounded-full animate-bounce delay-700"></div>
+          </div>
         </div>
         <h2
           className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-inter bg-clip-text text-transparent bg-gradient-to-r from-blue-500 to-purple-600 mb-4 sm:mb-6"
