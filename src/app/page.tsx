@@ -15,10 +15,11 @@ import LightButton from "@/components/LightButton";
 import ForteMethodSteps from "@/components/ForteMethodSteps";
 
 // Import simple animations (no context required)
-import SimpleScrollReveal from "@/components/animations/SimpleScrollReveal";
-import SimpleAnimatedCard from "@/components/animations/SimpleAnimatedCard";
-import SimpleAnimatedCounter from "@/components/animations/SimpleAnimatedCounter";
-import { HeroBackgroundAnimation, SectionBackgroundAnimation } from "@/components/animations/BackgroundAnimation";
+import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
+import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
+import SimpleAnimatedCounter from '@/components/animations/SimpleAnimatedCounter';
+import { HeroBackgroundAnimation, SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
+import MeetConnorSection from '@/components/MeetConnorSection';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -308,7 +309,7 @@ export default function Home() {
                   </p>
                   
                   <div className="flex justify-center pt-4">
-                    <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
+                    <LightButton href="/contact">Lock In My $200/Month Rate</LightButton>
                   </div>
                 </div>
               </SimpleScrollReveal>
@@ -461,7 +462,7 @@ export default function Home() {
                     
                     <SimpleScrollReveal direction="up" delay={400}>
                       <div className="flex justify-start">
-                        <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
+                        <LightButton href="/contact">Lock In My $200/Month Rate</LightButton>
                       </div>
                     </SimpleScrollReveal>
                   </div>
@@ -720,7 +721,7 @@ export default function Home() {
               Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
             </p>
             <div className="flex justify-center">
-              <LightButton href="/contact">Let's Chat About Your Vision</LightButton>
+              <LightButton href="/contact">Get My Free Website Analysis</LightButton>
             </div>
           </div>
         </div>
@@ -848,6 +849,9 @@ export default function Home() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Meet Connor Section */}
+      <MeetConnorSection />
       
       {/* Contact Form */}
       <ContactForm />

@@ -297,7 +297,7 @@ export default function SeoDesignPage() {
         ))}
 
         <div className="sm:mt-10 mt-3">
-          <LightButton href="/contact">Let's Talk About Your Goals</LightButton>
+          <LightButton href="/contact">Get My Free Website Analysis</LightButton>
         </div>
       </div>
 

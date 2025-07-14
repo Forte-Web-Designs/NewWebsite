@@ -145,15 +145,16 @@ export default function ROICalculator({ className = "" }: { className?: string }
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Current Website Cost/Month <span className="text-xs text-gray-500">(optional)</span>
+                        Current Website Cost/Month <span className="text-xs text-gray-500">(Enter 0 if you paid upfront)</span>
                       </label>
                       <input
                         type="number"
                         value={inputs.currentWebsiteCost || ''}
                         onChange={(e) => handleInputChange('currentWebsiteCost', parseInt(e.target.value) || 0)}
-                        placeholder="e.g., 150"
+                        placeholder="e.g., 150 or 0"
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
+                      <p className="text-xs text-gray-500 mt-1">If you paid a one-time fee, enter 0</p>
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -249,7 +250,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                         <div className="space-y-2">
                           {calculation.currentCosts > 0 && (
                             <div className="flex justify-between">
-                              <span className="text-gray-600 dark:text-gray-400">Current Costs:</span>
+                              <span className="text-gray-600 dark:text-gray-400">Current Monthly Costs:</span>
                               <span className="font-medium text-red-600">${calculation.currentCosts}/month</span>
                             </div>
                           )}
@@ -265,6 +266,13 @@ export default function ROICalculator({ className = "" }: { className?: string }
                               <span className={`font-bold ${calculation.monthlySavings >= 0 ? 'text-green-600' : 'text-orange-600'}`}>
                                 {calculation.monthlySavings >= 0 ? '+' : ''}${calculation.monthlySavings}/month
                               </span>
+                            </div>
+                          )}
+                          {calculation.currentCosts === 0 && (
+                            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 mt-3">
+                              <p className="text-sm text-blue-800 dark:text-blue-200">
+                                <strong>Great news!</strong> Since you're not paying monthly website costs, Forte™ will provide ongoing value through professional hosting, security, and unlimited updates - services you'd normally pay for separately.
+                              </p>
                             </div>
                           )}
                         </div>
@@ -315,15 +323,32 @@ export default function ROICalculator({ className = "" }: { className?: string }
                       {/* CTA */}
                       <div className="text-center pt-4">
                         <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                          Ready to start seeing these results?
+                          Ready to start seeing these results with Forte Web Designs?
                         </p>
-                        <a 
-                          href="/contact"
-                          className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
-                        >
-                          Get Started Today
-                          <Icon name="arrow-right" className="w-4 h-4" />
-                        </a>
+                        <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg p-6 text-white">
+                          <h4 className="font-bold text-lg mb-3">Why Choose Forte Web Designs?</h4>
+                          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm mb-4">
+                            <div className="flex items-center gap-2">
+                              <span>✓</span>
+                              <span>Hand-coded for speed</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span>✓</span>
+                              <span>No WordPress vulnerabilities</span>
+                            </div>
+                            <div className="flex items-center gap-2">
+                              <span>✓</span>
+                              <span>Direct developer access</span>
+                            </div>
+                          </div>
+                          <a 
+                            href="/contact"
+                            className="inline-flex items-center gap-2 bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold hover:bg-gray-50 transition-colors duration-300"
+                          >
+                            Start Your Forte™ Project Today
+                            <Icon name="arrow-right" className="w-4 h-4" />
+                          </a>
+                        </div>
                       </div>
                     </div>
                   </div>

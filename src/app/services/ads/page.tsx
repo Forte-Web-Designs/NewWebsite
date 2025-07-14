@@ -207,7 +207,7 @@ export default function GooglePPCAdsPage() {
 
       <div className="flex justify-center w-full mb-16 sm:mb-20 md:mb-24">
         <LightButton href="/contact">
-          Let's Talk About Your Goals
+          Get My Free Website Analysis
         </LightButton>
       </div>
 

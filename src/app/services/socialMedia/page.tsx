@@ -349,7 +349,7 @@ export default function ServicePage() {
           ))}
         </div>
         <div className="flex justify-center mt-8 sm:mt-12 px-4">
-          <LightButton href="/contact">Contact Us</LightButton>
+          <LightButton href="/contact">Get My Free Website Analysis</LightButton>
         </div>
       </section>
       <section className="dark:bg-black bg-white py-16 sm:py-20 md:py-24 lg:py-32 text-center px-4 sm:px-6 lg:px-8">

@@ -17,12 +17,32 @@ export default function Pricing() {
       <div className="relative z-10">
         {/* Hero Section - Mobile Optimized */}
         <div className="text-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20">
+          {/* Urgency Banner */}
+          <div className="mb-6">
+            <div className="inline-block rounded-full bg-gradient-to-r from-green-500 to-green-600 text-white px-6 py-2 text-sm font-semibold shadow-lg">
+              🚀 No Setup Fees - Start Next Week
+            </div>
+          </div>
+          
           <h2 className="font-roboto font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight text-center mb-6">
             Choose Your Growth Plan
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-4">
             Start with a Forte Foundation™ website, then add services as your business grows. Clear, predictable monthly pricing with no surprises.
           </p>
+          
+          {/* Trust Signals */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
+              <span>✓</span>
+              <span className="text-sm font-medium">Same Day Response Guaranteed</span>
+            </div>
+            <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400">
+              <span>📞</span>
+              <span className="text-sm font-medium">(817) 873-6655</span>
+            </div>
+          </div>
+          
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/pricing/which-plan" className="text-primary-600 dark:text-primary-400 hover:underline font-semibold">
               Not sure which plan? Get personalized recommendations →

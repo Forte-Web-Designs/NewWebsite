@@ -5,6 +5,7 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
+import MobileStickyCTA from "@/components/MobileStickyCTA";
 import { ThemeProvider } from "./providers/ThemeProvider";
 
 const roboto = Roboto({
@@ -127,6 +128,7 @@ export default function RootLayout({
           </div>
           <Footer />
           <BackToTopButton />
+          <MobileStickyCTA />
         </ThemeProvider>
       </body>
     </html>

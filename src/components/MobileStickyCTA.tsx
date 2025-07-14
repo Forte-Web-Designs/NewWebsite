@@ -1,0 +1,100 @@
+"use client";
+
+import { useState, useEffect } from 'react';
+import Link from 'next/link';
+
+export default function MobileStickyCTA() {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      // Show after scrolling 100px
+      setIsVisible(window.scrollY > 100);
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  if (!isVisible) return null;
+
+  return (
+    <>
+      {/* Mobile Sticky CTA - Only visible on mobile */}
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl border-t border-white/20">
+        <div className="px-4 py-3">
+          {!isExpanded ? (
+            // Collapsed state
+            <div className="flex items-center justify-between">
+              <div className="flex-1">
+                <p className="text-sm font-semibold">Ready to grow your business?</p>
+                <p className="text-xs text-blue-100">Get your free website analysis</p>
+              </div>
+              <div className="flex items-center gap-2">
+                <Link
+                  href="/contact"
+                  className="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold text-sm hover:bg-gray-50 transition-colors"
+                >
+                  Get Started
+                </Link>
+                <button
+                  onClick={() => setIsExpanded(true)}
+                  className="p-2 hover:bg-white/10 rounded-lg transition-colors"
+                  aria-label="Expand options"
+                >
+                  <span className="text-white text-sm">⬆️</span>
+                </button>
+              </div>
+            </div>
+          ) : (
+            // Expanded state
+            <div className="space-y-3">
+              <div className="flex items-center justify-between">
+                <h3 className="font-semibold text-sm">Get Started Today</h3>
+                <button
+                  onClick={() => setIsExpanded(false)}
+                  className="p-1 hover:bg-white/10 rounded-lg transition-colors"
+                  aria-label="Collapse options"
+                >
+                  <span className="text-white text-sm">✕</span>
+                </button>
+              </div>
+              
+              <div className="grid grid-cols-2 gap-2">
+                <Link
+                  href="/contact"
+                  className="bg-white text-blue-600 px-3 py-2 rounded-lg font-medium text-sm text-center hover:bg-gray-50 transition-colors"
+                >
+                  Free Analysis
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="bg-white/20 backdrop-blur-sm text-white px-3 py-2 rounded-lg font-medium text-sm text-center hover:bg-white/30 transition-colors border border-white/30"
+                >
+                  View Pricing
+                </Link>
+              </div>
+              
+              <div className="flex items-center justify-center gap-4 text-xs text-blue-100">
+                <div className="flex items-center gap-1">
+                  <span>📞</span>
+                  <a href="tel:8178736655" className="hover:text-white transition-colors">
+                    (817) 873-6655
+                  </a>
+                </div>
+                <div className="flex items-center gap-1">
+                  <span>⚡</span>
+                  <span>Same Day Response</span>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* Spacer to prevent content from being hidden behind sticky CTA */}
+      <div className="lg:hidden h-16" />
+    </>
+  );
+}

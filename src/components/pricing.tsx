@@ -486,18 +486,33 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
               </div>
             )}
             {!serviceType && (
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-600 dark:text-gray-400">
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-600 dark:text-gray-400 mb-8">
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Trusted by 25+ local businesses</span>
+                  <span>100% Satisfaction Guarantee</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  <span>100% client retention rate</span>
+                  <span className="text-blue-500">📞</span>
+                  <span>Same Day Response: (817) 873-6655</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span className="text-green-500">✓</span>
-                  <span>100% satisfaction guarantee</span>
+                  <span className="text-purple-500">🚀</span>
+                  <span>No Contracts Required</span>
+                </div>
+              </div>
+            )}
+            
+            {/* Guarantee Badges */}
+            {!serviceType && (
+              <div className="flex flex-wrap justify-center gap-4 mb-8">
+                <div className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 px-4 py-2 rounded-full text-sm font-semibold">
+                  🛡️ 100% Satisfaction Guarantee
+                </div>
+                <div className="bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-200 px-4 py-2 rounded-full text-sm font-semibold">
+                  ⚡ Starting Next Week
+                </div>
+                <div className="bg-purple-100 dark:bg-purple-900/30 text-purple-800 dark:text-purple-200 px-4 py-2 rounded-full text-sm font-semibold">
+                  📋 No Setup Fees
                 </div>
               </div>
             )}

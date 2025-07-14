@@ -122,22 +122,21 @@ export default function Header() {
     { label: 'FAQs', href: '/about/faqs' }
   ];
 
-  // Dropdown items for Services section
+  // Dropdown items for Services section (reorganized)
   const serviceDropdownItem = [
-    { label: 'Services', href: '/services' },
     { label: 'Website Design', href: '/services/webDesign' },
-    { label: 'SEO', href: '/services/seo' },
-    { label: 'Google PPC Ads', href: '/services/ads' },
+    { label: 'SEO Services', href: '/services/seo' },
+    { label: 'PPC Advertising', href: '/services/ads' },
     { label: 'Social Media Management', href: '/services/socialMedia' },
+    { label: 'View All Services', href: '/services' },
   ];
 
-  // Dropdown items for Forte Solutions section
-  const forteDropdownItems = [
-    { label: 'Forte Solutions™', href: '/solutions' },
-    { label: 'The Forte Method™', href: '/solutions/method' },
+  // Dropdown items for Solutions section (reorganized)
+  const solutionsDropdownItems = [
+    { label: 'Free Site Checkup', href: '/solutions/seotool' },
     { label: 'Forte Care™', href: '/solutions/care' },
-    { label: 'Free Forte SiteCheckup™', href: '/solutions/seotool' },
-
+    { label: 'Forte Guarantee™', href: '/solutions/guarantee' },
+    { label: 'The Forte Method™', href: '/solutions/method' },
   ];
 
   // Don't render theme-dependent content until mounted
@@ -175,7 +174,7 @@ export default function Header() {
                   width="130px"
                   trigger={
                     <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                      <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
+                      <HeaderLink href="/about" showIcon={true}>About</HeaderLink>
                     </div>
                   }
                 />
@@ -190,19 +189,31 @@ export default function Header() {
                 />
 
                 <Dropdown
-                  items={forteDropdownItems}
+                  items={solutionsDropdownItems}
                   width="240px"
                   trigger={
                     <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                      <HeaderLink href="/solutions" showIcon={true}>Forte Solutions™</HeaderLink>
+                      <HeaderLink href="/solutions" showIcon={true}>Solutions</HeaderLink>
                     </div>
                   }
                 />
                 <HeaderLink href="/pricing">Pricing</HeaderLink>
               </nav>
 
-              {/* Desktop Right Side - Theme Toggle and Contact Button */}
-              <nav className="hidden lg:flex items-center space-x-8">
+              {/* Desktop Right Side - Phone Number, Theme Toggle and Contact Button */}
+              <nav className="hidden lg:flex items-center space-x-6">
+                {/* Phone Number */}
+                <div className="flex flex-col items-end">
+                  <a 
+                    href="tel:8178736655"
+                    className="font-roboto font-semibold text-lg text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300"
+                  >
+                    (817) 873-6655
+                  </a>
+                  <span className="text-xs text-gray-600 dark:text-gray-400">
+                    Same Day Response
+                  </span>
+                </div>
                 <div className="ml-4">
                   <ThemeToggle />
                 </div>
@@ -233,7 +244,7 @@ export default function Header() {
                     -z-10
                     group-hover:from-[#4c63e6]
                   "></span>
-                  Contact Us
+                  Get Free Analysis
                   <Icon name="rightarrow" alt="right arrow icon" className="w-[7px] h-[12px]" />
                 </Link>
               </nav>
@@ -301,7 +312,7 @@ export default function Header() {
               />
 
               <Dropdown
-                items={forteDropdownItems}
+                items={solutionsDropdownItems}
                 width="240px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
@@ -392,7 +403,7 @@ export default function Header() {
                     -z-20
                   "></span>
 
-                  Contact Us <Icon
+                  Get Quote <Icon
                     name='rightarrow'
                     alt="right arrow icon"
                     className="w-[7px] h-[12px]"
@@ -525,11 +536,11 @@ export default function Header() {
                   >
                     <div className="pl-6 space-y-3">
                       {[
-                        { href: '/services', text: 'Services' },
                         { href: '/services/webDesign', text: 'Website Design' },
-                        { href: '/services/seo', text: 'SEO' },
-                        { href: '/services/ads', text: 'Google PPC Ads' },
-                        { href: '/services/socialMedia', text: 'Social Media' }
+                        { href: '/services/seo', text: 'SEO Services' },
+                        { href: '/services/ads', text: 'PPC Advertising' },
+                        { href: '/services/socialMedia', text: 'Social Media Management' },
+                        { href: '/services', text: 'View All Services' }
                       ].map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
@@ -548,17 +559,17 @@ export default function Header() {
                     </div>
                   </MobileExpandableMenu>
 
-                  {/* Forte Solutions */}
+                  {/* Solutions */}
                   <MobileExpandableMenu
-                    title="Forte Solutions"
+                    title="Solutions"
                     isActive={pathname.startsWith('/solutions')}
                   >
                     <div className="pl-6 space-y-3">
                       {[
-                        { href: '/solutions', text: 'Forte Solutions™' },
-                        { href: '/solutions/method', text: 'The Forte Method™' },
+                        { href: '/solutions/seotool', text: 'Free Site Checkup' },
                         { href: '/solutions/care', text: 'Forte Care™' },
-                        { href: '/solutions/seotool', text: 'Free Forte SiteCheckup™' }
+                        { href: '/solutions/guarantee', text: 'Forte Guarantee™' },
+                        { href: '/solutions/method', text: 'The Forte Method™' }
                       ].map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
