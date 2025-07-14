@@ -19,7 +19,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import SimpleAnimatedCounter from '@/components/animations/SimpleAnimatedCounter';
 import { HeroBackgroundAnimation, SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import MeetConnorSection from '@/components/MeetConnorSection';
+import MeetSethSection from '@/components/MeetConnorSection';
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -307,10 +307,6 @@ export default function Home() {
                   <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-[#626262] dark:text-white px-4 max-w-2xl mx-auto">
                     Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
                   </p>
-                  
-                  <div className="flex justify-center pt-4">
-                    <LightButton href="/contact">Lock In My $200/Month Rate</LightButton>
-                  </div>
                 </div>
               </SimpleScrollReveal>
             </div>
@@ -459,12 +455,6 @@ export default function Home() {
                         </p>
                       </SimpleScrollReveal>
                     </div>
-                    
-                    <SimpleScrollReveal direction="up" delay={400}>
-                      <div className="flex justify-start">
-                        <LightButton href="/contact">Lock In My $200/Month Rate</LightButton>
-                      </div>
-                    </SimpleScrollReveal>
                   </div>
                 </SimpleScrollReveal>
 
@@ -851,7 +841,7 @@ export default function Home() {
       </section>
 
       {/* Meet Connor Section */}
-      <MeetConnorSection />
+      <MeetSethSection />
       
       {/* Contact Form */}
       <ContactForm />

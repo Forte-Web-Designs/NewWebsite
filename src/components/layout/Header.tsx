@@ -124,15 +124,16 @@ export default function Header() {
 
   // Dropdown items for Services section (reorganized)
   const serviceDropdownItem = [
+    { label: 'Services', href: '/services' },
     { label: 'Website Design', href: '/services/webDesign' },
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'PPC Advertising', href: '/services/ads' },
     { label: 'Social Media Management', href: '/services/socialMedia' },
-    { label: 'View All Services', href: '/services' },
   ];
 
   // Dropdown items for Solutions section (reorganized)
   const solutionsDropdownItems = [
+    { label: 'Forte Solutions', href: '/solutions' },
     { label: 'Free Site Checkup', href: '/solutions/seotool' },
     { label: 'Forte Care™', href: '/solutions/care' },
     { label: 'Forte Guarantee™', href: '/solutions/guarantee' },

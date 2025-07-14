@@ -2,7 +2,7 @@ import SimpleScrollReveal from './animations/SimpleScrollReveal';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import LightButton from './LightButton';
 
-export default function MeetConnorSection() {
+export default function MeetSethSection() {
   return (
     <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/20">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +18,7 @@ export default function MeetConnorSection() {
                 <div className="relative w-32 h-32 sm:w-40 sm:h-40">
                   <OptimizedImage 
                     src="/images/about/headshot.jpg" 
-                    alt="Connor - Founder & Lead Developer of Forte Web Designs"
+                    alt="Seth - Founder & Lead Developer of Forte Web Designs"
                     width={160}
                     height={160}
                     className="w-full h-full object-cover rounded-full border-4 border-white/20 shadow-2xl"
@@ -34,7 +34,7 @@ export default function MeetConnorSection() {
               {/* Professional Title */}
               <div className="space-y-3">
                 <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-                  Meet Connor
+                  Meet Seth
                 </h2>
                 <p className="text-lg text-blue-600 dark:text-blue-400 font-medium">
                   Founder & Lead Developer
@@ -54,7 +54,7 @@ export default function MeetConnorSection() {
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-3 border border-gray-200 dark:border-gray-700 shadow-sm">
                   <div className="text-lg font-bold text-gray-900 dark:text-white">100%</div>
-                  <div className="text-xs text-gray-600 dark:text-gray-400">Your Success</div>
+                  <div className="text-xs text-gray-600 dark:text-gray-400">Customer First</div>
                 </div>
               </div>
               
@@ -72,7 +72,7 @@ export default function MeetConnorSection() {
               </div>
               
               <LightButton href="/contact">
-                Work Directly With Connor
+                Work Directly With Seth
               </LightButton>
             </div>
           </SimpleScrollReveal>
@@ -92,7 +92,7 @@ export default function MeetConnorSection() {
                   <div className="relative w-64 h-64">
                     <OptimizedImage 
                       src="/images/about/headshot.jpg" 
-                      alt="Connor - Founder & Lead Developer of Forte Web Designs"
+                      alt="Seth - Founder & Lead Developer of Forte Web Designs"
                       width={256}
                       height={256}
                       className="w-full h-full object-cover rounded-full border-4 border-white/20 shadow-2xl"
@@ -108,7 +108,7 @@ export default function MeetConnorSection() {
                 {/* Professional Title */}
                 <div className="space-y-4">
                   <h2 className="text-4xl font-bold text-gray-900 dark:text-white">
-                    Meet Connor
+                    Meet Seth
                   </h2>
                   <p className="text-xl text-blue-600 dark:text-blue-400 font-medium">
                     Founder & Lead Developer
@@ -128,7 +128,7 @@ export default function MeetConnorSection() {
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 shadow-sm">
                     <div className="text-2xl font-bold text-gray-900 dark:text-white">100%</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Your Success</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Customer First</div>
                   </div>
                 </div>
               </div>
@@ -180,7 +180,7 @@ export default function MeetConnorSection() {
                 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <LightButton href="/contact" className="flex-1">
-                    Work Directly With Connor
+                    Work Directly With Seth
                   </LightButton>
                   <LightButton href="/about" className="flex-1 bg-transparent border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
                     Learn More About Me
