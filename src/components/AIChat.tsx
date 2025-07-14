@@ -593,13 +593,20 @@ const AIChat = () => {
                 </button>
               </div>
               
-              {/* Contact prompt - Enhanced */}
-              <div className="pt-3">
+              {/* Contact prompts - Enhanced */}
+              <div className="pt-3 space-y-3">
                 <button
                   onClick={() => sendMessage("I'd like to get in contact with you")}
                   className="w-full text-sm lg:text-base bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-700 hover:from-indigo-700 hover:via-blue-700 hover:to-blue-800 text-white py-4 lg:py-5 rounded-xl transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border border-blue-500"
                 >
                   📞 Get in contact with us
+                </button>
+                
+                <button
+                  onClick={() => setShowContactForm(true)}
+                  className="w-full text-sm lg:text-base bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 dark:from-gray-700 dark:to-gray-600 dark:hover:from-gray-600 dark:hover:to-gray-500 text-gray-700 dark:text-gray-200 py-3 lg:py-4 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 border border-gray-300 dark:border-gray-600"
+                >
+                  📝 Quick Contact Form
                 </button>
               </div>
             </div>
