@@ -171,30 +171,35 @@ export default function Home() {
       description:
         "Align your brand & goals with strategy — we understand your vision, target audience, and success metrics through personalized discovery",
       icon: "/images/home/foundation.svg",
+      tagline: "Clarity. Strategy. Direction."
     },
     {
       title: "Outline", 
       description:
         "Content that converts — we craft SEO-optimized copy that speaks to your customers and drives action, no filler content",
       icon: "/images/home/outline.svg",
+      tagline: "Words. Impact. Results."
     },
     {
       title: "Refine",
       description:
         "Collaborative review to nail your message — see your custom design, provide feedback, and ensure every detail serves your business goals",
       icon: "/images/home/refine.svg",
+      tagline: "Perfect. Polish. Precision."
     },
     {
       title: "Tailor",
       description:
-        "Hand-coded for speed & conversions — mobile-optimized, 98-100 PageSpeed scores, zero bloat, maximum performance",
+        "Hand-coded for speed & conversions — mobile-optimized, lightning-fast loading, zero bloat, maximum performance that keeps visitors engaged",
       icon: "/images/home/tailor.svg",
+      tagline: "Fast. Secure. Converting."
     },
     {
       title: "Elevate",
       description:
         "Launch & continuous growth — analytics tracking, ongoing optimization, unlimited edits. You focus on business, we handle the tech",
       icon: "/images/home/elevate.svg",
+      tagline: "Growth. Success. Freedom."
     },
   ];
 
@@ -305,7 +310,7 @@ export default function Home() {
                   </h1>
                   
                   <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-[#626262] dark:text-white px-4 max-w-2xl mx-auto">
-                    Guaranteed 98-100 PageSpeed scores. U.S.-based development. Forte Care™ included. No templates, no surprises—just high-converting websites that work.
+                    Lightning-fast loading guaranteed. U.S.-based development. Forte Care™ included. No templates, no surprises—just high-converting websites that work.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -477,7 +482,7 @@ export default function Home() {
                       
                       <SimpleScrollReveal direction="up" delay={300}>
                         <p className="font-display font-medium text-[20px] leading-[28px] tracking-[0%] text-[#626262] dark:text-white max-w-lg">
-                          Guaranteed 98-100 PageSpeed scores. U.S.-based development. Forte Care™ included. No templates, no surprises—just high-converting websites that work.
+                          Lightning-fast loading guaranteed. U.S.-based development. Forte Care™ included. No templates, no surprises—just high-converting websites that work.
                         </p>
                       </SimpleScrollReveal>
                     </div>
@@ -684,8 +689,8 @@ export default function Home() {
           {/* Feature Tags */}
           <div className="mt-10 flex flex-wrap gap-3 lg:gap-4 justify-center items-center max-w-5xl mx-auto">
             {[
-              "98-100 PageSpeed", "Fort Knox Security", "Lightning Fast", "Unlimited Updates", "Premium Hosting",
-              "Growth Analytics", "24/7 Support", "SEO-Ready", 
+              "Lightning Fast Loading", "Fort Knox Security", "Visitors Stay & Convert", "Unlimited Updates", "Premium Hosting",
+              "Growth Analytics", "24/7 Support", "Google-Ready", 
               "Conversion Tracking", "Mobile-Optimized"
             ].map((text, index) => (
               <div

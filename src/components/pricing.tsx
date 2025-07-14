@@ -455,7 +455,7 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
     'Hand-Coded Website – built from scratch with the Forte™ methodology',
     'Forte Care™ Included – ongoing maintenance, updates, and optimization',
     'Responsive Design – optimized for all devices and screen sizes',
-    'High-Speed Performance – 98–100 Google PageSpeed scores guaranteed',
+    'High-Speed Performance – lightning-fast loading that converts visitors',
     'Security First – no WordPress, no plugins, no vulnerabilities',
     'SEO-Ready Foundation – structured for visibility and ready for Forte SEO™ add-ons'
   ] : undefined;
@@ -497,7 +497,7 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-purple-500">🚀</span>
-                  <span>No Contracts Required</span>
+                  <span>12-Month Commitment (Then Month-to-Month)</span>
                 </div>
               </div>
             )}
@@ -774,6 +774,53 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
                 <Link href="/case-studies" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
                   View All Success Stories →
                 </Link>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        )}
+
+        {/* Payment Options Mini-FAQ */}
+        {(!serviceType || serviceType === 'website') && (
+          <SimpleScrollReveal direction="up" delay={850}>
+            <div className="mb-16 bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+              <div className="max-w-4xl mx-auto">
+                <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                  💡 Payment Options Explained
+                </h3>
+                
+                <div className="grid md:grid-cols-2 gap-6">
+                  <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold text-green-800 dark:text-green-200 mb-3">
+                      ✅ Monthly Plans (Recommended)
+                    </h4>
+                    <ul className="text-sm text-green-700 dark:text-green-300 space-y-2">
+                      <li>• 12-month commitment, then month-to-month</li>
+                      <li>• Includes Forte Care™ support & hosting</li>
+                      <li>• Easy to add SEO, PPC, or Social services</li>
+                      <li>• Predictable monthly investment</li>
+                      <li>• Full support & unlimited updates</li>
+                    </ul>
+                  </div>
+                  
+                  <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6">
+                    <h4 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
+                      💰 One-Time Options Available
+                    </h4>
+                    <ul className="text-sm text-blue-700 dark:text-blue-300 space-y-2">
+                      <li>• Higher upfront investment</li>
+                      <li>• You own the website completely</li>
+                      <li>• Hosting & support sold separately</li>
+                      <li>• Best for established businesses</li>
+                      <li>• Contact us for custom quote</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg text-center">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <strong>Most small businesses prefer monthly plans</strong> because they include everything needed to succeed online with predictable costs and full support.
+                  </p>
+                </div>
               </div>
             </div>
           </SimpleScrollReveal>

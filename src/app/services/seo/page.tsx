@@ -90,7 +90,7 @@ export default function SeoDesignPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">✓</span>
-                  Technical SEO optimization for 98-100 PageSpeed scores
+                  Lightning-fast technical optimization that Google loves
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">✓</span>

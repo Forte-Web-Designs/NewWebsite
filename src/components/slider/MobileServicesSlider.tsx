@@ -19,28 +19,40 @@ const MobileServicesSlider: React.FC<MobileServicesSliderProps> = ({ isDark }) =
   const slides = [
     {
       id: 1,
-      title: "High Performance Websites",
+      title: "Websites That Actually Make You Money",
+      problem: "Your template website is slow, breaks when updated, and doesn't convert visitors",
+      solution: "Hand-coded custom websites built for speed, security, and conversions",
+      benefit: "Turn visitors into customers with lightning-fast loading and zero downtime",
       description: "Fully custom-coded websites built for speed, security, and long-term growth. No templates, no page builders.",
       lightImage: "/images/home/Frame2.png",
       darkImage: "/images/home/Frame8.png",
     },
     {
       id: 2,
-      title: "SEO Services",
+      title: "Get Found by Customers Who Want to Buy",
+      problem: "Customers can't find you on Google when they search for your services",
+      solution: "Strategic SEO that gets you ranked for keywords that actually matter",
+      benefit: "Show up when customers are ready to buy, not just browsing",
       description: "Improve your search rankings and drive organic traffic with our comprehensive SEO optimization services.",
       lightImage: "/images/home/Frame3.png",
       darkImage: "/images/home/Frame7.png",
     },
     {
       id: 3,
-      title: "Google PPC Ads",
+      title: "Google Ads That Actually Work",
+      problem: "You're burning money on ads that bring tire-kickers, not real customers",
+      solution: "Targeted Google Ads campaigns designed to bring qualified leads only",
+      benefit: "Stop wasting ad budget and start getting leads who are ready to buy",
       description: "Get immediate visibility with targeted Google Ads campaigns designed to drive qualified leads to your business.",
       lightImage: "/images/home/Frame1.png",
       darkImage: "/images/home/Frame5.png",
     },
     {
       id: 4,
-      title: "Social Media Management",
+      title: "Social Media That Actually Sells",
+      problem: "Your social media gets likes but doesn't bring in actual customers",
+      solution: "Strategic social media content that turns followers into paying customers",
+      benefit: "Build a community that actually buys from you, not just follows you",
       description: "Build your brand presence and engage your audience with strategic social media content and management.",
       lightImage: "/images/home/Frame4.png",
       darkImage: "/images/home/Frame6.png",
@@ -212,7 +224,7 @@ const MobileServicesSlider: React.FC<MobileServicesSliderProps> = ({ isDark }) =
               }}
             >
               <div className="px-4 h-full">
-                <div className="grid gap-[24px] rounded-[16px] px-[20px] py-[20px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,#101010_0%,rgba(16,16,16,0)_100%)] h-full">
+                <div className="grid gap-[20px] rounded-[16px] px-[20px] py-[20px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,#101010_0%,rgba(16,16,16,0)_100%)] h-full">
                   <div className="flex justify-center">
                     <OptimizedImage
                       src={isDark ? slide.darkImage : slide.lightImage}
@@ -223,13 +235,44 @@ const MobileServicesSlider: React.FC<MobileServicesSliderProps> = ({ isDark }) =
                       priority={index === 0}
                     />
                   </div>
-                  <h3 className="font-Inter font-medium text-[20px] leading-[36px] tracking-normal text-center text-gray-900 dark:text-white">
+                  <h3 className="font-Inter font-medium text-[18px] leading-[24px] tracking-normal text-center text-gray-900 dark:text-white">
                     {slide.title}
                   </h3>
-                  <p className="text-[#626262] font-Inter text-[14px] leading-[18px] text-center dark:text-gray-400">
-                    {slide.description}
-                  </p>
-                  <Link href="/pricing" className="font-inter text-[16px] text-[#0024FF] flex gap-[8px] items-center justify-center dark:text-[#B2BDFF]">
+                  
+                  {/* Problem/Solution/Benefit Structure */}
+                  <div className="space-y-3">
+                    {/* Problem */}
+                    <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-3 border border-red-200 dark:border-red-800">
+                      <div className="flex items-start gap-2">
+                        <span className="text-red-500 mt-0.5 text-sm">✕</span>
+                        <p className="text-red-700 dark:text-red-300 text-[12px] leading-[16px] font-medium">
+                          {slide.problem}
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Solution */}
+                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-200 dark:border-blue-800">
+                      <div className="flex items-start gap-2">
+                        <span className="text-blue-500 mt-0.5 text-sm">→</span>
+                        <p className="text-blue-700 dark:text-blue-300 text-[12px] leading-[16px] font-medium">
+                          {slide.solution}
+                        </p>
+                      </div>
+                    </div>
+                    
+                    {/* Benefit */}
+                    <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3 border border-green-200 dark:border-green-800">
+                      <div className="flex items-start gap-2">
+                        <span className="text-green-500 mt-0.5 text-sm">✓</span>
+                        <p className="text-green-700 dark:text-green-300 text-[12px] leading-[16px] font-medium">
+                          {slide.benefit}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <Link href="/pricing" className="font-inter text-[14px] text-[#0024FF] flex gap-[8px] items-center justify-center dark:text-[#B2BDFF] hover:underline transition-colors">
                     See Pricing{" "}
                     <span>
                       {isDark ? (

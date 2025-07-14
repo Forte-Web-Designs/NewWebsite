@@ -255,7 +255,7 @@ export default function CaseStudiesPage() {
                       Performance Promise
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400">
-                      We guarantee 98+ Google PageSpeed scores and mobile optimization that actually works.
+                      We guarantee lightning-fast loading and mobile optimization that actually works.
                     </p>
                   </div>
                   <div className="text-center">

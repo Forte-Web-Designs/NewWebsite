@@ -8,6 +8,7 @@ interface StepItem {
   title: string;
   description: string;
   icon: string;
+  tagline?: string; // 3-word benefit tagline
 }
 
 interface ForteMethodStepsProps {
@@ -158,6 +159,13 @@ export default function ForteMethodSteps({
                   <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                     {items[activeStep]?.title}
                   </h4>
+                  {items[activeStep]?.tagline && (
+                    <div className="mb-3">
+                      <span className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs sm:text-sm font-bold px-3 py-1 rounded-full">
+                        {items[activeStep].tagline}
+                      </span>
+                    </div>
+                  )}
                   <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
                     {items[activeStep]?.description}
                   </p>

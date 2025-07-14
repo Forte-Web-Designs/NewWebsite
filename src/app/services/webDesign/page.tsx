@@ -66,13 +66,13 @@ export default function WebsiteDesignPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
               <div className="bg-white dark:bg-[#101010] p-6 sm:p-8 rounded-lg sm:rounded-xl border border-[#E5E5E5] dark:border-[#262626] shadow-sm text-center">
                 <h3 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold font-roboto bg-gradient-to-r from-[#203FFC] to-[#8D9DFF] bg-clip-text text-transparent mb-3 sm:mb-4 leading-tight">
-                  98–100
+                  &lt;2s
                 </h3>
                 <p className="text-sm sm:text-base md:text-lg font-semibold dark:text-white text-[#000000] mb-2">
-                  Google PageSpeed Score
+                  Lightning-Fast Load Times
                 </p>
                 <p className="text-xs sm:text-sm text-[#626262] dark:text-[#B4B4B4]">
-                  vs. 30-60 for most templates
+                  Visitors stay, engage & convert faster
                 </p>
               </div>
               
@@ -373,7 +373,7 @@ export default function WebsiteDesignPage() {
               </summary>
               <div className="mt-4">
                 <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
-                  Templates score 30-60 on Google PageSpeed. Forte™ websites score 98-100. Templates have security vulnerabilities. Forte™ sites have zero (no plugins, no risk). Templates slow down over time. Forte™ sites stay lightning-fast forever.
+                  Template sites load slowly and lose customers. Forte™ websites load in under 2 seconds, so visitors stay and convert. Templates have security risks from plugins. Forte™ sites are rock-solid secure with zero vulnerabilities. Templates get slower over time. Forte™ sites stay lightning-fast forever.
                 </p>
               </div>
             </details>

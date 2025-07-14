@@ -303,7 +303,7 @@ export default function ServicePage() {
                 }}
               >
                 <ul className="list-disc pl-5 space-y-3 text-sm">
-                  <li className="text-white font-display font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">PageSpeed & Core Web Vitals grades</li>
+                  <li className="text-white font-display font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">Site speed & performance grades</li>
                   <li className="text-white font-isplay font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">SSL & security checkups</li>
                   <li className="text-white font-display font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">Update alerts & improvement tips</li>
                   <li className="text-white font-display font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">Content & SEO suggestions</li>

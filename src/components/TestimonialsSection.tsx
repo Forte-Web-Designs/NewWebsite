@@ -142,8 +142,8 @@ export default function TestimonialsSection({
                   <div className="text-sm text-gray-600 dark:text-gray-400">Local Businesses Served</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-gray-900 dark:text-white">98-100</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Google PageSpeed Score</div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">&lt;2s</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Average Load Time</div>
                 </div>
               </div>
             </div>

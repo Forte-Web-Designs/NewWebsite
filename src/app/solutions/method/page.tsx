@@ -71,7 +71,7 @@ export default function SocialMediaManagement() {
           <p className="max-w-3xl font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
             Your site's speed and user experience directly affect your traffic,
             SEO, and conversion rates. That's why we build sites that load in
-            under a second, crush PageSpeed scores, and give your visitors an
+            under a second, deliver lightning-fast performance, and give your visitors an
             effortless experience.
           </p>
         </div>
