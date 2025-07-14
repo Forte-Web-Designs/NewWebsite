@@ -6,6 +6,7 @@
 <body>
   <!-- This form is for Netlify form detection during build process -->
   <form name="contact" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
     <input type="text" name="name" />
     <input type="email" name="email" />
     <input type="tel" name="phone" />
@@ -24,6 +25,7 @@
 
   <!-- AI Chat form for Netlify form detection during build process -->
   <form name="ai-chat-contact" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
     <input type="text" name="name" />
     <input type="email" name="email" />
     <input type="tel" name="phone" />
@@ -32,8 +34,6 @@
     <input type="text" name="source" />
     <input type="text" name="chat-history" />
     <input type="text" name="timestamp" />
-  </form>
-    <textarea name="message"></textarea>
   </form>
 </body>
 </html>

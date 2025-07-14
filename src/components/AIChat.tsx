@@ -148,7 +148,10 @@ const AIChat = () => {
         
         fetch("/", {
           method: "POST",
-          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          headers: { 
+            "Content-Type": "application/x-www-form-urlencoded",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+          },
           body: new URLSearchParams(formData as any).toString(),
         }).catch(console.error);
       }, 1000);
@@ -457,8 +460,13 @@ const AIChat = () => {
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Let's Connect!</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Fill out your details and Seth will get back to you within 24 hours.</p>
                 
-                <form onSubmit={handleContactSubmit} className="space-y-4" name="ai-chat-contact" data-netlify="true">
+                <form onSubmit={handleContactSubmit} className="space-y-4" name="ai-chat-contact" data-netlify="true" data-netlify-honeypot="bot-field">
                   <input type="hidden" name="form-name" value="ai-chat-contact" />
+                  <div style={{ display: 'none' }}>
+                    <label>
+                      Don't fill this out if you're human: <input name="bot-field" />
+                    </label>
+                  </div>
                   
                   <div className="space-y-3">
                     <input
