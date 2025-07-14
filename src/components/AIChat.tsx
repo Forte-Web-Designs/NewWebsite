@@ -124,52 +124,52 @@ const AIChat = () => {
 
     // Pricing questions
     if (msg.includes('price') || msg.includes('cost') || msg.includes('how much') || msg.includes('pricing') || msg.includes('expensive') || msg.includes('cheap') || msg.includes('affordable')) {
-      return "Great question! 💰 Here's the thing - most clients actually SAVE money by working with Seth.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost other businesses charge $5k+ upfront. Seth keeps it simple and affordable. Want to chat about what would work for your business?";
+      return "Great question! 💰 Here's the thing - most clients actually SAVE money by working with Forte Web Designs.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost other businesses charge $5k+ upfront. We keep it simple and affordable. Want to chat about what would work for your business?";
     }
 
     // Timeline/process questions  
     if (msg.includes('how long') || msg.includes('timeline') || msg.includes('process') || msg.includes('method') || msg.includes('time') || msg.includes('quick') || msg.includes('fast') || msg.includes('when')) {
-      return "I know you're probably eager to get started! ⚡\n\nHere's Seth's typical timeline:\n• Week 1: You chat about your vision and he designs mockups\n• Week 2-3: He builds your custom website\n• Week 4: You test everything together and launch\n\nThe best part? You're involved every step of the way with unlimited revisions until it's perfect.\n\nReady to get the ball rolling?";
+      return "I know you're probably eager to get started! ⚡\n\nHere's our typical timeline:\n• Week 1: We chat about your vision and design mockups\n• Week 2-3: We build your custom website\n• Week 4: You test everything together and launch\n\nThe best part? You're involved every step of the way with unlimited revisions until it's perfect.\n\nReady to get the ball rolling?";
     }
 
     // Services questions
     if (msg.includes('service') || msg.includes('what do you do') || msg.includes('help') || msg.includes('offer') || msg.includes('seo') || msg.includes('google') || msg.includes('ranking')) {
-      return "Seth is basically your one-stop shop for getting more customers online! 🎯\n\nHere's how he helps businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (his specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost clients see more leads within the first month. What's your biggest challenge right now - getting found online or converting visitors?";
+      return "Forte Web Designs is basically your one-stop shop for getting more customers online! 🎯\n\nHere's how we help businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (our specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost clients see more leads within the first month. What's your biggest challenge right now - getting found online or converting visitors?";
     }
 
     // ROI/Results questions
     if (msg.includes('results') || msg.includes('roi') || msg.includes('return') || msg.includes('worth it') || msg.includes('work') || msg.includes('effective')) {
-      return "Love that you're asking about results! 📈 That's exactly how Seth thinks.\n\nHere's what his clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty. Want to see how this could work for you?";
+      return "Love that you're asking about results! 📈 That's exactly how Forte Web Designs thinks.\n\nHere's what our clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty. Want to see how this could work for you?";
     }
 
     // Contact/meeting questions
-    if (msg.includes('talk') || msg.includes('call') || msg.includes('meet') || msg.includes('consultation') || msg.includes('discuss') || msg.includes('schedule')) {
-      return "Seth would love to chat! 📞 Here's the deal - he offers a free 15-minute strategy call where you'll:\n\n• Talk about your business goals\n• Identify what's holding you back online\n• Map out a plan to get you more customers\n• See if you're a good fit to work together\n\nNo pressure, no sales pitch - just honest advice from someone who's helped 100+ businesses grow online.\n\nClick the 'Contact Us' button below to get in touch!";
+    if (msg.includes('contact') || msg.includes('get in touch') || msg.includes('talk') || msg.includes('call') || msg.includes('meet') || msg.includes('consultation') || msg.includes('discuss') || msg.includes('schedule')) {
+      return "Awesome! 🎉 We'd love to connect with you.\n\nSeth offers a free 15-minute strategy call where you'll:\n• Talk about your business goals\n• Identify what's holding you back online\n• Map out a plan to get you more customers\n• See if you're a good fit to work together\n\nNo pressure, no sales pitch - just honest advice from someone who's helped 100+ businesses grow online.\n\nI'll open the contact form for you right now!|SHOW_FORM";
     }
 
     // Business growth questions
-    if (msg.includes('business') || msg.includes('grow') || msg.includes('more customers') || msg.includes('sales') || msg.includes('leads') || msg.includes('traffic')) {
-      return "Now we're talking! 🚀 Growing businesses online is exactly what Seth does.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nSeth fixes all of that. His websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\nWhat's your biggest frustration with your current online presence?";
+    if (msg.includes('business') || msg.includes('grow') || msg.includes('more customers') || msg.includes('sales') || msg.includes('leads') || msg.includes('traffic') || msg.includes('forte web designs')) {
+      return "Now we're talking! 🚀 Growing businesses online is exactly what Forte Web Designs does.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nForte Web Designs fixes all of that. Our websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\nWhat's your biggest frustration with your current online presence?";
     }
 
     // Website questions
-    if (msg.includes('website') || msg.includes('site') || msg.includes('web') || msg.includes('design') || msg.includes('redesign') || msg.includes('new site')) {
-      return "Perfect! 🎨 Here's why Seth's websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - Seth doesn't just build pretty websites. He builds websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\nWant to see some examples of websites that are actually working for his clients?";
+    if (msg.includes('website') || msg.includes('site') || msg.includes('web') || msg.includes('design') || msg.includes('redesign') || msg.includes('new site') || msg.includes('forte web designs')) {
+      return "Perfect! 🎨 Here's why Forte Web Designs' websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - we don't just build pretty websites. We build websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\nWant to see some examples of websites that are actually working for our clients?";
     }
 
     // Location/local questions
     if (msg.includes('location') || msg.includes('where') || msg.includes('local') || msg.includes('area') || msg.includes('texas')) {
-      return "Seth is based in Texas but works with businesses nationwide! 🏠\n\nHonestly, some of his best clients are hundreds of miles away. Everything happens through video calls, screen shares, and email.\n\nThe beauty of web design? Distance doesn't matter. Results do.\n\nPlus, he specializes in local SEO, so whether you're in Texas, New York, or anywhere in between, he can help you dominate your local market.\n\nWhere's your business located?";
+      return "We're based in Texas but work with businesses nationwide! 🏠\n\nHonestly, some of our best clients are hundreds of miles away. Everything happens through video calls, screen shares, and email.\n\nThe beauty of web design? Distance doesn't matter. Results do.\n\nPlus, we specialize in local SEO, so whether you're in Texas, New York, or anywhere in between, we can help you dominate your local market.\n\nWhere's your business located?";
     }
 
     // Competitor/comparison questions
-    if (msg.includes('different') || msg.includes('better') || msg.includes('why you') || msg.includes('competitors') || msg.includes('other') || msg.includes('comparison')) {
-      return "Great question! 🤔 Here's what makes Seth different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nSeth?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nHe's not just a designer - he's a business owner who understands what it takes to get customers online.\n\nWant to see the difference this makes?";
+    if (msg.includes('different') || msg.includes('better') || msg.includes('why you') || msg.includes('why us') || msg.includes('why forte') || msg.includes('competitors') || msg.includes('other') || msg.includes('comparison') || msg.includes('choose forte')) {
+      return "Great question! 🤔 Here's what makes Forte Web Designs different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nForte Web Designs?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nWe're not just designers - we're business owners who understand what it takes to get customers online.\n\nWant to see the difference this makes?";
     }
 
     // Simple greetings
     if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || msg === 'good morning' || msg === 'good afternoon') {
-      return "Hey! 👋 Great to meet you! \n\nI'm Forte AI, Seth's digital assistant. Seth helps small businesses get more customers through websites that actually work.\n\nWhat's your business? Are you looking to get more leads, improve your online presence, or maybe starting something new?";
+      return "Hey! 👋 Great to meet you! \n\nI'm Forte AI, Seth's digital assistant. Seth and the team at Forte Web Designs help small businesses get more customers through websites that actually work.\n\nWhat's your business? Are you looking to get more leads, improve your online presence, or maybe starting something new?";
     }
 
     // Thank you responses
@@ -178,7 +178,7 @@ const AIChat = () => {
     }
 
     // Default helpful response
-    return "I love chatting with business owners! 💬\n\nSeth can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\nWhat's your biggest challenge right now? Or what questions do you have about growing online?";
+    return "I love chatting with business owners! 💬\n\nForte Web Designs can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\nWhat's your biggest challenge right now? Or what questions do you have about growing online?";
   };
 
   const sendMessage = async (messageContent: string) => {
@@ -196,15 +196,27 @@ const AIChat = () => {
 
     // Simulate typing delay
     setTimeout(() => {
+      const responseContent = getSmartResponse(userMessage.content);
+      
+      // Check if response includes special action flag
+      const [content, action] = responseContent.split('|');
+      
       const botResponse: Message = {
         id: (Date.now() + 1).toString(),
         type: 'bot',
-        content: getSmartResponse(userMessage.content),
+        content: content,
         timestamp: new Date()
       };
 
       setMessages(prev => [...prev, botResponse]);
       setIsTyping(false);
+      
+      // Handle special actions
+      if (action === 'SHOW_FORM') {
+        setTimeout(() => {
+          setShowContactForm(true);
+        }, 1500);
+      }
     }, 1500);
   };
 
@@ -367,8 +379,8 @@ const AIChat = () => {
             </div>
           </div>
 
-          {/* Messages - Enhanced readability */}
-          <div className="flex-1 overflow-y-auto p-4 lg:p-5 space-y-4 lg:space-y-5 min-h-0 scroll-smooth">
+          {/* Messages - Enhanced readability with increased height */}
+          <div className="flex-[2] overflow-y-auto p-4 lg:p-5 space-y-4 lg:space-y-5 min-h-0 scroll-smooth">
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -523,8 +535,8 @@ const AIChat = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Enhanced Quick Action Prompts */}
-          <div className="p-4 lg:p-5 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+          {/* Enhanced Quick Action Prompts - Reduced height */}
+          <div className="p-4 lg:p-5 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 max-h-[240px] lg:max-h-[280px]">
             <p className="text-sm lg:text-base text-gray-700 dark:text-gray-300 mb-4 text-center font-medium">What would you like to know?</p>
             
             <div className="grid grid-cols-1 gap-3 lg:gap-4">
@@ -537,7 +549,7 @@ const AIChat = () => {
                   💰 Pricing & Plans
                 </button>
                 <button
-                  onClick={() => sendMessage("How can Seth help grow my business?")}
+                  onClick={() => sendMessage("How can Forte Web Designs help grow my business?")}
                   className="text-sm lg:text-base bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
                   🚀 Grow Business
@@ -562,32 +574,32 @@ const AIChat = () => {
               {/* Secondary prompts - Enhanced */}
               <div className="grid grid-cols-3 gap-2 lg:gap-3 pt-3 border-t border-gray-200 dark:border-gray-600">
                 <button
-                  onClick={() => sendMessage("Tell me about Seth's website services")}
+                  onClick={() => sendMessage("Tell me about Forte Web Designs' website services")}
                   className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
                   🎨 Websites
                 </button>
                 <button
-                  onClick={() => sendMessage("How does Seth help with SEO?")}
+                  onClick={() => sendMessage("How does Forte Web Designs help with SEO?")}
                   className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
                   📍 SEO Help
                 </button>
                 <button
-                  onClick={() => sendMessage("Why choose Seth over others?")}
+                  onClick={() => sendMessage("Why choose Forte Web Designs over others?")}
                   className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
-                  🤔 Why Seth?
+                  🤔 Why Us?
                 </button>
               </div>
               
               {/* Contact prompt - Enhanced */}
               <div className="pt-3">
                 <button
-                  onClick={() => setShowContactForm(true)}
+                  onClick={() => sendMessage("I'd like to get in contact with you")}
                   className="w-full text-sm lg:text-base bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-700 hover:from-indigo-700 hover:via-blue-700 hover:to-blue-800 text-white py-4 lg:py-5 rounded-xl transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border border-blue-500"
                 >
-                  📞 Get In Touch with Seth
+                  📞 Get in contact with us
                 </button>
               </div>
             </div>
