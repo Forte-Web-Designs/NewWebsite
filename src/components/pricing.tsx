@@ -50,7 +50,7 @@ const pricingPlans: PricingPlan[] = [
       'Domain + Premium Hosting',
       'Forte Care™ Plus Priority Support',
       'Advanced Google Analytics + Conversion Tracking',
-      'Monthly Strategy Calls & Performance Reviews',
+      'Priority Email Support & Faster Response Times',
       'SEO-Optimized for Better Rankings',
       'Forte Guarantee™'
     ],
@@ -603,7 +603,7 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
                       </div>
                       <div className="flex items-center gap-2">
                         <span className="text-green-500">🎯</span>
-                        <span className="text-gray-700 dark:text-gray-300"><strong>Monthly strategy calls</strong></span>
+                        <span className="text-gray-700 dark:text-gray-300"><strong>Priority email support & faster response</strong></span>
                       </div>
                       <div className="text-sm text-gray-600 dark:text-gray-400 pt-2 border-t">
                         <strong>Total with SEO + PPC:</strong> $1,500/month<br/>

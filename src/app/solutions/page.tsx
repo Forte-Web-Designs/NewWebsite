@@ -6,7 +6,7 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 const data = [
   {
     title: "Introducing Forte Solutions™",
-    description: "We believe small businesses deserve more than cookie-cutter websites. Forte Solutions™ is our complete ecosystem — combining strategy, handcrafted design, optimized performance, and long-term care into one seamless experience."
+    description: "I believe small businesses deserve more than cookie-cutter websites. Forte Solutions™ is my complete ecosystem — combining strategy, handcrafted design, optimized performance, and long-term care into one seamless experience with personal attention you won't get from agencies."
   },
   {
     title: "Forte Growth™",
