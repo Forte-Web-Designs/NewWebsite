@@ -430,7 +430,7 @@ const AIChat = () => {
           </div>
 
           {/* Messages - Enhanced readability with increased height */}
-          <div className="flex-[2] overflow-y-auto p-4 lg:p-5 space-y-4 lg:space-y-5 min-h-0 scroll-smooth">
+          <div className="flex-[3] overflow-y-auto p-4 lg:p-5 space-y-4 lg:space-y-5 min-h-0 scroll-smooth">
             {messages.map((message) => (
               <div
                 key={message.id}
@@ -620,69 +620,69 @@ const AIChat = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Enhanced Quick Action Prompts - Reduced height */}
-          <div className="p-4 lg:p-5 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 max-h-[320px] lg:max-h-[360px] overflow-y-auto">
-            <p className="text-sm lg:text-base text-gray-700 dark:text-gray-300 mb-4 text-center font-medium">What would you like to know?</p>
+          {/* Enhanced Quick Action Prompts - Compact height */}
+          <div className="p-3 lg:p-4 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 max-h-[240px] lg:max-h-[260px] overflow-y-auto">
+            <p className="text-xs lg:text-sm text-gray-700 dark:text-gray-300 mb-3 text-center font-medium">What would you like to know?</p>
             
-            <div className="grid grid-cols-1 gap-3 lg:gap-4">
-              {/* Primary prompts - Enhanced */}
-              <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-1 gap-2 lg:gap-3">
+              {/* Primary prompts - More compact */}
+              <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => sendMessage("What's your pricing?")}
-                  className="text-sm lg:text-base bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
+                  className="text-xs lg:text-sm bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  💰 Pricing & Plans
+                  💰 Pricing
                 </button>
                 <button
                   onClick={() => sendMessage("How can Forte Web Designs help grow my business?")}
-                  className="text-sm lg:text-base bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
+                  className="text-xs lg:text-sm bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
                   🚀 Grow Business
                 </button>
               </div>
               
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => sendMessage("What kind of results do clients get?")}
-                  className="text-sm lg:text-base bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
+                  className="text-xs lg:text-sm bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  📈 See Results
+                  📈 Results
                 </button>
                 <button
                   onClick={() => sendMessage("How long does the process take?")}
-                  className="text-sm lg:text-base bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
+                  className="text-xs lg:text-sm bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
                   ⏱️ Timeline
                 </button>
               </div>
 
-              {/* Secondary prompts - Enhanced */}
-              <div className="grid grid-cols-3 gap-2 lg:gap-3 pt-3 border-t border-gray-200 dark:border-gray-600">
+              {/* Secondary prompts - More compact */}
+              <div className="grid grid-cols-3 gap-1.5 lg:gap-2 pt-2 border-t border-gray-200 dark:border-gray-600">
                 <button
                   onClick={() => sendMessage("Tell me about Forte Web Designs' website services")}
-                  className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
+                  className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-2 lg:px-3 lg:py-2.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
-                  🎨 Websites
+                  🎨 Sites
                 </button>
                 <button
                   onClick={() => sendMessage("How does Forte Web Designs help with SEO?")}
-                  className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
+                  className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-2 lg:px-3 lg:py-2.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
-                  📍 SEO Help
+                  📍 SEO
                 </button>
                 <button
                   onClick={() => sendMessage("Why choose Forte Web Designs over others?")}
-                  className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
+                  className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-2 py-2 lg:px-3 lg:py-2.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
                   🤔 Why Us?
                 </button>
               </div>
               
-              {/* Contact prompt - Enhanced */}
-              <div className="pt-4 lg:pt-6">
+              {/* Contact prompt - More compact */}
+              <div className="pt-2">
                 <button
                   onClick={() => sendMessage("I'd like to get in contact with you")}
-                  className="w-full text-sm lg:text-base bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-700 hover:from-indigo-700 hover:via-blue-700 hover:to-blue-800 text-white py-4 lg:py-6 rounded-xl transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border border-blue-500"
+                  className="w-full text-xs lg:text-sm bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-700 hover:from-indigo-700 hover:via-blue-700 hover:to-blue-800 text-white py-3 lg:py-4 rounded-lg transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border border-blue-500"
                 >
                   📞 Get in contact with us
                 </button>
