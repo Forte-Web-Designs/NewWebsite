@@ -147,7 +147,7 @@ export default function ServicePage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">✓</span>
-                  <span>Monthly performance reports showing growth and engagement</span>
+                  <span>Monthly growth reports showing engagement and reach</span>
                 </li>
               </ul>
               
@@ -340,7 +340,7 @@ export default function ServicePage() {
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-[#1A1A1A] w-full">
                 <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">
-                  Performance Reports
+                  Growth Reports
                 </h5>
                 <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400">
                   Simple stats to show growth, engagement, and ROI

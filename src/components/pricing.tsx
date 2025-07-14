@@ -71,9 +71,9 @@ const servicePricingPlans: PricingPlan[] = [
     subtitle: 'Requires Forte Foundation™ or Pro™',
     ctaText: 'Boost Rankings',
     including: [
-      'Technical SEO Foundation',
+      'Website SEO Foundation',
       'Keyword Research & Strategy',
-      'On-Page Optimization',
+      'On-Page SEO',
       'Monthly Forte SEO Reports™'
     ],
     addons: [
@@ -112,7 +112,7 @@ const servicePricingPlans: PricingPlan[] = [
       'Google Ads Campaign Setup',
       'Keyword Research & Strategy',
       'Ad Copy Creation & Testing',
-      'Landing Page Optimization',
+      'Landing Page Creation',
       'Weekly Forte PPC Reports™'
     ],
     addons: [
@@ -132,7 +132,7 @@ const servicePricingPlans: PricingPlan[] = [
       'Everything in Forte PPC Starter™',
       'Multi-Platform Campaigns',
       'Advanced Conversion Tracking',
-      'A/B Testing & Optimization',
+      'A/B Testing & Improvements',
       'Advanced Forte PPC Reports™'
     ],
     addons: [
@@ -212,7 +212,7 @@ const ecosystemPackages: PricingPlan[] = [
     including: [
       'Forte Foundation™ Website (5 pages)',
       'Forte SEO Essential™ Package',
-      'Technical SEO + On-Page Optimization',
+      'Website SEO + On-Page Optimization',
       'Monthly SEO Reports & Strategy',
       'Forte Care™ Support Included'
     ],
@@ -453,9 +453,9 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
 
   const includedFeatures = serviceType === 'website' || !serviceType ? [
     'Hand-Coded Website – built from scratch with the Forte™ methodology',
-    'Forte Care™ Included – ongoing maintenance, updates, and optimization',
+    'Forte Care™ Included – ongoing maintenance, updates, and improvements',
     'Responsive Design – optimized for all devices and screen sizes',
-    'High-Speed Performance – lightning-fast loading that converts visitors',
+    'Lightning-Fast Loading – sites that load instantly and convert visitors',
     'Security First – no WordPress, no plugins, no vulnerabilities',
     'SEO-Ready Foundation – structured for visibility and ready for Forte SEO™ add-ons'
   ] : undefined;
@@ -674,7 +674,7 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
                       What's included in monthly plans?
                     </h4>
                     <p className="text-sm text-gray-600 dark:text-gray-300">
-                      Everything: hosting, security, unlimited edits, performance monitoring, and Forte Care™ support. No hidden fees.
+                      Everything: hosting, security, unlimited edits, speed monitoring, and Forte Care™ support. No hidden fees.
                     </p>
                   </div>
                 </div>
@@ -841,7 +841,7 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
                 <div className="grid md:grid-cols-3 gap-6 mb-8">
                   <div className="text-center">
                     <div className="text-2xl mb-2">🛡️</div>
-                    <p className="text-gray-700 dark:text-gray-300">Continuous security monitoring and performance optimization</p>
+                    <p className="text-gray-700 dark:text-gray-300">Continuous security monitoring and speed optimization</p>
                   </div>
                   <div className="text-center">
                     <div className="text-2xl mb-2">🔧</div>

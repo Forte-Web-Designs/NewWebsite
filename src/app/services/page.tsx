@@ -12,13 +12,13 @@ export const metadata: Metadata = {
 const cardsData = [
   {
     title: "Websites That Actually Make You Money",
-    desc: "Forget pretty websites that don't convert. We hand-code lightning-fast sites that turn visitors into customers. No templates, no page builders, just pure performance.",
+    desc: "Forget pretty websites that don't convert. We hand-code lightning-fast sites that turn visitors into customers. No templates, no page builders, just sites that work.",
     linkText: "Show Me How",
     href: "/services/webDesign",
   },
   {
     title: "Your Website's Personal Bodyguard",
-    desc: "While you sleep, we're monitoring your site 24/7. Unlimited edits, instant fixes, and constant optimization. Think of us as your website's insurance policy.",
+    desc: "While you sleep, we're monitoring your site 24/7. Unlimited edits, instant fixes, and continuous improvements. Think of us as your website's insurance policy.",
     linkText: "Protect My Investment",
     href: "/solutions/care",
   },

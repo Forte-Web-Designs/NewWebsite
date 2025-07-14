@@ -24,7 +24,7 @@ export default function Website2() {
       image: "/images/shared/icons/search.svg"
     },
     {
-      content: "Clean code = better conversions & Google Core Web Vitals",
+      content: "Clean code = better conversions & faster loading",
       image: "/images/shared/icons/cube.svg"
     }
   ]
@@ -51,7 +51,7 @@ export default function Website2() {
     {
       title: "Tailor",
       description:
-        "We hand-code the full site, optimised for mobile, speed, and clean performance",
+        "We hand-code the full site, designed for mobile, speed, and smooth performance",
       icon: "/images/home/tailor.svg",
     },
     {
@@ -183,7 +183,7 @@ export default function Website2() {
         <ForteMethodSteps
           items={sliderItems}
           title="The|Forte Method™"
-          subtitle="A high-performance web design system built for results."
+          subtitle="A proven web design system built for results."
         />
 
         <section className=" container w-[90%] mx-auto px-[10px] pt-[10px] pb-[30px]  rounded-xl  dark:bg-black">

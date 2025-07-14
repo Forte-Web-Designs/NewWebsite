@@ -25,7 +25,7 @@ const faqData: FAQItem[] = [
   {
     question: "What's Included in Ad Management? 🎯",
     answer:
-      "Both plans include full campaign setup, keyword research, ad copy creation, landing page optimization, and detailed reporting. Forte PPC Growth™ adds multi-platform campaigns, advanced tracking, and detailed ROI analysis.",
+      "Both plans include full campaign setup, keyword research, ad copy creation, landing page creation, and detailed reporting. Forte PPC Growth™ adds multi-platform campaigns, advanced tracking, and detailed ROI analysis.",
   },
   {
     question: "How Much Should I Budget for Ad Spend? 💵",
@@ -93,7 +93,7 @@ export default function GooglePPCAdsPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="text-green-500 mt-1">✓</span>
-                  Budget optimization to maximize ROI
+                  Budget improvements to maximize ROI
                 </li>
               </ul>
               <div className="mt-4 p-3 bg-green-100 dark:bg-green-800/30 rounded-lg">
@@ -151,7 +151,7 @@ export default function GooglePPCAdsPage() {
             </div>
             <div>
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
-                4. Constant Optimization
+                4. Constant Improvements
               </h2>
               <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-primary-1400 dark:text-primary-1050 leading-relaxed">
                 We watch your campaigns like a hawk, testing and tweaking to make

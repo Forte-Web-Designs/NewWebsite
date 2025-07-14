@@ -32,7 +32,7 @@ export default function SocialMediaManagement() {
     {
       title: "Tailor",
       description:
-        "We hand-code the full site, optimised for mobile, speed, and clean performance",
+        "We hand-code the full site, designed for mobile, speed, and smooth experience",
       icon: "/images/home/tailor.svg",
     },
     {
@@ -66,17 +66,17 @@ export default function SocialMediaManagement() {
       <div className="flex flex-col md:items-center py-16 sm:py-20 lg:py-28 w-full">
         <div className="w-full flex flex-col md:items-center text-center gap-6 sm:gap-8 mb-12 sm:mb-16">
           <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF]">
-            Performance Comes First
+            Speed Comes First
           </h2>
           <p className="max-w-3xl font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
             Your site's speed and user experience directly affect your traffic,
             SEO, and conversion rates. That's why we build sites that load in
-            under a second, deliver lightning-fast performance, and give your visitors an
+            under a second, deliver lightning-fast speed, and give your visitors an
             effortless experience.
           </p>
         </div>
 
-        {/* Performance Cards - Mobile First Grid */}
+        {/* Speed Cards - Mobile First Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-full gap-4 sm:gap-6">
           <div className="dark:bg-[linear-gradient(180deg,#101010_0%,rgba(16,16,16,0)_100%)] bg-[linear-gradient(180deg,#f4f4f4_0%,#f4f4f4_100%)] py-8 sm:py-12 md:py-16 rounded-2xl gap-4 sm:gap-6 flex flex-col justify-center items-center text-center">
             <div className="border border-transparent p-[1px] bg-[linear-gradient(136.13deg,#565656_16.43%,#000000_49.99%)] bg-origin-border rounded-full w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 flex justify-center items-center">
@@ -109,7 +109,7 @@ export default function SocialMediaManagement() {
               </p>
               <Icon name="equals" className="w-3 h-2 sm:w-4 sm:h-3" />
               <p className="text-sm sm:text-base md:text-lg leading-tight font-normal font-inter dark:text-primary-1050 mt-2">
-                Stronger SEO performance.
+                Better search rankings.
               </p>
             </div>
           </div>

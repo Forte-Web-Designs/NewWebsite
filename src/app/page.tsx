@@ -169,35 +169,28 @@ export default function Home() {
     {
       title: "Foundations",
       description:
-        "Align your brand & goals with strategy — we understand your vision, target audience, and success metrics through personalized discovery",
+        "Discovery and strategy — we understand your vision, target audience, and success metrics to build the right foundation",
       icon: "/images/home/foundation.svg",
       tagline: "Clarity. Strategy. Direction."
     },
     {
-      title: "Outline", 
+      title: "Design", 
       description:
-        "Content that converts — we craft SEO-optimized copy that speaks to your customers and drives action, no filler content",
+        "Custom design and content — we create wireframes, write conversion-focused copy, and design your unique brand experience",
       icon: "/images/home/outline.svg",
-      tagline: "Words. Impact. Results."
+      tagline: "Creative. Compelling. Converting."
     },
     {
-      title: "Refine",
+      title: "Develop",
       description:
-        "Collaborative review to nail your message — see your custom design, provide feedback, and ensure every detail serves your business goals",
-      icon: "/images/home/refine.svg",
-      tagline: "Perfect. Polish. Precision."
-    },
-    {
-      title: "Tailor",
-      description:
-        "Hand-coded for speed & conversions — mobile-optimized, lightning-fast loading, zero bloat, maximum performance that keeps visitors engaged",
+        "Hand-coded for speed — mobile-designed, lightning-fast loading, rock-solid security, maximum results",
       icon: "/images/home/tailor.svg",
-      tagline: "Fast. Secure. Converting."
+      tagline: "Fast. Secure. Reliable."
     },
     {
-      title: "Elevate",
+      title: "Grow",
       description:
-        "Launch & continuous growth — analytics tracking, ongoing optimization, unlimited edits. You focus on business, we handle the tech",
+        "Launch and optimize — analytics tracking, ongoing improvements, unlimited edits. You focus on business, we handle the tech",
       icon: "/images/home/elevate.svg",
       tagline: "Growth. Success. Freedom."
     },
@@ -306,11 +299,11 @@ export default function Home() {
                   </div>
                   
                   <h1 className="font-display font-medium text-[28px] sm:text-[36px] leading-[32px] sm:leading-[40px] tracking-[-0.04em] text-black dark:text-white px-4">
-                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> Built for Speed, Security & Conversions
+                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> That Drive Results
                   </h1>
                   
                   <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-[#626262] dark:text-white px-4 max-w-2xl mx-auto">
-                    Lightning-fast loading guaranteed. U.S.-based development. Forte Care™ included. No templates, no surprises—just high-converting websites that work.
+                    Blazing fast websites. Rock-solid security. Designed to convert. We do not use templates, or drag and drop website builders. We believe in handcrafted websites built to grow your business.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -323,18 +316,18 @@ export default function Home() {
                   <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
                     <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-700">
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        "Honestly, I was skeptical about another web developer, but Seth proved me wrong. My site is faster than ever and I'm getting calls from customers who found me on Google."
+                        "Honestly, I was skeptical about another web developer, but Seth proved me wrong. My site is faster than ever and I'm getting calls from customers who found me on Google. Best decision I made for my business this year."
                       </p>
                       <p className="font-semibold text-gray-900 dark:text-white text-xs">
-                        — Mike's HVAC Repair
+                        — Mike Rodriguez, Mike's HVAC Repair
                       </p>
                     </div>
                     <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-700">
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        "We went from barely being found online to ranking #2 for our main keywords in just a few months. The ROI has been incredible."
+                        "We went from barely being found online to ranking #2 for our main keywords in just a few months. The ROI has been incredible - we're booking twice as many appointments through our website now."
                       </p>
                       <p className="font-semibold text-gray-900 dark:text-white text-xs">
-                        — Bella's Boutique
+                        — Bella Chen, Bella's Boutique
                       </p>
                     </div>
                   </div>
@@ -476,13 +469,13 @@ export default function Home() {
                       
                       <SimpleScrollReveal direction="up" delay={200}>
                         <h1 className="font-display font-medium text-[70px] leading-[74px] tracking-[-0.04em] text-black dark:text-white">
-                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> Built for <br />Speed, Security & Conversions
+                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> That <br />Drive Results
                         </h1>
                       </SimpleScrollReveal>
                       
                       <SimpleScrollReveal direction="up" delay={300}>
                         <p className="font-display font-medium text-[20px] leading-[28px] tracking-[0%] text-[#626262] dark:text-white max-w-lg">
-                          Lightning-fast loading guaranteed. U.S.-based development. Forte Care™ included. No templates, no surprises—just high-converting websites that work.
+                          Blazing fast websites. Rock-solid security. Designed to convert. We do not use templates, or drag and drop website builders. We believe in handcrafted websites built to grow your business.
                         </p>
                       </SimpleScrollReveal>
                     </div>
@@ -665,7 +658,7 @@ export default function Home() {
       <ForteMethodSteps
         items={sliderItems}
         title="The|Forte Method™"
-        subtitle="A high-performance web design system built for results."
+        subtitle="A proven web design system built for results."
       />
 
       {/* Services Section - Simplified for now */}

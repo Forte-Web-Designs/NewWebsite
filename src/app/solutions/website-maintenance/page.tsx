@@ -28,8 +28,8 @@ const maintenanceStats = [
 const maintenanceServices = [
   {
     icon: "🔍",
-    title: "Monthly Performance Monitoring",
-    description: "Track your rankings, traffic, and Core Web Vitals",
+    title: "Monthly Website Monitoring",
+    description: "Track your rankings, traffic, and site speed",
     value: "$297/month"
   },
   {
@@ -41,18 +41,18 @@ const maintenanceServices = [
   {
     icon: "🛡️",
     title: "Complete Website Maintenance",
-    description: "Everything above plus content optimization",
+    description: "Everything above plus content updates",
     value: "$797/month"
   }
 ];
 
 const riskFactors = [
-  "Core Web Vitals can change with any hosting update",
+  "Site speed can change with any hosting update",
   "Competitors constantly improving their sites",
   "Google algorithm updates can hurt rankings overnight",
   "Technical issues can develop without warning",
   "Content can become outdated and lose relevance",
-  "Security vulnerabilities can harm SEO performance"
+  "Security vulnerabilities can harm search rankings"
 ];
 
 function WebsiteMaintenanceContent() {
@@ -129,7 +129,7 @@ function WebsiteMaintenanceContent() {
             Your Website's Personal Bodyguard
           </h1>
           <p className="max-w-4xl mx-auto font-inter font-normal text-sm sm:text-base lg:text-lg leading-relaxed tracking-normal text-center text-[#626262] dark:text-[#B4B4B4]">
-            Look, websites break. Hackers attack. Google makes 500+ changes per year. While you're busy running your business, who's watching your website? We are! Think of us as your site's 24/7 security team and performance optimizer rolled into one.
+            Look, websites break. Hackers attack. Google makes 500+ changes per year. While you're busy running your business, who's watching your website? We are! Think of us as your site's 24/7 security team and speed optimizer rolled into one.
           </p>
         </div>
 
@@ -229,7 +229,7 @@ function WebsiteMaintenanceContent() {
                   🛡️ Your Maintenance Requirements
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-xs sm:text-sm">
-                  Based on your current performance, here's what needs ongoing attention
+                  Based on your current speed and security, here's what needs ongoing attention
                 </p>
               </div>
               
