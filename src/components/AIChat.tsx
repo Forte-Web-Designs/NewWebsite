@@ -578,7 +578,7 @@ const AIChat = () => {
           </div>
 
           {/* Enhanced Quick Action Prompts - Reduced height */}
-          <div className="p-4 lg:p-5 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 max-h-[240px] lg:max-h-[280px]">
+          <div className="p-4 lg:p-5 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 max-h-[320px] lg:max-h-[360px] overflow-y-auto">
             <p className="text-sm lg:text-base text-gray-700 dark:text-gray-300 mb-4 text-center font-medium">What would you like to know?</p>
             
             <div className="grid grid-cols-1 gap-3 lg:gap-4">
