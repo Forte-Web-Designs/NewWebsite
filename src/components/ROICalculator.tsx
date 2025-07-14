@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from './animations/SimpleScrollReveal';
 import DarkButton from './DarkButton';
@@ -22,8 +22,6 @@ interface BusinessInputs {
   currentWebsiteCost: number;
   currentMarketingCost: number;
   monthlyRevenue: number;
-  currentTraffic: number;
-  currentConversionRate: number;
   fortePackage: string;
 }
 
@@ -52,17 +50,15 @@ export default function ROICalculator({ className = "" }: { className?: string }
     currentWebsiteCost: 0,
     currentMarketingCost: 0,
     monthlyRevenue: 0,
-    currentTraffic: 0,
-    currentConversionRate: 0,
     fortePackage: ''
   });
 
   const [calculation, setCalculation] = useState<ROICalculation | null>(null);
   const [showResults, setShowResults] = useState(false);
-  const [simpleMode, setSimpleMode] = useState(false);
 
   // Simplified calculation for businesses without analytics
-  const calculateSimpleROI = () => {
+
+  const calculateROI = () => {
     if (!inputs.businessType || !inputs.fortePackage || inputs.monthlyRevenue <= 0) return;
 
     const businessType = businessTypes.find(bt => bt.value === inputs.businessType);
@@ -96,56 +92,6 @@ export default function ROICalculator({ className = "" }: { className?: string }
     setShowResults(true);
   };
 
-  const calculateROI = () => {
-    if (simpleMode) {
-      calculateSimpleROI();
-      return;
-    }
-
-    if (!inputs.businessType || !inputs.fortePackage || inputs.monthlyRevenue <= 0) return;
-
-    const businessType = businessTypes.find(bt => bt.value === inputs.businessType);
-    const fortePackage = fortePackages.find(fp => fp.value === inputs.fortePackage);
-    
-    if (!businessType || !fortePackage) return;
-
-    // Calculate current costs
-    const currentCosts = inputs.currentWebsiteCost + inputs.currentMarketingCost;
-    const forteCosts = fortePackage.cost;
-    const monthlySavings = currentCosts - forteCosts;
-
-    // Calculate traffic and conversion improvements
-    const trafficIncrease = inputs.currentTraffic * (businessType.trafficMultiplier - 1);
-    const newConversionRate = inputs.currentConversionRate * businessType.conversionMultiplier;
-    const conversionIncrease = (newConversionRate - inputs.currentConversionRate) / 100;
-
-    // Calculate revenue impact
-    const additionalConversions = (inputs.currentTraffic + trafficIncrease) * conversionIncrease;
-    const averageOrderValue = inputs.monthlyRevenue / (inputs.currentTraffic * (inputs.currentConversionRate / 100));
-    const revenueIncrease = additionalConversions * averageOrderValue;
-
-    // Calculate ROI
-    const totalMonthlyGain = revenueIncrease + monthlySavings;
-    const monthlyROI = ((totalMonthlyGain - forteCosts) / forteCosts) * 100;
-    const yearlyROI = monthlyROI * 12;
-    const paybackPeriod = forteCosts / Math.max(totalMonthlyGain, 1);
-
-    const newCalculation: ROICalculation = {
-      currentCosts,
-      forteCosts,
-      monthlySavings,
-      trafficIncrease,
-      conversionIncrease: conversionIncrease * 100,
-      revenueIncrease,
-      monthlyROI,
-      yearlyROI,
-      paybackPeriod
-    };
-
-    setCalculation(newCalculation);
-    setShowResults(true);
-  };
-
   const handleInputChange = (field: keyof BusinessInputs, value: string | number) => {
     setInputs(prev => ({
       ...prev,
@@ -173,41 +119,9 @@ export default function ROICalculator({ className = "" }: { className?: string }
             {/* Input Section */}
             <SimpleScrollReveal direction="left" delay={300}>
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
                   Your Business Details
                 </h3>
-                
-                {/* Mode Toggle */}
-                <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
-                  <div className="flex items-center justify-center gap-4">
-                    <button
-                      onClick={() => setSimpleMode(false)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        !simpleMode
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500'
-                      }`}
-                    >
-                      Detailed Analysis
-                    </button>
-                    <button
-                      onClick={() => setSimpleMode(true)}
-                      className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors ${
-                        simpleMode
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-gray-200 dark:bg-gray-600 text-gray-700 dark:text-gray-300 hover:bg-gray-300 dark:hover:bg-gray-500'
-                      }`}
-                    >
-                      Simple Estimate
-                    </button>
-                  </div>
-                  <p className="text-xs text-gray-600 dark:text-gray-400 text-center mt-2">
-                    {simpleMode 
-                      ? "Perfect if you don't track website analytics yet"
-                      : "Use if you know your current website traffic and conversion rates"
-                    }
-                  </p>
-                </div>
                 
                 <div className="space-y-6">
                   {/* Business Type */}
@@ -231,7 +145,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                   <div className="grid md:grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Current Website Cost/Month {simpleMode && <span className="text-xs text-gray-500">(optional)</span>}
+                        Current Website Cost/Month <span className="text-xs text-gray-500">(optional)</span>
                       </label>
                       <input
                         type="number"
@@ -243,7 +157,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                     </div>
                     <div>
                       <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Current Marketing Cost/Month {simpleMode && <span className="text-xs text-gray-500">(optional)</span>}
+                        Current Marketing Cost/Month <span className="text-xs text-gray-500">(optional)</span>
                       </label>
                       <input
                         type="number"
@@ -269,38 +183,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                     />
                   </div>
 
-                  {/* Detailed Mode Fields */}
-                  {!simpleMode && (
-                    <div className="grid md:grid-cols-2 gap-4">
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                          Monthly Website Visitors
-                        </label>
-                        <input
-                          type="number"
-                          value={inputs.currentTraffic || ''}
-                          onChange={(e) => handleInputChange('currentTraffic', parseInt(e.target.value) || 0)}
-                          placeholder="e.g., 500"
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                      </div>
-                      <div>
-                        <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                          Current Conversion Rate %
-                        </label>
-                        <input
-                          type="number"
-                          step="0.1"
-                          value={inputs.currentConversionRate || ''}
-                          onChange={(e) => handleInputChange('currentConversionRate', parseFloat(e.target.value) || 0)}
-                          placeholder="e.g., 2.5"
-                          className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-                        />
-                      </div>
-                    </div>
-                  )}
-
-                  {/* Package Selection - Always shown */}
+                  {/* Package Selection */}
                   <div>
                     <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                       Forte™ Package *
@@ -325,18 +208,15 @@ export default function ROICalculator({ className = "" }: { className?: string }
                     disabled={
                       !inputs.businessType || 
                       !inputs.fortePackage || 
-                      inputs.monthlyRevenue <= 0 ||
-                      (!simpleMode && (!inputs.currentTraffic || !inputs.currentConversionRate))
+                      inputs.monthlyRevenue <= 0
                     }
                   >
-                    {simpleMode ? 'Get Simple Estimate' : 'Calculate My ROI'}
+                    Get Business Growth Estimate
                   </DarkButton>
                   
-                  {simpleMode && (
-                    <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-2">
-                      💡 Estimates based on industry averages for your business type
-                    </p>
-                  )}
+                  <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-2">
+                    💡 Estimates based on industry averages for your business type
+                  </p>
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -357,7 +237,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                 ) : calculation ? (
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-                      {simpleMode ? 'Your Business Growth Estimate' : 'Your ROI Projection'}
+                      Your Business Growth Estimate
                     </h3>
                     
                     <div className="space-y-6">
@@ -393,80 +273,42 @@ export default function ROICalculator({ className = "" }: { className?: string }
                       {/* Performance Improvements */}
                       <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
                         <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
-                          {simpleMode ? 'Expected Business Growth' : 'Expected Performance Boost'}
+                          Expected Business Growth
                         </h4>
                         <div className="space-y-2">
-                          {simpleMode ? (
-                            <>
-                              <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Estimated New Customers:</span>
-                                <span className="font-medium text-green-600">+{Math.round(calculation.trafficIncrease / 10)}/month</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Professional Online Presence:</span>
-                                <span className="font-medium text-green-600">✓ Mobile-Optimized</span>
-                              </div>
-                              <div className="flex justify-between border-t pt-2">
-                                <span className="font-semibold text-gray-900 dark:text-white">Projected Revenue Boost:</span>
-                                <span className="font-bold text-green-600">+${Math.round(calculation.revenueIncrease)}/month</span>
-                              </div>
-                            </>
-                          ) : (
-                            <>
-                              <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Additional Traffic:</span>
-                                <span className="font-medium text-green-600">+{Math.round(calculation.trafficIncrease)} visitors/month</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Conversion Improvement:</span>
-                                <span className="font-medium text-green-600">+{calculation.conversionIncrease.toFixed(1)}%</span>
-                              </div>
-                              <div className="flex justify-between border-t pt-2">
-                                <span className="font-semibold text-gray-900 dark:text-white">Revenue Increase:</span>
-                                <span className="font-bold text-green-600">+${Math.round(calculation.revenueIncrease)}/month</span>
-                              </div>
-                            </>
-                          )}
+                          <div className="flex justify-between">
+                            <span className="text-gray-600 dark:text-gray-400">Estimated New Customers:</span>
+                            <span className="font-medium text-green-600">+{Math.round(calculation.trafficIncrease / 10)}/month</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-600 dark:text-gray-400">Professional Online Presence:</span>
+                            <span className="font-medium text-green-600">✓ Mobile-Optimized</span>
+                          </div>
+                          <div className="flex justify-between border-t pt-2">
+                            <span className="font-semibold text-gray-900 dark:text-white">Projected Revenue Boost:</span>
+                            <span className="font-bold text-green-600">+${Math.round(calculation.revenueIncrease)}/month</span>
+                          </div>
                         </div>
                       </div>
 
                       {/* ROI Summary */}
                       <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
                         <h4 className="font-semibold text-gray-900 dark:text-white mb-3">
-                          {simpleMode ? 'Investment Summary' : 'Return on Investment'}
+                          Investment Summary
                         </h4>
                         <div className="space-y-2">
-                          {simpleMode ? (
-                            <>
-                              <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Monthly Investment:</span>
-                                <span className="font-medium text-blue-600">${calculation.forteCosts}</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Expected Monthly Return:</span>
-                                <span className="font-medium text-blue-600">${Math.round(calculation.revenueIncrease)}</span>
-                              </div>
-                              <div className="flex justify-between border-t pt-2">
-                                <span className="font-semibold text-gray-900 dark:text-white">Estimated Payback:</span>
-                                <span className="font-bold text-blue-600">{calculation.paybackPeriod.toFixed(1)} months</span>
-                              </div>
-                            </>
-                          ) : (
-                            <>
-                              <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Monthly ROI:</span>
-                                <span className="font-medium text-blue-600">{calculation.monthlyROI.toFixed(0)}%</span>
-                              </div>
-                              <div className="flex justify-between">
-                                <span className="text-gray-600 dark:text-gray-400">Annual ROI:</span>
-                                <span className="font-medium text-blue-600">{calculation.yearlyROI.toFixed(0)}%</span>
-                              </div>
-                              <div className="flex justify-between border-t pt-2">
-                                <span className="font-semibold text-gray-900 dark:text-white">Payback Period:</span>
-                                <span className="font-bold text-blue-600">{calculation.paybackPeriod.toFixed(1)} months</span>
-                              </div>
-                            </>
-                          )}
+                          <div className="flex justify-between">
+                            <span className="text-gray-600 dark:text-gray-400">Monthly Investment:</span>
+                            <span className="font-medium text-blue-600">${calculation.forteCosts}</span>
+                          </div>
+                          <div className="flex justify-between">
+                            <span className="text-gray-600 dark:text-gray-400">Expected Monthly Return:</span>
+                            <span className="font-medium text-blue-600">${Math.round(calculation.revenueIncrease)}</span>
+                          </div>
+                          <div className="flex justify-between border-t pt-2">
+                            <span className="font-semibold text-gray-900 dark:text-white">Estimated Payback:</span>
+                            <span className="font-bold text-blue-600">{calculation.paybackPeriod.toFixed(1)} months</span>
+                          </div>
                         </div>
                       </div>
 
@@ -495,7 +337,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
         <SimpleScrollReveal direction="up" delay={600}>
           <div className="mt-12 text-center">
             <p className="text-sm text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-              * ROI calculations are estimates based on industry averages and typical Forte™ client results. 
+              * Growth estimates are based on industry averages and typical business improvement patterns. 
               Actual results may vary based on industry, competition, and implementation factors.
             </p>
           </div>
