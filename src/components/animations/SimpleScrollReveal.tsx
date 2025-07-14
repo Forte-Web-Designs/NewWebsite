@@ -29,7 +29,10 @@ export default function SimpleScrollReveal({
           }
         });
       },
-      { threshold: 0.1 }
+      { 
+        threshold: 0.05, // Trigger earlier - when 5% visible instead of 10%
+        rootMargin: '100px 0px -50px 0px' // Start animation well before element is visible
+      }
     );
 
     if (elementRef.current) {
@@ -44,15 +47,15 @@ export default function SimpleScrollReveal({
     
     switch (direction) {
       case 'up':
-        return 'translate3d(0, 40px, 0)';
+        return 'translate3d(0, 20px, 0)'; // Reduced from 40px to 20px
       case 'down':
-        return 'translate3d(0, -40px, 0)';
+        return 'translate3d(0, -20px, 0)'; // Reduced from -40px to -20px
       case 'left':
-        return 'translate3d(-40px, 0, 0)';
+        return 'translate3d(-20px, 0, 0)'; // Reduced from -40px to -20px
       case 'right':
-        return 'translate3d(40px, 0, 0)';
+        return 'translate3d(20px, 0, 0)'; // Reduced from 40px to 20px
       default:
-        return 'translate3d(0, 40px, 0)';
+        return 'translate3d(0, 20px, 0)'; // Reduced from 40px to 20px
     }
   };
 
@@ -63,7 +66,7 @@ export default function SimpleScrollReveal({
       style={{
         transform: getTransform(),
         opacity: isVisible ? 1 : 0,
-        transition: 'all 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+        transition: 'all 0.3s cubic-bezier(0.16, 1, 0.3, 1)', // Faster: 0.6s → 0.3s
         willChange: 'transform, opacity'
       }}
     >

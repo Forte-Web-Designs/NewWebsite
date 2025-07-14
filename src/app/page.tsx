@@ -297,7 +297,7 @@ export default function Home() {
           <div className="lg:hidden">
             {/* Mobile Hero Text Section */}
             <div className="mb-8">
-              <SimpleScrollReveal direction="up" delay={200}>
+              <SimpleScrollReveal direction="up" delay={50}>
                 <div className="text-center space-y-6">
                   <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
                     <p className="font-sans font-normal text-[12px] leading-[14px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
@@ -318,7 +318,7 @@ export default function Home() {
             
             {/* Mobile Portfolio Showcase - Interactive Slider */}
             <div className="px-4">
-              <SimpleScrollReveal direction="up" delay={400}>
+              <SimpleScrollReveal direction="up" delay={100}>
                 <div className="relative rounded-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 shadow-xl">
                   {/* Portfolio Header */}
                   <div className="bg-gradient-to-r from-gray-50 to-gray-100 dark:from-gray-800 dark:to-gray-700 px-4 py-3 border-b border-gray-200 dark:border-gray-600">
@@ -439,7 +439,7 @@ export default function Home() {
               <div className="grid lg:grid-cols-2 items-center gap-8 rounded-[10px] border border-[#DCDCDC] bg-[#F8F8F8] bg-[url('/images/home/banner-bg.png')] bg-cover bg-center bg-no-repeat p-6 dark:border-[#323232] dark:bg-[#141414] dark:bg-[url('/images/home/dark-banner-bg.png')]">
                 
                 {/* Left Column - Content */}
-                <SimpleScrollReveal direction="left" delay={200}>
+                <SimpleScrollReveal direction="left" delay={50}>
                   <div className="space-y-8">
                     <div className="space-y-6">
                       <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
@@ -448,13 +448,13 @@ export default function Home() {
                         </p>
                       </div>
                       
-                      <SimpleScrollReveal direction="up" delay={200}>
+                      <SimpleScrollReveal direction="up" delay={100}>
                         <h1 className="font-display font-medium text-[70px] leading-[74px] tracking-[-0.04em] text-black dark:text-white">
                           <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> That <br />Drive Results
                         </h1>
                       </SimpleScrollReveal>
                       
-                      <SimpleScrollReveal direction="up" delay={300}>
+                      <SimpleScrollReveal direction="up" delay={150}>
                         <p className="font-display font-medium text-[20px] leading-[28px] tracking-[0%] text-[#626262] dark:text-white max-w-lg">
                           Blazing fast websites. Rock-solid security. Designed to convert. We do not use templates, or drag and drop website builders. We believe in handcrafted websites built to grow your business.
                         </p>
@@ -464,7 +464,7 @@ export default function Home() {
                 </SimpleScrollReveal>
 
                 {/* Right Column - Interactive Slider */}
-                <SimpleScrollReveal direction="right" delay={300}>
+                <SimpleScrollReveal direction="right" delay={100}>
                   <div className="relative">
                     <Link href="/about/work" className="block group">
                       <div className="relative rounded-xl shadow-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 cursor-pointer">
@@ -526,7 +526,7 @@ export default function Home() {
       {/* Quick Social Proof Section */}
       <section className="py-12 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={200}>
+          <SimpleScrollReveal direction="up" delay={50}>
             <div className="text-center space-y-8">
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                 Trusted by Growing Businesses
@@ -739,7 +739,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
             {/* Stats Cards */}
-            <SimpleScrollReveal direction="up" delay={200}>
+            <SimpleScrollReveal direction="up" delay={50}>
               <SimpleAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
                 <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
                   <div className="text-center">
@@ -754,7 +754,7 @@ export default function Home() {
               </SimpleAnimatedCard>
             </SimpleScrollReveal>
 
-            <SimpleScrollReveal direction="up" delay={400}>
+            <SimpleScrollReveal direction="up" delay={100}>
               <SimpleAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
                 <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
                   <div className="text-center">

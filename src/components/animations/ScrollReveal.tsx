@@ -17,8 +17,8 @@ export default function ScrollReveal({
   children,
   direction = 'up',
   delay = 0,
-  duration = 600,
-  threshold = 0.1,
+  duration = 300, // Faster: 600ms → 300ms
+  threshold = 0.05, // Earlier trigger: 0.1 → 0.05
   className = '',
   animationId = `scroll-reveal-${Math.random().toString(36).substr(2, 9)}`
 }: ScrollRevealProps) {
@@ -59,7 +59,7 @@ export default function ScrollReveal({
       },
       { 
         threshold: Math.max(0.01, threshold),
-        rootMargin: '50px 0px -50px 0px' // Start animation slightly before element is visible
+        rootMargin: '150px 0px -50px 0px' // Start animation much earlier - increased from 50px to 150px
       }
     );
 
@@ -82,18 +82,18 @@ export default function ScrollReveal({
     if (!canAnimate) return 'none';
     
     switch (direction) {
-      case 'up': return 'translateY(30px)';
-      case 'down': return 'translateY(-30px)';
-      case 'left': return 'translateX(30px)';
-      case 'right': return 'translateX(-30px)';
-      case 'scale': return 'scale(0.95)';
-      default: return 'translateY(30px)';
+      case 'up': return 'translateY(15px)'; // Reduced from 30px to 15px
+      case 'down': return 'translateY(-15px)'; // Reduced from -30px to -15px
+      case 'left': return 'translateX(15px)'; // Reduced from 30px to 15px
+      case 'right': return 'translateX(-15px)'; // Reduced from -30px to -15px
+      case 'scale': return 'scale(0.98)'; // Less dramatic: 0.95 → 0.98
+      default: return 'translateY(15px)'; // Reduced from 30px to 15px
     }
   };
 
   const getInitialOpacity = () => {
     if (!canAnimate) return 1;
-    return direction === 'fade' ? 0 : 0.3;
+    return direction === 'fade' ? 0 : 0.6; // Higher initial opacity: 0.3 → 0.6
   };
 
   const getAnimationDuration = () => {
