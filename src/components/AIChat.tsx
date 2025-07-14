@@ -53,7 +53,7 @@ const AIChat = () => {
   };
 
   // Auto-advance to next field functionality
-  const handleFormFieldKeyPress = (e: React.KeyboardEvent, nextFieldRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement | null>) => {
+  const handleFormFieldKeyPress = (e: React.KeyboardEvent, nextFieldRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null>) => {
     if (e.key === 'Enter' && nextFieldRef?.current && e.currentTarget.tagName !== 'TEXTAREA') {
       e.preventDefault();
       nextFieldRef.current.focus();
@@ -69,7 +69,7 @@ const AIChat = () => {
   };
 
   // Enhanced form field change handler with auto-advancement
-  const handleContactFormChange = (field: keyof ContactForm, value: string, nextFieldRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement | null>) => {
+  const handleContactFormChange = (field: keyof ContactForm, value: string, nextFieldRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null>) => {
     setContactForm(prev => ({ ...prev, [field]: value }));
     
     // Auto-advance when field reaches typical completion length
