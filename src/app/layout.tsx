@@ -5,7 +5,6 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
-import MobileStickyCTA from "@/components/MobileStickyCTA";
 import AIChat from "@/components/AIChat";
 import { ThemeProvider } from "./providers/ThemeProvider";
 
@@ -143,7 +142,6 @@ export default function RootLayout({
           </div>
           <Footer />
           <BackToTopButton />
-          <MobileStickyCTA />
           <AIChat />
         </ThemeProvider>
       </body>
