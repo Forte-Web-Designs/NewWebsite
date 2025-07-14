@@ -74,7 +74,7 @@ const AIChat = () => {
 
     // Contact/meeting questions
     if (msg.includes('talk') || msg.includes('call') || msg.includes('meet') || msg.includes('consultation') || msg.includes('discuss') || msg.includes('schedule')) {
-      return "I'd love to chat! 📞 Here's the deal - I offer a free 15-minute strategy call where we'll:\n\n• Talk about your business goals\n• Identify what's holding you back online\n• Map out a plan to get you more customers\n• See if we're a good fit to work together\n\nNo pressure, no sales pitch - just honest advice from someone who's helped 100+ businesses grow online.\n\nSound good? Let me grab your info and we'll set something up!";
+      return "I'd love to chat! 📞 Here's the deal - I offer a free 15-minute strategy call where we'll:\n\n• Talk about your business goals\n• Identify what's holding you back online\n• Map out a plan to get you more customers\n• See if we're a good fit to work together\n\nNo pressure, no sales pitch - just honest advice from someone who's helped 100+ businesses grow online.\n\nClick the 'Contact Us' button below to get in touch!";
     }
 
     // Business growth questions
@@ -182,14 +182,7 @@ const AIChat = () => {
   };
 
   const openContactForm = () => {
-    setShowContactForm(true);
-    const contactMessage: Message = {
-      id: Date.now().toString(),
-      type: 'bot',
-      content: "Great! Please fill out this quick form and Seth will get back to you soon:",
-      timestamp: new Date()
-    };
-    setMessages(prev => [...prev, contactMessage]);
+    window.location.href = '/contact';
   };
 
   const toggleChat = () => {
@@ -218,7 +211,7 @@ const AIChat = () => {
 
       {/* Chat Button - Optimized sizing and spacing */}
       {!isOpen && (
-        <div className="fixed bottom-24 right-4 lg:bottom-20 lg:right-8 z-45">
+        <div className="fixed bottom-16 right-4 lg:bottom-4 lg:right-20 z-45">
           <button
             onClick={toggleChat}
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full p-3 lg:p-4 shadow-2xl transition-all duration-300 hover:scale-105 group"
@@ -236,7 +229,7 @@ const AIChat = () => {
 
       {/* Minimized Chat - Optimized sizing */}
       {isOpen && isMinimized && (
-        <div className="fixed bottom-24 right-4 lg:bottom-20 lg:right-8 z-45">
+        <div className="fixed bottom-16 right-4 lg:bottom-4 lg:right-20 z-45">
           <button
             onClick={() => setIsMinimized(false)}
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg px-3 py-2 lg:px-4 lg:py-3 shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
@@ -253,9 +246,9 @@ const AIChat = () => {
         </div>
       )}
 
-      {/* Chat Window - Optimized positioning */}
+      {/* Chat Window - Optimized positioning and mobile sizing */}
       {isOpen && !isMinimized && (
-        <div className="fixed bottom-4 right-4 left-4 top-4 z-45 lg:bottom-28 lg:right-8 lg:left-auto lg:top-auto lg:w-96 lg:h-[520px] 
+        <div className="fixed bottom-4 right-4 left-4 top-20 z-45 lg:bottom-20 lg:right-20 lg:left-auto lg:top-auto lg:w-96 lg:h-[520px] 
                         bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden">
           
           {/* Header */}
@@ -443,10 +436,10 @@ const AIChat = () => {
               {/* Contact prompt */}
               <div className="pt-2">
                 <button
-                  onClick={openContactForm}
+                  onClick={() => window.location.href = '/contact'}
                   className="w-full text-sm bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 lg:py-3.5 rounded-lg transition-all duration-200 font-semibold shadow-lg hover:shadow-xl"
                 >
-                  📞 Let's Chat - Free 15min Call
+                  📞 Contact Us
                 </button>
               </div>
             </div>
