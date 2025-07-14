@@ -1,187 +1,116 @@
 import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from './animations/SimpleScrollReveal';
 
-interface Testimonial {
+interface Benefit {
   id: string;
-  name: string;
+  icon: string;
   title: string;
-  company: string;
-  industry: string;
-  rating: number;
-  quote: string;
-  results: string;
-  timeframe: string;
-  planUsed: string;
+  description: string;
+  businessType: string;
 }
 
-const testimonials: Testimonial[] = [
+const businessBenefits: Benefit[] = [
   {
-    id: 'maria-santos',
-    name: 'Maria Santos',
-    title: 'Owner',
-    company: 'Santos Family Restaurant',
-    industry: 'Restaurant',
-    rating: 5,
-    quote: "Before Forte, we were invisible online. Now we're booked every weekend and our delivery orders tripled. The $500/month we spend on Foundation + SEO has easily paid for itself.",
-    results: '+180% online orders, +65% weekend bookings',
-    timeframe: '4 months',
-    planUsed: 'Foundation + SEO Essential'
+    id: 'local-visibility',
+    icon: '🌟',
+    title: 'Get Found Locally',
+    description: "Most customers search online before visiting. A professional website ensures you're not invisible when they're looking for your services.",
+    businessType: 'All Local Businesses'
   },
   {
-    id: 'mike-chen',
-    name: 'Mike Chen',
-    title: 'Founder',
-    company: 'Elite Home Services',
-    industry: 'Home Services',
-    rating: 5,
-    quote: "I was spending $800/month on a WordPress developer who couldn't deliver results. Forte's $350 Pro plan not only saved me money but brought in 3x more leads. My phone hasn't stopped ringing.",
-    results: '+300% qualified leads, -$450/month costs',
-    timeframe: '3 months',
-    planUsed: 'Forte Pro + SEO Growth'
+    id: 'professional-credibility',
+    icon: '💼',
+    title: 'Build Instant Credibility',
+    description: "First impressions matter. A custom-coded website shows you're established and trustworthy compared to DIY sites.",
+    businessType: 'Professional Services'
   },
   {
-    id: 'sarah-mitchell',
-    name: 'Sarah Mitchell',
-    title: 'Practice Manager',
-    company: 'Riverside Dental Group',
-    industry: 'Healthcare',
-    rating: 5,
-    quote: "Our old website was embarrassing and we were losing patients to competitors. Forte's professional design and SEO brought us 40+ new patients in the first 90 days. Best investment we've made.",
-    results: '+40 new patients, +$120k revenue',
-    timeframe: '3 months',
-    planUsed: 'Forte Pro + SEO Essential'
+    id: 'mobile-customers',
+    icon: '📱',
+    title: 'Capture Mobile Customers',
+    description: "Over 60% of searches happen on mobile. If your site isn't mobile-optimized, you're losing customers to competitors.",
+    businessType: 'Restaurants & Retail'
   },
   {
-    id: 'david-torres',
-    name: 'David Torres',
-    title: 'CEO',
-    company: 'Torres Construction',
-    industry: 'Construction',
-    rating: 5,
-    quote: "We went from 2-3 quote requests per week to 15-20. The PPC campaigns Forte manages have a 4:1 return on ad spend. They understand contractor businesses unlike other agencies.",
-    results: '+500% quote requests, 4:1 ROAS',
-    timeframe: '6 months',
-    planUsed: 'Foundation + SEO + PPC Growth'
+    id: 'always-working',
+    icon: '🕒',
+    title: 'Your 24/7 Salesperson',
+    description: "While you sleep, your website is showcasing your services, collecting leads, and helping customers contact you.",
+    businessType: 'Home Services'
   },
   {
-    id: 'jennifer-williams',
-    name: 'Jennifer Williams',
-    title: 'Director of Marketing',
-    company: 'Apex Financial Advisors',
-    industry: 'Financial Services',
-    rating: 5,
-    quote: "Professional service firms need credibility online. Forte delivered a website that positions us as the premium choice. We've signed 12 new high-value clients since launch.",
-    results: '+12 premium clients, +$480k AUM',
-    timeframe: '5 months',
-    planUsed: 'Forte Pro + SEO Growth'
+    id: 'competitive-advantage',
+    icon: '🚀',
+    title: 'Stay Ahead of Competition',
+    description: "Most small businesses have outdated or DIY websites. A professional presence sets you apart and wins more business.",
+    businessType: 'Healthcare & Dental'
   },
   {
-    id: 'carlos-rivera',
-    name: 'Carlos Rivera',
-    title: 'Owner',
-    company: 'Rivera Auto Repair',
-    industry: 'Automotive',
-    rating: 5,
-    quote: "Local search was killing us - customers couldn't find us on Google. Forte's local SEO put us #1 for 'auto repair near me' and doubled our new customer calls.",
-    results: '+100% new customer calls, #1 local rankings',
-    timeframe: '4 months',
-    planUsed: 'Foundation + SEO Essential'
+    id: 'customer-convenience',
+    icon: '✨',
+    title: 'Make It Easy to Choose You',
+    description: "Clear pricing, easy contact forms, and professional presentation remove friction and make customers confident in choosing you.",
+    businessType: 'All Business Types'
   }
 ];
 
 interface TestimonialsSectionProps {
-  showAll?: boolean;
-  industry?: string;
-  planType?: string;
-  className?: string;
+  showTitle?: boolean;
+  maxItems?: number;
+  businessFocus?: string;
 }
 
 export default function TestimonialsSection({ 
-  showAll = false, 
-  industry, 
-  planType,
-  className = ""
+  showTitle = true, 
+  maxItems = 6, 
+  businessFocus = 'all' 
 }: TestimonialsSectionProps) {
-  // Filter testimonials based on props
-  let filteredTestimonials = testimonials;
-  
-  if (industry) {
-    filteredTestimonials = testimonials.filter(t => 
-      t.industry.toLowerCase().includes(industry.toLowerCase())
+  // Filter benefits based on business focus if specified
+  let displayBenefits = businessBenefits;
+  if (businessFocus !== 'all') {
+    displayBenefits = businessBenefits.filter(benefit => 
+      benefit.businessType.toLowerCase().includes(businessFocus.toLowerCase()) ||
+      benefit.businessType === 'All Business Types' ||
+      benefit.businessType === 'All Local Businesses'
     );
   }
   
-  if (planType) {
-    filteredTestimonials = filteredTestimonials.filter(t => 
-      t.planUsed.toLowerCase().includes(planType.toLowerCase())
-    );
-  }
-  
-  // Show subset unless showAll is true
-  const displayTestimonials = showAll ? filteredTestimonials : filteredTestimonials.slice(0, 3);
+  const benefitsToShow = displayBenefits.slice(0, maxItems);
 
   return (
-    <section className={`py-16 md:py-24 bg-gray-50 dark:bg-gray-900 ${className}`}>
+    <section className="py-16 bg-gray-50 dark:bg-gray-900">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <SimpleScrollReveal direction="up" delay={200}>
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Real Results from Real Businesses
-            </h2>
-            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              See how businesses like yours are growing with Forte™ websites and digital marketing
-            </p>
-          </div>
-        </SimpleScrollReveal>
+        
+        {showTitle && (
+          <SimpleScrollReveal direction="up" delay={200}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Why Your Business Needs a Professional Website
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                Every successful local business needs an online presence that works as hard as you do. 
+                Here's how a professional website transforms your business:
+              </p>
+            </div>
+          </SimpleScrollReveal>
+        )}
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {displayTestimonials.map((testimonial, index) => (
-            <SimpleScrollReveal key={testimonial.id} direction="up" delay={300 + (index * 100)}>
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 h-full flex flex-col">
-                {/* Header */}
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
-                      {testimonial.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
-                      {testimonial.title}, {testimonial.company}
-                    </p>
-                    <p className="text-xs text-blue-600 dark:text-blue-400 font-medium">
-                      {testimonial.industry}
-                    </p>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    {[...Array(testimonial.rating)].map((_, i) => (
-                      <Icon key={i} name="star" className="w-4 h-4 text-yellow-400" />
-                    ))}
-                  </div>
-                </div>
-
-                {/* Quote */}
-                <blockquote className="text-gray-700 dark:text-gray-300 mb-4 flex-1">
-                  "{testimonial.quote}"
-                </blockquote>
-
-                {/* Results */}
-                <div className="space-y-2 pt-4 border-t border-gray-200 dark:border-gray-700">
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-500 text-sm">📈</span>
-                    <span className="text-sm font-medium text-gray-900 dark:text-white">
-                      {testimonial.results}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-blue-500 text-sm">⏱️</span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
-                      Results in {testimonial.timeframe}
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-purple-500 text-sm">💼</span>
-                    <span className="text-sm text-gray-600 dark:text-gray-400">
-                      {testimonial.planUsed}
-                    </span>
+          {benefitsToShow.map((benefit, index) => (
+            <SimpleScrollReveal key={benefit.id} direction="up" delay={300 + (index * 100)}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 h-full">
+                <div className="text-center">
+                  <div className="text-4xl mb-4">{benefit.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                    {benefit.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 leading-relaxed">
+                    {benefit.description}
+                  </p>
+                  <div className="text-sm">
+                    <div className="text-blue-600 dark:text-blue-400 font-medium">
+                      Perfect for: {benefit.businessType}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -189,42 +118,38 @@ export default function TestimonialsSection({
           ))}
         </div>
 
-        {!showAll && filteredTestimonials.length > 3 && (
-          <SimpleScrollReveal direction="up" delay={600}>
-            <div className="text-center mt-12">
-              <a 
-                href="/case-studies" 
-                className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-300"
-              >
-                View All Success Stories
-                <Icon name="arrow-right" className="w-4 h-4" />
-              </a>
-            </div>
-          </SimpleScrollReveal>
-        )}
-
-        {/* Trust Section */}
-        <SimpleScrollReveal direction="up" delay={700}>
-          <div className="mt-16 text-center">
-            <p className="text-gray-600 dark:text-gray-400 mb-4">
-              Join hundreds of businesses growing with Forte™
-            </p>
-            <div className="flex flex-wrap justify-center items-center gap-8 text-sm text-gray-500 dark:text-gray-500">
-              <div className="flex items-center gap-2">
-                <span className="text-green-500">✓</span>
-                <span>200+ Active Clients</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-500">✓</span>
-                <span>100% Client Retention</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-green-500">✓</span>
-                <span>Average 180% Traffic Increase</span>
+        {/* Trust Indicators */}
+        <SimpleScrollReveal direction="up" delay={800}>
+          <div className="mt-12 text-center">
+            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 max-w-4xl mx-auto">
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
+                Trusted by 25+ Local Businesses
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6 items-center">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-2">
+                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
+                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
+                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
+                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
+                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
+                  </div>
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">100%</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Client Retention</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">25+</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Local Businesses Served</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900 dark:text-white">98-100</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Google PageSpeed Score</div>
+                </div>
               </div>
             </div>
           </div>
         </SimpleScrollReveal>
+
       </div>
     </section>
   );

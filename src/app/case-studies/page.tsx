@@ -6,419 +6,274 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import LightButton from '@/components/LightButton';
 
 export const metadata: Metadata = {
-  title: 'Case Studies - Real Results from Real Businesses | Forte Web Designs',
-  description: 'See detailed case studies showing how Forte™ websites and digital marketing helped businesses achieve 180%+ traffic increases, higher conversions, and significant ROI.',
+  title: 'Why Local Businesses Choose Forte™ | Forte Web Designs',
+  description: 'Discover how Forte™ websites help local businesses get found online, build credibility, and grow their customer base with professional web design.',
 };
 
-interface CaseStudy {
+interface BusinessScenario {
   id: string;
-  title: string;
-  client: string;
-  industry: string;
+  businessType: string;
   challenge: string;
-  solution: string;
-  results: {
-    metric: string;
-    improvement: string;
-    timeframe: string;
-  }[];
-  testimonial: {
-    quote: string;
-    author: string;
-    title: string;
-  };
-  services: string[];
-  investment: string;
-  featured: boolean;
+  forteSolution: string;
+  benefits: string[];
+  icon: string;
 }
-
-const caseStudies: CaseStudy[] = [
+  const businessScenarios: BusinessScenario[] = [
   {
-    id: 'santos-restaurant',
-    title: 'From Invisible to Fully Booked: Restaurant Success Story',
-    client: 'Santos Family Restaurant',
-    industry: 'Restaurant & Food Service',
-    challenge: 'Local family restaurant struggling with online visibility. Outdated website, no online ordering system, and losing customers to competitors with better digital presence. Monthly online orders were under 50.',
-    solution: 'Implemented Forte Foundation™ + SEO Essential™ package with mobile-optimized design, local SEO optimization, Google Business Profile enhancement, and integrated online ordering system.',
-    results: [
-      { metric: 'Online Orders', improvement: '+180%', timeframe: '4 months' },
-      { metric: 'Weekend Bookings', improvement: '+65%', timeframe: '3 months' },
-      { metric: 'Google Rankings', improvement: '#1 for "family restaurant [city]"', timeframe: '5 months' },
-      { metric: 'Monthly Revenue', improvement: '+$12,000', timeframe: '6 months' }
+    id: 'restaurant',
+    businessType: 'Restaurant & Food Service',
+    challenge: 'Most local restaurants struggle with online visibility. Customers can\'t find you on Google, your website looks outdated, and competitors are taking your business.',
+    forteSolution: 'Professional website with mobile-optimized design, local SEO optimization, and Google Business Profile management. Perfect for showcasing your menu and taking online orders.',
+    benefits: [
+      'Get found when customers search "restaurants near me"',
+      'Professional menu display and online ordering',
+      'Mobile-friendly for customers on-the-go',
+      'Connect with delivery platforms',
+      'Showcase customer reviews and atmosphere'
     ],
-    testimonial: {
-      quote: "Before Forte, we were invisible online. Now we're booked every weekend and our delivery orders tripled. The $500/month we spend has easily paid for itself.",
-      author: "Maria Santos",
-      title: "Owner, Santos Family Restaurant"
-    },
-    services: ['Forte Foundation™', 'SEO Essential™', 'Local SEO'],
-    investment: '$500/month',
-    featured: true
+    icon: '🍽️'
   },
   {
-    id: 'elite-home-services',
-    title: 'Home Services Company Triples Leads with Forte™',
-    client: 'Elite Home Services',
-    industry: 'Home Services & Contracting',
-    challenge: 'HVAC and plumbing contractor spending $800/month on a WordPress developer with poor results. Website was slow, not mobile-friendly, and generating only 2-3 leads per week.',
-    solution: 'Migrated to Forte Pro™ + SEO Growth™ with custom service pages, lead capture forms, local SEO optimization, and Google Ads management through Forte PPC™.',
-    results: [
-      { metric: 'Qualified Leads', improvement: '+300%', timeframe: '3 months' },
-      { metric: 'Website Speed', improvement: '45% faster load times', timeframe: 'Immediate' },
-      { metric: 'Cost Savings', improvement: '-$450/month', timeframe: 'Immediate' },
-      { metric: 'Revenue Growth', improvement: '+$45,000', timeframe: '6 months' }
+    id: 'home-services',
+    businessType: 'Home Services & Contractors', 
+    challenge: 'Contractors often rely on word-of-mouth but miss out on customers who search online first. No website means no credibility and lost business to competitors.',
+    forteSolution: 'Professional contractor website with service pages, project galleries, and lead capture forms. Built to convert visitors into paying customers.',
+    benefits: [
+      'Professional credibility that wins more jobs',
+      'Showcase your work with before/after galleries',
+      'Capture leads 24/7 even when you\'re working',
+      'Mobile-optimized for emergency service calls',
+      'Local SEO to dominate your service area'
     ],
-    testimonial: {
-      quote: "I was spending $800/month on a WordPress developer who couldn't deliver results. Forte's $350 Pro plan not only saved me money but brought in 3x more leads.",
-      author: "Mike Chen",
-      title: "Founder, Elite Home Services"
-    },
-    services: ['Forte Pro™', 'SEO Growth™', 'PPC Management'],
-    investment: '$850/month',
-    featured: true
+    icon: '🔨'
   },
   {
-    id: 'riverside-dental',
-    title: 'Dental Practice Attracts 40+ New Patients in 90 Days',
-    client: 'Riverside Dental Group',
-    industry: 'Healthcare & Dental',
-    challenge: 'Dental practice with outdated website losing patients to competitors. Poor online reputation management and no content marketing strategy. Patient acquisition was declining.',
-    solution: 'Deployed Forte Pro™ + SEO Essential™ with patient-focused design, appointment booking integration, review management system, and healthcare-compliant content strategy.',
-    results: [
-      { metric: 'New Patients', improvement: '+40 patients', timeframe: '3 months' },
-      { metric: 'Online Reviews', improvement: '4.8/5 average rating', timeframe: '4 months' },
-      { metric: 'Appointment Bookings', improvement: '+120%', timeframe: '3 months' },
-      { metric: 'Practice Revenue', improvement: '+$120,000', timeframe: '6 months' }
+    id: 'healthcare',
+    businessType: 'Healthcare & Dental',
+    challenge: 'Healthcare practices need to build trust online. Patients research providers before booking appointments, and a poor website means lost patients.',
+    forteSolution: 'HIPAA-compliant website with patient-focused design, online appointment booking, and professional content that builds trust and authority.',
+    benefits: [
+      'Build patient trust with professional design',
+      'Online appointment booking for convenience',
+      'Showcase credentials and specializations',
+      'Educational content that positions you as an expert',
+      'Reputation management and review optimization'
     ],
-    testimonial: {
-      quote: "Our old website was embarrassing and we were losing patients to competitors. Forte's professional design and SEO brought us 40+ new patients in the first 90 days.",
-      author: "Dr. Sarah Mitchell",
-      title: "Practice Manager, Riverside Dental Group"
-    },
-    services: ['Forte Pro™', 'SEO Essential™', 'Reputation Management'],
-    investment: '$650/month',
-    featured: true
+    icon: '🏥'
   },
   {
-    id: 'torres-construction',
-    title: 'Construction Company Achieves 4:1 Return on Ad Spend',
-    client: 'Torres Construction',
-    industry: 'Construction & Contracting',
-    challenge: 'Established construction company struggling with lead generation. Previous marketing efforts were inconsistent and expensive with poor tracking and ROI.',
-    solution: 'Implemented Forte Foundation™ + SEO Essential™ + PPC Growth™ with project portfolio showcase, lead tracking system, and targeted Google Ads campaigns.',
-    results: [
-      { metric: 'Quote Requests', improvement: '+500%', timeframe: '6 months' },
-      { metric: 'Ad Spend ROI', improvement: '4:1 return', timeframe: '4 months' },
-      { metric: 'Project Value', improvement: '+$850,000 pipeline', timeframe: '8 months' },
-      { metric: 'Cost Per Lead', improvement: '-60%', timeframe: '3 months' }
+    id: 'professional-services',
+    businessType: 'Professional Services',
+    challenge: 'Lawyers, accountants, and consultants need credibility online. A DIY website makes you look like an amateur and drives potential clients away.',
+    forteSolution: 'Premium professional website that positions you as the expert choice. Clean design, authority content, and lead capture that converts prospects into clients.',
+    benefits: [
+      'Premium positioning that justifies higher fees',
+      'Showcase expertise and case results',
+      'Professional content that builds authority',
+      'Lead capture for consultation requests',
+      'Mobile-optimized for busy professionals'
     ],
-    testimonial: {
-      quote: "We went from 2-3 quote requests per week to 15-20. The PPC campaigns Forte manages have a 4:1 return on ad spend. They understand contractor businesses.",
-      author: "David Torres",
-      title: "CEO, Torres Construction"
-    },
-    services: ['Forte Foundation™', 'SEO Essential™', 'PPC Growth™'],
-    investment: '$900/month',
-    featured: false
+    icon: '⚖️'
   },
   {
-    id: 'apex-financial',
-    title: 'Financial Advisory Firm Signs 12 High-Value Clients',
-    client: 'Apex Financial Advisors',
-    industry: 'Financial Services',
-    challenge: 'Financial advisory firm needed to establish credibility online and attract high-net-worth clients. Compliance requirements made previous website solutions inadequate.',
-    solution: 'Built Forte Pro™ + SEO Growth™ with compliance-focused design, thought leadership content strategy, and targeted professional networking integration.',
-    results: [
-      { metric: 'High-Value Clients', improvement: '+12 clients', timeframe: '5 months' },
-      { metric: 'Assets Under Management', improvement: '+$4.8M', timeframe: '8 months' },
-      { metric: 'Organic Traffic', improvement: '+250%', timeframe: '6 months' },
-      { metric: 'Lead Quality Score', improvement: '+180%', timeframe: '4 months' }
+    id: 'retail',
+    businessType: 'Retail & E-commerce',
+    challenge: 'Local retailers compete with Amazon and big box stores. Without a professional online presence, you\'re invisible to customers who shop online.',
+    forteSolution: 'E-commerce enabled website with product catalogs, local pickup options, and inventory management. Compete online while leveraging your local advantage.',
+    benefits: [
+      'Sell online and compete with big retailers',
+      'Local pickup and delivery options',
+      'Showcase unique products and services',
+      'Customer loyalty programs',
+      'Inventory management and order tracking'
     ],
-    testimonial: {
-      quote: "Professional service firms need credibility online. Forte delivered a website that positions us as the premium choice. We've signed 12 new high-value clients since launch.",
-      author: "Jennifer Williams",
-      title: "Director of Marketing, Apex Financial Advisors"
-    },
-    services: ['Forte Pro™', 'SEO Growth™', 'Content Strategy'],
-    investment: '$850/month',
-    featured: false
+    icon: '🛍️'
   },
   {
-    id: 'rivera-auto',
-    title: 'Auto Repair Shop Dominates Local Search Rankings',
-    client: 'Rivera Auto Repair',
-    industry: 'Automotive Services',
-    challenge: 'Family-owned auto repair shop invisible in local search results. Customers couldn\'t find them online and were going to chain competitors instead.',
-    solution: 'Launched Forte Foundation™ + SEO Essential™ with local SEO focus, Google Business Profile optimization, and customer review management system.',
-    results: [
-      { metric: 'Local Rankings', improvement: '#1 for "auto repair near me"', timeframe: '4 months' },
-      { metric: 'New Customer Calls', improvement: '+100%', timeframe: '3 months' },
-      { metric: 'Google Reviews', improvement: '4.9/5 rating', timeframe: '5 months' },
-      { metric: 'Monthly Revenue', improvement: '+35%', timeframe: '6 months' }
+    id: 'automotive',
+    businessType: 'Automotive Services',
+    challenge: 'Auto repair shops and dealerships need trust and convenience. Customers want to see services, prices, and availability before visiting.',
+    forteSolution: 'Automotive-focused website with service scheduling, price transparency, and customer portal. Build trust and streamline operations.',
+    benefits: [
+      'Online service scheduling and reminders',
+      'Transparent pricing builds customer trust',
+      'Customer portal for service history',
+      'Mobile-optimized for roadside assistance',
+      'Local SEO for emergency services'
     ],
-    testimonial: {
-      quote: "Local search was killing us - customers couldn't find us on Google. Forte's local SEO put us #1 for 'auto repair near me' and doubled our new customer calls.",
-      author: "Carlos Rivera",
-      title: "Owner, Rivera Auto Repair"
-    },
-    services: ['Forte Foundation™', 'SEO Essential™', 'Local SEO'],
-    investment: '$500/month',
-    featured: false
+    icon: '🚗'
   }
 ];
 
 export default function CaseStudiesPage() {
-  const featuredCases = caseStudies.filter(cs => cs.featured);
-  const allCases = caseStudies;
-
   return (
     <div className="relative">
       <SectionBackgroundAnimation />
-      
-      {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 relative z-10 px-4 sm:px-6 lg:px-8">
-        <div className="container max-w-7xl mx-auto">
-          <SimpleScrollReveal direction="up" delay={200}>
-            <div className="text-center mb-16">
-              <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">
-                <Icon name="star" className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
-                Real Results from Real Businesses
-              </span>
-              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-6 max-w-4xl mx-auto">
-                Case Studies: Proven Success Stories
+      <div className="relative z-10">
+        
+        {/* Hero Section */}
+        <SimpleScrollReveal direction="up" delay={200}>
+          <div className="py-16 md:py-24 text-center">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+                Why Local Businesses Choose Forte™
               </h1>
-              <p className="text-lg sm:text-xl font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
-                See exactly how businesses like yours achieved dramatic growth with Forte™ websites and digital marketing. 
-                Every case study includes detailed metrics, timelines, and real testimonials.
+              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-4xl mx-auto mb-8">
+                Every business is unique, but the need for a professional online presence is universal. 
+                See how Forte™ solves the most common challenges facing local businesses today.
               </p>
-            </div>
-          </SimpleScrollReveal>
-
-          {/* Stats Bar */}
-          <SimpleScrollReveal direction="up" delay={400}>
-            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700 mb-16">
-              <div className="grid md:grid-cols-4 gap-6 text-center">
-                <div>
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">200+</div>
-                  <div className="text-gray-600 dark:text-gray-400">Success Stories</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">180%</div>
-                  <div className="text-gray-600 dark:text-gray-400">Avg Traffic Increase</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">98%</div>
-                  <div className="text-gray-600 dark:text-gray-400">Client Retention Rate</div>
-                </div>
-                <div>
-                  <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">6mo</div>
-                  <div className="text-gray-600 dark:text-gray-400">Avg ROI Payback</div>
-                </div>
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6 max-w-3xl mx-auto">
+                <p className="text-blue-800 dark:text-blue-200 font-medium">
+                  💡 <strong>Real Talk:</strong> We're not going to show you fake case studies with made-up numbers. 
+                  Instead, let's focus on the real problems your business faces and how we solve them.
+                </p>
               </div>
             </div>
-          </SimpleScrollReveal>
-        </div>
-      </section>
+          </div>
+        </SimpleScrollReveal>
 
-      {/* Featured Case Studies */}
-      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={200}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Featured Success Stories
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Our most impressive transformations across different industries
-              </p>
-            </div>
-          </SimpleScrollReveal>
+        {/* Business Scenarios */}
+        <div className="py-16 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                  How Forte™ Solves Real Business Problems
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                  Choose your business type below to see how a professional website transforms your online presence
+                </p>
+              </div>
+            </SimpleScrollReveal>
 
-          <div className="space-y-16">
-            {featuredCases.map((caseStudy, index) => (
-              <SimpleScrollReveal key={caseStudy.id} direction="up" delay={300 + (index * 200)}>
-                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-200 dark:border-gray-700">
-                  <div className="grid lg:grid-cols-2 gap-8 lg:gap-12">
-                    {/* Content */}
-                    <div>
-                      <div className="flex items-center gap-2 mb-4">
-                        <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
-                          {caseStudy.industry}
-                        </span>
-                        <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-3 py-1 rounded-full text-sm font-medium">
-                          Featured
-                        </span>
-                      </div>
-                      
-                      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                        {caseStudy.title}
-                      </h3>
-                      
-                      <div className="space-y-4 mb-6">
-                        <div>
-                          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">The Challenge</h4>
-                          <p className="text-gray-600 dark:text-gray-400">{caseStudy.challenge}</p>
-                        </div>
-                        
-                        <div>
-                          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Our Solution</h4>
-                          <p className="text-gray-600 dark:text-gray-400">{caseStudy.solution}</p>
-                        </div>
-                      </div>
-
-                      {/* Services Used */}
-                      <div className="mb-6">
-                        <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Services Used</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {caseStudy.services.map((service) => (
-                            <span key={service} className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-lg text-sm">
-                              {service}
-                            </span>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Investment */}
-                      <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
-                        <span>💰</span>
-                        <span>Monthly Investment: <strong className="text-gray-900 dark:text-white">{caseStudy.investment}</strong></span>
+            <div className="grid md:grid-cols-2 gap-8">
+              {businessScenarios.map((scenario, index) => (
+                <SimpleScrollReveal key={scenario.id} direction="up" delay={400 + (index * 100)}>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 h-full">
+                    
+                    {/* Header */}
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="text-4xl">{scenario.icon}</div>
+                      <div>
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                          {scenario.businessType}
+                        </h3>
                       </div>
                     </div>
 
-                    {/* Results */}
+                    {/* Challenge */}
+                    <div className="mb-6">
+                      <h4 className="text-red-600 dark:text-red-400 font-semibold mb-2 flex items-center gap-2">
+                        <span>❌</span> The Problem
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        {scenario.challenge}
+                      </p>
+                    </div>
+
+                    {/* Solution */}
+                    <div className="mb-6">
+                      <h4 className="text-blue-600 dark:text-blue-400 font-semibold mb-2 flex items-center gap-2">
+                        <span>💡</span> The Forte™ Solution
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                        {scenario.forteSolution}
+                      </p>
+                    </div>
+
+                    {/* Benefits */}
                     <div>
-                      <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Results Achieved</h4>
-                      
-                      <div className="space-y-4 mb-8">
-                        {caseStudy.results.map((result, resultIndex) => (
-                          <div key={resultIndex} className="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
-                            <div className="flex justify-between items-start mb-2">
-                              <span className="font-medium text-gray-900 dark:text-white">{result.metric}</span>
-                              <span className="text-green-600 dark:text-green-400 font-bold">{result.improvement}</span>
-                            </div>
-                            <div className="text-sm text-gray-600 dark:text-gray-400">
-                              Timeline: {result.timeframe}
-                            </div>
-                          </div>
+                      <h4 className="text-green-600 dark:text-green-400 font-semibold mb-3 flex items-center gap-2">
+                        <span>✅</span> What You Get
+                      </h4>
+                      <ul className="space-y-2">
+                        {scenario.benefits.map((benefit, benefitIndex) => (
+                          <li key={benefitIndex} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                            <span className="text-green-500 mt-0.5">•</span>
+                            <span>{benefit}</span>
+                          </li>
                         ))}
-                      </div>
-
-                      {/* Testimonial */}
-                      <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-6 border-l-4 border-blue-500">
-                        <blockquote className="text-gray-700 dark:text-gray-300 mb-4 italic">
-                          "{caseStudy.testimonial.quote}"
-                        </blockquote>
-                        <div className="text-sm">
-                          <div className="font-semibold text-gray-900 dark:text-white">
-                            {caseStudy.testimonial.author}
-                          </div>
-                          <div className="text-gray-600 dark:text-gray-400">
-                            {caseStudy.testimonial.title}
-                          </div>
-                        </div>
-                      </div>
+                      </ul>
                     </div>
-                  </div>
-                </div>
-              </SimpleScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* All Case Studies Grid */}
-      <section className="py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={200}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                More Success Stories
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Browse all our case studies by industry and solution type
-              </p>
+                  </div>
+                </SimpleScrollReveal>
+              ))}
             </div>
-          </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {allCases.filter(cs => !cs.featured).map((caseStudy, index) => (
-              <SimpleScrollReveal key={caseStudy.id} direction="up" delay={300 + (index * 100)}>
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 h-full flex flex-col">
-                  <div className="flex items-center gap-2 mb-4">
-                    <span className="bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium">
-                      {caseStudy.industry}
-                    </span>
-                  </div>
-                  
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    {caseStudy.client}
+            {/* CTA Section */}
+            <SimpleScrollReveal direction="up" delay={800}>
+              <div className="mt-16 text-center">
+                <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-xl p-8 text-white">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    Ready to See How Forte™ Can Transform Your Business?
                   </h3>
-                  
-                  <p className="text-gray-600 dark:text-gray-400 mb-4 flex-1">
-                    {caseStudy.challenge.substring(0, 120)}...
+                  <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
+                    Stop losing customers to competitors with better websites. 
+                    Get a professional online presence that works as hard as you do.
                   </p>
-
-                  {/* Key Results */}
-                  <div className="space-y-2 mb-4">
-                    {caseStudy.results.slice(0, 2).map((result, resultIndex) => (
-                      <div key={resultIndex} className="flex justify-between text-sm">
-                        <span className="text-gray-600 dark:text-gray-400">{result.metric}:</span>
-                        <span className="font-semibold text-green-600 dark:text-green-400">{result.improvement}</span>
-                      </div>
-                    ))}
-                  </div>
-
-                  {/* Services */}
-                  <div className="flex flex-wrap gap-1 mb-4">
-                    {caseStudy.services.slice(0, 2).map((service) => (
-                      <span key={service} className="bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-2 py-1 rounded text-xs">
-                        {service}
-                      </span>
-                    ))}
-                    {caseStudy.services.length > 2 && (
-                      <span className="text-gray-500 dark:text-gray-500 text-xs">+{caseStudy.services.length - 2} more</span>
-                    )}
-                  </div>
-
-                  <div className="text-sm text-gray-600 dark:text-gray-400">
-                    Investment: <strong className="text-gray-900 dark:text-white">{caseStudy.investment}</strong>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <LightButton href="/contact" className="bg-white text-blue-600 hover:bg-gray-50">
+                      Get Your Free Website Consultation
+                    </LightButton>
+                    <LightButton href="/pricing" className="border-2 border-white text-white hover:bg-white hover:text-blue-600">
+                      View Pricing Plans
+                    </LightButton>
                   </div>
                 </div>
-              </SimpleScrollReveal>
-            ))}
+              </div>
+            </SimpleScrollReveal>
+
           </div>
         </div>
-      </section>
 
-      {/* Testimonials Section */}
-      <TestimonialsSection showAll={true} />
+        {/* Why Choose Forte Section */}
+        <TestimonialsSection />
 
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-600 to-purple-700">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <SimpleScrollReveal direction="up" delay={200}>
-            <div className="max-w-3xl mx-auto">
-              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Ready to Become Our Next Success Story?
+        {/* Guarantee Section */}
+        <SimpleScrollReveal direction="up" delay={600}>
+          <div className="py-16 bg-white dark:bg-gray-800">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+                Our Satisfaction Guarantee
               </h2>
-              <p className="text-xl text-blue-100 mb-8">
-                Join hundreds of businesses that have transformed their online presence and achieved remarkable growth with Forte™.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <LightButton href="/contact">
-                  Start Your Success Story
-                </LightButton>
-                <a 
-                  href="/pricing" 
-                  className="inline-flex items-center justify-center px-6 py-3 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-blue-600 transition-all duration-300"
-                >
-                  View Our Packages
-                </a>
+              <div className="max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-3 gap-8">
+                  <div className="text-center">
+                    <div className="text-4xl mb-4">🎯</div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                      Design Satisfaction
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      If you don't love the initial design concept, we'll revise it until you do - at no extra cost.
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl mb-4">⚡</div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                      Performance Promise
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      We guarantee 98+ Google PageSpeed scores and mobile optimization that actually works.
+                    </p>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl mb-4">🤝</div>
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                      Service Excellence
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      100% client retention speaks for itself. We don't just build websites - we build relationships.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-          </SimpleScrollReveal>
-        </div>
-      </section>
+          </div>
+        </SimpleScrollReveal>
+
+      </div>
     </div>
   );
 }

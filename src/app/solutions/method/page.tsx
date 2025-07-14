@@ -223,10 +223,10 @@ export default function SocialMediaManagement() {
 
           <div className="space-y-3 sm:space-y-4 text-center md:text-left">
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-inter dark:text-secondary-1050">
-              Money-Back Guarantee:
+              Satisfaction Guarantee:
             </h3>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-[#B4B4B4] text-[#626262]">
-              If we cant design something you love, we'll refund you. Period.
+              If we cant design something you love, we'll make it right. Period.
             </p>
           </div>
         </div>
