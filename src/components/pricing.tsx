@@ -21,9 +21,9 @@ const pricingPlans: PricingPlan[] = [
     id: 'foundation',
     name: 'Forte Foundation™',
     price: '$200/month',
-    subtitle: 'Perfect Starting Point',
+    subtitle: 'Perfect Starting Point • No Setup Fees',
     isPopular: true,
-    ctaText: 'Start Building',
+    ctaText: 'Lock In My Rate',
     including: [
       '5-Page Custom-Coded Website',
       'Domain + Premium Hosting',
@@ -41,8 +41,8 @@ const pricingPlans: PricingPlan[] = [
     id: 'pro',
     name: 'Forte Pro™',
     price: '$350/month',
-    subtitle: 'Best Value for Growth',
-    ctaText: 'Go Premium',
+    subtitle: 'Best Value for Growth • Priority Support',
+    ctaText: 'Get Pro Access',
     ctaMarginTop: 'mt-20',
     including: [
       '10-Page Custom-Coded Website',
@@ -185,8 +185,8 @@ const ecosystemPackages: PricingPlan[] = [
     id: 'starter',
     name: 'Forte Starter™',
     price: '$200/month',
-    subtitle: 'Perfect for New Businesses',
-    ctaText: 'Get Started',
+    subtitle: 'Perfect for New Businesses • No Setup Fees',
+    ctaText: 'Get Started Today',
     including: [
       'Forte Foundation™ Website (5 pages)',
       'Domain + Premium Hosting',
@@ -477,10 +477,26 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
               </p>
             )}
             {!serviceType && (
-              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 max-w-2xl mx-auto">
+              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 max-w-2xl mx-auto mb-6">
                 <p className="text-sm text-green-700 dark:text-green-300">
                   🏢 <strong>Perfect for Small Businesses:</strong> Start at just $200/month and add services when you're ready to grow. No huge upfront costs!
                 </p>
+              </div>
+            )}
+            {!serviceType && (
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-600 dark:text-gray-400">
+                <div className="flex items-center gap-2">
+                  <span className="text-green-500">✓</span>
+                  <span>Trusted by 200+ businesses</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-500">✓</span>
+                  <span>98% client retention rate</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-500">✓</span>
+                  <span>30-day money-back guarantee</span>
+                </div>
               </div>
             )}
           </div>

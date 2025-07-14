@@ -265,11 +265,11 @@ export default function SeoDesignPage() {
         {faqData?.map((faq, index) => (
           <details 
             key={index}
-            className="dark:bg-primary-1150 bg-secondary-1350 sm:p-8 p-4 rounded-2xl transition-all duration-300 w-full group"
+            className="dark:bg-primary-1150 bg-secondary-1350 p-4 sm:p-8 rounded-2xl transition-all duration-300 w-full group max-w-4xl"
             open={index === 0}
           >
             <summary className="flex justify-between items-center cursor-pointer list-none">
-              <h2 className="sm:text-[26px] text-[20px] max-[640px]:leading-7 font-medium font-inter dark:text-secondary-1050 text-black">
+              <h2 className="text-lg sm:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black leading-tight pr-4">
                 {faq.question}
               </h2>
               <button className="transform transition-transform duration-300 group-open:rotate-[270deg] rotate-90">
@@ -288,8 +288,8 @@ export default function SeoDesignPage() {
                 </svg>
               </button>
             </summary>
-            <div className="mt-3 md:w-auto w-[86%]">
-              <p className="sm:text-[18px] text-[14px] font-normal font-inter dark:text-primary-1050 text-primary-1400 md:leading-[22px] leading-[18px]">
+            <div className="mt-3 sm:mt-4">
+              <p className="text-sm sm:text-[18px] font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed sm:leading-[22px]">
                 {faq.answer}
               </p>
             </div>

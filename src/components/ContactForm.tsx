@@ -263,9 +263,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                     <SimpleAnimatedInput
                       type="tel"
                       name="phone"
-                      placeholder="Your Phone"
+                      placeholder="Your Phone (Required for faster response)"
                       value={formData.phone}
                       onChange={handleInputChange}
+                      required
                       delay={800}
                     />
 
