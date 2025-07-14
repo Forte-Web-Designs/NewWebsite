@@ -310,7 +310,7 @@ export default function Home() {
                   </h1>
                   
                   <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-[#626262] dark:text-white px-4 max-w-2xl mx-auto">
-                    Blazing fast websites. Rock-solid security. Designed to convert. We do not use templates, or drag and drop website builders. We believe in handcrafted websites built to grow your business.
+                    Meticulously built for performance. Hardened for security. Tuned for serious growth.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -456,7 +456,7 @@ export default function Home() {
                       
                       <SimpleScrollReveal direction="up" delay={150}>
                         <p className="font-display font-medium text-[20px] leading-[28px] tracking-[0%] text-[#626262] dark:text-white max-w-lg">
-                          Blazing fast websites. Rock-solid security. Designed to convert. We do not use templates, or drag and drop website builders. We believe in handcrafted websites built to grow your business.
+                          Meticulously built for performance. Hardened for security. Tuned for serious growth.
                         </p>
                       </SimpleScrollReveal>
                     </div>

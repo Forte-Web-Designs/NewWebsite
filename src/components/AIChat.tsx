@@ -38,9 +38,68 @@ const AIChat = () => {
     submitError: null
   });
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  
+  // Form field refs for auto-advancement
+  const nameFieldRef = useRef<HTMLInputElement>(null);
+  const emailFieldRef = useRef<HTMLInputElement>(null);
+  const phoneFieldRef = useRef<HTMLInputElement>(null);
+  const companyFieldRef = useRef<HTMLInputElement>(null);
+  const messageFieldRef = useRef<HTMLTextAreaElement>(null);
 
   const scrollToBottom = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  };
+
+  // Auto-advance to next field functionality
+  const handleFormFieldKeyPress = (e: React.KeyboardEvent, nextFieldRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement | null>) => {
+    if (e.key === 'Enter' && nextFieldRef?.current && e.currentTarget.tagName !== 'TEXTAREA') {
+      e.preventDefault();
+      nextFieldRef.current.focus();
+      // Smooth scroll to field with better positioning
+      setTimeout(() => {
+        nextFieldRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center',
+          inline: 'nearest'
+        });
+      }, 100);
+    }
+  };
+
+  // Enhanced form field change handler with auto-advancement
+  const handleContactFormChange = (field: keyof ContactForm, value: string, nextFieldRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement | null>) => {
+    setContactForm(prev => ({ ...prev, [field]: value }));
+    
+    // Auto-advance when field reaches typical completion length
+    if (nextFieldRef?.current) {
+      let shouldAdvance = false;
+      
+      switch (field) {
+        case 'name':
+          shouldAdvance = value.length >= 3 && value.includes(' '); // First and last name
+          break;
+        case 'email':
+          shouldAdvance = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value); // Valid email format
+          break;
+        case 'phone':
+          shouldAdvance = value.replace(/\D/g, '').length >= 10; // 10+ digits
+          break;
+        case 'company':
+          shouldAdvance = value.length >= 2; // Any company name
+          break;
+      }
+      
+      if (shouldAdvance) {
+        setTimeout(() => {
+          nextFieldRef.current?.focus();
+          nextFieldRef.current?.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center',
+            inline: 'nearest'
+          });
+        }, 150);
+      }
+    }
   };
 
   useEffect(() => {
@@ -53,69 +112,11 @@ const AIChat = () => {
       setMessages([{
         id: '1',
         type: 'bot',
-        content: "Hey there! 👋 I'm Seth from Forte Web Designs. I help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?",
+        content: "Hey there! 👋 I'm Forte AI, Seth's digital assistant. I help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?",
         timestamp: new Date()
       }]);
     }
   }, [messages.length]);
-
-  // Handle Netlify form submission
-  const handleNetlifySubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setNetlifyForm(prev => ({ ...prev, isSubmitting: true, submitError: null }));
-    
-    try {
-      // Create form data
-      const formData = new FormData();
-      formData.append('form-name', 'ai-chat-contact');
-      formData.append('name', contactForm.name);
-      formData.append('email', contactForm.email);
-      formData.append('phone', contactForm.phone);
-      formData.append('company', contactForm.company);
-      formData.append('message', contactForm.message);
-      
-      const response = await fetch("/", {
-        method: "POST",
-        headers: { 
-          "Content-Type": "application/x-www-form-urlencoded",
-          // Mobile-friendly headers
-          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
-        },
-        body: new URLSearchParams(formData as any).toString(),
-      });
-
-      if (response.ok) {
-        setNetlifyForm(prev => ({ ...prev, showSuccess: true }));
-        setContactForm({ name: '', email: '', phone: '', company: '', message: '' });
-        
-        // Add success message to chat
-        const successMessage: Message = {
-          id: Date.now().toString(),
-          type: 'bot',
-          content: "🎉 Thanks for reaching out! I got your message and I'll get back to you within 24 hours (usually much faster).\n\nIn the meantime, feel free to check out some of our recent work or learn more about how we help businesses like yours grow online.",
-          timestamp: new Date()
-        };
-        setMessages(prev => [...prev, successMessage]);
-        
-        // Hide contact form and show main chat
-        setTimeout(() => {
-          setShowContactForm(false);
-          setNetlifyForm(prev => ({ ...prev, showSuccess: false }));
-        }, 3000);
-        
-      } else {
-        throw new Error("Form submission failed");
-      }
-    } catch (error) {
-      console.error("Form submission error:", error);
-      setNetlifyForm(prev => ({ 
-        ...prev, 
-        submitError: "Sorry, there was an error sending your message. Please try again or contact us directly at seth@fortewebdesigns.com" 
-      }));
-    } finally {
-      setNetlifyForm(prev => ({ ...prev, isSubmitting: false }));
-    }
-  };
 
   // Sales-focused response system
   const getSmartResponse = (userMessage: string): string => {
@@ -123,61 +124,61 @@ const AIChat = () => {
 
     // Pricing questions
     if (msg.includes('price') || msg.includes('cost') || msg.includes('how much') || msg.includes('pricing') || msg.includes('expensive') || msg.includes('cheap') || msg.includes('affordable')) {
-      return "Great question! 💰 Here's the thing - most of my clients actually SAVE money by working with me.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost agencies charge $5k+ upfront. I keep it simple and affordable. Want to chat about what would work for your business?";
+      return "Great question! 💰 Here's the thing - most clients actually SAVE money by working with Seth.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost other businesses charge $5k+ upfront. Seth keeps it simple and affordable. Want to chat about what would work for your business?";
     }
 
     // Timeline/process questions  
     if (msg.includes('how long') || msg.includes('timeline') || msg.includes('process') || msg.includes('method') || msg.includes('time') || msg.includes('quick') || msg.includes('fast') || msg.includes('when')) {
-      return "I know you're probably eager to get started! ⚡\n\nHere's my typical timeline:\n• Week 1: We chat about your vision and I design mockups\n• Week 2-3: I build your custom website\n• Week 4: We test everything and launch\n\nThe best part? You're involved every step of the way with unlimited revisions until it's perfect.\n\nReady to get the ball rolling?";
+      return "I know you're probably eager to get started! ⚡\n\nHere's Seth's typical timeline:\n• Week 1: You chat about your vision and he designs mockups\n• Week 2-3: He builds your custom website\n• Week 4: You test everything together and launch\n\nThe best part? You're involved every step of the way with unlimited revisions until it's perfect.\n\nReady to get the ball rolling?";
     }
 
     // Services questions
     if (msg.includes('service') || msg.includes('what do you do') || msg.includes('help') || msg.includes('offer') || msg.includes('seo') || msg.includes('google') || msg.includes('ranking')) {
-      return "I'm basically your one-stop shop for getting more customers online! 🎯\n\nHere's how I help businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (my specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost of my clients see more leads within the first month. What's your biggest challenge right now - getting found online or converting visitors?";
+      return "Seth is basically your one-stop shop for getting more customers online! 🎯\n\nHere's how he helps businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (his specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost clients see more leads within the first month. What's your biggest challenge right now - getting found online or converting visitors?";
     }
 
     // ROI/Results questions
     if (msg.includes('results') || msg.includes('roi') || msg.includes('return') || msg.includes('worth it') || msg.includes('work') || msg.includes('effective')) {
-      return "Love that you're asking about results! 📈 That's exactly how I think.\n\nHere's what my clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty. Want to see how this could work for you?";
+      return "Love that you're asking about results! 📈 That's exactly how Seth thinks.\n\nHere's what his clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty. Want to see how this could work for you?";
     }
 
     // Contact/meeting questions
     if (msg.includes('talk') || msg.includes('call') || msg.includes('meet') || msg.includes('consultation') || msg.includes('discuss') || msg.includes('schedule')) {
-      return "I'd love to chat! 📞 Here's the deal - I offer a free 15-minute strategy call where we'll:\n\n• Talk about your business goals\n• Identify what's holding you back online\n• Map out a plan to get you more customers\n• See if we're a good fit to work together\n\nNo pressure, no sales pitch - just honest advice from someone who's helped 100+ businesses grow online.\n\nClick the 'Contact Us' button below to get in touch!";
+      return "Seth would love to chat! 📞 Here's the deal - he offers a free 15-minute strategy call where you'll:\n\n• Talk about your business goals\n• Identify what's holding you back online\n• Map out a plan to get you more customers\n• See if you're a good fit to work together\n\nNo pressure, no sales pitch - just honest advice from someone who's helped 100+ businesses grow online.\n\nClick the 'Contact Us' button below to get in touch!";
     }
 
     // Business growth questions
     if (msg.includes('business') || msg.includes('grow') || msg.includes('more customers') || msg.includes('sales') || msg.includes('leads') || msg.includes('traffic')) {
-      return "Now we're talking! 🚀 Growing your business online is exactly what I do.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nI fix all of that. My websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\nWhat's your biggest frustration with your current online presence?";
+      return "Now we're talking! 🚀 Growing businesses online is exactly what Seth does.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nSeth fixes all of that. His websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\nWhat's your biggest frustration with your current online presence?";
     }
 
     // Website questions
     if (msg.includes('website') || msg.includes('site') || msg.includes('web') || msg.includes('design') || msg.includes('redesign') || msg.includes('new site')) {
-      return "Perfect! 🎨 Here's why my websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - I don't just build pretty websites. I build websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\nWant to see some examples of websites that are actually working for my clients?";
+      return "Perfect! 🎨 Here's why Seth's websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - Seth doesn't just build pretty websites. He builds websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\nWant to see some examples of websites that are actually working for his clients?";
     }
 
     // Location/local questions
     if (msg.includes('location') || msg.includes('where') || msg.includes('local') || msg.includes('area') || msg.includes('texas')) {
-      return "I'm based in Texas but work with businesses nationwide! 🏠\n\nHonestly, some of my best clients are hundreds of miles away. Everything happens through video calls, screen shares, and email.\n\nThe beauty of web design? Distance doesn't matter. Results do.\n\nPlus, I specialize in local SEO, so whether you're in Texas, New York, or anywhere in between, I can help you dominate your local market.\n\nWhere's your business located?";
+      return "Seth is based in Texas but works with businesses nationwide! 🏠\n\nHonestly, some of his best clients are hundreds of miles away. Everything happens through video calls, screen shares, and email.\n\nThe beauty of web design? Distance doesn't matter. Results do.\n\nPlus, he specializes in local SEO, so whether you're in Texas, New York, or anywhere in between, he can help you dominate your local market.\n\nWhere's your business located?";
     }
 
     // Competitor/comparison questions
     if (msg.includes('different') || msg.includes('better') || msg.includes('why you') || msg.includes('competitors') || msg.includes('other') || msg.includes('comparison')) {
-      return "Great question! 🤔 Here's what makes me different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nMe?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nI'm not just a designer - I'm a business owner who understands what it takes to get customers online.\n\nWant to see the difference this makes?";
+      return "Great question! 🤔 Here's what makes Seth different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nSeth?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nHe's not just a designer - he's a business owner who understands what it takes to get customers online.\n\nWant to see the difference this makes?";
     }
 
     // Simple greetings
     if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || msg === 'good morning' || msg === 'good afternoon') {
-      return "Hey! 👋 Great to meet you! \n\nI'm Seth, and I help small businesses get more customers through websites that actually work.\n\nWhat's your business? Are you looking to get more leads, improve your online presence, or maybe starting something new?";
+      return "Hey! 👋 Great to meet you! \n\nI'm Forte AI, Seth's digital assistant. Seth helps small businesses get more customers through websites that actually work.\n\nWhat's your business? Are you looking to get more leads, improve your online presence, or maybe starting something new?";
     }
 
     // Thank you responses
     if (msg.includes('thank') || msg.includes('thanks')) {
-      return "You're so welcome! 😊 \n\nThat's what I'm here for - helping awesome business owners like you succeed online.\n\nAnything else I can help you with? Or ready to chat about how we can grow your business together?";
+      return "You're so welcome! 😊 \n\nThat's what I'm here for - helping awesome business owners like you succeed online.\n\nAnything else I can help you with? Or ready to chat about how Seth can grow your business?";
     }
 
     // Default helpful response
-    return "I love chatting with business owners! 💬\n\nI can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\nWhat's your biggest challenge right now? Or what questions do you have about growing online?";
+    return "I love chatting with business owners! 💬\n\nSeth can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\nWhat's your biggest challenge right now? Or what questions do you have about growing online?";
   };
 
   const sendMessage = async (messageContent: string) => {
@@ -326,9 +327,9 @@ const AIChat = () => {
         </div>
       )}
 
-      {/* Chat Window - Optimized positioning and mobile sizing */}
+      {/* Chat Window - Enhanced sizing and readability */}
       {isOpen && !isMinimized && (
-        <div className="fixed bottom-4 right-4 left-4 top-20 z-45 lg:bottom-20 lg:right-20 lg:left-auto lg:top-auto lg:w-96 lg:h-[520px] 
+        <div className="fixed bottom-4 right-4 left-4 top-16 z-45 lg:bottom-20 lg:right-4 lg:left-auto lg:top-auto lg:w-[420px] lg:h-[580px] 
                         bg-white dark:bg-gray-900 rounded-xl shadow-2xl border border-gray-200 dark:border-gray-700 flex flex-col overflow-hidden">
           
           {/* Header */}
@@ -340,8 +341,8 @@ const AIChat = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-sm lg:text-base">Chat with Seth</h3>
-                <p className="text-xs text-blue-100">Here to help grow your business! 🚀</p>
+                <h3 className="font-semibold text-sm lg:text-base">Forte AI</h3>
+                <p className="text-xs text-blue-100">Seth's digital assistant • Here to help! 🚀</p>
               </div>
             </div>
             <div className="flex items-center gap-1 lg:gap-2">
@@ -366,102 +367,155 @@ const AIChat = () => {
             </div>
           </div>
 
-          {/* Messages */}
-          <div className="flex-1 overflow-y-auto p-4 space-y-4 min-h-0">
+          {/* Messages - Enhanced readability */}
+          <div className="flex-1 overflow-y-auto p-4 lg:p-5 space-y-4 lg:space-y-5 min-h-0 scroll-smooth">
             {messages.map((message) => (
               <div
                 key={message.id}
                 className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
-                  className={`max-w-[85%] rounded-lg p-3 ${
+                  className={`max-w-[80%] lg:max-w-[85%] rounded-lg p-3 lg:p-4 shadow-sm ${
                     message.type === 'user'
-                      ? 'bg-blue-600 text-white'
-                      : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100'
+                      ? 'bg-blue-600 text-white ml-4'
+                      : 'bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 mr-4 border border-gray-100 dark:border-gray-700'
                   }`}
                 >
-                  <p className="text-sm whitespace-pre-line leading-relaxed">{message.content}</p>
-                  <p className="text-xs opacity-70 mt-1">
+                  <p className="text-sm lg:text-base whitespace-pre-line leading-relaxed font-medium">{message.content}</p>
+                  <p className="text-xs opacity-70 mt-2 font-normal">
                     {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </p>
                 </div>
               </div>
             ))}
 
+            {/* Enhanced Typing Indicator */}
             {isTyping && (
               <div className="flex justify-start">
-                <div className="bg-gray-100 dark:bg-gray-800 rounded-lg p-3">
-                  <div className="flex gap-1">
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce delay-100"></div>
-                    <div className="w-2 h-2 bg-gray-400 rounded-full animate-bounce delay-200"></div>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 mr-4">
+                  <div className="flex items-center gap-2">
+                    <div className="flex gap-1">
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-100"></div>
+                      <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-200"></div>
+                    </div>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">Forte AI is typing...</span>
                   </div>
                 </div>
               </div>
             )}
 
-            {/* Contact Form */}
+            {/* Enhanced Contact Form with Auto-Advancement */}
             {showContactForm && (
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                <form onSubmit={handleContactSubmit} className="space-y-3" name="ai-chat-contact" data-netlify="true">
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 lg:p-5 border border-gray-200 dark:border-gray-700">
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Let's Connect!</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Fill out your details and Seth will get back to you within 24 hours.</p>
+                
+                <form onSubmit={handleContactSubmit} className="space-y-4" name="ai-chat-contact" data-netlify="true">
                   <input type="hidden" name="form-name" value="ai-chat-contact" />
-                  <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name*"
-                    value={contactForm.name}
-                    onChange={(e) => setContactForm(prev => ({ ...prev, name: e.target.value }))}
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-                    required
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="Email Address*"
-                    value={contactForm.email}
-                    onChange={(e) => setContactForm(prev => ({ ...prev, email: e.target.value }))}
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-                    required
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    value={contactForm.phone}
-                    onChange={(e) => setContactForm(prev => ({ ...prev, phone: e.target.value }))}
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-                  />
-                  <input
-                    type="text"
-                    name="company"
-                    placeholder="Company (Optional)"
-                    value={contactForm.company}
-                    onChange={(e) => setContactForm(prev => ({ ...prev, company: e.target.value }))}
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
-                  />
-                  <textarea
-                    name="message"
-                    placeholder="Tell us about your project..."
-                    value={contactForm.message}
-                    onChange={(e) => setContactForm(prev => ({ ...prev, message: e.target.value }))}
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 h-20 resize-none"
-                  />
-                  <div className="flex gap-2">
+                  
+                  <div className="space-y-3">
+                    <input
+                      ref={nameFieldRef}
+                      type="text"
+                      name="name"
+                      placeholder="Your Name*"
+                      value={contactForm.name}
+                      onChange={(e) => handleContactFormChange('name', e.target.value, emailFieldRef)}
+                      onKeyPress={(e) => handleFormFieldKeyPress(e, emailFieldRef)}
+                      className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      required
+                      autoComplete="name"
+                    />
+                    
+                    <input
+                      ref={emailFieldRef}
+                      type="email"
+                      name="email"
+                      placeholder="Email Address*"
+                      value={contactForm.email}
+                      onChange={(e) => handleContactFormChange('email', e.target.value, phoneFieldRef)}
+                      onKeyPress={(e) => handleFormFieldKeyPress(e, phoneFieldRef)}
+                      className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      required
+                      autoComplete="email"
+                    />
+                    
+                    <input
+                      ref={phoneFieldRef}
+                      type="tel"
+                      name="phone"
+                      placeholder="Phone Number"
+                      value={contactForm.phone}
+                      onChange={(e) => handleContactFormChange('phone', e.target.value, companyFieldRef)}
+                      onKeyPress={(e) => handleFormFieldKeyPress(e, companyFieldRef)}
+                      className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      autoComplete="tel"
+                    />
+                    
+                    <input
+                      ref={companyFieldRef}
+                      type="text"
+                      name="company"
+                      placeholder="Company (Optional)"
+                      value={contactForm.company}
+                      onChange={(e) => handleContactFormChange('company', e.target.value, messageFieldRef)}
+                      onKeyPress={(e) => handleFormFieldKeyPress(e, messageFieldRef)}
+                      className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      autoComplete="organization"
+                    />
+                    
+                    <textarea
+                      ref={messageFieldRef}
+                      name="message"
+                      placeholder="Tell us about your project..."
+                      value={contactForm.message}
+                      onChange={(e) => setContactForm(prev => ({ ...prev, message: e.target.value }))}
+                      className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 h-24 lg:h-28 resize-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
+                      autoComplete="off"
+                    />
+                  </div>
+                  
+                  <div className="flex gap-3 pt-2">
                     <button
                       type="submit"
                       disabled={netlifyForm.isSubmitting}
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-2 px-4 rounded-md text-sm font-semibold transition-colors"
+                      className="flex-1 bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 disabled:from-blue-400 disabled:to-blue-500 text-white py-3 lg:py-4 px-4 rounded-lg text-sm lg:text-base font-semibold transition-all duration-200 shadow-lg hover:shadow-xl disabled:cursor-not-allowed"
                     >
-                      {netlifyForm.isSubmitting ? 'Sending...' : 'Send Message'}
+                      {netlifyForm.isSubmitting ? (
+                        <span className="flex items-center justify-center gap-2">
+                          <svg className="animate-spin w-4 h-4" fill="none" viewBox="0 0 24 24">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" className="opacity-25"></circle>
+                            <path fill="currentColor" className="opacity-75" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                          </svg>
+                          Sending...
+                        </span>
+                      ) : (
+                        'Send Message'
+                      )}
                     </button>
                     <button
                       type="button"
                       onClick={() => setShowContactForm(false)}
-                      className="px-4 py-2 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 text-sm"
+                      className="px-4 lg:px-5 py-3 lg:py-4 text-gray-600 dark:text-gray-400 hover:text-gray-800 dark:hover:text-gray-200 text-sm lg:text-base transition-colors"
                     >
                       Cancel
                     </button>
                   </div>
+                  
+                  {/* Error Display */}
+                  {netlifyForm.submitError && (
+                    <div className="mt-3 p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                      <p className="text-sm text-red-700 dark:text-red-400">{netlifyForm.submitError}</p>
+                    </div>
+                  )}
+                  
+                  {/* Success Display */}
+                  {netlifyForm.showSuccess && (
+                    <div className="mt-3 p-3 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-lg">
+                      <p className="text-sm text-green-700 dark:text-green-400">✅ Message sent successfully! Seth will get back to you soon.</p>
+                    </div>
+                  )}
                 </form>
               </div>
             )}
@@ -469,71 +523,71 @@ const AIChat = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Quick Action Prompts - Sales Focused */}
-          <div className="p-3 lg:p-4 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-white dark:bg-gray-900">
-            <p className="text-xs lg:text-sm text-gray-600 dark:text-gray-400 mb-3 text-center">Choose what you'd like to know:</p>
+          {/* Enhanced Quick Action Prompts */}
+          <div className="p-4 lg:p-5 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+            <p className="text-sm lg:text-base text-gray-700 dark:text-gray-300 mb-4 text-center font-medium">What would you like to know?</p>
             
-            <div className="grid grid-cols-1 gap-2 lg:gap-3">
-              {/* Primary prompts */}
-              <div className="grid grid-cols-2 gap-2">
+            <div className="grid grid-cols-1 gap-3 lg:gap-4">
+              {/* Primary prompts - Enhanced */}
+              <div className="grid grid-cols-2 gap-3">
                 <button
                   onClick={() => sendMessage("What's your pricing?")}
-                  className="text-xs lg:text-sm bg-blue-600 hover:bg-blue-700 text-white px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-colors font-medium"
+                  className="text-sm lg:text-base bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
                   💰 Pricing & Plans
                 </button>
                 <button
-                  onClick={() => sendMessage("How can you help grow my business?")}
-                  className="text-xs lg:text-sm bg-green-600 hover:bg-green-700 text-white px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-colors font-medium"
+                  onClick={() => sendMessage("How can Seth help grow my business?")}
+                  className="text-sm lg:text-base bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
-                  🚀 Grow My Business
+                  🚀 Grow Business
                 </button>
               </div>
               
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-3">
                 <button
-                  onClick={() => sendMessage("What kind of results do you get?")}
-                  className="text-xs lg:text-sm bg-orange-600 hover:bg-orange-700 text-white px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-colors font-medium"
+                  onClick={() => sendMessage("What kind of results do clients get?")}
+                  className="text-sm lg:text-base bg-gradient-to-r from-orange-600 to-orange-700 hover:from-orange-700 hover:to-orange-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
                   📈 See Results
                 </button>
                 <button
-                  onClick={() => sendMessage("How long does it take?")}
-                  className="text-xs lg:text-sm bg-purple-600 hover:bg-purple-700 text-white px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-colors font-medium"
+                  onClick={() => sendMessage("How long does the process take?")}
+                  className="text-sm lg:text-base bg-gradient-to-r from-purple-600 to-purple-700 hover:from-purple-700 hover:to-purple-800 text-white px-4 py-3 lg:px-5 lg:py-4 rounded-xl transition-all duration-200 font-semibold shadow-lg hover:shadow-xl hover:scale-105 transform"
                 >
                   ⏱️ Timeline
                 </button>
               </div>
 
-              {/* Secondary prompts */}
-              <div className="grid grid-cols-3 gap-1.5 lg:gap-2 pt-2 border-t border-gray-100 dark:border-gray-700">
+              {/* Secondary prompts - Enhanced */}
+              <div className="grid grid-cols-3 gap-2 lg:gap-3 pt-3 border-t border-gray-200 dark:border-gray-600">
                 <button
-                  onClick={() => sendMessage("Tell me about your website services")}
-                  className="text-xs bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-2 lg:px-3 lg:py-2.5 rounded-md transition-colors"
+                  onClick={() => sendMessage("Tell me about Seth's website services")}
+                  className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
                   🎨 Websites
                 </button>
                 <button
-                  onClick={() => sendMessage("How do you help with SEO?")}
-                  className="text-xs bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-2 lg:px-3 lg:py-2.5 rounded-md transition-colors"
+                  onClick={() => sendMessage("How does Seth help with SEO?")}
+                  className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
                   📍 SEO Help
                 </button>
                 <button
-                  onClick={() => sendMessage("Why choose you over others?")}
-                  className="text-xs bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300 px-2 py-2 lg:px-3 lg:py-2.5 rounded-md transition-colors"
+                  onClick={() => sendMessage("Why choose Seth over others?")}
+                  className="text-xs lg:text-sm bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-3 py-2.5 lg:px-4 lg:py-3 rounded-lg transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
-                  🤔 Why You?
+                  🤔 Why Seth?
                 </button>
               </div>
               
-              {/* Contact prompt */}
-              <div className="pt-2">
+              {/* Contact prompt - Enhanced */}
+              <div className="pt-3">
                 <button
                   onClick={() => setShowContactForm(true)}
-                  className="w-full text-sm bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 lg:py-3.5 rounded-lg transition-all duration-200 font-semibold shadow-lg hover:shadow-xl"
+                  className="w-full text-sm lg:text-base bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-700 hover:from-indigo-700 hover:via-blue-700 hover:to-blue-800 text-white py-4 lg:py-5 rounded-xl transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border border-blue-500"
                 >
-                  📞 Contact Us
+                  📞 Get In Touch with Seth
                 </button>
               </div>
             </div>
