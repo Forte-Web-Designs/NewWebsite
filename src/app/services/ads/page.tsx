@@ -20,7 +20,7 @@ const faqData: FAQItem[] = [
   {
     question: "How Does Forte PPC™ Pricing Work? 💰",
     answer:
-      "Forte PPC™ requires an active Forte Foundation™ ($200/mo) or Forte Pro™ ($350/mo) website. Then add Forte PPC Starter™ (+$400/mo) or Forte PPC Growth™ (+$650/mo) plus your ad spend budget. For example: Foundation + PPC Starter = $600/mo + ad spend.",
+      "Forte PPC™ requires an active Forte Foundation™ ($200/month) or Forte Pro™ ($350/month) website. Then add Forte PPC Starter™ (+$400/month) or Forte PPC Growth™ (+$650/month) plus your ad spend budget. For example: Foundation + PPC Starter = $600/month + ad spend.",
   },
   {
     question: "What's Included in Ad Management? 🎯",

@@ -19,7 +19,7 @@ const faqData: FAQItem[] = [
   {
     question: "How Does Forte Social™ Pricing Work? 💰",
     answer:
-      "Forte Social™ works as an add-on to your Forte™ website. Choose Forte Social Essential™ (+$200/mo) for consistent posting and engagement, or Forte Social Growth™ (+$350/mo) for advanced content creation and community management. Both require an active Forte Foundation™ or Pro™ website. Save with ecosystem packages - like Forte Brand Boost™ which includes website + SEO + social for just $700/mo (saving $200/mo).",
+      "Forte Social™ works as an add-on to your Forte™ website. Choose Forte Social Essential™ (+$200/month) for consistent posting and engagement, or Forte Social Growth™ (+$350/month) for advanced content creation and community management. Both require an active Forte Foundation™ or Pro™ website. Save with ecosystem packages - like Forte Brand Boost™ which includes website + SEO + social for just $700/month (saving $200/month).",
   },
   {
     question: "How Much Content Do You Create? 📅",

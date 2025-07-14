@@ -15,7 +15,7 @@ const faqData: FAQItem[] = [
   {
     question: "How Does Forte SEO™ Pricing Work? 💰",
     answer:
-      "Forte SEO™ works as an add-on to your Forte™ website. Choose Forte SEO Essential™ (+$300/mo) for technical optimization and on-page SEO, or Forte SEO Growth™ (+$500/mo) which includes everything plus content creation, local SEO, and link building. Both require an active Forte Foundation™ or Pro™ website. Save even more with our ecosystem packages - like Forte Growth™ which includes website + SEO for just $500/mo (saving $100/mo).",
+      "Forte SEO™ works as an add-on to your Forte™ website. Choose Forte SEO Essential™ (+$300/month) for technical optimization and on-page SEO, or Forte SEO Growth™ (+$500/month) which includes everything plus content creation, local SEO, and link building. Both require an active Forte Foundation™ or Pro™ website. Save even more with our ecosystem packages - like Forte Growth™ which includes website + SEO for just $500/month (saving $100/month).",
   },
   {
     question: "How Long Does It Take to See Results? 🤔",
@@ -25,7 +25,7 @@ const faqData: FAQItem[] = [
   {
     question: "What's Included in Essential vs Growth? 📈",
     answer:
-      "Forte SEO Essential™ ($300/mo) includes technical optimization, on-page SEO, keyword research, and monthly reporting. Forte SEO Growth™ ($500/mo) includes everything in Essential plus 4 SEO blog posts monthly, local SEO optimization, competitor analysis, and strategic link building campaigns.",
+      "Forte SEO Essential™ ($300/month) includes technical optimization, on-page SEO, keyword research, and monthly reporting. Forte SEO Growth™ ($500/month) includes everything in Essential plus 4 SEO blog posts monthly, local SEO optimization, competitor analysis, and strategic link building campaigns.",
   },
   {
     question: "Do You Work with All Business Types? 🏢",

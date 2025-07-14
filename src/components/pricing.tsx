@@ -32,9 +32,9 @@ const pricingPlans: PricingPlan[] = [
       'Forte Guarantee™'
     ],
     addons: [
-      'Forte SEO Essential™: +$300/mo',
-      'Forte PPC Starter™: +$400/mo',
-      'Forte Social Essential™: +$200/mo'
+      'Forte SEO Essential™: +$300/month',
+      'Forte PPC Starter™: +$400/month',
+      'Forte Social Essential™: +$200/month'
     ]
   },
   {
@@ -53,9 +53,9 @@ const pricingPlans: PricingPlan[] = [
       'Forte Guarantee™'
     ],
     addons: [
-      'Forte SEO Growth™: +$500/mo',
-      'Forte PPC Growth™: +$650/mo',
-      'Forte Social Growth™: +$350/mo'
+      'Forte SEO Growth™: +$500/month',
+      'Forte PPC Growth™: +$650/month',
+      'Forte Social Growth™: +$350/month'
     ]
   }
 ];
@@ -75,9 +75,9 @@ const servicePricingPlans: PricingPlan[] = [
       'Monthly Forte SEO Reports™'
     ],
     addons: [
-      'Content Creation: +$150/mo',
-      'Local SEO Boost: +$100/mo',
-      'Link Building: +$200/mo'
+      'Content Creation: +$150/month',
+      'Local SEO Boost: +$100/month',
+      'Link Building: +$200/month'
     ]
   },
   {
@@ -96,8 +96,8 @@ const servicePricingPlans: PricingPlan[] = [
     ],
     addons: [
       'Extra Blog Posts: +$75/ea',
-      'E-commerce SEO: +$200/mo',
-      'Video SEO: +$150/mo'
+      'E-commerce SEO: +$200/month',
+      'Video SEO: +$150/month'
     ]
   },
   {
@@ -114,9 +114,9 @@ const servicePricingPlans: PricingPlan[] = [
       'Weekly Forte PPC Reports™'
     ],
     addons: [
-      'Facebook Ads: +$200/mo',
-      'Bing Ads: +$150/mo',
-      'Conversion Tracking: +$100/mo'
+      'Facebook Ads: +$200/month',
+      'Bing Ads: +$150/month',
+      'Conversion Tracking: +$100/month'
     ]
   },
   {
@@ -134,9 +134,9 @@ const servicePricingPlans: PricingPlan[] = [
       'Advanced Forte PPC Reports™'
     ],
     addons: [
-      'YouTube Ads: +$250/mo',
-      'Shopping Campaigns: +$200/mo',
-      'Remarketing Setup: +$150/mo'
+      'YouTube Ads: +$250/month',
+      'Shopping Campaigns: +$200/month',
+      'Remarketing Setup: +$150/month'
     ]
   },
   {
@@ -152,9 +152,9 @@ const servicePricingPlans: PricingPlan[] = [
       'Monthly Forte Social Reports™'
     ],
     addons: [
-      'Extra Platform: +$100/mo',
-      'Stories/Reels: +$150/mo',
-      'Community Management: +$200/mo'
+      'Extra Platform: +$100/month',
+      'Stories/Reels: +$150/month',
+      'Community Management: +$200/month'
     ]
   },
   {
@@ -172,9 +172,9 @@ const servicePricingPlans: PricingPlan[] = [
       'Advanced Forte Social Reports™'
     ],
     addons: [
-      'Paid Social Ads: +$300/mo',
-      'Influencer Outreach: +$250/mo',
-      'Video Content: +$200/mo'
+      'Paid Social Ads: +$300/month',
+      'Influencer Outreach: +$250/month',
+      'Video Content: +$200/month'
     ]
   }
 ];
@@ -195,9 +195,9 @@ const ecosystemPackages: PricingPlan[] = [
       'Forte Guarantee™'
     ],
     addons: [
-      'Add SEO: +$300/mo',
-      'Add PPC: +$400/mo',
-      'Add Social: +$200/mo'
+      'Add SEO: +$300/month',
+      'Add PPC: +$400/month',
+      'Add Social: +$200/month'
     ]
   },
   {
@@ -215,9 +215,9 @@ const ecosystemPackages: PricingPlan[] = [
       'Forte Care™ Support Included'
     ],
     addons: [
-      'Upgrade to Pro Site: +$150/mo',
-      'Add PPC: +$400/mo',
-      'Add Social: +$200/mo'
+      'Upgrade to Pro Site: +$150/month',
+      'Add PPC: +$400/month',
+      'Add Social: +$200/month'
     ]
   },
   {
@@ -234,9 +234,9 @@ const ecosystemPackages: PricingPlan[] = [
       'Unified Brand Strategy'
     ],
     addons: [
-      'Upgrade to Pro Site: +$150/mo',
-      'Add PPC: +$400/mo',
-      'Upgrade to SEO Growth: +$200/mo'
+      'Upgrade to Pro Site: +$150/month',
+      'Add PPC: +$400/month',
+      'Upgrade to SEO Growth: +$200/month'
     ]
   },
   {
@@ -254,8 +254,8 @@ const ecosystemPackages: PricingPlan[] = [
       'Complete Forte Ecosystem™'
     ],
     addons: [
-      'Upgrade PPC to Growth: +$250/mo',
-      'Upgrade Social to Growth: +$150/mo',
+      'Upgrade PPC to Growth: +$250/month',
+      'Upgrade Social to Growth: +$150/month',
       'Add Extra Services as Needed'
     ]
   }
@@ -487,11 +487,11 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center text-sm text-gray-600 dark:text-gray-400">
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Trusted by 200+ businesses</span>
+                  <span>Trusted by 25+ local businesses</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>98% client retention rate</span>
+                  <span>100% client retention rate</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>

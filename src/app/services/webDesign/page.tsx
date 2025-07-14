@@ -321,7 +321,7 @@ export default function WebsiteDesignPage() {
               </summary>
               <div className="mt-4">
                 <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
-                  Choose Forte Foundation™ ($200/mo) for a 5-page website or Forte Pro™ ($350/mo) for 10 pages. Both include Forte Care™ support, hosting, and our performance guarantee. Add SEO, PPC, or Social Media services when you're ready to grow.
+                  Choose Forte Foundation™ ($200/month) for a 5-page website or Forte Pro™ ($350/month) for 10 pages. Both include Forte Care™ support, hosting, and our performance guarantee. Add SEO, PPC, or Social Media services when you're ready to grow.
                 </p>
               </div>
             </details>

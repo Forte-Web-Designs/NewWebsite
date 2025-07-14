@@ -39,7 +39,7 @@
 
 ### **✅ Enhanced Pricing Psychology**
 - **CTA Updates:** "Lock In My Rate", "Get Pro Access" for urgency
-- **Trust Indicators:** "Trusted by 200+ businesses", "98% retention rate"
+- **Trust Indicators:** "Trusted by 25+ local businesses", "100% client retention rate"
 - **Risk Reversal:** "30-day money-back guarantee", "No Setup Fees"
 - **Social Proof:** Customer testimonials directly on pricing pages
 

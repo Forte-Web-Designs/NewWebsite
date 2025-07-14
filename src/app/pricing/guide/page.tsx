@@ -37,7 +37,7 @@ const businessScenarios: BusinessScenario[] = [
       plan: 'Forte Foundation™',
       monthlyTotal: '$200/month',
       breakdown: [
-        'Forte Foundation™: $200/mo',
+        'Forte Foundation™: $200/month',
         'Includes: 5-page website + Forte Care™'
       ],
       reasoning: 'Perfect starting point with everything you need to establish credibility online. Forte Care™ keeps your site maintained while you focus on growing your business.'
@@ -63,14 +63,14 @@ const businessScenarios: BusinessScenario[] = [
       plan: 'Foundation + SEO Essential™',
       monthlyTotal: '$500/month',
       breakdown: [
-        'Forte Foundation™: $200/mo',
-        'Forte SEO Essential™: +$300/mo'
+        'Forte Foundation™: $200/month',
+        'Forte SEO Essential™: +$300/month'
       ],
       reasoning: 'Local businesses NEED to be found on Google. SEO Essential gets you ranking for local searches while your website converts visitors into customers.'
     },
     nextSteps: [
       'Start with Foundation + SEO Essential™',
-      'Add Forte Social™ (+$200/mo) for community engagement',
+      'Add Forte Social™ (+$200/month) for community engagement',
       'Consider PPC during busy seasons'
     ]
   },
@@ -89,14 +89,14 @@ const businessScenarios: BusinessScenario[] = [
       plan: 'Pro + SEO Growth™ + PPC Growth™',
       monthlyTotal: '$1,500/month',
       breakdown: [
-        'Forte Pro™: $350/mo',
-        'Forte SEO Growth™: +$500/mo',
-        'Forte PPC Growth™: +$650/mo'
+        'Forte Pro™: $350/month',
+        'Forte SEO Growth™: +$500/month',
+        'Forte PPC Growth™: +$650/month'
       ],
       reasoning: 'E-commerce needs maximum visibility. Pro gives you more pages for products, SEO Growth includes content marketing, and PPC drives immediate sales.'
     },
     nextSteps: [
-      'Start with Pro + SEO Growth™ ($850/mo)',
+      'Start with Pro + SEO Growth™ ($850/month)',
       'Add PPC Growth™ once SEO momentum builds',
       'Social Growth™ for product showcasing'
     ]
@@ -116,14 +116,14 @@ const businessScenarios: BusinessScenario[] = [
       plan: 'Pro + SEO Growth™ + Social Essential™',
       monthlyTotal: '$1,050/month',
       breakdown: [
-        'Forte Pro™: $350/mo',
-        'Forte SEO Growth™: +$500/mo',
-        'Forte Social Essential™: +$200/mo'
+        'Forte Pro™: $350/month',
+        'Forte SEO Growth™: +$500/month',
+        'Forte Social Essential™: +$200/month'
       ],
       reasoning: 'Professionals need comprehensive digital presence. Pro handles complex services, SEO Growth includes content marketing for thought leadership, and Social builds authority.'
     },
     nextSteps: [
-      'Start with Pro + SEO Essential™ ($650/mo)',
+      'Start with Pro + SEO Essential™ ($650/month)',
       'Upgrade to SEO Growth™ for content marketing',
       'Add Social for thought leadership content'
     ]
@@ -143,14 +143,14 @@ const businessScenarios: BusinessScenario[] = [
       plan: 'Foundation + SEO Essential™ + Social Growth™',
       monthlyTotal: '$850/month',
       breakdown: [
-        'Forte Foundation™: $200/mo',
-        'Forte SEO Essential™: +$300/mo',
-        'Forte Social Growth™: +$350/mo'
+        'Forte Foundation™: $200/month',
+        'Forte SEO Essential™: +$300/month',
+        'Forte Social Growth™: +$350/month'
       ],
       reasoning: 'Restaurants thrive on local SEO and social engagement. Essential SEO gets you found locally, while Social Growth showcases your food and builds community.'
     },
     nextSteps: [
-      'Start with Foundation + SEO Essential™ ($500/mo)',
+      'Start with Foundation + SEO Essential™ ($500/month)',
       'Add Social Growth™ for food photography and engagement',
       'Consider PPC for special events or promotions'
     ]
@@ -170,15 +170,15 @@ const businessScenarios: BusinessScenario[] = [
       plan: 'Full Forte™ Ecosystem',
       monthlyTotal: '$1,850/month',
       breakdown: [
-        'Forte Pro™: $350/mo',
-        'Forte SEO Growth™: +$500/mo',
-        'Forte PPC Growth™: +$650/mo',
-        'Forte Social Growth™: +$350/mo'
+        'Forte Pro™: $350/month',
+        'Forte SEO Growth™: +$500/month',
+        'Forte PPC Growth™: +$650/month',
+        'Forte Social Growth™: +$350/month'
       ],
       reasoning: 'Market leaders need comprehensive presence. Every channel working together amplifies results and creates competitive advantages that are hard to replicate.'
     },
     nextSteps: [
-      'Implement Pro + SEO Growth™ first ($850/mo)',
+      'Implement Pro + SEO Growth™ first ($850/month)',
       'Add PPC Growth™ for immediate traffic',
       'Complete with Social Growth™ for total market presence'
     ]

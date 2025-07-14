@@ -72,9 +72,9 @@ IMPROVED: "Get My $200 Foundation", "Lock In My Rate"
 
 **B. Recommended Additions:**
 ```
-"Trusted by 200+ small businesses"
+"Trusted by 25+ local businesses"
 "Average client sees 180% traffic increase"
-"98% client retention rate"
+"100% client retention rate"
 "A+ Better Business Bureau rating"
 ```
 

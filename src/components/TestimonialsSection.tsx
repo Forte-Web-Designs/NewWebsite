@@ -216,7 +216,7 @@ export default function TestimonialsSection({
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-500">✓</span>
-                <span>98% Client Retention</span>
+                <span>100% Client Retention</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="text-green-500">✓</span>

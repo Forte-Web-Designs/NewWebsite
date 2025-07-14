@@ -237,7 +237,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                         <option value="">Select a package</option>
                         {fortePackages.map(pkg => (
                           <option key={pkg.value} value={pkg.value}>
-                            {pkg.label} (${pkg.cost}/mo)
+                            {pkg.label} (${pkg.cost}/month)
                           </option>
                         ))}
                       </select>
@@ -283,16 +283,16 @@ export default function ROICalculator({ className = "" }: { className?: string }
                         <div className="space-y-2">
                           <div className="flex justify-between">
                             <span className="text-gray-600 dark:text-gray-400">Current Costs:</span>
-                            <span className="font-medium text-red-600">${calculation.currentCosts}/mo</span>
+                            <span className="font-medium text-red-600">${calculation.currentCosts}/month</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-gray-600 dark:text-gray-400">Forte™ Costs:</span>
-                            <span className="font-medium text-blue-600">${calculation.forteCosts}/mo</span>
+                            <span className="font-medium text-blue-600">${calculation.forteCosts}/month</span>
                           </div>
                           <div className="flex justify-between border-t pt-2">
                             <span className="font-semibold text-gray-900 dark:text-white">Monthly Savings:</span>
                             <span className="font-bold text-green-600">
-                              {calculation.monthlySavings >= 0 ? '+' : ''}${calculation.monthlySavings}/mo
+                              {calculation.monthlySavings >= 0 ? '+' : ''}${calculation.monthlySavings}/month
                             </span>
                           </div>
                         </div>
@@ -306,7 +306,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                         <div className="space-y-2">
                           <div className="flex justify-between">
                             <span className="text-gray-600 dark:text-gray-400">Additional Traffic:</span>
-                            <span className="font-medium text-green-600">+{Math.round(calculation.trafficIncrease)} visitors/mo</span>
+                            <span className="font-medium text-green-600">+{Math.round(calculation.trafficIncrease)} visitors/month</span>
                           </div>
                           <div className="flex justify-between">
                             <span className="text-gray-600 dark:text-gray-400">Conversion Improvement:</span>
@@ -314,7 +314,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                           </div>
                           <div className="flex justify-between border-t pt-2">
                             <span className="font-semibold text-gray-900 dark:text-white">Revenue Increase:</span>
-                            <span className="font-bold text-green-600">+${Math.round(calculation.revenueIncrease)}/mo</span>
+                            <span className="font-bold text-green-600">+${Math.round(calculation.revenueIncrease)}/month</span>
                           </div>
                         </div>
                       </div>
