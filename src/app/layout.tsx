@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 import MobileStickyCTA from "@/components/MobileStickyCTA";
+import AIChat from "@/components/AIChat";
 import { ThemeProvider } from "./providers/ThemeProvider";
 
 const roboto = Roboto({
@@ -143,6 +144,7 @@ export default function RootLayout({
           <Footer />
           <BackToTopButton />
           <MobileStickyCTA />
+          <AIChat />
         </ThemeProvider>
       </body>
     </html>
