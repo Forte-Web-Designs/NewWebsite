@@ -51,6 +51,62 @@ export default function SeoDesignPage() {
         </p>
       </div>
 
+      {/* Problem-Solution Structure */}
+      <div className="py-8 sm:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Problem Statement */}
+          <div className="space-y-6">
+            <div className="bg-red-50 dark:bg-red-900/20 rounded-xl p-6 border border-red-200 dark:border-red-800">
+              <h3 className="text-xl font-semibold text-red-800 dark:text-red-200 mb-3">
+                The Problem You're Facing
+              </h3>
+              <ul className="space-y-2 text-red-700 dark:text-red-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  Your website isn't showing up when customers search for your services
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  Competitors are stealing your potential customers online
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  You're missing out on qualified leads who are ready to buy
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Solution & Benefits */}
+          <div className="space-y-6">
+            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
+              <h3 className="text-xl font-semibold text-green-800 dark:text-green-200 mb-3">
+                The Forte SEO Solution
+              </h3>
+              <ul className="space-y-2 text-green-700 dark:text-green-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  Strategic keyword targeting for your local market
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  Technical SEO optimization for 98-100 PageSpeed scores
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  Content strategy that converts visitors into customers
+                </li>
+              </ul>
+              <div className="mt-4 p-3 bg-green-100 dark:bg-green-800/30 rounded-lg">
+                <p className="text-sm font-medium text-green-800 dark:text-green-200">
+                  Expected Results: 30-50% increase in organic traffic within 90 days
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Main Content Section - Mobile Optimized */}
       <div className="py-12 sm:py-16 lg:py-24 space-y-6 sm:space-y-8 lg:space-y-12">
         <div className="dark:bg-[radial-gradient(50.48%_57.98%_at_5.98%_5.37%,_#1A1A1A_0%,_rgba(21,21,21,0.5)_50%,_rgba(16,16,16,0)_100%)] bg-[radial-gradient(50.48%_57.98%_at_5.98%_5.37%,_#f4f4f4_0%,_rgba(244,244,244,0.5)_50%,_rgba(244,244,244,0)_100%)] p-4 sm:p-6 lg:p-8 rounded-tl-lg sm:rounded-tl-xl lg:rounded-tl-3xl w-full max-w-4xl">

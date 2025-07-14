@@ -662,7 +662,79 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
           </SimpleScrollReveal>
         )}
 
-        {/* Desktop Grid */}
+        {/* Pricing Structure Explanation */}
+        {!serviceType && (
+          <SimpleScrollReveal direction="up" delay={300}>
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-6 lg:p-8 mb-12 max-w-4xl mx-auto border border-blue-200 dark:border-blue-800">
+              <h3 className="text-2xl font-bold text-blue-900 dark:text-blue-100 mb-6 text-center">
+                Choose Your Payment Style
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-blue-200 dark:border-gray-700">
+                  <h4 className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3">
+                    Monthly Subscription (Most Popular)
+                  </h4>
+                  <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-500 mt-1">✓</span>
+                      No large upfront investment
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-500 mt-1">✓</span>
+                      Forte Care™ maintenance included
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-500 mt-1">✓</span>
+                      Unlimited updates & edits
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-green-500 mt-1">✓</span>
+                      Premium hosting & security
+                    </li>
+                  </ul>
+                  <p className="text-xs text-blue-600 dark:text-blue-400 mt-3 font-medium">
+                    Perfect for ongoing growth and support
+                  </p>
+                </div>
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-blue-200 dark:border-gray-700">
+                  <h4 className="text-lg font-semibold text-purple-800 dark:text-purple-200 mb-3">
+                    One-Time Payment Available
+                  </h4>
+                  <ul className="space-y-2 text-sm text-gray-700 dark:text-gray-300">
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-1">✓</span>
+                      Own your website outright
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-1">✓</span>
+                      Custom pricing based on scope
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-1">✓</span>
+                      Optional maintenance plans
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-purple-500 mt-1">✓</span>
+                      Great for established businesses
+                    </li>
+                  </ul>
+                  <p className="text-xs text-purple-600 dark:text-purple-400 mt-3 font-medium">
+                    <Link href="/contact" className="underline hover:text-purple-800 dark:hover:text-purple-300">
+                      Contact us for custom pricing
+                    </Link>
+                  </p>
+                </div>
+              </div>
+              <div className="text-center mt-6 pt-6 border-t border-blue-200 dark:border-blue-700">
+                <p className="text-sm text-blue-700 dark:text-blue-300">
+                  <strong>Not sure which is right for you?</strong> Let's discuss your needs and find the perfect fit.
+                </p>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        )}
+
+        {/* Pricing Plans */}
         <div className="hidden lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto md:w-[full] w-fit mb-16">
           {desktopOrder.map((plan, index) => (
             <SimpleScrollReveal key={plan.id} direction="up" delay={200 + (index * 200)}>
