@@ -146,7 +146,7 @@ const AIChat = () => {
       setMessages([{
         id: '1',
         type: 'bot',
-        content: "Hey there! 👋 I'm Forte AI, Seth's digital assistant. I help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\n💡 *Tip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!*",
+        content: "Hey there! 👋 I'm Forte AI, Seth's digital assistant. We help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\n💡 *Tip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!*",
         timestamp: new Date()
       }]);
     }
@@ -195,22 +195,22 @@ const AIChat = () => {
 
     // Pricing questions
     if (msg.includes('price') || msg.includes('cost') || msg.includes('how much') || msg.includes('pricing') || msg.includes('expensive') || msg.includes('cheap') || msg.includes('affordable')) {
-      return "Great question! 💰 Here's the thing - most clients actually SAVE money by working with Forte Web Designs.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost other businesses charge $5k+ upfront. We keep it simple and affordable. Want to chat about what would work for your business?";
+      return "Great question! 💰 Here's the thing - most clients actually SAVE money working with us.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost other agencies charge $5k+ upfront. We keep it simple and affordable. Want to chat about what would work for your business?";
     }
 
     // Timeline/process questions  
     if (msg.includes('how long') || msg.includes('timeline') || msg.includes('process') || msg.includes('method') || msg.includes('time') || msg.includes('quick') || msg.includes('fast') || msg.includes('when')) {
-      return "I know you're probably eager to get started! ⚡\n\nHere's our typical timeline:\n• Week 1: We chat about your vision and design mockups\n• Week 2-3: We build your custom website\n• Week 4: You test everything together and launch\n\nThe best part? You're involved every step of the way with unlimited revisions until it's perfect.\n\nReady to get the ball rolling?";
+      return "I know you're probably eager to get started! ⚡\n\nHere's our typical timeline:\n• Week 1: We chat about your vision and create mockups\n• Week 2-3: We build your custom website\n• Week 4: You test everything and we launch together\n\nThe best part? You're involved every step of the way with unlimited revisions until it's perfect.\n\nMost clients are amazed how smooth the process is. Ready to get the ball rolling?";
     }
 
     // Services questions
     if (msg.includes('service') || msg.includes('what do you do') || msg.includes('help') || msg.includes('offer') || msg.includes('seo') || msg.includes('google') || msg.includes('ranking')) {
-      return "Forte Web Designs is basically your one-stop shop for getting more customers online! 🎯\n\nHere's how we help businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (our specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost clients see more leads within the first month. What's your biggest challenge right now - getting found online or converting visitors?";
+      return "We're basically your one-stop shop for getting more customers online! 🎯\n\nHere's how we help businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (our specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost clients see more leads within the first month. What's your biggest challenge right now - getting found online or converting visitors?";
     }
 
     // ROI/Results questions
     if (msg.includes('results') || msg.includes('roi') || msg.includes('return') || msg.includes('worth it') || msg.includes('work') || msg.includes('effective')) {
-      return "Love that you're asking about results! 📈 That's exactly how Forte Web Designs thinks.\n\nHere's what our clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty. Want to see how this could work for you?";
+      return "Love that you're asking about results! 📈 That's exactly how we think too.\n\nHere's what our clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty. Want to see how this could work for you?";
     }
 
     // Contact/meeting questions
@@ -220,12 +220,17 @@ const AIChat = () => {
 
     // Business growth questions
     if (msg.includes('business') || msg.includes('grow') || msg.includes('more customers') || msg.includes('sales') || msg.includes('leads') || msg.includes('traffic') || msg.includes('forte web designs')) {
-      return "Now we're talking! 🚀 Growing businesses online is exactly what Forte Web Designs does.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nForte Web Designs fixes all of that. Our websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\nWhat's your biggest frustration with your current online presence?";
+      return "Now we're talking! 🚀 Growing businesses online is exactly what we do.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nWe fix all of that. Our websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\nWhat's your biggest frustration with your current online presence?";
     }
 
     // Website questions
     if (msg.includes('website') || msg.includes('site') || msg.includes('web') || msg.includes('design') || msg.includes('redesign') || msg.includes('new site') || msg.includes('forte web designs')) {
-      return "Perfect! 🎨 Here's why Forte Web Designs' websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - we don't just build pretty websites. We build websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\nWant to see some examples of websites that are actually working for our clients?";
+      return "Perfect! 🎨 Here's why our websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - we don't just build pretty websites. We build websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\nWant to see some examples of websites that are actually working for our clients?";
+    }
+
+    // Examples/work questions
+    if (msg.includes('example') || msg.includes('work') || msg.includes('portfolio') || msg.includes('case stud') || msg.includes('see your') || msg.includes('show me')) {
+      return "I'd love to show you! 🎨 We've helped all kinds of businesses:\n\n• A local HVAC company went from 3 to 30+ leads per month\n• A law firm doubled their client inquiries in 4 months\n• A landscaping business increased revenue 150% in 6 months\n• An accounting firm got to page 1 of Google for their main keywords\n\nEach website is completely custom-built for the specific business and their goals. No templates, no shortcuts.\n\nWhat type of business are you in? I can share more specific examples that might relate to your industry!";
     }
 
     // Location/local questions
@@ -233,14 +238,19 @@ const AIChat = () => {
       return "We're based in Texas but work with businesses nationwide! 🏠\n\nHonestly, some of our best clients are hundreds of miles away. Everything happens through video calls, screen shares, and email.\n\nThe beauty of web design? Distance doesn't matter. Results do.\n\nPlus, we specialize in local SEO, so whether you're in Texas, New York, or anywhere in between, we can help you dominate your local market.\n\nWhere's your business located?";
     }
 
+    // Industry-specific questions
+    if (msg.includes('industry') || msg.includes('type of business') || msg.includes('niche') || msg.includes('sector') || msg.includes('hvac') || msg.includes('restaurant') || msg.includes('law') || msg.includes('medical') || msg.includes('contractor') || msg.includes('retail')) {
+      return "Great question! 🏢 We work with all kinds of businesses, and honestly, that's our strength.\n\nSome recent successes:\n• HVAC contractors getting 20+ leads/month\n• Restaurants increasing online orders 3x\n• Law firms dominating local search\n• Medical practices filling schedules\n• Retail stores boosting online sales\n\nEvery industry has different needs, but the fundamentals are the same: get found on Google, look professional, convert visitors into customers.\n\nWhat type of business are you in? I'd love to share specific strategies for your industry!";
+    }
+
     // Competitor/comparison questions
     if (msg.includes('different') || msg.includes('better') || msg.includes('why you') || msg.includes('why us') || msg.includes('why forte') || msg.includes('competitors') || msg.includes('other') || msg.includes('comparison') || msg.includes('choose forte')) {
-      return "Great question! 🤔 Here's what makes Forte Web Designs different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nForte Web Designs?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nWe're not just designers - we're business owners who understand what it takes to get customers online.\n\nWant to see the difference this makes?";
+      return "Great question! 🤔 Here's what makes us different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nUs?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nWe're not just designers - we're business owners who understand what it takes to get customers online.\n\nWant to see the difference this makes?";
     }
 
     // Simple greetings
     if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || msg === 'good morning' || msg === 'good afternoon') {
-      return "Hey! 👋 Great to meet you! \n\nI'm Forte AI, Seth's digital assistant. Seth and the team at Forte Web Designs help small businesses get more customers through websites that actually work.\n\nWhat's your business? Are you looking to get more leads, improve your online presence, or maybe starting something new?";
+      return "Hey! 👋 Great to meet you! \n\nI'm Forte AI, Seth's digital assistant. Seth and the team help small businesses get more customers through websites that actually work.\n\nWhat's your business? Are you looking to get more leads, improve your online presence, or maybe starting something new?";
     }
 
     // Thank you responses
@@ -249,7 +259,7 @@ const AIChat = () => {
     }
 
     // Default helpful response
-    return "I love chatting with business owners! 💬\n\nForte Web Designs can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\nWhat's your biggest challenge right now? Or what questions do you have about growing online?";
+    return "I love chatting with business owners! 💬\n\nWe can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\nWhat's your biggest challenge right now? Or what questions do you have about growing online?";
   };
 
   const sendMessage = async (messageContent: string) => {
@@ -671,14 +681,14 @@ const AIChat = () => {
                   💰 Pricing
                 </button>
                 <button
-                  onClick={() => sendMessage("How can Forte Web Designs help grow my business?")}
+                  onClick={() => sendMessage("How can you help grow my business?")}
                   className="text-xs bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-2 py-1.5 lg:px-2.5 lg:py-2 rounded-md transition-all duration-200 font-semibold shadow-md hover:shadow-lg hover:scale-105 transform"
                 >
                   🚀 Grow
                 </button>
               </div>
               
-              <div className="grid grid-cols-3 gap-1">
+              <div className="grid grid-cols-4 gap-1">
                 <button
                   onClick={() => sendMessage("What kind of results do clients get?")}
                   className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-1.5 py-1 lg:px-2 lg:py-1.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-orange-300 dark:hover:border-orange-500 font-medium"
@@ -689,13 +699,19 @@ const AIChat = () => {
                   onClick={() => sendMessage("How long does the process take?")}
                   className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-1.5 py-1 lg:px-2 lg:py-1.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-purple-300 dark:hover:border-purple-500 font-medium"
                 >
-                  ⏱️ Timeline
+                  ⏱️ Time
                 </button>
                 <button
-                  onClick={() => sendMessage("Why choose Forte Web Designs over others?")}
+                  onClick={() => sendMessage("What makes you different from other web designers?")}
                   className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-1.5 py-1 lg:px-2 lg:py-1.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
                   🤔 Why Us?
+                </button>
+                <button
+                  onClick={() => sendMessage("Can I see examples of your work?")}
+                  className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-1.5 py-1 lg:px-2 lg:py-1.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-emerald-300 dark:hover:border-emerald-500 font-medium"
+                >
+                  🎨 Work
                 </button>
               </div>
               
