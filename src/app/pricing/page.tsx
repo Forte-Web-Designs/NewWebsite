@@ -134,18 +134,18 @@ export default function Pricing() {
                   Quick Decision Flow:
                 </h4>
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm">
-                  <div className="flex items-center gap-2 justify-center">
-                    <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center font-semibold">1</span>
+                  <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+                    <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center font-semibold flex-shrink-0">1</span>
                     <span className="text-gray-700 dark:text-gray-300">Pick Foundation or Pro</span>
                   </div>
                   <span className="text-gray-400 hidden sm:block">→</span>
-                  <div className="flex items-center gap-2 justify-center">
-                    <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center font-semibold">2</span>
+                  <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+                    <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center font-semibold flex-shrink-0">2</span>
                     <span className="text-gray-700 dark:text-gray-300">Add SEO if you want Google traffic</span>
                   </div>
                   <span className="text-gray-400 hidden sm:block">→</span>
-                  <div className="flex items-center gap-2 justify-center">
-                    <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center font-semibold">3</span>
+                  <div className="flex flex-col sm:flex-row items-center gap-2 text-center sm:text-left">
+                    <span className="w-8 h-8 bg-primary-500 text-white rounded-full flex items-center justify-center font-semibold flex-shrink-0">3</span>
                     <span className="text-gray-700 dark:text-gray-300">Add PPC/Social when ready</span>
                   </div>
                 </div>
