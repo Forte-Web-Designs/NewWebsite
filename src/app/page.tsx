@@ -318,18 +318,18 @@ export default function Home() {
                   <div className="grid grid-cols-1 gap-4 max-w-2xl mx-auto">
                     <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-700">
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        "Seth delivered exactly what he promised - a blazing fast website that actually converts visitors into customers."
+                        "Honestly, I was skeptical about another web developer, but Seth proved me wrong. My site is faster than ever and I'm getting calls from customers who found me on Google."
                       </p>
                       <p className="font-semibold text-gray-900 dark:text-white text-xs">
-                        — Local Business Owner
+                        — Mike's HVAC Repair
                       </p>
                     </div>
                     <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-sm border border-gray-200 dark:border-gray-700">
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-2">
-                        "100 PageSpeed score and our organic traffic increased 40% in the first 3 months."
+                        "We went from barely being found online to ranking #2 for our main keywords in just a few months. The ROI has been incredible."
                       </p>
                       <p className="font-semibold text-gray-900 dark:text-white text-xs">
-                        — E-commerce Store
+                        — Bella's Boutique
                       </p>
                     </div>
                   </div>
@@ -555,33 +555,33 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                   <p className="text-gray-600 dark:text-gray-400 mb-4 italic">
-                    "Seth delivered exactly what he promised - a blazing fast website that actually converts visitors into customers. The difference in our online presence has been night and day."
+                    "Honestly, I was skeptical about another web developer, but Seth proved me wrong. My site is faster than ever and I'm getting calls from customers who found me on Google. Best decision I made for my business this year."
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
-                      <span className="text-white font-semibold text-sm">JD</span>
+                      <span className="text-white font-semibold text-sm">MR</span>
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900 dark:text-white text-sm">
-                        Local Business Owner
+                        Mike Rodriguez
                       </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">Service Industry</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Mike's HVAC Repair</p>
                     </div>
                   </div>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                   <p className="text-gray-600 dark:text-gray-400 mb-4 italic">
-                    "100 PageSpeed score and our organic traffic increased 40% in the first 3 months. The ongoing support through Forte Care™ has been invaluable."
+                    "We went from barely being found online to ranking #2 for our main keywords in just a few months. The ROI has been incredible - we're booking twice as many appointments through our website now."
                   </p>
                   <div className="flex items-center gap-3">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-r from-green-500 to-blue-600 flex items-center justify-center">
-                      <span className="text-white font-semibold text-sm">ES</span>
+                      <span className="text-white font-semibold text-sm">BC</span>
                     </div>
                     <div>
                       <p className="font-semibold text-gray-900 dark:text-white text-sm">
-                        E-commerce Store Owner
+                        Bella Chen
                       </p>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">Retail Business</p>
+                      <p className="text-xs text-gray-500 dark:text-gray-400">Bella's Boutique</p>
                     </div>
                   </div>
                 </div>
