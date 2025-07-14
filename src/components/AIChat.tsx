@@ -23,6 +23,13 @@ const AIChat = () => {
   const [inputValue, setInputValue] = useState('');
   const [isTyping, setIsTyping] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
+  const [conversationStage, setConversationStage] = useState<'initial' | 'gathering_info' | 'providing_solution'>('initial');
+  const [userContext, setUserContext] = useState<{
+    industry?: string;
+    problem?: string;
+    businessSize?: string;
+    currentWebsite?: boolean;
+  }>({});
   const [contactForm, setContactForm] = useState<ContactForm>({
     name: '', email: '', phone: '', company: '', message: ''
   });
@@ -93,9 +100,90 @@ const AIChat = () => {
   const getSmartResponse = (userMessage: string): string => {
     const msg = userMessage.toLowerCase();
 
+    // Industry-specific responses
+    if (msg.includes('restaurant') || msg.includes('food') || msg.includes('menu')) {
+      return "🍽️ Perfect! We've helped restaurants like yours increase online orders by 40%+. Our restaurant websites include:\n\n• Online menu integration\n• Order system compatibility\n• Local SEO for 'near me' searches\n• Mobile-first design (80% of restaurant searches are mobile)\n• Google My Business optimization\n\nStarting at $200/month. Want to see examples of restaurant sites we've built?";
+    }
+
+    if (msg.includes('hvac') || msg.includes('plumber') || msg.includes('contractor') || msg.includes('electrician')) {
+      return "🔧 Excellent! Home service businesses see incredible results with our approach. We've helped contractors get:\n\n• 60% more service calls within 3 months\n• Top 3 Google rankings for local searches\n• Mobile-optimized booking forms\n• Before/after photo galleries\n• Customer review integration\n\nStarting at $200/month + SEO at $300/month. Ready to dominate your local market?";
+    }
+
+    if (msg.includes('lawyer') || msg.includes('attorney') || msg.includes('legal') || msg.includes('law firm')) {
+      return "⚖️ Law firms need trust and authority online. Our legal websites feature:\n\n• Professional, trustworthy design\n• Practice area optimization\n• Client testimonial systems\n• Secure contact forms\n• Local bar association compliance\n• Content that ranks for legal searches\n\nStarting at $200/month. Want to see how we've helped other attorneys?";
+    }
+
+    if (msg.includes('dentist') || msg.includes('dental') || msg.includes('orthodont') || msg.includes('medical') || msg.includes('doctor')) {
+      return "🦷 Healthcare websites need special attention! Our medical/dental sites include:\n\n• HIPAA-compliant contact forms\n• Online appointment booking\n• Patient education content\n• Insurance information display\n• Before/after galleries\n• Local medical SEO\n\nStarting at $200/month. Ready to attract more patients?";
+    }
+
+    if (msg.includes('retail') || msg.includes('shop') || msg.includes('store') || msg.includes('boutique') || msg.includes('ecommerce')) {
+      return "🛍️ Retail businesses thrive with our e-commerce solutions! We include:\n\n• Product catalog optimization\n• Shopping cart integration\n• Inventory management\n• Payment processing setup\n• Local + online SEO\n• Social media integration\n\nStarting at $200/month + e-commerce features. Want to boost online sales?";
+    }
+
     // Pricing questions
     if (msg.includes('price') || msg.includes('cost') || msg.includes('how much') || msg.includes('pricing')) {
       return "💰 Our Forte Foundation™ websites start at $200/month with $0 down. This includes a custom-coded 5-page website, hosting, security, and unlimited edits. For growing businesses, we also offer SEO packages starting at $300/month. Would you like me to connect you with Seth for a custom quote?";
+    }
+
+    // Business problem-focused responses
+    if (msg.includes('not getting calls') || msg.includes('no leads') || msg.includes('phone not ringing')) {
+      return "📞 The 'phone not ringing' problem is fixable! Here's usually what's happening:\n\n• You're not showing up in local searches\n• Your website doesn't build trust\n• No clear call-to-action\n• Mobile experience is poor\n\nWe fix this with local SEO + conversion-focused design. Most clients see more calls within 30 days. Want a free audit?";
+    }
+
+    if (msg.includes('competitor') || msg.includes('competition') || msg.includes('ranking higher')) {
+      return "🥇 Tired of competitors outranking you? Our competitive analysis shows:\n\n• What keywords they're winning\n• Their website weaknesses\n• Content gaps you can exploit\n• Local SEO opportunities\n\nWe've helped clients outrank competitors 85% of the time. Ready to take the #1 spot?";
+    }
+
+    if (msg.includes('outdated website') || msg.includes('old site') || msg.includes('website looks bad') || msg.includes('redesign')) {
+      return "🔄 An outdated website is costing you customers daily! Signs you need a refresh:\n\n• Built more than 3 years ago\n• Not mobile-friendly\n• Slow loading times\n• Doesn't represent your brand\n\nWe rebuild from scratch - no templates, just custom code. Starting at $200/month. Ready for a modern upgrade?";
+    }
+
+    if (msg.includes('social media') || msg.includes('facebook') || msg.includes('instagram') || msg.includes('posting')) {
+      return "📱 Social media driving you crazy? We handle the complete strategy:\n\n• Content calendar creation\n• Professional post design\n• Engagement management\n• Lead generation campaigns\n• Monthly analytics reports\n\nStarting at $300/month. Want to see what consistent posting can do?";
+    }
+
+    // Educational and insight-driven responses
+    if (msg.includes('roi') || msg.includes('return on investment') || msg.includes('worth it')) {
+      return "📊 Great question! Here's the typical ROI our clients see:\n\n• Month 1-2: Website converting 40% better\n• Month 3-4: 60% increase in organic traffic\n• Month 6+: 200-300% increase in qualified leads\n• Average: $3-5 return for every $1 invested\n\nExample: $500/month investment → $1,500-2,500 in new revenue. Want specific projections for your business?";
+    }
+
+    if (msg.includes('google ads') || msg.includes('ppc') || msg.includes('paid ads') || msg.includes('advertising')) {
+      return "🎯 Google Ads can be a goldmine OR money pit. We ensure profitability:\n\n• Keyword research targeting buyers (not browsers)\n• Landing pages that convert\n• Negative keyword lists to avoid waste\n• A/B testing everything\n• Weekly optimization\n\nTypical results: $1 ad spend → $3-4 revenue. Starting at $500 setup + 15% management fee. Ready to profit from ads?";
+    }
+
+    if (msg.includes('mobile') || msg.includes('phone') || msg.includes('smartphone') || msg.includes('tablet')) {
+      return "📱 Mobile is EVERYTHING now! 73% of your customers will visit on mobile first:\n\n• Google prioritizes mobile-friendly sites\n• Slow mobile = instant bounce\n• Touch-friendly buttons essential\n• Local searches happen on mobile\n\nOur sites load in under 1 second on mobile. Want to see the difference proper mobile optimization makes?";
+    }
+
+    if (msg.includes('local seo') || msg.includes('local search') || msg.includes('near me') || msg.includes('google maps')) {
+      return "📍 'Near me' searches grew 900% in 2 years! Local SEO includes:\n\n• Google My Business optimization\n• Local citation building\n• Review management strategy\n• Location-specific content\n• Schema markup for rich snippets\n\nWe get 87% of clients into the top 3 local results. Ready to dominate your area?";
+    }
+
+    if (msg.includes('content') || msg.includes('blog') || msg.includes('writing') || msg.includes('articles')) {
+      return "✍️ Content is your 24/7 salesperson! Our content strategy:\n\n• Answer questions your customers ask\n• Target keywords with buying intent\n• Establish you as the local expert\n• Feed Google's algorithm\n• Convert visitors into leads\n\nContent-driven sites get 67% more leads. Want a content strategy that actually drives business?";
+    }
+
+    // Technical and business insight responses
+    if (msg.includes('speed') || msg.includes('loading') || msg.includes('fast') || msg.includes('slow')) {
+      return "⚡ Website speed = money! Here's why:\n\n• 1 second delay = 7% fewer conversions\n• Google ranks faster sites higher\n• Mobile users expect instant loading\n• Slow sites lose 40% of visitors\n\nOur hand-coded sites load in under 1 second. That's 3-5x faster than WordPress. Want to see the speed difference?";
+    }
+
+    // Interactive conversation starters
+    if (msg.includes('budget') || msg.includes('afford') || msg.includes('expensive')) {
+      return "💡 Let's talk about investment vs. cost! Most businesses think:\n\n❌ 'I can't afford a website'\n✅ 'I can't afford NOT to have a website'\n\nA $200/month investment typically generates $1,000+ in new business monthly. That's a 400% return!\n\nWhat's your monthly revenue goal? Let's see how a website fits your budget.";
+    }
+
+    if (msg.includes('diy') || msg.includes('myself') || msg.includes('build my own') || msg.includes('wix') || msg.includes('squarespace')) {
+      return "🛠️ DIY platforms seem tempting, but here's what business owners discover:\n\n• Takes 40+ hours to build properly\n• Limited customization options\n• Poor mobile performance\n• Weak SEO capabilities\n• No ongoing support\n\nYour time is worth $50-100/hour. That's $2,000-4,000 in opportunity cost! Our $200/month includes everything + your time back. What's your time worth?";
+    }
+
+    if (msg.includes('results') || msg.includes('guarantee') || msg.includes('promise') || msg.includes('success')) {
+      return "🎯 Results matter most! Here's what we track:\n\n• Website traffic increases\n• Lead form submissions\n• Phone call volume\n• Google ranking improvements\n• Conversion rate optimization\n\nWe provide monthly reports showing exactly how your investment performs. Most clients see measurable results within 30-60 days.\n\nWhat specific result would make this investment worthwhile for you?";
+    }
+
+    if (msg.includes('competition') || msg.includes('differentiate') || msg.includes('stand out') || msg.includes('unique')) {
+      return "🌟 Standing out in a crowded market is tough! Our differentiation strategy:\n\n• Identify what competitors are missing\n• Highlight your unique strengths\n• Create compelling value propositions\n• Target underserved customer segments\n• Optimize for keywords competitors ignore\n\nWhat makes your business different from competitors? Let's amplify that online!";
     }
 
     // Services questions
@@ -138,7 +226,25 @@ const AIChat = () => {
       return "🌟 We help businesses like yours get found online and convert visitors into customers. Whether you're just starting out or ready to scale, we have solutions that fit. What's your biggest challenge right now - getting found online, converting visitors, or something else?";
     }
 
-    // Default response for unclear questions
+    // Default response for unclear questions with intelligent follow-up
+    if (conversationStage === 'initial') {
+      setConversationStage('gathering_info');
+      return "🤔 That's a great question! I want to give you the most helpful answer. Let me learn a bit about your business:\n\n• What industry are you in? (restaurant, HVAC, legal, retail, etc.)\n• What's your biggest challenge right now?\n• Do you currently have a website?\n\nThis helps me provide specific advice for your situation!";
+    }
+
+    // Follow-up based on gathered context
+    if (conversationStage === 'gathering_info' && !userContext.industry) {
+      // Try to detect industry from the message
+      const industries = ['restaurant', 'hvac', 'legal', 'dental', 'retail', 'contractor'];
+      const detectedIndustry = industries.find(industry => msg.includes(industry));
+      
+      if (detectedIndustry) {
+        setUserContext(prev => ({ ...prev, industry: detectedIndustry }));
+        setConversationStage('providing_solution');
+        return `Perfect! ${detectedIndustry} businesses have unique online needs. Based on what you've told me, here's what typically works best:\n\n[Customized response would go here based on industry]\n\nWould you like specific examples of how we've helped other ${detectedIndustry} businesses?`;
+      }
+    }
+
     return "🤔 That's a great question! I want to make sure I give you the most helpful answer. Could you tell me more about what you're looking for? I can help with:\n\n• Pricing and packages\n• Our web design process\n• SEO and marketing services\n• Examples of our work\n• Scheduling a call with Seth\n\nWhat interests you most?";
   };
 
@@ -427,6 +533,24 @@ const AIChat = () => {
                   className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
                 >
                   ⏱️ Timeline
+                </button>
+                <button
+                  onClick={() => setInputValue("I'm a restaurant owner")}
+                  className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                >
+                  🍽️ Restaurant
+                </button>
+                <button
+                  onClick={() => setInputValue("I'm not getting enough calls")}
+                  className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                >
+                  📞 Need Leads
+                </button>
+                <button
+                  onClick={() => setInputValue("What kind of ROI can I expect?")}
+                  className="text-xs bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 px-2 py-1 rounded-md hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                >
+                  📊 ROI Info
                 </button>
                 <button
                   onClick={openContactForm}
