@@ -17,6 +17,12 @@ interface ContactForm {
   message: string;
 }
 
+interface NetlifyFormSubmission {
+  isSubmitting: boolean;
+  showSuccess: boolean;
+  submitError: string | null;
+}
+
 const AIChat = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMinimized, setIsMinimized] = useState(false);
@@ -25,6 +31,11 @@ const AIChat = () => {
   const [showContactForm, setShowContactForm] = useState(false);
   const [contactForm, setContactForm] = useState<ContactForm>({
     name: '', email: '', phone: '', company: '', message: ''
+  });
+  const [netlifyForm, setNetlifyForm] = useState<NetlifyFormSubmission>({
+    isSubmitting: false,
+    showSuccess: false,
+    submitError: null
   });
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
@@ -47,6 +58,64 @@ const AIChat = () => {
       }]);
     }
   }, [messages.length]);
+
+  // Handle Netlify form submission
+  const handleNetlifySubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setNetlifyForm(prev => ({ ...prev, isSubmitting: true, submitError: null }));
+    
+    try {
+      // Create form data
+      const formData = new FormData();
+      formData.append('form-name', 'ai-chat-contact');
+      formData.append('name', contactForm.name);
+      formData.append('email', contactForm.email);
+      formData.append('phone', contactForm.phone);
+      formData.append('company', contactForm.company);
+      formData.append('message', contactForm.message);
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          // Mobile-friendly headers
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        },
+        body: new URLSearchParams(formData as any).toString(),
+      });
+
+      if (response.ok) {
+        setNetlifyForm(prev => ({ ...prev, showSuccess: true }));
+        setContactForm({ name: '', email: '', phone: '', company: '', message: '' });
+        
+        // Add success message to chat
+        const successMessage: Message = {
+          id: Date.now().toString(),
+          type: 'bot',
+          content: "🎉 Thanks for reaching out! I got your message and I'll get back to you within 24 hours (usually much faster).\n\nIn the meantime, feel free to check out some of our recent work or learn more about how we help businesses like yours grow online.",
+          timestamp: new Date()
+        };
+        setMessages(prev => [...prev, successMessage]);
+        
+        // Hide contact form and show main chat
+        setTimeout(() => {
+          setShowContactForm(false);
+          setNetlifyForm(prev => ({ ...prev, showSuccess: false }));
+        }, 3000);
+        
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setNetlifyForm(prev => ({ 
+        ...prev, 
+        submitError: "Sorry, there was an error sending your message. Please try again or contact us directly at seth@fortewebdesigns.com" 
+      }));
+    } finally {
+      setNetlifyForm(prev => ({ ...prev, isSubmitting: false }));
+    }
+  };
 
   // Sales-focused response system
   const getSmartResponse = (userMessage: string): string => {
@@ -140,36 +209,46 @@ const AIChat = () => {
 
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setNetlifyForm({ ...netlifyForm, isSubmitting: true, submitError: null });
     
     try {
-      const response = await fetch('/api/chat-contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
+      // Get form data directly from the form element
+      const form = e.target as HTMLFormElement;
+      const formData = new FormData(form);
+      
+      // Add form name for Netlify and additional context
+      formData.append('form-name', 'ai-chat-contact');
+      formData.append('source', 'AI Chat Widget');
+      formData.append('chat-history', JSON.stringify(messages));
+      formData.append('timestamp', new Date().toISOString());
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          // Add mobile-specific headers for better compatibility
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
         },
-        body: JSON.stringify({
-          ...contactForm,
-          chatHistory: messages,
-          timestamp: new Date().toISOString(),
-          source: 'AI Chat Widget'
-        }),
+        body: new URLSearchParams(formData as any).toString(),
       });
 
       if (response.ok) {
         const successMessage: Message = {
           id: Date.now().toString(),
           type: 'bot',
-          content: "✅ Perfect! I've sent your information to Seth. He'll get back to you within 24 hours. Thanks for your interest!",
+          content: "✅ Perfect! I've sent your information to Seth. He'll get back to you within 24 hours (usually much sooner). Thanks for your interest!",
           timestamp: new Date()
         };
 
         setMessages(prev => [...prev, successMessage]);
         setShowContactForm(false);
         setContactForm({ name: '', email: '', phone: '', company: '', message: '' });
+        setNetlifyForm({ isSubmitting: false, showSuccess: true, submitError: null });
       } else {
-        throw new Error('Failed to submit');
+        throw new Error('Form submission failed');
       }
     } catch (error) {
+      console.error("AI Chat form submission error:", error);
       const errorMessage: Message = {
         id: Date.now().toString(),
         type: 'bot',
@@ -178,11 +257,12 @@ const AIChat = () => {
       };
 
       setMessages(prev => [...prev, errorMessage]);
+      setNetlifyForm({ 
+        isSubmitting: false, 
+        showSuccess: false, 
+        submitError: "Sorry, there was an error sending your message. Please try again or contact us directly at seth@fortewebdesigns.com" 
+      });
     }
-  };
-
-  const openContactForm = () => {
-    window.location.href = '/contact';
   };
 
   const toggleChat = () => {
@@ -209,9 +289,9 @@ const AIChat = () => {
         />
       )}
 
-      {/* Chat Button - Optimized sizing and spacing */}
+      {/* Chat Button - Vertically stacked above back-to-top */}
       {!isOpen && (
-        <div className="fixed bottom-16 right-4 lg:bottom-4 lg:right-20 z-45">
+        <div className="fixed bottom-16 right-4 lg:bottom-20 lg:right-4 z-45">
           <button
             onClick={toggleChat}
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full p-3 lg:p-4 shadow-2xl transition-all duration-300 hover:scale-105 group"
@@ -227,9 +307,9 @@ const AIChat = () => {
         </div>
       )}
 
-      {/* Minimized Chat - Optimized sizing */}
+      {/* Minimized Chat - Vertically aligned */}
       {isOpen && isMinimized && (
-        <div className="fixed bottom-16 right-4 lg:bottom-4 lg:right-20 z-45">
+        <div className="fixed bottom-16 right-4 lg:bottom-20 lg:right-4 z-45">
           <button
             onClick={() => setIsMinimized(false)}
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg px-3 py-2 lg:px-4 lg:py-3 shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
@@ -323,9 +403,11 @@ const AIChat = () => {
             {/* Contact Form */}
             {showContactForm && (
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-                <form onSubmit={handleContactSubmit} className="space-y-3">
+                <form onSubmit={handleContactSubmit} className="space-y-3" name="ai-chat-contact" data-netlify="true">
+                  <input type="hidden" name="form-name" value="ai-chat-contact" />
                   <input
                     type="text"
+                    name="name"
                     placeholder="Your Name*"
                     value={contactForm.name}
                     onChange={(e) => setContactForm(prev => ({ ...prev, name: e.target.value }))}
@@ -334,6 +416,7 @@ const AIChat = () => {
                   />
                   <input
                     type="email"
+                    name="email"
                     placeholder="Email Address*"
                     value={contactForm.email}
                     onChange={(e) => setContactForm(prev => ({ ...prev, email: e.target.value }))}
@@ -342,12 +425,22 @@ const AIChat = () => {
                   />
                   <input
                     type="tel"
+                    name="phone"
                     placeholder="Phone Number"
                     value={contactForm.phone}
                     onChange={(e) => setContactForm(prev => ({ ...prev, phone: e.target.value }))}
                     className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
                   />
+                  <input
+                    type="text"
+                    name="company"
+                    placeholder="Company (Optional)"
+                    value={contactForm.company}
+                    onChange={(e) => setContactForm(prev => ({ ...prev, company: e.target.value }))}
+                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-md text-sm bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100"
+                  />
                   <textarea
+                    name="message"
                     placeholder="Tell us about your project..."
                     value={contactForm.message}
                     onChange={(e) => setContactForm(prev => ({ ...prev, message: e.target.value }))}
@@ -356,9 +449,10 @@ const AIChat = () => {
                   <div className="flex gap-2">
                     <button
                       type="submit"
-                      className="flex-1 bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-md text-sm font-semibold transition-colors"
+                      disabled={netlifyForm.isSubmitting}
+                      className="flex-1 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white py-2 px-4 rounded-md text-sm font-semibold transition-colors"
                     >
-                      Send Message
+                      {netlifyForm.isSubmitting ? 'Sending...' : 'Send Message'}
                     </button>
                     <button
                       type="button"
@@ -436,7 +530,7 @@ const AIChat = () => {
               {/* Contact prompt */}
               <div className="pt-2">
                 <button
-                  onClick={() => window.location.href = '/contact'}
+                  onClick={() => setShowContactForm(true)}
                   className="w-full text-sm bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white py-3 lg:py-3.5 rounded-lg transition-all duration-200 font-semibold shadow-lg hover:shadow-xl"
                 >
                   📞 Contact Us
