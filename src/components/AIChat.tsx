@@ -52,46 +52,78 @@ const AIChat = () => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // Auto-advance to next field functionality
+  // Improved auto-advance with Enter key - less aggressive
   const handleFormFieldKeyPress = (e: React.KeyboardEvent, nextFieldRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null>) => {
     if (e.key === 'Enter' && nextFieldRef?.current && e.currentTarget.tagName !== 'TEXTAREA') {
       e.preventDefault();
-      nextFieldRef.current.focus();
-      // Smooth scroll to field with better positioning
-      setTimeout(() => {
-        nextFieldRef.current?.scrollIntoView({ 
-          behavior: 'smooth', 
-          block: 'center',
-          inline: 'nearest'
-        });
-      }, 100);
+      
+      // Only advance if the current field has some reasonable content
+      const currentValue = (e.target as HTMLInputElement).value;
+      let shouldAdvance = false;
+      
+      const fieldName = (e.target as HTMLInputElement).name;
+      switch (fieldName) {
+        case 'name':
+          shouldAdvance = currentValue.length >= 2;
+          break;
+        case 'email':
+          // Only advance on Enter if email looks reasonably complete
+          shouldAdvance = currentValue.includes('@') && currentValue.includes('.');
+          break;
+        case 'phone':
+          shouldAdvance = currentValue.length >= 3;
+          break;
+        case 'company':
+          shouldAdvance = currentValue.length >= 1;
+          break;
+        default:
+          shouldAdvance = true;
+      }
+      
+      if (shouldAdvance) {
+        nextFieldRef.current.focus();
+        // Smooth scroll to field with better positioning
+        setTimeout(() => {
+          nextFieldRef.current?.scrollIntoView({ 
+            behavior: 'smooth', 
+            block: 'center',
+            inline: 'nearest'
+          });
+        }, 100);
+      }
     }
   };
 
-  // Enhanced form field change handler with auto-advancement
+  // Enhanced form field change handler with improved auto-advancement
   const handleContactFormChange = (field: keyof ContactForm, value: string, nextFieldRef?: React.RefObject<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement | null>) => {
     setContactForm(prev => ({ ...prev, [field]: value }));
     
-    // Auto-advance when field reaches typical completion length
+    // Auto-advance when field reaches completion - more conservative approach
     if (nextFieldRef?.current) {
       let shouldAdvance = false;
       
       switch (field) {
         case 'name':
-          shouldAdvance = value.length >= 3 && value.includes(' '); // First and last name
+          // Only advance if we have a first and last name with reasonable length
+          shouldAdvance = value.length >= 5 && value.includes(' ') && value.trim().split(' ').length >= 2;
           break;
         case 'email':
-          shouldAdvance = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value); // Valid email format
+          // Only advance on complete, valid email with common TLD
+          shouldAdvance = /^[^\s@]+@[^\s@]+\.(com|org|net|edu|gov|co|io|app)$/i.test(value);
           break;
         case 'phone':
-          shouldAdvance = value.replace(/\D/g, '').length >= 10; // 10+ digits
+          // Only advance when we have a complete phone number (10-11 digits)
+          const digits = value.replace(/\D/g, '');
+          shouldAdvance = digits.length >= 10 && digits.length <= 11;
           break;
         case 'company':
-          shouldAdvance = value.length >= 2; // Any company name
+          // More conservative - only advance if company name looks complete
+          shouldAdvance = value.length >= 3 && !value.endsWith(' ');
           break;
       }
       
       if (shouldAdvance) {
+        // Slight delay to ensure user finished typing
         setTimeout(() => {
           nextFieldRef.current?.focus();
           nextFieldRef.current?.scrollIntoView({ 
@@ -99,7 +131,7 @@ const AIChat = () => {
             block: 'center',
             inline: 'nearest'
           });
-        }, 150);
+        }, 300);
       }
     }
   };
@@ -491,7 +523,7 @@ const AIChat = () => {
                       name="name"
                       placeholder="Your Name*"
                       value={contactForm.name}
-                      onChange={(e) => handleContactFormChange('name', e.target.value, emailFieldRef)}
+                      onChange={(e) => handleContactFormChange('name', e.target.value)}
                       onKeyPress={(e) => handleFormFieldKeyPress(e, emailFieldRef)}
                       className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       required
@@ -504,11 +536,12 @@ const AIChat = () => {
                       name="email"
                       placeholder="Email Address*"
                       value={contactForm.email}
-                      onChange={(e) => handleContactFormChange('email', e.target.value, phoneFieldRef)}
+                      onChange={(e) => handleContactFormChange('email', e.target.value)}
                       onKeyPress={(e) => handleFormFieldKeyPress(e, phoneFieldRef)}
                       className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       required
                       autoComplete="email"
+                      inputMode="email"
                     />
                     
                     <input
@@ -517,10 +550,11 @@ const AIChat = () => {
                       name="phone"
                       placeholder="Phone Number"
                       value={contactForm.phone}
-                      onChange={(e) => handleContactFormChange('phone', e.target.value, companyFieldRef)}
+                      onChange={(e) => handleContactFormChange('phone', e.target.value)}
                       onKeyPress={(e) => handleFormFieldKeyPress(e, companyFieldRef)}
                       className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       autoComplete="tel"
+                      inputMode="tel"
                     />
                     
                     <input
@@ -529,7 +563,7 @@ const AIChat = () => {
                       name="company"
                       placeholder="Company (Optional)"
                       value={contactForm.company}
-                      onChange={(e) => handleContactFormChange('company', e.target.value, serviceFieldRef)}
+                      onChange={(e) => handleContactFormChange('company', e.target.value)}
                       onKeyPress={(e) => handleFormFieldKeyPress(e, serviceFieldRef)}
                       className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       autoComplete="organization"
