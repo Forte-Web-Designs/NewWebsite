@@ -14,6 +14,7 @@ interface ContactForm {
   email: string;
   phone: string;
   company: string;
+  service: string;
   message: string;
 }
 
@@ -30,7 +31,7 @@ const AIChat = () => {
   const [isTyping, setIsTyping] = useState(false);
   const [showContactForm, setShowContactForm] = useState(false);
   const [contactForm, setContactForm] = useState<ContactForm>({
-    name: '', email: '', phone: '', company: '', message: ''
+    name: '', email: '', phone: '', company: '', service: '', message: ''
   });
   const [netlifyForm, setNetlifyForm] = useState<NetlifyFormSubmission>({
     isSubmitting: false,
@@ -44,6 +45,7 @@ const AIChat = () => {
   const emailFieldRef = useRef<HTMLInputElement>(null);
   const phoneFieldRef = useRef<HTMLInputElement>(null);
   const companyFieldRef = useRef<HTMLInputElement>(null);
+  const serviceFieldRef = useRef<HTMLSelectElement>(null);
   const messageFieldRef = useRef<HTMLTextAreaElement>(null);
 
   const scrollToBottom = () => {
@@ -181,7 +183,7 @@ const AIChat = () => {
 
     // Contact/meeting questions
     if (msg.includes('contact') || msg.includes('get in touch') || msg.includes('talk') || msg.includes('call') || msg.includes('meet') || msg.includes('consultation') || msg.includes('discuss') || msg.includes('schedule')) {
-      return "Awesome! 🎉 I'd love to help you get connected with our team.\n\nTo get started, could you please share:\n\n📝 **Your Name** - What should we call you?\n\n📧 **Email** - Best way to reach you\n\n🏢 **Company/Business** - What's your business about?\n\n💬 **What You Need** - Tell us about your project or goals\n\nJust reply with these details and we'll get back to you within 24 hours with next steps!";
+      return "I'd love to connect you with our team! 🤝\n\nLet me get your contact information and we'll get back to you within 24 hours (usually much sooner).\n\nPlease fill out the form below:|SHOW_FORM";
     }
 
     // Business growth questions
@@ -292,7 +294,7 @@ const AIChat = () => {
 
         setMessages(prev => [...prev, successMessage]);
         setShowContactForm(false);
-        setContactForm({ name: '', email: '', phone: '', company: '', message: '' });
+        setContactForm({ name: '', email: '', phone: '', company: '', service: '', message: '' });
         setNetlifyForm({ isSubmitting: false, showSuccess: true, submitError: null });
       } else {
         throw new Error('Form submission failed');
@@ -513,11 +515,41 @@ const AIChat = () => {
                       name="company"
                       placeholder="Company (Optional)"
                       value={contactForm.company}
-                      onChange={(e) => handleContactFormChange('company', e.target.value, messageFieldRef)}
-                      onKeyPress={(e) => handleFormFieldKeyPress(e, messageFieldRef)}
+                      onChange={(e) => handleContactFormChange('company', e.target.value, serviceFieldRef)}
+                      onKeyPress={(e) => handleFormFieldKeyPress(e, serviceFieldRef)}
                       className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       autoComplete="organization"
                     />
+                    
+                    <select
+                      ref={serviceFieldRef}
+                      name="service"
+                      value={contactForm.service}
+                      onChange={(e) => {
+                        setContactForm(prev => ({ ...prev, service: e.target.value }));
+                        if (e.target.value) {
+                          setTimeout(() => {
+                            messageFieldRef.current?.focus();
+                            messageFieldRef.current?.scrollIntoView({ 
+                              behavior: 'smooth', 
+                              block: 'center',
+                              inline: 'nearest'
+                            });
+                          }, 150);
+                        }
+                      }}
+                      className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200 appearance-none"
+                      required
+                    >
+                      <option value="" disabled>Select a Service*</option>
+                      <option value="Custom Website Design">Custom Website Design</option>
+                      <option value="SEO Services">SEO Services</option>
+                      <option value="Social Media Management">Social Media Management</option>
+                      <option value="Google PPC Ads">Google PPC Ads</option>
+                      <option value="Website Maintenance">Website Maintenance</option>
+                      <option value="Forte Care™">Forte Care™</option>
+                      <option value="Other">Other</option>
+                    </select>
                     
                     <textarea
                       ref={messageFieldRef}
