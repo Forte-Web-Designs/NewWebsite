@@ -81,6 +81,9 @@ module.exports = {
           "sans-serif",
         ],
       },
+      zIndex: {
+        '45': '45',
+      },
     },
   },
   plugins: [],

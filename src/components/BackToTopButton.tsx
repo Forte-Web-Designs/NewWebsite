@@ -28,7 +28,7 @@ export default function BackToTopButton() {
     <button
       onClick={scrollToTop}
       className={`
-        fixed bottom-4 right-4 md:bottom-6 md:right-6 z-50
+        fixed bottom-24 right-4 lg:bottom-28 lg:right-6 z-40
         w-11 h-11 md:w-14 md:h-14
         bg-blue-600 hover:bg-blue-700
         dark:bg-blue-500 dark:hover:bg-blue-600

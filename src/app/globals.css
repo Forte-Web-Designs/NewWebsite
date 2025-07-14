@@ -193,3 +193,38 @@
 .animate-fadeIn {
   animation: fadeIn 0.3s ease-out;
 }
+
+/* Mobile safe area utilities for AI chat */
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 1rem);
+}
+
+.pt-safe {
+  padding-top: env(safe-area-inset-top);
+}
+
+.pl-safe {
+  padding-left: env(safe-area-inset-left);
+}
+
+.pr-safe {
+  padding-right: env(safe-area-inset-right);
+}
+
+/* Mobile keyboard viewport fix */
+@supports (height: 100dvh) {
+  .mobile-chat-window {
+    height: 100dvh;
+  }
+}
+
+/* AI Chat mobile optimizations */
+@media (max-width: 1023px) {
+  .ai-chat-mobile-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    z-index: 45;
+  }
+}
