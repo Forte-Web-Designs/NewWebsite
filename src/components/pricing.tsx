@@ -702,21 +702,25 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
         )}
 
         {/* Pricing Plans */}
-        <div className="hidden lg:grid xl:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto md:w-[full] w-fit mb-16">
-          {desktopOrder.map((plan, index) => (
-            <SimpleScrollReveal key={plan.id} direction="up" delay={200 + (index * 200)}>
-              <PricingCard plan={plan} />
-            </SimpleScrollReveal>
-          ))}
+        <div className="hidden lg:flex lg:justify-center lg:gap-8 mb-16">
+          <div className={`grid gap-8 ${plansToShow.length === 2 ? 'grid-cols-1 lg:grid-cols-2 max-w-4xl' : plansToShow.length === 3 ? 'grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 max-w-6xl' : 'grid-cols-1 lg:grid-cols-2 xl:grid-cols-4 max-w-7xl'}`}>
+            {desktopOrder.map((plan, index) => (
+              <SimpleScrollReveal key={plan.id} direction="up" delay={200 + (index * 200)}>
+                <PricingCard plan={plan} />
+              </SimpleScrollReveal>
+            ))}
+          </div>
         </div>
         
         {/* Mobile Grid */}
-        <div className="grid lg:hidden xl:grid-cols-3 lg:grid-cols-2 gap-8 mx-auto md:w-[full] w-fit mb-16">
-          {mobileOrder.map((plan, index) => (
-            <SimpleScrollReveal key={plan.id} direction="up" delay={200 + (index * 200)}>
-              <PricingCard plan={plan} />
-            </SimpleScrollReveal>
-          ))}
+        <div className="flex lg:hidden justify-center mb-16">
+          <div className="grid grid-cols-1 gap-8 w-full max-w-md">
+            {mobileOrder.map((plan, index) => (
+              <SimpleScrollReveal key={plan.id} direction="up" delay={200 + (index * 200)}>
+                <PricingCard plan={plan} />
+              </SimpleScrollReveal>
+            ))}
+          </div>
         </div>
         
         {/* Quick Testimonials for Social Proof - Only show for website plans */}
