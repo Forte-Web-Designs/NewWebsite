@@ -12,33 +12,33 @@ export const metadata: Metadata = {
 export default function SocialMediaManagement() {
   const forteMethodItems = [
     {
-      title: "Foundations",
+      title: "🔍 1. Foundations",
       description:
-        "We dive into your goals, brand, and target audience with a personalised onboarding form and call",
+        "Clarity → Faster Results\nWe start with a deep discovery session to align your brand, audience, and goals. No fluff—just clarity that drives focused execution.",
       icon: "/images/home/foundation.svg",
     },
     {
-      title: "Outline",
+      title: "🧠 2. Refine",
       description:
-        "We write and structure your content for clarity, SEO, and conversions - no fluff",
-      icon: "/images/home/outline.svg",
-    },
-    {
-      title: "Refine",
-      description:
-        "You review a custom homepage design and give feedback in a collaborative video call",
+        "Feedback → On-Brand Accuracy\nWe turn insights into direction with collaborative design mockups and wireframes. Your feedback shapes the final product before we ever write a line of code.",
       icon: "/images/home/refine.svg",
     },
     {
-      title: "Tailor",
+      title: "💻 3. Build",
       description:
-        "We hand-code the full site, designed for mobile, speed, and smooth experience",
+        "Clean Code → Speed & Security\nEvery site is hand-coded line by line. No bloated builders, no plugins. Just fast, secure, search-optimized performance from the start.",
       icon: "/images/home/tailor.svg",
     },
     {
-      title: "Elevate",
+      title: "🚀 4. Launch",
       description:
-        "We go live, track analytics, and continue refining over time. You grow. We maintain",
+        "Optimized Setup → Ready for Traffic\nWe deploy your site with all the essentials: SEO-ready structure, mobile optimization, and analytics tools set to track what matters most.",
+      icon: "/images/home/elevate.svg",
+    },
+    {
+      title: "🔧 5. Grow",
+      description:
+        "Ongoing Support → Compounding ROI\nWith Forte Care™, your site stays updated, secure, and optimized. And when you're ready to scale with SEO, ads, or social—we've already laid the groundwork for it to work.",
       icon: "/images/home/elevate.svg",
     },
   ];

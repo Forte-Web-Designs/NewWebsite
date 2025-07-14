@@ -167,32 +167,39 @@ export default function Home() {
 
   const sliderItems = [
     {
-      title: "Foundations",
+      title: "🔍 1. Foundations",
       description:
-        "Discovery and strategy — we understand your vision, target audience, and success metrics to build the right foundation",
+        "Clarity → Faster Results\nWe start with a deep discovery session to align your brand, audience, and goals. No fluff—just clarity that drives focused execution.",
       icon: "/images/home/foundation.svg",
-      tagline: "Clarity. Strategy. Direction."
+      tagline: "Clarity → Faster Results"
     },
     {
-      title: "Design", 
+      title: "🧠 2. Refine", 
       description:
-        "Custom design and content — we create wireframes, write conversion-focused copy, and design your unique brand experience",
-      icon: "/images/home/outline.svg",
-      tagline: "Creative. Compelling. Converting."
+        "Feedback → On-Brand Accuracy\nWe turn insights into direction with collaborative design mockups and wireframes. Your feedback shapes the final product before we ever write a line of code.",
+      icon: "/images/home/refine.svg",
+      tagline: "Feedback → On-Brand Accuracy"
     },
     {
-      title: "Develop",
+      title: "💻 3. Build",
       description:
-        "Hand-coded for speed — mobile-designed, lightning-fast loading, rock-solid security, maximum results",
+        "Clean Code → Speed & Security\nEvery site is hand-coded line by line. No bloated builders, no plugins. Just fast, secure, search-optimized performance from the start.",
       icon: "/images/home/tailor.svg",
-      tagline: "Fast. Secure. Reliable."
+      tagline: "Clean Code → Speed & Security"
     },
     {
-      title: "Grow",
+      title: "🚀 4. Launch",
       description:
-        "Launch and optimize — analytics tracking, ongoing improvements, unlimited edits. You focus on business, we handle the tech",
+        "Optimized Setup → Ready for Traffic\nWe deploy your site with all the essentials: SEO-ready structure, mobile optimization, and analytics tools set to track what matters most.",
       icon: "/images/home/elevate.svg",
-      tagline: "Growth. Success. Freedom."
+      tagline: "Optimized Setup → Ready for Traffic"
+    },
+    {
+      title: "🔧 5. Grow",
+      description:
+        "Ongoing Support → Compounding ROI\nWith Forte Care™, your site stays updated, secure, and optimized. And when you're ready to scale with SEO, ads, or social—we've already laid the groundwork for it to work.",
+      icon: "/images/home/elevate.svg",
+      tagline: "Ongoing Support → Compounding ROI"
     },
   ];
 
