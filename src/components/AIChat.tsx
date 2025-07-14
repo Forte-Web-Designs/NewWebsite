@@ -112,7 +112,7 @@ const AIChat = () => {
       setMessages([{
         id: '1',
         type: 'bot',
-        content: "Hey there! 👋 I'm Forte AI, Seth's digital assistant. I help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?",
+        content: "Hey there! 👋 I'm Forte AI, Seth's digital assistant. I help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\n💡 *Tip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!*",
         timestamp: new Date()
       }]);
     }
@@ -121,6 +121,40 @@ const AIChat = () => {
   // Sales-focused response system
   const getSmartResponse = (userMessage: string): string => {
     const msg = userMessage.toLowerCase();
+
+    // Contact information detection - look for patterns like name + email + message
+    if ((msg.includes('@') && msg.includes('.')) || 
+        (msg.includes('name') && msg.includes('email')) ||
+        (msg.includes('my name is') || msg.includes("i'm ") || msg.includes('email:') || msg.includes('contact:')) ||
+        (msg.match(/\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/))) {
+      
+      // If this looks like contact info, we should save it
+      const contactMessage: Message = {
+        id: Date.now().toString(),
+        type: 'bot',
+        content: "Perfect! 🙌 I've got your information.\n\nSeth will personally review your message and get back to you within 24 hours (usually much sooner). \n\nIn the meantime, feel free to ask me any questions about our services, pricing, or how we can help grow your business!\n\nThanks for reaching out to Forte Web Designs! 🚀",
+        timestamp: new Date()
+      };
+
+      // Automatically submit this as a contact form in the background
+      setTimeout(() => {
+        // Create a mock form submission with the user's message
+        const formData = new FormData();
+        formData.append('form-name', 'ai-chat-contact');
+        formData.append('source', 'AI Chat Conversation');
+        formData.append('message', userMessage);
+        formData.append('chat-history', JSON.stringify([]));
+        formData.append('timestamp', new Date().toISOString());
+        
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData as any).toString(),
+        }).catch(console.error);
+      }, 1000);
+
+      return contactMessage.content;
+    }
 
     // Pricing questions
     if (msg.includes('price') || msg.includes('cost') || msg.includes('how much') || msg.includes('pricing') || msg.includes('expensive') || msg.includes('cheap') || msg.includes('affordable')) {
@@ -144,7 +178,7 @@ const AIChat = () => {
 
     // Contact/meeting questions
     if (msg.includes('contact') || msg.includes('get in touch') || msg.includes('talk') || msg.includes('call') || msg.includes('meet') || msg.includes('consultation') || msg.includes('discuss') || msg.includes('schedule')) {
-      return "Awesome! 🎉 We'd love to connect with you.\n\nSeth offers a free 15-minute strategy call where you'll:\n• Talk about your business goals\n• Identify what's holding you back online\n• Map out a plan to get you more customers\n• See if you're a good fit to work together\n\nNo pressure, no sales pitch - just honest advice from someone who's helped 100+ businesses grow online.\n\nI'll open the contact form for you right now!|SHOW_FORM";
+      return "Awesome! 🎉 I'd love to help you get connected with our team.\n\nTo get started, could you please share:\n\n📝 **Your Name** - What should we call you?\n\n📧 **Email** - Best way to reach you\n\n🏢 **Company/Business** - What's your business about?\n\n💬 **What You Need** - Tell us about your project or goals\n\nJust reply with these details and we'll get back to you within 24 hours with next steps!";
     }
 
     // Business growth questions
@@ -593,20 +627,13 @@ const AIChat = () => {
                 </button>
               </div>
               
-              {/* Contact prompts - Enhanced */}
-              <div className="pt-3 space-y-3">
+              {/* Contact prompt - Enhanced */}
+              <div className="pt-3">
                 <button
                   onClick={() => sendMessage("I'd like to get in contact with you")}
                   className="w-full text-sm lg:text-base bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-700 hover:from-indigo-700 hover:via-blue-700 hover:to-blue-800 text-white py-4 lg:py-5 rounded-xl transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border border-blue-500"
                 >
                   📞 Get in contact with us
-                </button>
-                
-                <button
-                  onClick={() => setShowContactForm(true)}
-                  className="w-full text-sm lg:text-base bg-gradient-to-r from-gray-100 to-gray-200 hover:from-gray-200 hover:to-gray-300 dark:from-gray-700 dark:to-gray-600 dark:hover:from-gray-600 dark:hover:to-gray-500 text-gray-700 dark:text-gray-200 py-3 lg:py-4 rounded-xl transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 border border-gray-300 dark:border-gray-600"
-                >
-                  📝 Quick Contact Form
                 </button>
               </div>
             </div>
