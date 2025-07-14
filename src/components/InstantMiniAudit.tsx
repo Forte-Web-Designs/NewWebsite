@@ -245,8 +245,8 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       {/* Compact Instructions Banner - Only show if no results */}
       {!results && (
         <div className="text-center mb-4">
-          <div className="text-xs text-white/70 bg-white/10 rounded-lg p-3 border border-white/20">
-            ✨ <strong>Step 1:</strong> Enter any Website URL • <strong>Step 2:</strong> Get mini-audit • <strong>Step 3:</strong> Click for full analysis
+          <div className="text-xs text-white/80 bg-white/10 rounded-lg p-3 border border-white/20">
+            👇 <strong>Enter your website below:</strong>
           </div>
         </div>
       )}
@@ -255,7 +255,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
         {/* Enhanced Input Field */}
         <div className="relative mb-4">
           <label htmlFor="website-url" className="block text-white/90 text-sm font-medium mb-2 text-center">
-            {!results ? "👇 Enter Website URL:" : "Try Another Site:"}
+            📍 Your Website URL:
           </label>
           <div className="relative">
             <div className="absolute inset-y-0 start-0 flex items-center ps-4 pointer-events-none">
@@ -276,7 +276,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               value={websiteUrl}
               onChange={(e) => setWebsiteUrl(e.target.value)}
               className="block bg-white/10 backdrop-blur-sm w-full py-4 px-12 text-white placeholder:text-white/60 text-lg rounded-xl border-2 border-white/30 focus:outline-none focus:border-blue-400 focus:ring-4 focus:ring-blue-400/30 transition-all duration-300 hover:border-white/50 hover:bg-white/15 shadow-lg"
-              placeholder={results ? "yoursite.com" : "Enter real website: yoursite.com"}
+              placeholder="yoursite.com"
               disabled={isLoading}
               required
             />
@@ -284,7 +284,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               type="submit"
               disabled={isLoading || !websiteUrl.trim()}
               className="absolute inset-y-0 end-0 flex items-center pe-4 text-white/70 hover:text-white transition-colors duration-300 disabled:opacity-50"
-              aria-label="Quick check"
+              aria-label="Analyze website"
             >
               {isLoading ? (
                 <div className="w-5 h-5 border-2 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
@@ -322,7 +322,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
             >
               {websiteUrl.trim() ? (
                 <span className="flex items-center justify-center gap-2">
-                  <span>🔍 Analyze My Website Now</span>
+                  <span>🔍 Get My Free Audit Now</span>
                   <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                   </svg>
@@ -333,7 +333,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
             </button>
             {websiteUrl.trim() && (
               <div className="text-xs text-white/70 mt-2 px-2">
-                ⚡ Results in 2 seconds • 100% Free • No signup required
+                ⚡ Results in 30 seconds • 100% Free • No email required
               </div>
             )}
           </div>
@@ -479,6 +479,32 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                       <div>{results.seoScore >= 8 ? '🛡️ Discover how Forte Care™ protects your rankings' : '🎯 Takes 30 seconds • Auto-fills with your URL • Starts immediately'}</div>
                     </>
                   )}
+                </div>
+                
+                {/* Optional Next Step CTA */}
+                <div className="mt-6 pt-4 border-t border-white/30">
+                  <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-xl p-4 border border-green-400/30">
+                    <h4 className="text-white font-semibold text-sm mb-3 text-center">
+                      🔧 Want us to fix any of this?
+                    </h4>
+                    <p className="text-white/90 text-xs text-center mb-4 leading-relaxed">
+                      Get a free 15-minute strategy call to discuss your specific needs and see if Forte is the right fit.
+                    </p>
+                    <div className="text-center">
+                      <a
+                        href="/contact"
+                        className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-3 rounded-xl text-sm font-semibold transition-all duration-300 hover:scale-105 shadow-lg border border-green-500/50"
+                      >
+                        <span>📞 Book Free Strategy Call</span>
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                        </svg>
+                      </a>
+                    </div>
+                    <div className="text-xs text-white/70 text-center mt-2">
+                      No pressure • Just possibilities • 15 minutes max
+                    </div>
+                  </div>
                 </div>
                 
                 {/* Try Another Website Option */}

@@ -635,8 +635,49 @@ export default function Home() {
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 sm:p-6 border border-white/20 shadow-2xl">
                   <div className="text-center mb-4 sm:mb-6">
-                    <h3 className="text-white font-bold text-lg sm:text-xl mb-2">🎯 Free 5-Point Site Audit in 30 Seconds</h3>
-                    <p className="text-white/80 text-sm">See how your site performs (and get some friendly tips to make it better)</p>
+                    <h3 className="text-white font-bold text-lg sm:text-xl mb-3">🚀 Free 5-Point Website Audit</h3>
+                    <p className="text-white/90 text-sm sm:text-base mb-3">See what's helping or hurting your site — instantly.</p>
+                    <p className="text-white/80 text-xs sm:text-sm mb-4">No email. No sales pitch. Just real, helpful insights.</p>
+                    
+                    {/* What We Check Section */}
+                    <div className="bg-white/5 rounded-xl p-3 sm:p-4 mb-4 border border-white/20">
+                      <h4 className="text-white/90 font-semibold text-sm mb-3">🔍 What We Check:</h4>
+                      <div className="grid grid-cols-1 gap-2 text-xs text-white/80">
+                        <div className="flex items-start gap-2">
+                          <span className="text-blue-300">⚡</span>
+                          <span><strong>PageSpeed & Load Time</strong> – How fast does your site really load?</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-green-300">📱</span>
+                          <span><strong>Mobile Friendliness</strong> – Is your site optimized for phones?</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-yellow-300">🔍</span>
+                          <span><strong>SEO Basics</strong> – Can Google actually find and rank you?</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-purple-300">🎨</span>
+                          <span><strong>Design & Clarity</strong> – Is your homepage clear and conversion-ready?</span>
+                        </div>
+                        <div className="flex items-start gap-2">
+                          <span className="text-orange-300">🔒</span>
+                          <span><strong>Security & Trust Signals</strong> – Do visitors feel safe on your site?</span>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    {/* Why It Matters */}
+                    <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 rounded-xl p-3 border border-blue-400/30 mb-4">
+                      <h4 className="text-white font-semibold text-sm mb-2">🎯 Why It Matters:</h4>
+                      <p className="text-white/90 text-xs leading-relaxed">
+                        You only get one chance to make a digital first impression. 
+                        This quick audit shows where you stand — and how to improve.
+                      </p>
+                    </div>
+                    
+                    <div className="text-white/90 font-medium text-sm">
+                      ✨ Try It Now (Takes 30 Seconds)
+                    </div>
                   </div>
                   <InstantMiniAudit
                     onFullAuditClick={handleFullAuditClick}
