@@ -254,16 +254,14 @@ const AIChat = () => {
       if (action === 'SHOW_FORM') {
         setTimeout(() => {
           setShowContactForm(true);
-          // Auto-scroll to form after it appears
+          // Auto-scroll to name field after form appears
           setTimeout(() => {
-            const formElement = document.querySelector('[data-contact-form]');
-            if (formElement) {
-              formElement.scrollIntoView({ 
-                behavior: 'smooth', 
-                block: 'center',
-                inline: 'nearest'
-              });
-            }
+            nameFieldRef.current?.focus();
+            nameFieldRef.current?.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'center',
+              inline: 'nearest'
+            });
           }, 100);
         }, 1500);
       }
@@ -620,8 +618,8 @@ const AIChat = () => {
             <div ref={messagesEndRef} />
           </div>
 
-          {/* Enhanced Quick Action Prompts - Compact height */}
-          <div className="p-3 lg:p-4 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 max-h-[240px] lg:max-h-[260px] overflow-y-auto">
+          {/* Enhanced Quick Action Prompts - No scrolling */}
+          <div className="p-3 lg:p-4 border-t border-gray-200 dark:border-gray-700 flex-shrink-0 bg-gradient-to-t from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
             <p className="text-xs lg:text-sm text-gray-700 dark:text-gray-300 mb-3 text-center font-medium">What would you like to know?</p>
             
             <div className="grid grid-cols-1 gap-2 lg:gap-3">
