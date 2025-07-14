@@ -197,7 +197,7 @@ const MobileServicesSlider: React.FC<MobileServicesSliderProps> = ({ isDark }) =
         {/* Slider Container */}
         <div
           ref={sliderRef}
-          className="relative overflow-hidden rounded-lg h-[330px] cursor-grab active:cursor-grabbing"
+          className="relative overflow-hidden rounded-lg h-[420px] cursor-grab active:cursor-grabbing"
           style={{
             touchAction: 'pan-y pinch-zoom', // Allow vertical scroll and zoom, prevent horizontal gestures
             WebkitTouchCallout: 'none', // Disable iOS callout
@@ -224,48 +224,48 @@ const MobileServicesSlider: React.FC<MobileServicesSliderProps> = ({ isDark }) =
               }}
             >
               <div className="px-4 h-full">
-                <div className="grid gap-[20px] rounded-[16px] px-[20px] py-[20px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,#101010_0%,rgba(16,16,16,0)_100%)] h-full">
+                <div className="grid gap-[16px] rounded-[16px] px-[16px] py-[16px] bg-gradient-to-b from-[#F4F4F4] to-[rgba(232,232,232,0.5)] dark:bg-[linear-gradient(180deg,#101010_0%,rgba(16,16,16,0)_100%)] h-full">
                   <div className="flex justify-center">
                     <OptimizedImage
                       src={isDark ? slide.darkImage : slide.lightImage}
                       alt={`${slide.title} icon`}
-                      width={120}
-                      height={120}
+                      width={100}
+                      height={100}
                       className="flex"
                       priority={index === 0}
                     />
                   </div>
-                  <h3 className="font-Inter font-medium text-[18px] leading-[24px] tracking-normal text-center text-gray-900 dark:text-white">
+                  <h3 className="font-Inter font-medium text-[16px] leading-[20px] tracking-normal text-center text-gray-900 dark:text-white px-2">
                     {slide.title}
                   </h3>
                   
                   {/* Problem/Solution/Benefit Structure */}
-                  <div className="space-y-3">
+                  <div className="space-y-2 flex-1">
                     {/* Problem */}
-                    <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-3 border border-red-200 dark:border-red-800">
+                    <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-2.5 border border-red-200 dark:border-red-800">
                       <div className="flex items-start gap-2">
-                        <span className="text-red-500 mt-0.5 text-sm">✕</span>
-                        <p className="text-red-700 dark:text-red-300 text-[12px] leading-[16px] font-medium">
+                        <span className="text-red-500 mt-0.5 text-xs flex-shrink-0">✕</span>
+                        <p className="text-red-700 dark:text-red-300 text-[11px] leading-[14px] font-medium">
                           {slide.problem}
                         </p>
                       </div>
                     </div>
                     
                     {/* Solution */}
-                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-3 border border-blue-200 dark:border-blue-800">
+                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-2.5 border border-blue-200 dark:border-blue-800">
                       <div className="flex items-start gap-2">
-                        <span className="text-blue-500 mt-0.5 text-sm">→</span>
-                        <p className="text-blue-700 dark:text-blue-300 text-[12px] leading-[16px] font-medium">
+                        <span className="text-blue-500 mt-0.5 text-xs flex-shrink-0">→</span>
+                        <p className="text-blue-700 dark:text-blue-300 text-[11px] leading-[14px] font-medium">
                           {slide.solution}
                         </p>
                       </div>
                     </div>
                     
                     {/* Benefit */}
-                    <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3 border border-green-200 dark:border-green-800">
+                    <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-2.5 border border-green-200 dark:border-green-800">
                       <div className="flex items-start gap-2">
-                        <span className="text-green-500 mt-0.5 text-sm">✓</span>
-                        <p className="text-green-700 dark:text-green-300 text-[12px] leading-[16px] font-medium">
+                        <span className="text-green-500 mt-0.5 text-xs flex-shrink-0">✓</span>
+                        <p className="text-green-700 dark:text-green-300 text-[11px] leading-[14px] font-medium">
                           {slide.benefit}
                         </p>
                       </div>

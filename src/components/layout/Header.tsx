@@ -404,7 +404,7 @@ export default function Header() {
                     -z-20
                   "></span>
 
-                  Get Quote <Icon
+                  Contact Us <Icon
                     name='rightarrow'
                     alt="right arrow icon"
                     className="w-[7px] h-[12px]"
