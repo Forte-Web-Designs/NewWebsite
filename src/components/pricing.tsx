@@ -556,89 +556,6 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
           </SimpleScrollReveal>
         )}
 
-        {/* Pro vs Foundation Value Comparison - Only show for website plans */}
-        {(!serviceType || serviceType === 'website') && (
-          <SimpleScrollReveal direction="up" delay={350}>
-            <div className="mb-16 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8 md:p-12">
-              <div className="max-w-4xl mx-auto text-center">
-                <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-6">
-                  💡 Why 78% of Our Clients Choose Forte Pro™
-                </h2>
-                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
-                  For just $150 more per month, you get significantly more value and save money on add-ons.
-                </p>
-                
-                <div className="grid md:grid-cols-2 gap-6">
-                  {/* Foundation Column */}
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                      Forte Foundation™ - $200/mo
-                    </h3>
-                    <div className="space-y-3 text-left">
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-500">📄</span>
-                        <span className="text-gray-700 dark:text-gray-300">5 pages</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-500">📞</span>
-                        <span className="text-gray-700 dark:text-gray-300">Email support only</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-gray-500">📊</span>
-                        <span className="text-gray-700 dark:text-gray-300">Basic analytics</span>
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400 pt-2 border-t">
-                        <strong>Total with SEO + PPC:</strong> $900/month
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Pro Column */}
-                  <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/30 dark:to-purple-900/30 rounded-xl p-6 border-2 border-blue-500 relative">
-                    <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                      <span className="bg-blue-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        SAVE $250/mo
-                      </span>
-                    </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                      Forte Pro™ - $350/mo
-                    </h3>
-                    <div className="space-y-3 text-left">
-                      <div className="flex items-center gap-2">
-                        <span className="text-green-500">📄</span>
-                        <span className="text-gray-700 dark:text-gray-300"><strong>10 pages</strong> (2x more content)</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-green-500">📞</span>
-                        <span className="text-gray-700 dark:text-gray-300"><strong>Priority phone support</strong></span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-green-500">📊</span>
-                        <span className="text-gray-700 dark:text-gray-300"><strong>Advanced analytics + conversion tracking</strong></span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <span className="text-green-500">🎯</span>
-                        <span className="text-gray-700 dark:text-gray-300"><strong>Priority email support & faster response</strong></span>
-                      </div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400 pt-2 border-t">
-                        <strong>Total with SEO + PPC:</strong> $1,500/month<br/>
-                        <span className="text-green-600 font-semibold">Save $250/month vs Foundation!</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="mt-8 p-4 bg-yellow-50 dark:bg-yellow-900/20 rounded-lg">
-                  <p className="text-sm text-yellow-800 dark:text-yellow-200">
-                    💰 <strong>Smart Money Tip:</strong> If you plan to add SEO or PPC within 6 months, 
-                    Pro saves you $3,000+ annually while giving you more content and better support from day one.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </SimpleScrollReveal>
-        )}
-
         {/* What's Included With Every Plan - Only show for website plans */}
         {includedFeatures && (
           <SimpleScrollReveal direction="up" delay={400}>
@@ -729,6 +646,56 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
                 <p className="text-sm text-blue-700 dark:text-blue-300">
                   <strong>Not sure which is right for you?</strong> Let's discuss your needs and find the perfect fit.
                 </p>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        )}
+
+        {/* Quick Pricing FAQ */}
+        {!serviceType && (
+          <SimpleScrollReveal direction="up" delay={400}>
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 lg:p-8 mb-12 max-w-6xl mx-auto">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                💡 Quick Questions & Answers
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      Want a one-time payment?
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      We offer "Site Essential" packages starting at $2,000-$5,000. You own the site outright with optional maintenance plans. 
+                      <Link href="/contact" className="text-blue-600 dark:text-blue-400 underline ml-1">Get custom pricing →</Link>
+                    </p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      What's included in monthly plans?
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      Everything: hosting, security, unlimited edits, performance monitoring, and Forte Care™ support. No hidden fees.
+                    </p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      Can I switch between plans?
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      Yes! Upgrade or downgrade anytime. Add SEO, PPC, or Social services as your business grows.
+                    </p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
+                      What if I need more pages?
+                    </h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-300">
+                      Foundation includes 5 pages, Pro includes 10. Additional pages: $50/page one-time setup.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </SimpleScrollReveal>

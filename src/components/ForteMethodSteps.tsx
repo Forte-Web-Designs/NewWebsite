@@ -140,12 +140,20 @@ export default function ForteMethodSteps({
                 
                 {/* Step Content */}
                 <div className="flex-1 flex flex-col justify-center items-center text-center px-2">
-                  <div className="mb-4 sm:mb-6">
-                    <img 
-                      src={items[activeStep]?.icon} 
-                      alt={items[activeStep]?.title}
-                      className="w-12 h-12 sm:w-16 sm:h-16 mx-auto"
-                    />
+                  <div className="mb-6 sm:mb-8">
+                    <div className="relative inline-block">
+                      <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-30 animate-pulse"></div>
+                      <div className="relative bg-white dark:bg-gray-800 rounded-full p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                        <img 
+                          src={items[activeStep]?.icon} 
+                          alt={items[activeStep]?.title}
+                          className="w-8 h-8 sm:w-12 sm:h-12 mx-auto transition-transform duration-300 hover:scale-110"
+                        />
+                      </div>
+                      <div className="absolute -top-1 -right-1 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-xs sm:text-sm font-bold">{activeStep + 1}</span>
+                      </div>
+                    </div>
                   </div>
                   <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                     {items[activeStep]?.title}

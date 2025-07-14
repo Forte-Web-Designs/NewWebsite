@@ -637,7 +637,7 @@ export default function Home() {
               <div className="relative">
                 <div className="bg-white/10 backdrop-blur-lg rounded-2xl p-4 sm:p-6 border border-white/20 shadow-2xl">
                   <div className="text-center mb-4 sm:mb-6">
-                    <h3 className="text-white font-bold text-lg sm:text-xl mb-2">🎯 Free Website Checkup</h3>
+                    <h3 className="text-white font-bold text-lg sm:text-xl mb-2">🎯 Free 5-Point Site Audit in 30 Seconds</h3>
                     <p className="text-white/80 text-sm">See how your site performs (and get some friendly tips to make it better)</p>
                   </div>
                   <InstantMiniAudit
@@ -784,10 +784,10 @@ export default function Home() {
               Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
             </p>
             <div className="flex justify-center">
-              <LightButton href="/contact">Get Free 30-Minute Strategy Call</LightButton>
+              <LightButton href="/contact">Get Free 15-Min Strategy Chat</LightButton>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
-              30-minute consultation to discuss your goals and see if Forte is the right fit
+              Quick 15-minute call to discuss your goals and see if Forte is the right fit
             </p>
           </div>
         </div>

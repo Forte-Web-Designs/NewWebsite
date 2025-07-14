@@ -86,6 +86,81 @@ export default function ServicePage() {
         </p>
       </section>
 
+      {/* Problem-Solution Section */}
+      <section className="w-full dark:bg-black bg-white py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium dark:text-secondary-1000 text-black mb-8 sm:mb-12 text-center">
+            Social Media That Actually Drives Business
+          </h2>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
+            {/* Problem Statement */}
+            <div className="bg-red-50 dark:bg-red-900/20 rounded-xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-semibold text-red-800 dark:text-red-300 mb-4 flex items-center gap-2">
+                <span>❌</span> The Problem You're Facing
+              </h3>
+              <ul className="space-y-3 text-sm sm:text-base text-red-700 dark:text-red-200">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  <span>You know you need to be on social media, but posting consistently feels impossible</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  <span>Your competitors are more active online and getting the customers you should have</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  <span>You've tried posting yourself, but engagement is low and it takes forever</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  <span>Managing multiple platforms while running your business is overwhelming</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  <span>You're missing out on local customers who discover businesses through social media</span>
+                </li>
+              </ul>
+            </div>
+            
+            {/* Solution & Benefits */}
+            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 sm:p-8">
+              <h3 className="text-xl sm:text-2xl font-semibold text-green-800 dark:text-green-300 mb-4 flex items-center gap-2">
+                <span>✅</span> The Forte Social™ Solution
+              </h3>
+              <ul className="space-y-3 text-sm sm:text-base text-green-700 dark:text-green-200 mb-6">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Professional content calendar with 3-5 posts per week across your key platforms</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Custom-designed posts that reflect your brand and engage your local audience</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>We handle all comments, messages, and customer interactions professionally</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Focus on Facebook, Instagram, and Google Business Profile where customers actually are</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span>Monthly performance reports showing growth and engagement</span>
+                </li>
+              </ul>
+              
+              <div className="bg-green-100 dark:bg-green-800/30 rounded-lg p-4">
+                <p className="text-sm sm:text-base font-medium text-green-800 dark:text-green-200">
+                  <span className="font-bold">Expected Results:</span> 3-5x more social engagement, consistent brand visibility, increased local awareness, and more website traffic from social platforms within the first 90 days.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="w-full dark:bg-black bg-white py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium dark:text-secondary-1000 text-black mb-6 sm:mb-8">

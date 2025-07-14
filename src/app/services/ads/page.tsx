@@ -50,6 +50,62 @@ export default function GooglePPCAdsPage() {
         of waiting for them to find you.
       </p>
 
+      {/* Problem-Solution Structure */}
+      <div className="py-8 sm:py-12 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+          {/* Problem Statement */}
+          <div className="space-y-6">
+            <div className="bg-red-50 dark:bg-red-900/20 rounded-xl p-6 border border-red-200 dark:border-red-800">
+              <h3 className="text-xl font-semibold text-red-800 dark:text-red-200 mb-3">
+                Struggling with Google Ads?
+              </h3>
+              <ul className="space-y-2 text-red-700 dark:text-red-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  Spending money on ads but getting few quality leads
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  Clicks that don't convert into actual customers
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-red-500 mt-1">×</span>
+                  Competing against big companies with huge ad budgets
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* Solution & Benefits */}
+          <div className="space-y-6">
+            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
+              <h3 className="text-xl font-semibold text-green-800 dark:text-green-200 mb-3">
+                Forte PPC™ Solution
+              </h3>
+              <ul className="space-y-2 text-green-700 dark:text-green-300">
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  Smart targeting to reach customers ready to buy
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  Landing pages optimized for conversions
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  Budget optimization to maximize ROI
+                </li>
+              </ul>
+              <div className="mt-4 p-3 bg-green-100 dark:bg-green-800/30 rounded-lg">
+                <p className="text-sm font-medium text-green-800 dark:text-green-200">
+                  Expected Results: 3-5x return on ad spend within 60 days
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div className="flex flex-col items-center w-full">
         <div className="w-full flex flex-col mb-8 sm:mb-10 md:mb-12 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter dark:text-secondary-1000 leading-tight mb-4 sm:mb-6">
