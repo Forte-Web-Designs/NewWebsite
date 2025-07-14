@@ -254,6 +254,17 @@ const AIChat = () => {
       if (action === 'SHOW_FORM') {
         setTimeout(() => {
           setShowContactForm(true);
+          // Auto-scroll to form after it appears
+          setTimeout(() => {
+            const formElement = document.querySelector('[data-contact-form]');
+            if (formElement) {
+              formElement.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'center',
+                inline: 'nearest'
+              });
+            }
+          }, 100);
         }, 1500);
       }
     }, 1500);
@@ -458,7 +469,7 @@ const AIChat = () => {
 
             {/* Enhanced Contact Form with Auto-Advancement */}
             {showContactForm && (
-              <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 lg:p-5 border border-gray-200 dark:border-gray-700">
+              <div data-contact-form className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4 lg:p-5 border border-gray-200 dark:border-gray-700">
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">Let's Connect!</h4>
                 <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Fill out your details and Seth will get back to you within 24 hours.</p>
                 
@@ -668,10 +679,10 @@ const AIChat = () => {
               </div>
               
               {/* Contact prompt - Enhanced */}
-              <div className="pt-3">
+              <div className="pt-4 lg:pt-6">
                 <button
                   onClick={() => sendMessage("I'd like to get in contact with you")}
-                  className="w-full text-sm lg:text-base bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-700 hover:from-indigo-700 hover:via-blue-700 hover:to-blue-800 text-white py-4 lg:py-5 rounded-xl transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border border-blue-500"
+                  className="w-full text-sm lg:text-base bg-gradient-to-r from-indigo-600 via-blue-600 to-blue-700 hover:from-indigo-700 hover:via-blue-700 hover:to-blue-800 text-white py-4 lg:py-6 rounded-xl transition-all duration-300 font-bold shadow-xl hover:shadow-2xl transform hover:scale-105 border border-blue-500"
                 >
                   📞 Get in contact with us
                 </button>
