@@ -311,10 +311,26 @@ export default function SeoDesignPage() {
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-6">
               Add Forte SEO™ to your existing Forte Foundation™ or Pro™ website. Choose the plan that matches your growth goals.
             </p>
-            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-2xl mx-auto">
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-2xl mx-auto mb-8">
               <p className="text-sm text-gray-600 dark:text-gray-400">
                 💡 <strong>Small Business Tip:</strong> Most local businesses see great results starting with Foundation + SEO Essential™ ($500/month total)
               </p>
+            </div>
+            
+            {/* Quick Success Story */}
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-2xl mx-auto mb-8 shadow-lg border border-gray-200 dark:border-gray-700">
+              <div className="flex items-center justify-center gap-1 mb-3">
+                {[...Array(5)].map((_, i) => (
+                  <Icon key={i} name="star" className="w-4 h-4 text-yellow-400" />
+                ))}
+              </div>
+              <blockquote className="text-gray-700 dark:text-gray-300 mb-4 italic">
+                "Local search was killing us - customers couldn't find us on Google. Forte's local SEO put us #1 for 'auto repair near me' and doubled our new customer calls."
+              </blockquote>
+              <div className="text-sm">
+                <div className="font-semibold text-gray-900 dark:text-white">Carlos Rivera</div>
+                <div className="text-gray-600 dark:text-gray-400">Rivera Auto Repair • Foundation + SEO Essential</div>
+              </div>
             </div>
           </div>
           <PricingPage serviceType="seo" />

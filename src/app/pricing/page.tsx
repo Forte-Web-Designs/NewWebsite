@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import { PricingPage } from "@/components/pricing";
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 import Link from 'next/link';
+import ROICalculator from '@/components/ROICalculator';
 
 export const metadata: Metadata = {
   title: 'Pricing',
@@ -182,6 +183,9 @@ export default function Pricing() {
             </div>
           </div>
         </div>
+        
+        {/* ROI Calculator Section */}
+        <ROICalculator />
         
         {/* Additional Help Section */}
         <div className="px-4 sm:px-6 lg:px-8 py-16">

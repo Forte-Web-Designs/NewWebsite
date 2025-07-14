@@ -579,6 +579,66 @@ export function PricingPage({ serviceType, showEcosystem }: { serviceType?: 'web
             </SimpleScrollReveal>
           ))}
         </div>
+        
+        {/* Quick Testimonials for Social Proof - Only show for website plans */}
+        {(!serviceType || serviceType === 'website') && (
+          <SimpleScrollReveal direction="up" delay={800}>
+            <div className="mb-16 bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200 dark:border-gray-700">
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                What Our Clients Say
+              </h2>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="star" className="w-4 h-4 text-yellow-400" />
+                    ))}
+                  </div>
+                  <blockquote className="text-gray-700 dark:text-gray-300 mb-4 italic">
+                    "The $500/month we spend on Foundation + SEO has easily paid for itself. We're booked every weekend now."
+                  </blockquote>
+                  <div className="text-sm">
+                    <div className="font-semibold text-gray-900 dark:text-white">Maria Santos</div>
+                    <div className="text-gray-600 dark:text-gray-400">Santos Family Restaurant</div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="star" className="w-4 h-4 text-yellow-400" />
+                    ))}
+                  </div>
+                  <blockquote className="text-gray-700 dark:text-gray-300 mb-4 italic">
+                    "Forte's $350 Pro plan not only saved me money but brought in 3x more leads than my old developer."
+                  </blockquote>
+                  <div className="text-sm">
+                    <div className="font-semibold text-gray-900 dark:text-white">Mike Chen</div>
+                    <div className="text-gray-600 dark:text-gray-400">Elite Home Services</div>
+                  </div>
+                </div>
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-1 mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <Icon key={i} name="star" className="w-4 h-4 text-yellow-400" />
+                    ))}
+                  </div>
+                  <blockquote className="text-gray-700 dark:text-gray-300 mb-4 italic">
+                    "40+ new patients in the first 90 days. Best investment we've made for our practice."
+                  </blockquote>
+                  <div className="text-sm">
+                    <div className="font-semibold text-gray-900 dark:text-white">Dr. Sarah Mitchell</div>
+                    <div className="text-gray-600 dark:text-gray-400">Riverside Dental Group</div>
+                  </div>
+                </div>
+              </div>
+              <div className="text-center mt-8">
+                <Link href="/case-studies" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+                  View All Success Stories →
+                </Link>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        )}
 
         {/* Forte Care™ Section - Only show for website plans */}
         {(!serviceType || serviceType === 'website') && (
