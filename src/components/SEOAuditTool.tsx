@@ -28,6 +28,8 @@ export default function SEOAuditTool({
 }: SEOAuditToolProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
+  const [loadingProgress, setLoadingProgress] = useState(0);
+  const [currentStage, setCurrentStage] = useState('');
 
   // Register the runAudit function with the parent component for auto-run
   useEffect(() => {
@@ -47,18 +49,15 @@ export default function SEOAuditTool({
     }
   }, [setAutoRunTrigger]); // Removed websiteUrl dependency to avoid unnecessary re-registrations
 
-  const loadingMessages = [
-    "Checking your website's connection...",
-    "Analyzing desktop loading speed and performance...",
-    "Testing mobile responsiveness and speed...",
-    "Reviewing your Google search visibility...",
-    "Checking if your site is easy for everyone to use...",
-    "Comparing desktop vs mobile user experience...",
-    "Looking for ways to help you get more leads and customers...",
-    "Reviewing your images and content for best results...",
-    "Checking for hidden issues that could cost you business...",
-    "Almost done—preparing your personalized desktop & mobile results!",
-    "Still working... Comprehensive analysis takes a little longer. Hang tight!"
+  const loadingStages = [
+    { stage: "Connection", message: "Checking your website's connection...", progress: 10 },
+    { stage: "Desktop Analysis", message: "Analyzing desktop loading speed and performance...", progress: 25 },
+    { stage: "Mobile Analysis", message: "Testing mobile responsiveness and speed...", progress: 45 },
+    { stage: "SEO Review", message: "Reviewing your Google search visibility...", progress: 65 },
+    { stage: "Accessibility Check", message: "Checking if your site is easy for everyone to use...", progress: 80 },
+    { stage: "Final Review", message: "Comparing desktop vs mobile user experience...", progress: 90 },
+    { stage: "Optimization Tips", message: "Looking for ways to help you get more leads and customers...", progress: 95 },
+    { stage: "Complete", message: "Almost done—preparing your personalized desktop & mobile results!", progress: 100 }
   ];
 
   const validateUrl = (url: string): string | null => {
@@ -91,23 +90,25 @@ export default function SEOAuditTool({
     }
 
     setIsLoading(true);
+    setLoadingProgress(0);
     onResultsUpdate(null, validatedUrl);
 
-    // Start loading message rotation
-    const messageInterval = setInterval(() => {
-      setLoadingMessage(prev => {
-        const currentIndex = loadingMessages.indexOf(prev);
-        const nextIndex = currentIndex + 1;
-        if (nextIndex < loadingMessages.length) {
-          return loadingMessages[nextIndex];
-        } else {
-          // Loop back to the last few messages
-          return loadingMessages[loadingMessages.length - 1];
-        }
-      });
-    }, 3000);
+    // Animate through loading stages
+    let currentStageIndex = 0;
+    const progressInterval = setInterval(() => {
+      if (currentStageIndex < loadingStages.length) {
+        const stage = loadingStages[currentStageIndex];
+        setCurrentStage(stage.stage);
+        setLoadingMessage(stage.message);
+        setLoadingProgress(stage.progress);
+        currentStageIndex++;
+      }
+    }, 2000); // Change stage every 2 seconds
 
-    setLoadingMessage(loadingMessages[0]);
+    // Set initial stage
+    setCurrentStage(loadingStages[0].stage);
+    setLoadingMessage(loadingStages[0].message);
+    setLoadingProgress(loadingStages[0].progress);
 
     try {
       // Using PageSpeed Insights API
@@ -124,11 +125,21 @@ export default function SEOAuditTool({
         return `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params}`;
       };
 
+      // Set progress to desktop analysis phase
+      setCurrentStage('Desktop Analysis');
+      setLoadingMessage('Fetching desktop performance data...');
+      setLoadingProgress(30);
+
       // Fetch both desktop and mobile results in parallel
       const [desktopResponse, mobileResponse] = await Promise.all([
         fetch(getEndpoint('desktop')),
         fetch(getEndpoint('mobile'))
       ]);
+
+      // Set progress to mobile analysis phase
+      setCurrentStage('Mobile Analysis');
+      setLoadingMessage('Fetching mobile performance data...');
+      setLoadingProgress(60);
 
       if (!desktopResponse.ok || !mobileResponse.ok) {
         throw new Error('Failed to fetch audit data');
@@ -139,28 +150,43 @@ export default function SEOAuditTool({
         mobileResponse.json()
       ]);
 
+      // Set progress to final processing
+      setCurrentStage('Processing Results');
+      setLoadingMessage('Processing and preparing your comprehensive report...');
+      setLoadingProgress(95);
+
       const results: AuditResults = {
         desktop: desktopData,
         mobile: mobileData
       };
 
-      onResultsUpdate(results, validatedUrl);
-      
-      // Trigger scroll to results after a short delay
-      if (onResultsReady) {
-        setTimeout(() => {
-          onResultsReady();
-        }, 100);
-      }
+      // Complete the progress
+      setLoadingProgress(100);
+      setCurrentStage('Complete');
+      setLoadingMessage('🎉 Analysis complete! Displaying your results...');
+
+      // Brief delay to show completion with a success animation
+      setTimeout(() => {
+        onResultsUpdate(results, validatedUrl);
+        
+        // Trigger scroll to results after a short delay
+        if (onResultsReady) {
+          setTimeout(() => {
+            onResultsReady();
+          }, 100);
+        }
+      }, 800); // Slightly longer delay to show completion state
 
     } catch (error) {
       console.error('Audit error:', error);
       alert('Failed to run audit. Please check the URL and try again.');
       onResultsUpdate(null, validatedUrl);
     } finally {
-      clearInterval(messageInterval);
+      clearInterval(progressInterval);
       setIsLoading(false);
       setLoadingMessage('');
+      setLoadingProgress(0);
+      setCurrentStage('');
     }
   };
 
@@ -217,19 +243,67 @@ export default function SEOAuditTool({
         </div>
       </div>
 
-      {/* Loading Message - Mobile Optimized */}
+      {/* Enhanced Loading with Progress Bar */}
       {isLoading && loadingMessage && (
         <div className="mt-6 text-center">
-          <div className="bg-[#081B8B]/20 rounded-xl p-4 sm:p-6 border border-white/10 mx-4 sm:mx-0">
+          <div className="bg-[#081B8B]/20 rounded-xl p-4 sm:p-6 border border-white/10 mx-4 sm:mx-0 backdrop-blur-sm">
+            {/* Header with spinner */}
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
               <span className="text-white font-medium text-sm sm:text-base">Analyzing Desktop & Mobile Performance</span>
             </div>
-            <p className="text-white/80 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
+
+            {/* Progress Bar Container */}
+            <div className="mb-4">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-white/90 text-xs sm:text-sm font-medium">{currentStage}</span>
+                <span className="text-white/70 text-xs">{loadingProgress}%</span>
+              </div>
+              
+              {/* Progress Bar */}
+              <div className="w-full bg-white/20 rounded-full h-2 sm:h-3 overflow-hidden shadow-inner">
+                <div 
+                  className="h-full bg-gradient-to-r from-blue-400 via-purple-500 to-blue-600 rounded-full transition-all duration-700 ease-out relative progress-shine"
+                  style={{ width: `${loadingProgress}%` }}
+                >
+                  {/* Animated shine effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent animate-pulse"></div>
+                </div>
+              </div>
+            </div>
+
+            {/* Current Message */}
+            <p className="text-white/80 text-xs sm:text-sm max-w-md mx-auto leading-relaxed mb-3">
               {loadingMessage}
             </p>
-            <div className="mt-3 text-xs text-white/60">
-              Running both desktop and mobile audits • This usually takes 15-20 seconds
+
+            {/* Stage Indicators */}
+            <div className="flex justify-center gap-1 sm:gap-2 mb-3">
+              {loadingStages.slice(0, 6).map((stage, index) => (
+                <div
+                  key={stage.stage}
+                  className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                    loadingProgress >= stage.progress
+                      ? loadingProgress === 100 && index < 5
+                        ? 'bg-green-400 scale-110 animate-bounce'
+                        : 'bg-blue-400 scale-110'
+                      : loadingProgress >= (loadingStages[index - 1]?.progress || 0)
+                      ? 'bg-blue-400/50 animate-pulse'
+                      : 'bg-white/30'
+                  }`}
+                />
+              ))}
+              {/* Completion indicator */}
+              {loadingProgress === 100 && (
+                <div className="w-3 h-3 rounded-full bg-green-400 scale-125 animate-pulse flex items-center justify-center">
+                  <span className="text-white text-xs">✓</span>
+                </div>
+              )}
+            </div>
+
+            {/* Bottom text */}
+            <div className="text-xs text-white/60">
+              🚀 Comprehensive desktop & mobile analysis • Usually takes 15-20 seconds
             </div>
           </div>
         </div>
