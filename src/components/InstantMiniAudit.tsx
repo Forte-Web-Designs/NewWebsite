@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import { Icon } from './images/Icon';
 import { LazyLoadingStates } from './animations/LazyAnimations';
 
@@ -24,6 +24,8 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [results, setResults] = useState<MiniAuditResults | null>(null);
   const [isLoading, setIsLoading] = useState(false);
+  const [autoRunTriggered, setAutoRunTriggered] = useState(false);
+  const formRef = useRef<HTMLFormElement>(null);
 
   const validateUrl = (url: string): string | null => {
     if (!url.trim()) return null;
@@ -217,16 +219,44 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
     }
   }, [websiteUrl]);
 
-  // Auto-run functionality
+  // Auto-run functionality - Enhanced for mobile
   useEffect(() => {
-    if (autoRunUrl && autoRunUrl.trim()) {
+    if (autoRunUrl && autoRunUrl.trim() && !autoRunTriggered) {
+      setAutoRunTriggered(true);
       setWebsiteUrl(autoRunUrl);
+      
+      // Show visual feedback that auto-run is happening
+      console.log('🚀 Auto-run triggered for:', autoRunUrl);
+      
       // Trigger the audit automatically after setting the URL
+      // Use a longer delay for mobile to ensure DOM is ready
+      const delay = /Mobi|Android/i.test(navigator.userAgent) ? 1500 : 750;
+      
       setTimeout(() => {
-        handleSubmit(null, autoRunUrl);
-      }, 500);
+        // Try multiple approaches to ensure it works on mobile
+        try {
+          console.log('📱 Starting audit for:', autoRunUrl);
+          // First, try direct function call
+          handleSubmit(null, autoRunUrl);
+          
+          // Also try triggering form submission programmatically as backup
+          if (formRef.current && /Mobi|Android/i.test(navigator.userAgent)) {
+            setTimeout(() => {
+              const form = formRef.current;
+              if (form && !isLoading) {
+                console.log('📋 Trying form submission as backup');
+                // Create and dispatch a submit event
+                const submitEvent = new Event('submit', { bubbles: true, cancelable: true });
+                form.dispatchEvent(submitEvent);
+              }
+            }, 200);
+          }
+        } catch (error) {
+          console.warn('Auto-run audit failed:', error);
+        }
+      }, delay);
     }
-  }, [autoRunUrl, handleSubmit]);
+  }, [autoRunUrl, handleSubmit, autoRunTriggered, isLoading]);
 
   const getScoreColor = (score: number) => {
     if (score >= 7) return 'text-green-600';
@@ -242,8 +272,17 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
 
   return (
     <div className="w-full">
+      {/* Auto-run Indicator */}
+      {autoRunUrl && autoRunTriggered && !isLoading && !results && (
+        <div className="text-center mb-4">
+          <div className="text-xs text-green-300 bg-green-600/20 rounded-lg p-3 border border-green-400/30 animate-pulse">
+            🚀 <strong>Auto-starting audit for:</strong> {autoRunUrl}
+          </div>
+        </div>
+      )}
+      
       {/* Compact Instructions Banner - Only show if no results */}
-      {!results && (
+      {!results && !autoRunUrl && (
         <div className="text-center mb-4">
           <div className="text-xs text-white/80 bg-white/10 rounded-lg p-3 border border-white/20">
             👇 <strong>Enter your website below:</strong>
@@ -251,7 +290,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
         </div>
       )}
 
-      <form onSubmit={handleSubmit}>
+      <form ref={formRef} onSubmit={handleSubmit}>
         {/* Enhanced Input Field */}
         <div className="relative mb-4">
           <label htmlFor="website-url" className="block text-white/90 text-sm font-medium mb-2 text-center">
