@@ -158,16 +158,10 @@ export default function Header() {
               {/* Desktop Logo - Hidden on mobile */}
               <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
                 <img
-                  src="/images/home/logo2.png"
-                  alt="Forte Logo (Light Mode)"
-                  className="block dark:hidden"
+                  src={theme === 'dark' ? '/images/home/logo1.png' : '/images/home/logo2.png'}
+                  alt="Forte Logo"
                   height={48}
-                />
-                <img
-                  src="/images/home/logo1.png"
-                  alt="Forte Logo (Dark Mode)"
-                  className="hidden dark:block"
-                  height={48}
+                  style={{ display: 'block' }}
                 />
               </Link>
 
@@ -277,16 +271,10 @@ export default function Header() {
             {/* Desktop Logo - Hidden on mobile */}
             <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
               <img
-                src="/images/home/logo2.png"
-                alt="Forte Logo (Light Mode)"
-                className="block dark:hidden"
+                src={theme === 'dark' ? '/images/home/logo1.png' : '/images/home/logo2.png'}
+                alt="Forte Logo"
                 height={48}
-              />
-              <img
-                src="/images/home/logo1.png"
-                alt="Forte Logo (Dark Mode)"
-                className="hidden dark:block"
-                height={48}
+                style={{ display: 'block' }}
               />
             </Link>
 
