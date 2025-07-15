@@ -10,11 +10,12 @@ interface AuditResults {
 interface SEOResultsProps {
   results: AuditResults | null;
   auditedUrl: string;
+  headerRef?: React.RefObject<HTMLDivElement | null>;
   gradesRef?: React.RefObject<HTMLDivElement | null>;
   screenshotRef?: React.RefObject<HTMLDivElement | null>;
 }
 
-export default function SEOResults({ results, auditedUrl, gradesRef, screenshotRef }: SEOResultsProps) {
+export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, screenshotRef }: SEOResultsProps) {
   const [showEmailForm, setShowEmailForm] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -400,7 +401,7 @@ export default function SEOResults({ results, auditedUrl, gradesRef, screenshotR
   return (
     <div className="mt-8 bg-white dark:bg-gray-900 rounded-xl p-6 shadow-lg">
       {/* Header */}
-      <div className="text-center mb-6">
+      <div ref={headerRef} className="text-center mb-6">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
           Results for <span className="break-all text-blue-600">{auditedUrl}</span>
         </h2>

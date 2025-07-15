@@ -91,6 +91,7 @@ function SiteCheckUpContent() {
   const [auditedUrl, setAuditedUrl] = useState("");
   const [showMiniAuditWelcome, setShowMiniAuditWelcome] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
   const gradesRef = useRef<HTMLDivElement>(null);
   const screenshotRef = useRef<HTMLDivElement>(null);
   const leftContent = [bottomData[2], bottomData[0]];
@@ -196,8 +197,8 @@ function SiteCheckUpContent() {
   };
 
   const scrollToResults = () => {
-    // Prioritize screenshot section, then grades, then results as fallback
-    const targetRef = screenshotRef.current || gradesRef.current || resultsRef.current;
+    // Prioritize header section (where PDF download button is), then screenshot, then grades, then results as fallback
+    const targetRef = headerRef.current || screenshotRef.current || gradesRef.current || resultsRef.current;
     
     if (targetRef) {
       // Add a delay to ensure results are fully rendered
@@ -398,6 +399,7 @@ function SiteCheckUpContent() {
             <SEOResults 
               results={auditResults}
               auditedUrl={auditedUrl}
+              headerRef={headerRef}
               gradesRef={gradesRef}
               screenshotRef={screenshotRef}
             />

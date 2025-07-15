@@ -62,6 +62,9 @@ function WebsiteMaintenanceContent() {
   const [auditedUrl, setAuditedUrl] = useState("");
   const [showWelcomeBanner, setShowWelcomeBanner] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
+  const headerRef = useRef<HTMLDivElement>(null);
+  const gradesRef = useRef<HTMLDivElement>(null);
+  const screenshotRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     // Check for URL parameter and pre-fill the website URL
@@ -233,6 +236,9 @@ function WebsiteMaintenanceContent() {
               <SEOResults 
                 results={auditResults} 
                 auditedUrl={auditedUrl}
+                headerRef={headerRef}
+                gradesRef={gradesRef}
+                screenshotRef={screenshotRef}
               />
               
               {/* CTA Section */}
