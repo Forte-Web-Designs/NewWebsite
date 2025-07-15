@@ -39,6 +39,7 @@ const AIChat = () => {
     submitError: null
   });
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const latestMessageRef = useRef<HTMLDivElement>(null);
   
   // Form field refs for auto-advancement
   const nameFieldRef = useRef<HTMLInputElement>(null);
@@ -48,8 +49,18 @@ const AIChat = () => {
   const serviceFieldRef = useRef<HTMLSelectElement>(null);
   const messageFieldRef = useRef<HTMLTextAreaElement>(null);
 
-  const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+  const scrollToLatestMessage = () => {
+    // Scroll to the top of the latest message so users can read from the beginning
+    if (latestMessageRef.current) {
+      latestMessageRef.current.scrollIntoView({ 
+        behavior: "smooth",
+        block: "start", // Scroll to the start (top) of the element
+        inline: "nearest"
+      });
+    } else {
+      // Fallback to bottom if no latest message ref
+      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   // Improved auto-advance with Enter key - less aggressive
@@ -137,7 +148,7 @@ const AIChat = () => {
   };
 
   useEffect(() => {
-    scrollToBottom();
+    scrollToLatestMessage();
   }, [messages]);
 
   // Initialize chat with welcome message
@@ -476,9 +487,10 @@ const AIChat = () => {
 
           {/* Messages - Enhanced readability with maximum height for conversation */}
           <div className="flex-[5] overflow-y-auto p-4 lg:p-5 space-y-4 lg:space-y-5 min-h-0 scroll-smooth">
-            {messages.map((message) => (
+            {messages.map((message, index) => (
               <div
                 key={message.id}
+                ref={index === messages.length - 1 ? latestMessageRef : null}
                 className={`flex ${message.type === 'user' ? 'justify-end' : 'justify-start'}`}
               >
                 <div
