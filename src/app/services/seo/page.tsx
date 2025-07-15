@@ -81,7 +81,7 @@ export default function SeoDesignPage() {
           <div className="space-y-6">
             <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
               <h3 className="text-xl font-semibold text-green-800 dark:text-green-200 mb-3">
-                The Forte SEO Solution
+                The Forte SEO™ Solution
               </h3>
               <ul className="space-y-2 text-green-700 dark:text-green-300">
                 <li className="flex items-start gap-2">
@@ -108,6 +108,32 @@ export default function SeoDesignPage() {
       </div>
 
       {/* Main Content Section - Mobile Optimized */}
+      {/* SEO Upgrade Explanation */}
+      <div className="py-8 bg-blue-50 dark:bg-blue-900/20 rounded-lg mx-4 sm:mx-6 lg:mx-8 mb-12">
+        <div className="container max-w-4xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row gap-6 items-center">
+            <div className="bg-white dark:bg-gray-800 p-4 rounded-lg shadow-md flex items-center justify-center md:w-1/3">
+              <div className="text-center">
+                <div className="text-3xl mb-2">🚀</div>
+                <h3 className="text-lg font-bold mb-1">Beyond Built-in SEO</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-300">Taking your website to the next level</p>
+              </div>
+            </div>
+            <div className="md:w-2/3">
+              <h3 className="text-xl font-semibold mb-3 dark:text-white">Forte SEO™ goes deeper:</h3>
+              <p className="text-gray-700 dark:text-gray-200 mb-4">
+                We research your market, target keywords, optimize your site monthly, create content, build authority, and track your growth—turning your foundation into a search engine magnet.
+              </p>
+              <div className="bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-800 rounded-md p-3">
+                <p className="text-sm text-amber-800 dark:text-amber-300">
+                  <strong>Already have a Forte™ website?</strong> Your site has the SEO foundations in place. Forte SEO™ builds on this foundation to help you climb search rankings month after month.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
       <div className="py-12 sm:py-16 lg:py-24 space-y-6 sm:space-y-8 lg:space-y-12">
         <div className="dark:bg-[radial-gradient(50.48%_57.98%_at_5.98%_5.37%,_#1A1A1A_0%,_rgba(21,21,21,0.5)_50%,_rgba(16,16,16,0)_100%)] bg-[radial-gradient(50.48%_57.98%_at_5.98%_5.37%,_#f4f4f4_0%,_rgba(244,244,244,0.5)_50%,_rgba(244,244,244,0)_100%)] p-4 sm:p-6 lg:p-8 rounded-tl-lg sm:rounded-tl-xl lg:rounded-tl-3xl w-full max-w-4xl">
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 sm:gap-0">
@@ -175,7 +201,7 @@ export default function SeoDesignPage() {
         </div>
         <div className="flex justify-end md:-mt-32">
           <h2 className="md:w-[696px] w-full md:text-[38px] text-[22px] font-medium font-inter max-[767px]:leading-[26px] dark:bg-transparent bg-white relative z-20">
-            Here's the thing - we don't just build beautiful websites. We make sure people can actually find them! Our SEO is designed specifically for small businesses who want real results without the confusing agency jargon.
+            Here's the thing - we don't just build beautiful websites. We make sure people can actually find them! Our Forte SEO™ service is designed specifically for small businesses who want real results without the confusing agency jargon.
           </h2>
         </div>
       </div>
@@ -228,11 +254,78 @@ export default function SeoDesignPage() {
         </div>
       </div>
 
-      <div className="flex flex-col md:items-center lg:py-36 sm:py-28 py-14 px-5">
-        <p className="md:text-[38px] text-[26px] font-medium font-inter dark:text-secondary-1000 lg:mb-10 md:mb-9 mb-7 md:leading-[46px] leading-[30px]">
-          What's Inside Our SEO Package?
-        </p>
+      {/* SEO Comparison Table */}
+      <div className="py-12 sm:py-16 bg-gray-50 dark:bg-gray-900/50">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4 dark:text-white">Built‑In SEO vs. Forte SEO™ Package</h2>
+            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Every Forte™ website comes with SEO foundations built-in. Our Forte SEO™ package takes your online visibility to the next level.
+            </p>
+          </div>
+          
+          <div className="overflow-x-auto">
+            <table className="w-full border-collapse">
+              <thead>
+                <tr className="bg-white dark:bg-gray-800">
+                  <th className="text-left p-4 border-b dark:border-gray-700">Feature</th>
+                  <th className="p-4 border-b dark:border-gray-700">
+                    <div className="flex flex-col items-center">
+                      <span className="text-blue-600 dark:text-blue-400 font-bold">Built‑In SEO</span>
+                      <span className="text-green-600 dark:text-green-400 text-sm">(Included)</span>
+                    </div>
+                  </th>
+                  <th className="p-4 border-b dark:border-gray-700">
+                    <div className="flex flex-col items-center">
+                      <span className="text-blue-600 dark:text-blue-400 font-bold">Forte SEO™ Package</span>
+                      <span className="text-amber-600 dark:text-amber-400 text-sm">(Add-On)</span>
+                    </div>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="p-4 border-b dark:border-gray-700 font-medium">Technical setup</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">✅ Yes</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">✅ Audits & fixes ongoing</td>
+                </tr>
+                <tr className="bg-gray-50 dark:bg-gray-900">
+                  <td className="p-4 border-b dark:border-gray-700 font-medium">Metadata / alt tags</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">✅ Basic implementation</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">✅ Regular refinement</td>
+                </tr>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="p-4 border-b dark:border-gray-700 font-medium">Keyword research</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">❌ No</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">✅ Monthly & strategic</td>
+                </tr>
+                <tr className="bg-gray-50 dark:bg-gray-900">
+                  <td className="p-4 border-b dark:border-gray-700 font-medium">Content & blog guidance</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">❌ No</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">✅ Yes (planned content schedule)</td>
+                </tr>
+                <tr className="bg-white dark:bg-gray-800">
+                  <td className="p-4 border-b dark:border-gray-700 font-medium">Link building</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">❌ No</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">✅ Outreach & authority building</td>
+                </tr>
+                <tr className="bg-gray-50 dark:bg-gray-900">
+                  <td className="p-4 border-b dark:border-gray-700 font-medium">Traffic/rank tracking</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">❌ No</td>
+                  <td className="p-4 border-b dark:border-gray-700 text-center">✅ Monthly analytics + reporting</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+          <div className="mt-8 text-center">
+            <LightButton href="/contact">Get Started with Forte SEO™</LightButton>
+          </div>
+        </div>
+      </div>
 
+      {/* What's Inside Our SEO Package? */}
+      <div className="py-12 sm:py-16 lg:py-20">
         <div className="md:grid md:grid-cols-2 flex flex-col-reverse items-center dark:bg-primary-1150 rounded-[20px] md:gap-5 gap-3 bg-secondary-1350">
           <div className="flex flex-col md:gap-14 gap-6 lg:p-[60px] md:p-10 sm:p-8 p-5 pr-0">
             <div>
