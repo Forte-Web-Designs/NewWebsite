@@ -8,8 +8,6 @@ import ContactForm from "@/components/ContactForm";
 import InstantMiniAudit from "@/components/InstantMiniAudit";
 import { PricingPage } from "@/components/pricing";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import MobileServicesSlider from "@/components/slider/MobileServicesSlider";
 import LightButton from "@/components/LightButton";
 import ForteMethodSlider from "@/components/slider/ForteMethodSlider";

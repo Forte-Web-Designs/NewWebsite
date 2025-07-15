@@ -233,6 +233,8 @@ const MobileServicesSlider: React.FC<MobileServicesSliderProps> = ({ isDark }) =
                       height={100}
                       className="flex"
                       priority={index === 0}
+                      loading={index === 0 ? 'eager' : 'lazy'}
+                      sizes="100px"
                     />
                   </div>
                   <h3 className="font-Inter font-medium text-[16px] leading-[20px] tracking-normal text-center text-gray-900 dark:text-white px-2">

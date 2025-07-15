@@ -7,6 +7,10 @@ import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 import AIChat from "@/components/AIChat";
 import { ThemeProvider } from "./providers/ThemeProvider";
+import CriticalCSS from "@/components/performance/CriticalCSS";
+import PerformanceMonitor from "@/components/performance/PerformanceMonitor";
+import JavaScriptOptimizer from "@/components/performance/JavaScriptOptimizer";
+import ResourceHints from "@/components/performance/ResourceHints";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -144,6 +148,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${roboto.variable} ${inter.variable} ${interDisplay.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
+        <CriticalCSS />
+        <ResourceHints />
+        <JavaScriptOptimizer />
         <ThemeProvider>
           <div className="dark:bg-[url(/images/navbar/navbar-bg.png)] bg-[url(/images/navbar/navbar-bg-light.png)] bg-no-repeat">
             <Header />
@@ -154,6 +161,7 @@ export default function RootLayout({
           <Footer />
           <BackToTopButton />
           <AIChat />
+          <PerformanceMonitor />
         </ThemeProvider>
       </body>
     </html>

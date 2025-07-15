@@ -6,8 +6,6 @@ import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { Icon } from "@/components/images/Icon";
 import InstantMiniAudit from "@/components/InstantMiniAudit";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import LightButton from "@/components/LightButton";
 import ForteMethodSteps from "@/components/ForteMethodSteps";
 
@@ -22,6 +20,7 @@ const ContactForm = lazy(() => import("@/components/ContactForm"));
 const PricingPage = lazy(() => import("@/components/pricing").then(mod => ({ default: mod.PricingPage })));
 const MobileServicesSlider = lazy(() => import("@/components/slider/MobileServicesSlider"));
 const MeetSethSection = lazy(() => import("@/components/MeetConnorSection"));
+const LazySliderCSS = lazy(() => import("@/components/performance/LazySliderCSS"));
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -371,6 +370,8 @@ export default function Home() {
                                 alt={`Portfolio Example ${index + 1}`}
                                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
                                 priority={index === 0}
+                                loading={index === 0 ? 'eager' : 'lazy'}
+                                sizes="(max-width: 768px) 100vw, 400px"
                               />
                             </div>
                           ))}
@@ -478,20 +479,26 @@ export default function Home() {
                   <div className="relative">
                     <Link href="/about/work" className="block group">
                       <div className="relative rounded-xl shadow-2xl overflow-hidden bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 cursor-pointer">
-                        <Slider ref={sliderRef} {...sliderSettings}>
-                          {sliderImages.map((item) => (
-                            <div key={item.id}>
-                              <OptimizedImage
-                                src={item.src}
-                                width={626}
-                                height={619}
-                                alt={`Portfolio Showcase ${item.id}`}
-                                className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
-                                priority={item.id === 1}
-                              />
-                            </div>
-                          ))}
-                        </Slider>
+                        <Suspense fallback={<div className="w-[626px] h-[619px] bg-gray-200 animate-pulse rounded-xl" />}>
+                          <LazySliderCSS priority={true}>
+                            <Slider ref={sliderRef} {...sliderSettings}>
+                              {sliderImages.map((item, index) => (
+                                <div key={item.id}>
+                                  <OptimizedImage
+                                    src={item.src}
+                                    width={626}
+                                    height={619}
+                                    alt={`Portfolio Showcase ${item.id}`}
+                                    className="w-full h-auto transition-transform duration-300 group-hover:scale-105"
+                                    priority={index === 0}
+                                    loading={index === 0 ? 'eager' : 'lazy'}
+                                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 626px"
+                                  />
+                                </div>
+                              ))}
+                            </Slider>
+                          </LazySliderCSS>
+                        </Suspense>
                         
                         {/* Hover Overlay */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
@@ -521,6 +528,8 @@ export default function Home() {
                             height={60}
                             alt={`Thumbnail ${item.id}`}
                             className="w-15 h-15 object-cover"
+                            loading="lazy"
+                            sizes="60px"
                           />
                         </button>
                       ))}
