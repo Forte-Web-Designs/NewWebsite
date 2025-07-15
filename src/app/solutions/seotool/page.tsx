@@ -97,6 +97,8 @@ function SiteCheckUpContent() {
   const leftContent = [bottomData[2], bottomData[0]];
   const rightContent = [bottomData[1], bottomData[3]];
   const [isMobile, setIsMobile] = useState(false);
+  const [shouldHighlightButton, setShouldHighlightButton] = useState(false);
+  const auditToolRef = useRef<HTMLDivElement>(null);
 
   // Handle responsive gradient directions and URL parameters
   useEffect(() => {
@@ -110,9 +112,33 @@ function SiteCheckUpContent() {
     // Check for URL parameter and pre-fill the website URL
     const urlParam = searchParams.get('url');
     const autorunParam = searchParams.get('autorun');
+    const mobileRedirectParam = searchParams.get('mobile-redirect');
     
     if (urlParam) {
       setWebsiteUrl(urlParam);
+      
+      // Handle mobile redirect from mini-audit - auto-scroll and highlight
+      if (mobileRedirectParam === 'true' && isMobile) {
+        // Don't show the popup, just scroll to audit tool and highlight button
+        setTimeout(() => {
+          if (auditToolRef.current) {
+            auditToolRef.current.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'center' 
+            });
+            
+            // Highlight the run audit button
+            setShouldHighlightButton(true);
+            
+            // Remove highlight after 3 seconds
+            setTimeout(() => {
+              setShouldHighlightButton(false);
+            }, 3000);
+          }
+        }, 500);
+        
+        return () => window.removeEventListener('resize', handleResize);
+      }
       
       // If autorun is true, show welcome message and trigger the audit
       if (autorunParam === 'true') {
@@ -335,11 +361,13 @@ function SiteCheckUpContent() {
                 </p>
               </div>
               <div
-                className="rounded-xl p-4 text-center"
+                className="rounded-xl p-4 text-center bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm"
                 style={{
                   backgroundImage: "url('/images/forteSolutions/bg-img.png')",
                   backgroundRepeat: "no-repeat",
                   backgroundSize: "cover",
+                  backgroundPosition: "center",
+                  willChange: "transform",
                 }}
               >                  <SEOAuditTool
                     websiteUrl={websiteUrl}
@@ -347,6 +375,8 @@ function SiteCheckUpContent() {
                     onResultsUpdate={handleResultsUpdate}
                     onResultsReady={scrollToResults}
                     setAutoRunTrigger={setAutoRunTrigger}
+                    shouldHighlightButton={shouldHighlightButton}
+                    auditToolRef={auditToolRef}
                   />
               </div>
             </div>
@@ -369,11 +399,13 @@ function SiteCheckUpContent() {
                   </p>
                 </div>
                 <div
-                  className="rounded-xl p-6 text-center py-16 px-10"
+                  className="rounded-xl p-6 text-center py-16 px-10 bg-gradient-to-br from-blue-600/20 to-purple-600/20 backdrop-blur-sm"
                   style={{
                     backgroundImage: "url('/images/forteSolutions/bg-img.png')",
                     backgroundRepeat: "no-repeat",
                     backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    willChange: "transform",
                   }}
                 >
                   {/* Website Audit Tool */}
@@ -383,6 +415,8 @@ function SiteCheckUpContent() {
                     onResultsUpdate={handleResultsUpdate}
                     onResultsReady={scrollToResults}
                     setAutoRunTrigger={setAutoRunTrigger}
+                    shouldHighlightButton={shouldHighlightButton}
+                    auditToolRef={auditToolRef}
                   />
                 </div>
 

@@ -1,16 +1,13 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import Link from "next/link";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { Icon } from "@/components/images/Icon";
-import ContactForm from "@/components/ContactForm";
 import InstantMiniAudit from "@/components/InstantMiniAudit";
-import { PricingPage } from "@/components/pricing";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import MobileServicesSlider from "@/components/slider/MobileServicesSlider";
 import LightButton from "@/components/LightButton";
 import ForteMethodSteps from "@/components/ForteMethodSteps";
 
@@ -19,7 +16,12 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import SimpleAnimatedCounter from '@/components/animations/SimpleAnimatedCounter';
 import { HeroBackgroundAnimation, SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import MeetSethSection from '@/components/MeetConnorSection';
+
+// Lazy load non-critical components for better performance
+const ContactForm = lazy(() => import("@/components/ContactForm"));
+const PricingPage = lazy(() => import("@/components/pricing").then(mod => ({ default: mod.PricingPage })));
+const MobileServicesSlider = lazy(() => import("@/components/slider/MobileServicesSlider"));
+const MeetSethSection = lazy(() => import("@/components/MeetConnorSection"));
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -52,12 +54,20 @@ export default function Home() {
   const handleFullAuditClick = (url: string, seoScore?: number) => {
     setIsNavigatingToAudit(true);
 
+    // Check if user is on mobile
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth < 768;
+
     // Add a slight delay for visual feedback
     setTimeout(() => {
       const params = new URLSearchParams({
         url: url,
         autorun: "true",
       });
+
+      // Add mobile-specific parameter for enhanced UX
+      if (isMobile) {
+        params.append("mobile-redirect", "true");
+      }
 
       // Route high-performing sites to competitive analysis page
       if (seoScore && seoScore >= 8) {
@@ -936,11 +946,15 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Meet Connor Section */}
-      <MeetSethSection />
-      
+      {/* Meet Connor Section */}      {/* Meet Seth Section */}
+      <Suspense fallback={<div className="min-h-[300px] flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+        <MeetSethSection />
+      </Suspense>
+
       {/* Contact Form */}
-      <ContactForm />
+      <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div></div>}>
+        <ContactForm />
+      </Suspense>
     </>
   );
 }

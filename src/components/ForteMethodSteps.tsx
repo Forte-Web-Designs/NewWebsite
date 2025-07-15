@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
+import Image from "next/image";
 import { Icon } from "@/components/images/Icon";
 import SimpleScrollReveal from "@/components/animations/SimpleScrollReveal";
 
@@ -36,14 +37,21 @@ export default function ForteMethodSteps({
   const [activeStep, setActiveStep] = useState(0);
   const [startX, setStartX] = useState(0);
   const [isDragging, setIsDragging] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
 
   const nextStep = () => {
+    if (isTransitioning) return; // Prevent multiple rapid transitions
+    setIsTransitioning(true);
     setActiveStep((prev) => (prev + 1) % items.length);
+    setTimeout(() => setIsTransitioning(false), 500); // Match transition duration
   };
 
   const prevStep = () => {
+    if (isTransitioning) return; // Prevent multiple rapid transitions
+    setIsTransitioning(true);
     setActiveStep((prev) => (prev - 1 + items.length) % items.length);
+    setTimeout(() => setIsTransitioning(false), 500); // Match transition duration
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -141,43 +149,49 @@ export default function ForteMethodSteps({
                 
                 {/* Step Content */}
                 <div className="flex-1 flex flex-col justify-center items-center text-center px-2">
-                  <div className="mb-6 sm:mb-8">
-                    <div className="relative inline-block">
-                      <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-30 animate-pulse"></div>
-                      <div className="relative bg-white dark:bg-gray-800 rounded-full p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                        <img 
-                          src={items[activeStep]?.icon} 
-                          alt={items[activeStep]?.title}
-                          className="w-8 h-8 sm:w-12 sm:h-12 mx-auto transition-transform duration-300 hover:scale-110"
-                        />
-                      </div>
-                      <div className="absolute -top-1 -right-1 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center">
-                        <span className="text-white text-xs sm:text-sm font-bold">{activeStep + 1}</span>
+                  <div className={`transition-all duration-500 ease-in-out ${isTransitioning ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}>
+                    <div className="mb-6 sm:mb-8">
+                      <div className="relative inline-block">
+                        <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-30 animate-pulse"></div>
+                        <div className="relative bg-white dark:bg-gray-800 rounded-full p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700 transition-all duration-300 hover:scale-110">
+                          <Image 
+                            src={items[activeStep]?.icon} 
+                            alt={items[activeStep]?.title}
+                            width={48}
+                            height={48}
+                            className="w-8 h-8 sm:w-12 sm:h-12 mx-auto transition-all duration-500 ease-in-out"
+                            priority
+                          />
+                        </div>
+                        <div className="absolute -top-1 -right-1 w-4 h-4 sm:w-6 sm:h-6 bg-gradient-to-r from-green-400 to-blue-500 rounded-full flex items-center justify-center transition-all duration-300">
+                          <span className="text-white text-xs sm:text-sm font-bold">{activeStep + 1}</span>
+                        </div>
                       </div>
                     </div>
+                    <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 transition-all duration-500 ease-in-out">
+                      {items[activeStep]?.title}
+                    </h4>
+                    {items[activeStep]?.tagline && (
+                      <div className="mb-3">
+                        <span className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs sm:text-sm font-bold px-3 py-1 rounded-full transition-all duration-300 hover:scale-105">
+                          {items[activeStep].tagline}
+                        </span>
+                      </div>
+                    )}
+                    <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md transition-all duration-500 ease-in-out">
+                      {items[activeStep]?.description}
+                    </p>
                   </div>
-                  <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-                    {items[activeStep]?.title}
-                  </h4>
-                  {items[activeStep]?.tagline && (
-                    <div className="mb-3">
-                      <span className="inline-block bg-gradient-to-r from-blue-500 to-purple-600 text-white text-xs sm:text-sm font-bold px-3 py-1 rounded-full">
-                        {items[activeStep].tagline}
-                      </span>
-                    </div>
-                  )}
-                  <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
-                    {items[activeStep]?.description}
-                  </p>
                 </div>
 
                 {/* Navigation */}
                 <div className="flex items-center justify-between mt-6 sm:mt-8">
                   <button
                     onClick={prevStep}
-                    className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                    disabled={isTransitioning}
+                    className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 dark:text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7" />
                     </svg>
                   </button>
@@ -187,10 +201,11 @@ export default function ForteMethodSteps({
                     {items.map((_, index) => (
                       <button
                         key={index}
-                        onClick={() => setActiveStep(index)}
-                        className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors duration-200 ${
+                        onClick={() => !isTransitioning && setActiveStep(index)}
+                        disabled={isTransitioning}
+                        className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 hover:scale-125 active:scale-95 disabled:cursor-not-allowed ${
                           index === activeStep
-                            ? 'bg-blue-600'
+                            ? 'bg-blue-600 shadow-lg shadow-blue-200 dark:shadow-blue-900/50'
                             : 'bg-gray-300 dark:bg-gray-600 hover:bg-gray-400 dark:hover:bg-gray-500'
                         }`}
                       />
@@ -199,9 +214,10 @@ export default function ForteMethodSteps({
 
                   <button
                     onClick={nextStep}
-                    className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors duration-200"
+                    disabled={isTransitioning}
+                    className="flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-700 transition-all duration-300 hover:scale-105 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed"
                   >
-                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 dark:text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 sm:w-5 sm:h-5 text-gray-600 dark:text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
                     </svg>
                   </button>

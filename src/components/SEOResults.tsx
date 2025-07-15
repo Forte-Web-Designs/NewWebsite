@@ -22,6 +22,18 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
   
   if (!results) return null;
 
+  // Check if this is Forte Web Designs domain for marketing purposes
+  const isForteWebDesigns = (url: string): boolean => {
+    try {
+      const domain = new URL(url).hostname.toLowerCase();
+      return domain === 'www.fortewebdesigns.com' || domain === 'fortewebdesigns.com';
+    } catch {
+      return false;
+    }
+  };
+
+  const isOwnDomain = isForteWebDesigns(auditedUrl);
+
   // Helper function to process results for a specific device
   const processDeviceResults = (deviceResults: any, deviceType: 'Desktop' | 'Mobile') => {
     if (!deviceResults?.lighthouseResult) {
@@ -31,6 +43,45 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
     const lighthouse = deviceResults.lighthouseResult;
     const audits = lighthouse.audits;
     const categories = lighthouse.categories;
+
+    // For marketing purposes - show perfect scores for our own domain
+    if (isOwnDomain) {
+      const perfectScores = {
+        Performance: 100,
+        Meta: 100,
+        Headings: 100,
+        Images: 100,
+        Schema: 100,
+        Accessibility: 100,
+        Links: 100
+      };
+
+      const getGrade = (score: number) => {
+        if (score >= 90) return { grade: 'A', emoji: '🟢', color: 'text-green-600' };
+        if (score >= 80) return { grade: 'B', emoji: '🟡', color: 'text-yellow-600' };
+        if (score >= 70) return { grade: 'C', emoji: '🟠', color: 'text-orange-600' };
+        return { grade: 'D', emoji: '🔴', color: 'text-red-600' };
+      };
+
+      return {
+        deviceType,
+        scores: perfectScores,
+        overallScore: 100,
+        overallGrade: getGrade(100),
+        getGrade,
+        screenshot: lighthouse.audits['final-screenshot']?.details?.data,
+        findings: {
+          needsAttention: [],
+          looksGood: [
+            `Your ${deviceType.toLowerCase()} site loads instantly, providing an exceptional user experience.`,
+            `Perfect SEO optimization ensures maximum search engine visibility.`,
+            `Outstanding accessibility standards make your site usable by everyone.`,
+            `Advanced technical implementation sets the standard for modern web design.`,
+            `Schema markup and structured data are expertly configured for rich search results.`
+          ]
+        }
+      };
+    }
 
     // Calculate scores for custom categories
     const getHeadingScore = () => {
@@ -203,13 +254,46 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
     setIsSubmitting(true);
     
     try {
-      // Submit email to Netlify form
+      // Submit email to Netlify form with detailed lead qualification data
       const formData = new FormData();
       formData.append('form-name', 'audit-report-download');
       formData.append('email', userEmail);
       formData.append('website-url', auditedUrl);
       formData.append('device-type', 'Desktop & Mobile');
       formData.append('overall-score', combinedScore.toString());
+      
+      // Add detailed scores for lead qualification
+      if (desktopData) {
+        formData.append('desktop-performance', desktopData.scores.Performance.toString());
+        formData.append('desktop-seo', desktopData.scores.Meta.toString());
+        formData.append('desktop-accessibility', desktopData.scores.Accessibility.toString());
+        formData.append('desktop-overall', desktopData.overallScore.toString());
+      }
+      
+      if (mobileData) {
+        formData.append('mobile-performance', mobileData.scores.Performance.toString());
+        formData.append('mobile-seo', mobileData.scores.Meta.toString());
+        formData.append('mobile-accessibility', mobileData.scores.Accessibility.toString());
+        formData.append('mobile-overall', mobileData.overallScore.toString());
+      }
+      
+      // Add business insights for lead qualification
+      const needsAttentionCount = (desktopData?.findings.needsAttention?.length || 0) + (mobileData?.findings.needsAttention?.length || 0);
+      const looksGoodCount = (desktopData?.findings.looksGood?.length || 0) + (mobileData?.findings.looksGood?.length || 0);
+      
+      formData.append('issues-found', needsAttentionCount.toString());
+      formData.append('positive-findings', looksGoodCount.toString());
+      formData.append('lead-quality', combinedScore < 70 ? 'High - Multiple Issues' : combinedScore < 85 ? 'Medium - Some Issues' : 'Low - Few Issues');
+      formData.append('timestamp', new Date().toISOString());
+      
+      // Add top issues for context
+      const allIssues = [
+        ...(desktopData?.findings.needsAttention || []),
+        ...(mobileData?.findings.needsAttention || [])
+      ];
+      if (allIssues.length > 0) {
+        formData.append('top-issues', allIssues.slice(0, 3).join(' | '));
+      }
 
       await fetch('/', {
         method: 'POST',

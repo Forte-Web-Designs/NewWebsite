@@ -4,6 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   output: 'export', // Enable static export for Netlify
   trailingSlash: true, // Ensures proper routing on static hosts
+  
   images: {
     unoptimized: true, // Required for static export
     domains: ['images.unsplash.com', 'source.unsplash.com'],
@@ -13,9 +14,34 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  
   compiler: {
     // Eliminates more dead code
     removeConsole: process.env.NODE_ENV === 'production',
+  },
+  
+  // Bundle optimization
+  experimental: {
+    optimizeCss: true,
+    optimizePackageImports: ['framer-motion', 'react-icons'],
+  },
+  
+  // Webpack optimizations
+  webpack: (config, { dev, isServer }) => {
+    if (!dev && !isServer) {
+      // Production client-side optimizations
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        cacheGroups: {
+          vendor: {
+            test: /[\\/]node_modules[\\/]/,
+            name: 'vendors',
+            chunks: 'all',
+          },
+        },
+      };
+    }
+    return config;
   },
 };
 

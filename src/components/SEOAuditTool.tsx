@@ -13,6 +13,8 @@ interface SEOAuditToolProps {
   onResultsUpdate: (results: AuditResults | null, url: string) => void;
   onResultsReady?: () => void;
   setAutoRunTrigger?: (triggerFunction: () => void) => void;
+  shouldHighlightButton?: boolean;
+  auditToolRef?: React.RefObject<HTMLDivElement | null>;
 }
 
 export default function SEOAuditTool({ 
@@ -20,7 +22,9 @@ export default function SEOAuditTool({
   setWebsiteUrl, 
   onResultsUpdate,
   onResultsReady,
-  setAutoRunTrigger
+  setAutoRunTrigger,
+  shouldHighlightButton = false,
+  auditToolRef
 }: SEOAuditToolProps) {
   const [isLoading, setIsLoading] = useState(false);
   const [loadingMessage, setLoadingMessage] = useState('');
@@ -161,7 +165,7 @@ export default function SEOAuditTool({
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto px-4 sm:px-6">
+    <div ref={auditToolRef} className="w-full max-w-4xl mx-auto px-4 sm:px-6">
       {/* Website Audit Tool - Mobile Optimized */}
       <div className="flex flex-col gap-4 border border-[#FFFFFF14] rounded-xl p-4 sm:p-6 bg-gradient-to-r from-[#081B8B]/20 to-[#3448BF]/20">
         {/* Header - Both Desktop and Mobile Analysis */}
@@ -196,6 +200,8 @@ export default function SEOAuditTool({
             className={`w-full sm:w-auto px-6 py-3 rounded-xl font-medium transition-all text-sm sm:text-base min-w-[140px] ${
               isLoading || !websiteUrl.trim()
                 ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
+                : shouldHighlightButton
+                ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-xl animate-pulse ring-4 ring-orange-300'
                 : 'bg-[#081B8B] hover:bg-[#061559] text-white shadow-lg hover:shadow-xl'
             }`}
           >

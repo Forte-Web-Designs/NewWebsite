@@ -134,7 +134,7 @@ export default function Header() {
   // Dropdown items for Solutions section (reorganized)
   const solutionsDropdownItems = [
     { label: 'Forte Solutions', href: '/solutions' },
-    { label: 'Free Site Checkup', href: '/solutions/seotool' },
+    { label: 'Free Forte SiteCheckup™', href: '/solutions/seotool' },
     { label: 'Forte Care™', href: '/solutions/care' },
     { label: 'Forte Guarantee™', href: '/solutions/guarantee' },
     { label: 'The Forte Method™', href: '/solutions/method' },
@@ -567,7 +567,7 @@ export default function Header() {
                   >
                     <div className="pl-6 space-y-3">
                       {[
-                        { href: '/solutions/seotool', text: 'Free Site Checkup' },
+                        { href: '/solutions/seotool', text: 'Free Forte SiteCheckup™' },
                         { href: '/solutions/care', text: 'Forte Care™' },
                         { href: '/solutions/guarantee', text: 'Forte Guarantee™' },
                         { href: '/solutions/method', text: 'The Forte Method™' }
