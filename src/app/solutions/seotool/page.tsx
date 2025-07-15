@@ -154,15 +154,24 @@ function SiteCheckUpContent() {
             setShowMiniAuditWelcome(false);
           }, 5000);
         } else {
-          // On mobile, auto-scroll to audit section instead of showing popup
+          // On mobile, auto-scroll to audit section and highlight button prominently
           setTimeout(() => {
             if (auditToolRef.current) {
+              // Scroll to center the audit tool in view
               auditToolRef.current.scrollIntoView({ 
                 behavior: 'smooth', 
-                block: 'start' 
+                block: 'center' 
               });
+              
+              // Highlight the run audit button with extra emphasis
+              setShouldHighlightButton(true);
+              
+              // Keep highlighting longer on mobile to ensure user sees it
+              setTimeout(() => {
+                setShouldHighlightButton(false);
+              }, 8000); // 8 seconds instead of 3
             }
-          }, 1000);
+          }, 800); // Shorter delay for faster experience
         }
         
         // Enhanced mobile auto-run with multiple fallback mechanisms

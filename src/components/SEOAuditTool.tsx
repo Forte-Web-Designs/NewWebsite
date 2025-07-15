@@ -192,12 +192,43 @@ export default function SEOAuditTool({
 
   return (
     <div ref={auditToolRef} className="w-full max-w-4xl mx-auto px-4 sm:px-6">
+      {/* Mobile Instructions Banner - Only show when button should be highlighted */}
+      {shouldHighlightButton && (
+        <div className="lg:hidden block mb-6 p-4 bg-gradient-to-r from-orange-500/20 to-red-500/20 rounded-xl border-2 border-orange-400/50 animate-pulse">
+          <div className="text-center">
+            <div className="text-orange-300 font-bold text-lg mb-2">
+              👆 Almost There! One More Step 👆
+            </div>
+            <div className="text-white font-medium text-base mb-3">
+              Your website URL is pre-filled! Now press the orange "Run Audit" button below to start your free analysis.
+            </div>
+            <div className="text-orange-200 text-sm">
+              ⏱️ The audit doesn't start automatically on mobile - you need to press the button!
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Website Audit Tool - Mobile Optimized */}
       <div className="flex flex-col gap-4 border border-[#FFFFFF14] rounded-xl p-4 sm:p-6 bg-gradient-to-r from-[#081B8B]/20 to-[#3448BF]/20">
         {/* Header - Both Desktop and Mobile Analysis */}
         <div className="text-center">
-          <h3 className="text-white font-medium text-lg mb-2">Complete Website Analysis</h3>
-          <p className="text-white/80 text-sm">We'll analyze both desktop and mobile performance for a complete picture</p>
+          <h3 className="text-white font-medium text-lg mb-2">
+            <span className="sm:hidden">
+              {shouldHighlightButton ? "Your Free Checkup Starts Here! 👆" : "Complete Website Analysis"}
+            </span>
+            <span className="hidden sm:inline">
+              Complete Website Analysis
+            </span>
+          </h3>
+          <p className="text-white/80 text-sm">
+            <span className="sm:hidden">
+              {shouldHighlightButton ? "Your URL is ready - just press the orange button below to begin!" : "We'll analyze both desktop and mobile performance for a complete picture"}
+            </span>
+            <span className="hidden sm:inline">
+              We'll analyze both desktop and mobile performance for a complete picture
+            </span>
+          </p>
         </div>
 
         {/* Input and Button Section - Stacked on Mobile */}
@@ -227,7 +258,7 @@ export default function SEOAuditTool({
               isLoading || !websiteUrl.trim()
                 ? 'bg-gray-600 text-gray-400 cursor-not-allowed'
                 : shouldHighlightButton
-                ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-xl animate-pulse ring-4 ring-orange-300'
+                ? 'bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-2xl animate-pulse ring-4 ring-orange-300 scale-105 font-bold text-lg'
                 : 'bg-[#081B8B] hover:bg-[#061559] text-white shadow-lg hover:shadow-xl'
             }`}
           >
@@ -235,6 +266,10 @@ export default function SEOAuditTool({
               <div className="flex items-center justify-center gap-2">
                 <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
                 <span>Analyzing...</span>
+              </div>
+            ) : shouldHighlightButton ? (
+              <div className="flex items-center justify-center gap-2">
+                <span>🚀 START MY FREE AUDIT</span>
               </div>
             ) : (
               'Run Audit'

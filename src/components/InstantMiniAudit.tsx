@@ -546,8 +546,16 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                 
                 <div className="text-xs text-white/70 mt-3 space-y-1">
                   {isNavigating ? (
-                    <div className="text-green-300">
-                      🚀 <strong>Starting comprehensive analysis... Results will appear on the page below!</strong>
+                    <div className="text-green-300 space-y-1">
+                      <div className="font-semibold">
+                        🚀 <strong>Starting comprehensive analysis...</strong>
+                      </div>
+                      <div className="sm:hidden text-orange-200 bg-orange-500/20 rounded-lg p-2 border border-orange-400/30">
+                        📱 <strong>Mobile Tip:</strong> You'll need to press "Run Audit" when the page loads!
+                      </div>
+                      <div className="hidden sm:block">
+                        Results will appear automatically on the page below!
+                      </div>
                     </div>
                   ) : (
                     <>
