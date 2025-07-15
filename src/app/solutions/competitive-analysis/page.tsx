@@ -12,29 +12,29 @@ const caseStudies = [
     industry: "SaaS",
     initialScore: "9/10",
     improvement: "+127% organic traffic",
-    challenge: "Despite perfect technical scores, they were losing market share to competitors",
-    solution: "Identified 3 competitor strategies they weren't using",
-    results: "Reclaimed #1 rankings for 15 high-value keywords",
+    challenge: "Despite near-perfect technical SEO, TechCorp Solutions was steadily losing market share to aggressive SaaS competitors.",
+    solution: "Conducted a deep competitive analysis, uncovering three high-impact strategies their rivals were using (including targeted content clusters and advanced link-building).",
+    results: "Reclaimed the #1 Google ranking for 15 high-value SaaS keywords, driving a 127% increase in organic traffic and restoring their industry leadership.",
     timeframe: "6 months"
   },
   {
-    company: "Elite Marketing Agency",
-    industry: "Digital Marketing",
+    company: "BluePeak Digital",
+    industry: "Digital Marketing Agency",
     initialScore: "8/10",
     improvement: "+89% lead quality",
-    challenge: "High SEO scores but low conversion rates",
-    solution: "Competitive content gaps and advanced schema implementation",
-    results: "Doubled qualified leads while maintaining top rankings",
+    challenge: "BluePeak Digital had strong SEO scores but struggled with low conversion rates and underperforming lead quality.",
+    solution: "Identified competitive content gaps and implemented advanced schema markup, improving both visibility and user engagement.",
+    results: "Doubled the number of qualified leads while maintaining top search rankings, resulting in a significant boost in high-value client acquisitions.",
     timeframe: "4 months"
   },
   {
-    company: "Premium E-commerce Store",
-    industry: "Retail",
+    company: "Luxora Home",
+    industry: "Premium E-commerce (Home & Lifestyle)",
     initialScore: "9/10",
     improvement: "+203% revenue",
-    challenge: "Perfect site performance but competitors stealing customers",
-    solution: "Advanced competitive intelligence and strategic positioning",
-    results: "Outranked 3 major competitors for commercial keywords",
+    challenge: "Luxora Home’s site was technically flawless, but they were losing customers to larger, established competitors.",
+    solution: "Leveraged advanced competitive intelligence and strategic brand positioning to target commercial-intent keywords and optimize product landing pages.",
+    results: "Outranked three major retail competitors for high-converting keywords, resulting in a 203% increase in online revenue and a surge in new customer acquisition.",
     timeframe: "8 months"
   }
 ];

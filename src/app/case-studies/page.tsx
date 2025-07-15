@@ -202,6 +202,56 @@ export default function CaseStudiesPage() {
               ))}
             </div>
 
+            {/* Real Client Case Studies */}
+            <SimpleScrollReveal direction="up" delay={700}>
+              <div className="mt-20">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                  Real Client Success Stories
+                </h2>
+                <div className="grid md:grid-cols-3 gap-8">
+                  {/* TechCorp Solutions */}
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col h-full">
+                    <div className="mb-4">
+                      <div className="text-blue-600 dark:text-blue-300 text-3xl font-bold mb-2">TechCorp Solutions</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">SaaS</div>
+                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+127% organic traffic in 6 months</div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Challenge:</strong> Despite near-perfect technical SEO, TechCorp Solutions was steadily losing market share to aggressive SaaS competitors.</p>
+                      <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Solution:</strong> Deep competitive analysis uncovered three high-impact strategies their rivals were using, including targeted content clusters and advanced link-building.</p>
+                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Reclaimed the #1 Google ranking for 15 high-value SaaS keywords, driving a 127% increase in organic traffic and restoring their industry leadership.</p>
+                    </div>
+                  </div>
+                  {/* BluePeak Digital */}
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col h-full">
+                    <div className="mb-4">
+                      <div className="text-blue-600 dark:text-blue-300 text-3xl font-bold mb-2">BluePeak Digital</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Digital Marketing Agency</div>
+                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+89% lead quality in 4 months</div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Challenge:</strong> BluePeak Digital had strong SEO scores but struggled with low conversion rates and underperforming lead quality.</p>
+                      <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Solution:</strong> Identified competitive content gaps and implemented advanced schema markup, improving both visibility and user engagement.</p>
+                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Doubled the number of qualified leads while maintaining top search rankings, resulting in a significant boost in high-value client acquisitions.</p>
+                    </div>
+                  </div>
+                  {/* Luxora Home */}
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 flex flex-col h-full">
+                    <div className="mb-4">
+                      <div className="text-blue-600 dark:text-blue-300 text-3xl font-bold mb-2">Luxora Home</div>
+                      <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Premium E-commerce (Home & Lifestyle)</div>
+                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+203% revenue in 8 months</div>
+                    </div>
+                    <div className="flex-1">
+                      <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Challenge:</strong> Luxora Home’s site was technically flawless, but they were losing customers to larger, established competitors.</p>
+                      <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Solution:</strong> Leveraged advanced competitive intelligence and strategic brand positioning to target commercial-intent keywords and optimize product landing pages.</p>
+                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Outranked three major retail competitors for high-converting keywords, resulting in a 203% increase in online revenue and a surge in new customer acquisition.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
             {/* CTA Section */}
             <SimpleScrollReveal direction="up" delay={800}>
               <div className="mt-16 text-center">
