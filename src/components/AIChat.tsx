@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from 'react';
+import Link from 'next/link';
 
 interface Message {
   id: string;
@@ -48,6 +49,60 @@ const AIChat = () => {
   const companyFieldRef = useRef<HTMLInputElement>(null);
   const serviceFieldRef = useRef<HTMLSelectElement>(null);
   const messageFieldRef = useRef<HTMLTextAreaElement>(null);
+
+  // Function to parse markdown-style links in messages
+  const parseMessageWithLinks = (content: string) => {
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+    const parts = [];
+    let lastIndex = 0;
+    let match;
+
+    while ((match = linkRegex.exec(content)) !== null) {
+      // Add text before the link
+      if (match.index > lastIndex) {
+        parts.push(content.substring(lastIndex, match.index));
+      }
+      
+      // Add the link
+      const linkText = match[1];
+      const linkUrl = match[2];
+      const isExternal = linkUrl.startsWith('http');
+      
+      if (isExternal) {
+        parts.push(
+          <a
+            key={match.index}
+            href={linkUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline font-semibold transition-colors duration-200"
+          >
+            {linkText}
+          </a>
+        );
+      } else {
+        parts.push(
+          <Link
+            key={match.index}
+            href={linkUrl}
+            className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 underline font-semibold transition-colors duration-200"
+            onClick={() => setIsOpen(false)} // Close chat when clicking internal links
+          >
+            {linkText}
+          </Link>
+        );
+      }
+      
+      lastIndex = linkRegex.lastIndex;
+    }
+    
+    // Add remaining text
+    if (lastIndex < content.length) {
+      parts.push(content.substring(lastIndex));
+    }
+    
+    return parts.length > 0 ? parts : content;
+  };
 
   const scrollToLatestMessage = () => {
     // Scroll to the top of the latest message so users can read from the beginning
@@ -206,22 +261,22 @@ const AIChat = () => {
 
     // Pricing questions
     if (msg.includes('price') || msg.includes('cost') || msg.includes('how much') || msg.includes('pricing') || msg.includes('expensive') || msg.includes('cheap') || msg.includes('affordable')) {
-      return "Great question! 💰 Here's the thing - most clients actually SAVE money working with us.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost other agencies charge $5k+ upfront. We keep it simple and affordable. Want to chat about what would work for your business?";
+      return "Great question! 💰 Here's the thing - most clients actually SAVE money working with us.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost other agencies charge $5k+ upfront. We keep it simple and affordable.\n\n[💬 Want to discuss pricing for your specific needs? Contact us here](/contact)";
     }
 
     // Timeline/process questions  
     if (msg.includes('how long') || msg.includes('timeline') || msg.includes('process') || msg.includes('method') || msg.includes('time') || msg.includes('quick') || msg.includes('fast') || msg.includes('when')) {
-      return "I know you're probably eager to get started! ⚡\n\nHere's our typical timeline:\n• Week 1: We chat about your vision and create mockups\n• Week 2-3: We build your custom website\n• Week 4: You test everything and we launch together\n\nThe best part? You're involved every step of the way with unlimited revisions until it's perfect.\n\nMost clients are amazed how smooth the process is. Ready to get the ball rolling?";
+      return "I know you're probably eager to get started! ⚡\n\nHere's our typical timeline:\n• Week 1: We chat about your vision and create mockups\n• Week 2-3: We build your custom website\n• Week 4: You test everything and we launch together\n\nThe best part? You're involved every step of the way with unlimited revisions until it's perfect.\n\nMost clients are amazed how smooth the process is.\n\n[🚀 Ready to get the ball rolling? Contact us here](/contact)";
     }
 
     // Services questions
     if (msg.includes('service') || msg.includes('what do you do') || msg.includes('help') || msg.includes('offer') || msg.includes('seo') || msg.includes('google') || msg.includes('ranking')) {
-      return "We're basically your one-stop shop for getting more customers online! 🎯\n\nHere's how we help businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (our specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost clients see more leads within the first month. What's your biggest challenge right now - getting found online or converting visitors?";
+      return "We're basically your one-stop shop for getting more customers online! 🎯\n\nHere's how we help businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (our specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost clients see more leads within the first month.\n\n[📋 See all our services here](/services)\n[💬 Let's discuss your biggest challenge - contact us here](/contact)";
     }
 
     // ROI/Results questions
-    if (msg.includes('results') || msg.includes('roi') || msg.includes('return') || msg.includes('worth it') || msg.includes('work') || msg.includes('effective')) {
-      return "Love that you're asking about results! 📈 That's exactly how we think too.\n\nHere's what our clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty. Want to see how this could work for you?";
+    if (msg.includes('results') || msg.includes('roi') || msg.includes('return') || msg.includes('worth it') || msg.includes('effective')) {
+      return "Love that you're asking about results! 📈 That's exactly how we think too.\n\nHere's what our clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty.\n\n[📞 Ready to discuss your goals? Contact us here](/contact)";
     }
 
     // Contact/meeting questions
@@ -231,46 +286,46 @@ const AIChat = () => {
 
     // Business growth questions
     if (msg.includes('business') || msg.includes('grow') || msg.includes('more customers') || msg.includes('sales') || msg.includes('leads') || msg.includes('traffic') || msg.includes('forte web designs')) {
-      return "Now we're talking! 🚀 Growing businesses online is exactly what we do.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nWe fix all of that. Our websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\nWhat's your biggest frustration with your current online presence?";
+      return "Now we're talking! 🚀 Growing businesses online is exactly what we do.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nWe fix all of that. Our websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\n[📞 Let's talk about your growth goals - contact us here](/contact)";
     }
 
     // Website questions
     if (msg.includes('website') || msg.includes('site') || msg.includes('web') || msg.includes('design') || msg.includes('redesign') || msg.includes('new site') || msg.includes('forte web designs')) {
-      return "Perfect! 🎨 Here's why our websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - we don't just build pretty websites. We build websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\nWant to see some examples of websites that are actually working for our clients?";
+      return "Perfect! 🎨 Here's why our websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - we don't just build pretty websites. We build websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\n[🎯 See examples of our work here](/about/work)\n[📞 Ready to get started? Contact us here](/contact)";
     }
 
     // Examples/work questions
     if (msg.includes('example') || msg.includes('work') || msg.includes('portfolio') || msg.includes('case stud') || msg.includes('see your') || msg.includes('show me')) {
-      return "I'd love to show you! 🎨 We've helped all kinds of businesses:\n\n• A local HVAC company went from 3 to 30+ leads per month\n• A law firm doubled their client inquiries in 4 months\n• A landscaping business increased revenue 150% in 6 months\n• An accounting firm got to page 1 of Google for their main keywords\n\nEach website is completely custom-built for the specific business and their goals. No templates, no shortcuts.\n\nWhat type of business are you in? I can share more specific examples that might relate to your industry!";
+      return "I'd love to show you! 🎨 Here are some real websites we've built that are driving results:\n\n• **The Southern Landscape Firm** - Custom landscaping site with lead generation\n• **Local HVAC company** - Went from 3 to 30+ leads per month\n• **Law firm** - Doubled their client inquiries in 4 months\n• **Landscaping business** - Increased revenue 150% in 6 months\n• **Accounting firm** - Got to page 1 of Google for main keywords\n\n[🎯 See our complete portfolio here](/about/work)\n\nEach website is completely custom-built for the specific business and their goals. No templates, no shortcuts.\n\n[📞 Want to discuss your project? Contact us here](/contact)";
     }
 
     // Location/local questions
     if (msg.includes('location') || msg.includes('where') || msg.includes('local') || msg.includes('area') || msg.includes('texas')) {
-      return "We're based in Texas but work with businesses nationwide! 🏠\n\nHonestly, some of our best clients are hundreds of miles away. Everything happens through video calls, screen shares, and email.\n\nThe beauty of web design? Distance doesn't matter. Results do.\n\nPlus, we specialize in local SEO, so whether you're in Texas, New York, or anywhere in between, we can help you dominate your local market.\n\nWhere's your business located?";
+      return "We're based in Texas but work with businesses nationwide! 🏠\n\nHonestly, some of our best clients are hundreds of miles away. Everything happens through video calls, screen shares, and email.\n\nThe beauty of web design? Distance doesn't matter. Results do.\n\nPlus, we specialize in local SEO, so whether you're in Texas, New York, or anywhere in between, we can help you dominate your local market.\n\n[📞 Let's discuss your local market - contact us here](/contact)";
     }
 
     // Industry-specific questions
     if (msg.includes('industry') || msg.includes('type of business') || msg.includes('niche') || msg.includes('sector') || msg.includes('hvac') || msg.includes('restaurant') || msg.includes('law') || msg.includes('medical') || msg.includes('contractor') || msg.includes('retail')) {
-      return "Great question! 🏢 We work with all kinds of businesses, and honestly, that's our strength.\n\nSome recent successes:\n• HVAC contractors getting 20+ leads/month\n• Restaurants increasing online orders 3x\n• Law firms dominating local search\n• Medical practices filling schedules\n• Retail stores boosting online sales\n\nEvery industry has different needs, but the fundamentals are the same: get found on Google, look professional, convert visitors into customers.\n\nWhat type of business are you in? I'd love to share specific strategies for your industry!";
+      return "Great question! 🏢 We work with all kinds of businesses, and honestly, that's our strength.\n\nSome recent successes:\n• HVAC contractors getting 20+ leads/month\n• Restaurants increasing online orders 3x\n• Law firms dominating local search\n• Medical practices filling schedules\n• Retail stores boosting online sales\n\nEvery industry has different needs, but the fundamentals are the same: get found on Google, look professional, convert visitors into customers.\n\n[💼 Let's discuss strategies for your specific industry - contact us here](/contact)";
     }
 
     // Competitor/comparison questions
     if (msg.includes('different') || msg.includes('better') || msg.includes('why you') || msg.includes('why us') || msg.includes('why forte') || msg.includes('competitors') || msg.includes('other') || msg.includes('comparison') || msg.includes('choose forte')) {
-      return "Great question! 🤔 Here's what makes us different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nUs?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nWe're not just designers - we're business owners who understand what it takes to get customers online.\n\nWant to see the difference this makes?";
+      return "Great question! 🤔 Here's what makes us different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nUs?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nWe're not just designers - we're business owners who understand what it takes to get customers online.\n\n[🏆 Ready to see the difference? Contact us here](/contact)";
     }
 
     // Simple greetings
     if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || msg === 'good morning' || msg === 'good afternoon') {
-      return "Hey! 👋 Great to meet you! \n\nI'm Forte AI, Seth's digital assistant. Seth and the team help small businesses get more customers through websites that actually work.\n\nWhat's your business? Are you looking to get more leads, improve your online presence, or maybe starting something new?";
+      return "Hey! 👋 Great to meet you! \n\nI'm Forte AI, Seth's digital assistant. Seth and the team help small businesses get more customers through websites that actually work.\n\nI can help you learn about our services, see examples of our work, or get you connected with Seth for a free consultation.\n\n[📞 Ready to chat with Seth? Contact us here](/contact)";
     }
 
     // Thank you responses
     if (msg.includes('thank') || msg.includes('thanks')) {
-      return "You're so welcome! 😊 \n\nThat's what I'm here for - helping awesome business owners like you succeed online.\n\nAnything else I can help you with? Or ready to chat about how Seth can grow your business?";
+      return "You're so welcome! 😊 \n\nThat's what I'm here for - helping awesome business owners like you succeed online.\n\n[📞 Ready to take the next step? Contact us here](/contact)";
     }
 
     // Default helpful response
-    return "I love chatting with business owners! 💬\n\nWe can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\nWhat's your biggest challenge right now? Or what questions do you have about growing online?";
+    return "I love chatting with business owners! 💬\n\nWe can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\n[🎯 See examples of our work](/about/work)\n[📋 Learn about all our services](/services)\n[📞 Ready to discuss your project? Contact us here](/contact)";
   };
 
   const sendMessage = async (messageContent: string) => {
@@ -500,7 +555,9 @@ const AIChat = () => {
                       : 'bg-gray-50 dark:bg-gray-800 text-gray-900 dark:text-gray-100 mr-4 border border-gray-100 dark:border-gray-700'
                   }`}
                 >
-                  <p className="text-sm lg:text-base whitespace-pre-line leading-relaxed font-medium">{message.content}</p>
+                  <p className="text-sm lg:text-base whitespace-pre-line leading-relaxed font-medium">
+                    {message.type === 'bot' ? parseMessageWithLinks(message.content) : message.content}
+                  </p>
                   <p className="text-xs opacity-70 mt-2 font-normal">
                     {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
                   </p>
