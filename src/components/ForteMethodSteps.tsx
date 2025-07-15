@@ -44,14 +44,14 @@ export default function ForteMethodSteps({
     if (isTransitioning) return; // Prevent multiple rapid transitions
     setIsTransitioning(true);
     setActiveStep((prev) => (prev + 1) % items.length);
-    setTimeout(() => setIsTransitioning(false), 500); // Match transition duration
+    setTimeout(() => setIsTransitioning(false), 300); // Shorter transition duration for smoother feel
   };
 
   const prevStep = () => {
     if (isTransitioning) return; // Prevent multiple rapid transitions
     setIsTransitioning(true);
     setActiveStep((prev) => (prev - 1 + items.length) % items.length);
-    setTimeout(() => setIsTransitioning(false), 500); // Match transition duration
+    setTimeout(() => setIsTransitioning(false), 300); // Shorter transition duration for smoother feel
   };
 
   const handleTouchStart = (e: React.TouchEvent) => {
@@ -149,7 +149,7 @@ export default function ForteMethodSteps({
                 
                 {/* Step Content */}
                 <div className="flex-1 flex flex-col justify-center items-center text-center px-2">
-                  <div className={`transition-all duration-500 ease-in-out ${isTransitioning ? 'opacity-0 transform scale-95' : 'opacity-100 transform scale-100'}`}>
+                  <div className={`transition-all duration-300 ease-out ${isTransitioning ? 'opacity-0' : 'opacity-100'}`}>
                     <div className="mb-6 sm:mb-8">
                       <div className="relative inline-block">
                         <div className="absolute -inset-2 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full blur opacity-30 animate-pulse"></div>
@@ -159,7 +159,7 @@ export default function ForteMethodSteps({
                             alt={items[activeStep]?.title}
                             width={48}
                             height={48}
-                            className="w-8 h-8 sm:w-12 sm:h-12 mx-auto transition-all duration-500 ease-in-out"
+                            className="w-8 h-8 sm:w-12 sm:h-12 mx-auto transition-all duration-300 ease-out"
                             priority
                           />
                         </div>
@@ -168,7 +168,7 @@ export default function ForteMethodSteps({
                         </div>
                       </div>
                     </div>
-                    <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 transition-all duration-500 ease-in-out">
+                    <h4 className="text-lg sm:text-xl lg:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 transition-all duration-300 ease-out">
                       {items[activeStep]?.title}
                     </h4>
                     {items[activeStep]?.tagline && (
@@ -178,7 +178,7 @@ export default function ForteMethodSteps({
                         </span>
                       </div>
                     )}
-                    <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md transition-all duration-500 ease-in-out">
+                    <p className="text-gray-600 dark:text-gray-400 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md transition-all duration-300 ease-out">
                       {items[activeStep]?.description}
                     </p>
                   </div>

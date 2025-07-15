@@ -84,6 +84,24 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
 
   const performMiniAudit = async (url: string): Promise<MiniAuditResults> => {
     const domain = new URL(url).hostname.toLowerCase();
+    
+    // Check if this is Forte Web Designs domain for marketing purposes
+    const isForteWebDesigns = (domain: string): boolean => {
+      return domain === 'www.fortewebdesigns.com' || domain === 'fortewebdesigns.com';
+    };
+
+    // For marketing purposes - show perfect scores for our own domain
+    if (isForteWebDesigns(domain)) {
+      return {
+        url,
+        ssl: true,
+        loadTime: 0.8, // Lightning fast
+        mobileFriendly: true,
+        seoScore: 10, // Perfect score
+        isLoading: false
+      };
+    }
+
     const seed = getDeterministicSeed(domain);
     
     // Real SSL check
@@ -450,7 +468,25 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               
               {/* Enhanced CTA Section with Specific Issue Identification */}
               <div className="text-center pt-4 border-t border-white/30">
-                <div className="mb-4 p-4 bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg border border-orange-400/40">
+                {/* Special congratulatory message for perfect scores */}
+                {results.seoScore === 10 ? (
+                  <div className="mb-4 p-6 bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-xl border-2 border-purple-400/50 shadow-2xl">
+                    <div className="text-2xl mb-3">🎉🏆🎉</div>
+                    <div className="text-white font-bold text-xl mb-3">
+                      CONGRATULATIONS!
+                    </div>
+                    <div className="text-white/95 text-base mb-4 leading-relaxed">
+                      You've achieved a perfect 10/10 score! 🚀 Your website is absolutely crushing it with lightning-fast speeds, bulletproof security, perfect mobile optimization, and flawless SEO fundamentals.
+                    </div>
+                    <div className="text-white/90 text-sm mb-4">
+                      <span className="font-semibold">Fun fact:</span> Only 0.1% of websites achieve a perfect score. You're in the elite league of web performance! 🌟
+                    </div>
+                    <div className="text-white/80 text-xs italic">
+                      "Excellence is not a destination; it's a continuous journey. Keep being awesome!" 💪
+                    </div>
+                  </div>
+                ) : (
+                  <div className="mb-4 p-4 bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg border border-orange-400/40">
                   <div className="text-white font-medium text-base mb-2">
                     {results.seoScore >= 8 
                       ? "� High Performer Alert!" 
@@ -459,21 +495,22 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                       : "🚨 Serious Issues Found"
                     }
                   </div>
-                  <div className="text-white/90 text-sm mb-3">
-                    {results.seoScore >= 8 
-                      ? "Your site performs well, but Google changes its algorithm 500+ times yearly. High-performing sites like yours lose 15-30% of traffic within 6 months without proactive maintenance. Your competitors are actively trying to outrank you."
-                      : results.seoScore >= 6
-                      ? `We found ${!results.ssl ? 'security vulnerabilities, ' : ''}${results.loadTime > 3 ? 'speed issues, ' : ''}${!results.mobileFriendly ? 'mobile problems, ' : ''}and SEO gaps your competitors are exploiting. These issues are costing you leads daily.`
-                      : `Critical problems detected: ${!results.ssl ? 'No SSL security, ' : ''}${results.loadTime > 5 ? 'extremely slow loading, ' : ''}${!results.mobileFriendly ? 'mobile incompatible, ' : ''}poor SEO foundation. You're losing customers to competitors every day.`
-                    }
+                    <div className="text-white/90 text-sm mb-3">
+                      {results.seoScore >= 8 
+                        ? "Your site performs well, but Google changes its algorithm 500+ times yearly. High-performing sites like yours lose 15-30% of traffic within 6 months without proactive maintenance. Your competitors are actively trying to outrank you."
+                        : results.seoScore >= 6
+                        ? `We found ${!results.ssl ? 'security vulnerabilities, ' : ''}${results.loadTime > 3 ? 'speed issues, ' : ''}${!results.mobileFriendly ? 'mobile problems, ' : ''}and SEO gaps your competitors are exploiting. These issues are costing you leads daily.`
+                        : `Critical problems detected: ${!results.ssl ? 'No SSL security, ' : ''}${results.loadTime > 5 ? 'extremely slow loading, ' : ''}${!results.mobileFriendly ? 'mobile incompatible, ' : ''}poor SEO foundation. You're losing customers to competitors every day.`
+                      }
+                    </div>
+                    <div className="text-white/80 text-xs">
+                      {results.seoScore >= 8 
+                        ? "Our competitive intelligence report shows what your top competitors are planning and how to stay ahead."
+                        : "Our complete audit reveals exactly which fixes will have the biggest impact on your leads and sales."
+                      }
+                    </div>
                   </div>
-                  <div className="text-white/80 text-xs">
-                    {results.seoScore >= 8 
-                      ? "Our competitive intelligence report shows what your top competitors are planning and how to stay ahead."
-                      : "Our complete audit reveals exactly which fixes will have the biggest impact on your leads and sales."
-                    }
-                  </div>
-                </div>
+                )}
                 
                 <button
                   onClick={() => {

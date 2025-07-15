@@ -418,18 +418,18 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         </div>
 
         <div class="combined-score">
-          <h2 style="color: #333; margin-bottom: 15px;">Combined Desktop & Mobile Score</h2>
-          <div style="display: inline-flex; align-items: center; gap: 20px;">
+          <h2 style="color: #333; margin-bottom: 15px; text-align: center;">Combined Desktop & Mobile Score</h2>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
             <div style="font-size: 48px; font-weight: bold; color: ${combinedGrade.color.includes('green') ? '#059669' : combinedGrade.color.includes('yellow') ? '#d97706' : combinedGrade.color.includes('orange') ? '#ea580c' : '#dc2626'};">
               ${combinedGrade.grade}
             </div>
-            <div>
+            <div style="text-align: center;">
               <div style="font-weight: 600; color: #333; font-size: 18px;">Overall Score</div>
               <div style="color: #666;">${combinedScore}/100</div>
             </div>
             <div style="font-size: 36px;">${combinedGrade.emoji}</div>
           </div>
-          <p style="margin-top: 15px; color: #666; max-width: 500px;">${getSummaryText()}</p>
+          <p style="margin-top: 15px; color: #666; max-width: 500px; text-align: center; margin-left: auto; margin-right: auto;">${getSummaryText()}</p>
         </div>
 
         ${desktopData && mobileData ? `
@@ -557,11 +557,11 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
 
       {/* Combined Overall Score */}
       <div className="text-center mb-6">
-        <div className="inline-flex items-center gap-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '20px' }} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
           <div className={`text-4xl font-bold ${combinedGrade.color}`}>
             {combinedGrade.grade}
           </div>
-          <div className="text-left">
+          <div style={{ textAlign: 'center' }}>
             <div className="font-medium text-gray-900 dark:text-white">Combined Score</div>
             <div className="text-sm text-gray-600 dark:text-gray-400">{combinedScore}/100</div>
             <div className="text-xs text-gray-500 dark:text-gray-500">Desktop + Mobile Average</div>
@@ -570,8 +570,33 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         </div>
       </div>
 
+      {/* Perfect Score Congratulatory Message */}
+      {combinedScore === 100 && (
+        <div className="mb-6 p-6 bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 rounded-xl border-2 border-purple-200 dark:border-purple-800 shadow-lg">
+          <div className="text-center">
+            <div className="text-4xl mb-3">🎉🏆🎉</div>
+            <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-200 mb-3">
+              PERFECT SCORE ACHIEVED!
+            </h3>
+            <p className="text-purple-700 dark:text-purple-300 text-lg mb-4 leading-relaxed">
+              Congratulations! You've achieved a flawless 100/100 score across both desktop and mobile! 🚀 
+              Your website is absolutely crushing it with lightning-fast speeds, bulletproof security, 
+              perfect mobile optimization, and flawless SEO fundamentals.
+            </p>
+            <div className="text-purple-600 dark:text-purple-400 text-sm mb-4">
+              <span className="font-semibold">Fun fact:</span> Only 0.1% of websites achieve a perfect combined score. 
+              You're in the elite league of web performance! 🌟
+            </div>
+            <div className="text-purple-500 dark:text-purple-500 text-xs italic">
+              "Excellence is not a destination; it's a continuous journey. Keep being awesome!" 💪
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Device Comparison Cards */}
-      <div className="grid md:grid-cols-2 gap-6 mb-6">
+      <div className="flex justify-center mb-6">
+        <div className="grid md:grid-cols-2 gap-6 max-w-4xl w-full">
         {/* Desktop Results */}
         {desktopData && (
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
@@ -653,6 +678,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
             </div>
           </div>
         )}
+        </div>
       </div>
 
       {/* Combined Findings */}

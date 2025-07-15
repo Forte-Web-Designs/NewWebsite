@@ -142,12 +142,28 @@ function SiteCheckUpContent() {
       
       // If autorun is true, show welcome message and trigger the audit
       if (autorunParam === 'true') {
-        setShowMiniAuditWelcome(true);
+        // Check if this is a mobile device
+        const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
         
-        // Hide welcome message after 5 seconds
-        setTimeout(() => {
-          setShowMiniAuditWelcome(false);
-        }, 5000);
+        // Only show welcome popup on desktop, not on mobile
+        if (!isMobileDevice) {
+          setShowMiniAuditWelcome(true);
+          
+          // Hide welcome message after 5 seconds
+          setTimeout(() => {
+            setShowMiniAuditWelcome(false);
+          }, 5000);
+        } else {
+          // On mobile, auto-scroll to audit section instead of showing popup
+          setTimeout(() => {
+            if (auditToolRef.current) {
+              auditToolRef.current.scrollIntoView({ 
+                behavior: 'smooth', 
+                block: 'start' 
+              });
+            }
+          }, 1000);
+        }
         
         // Enhanced mobile auto-run with multiple fallback mechanisms
         const isMobile = /Mobi|Android/i.test(navigator.userAgent);
