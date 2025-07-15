@@ -213,10 +213,10 @@ export default function Home() {
   ];
 
   const sliderImages = [
-    { id: 1, src: "/images/home/slider1.png" },
-    { id: 2, src: "/images/home/slider2.png" },
-    { id: 3, src: "/images/home/slider3.png" },
-    { id: 4, src: "/images/home/slider4.png" },
+    { id: 1, src: "/images/home/slider1.webp" },
+    { id: 2, src: "/images/home/slider2.webp" },
+    { id: 3, src: "/images/home/slider3.webp" },
+    { id: 4, src: "/images/home/slider4.webp" },
   ];
 
   // Update slider settings to be more responsive

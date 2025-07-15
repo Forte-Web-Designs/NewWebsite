@@ -26,6 +26,12 @@ function getOptimizedImageSrc(src: string): string {
   if (src.includes('/images/home/slider') && src.endsWith('.png')) {
     return src.replace('.png', '.webp');
   }
+  
+  // Also check for contact form background
+  if (src.includes('contact-form-bg.png')) {
+    return src.replace('.png', '.webp');
+  }
+  
   return src;
 }
 
@@ -88,7 +94,12 @@ export function OptimizedImage({
       placeholder={placeholder}
       blurDataURL={blurDataURL}
       className={className}
-      style={{ objectFit, ...style }}
+      style={{ 
+        objectFit, 
+        // Ensure proper aspect ratio to prevent layout shift
+        aspectRatio: width && height ? `${width}/${height}` : undefined,
+        ...style 
+      }}
       {...props}
     />
   );

@@ -13,6 +13,9 @@ const nextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Optimize for better CLS
+    minimumCacheTTL: 31536000, // 1 year cache
+    loader: 'default',
   },
   
   compiler: {
@@ -40,7 +43,7 @@ const nextConfig = {
       config.optimization.splitChunks = {
         chunks: 'all',
         minSize: 20000,
-        maxSize: 250000,
+        maxSize: 200000, // Reduce max size for better chunking
         cacheGroups: {
           vendor: {
             test: /[\\/]node_modules[\\/]/,
@@ -62,6 +65,13 @@ const nextConfig = {
             chunks: 'all',
             priority: 15,
           },
+          // Separate large libraries
+          icons: {
+            test: /[\\/]node_modules[\\/]react-icons[\\/]/,
+            name: 'icons',
+            chunks: 'all',
+            priority: 12,
+          },
         },
       };
       
@@ -69,8 +79,15 @@ const nextConfig = {
       config.optimization.usedExports = true;
       config.optimization.sideEffects = false;
       
-      // Minimize CSS
+      // Minimize CSS and JS more aggressively
       config.optimization.minimize = true;
+      
+      // Additional optimizations for bundle size
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        // Replace moment with smaller alternatives if used
+        'moment': 'dayjs',
+      };
     }
     
     // Development optimizations

@@ -147,7 +147,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           <div
             className="absolute inset-0 bg-cover bg-no-repeat bg-left z-0"
             style={{
-              backgroundImage: "url('/images/contactForm/contact-form-bg.png')",
+              backgroundImage: "url('/images/contactForm/contact-form-bg.webp')",
             }}
           />
 

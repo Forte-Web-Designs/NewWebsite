@@ -11,6 +11,7 @@
     font-family: 'slick';
     font-weight: normal;
     font-style: normal;
+    font-display: swap; /* Optimize font loading for better performance */
 
     src: url('./fonts/slick.eot');
     src: url('./fonts/slick.eot?#iefix') format('embedded-opentype'), url('./fonts/slick.woff') format('woff'), url('./fonts/slick.ttf') format('truetype'), url('./fonts/slick.svg#slick') format('svg');
@@ -66,7 +67,7 @@
 .slick-prev:before,
 .slick-next:before
 {
-    font-family: 'slick';
+    font-family: system-ui, -apple-system, sans-serif; /* Use system fonts instead of custom font */
     font-size: 20px;
     line-height: 1;
 
@@ -177,7 +178,7 @@
 }
 .slick-dots li button:before
 {
-    font-family: 'slick';
+    font-family: system-ui, -apple-system, sans-serif; /* Use system fonts instead of custom font */
     font-size: 6px;
     line-height: 20px;
 
