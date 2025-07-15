@@ -157,13 +157,21 @@ export default function Header() {
               <div className="flex items-center justify-between">
               {/* Desktop Logo - Hidden on mobile */}
               <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
-                <OptimizedImage
+                <img
                   src="/images/home/logo2.png"
-                  alt="Forte Logo"
-                  width={120}
-                  height={36}
-                  className="block"
-                  priority
+                  alt="Forte Logo (Light Mode)"
+                  style={{ display: 'block' }}
+                  className="block dark:hidden"
+                  height={48}
+                  // Remove width/height if you want natural scaling, or set to your original values
+                />
+                <img
+                  src="/images/home/logo1.png"
+                  alt="Forte Logo (Dark Mode)"
+                  style={{ display: 'block' }}
+                  className="hidden dark:block"
+                  height={48}
+                  // Remove width/height if you want natural scaling, or set to your original values
                 />
               </Link>
 
@@ -272,21 +280,21 @@ export default function Header() {
             <div className="flex items-center justify-between">
             {/* Desktop Logo - Hidden on mobile */}
             <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
-              <OptimizedImage
+              <img
                 src="/images/home/logo2.png"
                 alt="Forte Logo (Light Mode)"
-                width={120}
-                height={36}
+                style={{ display: 'block' }}
                 className="block dark:hidden"
-                priority
+                height={48}
+                // Remove width/height if you want natural scaling, or set to your original values
               />
-              <OptimizedImage
+              <img
                 src="/images/home/logo1.png"
                 alt="Forte Logo (Dark Mode)"
-                width={120}
-                height={36}
+                style={{ display: 'block' }}
                 className="hidden dark:block"
-                priority
+                height={48}
+                // Remove width/height if you want natural scaling, or set to your original values
               />
             </Link>
 
