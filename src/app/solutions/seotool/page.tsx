@@ -94,6 +94,7 @@ function SiteCheckUpContent() {
   const [showMiniAuditWelcome, setShowMiniAuditWelcome] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
   const gradesRef = useRef<HTMLDivElement>(null);
+  const screenshotRef = useRef<HTMLDivElement>(null);
   const leftContent = [bottomData[2], bottomData[0]];
   const rightContent = [bottomData[1], bottomData[3]];
   const [isMobile, setIsMobile] = useState(false);
@@ -123,11 +124,26 @@ function SiteCheckUpContent() {
           setShowMiniAuditWelcome(false);
         }, 5000);
         
-        setTimeout(() => {
+        // Fixed mobile auto-run with longer delay and fallback mechanism
+        const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+        const delay = isMobile ? 2500 : 1500; // Longer delay for mobile
+        
+        const attemptAutoRun = () => {
           if (triggerAutoRun.current) {
+            console.log('🚀 Auto-triggering audit for mobile...');
             triggerAutoRun.current();
+          } else {
+            // Fallback: try again after another second
+            setTimeout(() => {
+              if (triggerAutoRun.current) {
+                console.log('🚀 Fallback auto-trigger successful');
+                triggerAutoRun.current();
+              }
+            }, 1000);
           }
-        }, 1000); // 1 second delay to ensure components are loaded
+        };
+        
+        setTimeout(attemptAutoRun, delay);
       }
     }
 
@@ -146,8 +162,8 @@ function SiteCheckUpContent() {
   };
 
   const scrollToResults = () => {
-    // Try to scroll to the grades section first, then fall back to results section
-    const targetRef = gradesRef.current || resultsRef.current;
+    // Prioritize screenshot section, then grades, then results as fallback
+    const targetRef = screenshotRef.current || gradesRef.current || resultsRef.current;
     
     if (targetRef) {
       // Add a delay to ensure results are fully rendered
@@ -158,11 +174,11 @@ function SiteCheckUpContent() {
           
           // Scroll to show the target section with some padding above
           window.scrollTo({
-            top: targetTop - 150, // 150px padding from top to show more context
+            top: targetTop - 100, // 100px padding from top to show the title clearly
             behavior: 'smooth'
           });
         }
-      }, 600); // Longer delay to ensure results are fully rendered
+      }, 800); // Longer delay to ensure screenshot is loaded
     }
   };
 
@@ -400,6 +416,7 @@ function SiteCheckUpContent() {
               auditedUrl={auditedUrl}
               selectedDevice={selectedDevice}
               gradesRef={gradesRef}
+              screenshotRef={screenshotRef}
             />
           </div>
         )}
