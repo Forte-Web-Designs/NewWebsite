@@ -74,7 +74,6 @@ const competitiveFactors = [
 
 function CompetitiveAnalysisContent() {
   const searchParams = useSearchParams();
-  const [selectedDevice, setSelectedDevice] = useState("Desktop");
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [auditResults, setAuditResults] = useState<any>(null);
   const [auditedUrl, setAuditedUrl] = useState("");
@@ -236,8 +235,6 @@ function CompetitiveAnalysisContent() {
             <SEOAuditTool
               websiteUrl={websiteUrl}
               setWebsiteUrl={setWebsiteUrl}
-              selectedDevice={selectedDevice}
-              setSelectedDevice={setSelectedDevice}
               onResultsUpdate={handleResultsUpdate}
               onResultsReady={scrollToResults}
             />
@@ -250,7 +247,6 @@ function CompetitiveAnalysisContent() {
             <SEOResults 
               results={auditResults} 
               auditedUrl={auditedUrl}
-              selectedDevice={selectedDevice}
             />
           </div>
         )}

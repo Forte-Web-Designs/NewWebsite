@@ -10,8 +10,6 @@ interface AuditResults {
 interface SEOAuditToolProps {
   websiteUrl: string;
   setWebsiteUrl: (url: string) => void;
-  selectedDevice: string;
-  setSelectedDevice: (device: string) => void;
   onResultsUpdate: (results: AuditResults | null, url: string) => void;
   onResultsReady?: () => void;
   setAutoRunTrigger?: (triggerFunction: () => void) => void;
@@ -20,8 +18,6 @@ interface SEOAuditToolProps {
 export default function SEOAuditTool({ 
   websiteUrl, 
   setWebsiteUrl, 
-  selectedDevice, 
-  setSelectedDevice,
   onResultsUpdate,
   onResultsReady,
   setAutoRunTrigger
@@ -32,20 +28,33 @@ export default function SEOAuditTool({
   // Register the runAudit function with the parent component for auto-run
   useEffect(() => {
     if (setAutoRunTrigger) {
-      setAutoRunTrigger(runAudit);
+      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // For mobile, add a small delay to ensure everything is ready
+        setTimeout(() => {
+          setAutoRunTrigger(runAudit);
+          console.log('📱 Mobile auto-run function registered');
+        }, 500);
+      } else {
+        setAutoRunTrigger(runAudit);
+        console.log('💻 Desktop auto-run function registered');
+      }
     }
   }, [setAutoRunTrigger]); // Removed websiteUrl dependency to avoid unnecessary re-registrations
 
   const loadingMessages = [
     "Checking your website's connection...",
-    "Analyzing how fast your site loads...",
+    "Analyzing desktop loading speed and performance...",
+    "Testing mobile responsiveness and speed...",
     "Reviewing your Google search visibility...",
     "Checking if your site is easy for everyone to use...",
+    "Comparing desktop vs mobile user experience...",
     "Looking for ways to help you get more leads and customers...",
     "Reviewing your images and content for best results...",
     "Checking for hidden issues that could cost you business...",
-    "Almost done—preparing your personalized results!",
-    "Still working... Large sites can take a little longer. Hang tight!"
+    "Almost done—preparing your personalized desktop & mobile results!",
+    "Still working... Comprehensive analysis takes a little longer. Hang tight!"
   ];
 
   const validateUrl = (url: string): string | null => {
@@ -68,6 +77,9 @@ export default function SEOAuditTool({
   };
 
   const runAudit = async () => {
+    const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+    console.log(`🚀 Running audit - Mobile: ${isMobile}, URL: ${websiteUrl}`);
+    
     const validatedUrl = validateUrl(websiteUrl);
     if (!validatedUrl) {
       alert('Please enter a valid website URL (e.g., example.com or https://example.com)');
@@ -152,33 +164,10 @@ export default function SEOAuditTool({
     <div className="w-full max-w-4xl mx-auto px-4 sm:px-6">
       {/* Website Audit Tool - Mobile Optimized */}
       <div className="flex flex-col gap-4 border border-[#FFFFFF14] rounded-xl p-4 sm:p-6 bg-gradient-to-r from-[#081B8B]/20 to-[#3448BF]/20">
-        {/* Toggle Buttons - Mobile Centered */}
-        <div className="flex justify-center">
-          <div className="flex bg-[#3448BF] rounded-xl p-1 border border-[#858585] w-fit">
-            <button
-              onClick={() => setSelectedDevice("Desktop")}
-              className={`px-4 sm:px-6 py-2 rounded-xl text-sm font-medium transition-all ${
-                selectedDevice === "Desktop"
-                  ? "bg-[#081B8B] rounded-xl text-white"
-                  : "text-[#D6DCFF]"
-              }`}
-              disabled={isLoading}
-            >
-              Desktop
-            </button>
-
-            <button
-              onClick={() => setSelectedDevice("Mobile")}
-              className={`px-4 sm:px-6 py-2 rounded-xl text-sm font-medium transition-all ${
-                selectedDevice === "Mobile"
-                  ? "bg-[#081B8B] text-white"
-                  : "text-[#D6DCFF]"
-              }`}
-              disabled={isLoading}
-            >
-              Mobile
-            </button>
-          </div>
+        {/* Header - Both Desktop and Mobile Analysis */}
+        <div className="text-center">
+          <h3 className="text-white font-medium text-lg mb-2">Complete Website Analysis</h3>
+          <p className="text-white/80 text-sm">We'll analyze both desktop and mobile performance for a complete picture</p>
         </div>
 
         {/* Input and Button Section - Stacked on Mobile */}
@@ -228,13 +217,13 @@ export default function SEOAuditTool({
           <div className="bg-[#081B8B]/20 rounded-xl p-4 sm:p-6 border border-white/10 mx-4 sm:mx-0">
             <div className="flex items-center justify-center gap-3 mb-4">
               <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
-              <span className="text-white font-medium text-sm sm:text-base">Analyzing Your Website</span>
+              <span className="text-white font-medium text-sm sm:text-base">Analyzing Desktop & Mobile Performance</span>
             </div>
             <p className="text-white/80 text-xs sm:text-sm max-w-md mx-auto leading-relaxed">
               {loadingMessage}
             </p>
             <div className="mt-3 text-xs text-white/60">
-              This usually takes 10-15 seconds
+              Running both desktop and mobile audits • This usually takes 15-20 seconds
             </div>
           </div>
         </div>

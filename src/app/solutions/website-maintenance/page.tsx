@@ -57,7 +57,6 @@ const riskFactors = [
 
 function WebsiteMaintenanceContent() {
   const searchParams = useSearchParams();
-  const [selectedDevice, setSelectedDevice] = useState("Desktop");
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [auditResults, setAuditResults] = useState<any>(null);
   const [auditedUrl, setAuditedUrl] = useState("");
@@ -211,8 +210,6 @@ function WebsiteMaintenanceContent() {
               <SEOAuditTool
                 websiteUrl={websiteUrl}
                 setWebsiteUrl={setWebsiteUrl}
-                selectedDevice={selectedDevice}
-                setSelectedDevice={setSelectedDevice}
                 onResultsUpdate={handleResultsUpdate}
                 onResultsReady={scrollToResults}
               />
@@ -236,7 +233,6 @@ function WebsiteMaintenanceContent() {
               <SEOResults 
                 results={auditResults} 
                 auditedUrl={auditedUrl}
-                selectedDevice={selectedDevice}
               />
               
               {/* CTA Section */}

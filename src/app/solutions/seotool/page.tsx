@@ -86,11 +86,9 @@ const bottomData = [
 function SiteCheckUpContent() {
   const { theme } = useTheme();
   const searchParams = useSearchParams();
-  const [selectedDevice, setSelectedDevice] = useState("Desktop");
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [auditResults, setAuditResults] = useState<any>(null);
   const [auditedUrl, setAuditedUrl] = useState("");
-  const [userEmail, setUserEmail] = useState("");
   const [showMiniAuditWelcome, setShowMiniAuditWelcome] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
   const gradesRef = useRef<HTMLDivElement>(null);
@@ -124,24 +122,60 @@ function SiteCheckUpContent() {
           setShowMiniAuditWelcome(false);
         }, 5000);
         
-        // Fixed mobile auto-run with longer delay and fallback mechanism
+        // Enhanced mobile auto-run with multiple fallback mechanisms
         const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-        const delay = isMobile ? 2500 : 1500; // Longer delay for mobile
+        const delay = isMobile ? 3000 : 1500; // Even longer delay for mobile
         
         const attemptAutoRun = () => {
+          console.log('🔍 Attempting auto-run...', { isMobile, hasFunction: !!triggerAutoRun.current });
+          
           if (triggerAutoRun.current) {
-            console.log('🚀 Auto-triggering audit for mobile...');
+            console.log('🚀 Auto-triggering audit...');
             triggerAutoRun.current();
+            return true; // Success
           } else {
-            // Fallback: try again after another second
-            setTimeout(() => {
-              if (triggerAutoRun.current) {
-                console.log('🚀 Fallback auto-trigger successful');
-                triggerAutoRun.current();
-              }
-            }, 1000);
+            console.log('⏳ Function not ready, setting up fallbacks...');
+            
+            // Multiple fallback attempts with increasing delays
+            const fallbackAttempts = [1000, 2000, 3000, 5000, 8000];
+            
+            fallbackAttempts.forEach((delay, index) => {
+              setTimeout(() => {
+                if (triggerAutoRun.current && !document.querySelector('.audit-results')) {
+                  console.log(`🎯 Fallback ${index + 1} successful`);
+                  triggerAutoRun.current();
+                } else if (index === 0) {
+                  console.log(`❌ Fallback ${index + 1} failed - function: ${!!triggerAutoRun.current}, results: ${!!document.querySelector('.audit-results')}`);
+                }
+              }, delay);
+            });
+            
+            return false; // Failed initially
           }
         };
+        
+        // For mobile, also add a visibility-based trigger
+        if (isMobile) {
+          const visibilityTrigger = () => {
+            if (document.visibilityState === 'visible' && !document.querySelector('.audit-results')) {
+              setTimeout(() => {
+                if (triggerAutoRun.current) {
+                  console.log('📱 Mobile visibility trigger successful');
+                  triggerAutoRun.current();
+                }
+              }, 1000);
+            }
+          };
+          
+          document.addEventListener('visibilitychange', visibilityTrigger);
+          
+          // Clean up the listener
+          const originalCleanup = () => window.removeEventListener('resize', handleResize);
+          return () => {
+            originalCleanup();
+            document.removeEventListener('visibilitychange', visibilityTrigger);
+          };
+        }
         
         setTimeout(attemptAutoRun, delay);
       }
@@ -309,33 +343,10 @@ function SiteCheckUpContent() {
               >                  <SEOAuditTool
                     websiteUrl={websiteUrl}
                     setWebsiteUrl={setWebsiteUrl}
-                    selectedDevice={selectedDevice}
-                    setSelectedDevice={setSelectedDevice}
                     onResultsUpdate={handleResultsUpdate}
                     onResultsReady={scrollToResults}
                     setAutoRunTrigger={setAutoRunTrigger}
                   />
-              </div>
-            </div>
-            
-            <div className="mt-6 text-center">
-              <p className="text-base text-primary-1050 mb-4">
-                Enter your email and we'll send your results in a downloadable format.
-              </p>
-              <div className="flex flex-col gap-4">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  value={userEmail}
-                  onChange={(e) => setUserEmail(e.target.value)}
-                  className="w-full px-4 py-3 dark:bg-white/10 bg-[#f4f4f4] text-black dark:border dark:border-[#FFFFFF14] rounded-lg dark:text-white placeholder-gray-300 focus:outline-none"
-                />
-                <DarkButton showIcon={false}>
-                  Add
-                </DarkButton>
-                <DarkButton iconName="download" iconSize="large">
-                  Download PDF Report
-                </DarkButton>
               </div>
             </div>
           </div>
@@ -368,8 +379,6 @@ function SiteCheckUpContent() {
                   <SEOAuditTool
                     websiteUrl={websiteUrl}
                     setWebsiteUrl={setWebsiteUrl}
-                    selectedDevice={selectedDevice}
-                    setSelectedDevice={setSelectedDevice}
                     onResultsUpdate={handleResultsUpdate}
                     onResultsReady={scrollToResults}
                     setAutoRunTrigger={setAutoRunTrigger}
@@ -381,40 +390,14 @@ function SiteCheckUpContent() {
             </div>
 
           </div>
-          <p className="text-lg mt-5 text-primary-1050 text-center">Enter your email and we&apos;ll send your results in a downloadable format—perfect for sharing or saving.</p>
-          <div className="w-[792px] mx-auto mt-6 flex gap-4">
-            <input
-              type="email"
-              placeholder="Enter your email"
-              value={userEmail}
-              onChange={(e) => setUserEmail(e.target.value)}
-              className="flex-1 px-4 py-3 dark:bg-white/10 bg-[#f4f4f4] text-black dark:border dark:border-[#FFFFFF14] rounded-lg dark:text-white placeholder-gray-300 focus:outline-none"
-            />
-            {/* <button 
-                                    type="button"
-                                    className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-colors duration-200 font-medium whitespace-nowrap"
-                                >
-                                    Add
-                                </button> */}
-            <DarkButton showIcon={false}>
-              Add
-            </DarkButton>
-          </div>
-          <div className="flex justify-center mt-6">
-            <DarkButton iconName="download" iconSize="large">
-              Download PDF Report
-            </DarkButton>
-          </div>
-
         </section>
 
         {/* SEO Results Section */}
         {auditResults && (
-          <div ref={resultsRef}>
+          <div ref={resultsRef} className="audit-results">
             <SEOResults 
               results={auditResults}
               auditedUrl={auditedUrl}
-              selectedDevice={selectedDevice}
               gradesRef={gradesRef}
               screenshotRef={screenshotRef}
             />

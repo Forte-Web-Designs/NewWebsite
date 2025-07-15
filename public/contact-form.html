@@ -35,5 +35,14 @@
     <input type="text" name="chat-history" />
     <input type="text" name="timestamp" />
   </form>
+
+  <!-- Audit Report Download form for Netlify form detection -->
+  <form name="audit-report-download" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    <input type="email" name="email" />
+    <input type="text" name="website-url" />
+    <input type="text" name="device-type" />
+    <input type="text" name="overall-score" />
+  </form>
 </body>
 </html>
