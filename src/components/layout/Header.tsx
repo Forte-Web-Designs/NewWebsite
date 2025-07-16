@@ -115,28 +115,29 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Dropdown items for About section
-  const aboutDropdownItems = [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Work', href: '/about/work' },
-    { label: 'FAQs', href: '/about/faqs' }
-  ];
-
-  // Dropdown items for Services section (updated)
-  const serviceDropdownItem = [
+  // Dropdown items for Services section
+  const servicesDropdownItems = [
     { label: 'Website Design', href: '/services/webDesign' },
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'PPC Advertising', href: '/services/ads' },
     { label: 'Social Media Management', href: '/services/socialMedia' },
+    { label: 'View All Services', href: '/services' }
   ];
 
-  // Dropdown items for Solutions section (reorganized)
+  // Dropdown items for Company section
+  const companyDropdownItems = [
+    { label: 'About Us', href: '/about' },
+    { label: 'Our Work', href: '/about/work' },
+    { label: 'Our Process', href: '/forte-method' },
+    { label: 'FAQs', href: '/about/faqs' }
+  ];
+
+  // Dropdown items for Solutions section
   const solutionsDropdownItems = [
-    { label: 'Forte Solutions', href: '/solutions' },
-    { label: 'Free Forte SiteCheckup™', href: '/solutions/seotool' },
-    { label: 'Forte Care™', href: '/solutions/care' },
+    { label: 'Free Website Checkup', href: '/checkup' },
+    { label: 'Forte Care™ Support', href: '/solutions/care' },
     { label: 'Forte Guarantee™', href: '/solutions/guarantee' },
-    { label: 'The Forte Method™', href: '/solutions/method' },
+    { label: 'View All Solutions', href: '/solutions' }
   ];
 
   // Don't render theme-dependent content until mounted - but render the full structure
@@ -173,9 +174,9 @@ export default function Header() {
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-8">
                   <HeaderLink href="/">Home</HeaderLink>
-                  <HeaderLink href="/about">About</HeaderLink>
+                  
                   <Dropdown
-                    items={serviceDropdownItem}
+                    items={servicesDropdownItems}
                     width="270px"
                     trigger={
                       <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
@@ -183,10 +184,27 @@ export default function Header() {
                       </div>
                     }
                   />
-                  <HeaderLink href="/our-work">Our Work</HeaderLink>
-                  <HeaderLink href="/forte-method">Process</HeaderLink>
-                  <HeaderLink href="/checkup">Free Checkup</HeaderLink>
-                  <HeaderLink href="/faq">FAQ</HeaderLink>
+                  
+                  <Dropdown
+                    items={companyDropdownItems}
+                    width="200px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/about" showIcon={true}>Company</HeaderLink>
+                      </div>
+                    }
+                  />
+                  
+                  <Dropdown
+                    items={solutionsDropdownItems}
+                    width="250px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/solutions" showIcon={true}>Solutions</HeaderLink>
+                      </div>
+                    }
+                  />
+                  
                   <HeaderLink href="/pricing">Pricing</HeaderLink>
                 </nav>
 
@@ -240,13 +258,9 @@ export default function Header() {
                   Home
                 </Link>
                 
-                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  About
-                </Link>
-                
                 <MobileExpandableMenu title="Services" isActive={pathname?.startsWith('/services')}>
                   <div className="space-y-2 pl-4">
-                    {serviceDropdownItem.map((item, index) => (
+                    {servicesDropdownItems.map((item, index) => (
                       <Link
                         key={index}
                         href={item.href}
@@ -259,21 +273,35 @@ export default function Header() {
                   </div>
                 </MobileExpandableMenu>
 
-                <Link href="/our-work" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  Our Work
-                </Link>
-                
-                <Link href="/forte-method" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  Process
-                </Link>
-                
-                <Link href="/checkup" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  Free Checkup
-                </Link>
-                
-                <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  FAQ
-                </Link>
+                <MobileExpandableMenu title="Company" isActive={pathname?.startsWith('/about') || pathname?.startsWith('/forte-method')}>
+                  <div className="space-y-2 pl-4">
+                    {companyDropdownItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </MobileExpandableMenu>
+
+                <MobileExpandableMenu title="Solutions" isActive={pathname?.startsWith('/solutions') || pathname?.startsWith('/checkup')}>
+                  <div className="space-y-2 pl-4">
+                    {solutionsDropdownItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </MobileExpandableMenu>
                 
                 <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   Pricing
@@ -329,27 +357,42 @@ export default function Header() {
                 className="hidden dark:block"
                 height={48}
               />
-            </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
-              <HeaderLink href="/">Home</HeaderLink>
-              <HeaderLink href="/about">About</HeaderLink>
-              <Dropdown
-                items={serviceDropdownItem}
-                width="270px"
-                trigger={
-                  <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
-                  </div>
-                }
-              />
-              <HeaderLink href="/our-work">Our Work</HeaderLink>
-              <HeaderLink href="/forte-method">Process</HeaderLink>
-              <HeaderLink href="/checkup">Free Checkup</HeaderLink>
-              <HeaderLink href="/faq">FAQ</HeaderLink>
-              <HeaderLink href="/pricing">Pricing</HeaderLink>
-            </nav>
+            </Link>                {/* Desktop Navigation */}
+                <nav className="hidden md:flex items-center space-x-8">
+                  <HeaderLink href="/">Home</HeaderLink>
+                  
+                  <Dropdown
+                    items={servicesDropdownItems}
+                    width="270px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
+                      </div>
+                    }
+                  />
+                  
+                  <Dropdown
+                    items={companyDropdownItems}
+                    width="200px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/about" showIcon={true}>Company</HeaderLink>
+                      </div>
+                    }
+                  />
+                  
+                  <Dropdown
+                    items={solutionsDropdownItems}
+                    width="250px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/solutions" showIcon={true}>Solutions</HeaderLink>
+                      </div>
+                    }
+                  />
+                  
+                  <HeaderLink href="/pricing">Pricing</HeaderLink>
+                </nav>
 
             {/* Desktop Right Side - Theme Toggle and Contact Button */}
             <nav className="hidden md:flex items-center space-x-8">
@@ -524,55 +567,6 @@ export default function Header() {
                       <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
                     )}
                   </div>
-                  {/* About Us */}
-                  <MobileExpandableMenu
-                    title="About Us"
-                    isActive={pathname.startsWith('/about')}
-                  >
-                    <div className="pl-6 space-y-3">
-                      <div className="flex items-center justify-between w-full">
-                        <Link
-                          href="/about"
-                          className={`text-2xl block py-2 ${pathname === '/about' ? 'text-[#8D9DFF]' : 'text-white'
-                            }`}
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          About Us
-                        </Link>
-                        {pathname === '/about' && (
-                          <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
-                        )}
-                      </div>
-
-                      <div className="flex items-center justify-between w-full">
-                        <Link
-                          href="/about/work"
-                          className={`text-2xl block py-2 ${pathname === '/about/work' ? 'text-[#8D9DFF]' : 'text-white'
-                            }`}
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          Our Work
-                        </Link>
-                        {pathname === '/about/work' && (
-                          <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
-                        )}
-                      </div>
-
-                      <div className="flex items-center justify-between w-full">
-                        <Link
-                          href="/about/faqs"
-                          className={`text-2xl block py-2 ${pathname === '/about/faqs' ? 'text-[#8D9DFF]' : 'text-white'
-                            }`}
-                          onClick={() => setMobileMenuOpen(false)}
-                        >
-                          FAQs
-                        </Link>
-                        {pathname === '/about/faqs' && (
-                          <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
-                        )}
-                      </div>
-                    </div>
-                  </MobileExpandableMenu>
 
                   {/* Services */}
                   <MobileExpandableMenu
@@ -580,13 +574,7 @@ export default function Header() {
                     isActive={pathname.startsWith('/services')}
                   >
                     <div className="pl-6 space-y-3">
-                      {[
-                        { href: '/services/webDesign', text: 'Website Design' },
-                        { href: '/services/seo', text: 'SEO Services' },
-                        { href: '/services/ads', text: 'PPC Advertising' },
-                        { href: '/services/socialMedia', text: 'Social Media Management' },
-                        { href: '/services', text: 'View All Services' }
-                      ].map((item) => (
+                      {servicesDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
@@ -594,7 +582,31 @@ export default function Header() {
                               }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {item.text}
+                            {item.label}
+                          </Link>
+                          {pathname === item.href && (
+                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </MobileExpandableMenu>
+
+                  {/* Company */}
+                  <MobileExpandableMenu
+                    title="Company"
+                    isActive={pathname.startsWith('/about') || pathname.startsWith('/forte-method')}
+                  >
+                    <div className="pl-6 space-y-3">
+                      {companyDropdownItems.map((item) => (
+                        <div key={item.href} className="flex items-center justify-between w-full">
+                          <Link
+                            href={item.href}
+                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                              }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.label}
                           </Link>
                           {pathname === item.href && (
                             <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
@@ -607,15 +619,10 @@ export default function Header() {
                   {/* Solutions */}
                   <MobileExpandableMenu
                     title="Solutions"
-                    isActive={pathname.startsWith('/solutions')}
+                    isActive={pathname.startsWith('/solutions') || pathname.startsWith('/checkup')}
                   >
                     <div className="pl-6 space-y-3">
-                      {[
-                        { href: '/solutions/seotool', text: 'Free Forte SiteCheckup™' },
-                        { href: '/solutions/care', text: 'Forte Care™' },
-                        { href: '/solutions/guarantee', text: 'Forte Guarantee™' },
-                        { href: '/solutions/method', text: 'The Forte Method™' }
-                      ].map((item) => (
+                      {solutionsDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
@@ -623,7 +630,7 @@ export default function Header() {
                               }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
-                            {item.text}
+                            {item.label}
                           </Link>
                           {pathname === item.href && (
                             <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
@@ -632,51 +639,6 @@ export default function Header() {
                       ))}
                     </div>
                   </MobileExpandableMenu>
-
-                  {/* Our Process */}
-                  <div className="flex items-center justify-between py-4">
-                    <Link
-                      href="/forte-method"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/forte-method' ? 'text-[#8D9DFF]' : 'text-white'
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Our Process
-                    </Link>
-                    {pathname === '/forte-method' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
-
-                  {/* Support & Care */}
-                  <div className="flex items-center justify-between py-4">
-                    <Link
-                      href="/forte-care"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/forte-care' ? 'text-[#8D9DFF]' : 'text-white'
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Support & Care
-                    </Link>
-                    {pathname === '/forte-care' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
-
-                  {/* Guarantee */}
-                  <div className="flex items-center justify-between py-4">
-                    <Link
-                      href="/forte-guarantee"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/forte-guarantee' ? 'text-[#8D9DFF]' : 'text-white'
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Guarantee
-                    </Link>
-                    {pathname === '/forte-guarantee' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
 
                   {/* Pricing */}
                   <div className="flex items-center justify-between py-4">
