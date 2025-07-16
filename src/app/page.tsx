@@ -20,6 +20,7 @@ const PricingPage = lazy(() => import("@/components/pricing").then(mod => ({ def
 const MobileServicesSlider = lazy(() => import("@/components/slider/MobileServicesSlider"));
 const MeetSethSection = lazy(() => import("@/components/MeetConnorSection"));
 const LazySliderCSS = lazy(() => import("@/components/performance/LazySliderCSS"));
+const InstantMiniAudit = lazy(() => import("@/components/InstantMiniAudit"));
 
 export default function Home() {
   // Helper function for client examples
@@ -575,7 +576,7 @@ export default function Home() {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Trusted by Growing Businesses</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Join 25+ Businesses Growing with Forte™
+                  Join 20+ Businesses Growing with Forte™
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400">
                   From local contractors to healthcare professionals, businesses choose Forte for results they can measure.
@@ -785,16 +786,20 @@ export default function Home() {
             <div className="text-center mt-12">
               <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-xl p-8 max-w-4xl mx-auto">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Ready to Experience the Difference?
+                  Curious to see how your site performs?
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  See exactly how your current website measures up with our free analysis.
+                  Get a free 5-point analysis of your website's performance, SEO, and conversion potential.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <LightButton href="/solutions/seotool">Get Free Website Analysis</LightButton>
-                  <button className="px-6 py-3 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 hover:border-gray-400 dark:hover:border-gray-500 rounded-lg font-semibold transition-all duration-200">
-                    View Our Process
-                  </button>
+                <div className="max-w-2xl mx-auto">
+                  <Suspense fallback={<div className="animate-pulse bg-gray-200 dark:bg-gray-700 h-32 rounded-lg"></div>}>
+                    <InstantMiniAudit 
+                      onFullAuditClick={(url, seoScore) => {
+                        // Navigate to full audit with pre-filled URL
+                        window.location.href = `/solutions/seotool?url=${encodeURIComponent(url)}&score=${seoScore || 0}`;
+                      }}
+                    />
+                  </Suspense>
                 </div>
               </div>
             </div>
