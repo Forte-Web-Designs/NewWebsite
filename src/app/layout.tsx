@@ -133,7 +133,8 @@ export default function RootLayout({
                     const stored = localStorage.getItem('theme');
                     if (stored) return stored;
                   }
-                  return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                  // Always default to dark mode
+                  return 'dark';
                 }
                 
                 const theme = getTheme();

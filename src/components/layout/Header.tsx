@@ -354,21 +354,11 @@ export default function Header() {
                   )}
                 </button>
                 <Link href="/" prefetch={true} className="flex items-center lg:hidden md:block transition-all duration-300 hover:scale-105 cursor-pointer">
-                  <OptimizedImage
-                    src="/images/home/logo2.png"
-                    alt="Forte Logo (Mobile - Light Mode)"
-                    width={36}
-                    height={36}
-                    className="block dark:hidden"
-                    priority
-                  />
-                  <OptimizedImage
-                    src="/images/home/logo1.png"
-                    alt="Forte Logo (Mobile - Dark Mode)"
-                    width={36}
-                    height={36}
-                    className="hidden dark:block"
-                    priority
+                  <Icon
+                    name="logo-m"
+                    alt="Forte Logo (Mobile)"
+                    className="w-[19px] h-[25px] text-black dark:text-white"
+                    folder="shared/icons"
                   />
                 </Link>
               </div>
@@ -453,21 +443,11 @@ export default function Header() {
                     </svg>
                   </button>
                   <Link href="/" prefetch={true} className="flex items-center transition-all duration-300 hover:scale-105" onClick={() => setMobileMenuOpen(false)}>
-                    <OptimizedImage
-                      src="/images/home/logo2.png"
-                      alt="Forte Logo (Mobile - Light Mode)"
-                      width={36}
-                      height={36}
-                      className="block dark:hidden"
-                      priority
-                    />
-                    <OptimizedImage
-                      src="/images/home/logo1.png"
-                      alt="Forte Logo (Mobile - Dark Mode)"
-                      width={36}
-                      height={36}
-                      className="hidden dark:block"
-                      priority
+                    <Icon
+                      name="logo-m"
+                      alt="Forte Logo (Mobile)"
+                      className="w-[19px] h-[25px] text-white"
+                      folder="shared/icons"
                     />
                   </Link>
                 </div>

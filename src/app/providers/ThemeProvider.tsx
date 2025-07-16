@@ -18,9 +18,10 @@ function getInitialTheme(): Theme {
     if (storedTheme) {
       return storedTheme;
     }
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    // Always default to dark mode, ignoring system preference
+    return 'dark';
   }
-  return 'light';
+  return 'dark';
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {
