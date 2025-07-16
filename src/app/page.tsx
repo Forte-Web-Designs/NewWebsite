@@ -784,112 +784,66 @@ export default function Home() {
 
           <SimpleScrollReveal direction="up" delay={800}>
             <div className="text-center mt-12">
-              <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-xl p-8 max-w-6xl mx-auto text-white">
-                <div className="grid md:grid-cols-2 gap-8 items-center">
-                  {/* Left Side - Content */}
-                  <div className="text-left">
-                    <div className="inline-flex items-center gap-2 bg-blue-600 px-3 py-1 rounded-full mb-4">
-                      <span className="text-sm font-medium">🚀 Free Analysis</span>
+              <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-xl p-6 max-w-5xl mx-auto text-white">
+                {/* Compact Header */}
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center gap-2 bg-blue-600 px-3 py-1 rounded-full mb-3">
+                    <span className="text-sm font-medium">🚀 Free Analysis</span>
+                  </div>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                    Curious How Your Website <span className="text-blue-300">Really</span> Performs?
+                  </h3>
+                  <p className="text-blue-100 mb-4">
+                    Free 30-second analysis. Instant results. No email required.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 items-start">
+                  {/* Left Side - Quick Benefits & Checks */}
+                  <div className="text-left space-y-4">
+                    {/* Benefits in compact format */}
+                    <div className="flex flex-wrap gap-4 text-sm">
+                      <div className="flex items-center gap-2 text-green-300">
+                        <span>✓</span><span>100% Free</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-green-300">
+                        <span>✓</span><span>Instant Results</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-green-300">
+                        <span>✓</span><span>No Email Required</span>
+                      </div>
                     </div>
-                    <h3 className="text-3xl font-bold mb-4">
-                      Curious How Your Website <span className="text-blue-300">Really</span> Performs?
-                    </h3>
-                    <p className="text-blue-100 mb-6 text-lg">
-                      Want to see how your website really performs? Our free analysis takes 30 seconds and might surprise you.
-                    </p>
-                    <div className="space-y-3 mb-6">
-                      <div className="flex items-center gap-3 text-blue-100">
-                        <span className="text-green-400">✓</span>
-                        <span>100% Free</span>
+
+                    {/* Compact What We Check */}
+                    <div className="bg-white/5 rounded-lg p-3">
+                      <div className="text-sm font-semibold mb-2 text-blue-300">🔍 What We Check:</div>
+                      <div className="grid grid-cols-1 gap-1 text-xs text-blue-100">
+                        <div>🔥 Speed & Performance</div>
+                        <div>📱 Mobile Optimization</div>
+                        <div>🟢 SEO Foundation</div>
+                        <div>🎨 Design & UX</div>
+                        <div>🔒 Security & Trust</div>
                       </div>
-                      <div className="flex items-center gap-3 text-blue-100">
-                        <span className="text-green-400">✓</span>
-                        <span>Instant Results</span>
-                      </div>
-                      <div className="flex items-center gap-3 text-blue-100">
-                        <span className="text-green-400">✓</span>
-                        <span>No Email Required</span>
+                    </div>
+
+                    {/* Compact Why It Matters */}
+                    <div className="bg-red-500/15 rounded-lg p-3 border border-red-400/20">
+                      <div className="text-xs text-red-200">
+                        <span className="font-semibold">⚠️ Why It Matters:</span> You get one chance for a great first impression. See where you stand instantly.
                       </div>
                     </div>
                   </div>
 
                   {/* Right Side - Audit Tool */}
-                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
-                    <div className="flex items-center gap-2 mb-6">
-                      <span className="text-2xl">🚀</span>
-                      <h4 className="text-xl font-bold">Free 5-Point Website Audit</h4>
-                    </div>
-                    <p className="text-blue-100 mb-4">
-                      See what's helping or hurting your site — instantly.
-                    </p>
-                    <p className="text-blue-200 text-sm mb-6">
-                      No email. No sales pitch. Just real, helpful insights.
-                    </p>
-
-                    {/* What We Check */}
-                    <div className="bg-white/5 rounded-lg p-4 mb-6">
-                      <div className="flex items-center gap-2 mb-3">
-                        <span className="text-blue-300">🔍</span>
-                        <span className="font-semibold">What We Check:</span>
-                      </div>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex items-center gap-2">
-                          <span className="text-orange-400">🔥</span>
-                          <span><strong>PageSpeed & Load Time</strong> – How fast does your site really load?</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-blue-400">📱</span>
-                          <span><strong>Mobile Friendliness</strong> – Is your site optimized for phones?</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-green-400">🟢</span>
-                          <span><strong>SEO Basics</strong> – Can Google actually find and rank you?</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-pink-400">🎨</span>
-                          <span><strong>Design & Clarity</strong> – Is your homepage clear and conversion-ready?</span>
-                        </div>
-                        <div className="flex items-center gap-2">
-                          <span className="text-yellow-400">🔒</span>
-                          <span><strong>Security & Trust Signals</strong> – Do visitors feel safe on your site?</span>
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Why It Matters */}
-                    <div className="bg-red-500/20 rounded-lg p-4 mb-6 border border-red-400/30">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-red-400">⚠️</span>
-                        <span className="font-semibold text-red-300">Why It Matters:</span>
-                      </div>
-                      <p className="text-red-100 text-sm">
-                        You only get one chance to make a digital first impression. This quick audit shows where you stand — and how to improve.
-                      </p>
-                    </div>
-
-                    {/* Try It Now */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                     <div className="text-center mb-4">
-                      <div className="flex items-center justify-center gap-2 mb-2">
-                        <span className="text-yellow-400">✨</span>
-                        <span className="font-bold">Try It Now (Takes 30 Seconds)</span>
-                      </div>
-                    </div>
-
-                    {/* URL Input */}
-                    <div className="mb-4">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-yellow-400">👆</span>
-                        <span className="font-semibold">Enter your website below:</span>
-                      </div>
-                      <div className="relative">
-                        <span className="text-red-400 absolute left-3 top-1/2 transform -translate-y-1/2">📍</span>
-                        <span className="font-bold absolute left-8 top-1/2 transform -translate-y-1/2 text-red-300">Your Website URL:</span>
-                      </div>
+                      <div className="text-lg font-bold mb-2">✨ Free 30-Second Audit</div>
+                      <p className="text-blue-200 text-sm">Enter your website URL below to get started:</p>
                     </div>
 
                     {/* Audit Component */}
-                    <div className="mt-8">
-                      <Suspense fallback={<div className="animate-pulse bg-white/10 h-32 rounded-lg"></div>}>
+                    <div>
+                      <Suspense fallback={<div className="animate-pulse bg-white/10 h-24 rounded-lg"></div>}>
                         <InstantMiniAudit 
                           onFullAuditClick={(url, seoScore) => {
                             // Navigate to full audit with pre-filled URL
@@ -897,13 +851,6 @@ export default function Home() {
                           }}
                         />
                       </Suspense>
-                    </div>
-
-                    {/* Bottom CTA */}
-                    <div className="mt-6 text-center">
-                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg p-3">
-                        <span className="font-bold text-black">👆 Enter Your Website URL First</span>
-                      </div>
                     </div>
                   </div>
                 </div>
