@@ -98,7 +98,12 @@ export default function Footer() {
           {/* Logo and company info */}
           <div className="col-span-2 md:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">
-              <Icon name={theme === "light" ? "logo-light.svg" : "logo1.png"} alt="Forte Logo" size={100} folder="home" />
+              <div className="block dark:hidden">
+                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={100} folder="home" />
+              </div>
+              <div className="hidden dark:block">
+                <Icon name="logo1.png" alt="Forte Logo (Dark Mode)" size={100} folder="home" />
+              </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-400 text-primary-1400">
               <p>Flexible builds. Lightning-fast performance. Designed to grow with your business.</p>

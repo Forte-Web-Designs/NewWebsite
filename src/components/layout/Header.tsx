@@ -158,10 +158,16 @@ export default function Header() {
               {/* Desktop Logo - Hidden on mobile */}
               <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
                 <img
-                  src={theme === 'dark' ? '/images/home/logo1.png' : '/images/home/logo2.png'}
-                  alt="Forte Logo"
+                  src="/images/home/logo2.png"
+                  alt="Forte Logo (Light Mode)"
+                  className="block dark:hidden"
                   height={48}
-                  style={{ display: 'block' }}
+                />
+                <img
+                  src="/images/home/logo1.png"
+                  alt="Forte Logo (Dark Mode)"
+                  className="hidden dark:block"
+                  height={48}
                 />
               </Link>
 
@@ -271,10 +277,16 @@ export default function Header() {
             {/* Desktop Logo - Hidden on mobile */}
             <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
               <img
-                src={theme === 'dark' ? '/images/home/logo1.png' : '/images/home/logo2.png'}
-                alt="Forte Logo"
+                src="/images/home/logo2.png"
+                alt="Forte Logo (Light Mode)"
+                className="block dark:hidden"
                 height={48}
-                style={{ display: 'block' }}
+              />
+              <img
+                src="/images/home/logo1.png"
+                alt="Forte Logo (Dark Mode)"
+                className="hidden dark:block"
+                height={48}
               />
             </Link>
 
@@ -343,11 +355,19 @@ export default function Header() {
                 </button>
                 <Link href="/" prefetch={true} className="flex items-center lg:hidden md:block transition-all duration-300 hover:scale-105 cursor-pointer">
                   <OptimizedImage
-                    src="/images/home/Group.png"
-                    alt="Forte Logo (Mobile)"
-                    width={18}
-                    height={24}
-                    className=""
+                    src="/images/home/logo2.png"
+                    alt="Forte Logo (Mobile - Light Mode)"
+                    width={36}
+                    height={36}
+                    className="block dark:hidden"
+                    priority
+                  />
+                  <OptimizedImage
+                    src="/images/home/logo1.png"
+                    alt="Forte Logo (Mobile - Dark Mode)"
+                    width={36}
+                    height={36}
+                    className="hidden dark:block"
                     priority
                   />
                 </Link>
@@ -434,10 +454,19 @@ export default function Header() {
                   </button>
                   <Link href="/" prefetch={true} className="flex items-center transition-all duration-300 hover:scale-105" onClick={() => setMobileMenuOpen(false)}>
                     <OptimizedImage
-                      src="/images/home/Group.png"
-                      alt="Forte Logo (Mobile)"
-                      width={18}
-                      height={24}
+                      src="/images/home/logo2.png"
+                      alt="Forte Logo (Mobile - Light Mode)"
+                      width={36}
+                      height={36}
+                      className="block dark:hidden"
+                      priority
+                    />
+                    <OptimizedImage
+                      src="/images/home/logo1.png"
+                      alt="Forte Logo (Mobile - Dark Mode)"
+                      width={36}
+                      height={36}
+                      className="hidden dark:block"
                       priority
                     />
                   </Link>
