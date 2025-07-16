@@ -124,6 +124,15 @@ export default function Header() {
     { label: 'View All Services', href: '/services' }
   ];
 
+  // Dropdown items for Forte Ecosystem™ section
+  const ecosystemDropdownItems = [
+    { label: 'Complete Ecosystem Overview', href: '/ecosystem' },
+    { label: 'Forte Foundation™', href: '/pricing#foundation' },
+    { label: 'Forte Pro™', href: '/pricing#pro' },
+    { label: 'Forte Growth™ (+ SEO)', href: '/pricing#growth' },
+    { label: 'Forte Dominate™ (Full Stack)', href: '/pricing#dominate' }
+  ];
+
   // Dropdown items for Company section
   const companyDropdownItems = [
     { label: 'About Us', href: '/about' },
@@ -186,6 +195,16 @@ export default function Header() {
                   />
                   
                   <Dropdown
+                    items={ecosystemDropdownItems}
+                    width="280px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/ecosystem" showIcon={true}>Forte Ecosystem™</HeaderLink>
+                      </div>
+                    }
+                  />
+                  
+                  <Dropdown
                     items={companyDropdownItems}
                     width="200px"
                     trigger={
@@ -204,8 +223,6 @@ export default function Header() {
                       </div>
                     }
                   />
-                  
-                  <HeaderLink href="/pricing">Pricing</HeaderLink>
                 </nav>
 
                 {/* Desktop Right Side - Theme Toggle and Contact Button */}
@@ -261,6 +278,21 @@ export default function Header() {
                 <MobileExpandableMenu title="Services" isActive={pathname?.startsWith('/services')}>
                   <div className="space-y-2 pl-4">
                     {servicesDropdownItems.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </MobileExpandableMenu>
+
+                <MobileExpandableMenu title="Forte Ecosystem™" isActive={pathname?.startsWith('/ecosystem') || pathname?.startsWith('/pricing')}>
+                  <div className="space-y-2 pl-4">
+                    {ecosystemDropdownItems.map((item, index) => (
                       <Link
                         key={index}
                         href={item.href}
@@ -372,6 +404,16 @@ export default function Header() {
                   />
                   
                   <Dropdown
+                    items={ecosystemDropdownItems}
+                    width="280px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/ecosystem" showIcon={true}>Forte Ecosystem™</HeaderLink>
+                      </div>
+                    }
+                  />
+                  
+                  <Dropdown
                     items={companyDropdownItems}
                     width="200px"
                     trigger={
@@ -390,8 +432,6 @@ export default function Header() {
                       </div>
                     }
                   />
-                  
-                  <HeaderLink href="/pricing">Pricing</HeaderLink>
                 </nav>
 
             {/* Desktop Right Side - Theme Toggle and Contact Button */}
@@ -575,6 +615,30 @@ export default function Header() {
                   >
                     <div className="pl-6 space-y-3">
                       {servicesDropdownItems.map((item) => (
+                        <div key={item.href} className="flex items-center justify-between w-full">
+                          <Link
+                            href={item.href}
+                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                              }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                          {pathname === item.href && (
+                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </MobileExpandableMenu>
+
+                  {/* Forte Ecosystem™ */}
+                  <MobileExpandableMenu
+                    title="Forte Ecosystem™"
+                    isActive={pathname.startsWith('/ecosystem') || pathname.startsWith('/pricing')}
+                  >
+                    <div className="pl-6 space-y-3">
+                      {ecosystemDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
