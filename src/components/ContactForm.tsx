@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import DarkButton from "./DarkButton";
 import SimpleScrollReveal from "./animations/SimpleScrollReveal";
 import SimpleAnimatedInput from "./animations/SimpleAnimatedInput";
@@ -22,6 +22,65 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [showSuccess, setShowSuccess] = useState(false);
   const [submitError, setSubmitError] = useState<string | null>(null);
+  const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
+  const [isDirty, setIsDirty] = useState(false);
+
+  // Auto-save form data to localStorage
+  useEffect(() => {
+    const savedData = localStorage.getItem('contactFormData');
+    if (savedData) {
+      try {
+        const parsed = JSON.parse(savedData);
+        setFormData(parsed);
+        setIsDirty(true);
+      } catch (error) {
+        console.error('Error parsing saved form data:', error);
+      }
+    }
+  }, []);
+
+  // Save form data to localStorage when it changes
+  useEffect(() => {
+    if (isDirty) {
+      localStorage.setItem('contactFormData', JSON.stringify(formData));
+    }
+  }, [formData, isDirty]);
+
+  // Clear saved data when form is successfully submitted
+  const clearSavedData = () => {
+    localStorage.removeItem('contactFormData');
+    setIsDirty(false);
+  };
+
+  // Real-time validation
+  const validateField = (name: string, value: string): string => {
+    switch (name) {
+      case 'name':
+        if (!value.trim()) return 'Name is required';
+        if (value.trim().length < 2) return 'Name must be at least 2 characters';
+        return '';
+      case 'email':
+        if (!value.trim()) return 'Email is required';
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(value)) return 'Please enter a valid email address';
+        return '';
+      case 'phone':
+        if (!value.trim()) return 'Phone number is required for faster response';
+        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
+        const cleanPhone = value.replace(/\D/g, '');
+        if (cleanPhone.length < 10) return 'Please enter a valid phone number';
+        return '';
+      case 'service':
+        if (!value) return 'Please select a service';
+        return '';
+      case 'message':
+        if (!value.trim()) return 'Please tell us about your project';
+        if (value.trim().length < 10) return 'Please provide more details (at least 10 characters)';
+        return '';
+      default:
+        return '';
+    }
+  };
 
   const handleInputChange = (
     e: React.ChangeEvent<
@@ -29,10 +88,46 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
     >
   ) => {
     const { name, value } = e.target;
+    setIsDirty(true);
+    
+    // Format phone number as user types
+    let formattedValue = value;
+    if (name === 'phone') {
+      const cleaned = value.replace(/\D/g, '');
+      if (cleaned.length <= 10) {
+        if (cleaned.length >= 6) {
+          formattedValue = `(${cleaned.slice(0, 3)}) ${cleaned.slice(3, 6)}-${cleaned.slice(6)}`;
+        } else if (cleaned.length >= 3) {
+          formattedValue = `(${cleaned.slice(0, 3)}) ${cleaned.slice(3)}`;
+        } else {
+          formattedValue = cleaned;
+        }
+      } else {
+        formattedValue = value; // Keep original if too long
+      }
+    }
+    
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [name]: formattedValue,
     }));
+
+    // Clear field error when user starts typing
+    if (fieldErrors[name]) {
+      setFieldErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+
+    // Real-time validation for better UX
+    const error = validateField(name, formattedValue);
+    if (error && value.trim()) { // Only show error if field has content
+      setFieldErrors(prev => ({
+        ...prev,
+        [name]: error
+      }));
+    }
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -40,13 +135,34 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
     setIsSubmitting(true);
     setSubmitError(null);
     
+    // Validate all fields before submission
+    const errors: Record<string, string> = {};
+    Object.keys(formData).forEach(key => {
+      if (key !== 'company') { // company is optional
+        const error = validateField(key, formData[key as keyof typeof formData]);
+        if (error) errors[key] = error;
+      }
+    });
+
+    if (Object.keys(errors).length > 0) {
+      setFieldErrors(errors);
+      setIsSubmitting(false);
+      // Scroll to first error
+      const firstErrorField = document.querySelector(`[name="${Object.keys(errors)[0]}"]`);
+      if (firstErrorField) {
+        firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        (firstErrorField as HTMLElement).focus();
+      }
+      return;
+    }
+    
     try {
       // Get form data directly from the form element
       const form = e.target as HTMLFormElement;
-      const formData = new FormData(form);
+      const formDataToSend = new FormData(form);
       
       // Add form name for Netlify
-      formData.append('form-name', 'contact');
+      formDataToSend.append('form-name', 'contact');
       
       const response = await fetch("/", {
         method: "POST",
@@ -55,7 +171,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           // Add mobile-specific headers
           "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
         },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(formDataToSend as any).toString(),
       });
 
       if (response.ok) {
@@ -69,6 +185,8 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           company: "",
           message: "",
         });
+        setFieldErrors({});
+        clearSavedData(); // Clear localStorage
         
         // On mobile, scroll to bottom so user can see success message
         if (window.innerWidth < 640) {
@@ -244,6 +362,8 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       onChange={handleInputChange}
                       required
                       delay={600}
+                      error={fieldErrors.name}
+                      autoComplete="name"
                     />
 
                     {/* Your Email */}
@@ -255,6 +375,8 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       onChange={handleInputChange}
                       required
                       delay={700}
+                      error={fieldErrors.email}
+                      autoComplete="email"
                     />
                   </div>
 
@@ -268,6 +390,8 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       onChange={handleInputChange}
                       required
                       delay={800}
+                      error={fieldErrors.phone}
+                      autoComplete="tel"
                     />
 
                     {/* Company Name */}
@@ -278,6 +402,8 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       value={formData.company}
                       onChange={handleInputChange}
                       delay={850}
+                      error={fieldErrors.company}
+                      autoComplete="organization"
                     />
                   </div>
 
@@ -287,7 +413,11 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className="w-full px-4 py-3 bg-white/25 backdrop-blur-md border-2 border-white/50 hover:border-white/70 rounded-lg text-white font-medium focus:outline-none focus:ring-2 focus:ring-blue-400/50 focus:border-blue-400 focus:bg-white/30 focus:shadow-lg focus:shadow-blue-500/20 transition-all duration-300 shadow-md appearance-none"
+                      className={`w-full px-4 py-3 backdrop-blur-md border-2 rounded-lg text-white font-medium focus:outline-none focus:ring-2 transition-all duration-300 shadow-md appearance-none ${
+                        fieldErrors.service 
+                          ? 'bg-red-50/10 border-red-400/70 focus:border-red-400 focus:ring-red-400/50 focus:shadow-red-500/20' 
+                          : 'bg-white/25 border-white/50 hover:border-white/70 focus:ring-blue-400/50 focus:border-blue-400 focus:bg-white/30 focus:shadow-lg focus:shadow-blue-500/20'
+                      }`}
                       required
                     >
                       <option value="" disabled className="text-gray-900">Select a Service</option>
@@ -304,6 +434,14 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
+                    {fieldErrors.service && (
+                      <div className="mt-2 text-red-300 text-sm flex items-center gap-2">
+                        <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        {fieldErrors.service}
+                      </div>
+                    )}
                   </div>
 
                   {/* Message */}
@@ -315,6 +453,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                     multiline
                     rows={4}
                     delay={1000}
+                    error={fieldErrors.message}
                   />
 
                   {/* Submit Button */}

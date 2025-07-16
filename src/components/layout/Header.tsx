@@ -321,6 +321,7 @@ export default function Header() {
                   </div>
                 }
               />
+              <HeaderLink href="/blog">Blog</HeaderLink>
               <HeaderLink href="/pricing">Pricing</HeaderLink>
             </nav>
 
@@ -605,6 +606,21 @@ export default function Header() {
                       ))}
                     </div>
                   </MobileExpandableMenu>
+
+                  {/* Blog */}
+                  <div className="flex items-center justify-between py-4">
+                    <Link
+                      href="/blog"
+                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/blog' || pathname.startsWith('/blog/') ? 'text-[#8D9DFF]' : 'text-white'
+                        }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Blog
+                    </Link>
+                    {(pathname === '/blog' || pathname.startsWith('/blog/')) && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
 
                   {/* Pricing */}
                   <div className="flex items-center justify-between py-4">

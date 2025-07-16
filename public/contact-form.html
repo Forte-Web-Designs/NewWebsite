@@ -44,5 +44,13 @@
     <input type="text" name="device-type" />
     <input type="text" name="overall-score" />
   </form>
+
+  <!-- Newsletter Signup form for Netlify form detection -->
+  <form name="newsletter-signup" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    <input type="email" name="email" />
+    <input type="text" name="source" />
+    <input type="text" name="timestamp" />
+  </form>
 </body>
 </html>

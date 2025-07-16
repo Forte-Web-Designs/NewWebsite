@@ -607,6 +607,8 @@ const AIChat = () => {
                       className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       required
                       autoComplete="name"
+                      inputMode="text"
+                      autoCapitalize="words"
                     />
                     
                     <input
@@ -646,6 +648,8 @@ const AIChat = () => {
                       onKeyPress={(e) => handleFormFieldKeyPress(e, serviceFieldRef)}
                       className="w-full p-3 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg text-sm lg:text-base bg-white dark:bg-gray-700 text-gray-900 dark:text-gray-100 focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                       autoComplete="organization"
+                      inputMode="text"
+                      autoCapitalize="words"
                     />
                     
                     <select
