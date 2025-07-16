@@ -16,14 +16,33 @@ import { HeroBackgroundAnimation, SectionBackgroundAnimation } from '@/component
 // Lazy load non-critical components for better performance
 const ContactForm = lazy(() => import("@/components/ContactForm"));
 const CalendlyWidget = lazy(() => import("@/components/CalendlyWidget"));
+const PricingPage = lazy(() => import("@/components/pricing").then(mod => ({ default: mod.PricingPage })));
+const MobileServicesSlider = lazy(() => import("@/components/slider/MobileServicesSlider"));
+const MeetSethSection = lazy(() => import("@/components/MeetConnorSection"));
 const LazySliderCSS = lazy(() => import("@/components/performance/LazySliderCSS"));
 const InstantMiniAudit = lazy(() => import("@/components/InstantMiniAudit"));
 
 export default function Home() {
+  // Helper function for client examples
+  const getClientExample = (index: number) => {
+    const examples = [
+      "Mike's HVAC discovered 3 competitor advantages that shaped their messaging strategy",
+      "Bella's Boutique refined their homepage 4 times before finding the perfect customer flow", 
+      "TechCorp's hand-coded site loads in 1.2 seconds vs their old WordPress at 8+ seconds",
+      "Sunrise Veterinary went live with perfect mobile optimization and booking integration",
+      "Local law firm added 2 new practice areas after seeing monthly SEO keyword opportunities"
+    ];
+    return examples[index] || "Client saw immediate improvements in user engagement";
+  };
+
   const [currentSlide, setCurrentSlide] = useState(0);
   const sliderRef = useRef<Slider>(null);
+  const [isDark, setIsDark] = useState(false);
+  const [touchStart, setTouchStart] = useState<number | null>(null);
+  const [touchEnd, setTouchEnd] = useState<number | null>(null);
   const [showOverlay, setShowOverlay] = useState(false);
   const [overlayTimeout, setOverlayTimeout] = useState<NodeJS.Timeout | null>(null);
+  const [isSwiping, setIsSwiping] = useState(false);
 
   // Check for URL parameters on component mount
   useEffect(() => {
@@ -32,17 +51,85 @@ export default function Home() {
     }
   }, []);
 
-  // Handle image click to show overlay with delay
-  const handleImageClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    setShowOverlay(true);
+  // Minimum distance for swipe detection
+  const minSwipeDistance = 50;
+
+  // Touch event handlers for mobile swipe with better gesture detection
+  const onTouchStart = (e: React.TouchEvent) => {
+    setTouchEnd(null);
+    setTouchStart(e.targetTouches[0].clientX);
+    setIsSwiping(false);
+    // Clear any existing overlay timeout when starting a touch
+    if (overlayTimeout) {
+      clearTimeout(overlayTimeout);
+      setOverlayTimeout(null);
+    }
+  };
+
+  const onTouchMove = (e: React.TouchEvent) => {
+    const currentX = e.targetTouches[0].clientX;
+    setTouchEnd(currentX);
     
-    // Auto-hide overlay after 3 seconds if not clicked
-    const timeout = setTimeout(() => {
+    // If user is swiping significantly, mark as swiping and prevent default
+    if (touchStart !== null) {
+      const distance = Math.abs(touchStart - currentX);
+      if (distance > 10) {
+        setIsSwiping(true);
+        e.preventDefault();
+      }
+    }
+  };
+
+  const onTouchEnd = () => {
+    if (!touchStart || !touchEnd) {
+      setIsSwiping(false);
+      setTouchStart(null);
+      setTouchEnd(null);
+      return;
+    }
+    
+    const distance = touchStart - touchEnd;
+    const isLeftSwipe = distance > minSwipeDistance;
+    const isRightSwipe = distance < -minSwipeDistance;
+
+    if (isLeftSwipe || isRightSwipe) {
+      if (isLeftSwipe) {
+        // Swipe left - next slide
+        setCurrentSlide((prevSlide) => 
+          prevSlide === sliderImages.length - 1 ? 0 : prevSlide + 1
+        );
+      } else if (isRightSwipe) {
+        // Swipe right - previous slide
+        setCurrentSlide((prevSlide) => 
+          prevSlide === 0 ? sliderImages.length - 1 : prevSlide - 1
+        );
+      }
+      // Hide overlay during swipe
       setShowOverlay(false);
-    }, 3000);
+    }
     
-    setOverlayTimeout(timeout);
+    // Reset touch values after a brief delay to allow click detection
+    setTimeout(() => {
+      setIsSwiping(false);
+      setTouchStart(null);
+      setTouchEnd(null);
+    }, 100);
+  };
+
+  // Handle image click to show overlay with delay - only if not swiping
+  const handleImageClick = (e: React.MouseEvent) => {
+    // Only show overlay if this was a tap/click, not the end of a swipe
+    if (!isSwiping && touchStart === null && touchEnd === null) {
+      e.stopPropagation();
+      setShowOverlay(true);
+      
+      // Auto-hide overlay after 3 seconds if not clicked
+      const timeout = setTimeout(() => {
+        setShowOverlay(false);
+      }, 3000);
+      
+      setOverlayTimeout(timeout);
+    }
   };
 
   // Handle overlay button click
@@ -151,6 +238,24 @@ export default function Home() {
     }
   };
 
+  useEffect(() => {
+    const darkModeEnabled = document.documentElement.classList.contains("dark");
+    setIsDark(darkModeEnabled);
+
+    const observer = new MutationObserver(() => {
+      const updatedDarkMode =
+        document.documentElement.classList.contains("dark");
+      setIsDark(updatedDarkMode);
+    });
+
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ["class"],
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
   // Auto-slide functionality for mobile portfolio showcase
   useEffect(() => {
     const autoSlideInterval = setInterval(() => {
@@ -247,6 +352,10 @@ export default function Home() {
                       {/* Slider Container */}
                       <div 
                         className="relative w-full h-[200px] sm:h-[250px] overflow-hidden rounded-lg"
+                        onTouchStart={onTouchStart}
+                        onTouchMove={onTouchMove}
+                        onTouchEnd={onTouchEnd}
+                        style={{ touchAction: 'pan-y' }} // Allow vertical scrolling but handle horizontal gestures
                       >
                         <div 
                           className="flex transition-transform duration-500 ease-in-out h-full"
@@ -551,35 +660,201 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Free Website Checkup */}
+      {/* Why Forte Section - New */}
       <section className="py-16 md:py-24 bg-white dark:bg-black">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                🆓 Free Website Analysis
+            <div className="text-center mb-12 md:mb-16">
+              <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full mb-6">
+                <span className="text-2xl">💪</span>
+                <span className="font-semibold text-blue-700 dark:text-blue-300">Why Choose Forte</span>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                Get Your 5-Point Website Audit
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                What Makes Forte™ Different
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-                See exactly what's holding your website back from getting more leads and conversions.
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                While others use templates and shortcuts, we build websites the right way. Hand-coded, lightning-fast, and designed to grow your business.
               </p>
             </div>
-            
-            <div className="max-w-4xl mx-auto">
-              <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-2xl p-6 lg:p-8 border border-blue-200 dark:border-blue-800/50">
-                <Suspense fallback={
-                  <div className="min-h-[300px] flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div>
+          </SimpleScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={200}>
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+                <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-white text-xl">⚡</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Lightning-Fast Performance
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Hand-coded websites that load in under 2 seconds. No bloated plugins or themes slowing you down.
+                </p>
+                <div className="text-sm text-blue-700 dark:text-blue-300 bg-blue-100 dark:bg-blue-900/40 px-3 py-1 rounded-full inline-block">
+                  Average: 1.2s load time
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
+                <div className="w-12 h-12 bg-green-600 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-white text-xl">🛡️</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Rock-Solid Security
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  No plugins means no security vulnerabilities. Your site stays secure and stable, year after year.
+                </p>
+                <div className="text-sm text-green-700 dark:text-green-300 bg-green-100 dark:bg-green-900/40 px-3 py-1 rounded-full inline-block">
+                  Zero breaches to date
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={400}>
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-xl p-6 border border-purple-200 dark:border-purple-800">
+                <div className="w-12 h-12 bg-purple-600 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-white text-xl">📈</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Built for Conversions
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Every element is strategically designed to turn visitors into customers, not just look pretty.
+                </p>
+                <div className="text-sm text-purple-700 dark:text-purple-300 bg-purple-100 dark:bg-purple-900/40 px-3 py-1 rounded-full inline-block">
+                  3x more leads average
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={500}>
+              <div className="bg-gradient-to-br from-orange-50 to-orange-100 dark:from-orange-900/20 dark:to-orange-800/20 rounded-xl p-6 border border-orange-200 dark:border-orange-800">
+                <div className="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-white text-xl">🤝</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Personal Support
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Work directly with the developer, not account managers. Same-day response guaranteed.
+                </p>
+                <div className="text-sm text-orange-700 dark:text-orange-300 bg-orange-100 dark:bg-orange-900/40 px-3 py-1 rounded-full inline-block">
+                  24hr response time
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={600}>
+              <div className="bg-gradient-to-br from-teal-50 to-teal-100 dark:from-teal-900/20 dark:to-teal-800/20 rounded-xl p-6 border border-teal-200 dark:border-teal-800">
+                <div className="w-12 h-12 bg-teal-600 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-white text-xl">🔄</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  Ongoing Optimization
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  We don't just build and disappear. Continuous improvements keep your site performing at its peak.
+                </p>
+                <div className="text-sm text-teal-700 dark:text-teal-300 bg-teal-100 dark:bg-teal-900/40 px-3 py-1 rounded-full inline-block">
+                  Forte Care™ included
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={700}>
+              <div className="bg-gradient-to-br from-rose-50 to-rose-100 dark:from-rose-900/20 dark:to-rose-800/20 rounded-xl p-6 border border-rose-200 dark:border-rose-800">
+                <div className="w-12 h-12 bg-rose-600 rounded-full flex items-center justify-center mb-4">
+                  <span className="text-white text-xl">✅</span>
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  100% Satisfaction
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Our guarantee is simple: if you're not thrilled with your website, we'll make it right. No questions asked.
+                </p>
+                <div className="text-sm text-rose-700 dark:text-rose-300 bg-rose-100 dark:bg-rose-900/40 px-3 py-1 rounded-full inline-block">
+                  Risk-free process
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+
+          <SimpleScrollReveal direction="up" delay={800}>
+            <div className="text-center mt-12">
+              <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-xl p-6 max-w-5xl mx-auto text-white">
+                {/* Compact Header */}
+                <div className="text-center mb-6">
+                  <div className="inline-flex items-center gap-2 bg-blue-600 px-3 py-1 rounded-full mb-3">
+                    <span className="text-sm font-medium">🚀 Free Analysis</span>
                   </div>
-                }>
-                  <InstantMiniAudit 
-                    onFullAuditClick={(url: string, seoScore?: number) => {
-                      window.location.href = `/solutions/seotool?url=${encodeURIComponent(url)}&score=${seoScore || 0}`;
-                    }}
-                  />
-                </Suspense>
+                  <h3 className="text-2xl md:text-3xl font-bold mb-2">
+                    Curious How Your Website <span className="text-blue-300">Really</span> Performs?
+                  </h3>
+                  <p className="text-blue-100 mb-4">
+                    Free 30-second analysis. Instant results. No email required.
+                  </p>
+                </div>
+
+                <div className="grid md:grid-cols-2 gap-6 items-start">
+                  {/* Left Side - Quick Benefits & Checks */}
+                  <div className="text-left space-y-4">
+                    {/* Benefits in compact format */}
+                    <div className="flex flex-wrap gap-4 text-sm">
+                      <div className="flex items-center gap-2 text-green-300">
+                        <span>✓</span><span>100% Free</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-green-300">
+                        <span>✓</span><span>Instant Results</span>
+                      </div>
+                      <div className="flex items-center gap-2 text-green-300">
+                        <span>✓</span><span>No Email Required</span>
+                      </div>
+                    </div>
+
+                    {/* What We Check - Detailed */}
+                    <div className="bg-white/5 rounded-lg p-4">
+                      <div className="text-sm font-semibold mb-3 text-blue-300">🔍 What We Check:</div>
+                      <div className="space-y-2 text-xs text-blue-100">
+                        <div><span className="text-orange-400">🔥</span> <strong>Speed & Performance</strong> – How fast does your site really load?</div>
+                        <div><span className="text-blue-400">📱</span> <strong>Mobile Optimization</strong> – Is your site optimized for phones?</div>
+                        <div><span className="text-green-400">🟢</span> <strong>SEO Foundation</strong> – How visible are you on Google?</div>
+                        <div><span className="text-pink-400">🎨</span> <strong>Design & UX</strong> – Is your homepage clear and conversion-ready?</div>
+                        <div><span className="text-yellow-400">🔒</span> <strong>Security & Trust</strong> – Do visitors feel safe on your site?</div>
+                      </div>
+                    </div>
+
+                    {/* Compact Why It Matters */}
+                    <div className="bg-red-500/15 rounded-lg p-3 border border-red-400/20">
+                      <div className="text-xs text-red-200">
+                        <span className="font-semibold">⚠️ Why It Matters:</span> You get one chance for a great first impression. See where you stand instantly.
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Side - Audit Tool */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
+                    <div className="text-center mb-4">
+                      <div className="text-lg font-bold mb-2">✨ Free 5-Point Website Audit</div>
+                      <p className="text-blue-200 text-sm">See what's helping or hurting your site — instantly.</p>
+                      <p className="text-blue-300 text-xs mt-1">No email. No sales pitch. Just real, helpful insights.</p>
+                    </div>
+
+                    {/* Audit Component */}
+                    <div>
+                      <Suspense fallback={<div className="animate-pulse bg-white/10 h-24 rounded-lg"></div>}>
+                        <InstantMiniAudit 
+                          onFullAuditClick={(url, seoScore) => {
+                            // Navigate to full audit with pre-filled URL
+                            window.location.href = `/solutions/seotool?url=${encodeURIComponent(url)}&score=${seoScore || 0}`;
+                          }}
+                        />
+                      </Suspense>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </SimpleScrollReveal>
@@ -587,7 +862,7 @@ export default function Home() {
       </section>
 
       {/* Trust Section with Client Results */}
-      <section className="py-12 bg-gray-50 dark:bg-gray-900">
+      <section className="py-12 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-8">
@@ -647,6 +922,156 @@ export default function Home() {
               </div>
             </div>
           </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Process Preview - Forte Method Timeline */}
+      <section className="py-16 sm:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+              The Forte Method™
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              A proven web design system built for results. From discovery to growth, here's exactly how we transform your online presence.
+            </p>
+          </div>
+          
+          {/* Visual Timeline */}
+          <div className="relative">
+            {/* Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 to-primary-700 hidden md:block"></div>
+            
+            {sliderItems.map((item, index) => (
+              <div key={index} className={`relative mb-12 md:mb-16 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                {/* Desktop Layout */}
+                <div className="hidden md:grid md:grid-cols-2 md:gap-8 items-center">
+                  {index % 2 === 0 ? (
+                    <>
+                      {/* Content on Left */}
+                      <div className="pr-8">
+                        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed whitespace-pre-line">
+                            {item.description}
+                          </p>
+                          
+                          {/* Real Client Example */}
+                          <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500">
+                            <div className="text-sm text-green-700 dark:text-green-400">
+                              <strong>Real Example:</strong> {getClientExample(index)}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      {/* Timeline Node */}
+                      <div className="relative flex justify-start">
+                        <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                          {index + 1}
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <>
+                      {/* Timeline Node */}
+                      <div className="relative flex justify-end">
+                        <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                          {index + 1}
+                        </div>
+                      </div>
+                      
+                      {/* Content on Right */}
+                      <div className="pl-8">
+                        <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                          <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-400 leading-relaxed whitespace-pre-line">
+                            {item.description}
+                          </p>
+                          
+                          {/* Real Client Example */}
+                          <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500">
+                            <div className="text-sm text-green-700 dark:text-green-400">
+                              <strong>Real Example:</strong> {getClientExample(index)}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  )}
+                </div>
+                
+                {/* Mobile Layout */}
+                <div className="md:hidden">
+                  <div className="flex items-start gap-4">
+                    <div className="flex-shrink-0 w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">
+                      {index + 1}
+                    </div>
+                    <div className="flex-1">
+                      <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed whitespace-pre-line mb-3">
+                          {item.description}
+                        </p>
+                        
+                        {/* Real Client Example */}
+                        <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500">
+                          <div className="text-xs text-green-700 dark:text-green-400">
+                            <strong>Real Example:</strong> {getClientExample(index)}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services Section - Simplified for now */}
+      <section className="py-16 md:py-24 dark:bg-[#000000]">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="flex justify-center gap-1 mb-4">
+              <Icon name="star-icon" alt="star-icon" className="w-[18px] h-[18px] mt-1" />
+              <p className="font-sans font-normal text-[12px] sm:text-2xl leading-6 tracking-[-0.24px] text-[#8D9DFF]">
+                100% Satisfaction Guaranteed
+              </p>
+            </div>
+            <h4 className="text-[32px] sm:text-[62px] leading-[36px] sm:leading-[62px] font-medium text-center tracking-[-0.078em] font-Roboto dark:text-[#F1F1EF]">
+              What We Do Best
+            </h4>
+          </div>
+
+          {/* Mobile Services Slider */}
+          <MobileServicesSlider isDark={isDark} />
+
+          {/* Feature Tags */}
+          <div className="mt-10 flex flex-wrap gap-3 lg:gap-4 justify-center items-center max-w-5xl mx-auto">
+            {[
+              "Lightning Fast Loading", "Fort Knox Security", "Visitors Stay & Convert", "Unlimited Updates", "Premium Hosting",
+              "Growth Analytics", "24/7 Support", "Google-Ready", 
+              "Conversion Tracking", "Mobile-Optimized"
+            ].map((text, index) => (
+              <div
+                key={index}
+                className="flex items-center justify-center gap-3 bg-[#F3F3F3] rounded-[16px] px-4 py-2 dark:bg-[#101010] dark:text-[#F1F1EF]"
+              >
+                <Icon name="newstar" className="w-[18px] h-[19px]" />
+                <p className="text-[12px] sm:text-[16px] font-normal font-['Roboto'] text-center">
+                  {text}
+                </p>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -715,6 +1140,134 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Forte Ecosystem Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 md:mb-16">
+                <div className="inline-flex items-center gap-2 bg-primary-100 dark:bg-primary-900/30 px-4 py-2 rounded-full mb-6">
+                  <span className="text-2xl">🌐</span>
+                  <span className="font-semibold text-primary-700 dark:text-primary-300">The Complete System</span>
+                </div>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6">
+                  The Forte Ecosystem™: Your Entire Digital Presence, Handled
+                </h2>
+                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+                  You're not just getting a website. You're stepping into a powerful, done-for-you system that's built to grow with you.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={200}>
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-200 dark:border-gray-700 mb-12">
+                <blockquote className="text-lg md:text-xl text-gray-700 dark:text-gray-300 italic mb-8 text-center">
+                  "At Forte, we don't stop at launch. We become your behind-the-scenes digital team."
+                </blockquote>
+                
+                <div className="space-y-6">
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary-600 dark:text-primary-400 font-bold">1</span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        We start with <strong>Forte Foundation™</strong>
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Your fast, secure, hand-coded website designed to convert visitors into customers.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary-600 dark:text-primary-400 font-bold">2</span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        Then we evolve into <strong>Forte Pro™</strong>
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Full-service support, analytics, and unlimited updates to keep things sharp.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0">
+                      <span className="text-primary-600 dark:text-primary-400 font-bold">3</span>
+                    </div>
+                    <div>
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                        We drive traffic through <strong>SEO</strong> and <strong>PPC</strong> strategies
+                      </h4>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        Built into your plan, aligned with your goals. No searching around. No tech headaches. Just one unified system.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 rounded-xl border border-primary-200 dark:border-primary-800">
+                  <p className="text-center text-gray-700 dark:text-gray-300 mb-4">
+                    <strong>Whether you're a startup or a scaling business, Forte adapts with you.</strong>
+                  </p>
+                  <p className="text-center text-gray-600 dark:text-gray-400">
+                    We build, optimize, and manage it all — so you can stay focused on your business.
+                  </p>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            {/* Visual Flow */}
+            <SimpleScrollReveal direction="up" delay={400}>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🏗️</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Foundation</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Fast, secure website that converts</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🚀</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Pro</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Premium support & analytics</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">📈</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">SEO / PPC</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Targeted traffic & lead generation</p>
+                </div>
+                
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-2xl">🔧</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Ongoing Support</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Continuous optimization & growth</p>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={600}>
+              <div className="text-center">
+                <Link href="/pricing">
+                  <LightButton>See How It Works</LightButton>
+                </Link>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="bg-[#FFFFFF] dark:bg-[#000000] py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -738,7 +1291,150 @@ export default function Home() {
               Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals.
             </p>
           </div>
-        </div>      </section>
+        </div>
+      </section>
+
+      {/* Mini ROI Statement */}
+      <section className="py-8 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 rounded-full px-6 py-3 shadow-lg border border-gray-200 dark:border-gray-700">
+              <span className="text-green-600 dark:text-green-400 font-semibold text-sm">💰 ROI FACT:</span>
+              <span className="text-gray-700 dark:text-gray-300 text-sm">
+                Our average client sees <strong>3x more leads</strong> within 90 days
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Plans */}
+      <PricingPage />
+      
+      {/* Forte Ecosystem Section */}
+      <section className="py-16 sm:py-20 md:py-24 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900/30">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={200}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                The Forte™ Ecosystem: Your Complete Growth Solution
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                Every service works together seamlessly for maximum results. One experienced developer handling your complete online presence - no juggling multiple vendors.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-3xl mb-4">🌐</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  Forte Foundation™
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                  Your website + Forte Care™ included
+                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-semibold">
+                  $200/month
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={400}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-3xl mb-4">🔍</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  + Forte SEO™
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                  Get found on Google
+                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-semibold">
+                  +$300-500/month
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={500}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-3xl mb-4">🎯</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  + Forte PPC™
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                  Drive immediate traffic
+                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-semibold">
+                  +$400-650/month
+                </div>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={600}>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-3xl mb-4">📱</div>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  + Forte Social™
+                </h3>
+                <p className="text-gray-600 dark:text-gray-400 text-sm mb-3">
+                  Build your community
+                </p>
+                <div className="text-primary-600 dark:text-primary-400 font-semibold">
+                  +$200-350/month
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+
+          <SimpleScrollReveal direction="up" delay={700}>
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+              <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="flex-1">
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                    Why the Forte Ecosystem™ Approach Works
+                  </h3>
+                  <ul className="space-y-3 text-gray-600 dark:text-gray-400">
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span><strong>One experienced developer</strong> - no vendor juggling or communication gaps</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span><strong>Consistent branding</strong> and messaging across all channels</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span><strong>Forte Care™ foundation</strong> ensures all services perform optimally</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span><strong>Scale as you grow</strong> - start small, add services when ready</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <span className="text-green-500">✓</span>
+                      <span><strong>Personal attention</strong> - you work directly with the developer, not account managers</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="lg:w-1/3">
+                  <div className="bg-gradient-to-br from-primary-500 to-primary-700 rounded-xl p-6 text-white text-center">
+                    <div className="text-2xl font-bold mb-2">Popular Example:</div>
+                    <div className="text-sm opacity-90 mb-3">Foundation + SEO + Social</div>
+                    <div className="text-3xl font-bold">$700/month</div>
+                    <div className="text-sm opacity-90 mt-2">Complete digital presence</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Meet Seth Section */}
+      <Suspense fallback={<div className="min-h-[300px] flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+        <MeetSethSection />
+      </Suspense>
 
       {/* Contact Section - Enhanced with Calendly and Map */}
       <section className="py-12 sm:py-16 md:py-20 relative z-10 px-4 sm:px-6 lg:px-8">
