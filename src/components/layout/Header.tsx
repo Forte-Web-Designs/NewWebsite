@@ -357,7 +357,7 @@ export default function Header() {
                   <Icon
                     name="logo-m"
                     alt="Forte Logo (Mobile)"
-                    className="w-[19px] h-[25px] text-black dark:text-white"
+                    className={`w-[19px] h-[25px] ${isSticky ? 'text-secondary-1250 dark:text-white' : 'text-black dark:text-white'}`}
                     folder="shared/icons"
                   />
                 </Link>
