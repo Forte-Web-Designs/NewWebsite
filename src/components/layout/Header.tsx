@@ -173,6 +173,7 @@ export default function Header() {
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-8">
                   <HeaderLink href="/">Home</HeaderLink>
+                  <HeaderLink href="/about">About</HeaderLink>
                   <Dropdown
                     items={serviceDropdownItem}
                     width="270px"
@@ -182,10 +183,10 @@ export default function Header() {
                       </div>
                     }
                   />
-                  <HeaderLink href="/forte-method">Our Process</HeaderLink>
-                  <HeaderLink href="/solutions/seotool">Forte Site Checkup</HeaderLink>
-                  <HeaderLink href="/forte-care">Support & Care</HeaderLink>
-                  <HeaderLink href="/forte-guarantee">Guarantee</HeaderLink>
+                  <HeaderLink href="/our-work">Our Work</HeaderLink>
+                  <HeaderLink href="/forte-method">Process</HeaderLink>
+                  <HeaderLink href="/checkup">Free Checkup</HeaderLink>
+                  <HeaderLink href="/faq">FAQ</HeaderLink>
                   <HeaderLink href="/pricing">Pricing</HeaderLink>
                 </nav>
 
@@ -239,6 +240,10 @@ export default function Header() {
                   Home
                 </Link>
                 
+                <Link href="/about" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  About
+                </Link>
+                
                 <MobileExpandableMenu title="Services" isActive={pathname?.startsWith('/services')}>
                   <div className="space-y-2 pl-4">
                     {serviceDropdownItem.map((item, index) => (
@@ -254,15 +259,22 @@ export default function Header() {
                   </div>
                 </MobileExpandableMenu>
 
+                <Link href="/our-work" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Our Work
+                </Link>
+                
                 <Link href="/forte-method" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  Our Process
+                  Process
                 </Link>
-                <Link href="/forte-care" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  Support & Care
+                
+                <Link href="/checkup" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Free Checkup
                 </Link>
-                <Link href="/forte-guarantee" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  Guarantee
+                
+                <Link href="/faq" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  FAQ
                 </Link>
+                
                 <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                   Pricing
                 </Link>
@@ -322,6 +334,7 @@ export default function Header() {
             {/* Desktop Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
               <HeaderLink href="/">Home</HeaderLink>
+              <HeaderLink href="/about">About</HeaderLink>
               <Dropdown
                 items={serviceDropdownItem}
                 width="270px"
@@ -331,10 +344,10 @@ export default function Header() {
                   </div>
                 }
               />
-              <HeaderLink href="/forte-method">Our Process</HeaderLink>
-              <HeaderLink href="/solutions/seotool">Forte Site Checkup</HeaderLink>
-              <HeaderLink href="/forte-care">Support & Care</HeaderLink>
-              <HeaderLink href="/forte-guarantee">Guarantee</HeaderLink>
+              <HeaderLink href="/our-work">Our Work</HeaderLink>
+              <HeaderLink href="/forte-method">Process</HeaderLink>
+              <HeaderLink href="/checkup">Free Checkup</HeaderLink>
+              <HeaderLink href="/faq">FAQ</HeaderLink>
               <HeaderLink href="/pricing">Pricing</HeaderLink>
             </nav>
 
