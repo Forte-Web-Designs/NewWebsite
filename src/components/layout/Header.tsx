@@ -140,7 +140,7 @@ export default function Header() {
     { label: 'The Forte Method™', href: '/solutions/method' },
   ];
 
-  // Don't render theme-dependent content until mounted
+  // Don't render theme-dependent content until mounted - but render the full structure
   if (!mounted) {
     return (
       <>
@@ -149,98 +149,149 @@ export default function Header() {
         
         <header className={`transition-all duration-300 ${
           isSticky 
-            ? 'fixed top-0 left-0 right-0 z-[60] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
+            ? 'fixed top-0 left-0 right-0 z-[60] bg-white/95 backdrop-blur-md shadow-lg py-2' 
             : 'py-4'
         }`}>
           <div>
             <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between">
-              {/* Desktop Logo - Hidden on mobile */}
-              <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
-                <img
-                  src="/images/home/logo2.png"
-                  alt="Forte Logo (Light Mode)"
-                  className="block dark:hidden"
-                  height={48}
-                />
-                <img
-                  src="/images/home/logo1.png"
-                  alt="Forte Logo (Dark Mode)"
-                  className="hidden dark:block"
-                  height={48}
-                />
-              </Link>
+                {/* Desktop Logo - Hidden on mobile */}
+                <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
+                  <img
+                    src="/images/home/logo2.png"
+                    alt="Forte Logo"
+                    height={48}
+                  />
+                </Link>
 
-              {/* Desktop Navigation */}
-              <nav className="hidden lg:flex items-center space-x-8">
-                <HeaderLink href="/">Home</HeaderLink>
-                <Dropdown
-                  items={serviceDropdownItem}
-                  width="270px"
-                  trigger={
-                    <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                      <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
-                    </div>
-                  }
-                />
-                <HeaderLink href="/forte-method">Our Process</HeaderLink>
-                <HeaderLink href="/forte-care">Support & Care</HeaderLink>
-                <HeaderLink href="/forte-guarantee">Guarantee</HeaderLink>
-                <HeaderLink href="/pricing">Pricing</HeaderLink>
-              </nav>
+                {/* Desktop Navigation */}
+                <nav className="hidden lg:flex items-center space-x-8">
+                  <HeaderLink href="/">Home</HeaderLink>
+                  <Dropdown
+                    items={serviceDropdownItem}
+                    width="270px"
+                    trigger={
+                      <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
+                      </div>
+                    }
+                  />
+                  <HeaderLink href="/forte-method">Our Process</HeaderLink>
+                  <HeaderLink href="/forte-care">Support & Care</HeaderLink>
+                  <HeaderLink href="/forte-guarantee">Guarantee</HeaderLink>
+                  <HeaderLink href="/pricing">Pricing</HeaderLink>
+                </nav>
 
-              {/* Desktop Right Side - Phone Number, Theme Toggle and Contact Button */}
-              <nav className="hidden lg:flex items-center space-x-6">
-                {/* Phone Number */}
-                <div className="flex flex-col items-end">
+                {/* Desktop Right Side - Phone Number and Contact Button */}
+                <nav className="hidden lg:flex items-center space-x-6">
+                  {/* Phone Number */}
+                  <div className="flex flex-col items-end">
+                    <a 
+                      href="tel:8178736655"
+                      className="font-roboto font-semibold text-lg text-blue-600 hover:text-blue-700 transition-colors duration-300"
+                    >
+                      (817) 873-6655
+                    </a>
+                    <span className="text-xs text-gray-500 font-medium">Call or Text</span>
+                  </div>
+
+                  {/* Theme Toggle - Hidden during SSR */}
+                  <div className="opacity-0">
+                    <button className="w-6 h-6 rounded-full bg-gray-200"></button>
+                  </div>
+
+                  {/* Contact Button */}
+                  <DarkButton href="/contact" className="px-6 py-2 text-sm">
+                    Get Started Today
+                  </DarkButton>
+                </nav>
+
+                {/* Mobile Menu Button */}
+                <button 
+                  className="lg:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 opacity-0"
+                  aria-label="Toggle mobile menu"
+                >
+                  <div className="w-6 h-6 flex flex-col justify-center items-center">
+                    <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300"></span>
+                    <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 my-1"></span>
+                    <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300"></span>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+            mobileMenuOpen 
+              ? 'max-h-screen opacity-100' 
+              : 'max-h-0 opacity-0 overflow-hidden'
+          }`}>
+            <div className="px-4 sm:px-6 py-4 bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-700">
+              {/* Mobile Logo */}
+              <div className="mb-6 text-center">
+                <Link href="/" prefetch={true} onClick={() => setMobileMenuOpen(false)}>
+                  <img
+                    src="/images/home/logo2.png"
+                    alt="Forte Logo"
+                    className="mx-auto h-8"
+                  />
+                </Link>
+              </div>
+
+              {/* Mobile Navigation Links */}
+              <div className="space-y-4">
+                <Link href="/" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Home
+                </Link>
+                
+                <MobileExpandableMenu title="Services" isActive={pathname?.startsWith('/services')}>
+                  <div className="space-y-2 pl-4">
+                    {serviceDropdownItem.map((item, index) => (
+                      <Link
+                        key={index}
+                        href={item.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                      >
+                        {item.label}
+                      </Link>
+                    ))}
+                  </div>
+                </MobileExpandableMenu>
+
+                <Link href="/forte-method" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Our Process
+                </Link>
+                <Link href="/forte-care" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Support & Care
+                </Link>
+                <Link href="/forte-guarantee" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Guarantee
+                </Link>
+                <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  Pricing
+                </Link>
+              </div>
+
+              {/* Mobile CTA */}
+              <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-700">
+                <DarkButton href="/contact" className="w-full text-center py-3 mb-4" onClick={() => setMobileMenuOpen(false)}>
+                  Get Started Today
+                </DarkButton>
+                <div className="text-center">
                   <a 
                     href="tel:8178736655"
-                    className="font-roboto font-semibold text-lg text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors duration-300"
+                    className="font-roboto font-semibold text-lg text-blue-600 hover:text-blue-700 transition-colors duration-300"
                   >
                     (817) 873-6655
                   </a>
-                  <span className="text-xs text-gray-600 dark:text-gray-400">
-                    Same Day Response
-                  </span>
+                  <p className="text-xs text-gray-500 mt-1">Call or Text</p>
                 </div>
-                <div className="ml-4">
-                  <ThemeToggle />
-                </div>
-                <Link
-                  href="/contact"
-                  prefetch={true}
-                  className="
-                    font-roboto font-medium text-lg leading-[18px] tracking-normal text-right align-middle
-                    inline-flex items-center justify-center
-                    h-[46px] gap-3 py-[14px] px-5
-                    rounded-[61.2px]
-                    border
-                    border-transparent
-                    shadow-[0px_4px_40px_0px_#8193FF]
-                    transition-all duration-300
-                    relative
-                    overflow-hidden
-                    bg-black
-                    text-white
-                    group
-                  "
-                >
-                  <span className="
-                    absolute inset-0
-                    rounded-[61.2px]
-                    p-px
-                    bg-gradient-to-br from-[#5C73FF_14.95%] to-[transparent_60.22%]
-                    -z-10
-                    group-hover:from-[#4c63e6]
-                  "></span>
-                  Get Free Analysis
-                  <Icon name="rightarrow" alt="right arrow icon" className="w-[7px] h-[12px]" />
-                </Link>
-              </nav>
+              </div>
             </div>
           </div>
-        </div>
-      </header>
+        </header>
       </>
     );
   }

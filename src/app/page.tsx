@@ -784,22 +784,128 @@ export default function Home() {
 
           <SimpleScrollReveal direction="up" delay={800}>
             <div className="text-center mt-12">
-              <div className="bg-gradient-to-r from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900/20 rounded-xl p-8 max-w-4xl mx-auto">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Curious to see how your site performs?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  Get a free 5-point analysis of your website's performance, SEO, and conversion potential.
-                </p>
-                <div className="max-w-2xl mx-auto">
-                  <Suspense fallback={<div className="animate-pulse bg-gray-200 dark:bg-gray-700 h-32 rounded-lg"></div>}>
-                    <InstantMiniAudit 
-                      onFullAuditClick={(url, seoScore) => {
-                        // Navigate to full audit with pre-filled URL
-                        window.location.href = `/solutions/seotool?url=${encodeURIComponent(url)}&score=${seoScore || 0}`;
-                      }}
-                    />
-                  </Suspense>
+              <div className="bg-gradient-to-r from-blue-900 to-purple-900 rounded-xl p-8 max-w-6xl mx-auto text-white">
+                <div className="grid md:grid-cols-2 gap-8 items-center">
+                  {/* Left Side - Content */}
+                  <div className="text-left">
+                    <div className="inline-flex items-center gap-2 bg-blue-600 px-3 py-1 rounded-full mb-4">
+                      <span className="text-sm font-medium">🚀 Free Analysis</span>
+                    </div>
+                    <h3 className="text-3xl font-bold mb-4">
+                      Curious How Your Website <span className="text-blue-300">Really</span> Performs?
+                    </h3>
+                    <p className="text-blue-100 mb-6 text-lg">
+                      Want to see how your website really performs? Our free analysis takes 30 seconds and might surprise you.
+                    </p>
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center gap-3 text-blue-100">
+                        <span className="text-green-400">✓</span>
+                        <span>100% Free</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-blue-100">
+                        <span className="text-green-400">✓</span>
+                        <span>Instant Results</span>
+                      </div>
+                      <div className="flex items-center gap-3 text-blue-100">
+                        <span className="text-green-400">✓</span>
+                        <span>No Email Required</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Right Side - Audit Tool */}
+                  <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <div className="flex items-center gap-2 mb-6">
+                      <span className="text-2xl">🚀</span>
+                      <h4 className="text-xl font-bold">Free 5-Point Website Audit</h4>
+                    </div>
+                    <p className="text-blue-100 mb-4">
+                      See what's helping or hurting your site — instantly.
+                    </p>
+                    <p className="text-blue-200 text-sm mb-6">
+                      No email. No sales pitch. Just real, helpful insights.
+                    </p>
+
+                    {/* What We Check */}
+                    <div className="bg-white/5 rounded-lg p-4 mb-6">
+                      <div className="flex items-center gap-2 mb-3">
+                        <span className="text-blue-300">🔍</span>
+                        <span className="font-semibold">What We Check:</span>
+                      </div>
+                      <div className="space-y-2 text-sm">
+                        <div className="flex items-center gap-2">
+                          <span className="text-orange-400">🔥</span>
+                          <span><strong>PageSpeed & Load Time</strong> – How fast does your site really load?</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-blue-400">📱</span>
+                          <span><strong>Mobile Friendliness</strong> – Is your site optimized for phones?</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-green-400">🟢</span>
+                          <span><strong>SEO Basics</strong> – Can Google actually find and rank you?</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-pink-400">🎨</span>
+                          <span><strong>Design & Clarity</strong> – Is your homepage clear and conversion-ready?</span>
+                        </div>
+                        <div className="flex items-center gap-2">
+                          <span className="text-yellow-400">🔒</span>
+                          <span><strong>Security & Trust Signals</strong> – Do visitors feel safe on your site?</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Why It Matters */}
+                    <div className="bg-red-500/20 rounded-lg p-4 mb-6 border border-red-400/30">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-red-400">⚠️</span>
+                        <span className="font-semibold text-red-300">Why It Matters:</span>
+                      </div>
+                      <p className="text-red-100 text-sm">
+                        You only get one chance to make a digital first impression. This quick audit shows where you stand — and how to improve.
+                      </p>
+                    </div>
+
+                    {/* Try It Now */}
+                    <div className="text-center mb-4">
+                      <div className="flex items-center justify-center gap-2 mb-2">
+                        <span className="text-yellow-400">✨</span>
+                        <span className="font-bold">Try It Now (Takes 30 Seconds)</span>
+                      </div>
+                    </div>
+
+                    {/* URL Input */}
+                    <div className="mb-4">
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-yellow-400">👆</span>
+                        <span className="font-semibold">Enter your website below:</span>
+                      </div>
+                      <div className="relative">
+                        <span className="text-red-400 absolute left-3 top-1/2 transform -translate-y-1/2">📍</span>
+                        <span className="font-bold absolute left-8 top-1/2 transform -translate-y-1/2 text-red-300">Your Website URL:</span>
+                      </div>
+                    </div>
+
+                    {/* Audit Component */}
+                    <div className="mt-8">
+                      <Suspense fallback={<div className="animate-pulse bg-white/10 h-32 rounded-lg"></div>}>
+                        <InstantMiniAudit 
+                          onFullAuditClick={(url, seoScore) => {
+                            // Navigate to full audit with pre-filled URL
+                            window.location.href = `/solutions/seotool?url=${encodeURIComponent(url)}&score=${seoScore || 0}`;
+                          }}
+                        />
+                      </Suspense>
+                    </div>
+
+                    {/* Bottom CTA */}
+                    <div className="mt-6 text-center">
+                      <div className="bg-gradient-to-r from-yellow-500 to-orange-500 rounded-lg p-3">
+                        <span className="font-bold text-black">👆 Enter Your Website URL First</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
