@@ -120,7 +120,7 @@ export default function Contact() {
                   <div className="mt-4 grid grid-cols-3 gap-4 text-center">
                     <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
                       <div className="text-lg font-bold text-blue-600 dark:text-blue-400">20+</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Texas Businesses</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Businesses</div>
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
                       <div className="text-lg font-bold text-green-600 dark:text-green-400">24hr</div>

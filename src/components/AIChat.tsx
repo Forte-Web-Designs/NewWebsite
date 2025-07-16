@@ -296,7 +296,7 @@ const AIChat = () => {
 
     // Examples/work questions
     if (msg.includes('example') || msg.includes('work') || msg.includes('portfolio') || msg.includes('case stud') || msg.includes('see your') || msg.includes('show me')) {
-      return "I'd love to show you! 🎨 Here are some real websites we've built that are driving results:\n\n• **The Southern Landscape Firm** - Custom landscaping site with lead generation\n• **Local HVAC company** - Went from 3 to 30+ leads per month\n• **Law firm** - Doubled their client inquiries in 4 months\n• **Landscaping business** - Increased revenue 150% in 6 months\n• **Accounting firm** - Got to page 1 of Google for main keywords\n\n[🎯 See our complete portfolio here](/about/work)\n\nEach website is completely custom-built for the specific business and their goals. No templates, no shortcuts.\n\n[📞 Want to discuss your project? Contact us here](/contact)";
+      return "I'd love to show you! 🎨 Here are some real websites we've built that are driving results:\n\n• The Southern Landscape Firm - Custom landscaping site with lead generation\n• Local HVAC company - Went from 3 to 30+ leads per month\n• Law firm - Doubled their client inquiries in 4 months\n• Landscaping business - Increased revenue 150% in 6 months\n• Accounting firm - Got to page 1 of Google for main keywords\n\n[🎯 See our complete portfolio here](/about/work)\n\nEach website is completely custom-built for the specific business and their goals. No templates, no shortcuts.\n\n[📞 Want to discuss your project? Contact us here](/contact)";
     }
 
     // Location/local questions

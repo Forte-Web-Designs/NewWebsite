@@ -123,7 +123,7 @@ export default function TestimonialsSection({
           <div className="mt-12 text-center">
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 max-w-4xl mx-auto">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-6">
-                Trusted by 20+ Local Businesses
+                Trusted by 20+ Businesses
               </h3>
               <div className="grid md:grid-cols-3 gap-6 items-center">
                 <div className="text-center">
@@ -139,7 +139,7 @@ export default function TestimonialsSection({
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900 dark:text-white">20+</div>
-                  <div className="text-sm text-gray-600 dark:text-gray-400">Local Businesses Served</div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400">Businesses Served</div>
                 </div>
                 <div className="text-center">
                   <div className="text-2xl font-bold text-gray-900 dark:text-white">&lt;2s</div>

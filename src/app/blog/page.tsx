@@ -13,6 +13,18 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'ai-tools-small-business-2025',
+    title: 'AI Tools Every Small Business Should Use in 2025 (Without Breaking the Bank)',
+    excerpt: 'Discover practical AI tools that can automate tasks, improve customer service, and boost productivity for small businesses. Real tools, real results, realistic budgets.',
+    author: 'Seth Forte',
+    date: '2025-07-15',
+    readTime: '7 min read',
+    category: 'Technology',
+    image: '/images/blog/ai-tools-small-business.webp',
+    tags: ['AI Tools', 'Small Business', 'Productivity', 'Automation'],
+    featured: true
+  },
+  {
     id: 'local-seo-small-business-2025',
     title: 'Local SEO for Small Businesses: The Complete 2025 Guide',
     excerpt: 'Master local SEO to dominate "near me" searches and attract more local customers. Everything you need to know about Google My Business, local citations, and location-based optimization.',
