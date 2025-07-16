@@ -68,6 +68,33 @@ img, video {
   cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxOCAxMEw3IDEyTDEgMTlWMVoiIGZpbGw9IiM0MDkzRkYiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIwLjUiLz4KPC9zdmc+Cg=="), auto !important;
 }
 
+/* Pointer cursor for all clickable elements */
+button, 
+input[type="button"],
+input[type="submit"],
+input[type="reset"],
+input[type="checkbox"],
+input[type="radio"],
+select,
+a,
+[role="button"],
+[role="link"],
+[role="tab"],
+[role="menuitem"],
+[tabindex]:not([tabindex="-1"]),
+.cursor-pointer {
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwxOCAxMEw3IDEyTDEgMTlWMVoiIGZpbGw9IiNGRjY2MDAiIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxIi8+Cjwvc3ZnPgo="), pointer !important;
+}
+
+/* Hover states for interactive elements */
+button:hover,
+a:hover,
+[role="button"]:hover,
+[role="link"]:hover,
+.hover\:cursor-pointer:hover {
+  cursor: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEgMUwyMiAxMkw4IDE0TDEgMjNWMVoiIGZpbGw9IiNGRjAwNzciIHN0cm9rZT0iI0ZGRkZGRiIgc3Ryb2tlLXdpZHRoPSIxLjUiLz4KPC9zdmc+Cg=="), pointer !important;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

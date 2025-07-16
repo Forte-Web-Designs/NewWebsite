@@ -1,6 +1,4 @@
 import { Icon } from "@/components/images/Icon";
-import { OptimizedImage } from "@/components/images/OptimizedImage";
-import ForteMethodSteps from "@/components/ForteMethodSteps";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -244,23 +242,14 @@ export default function SocialMediaManagement() {
         </div>
       </div>
 
-      {/* Add ForteMethodSteps - Mobile Optimized */}
-      <ForteMethodSteps
-        badge="The Forte Method"
-        items={forteMethodItems}
-        title="Our proprietary 5-step system ensures every site we launch is fast, secure, and conversion-optimized"
-        subtitle=""
-        titleClassName="font-inter-display font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight text-start text-gray-900 dark:text-white"
-      />
-
       {/* Enhanced Method Steps with Client Examples */}
       <div className="w-full py-16 sm:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900 rounded-2xl">
         <div className="text-center mb-12">
           <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF] mb-4">
-            Step-by-Step Client Examples
+            The Forte Method™: Step-by-Step Process
           </h2>
           <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
-            See how each step of the Forte Method™ created real results for our clients.
+            Our proprietary 5-step system ensures every site we launch is fast, secure, and conversion-optimized with real client examples.
           </p>
         </div>
 
@@ -519,10 +508,10 @@ export default function SocialMediaManagement() {
               Join businesses who chose reliability, speed, and results over templates and shortcuts.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
+              <button className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold cursor-pointer">
                 Start My Project
               </button>
-              <button className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+              <button className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors cursor-pointer">
                 View Portfolio
               </button>
             </div>

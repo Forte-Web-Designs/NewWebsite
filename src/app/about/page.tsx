@@ -4,11 +4,21 @@ import { OptimizedImage } from '@/components/images/OptimizedImage';
 import Image from "next/image";
 import ContactForm from "@/components/ContactForm";
 import { BackgroundImage } from "@/components/images/BackgroundImage";
-import ForteMethodSteps from "@/components/ForteMethodSteps";
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 
 
 export default function Website2() {
+  // Helper function for client examples
+  const getClientExample = (index: number) => {
+    const examples = [
+      "Mike's HVAC discovered 3 competitor advantages that shaped their messaging strategy",
+      "Bella's Boutique refined their homepage 4 times before finding the perfect customer flow", 
+      "TechCorp's hand-coded site loads in 1.2 seconds vs their old WordPress at 8+ seconds",
+      "Sunrise Veterinary went live with perfect mobile optimization and booking integration",
+      "Local law firm added 2 new practice areas after seeing monthly SEO keyword opportunities"
+    ];
+    return examples[index] || "Client saw immediate improvements in user engagement";
+  };
 
   const bulletsData = [
     {
@@ -179,12 +189,116 @@ export default function Website2() {
 
         </section>
 
-        {/* Forte Method Slider */}
-        <ForteMethodSteps
-          items={sliderItems}
-          title="The|Forte Method™"
-          subtitle="A proven web design system built for results."
-        />
+        {/* Forte Method Timeline */}
+        <section className="py-16 sm:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
+          <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                The Forte Method™
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                A proven web design system built for results. From discovery to growth, here's exactly how we transform your online presence.
+              </p>
+            </div>
+            
+            {/* Visual Timeline */}
+            <div className="relative">
+              {/* Timeline Line */}
+              <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-primary-500 to-primary-700 hidden md:block"></div>
+              
+              {sliderItems.map((item, index) => (
+                <div key={index} className={`relative mb-12 md:mb-16 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                  {/* Desktop Layout */}
+                  <div className="hidden md:grid md:grid-cols-2 md:gap-8 items-center">
+                    {index % 2 === 0 ? (
+                      <>
+                        {/* Content on Left */}
+                        <div className="pr-8">
+                          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                              {item.title}
+                            </h3>
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                              {item.description}
+                            </p>
+                            
+                            {/* Real Client Example */}
+                            <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500">
+                              <div className="text-sm text-green-700 dark:text-green-400">
+                                <strong>Real Example:</strong> {getClientExample(index)}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        {/* Timeline Node */}
+                        <div className="relative flex justify-start">
+                          <div className="absolute left-0 top-1/2 transform -translate-y-1/2 -translate-x-1/2 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                            {index + 1}
+                          </div>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        {/* Timeline Node */}
+                        <div className="relative flex justify-end">
+                          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 translate-x-1/2 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold shadow-lg z-10">
+                            {index + 1}
+                          </div>
+                        </div>
+                        
+                        {/* Content on Right */}
+                        <div className="pl-8">
+                          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                              {item.title}
+                            </h3>
+                            <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                              {item.description}
+                            </p>
+                            
+                            {/* Real Client Example */}
+                            <div className="mt-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500">
+                              <div className="text-sm text-green-700 dark:text-green-400">
+                                <strong>Real Example:</strong> {getClientExample(index)}
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </>
+                    )}
+                  </div>
+                  
+                  {/* Mobile Layout */}
+                  <div className="md:hidden">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-shrink-0 w-10 h-10 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">
+                        {index + 1}
+                      </div>
+                      <div className="flex-1">
+                        <div className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-lg border border-gray-200 dark:border-gray-700">
+                          <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+                            {item.title}
+                          </h3>
+                          <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed mb-3">
+                            {item.description}
+                          </p>
+                          
+                          {/* Real Client Example */}
+                          <div className="p-3 bg-green-50 dark:bg-green-900/20 rounded-lg border-l-4 border-green-500">
+                            <div className="text-xs text-green-700 dark:text-green-400">
+                              <strong>Real Example:</strong> {getClientExample(index)}
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
 
         <section className=" container w-[90%] mx-auto px-[10px] pt-[10px] pb-[30px]  rounded-xl  dark:bg-black">
           <div className="rounded-xl md:pt-16 md:pb-20 pt-8 pb-10 md:px-[45px]  ">
