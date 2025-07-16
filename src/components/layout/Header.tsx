@@ -168,6 +168,15 @@ export default function Header() {
                 <nav className="hidden md:flex items-center space-x-8">
                   <HeaderLink href="/">Home</HeaderLink>
                   <Dropdown
+                    items={aboutDropdownItems}
+                    width="130px"
+                    trigger={
+                      <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
+                      </div>
+                    }
+                  />
+                  <Dropdown
                     items={serviceDropdownItem}
                     width="270px"
                     trigger={
@@ -176,33 +185,27 @@ export default function Header() {
                       </div>
                     }
                   />
-                  <HeaderLink href="/forte-method">Our Process</HeaderLink>
-                  <HeaderLink href="/forte-care">Support & Care</HeaderLink>
-                  <HeaderLink href="/forte-guarantee">Guarantee</HeaderLink>
+                  <Dropdown
+                    items={solutionsDropdownItems}
+                    width="240px"
+                    trigger={
+                      <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/solutions" showIcon={true}>Forte Solutions™</HeaderLink>
+                      </div>
+                    }
+                  />
+                  <HeaderLink href="/blog">Blog</HeaderLink>
                   <HeaderLink href="/pricing">Pricing</HeaderLink>
                 </nav>
 
-                {/* Desktop Right Side - Phone Number and Contact Button */}
-                <nav className="hidden md:flex items-center space-x-6">
-                  {/* Phone Number */}
-                  <div className="flex flex-col items-end">
-                    <a 
-                      href="tel:8178736655"
-                      className="font-roboto font-semibold text-lg text-blue-600 hover:text-blue-700 transition-colors duration-300"
-                    >
-                      (817) 873-6655
-                    </a>
-                    <span className="text-xs text-gray-500 font-medium">Call or Text</span>
-                  </div>
-
+                {/* Desktop Right Side - Theme Toggle and Contact Button */}
+                <nav className="hidden md:flex items-center space-x-8">
                   {/* Theme Toggle - Hidden during SSR */}
                   <div className="opacity-0">
                     <button className="w-6 h-6 rounded-full bg-gray-200"></button>
                   </div>
-
-                  {/* Contact Button */}
-                  <DarkButton href="/contact" className="px-6 py-2 text-sm">
-                    Get Started Today
+                  <DarkButton href='/contact'>
+                    Contact Us
                   </DarkButton>
                 </nav>
 
