@@ -3,6 +3,7 @@
 ## Overview
 Comprehensive quality of life improvements implemented to make the AI chat more user-friendly, readable, and intuitive for both desktop and mobile users.
 
+s
 ## 🎨 **Visual & Readability Enhancements**
 
 ### **AI Assistant Rebranding**
