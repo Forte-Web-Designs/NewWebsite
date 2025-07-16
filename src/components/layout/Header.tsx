@@ -175,15 +175,6 @@ export default function Header() {
               <nav className="hidden lg:flex items-center space-x-8">
                 <HeaderLink href="/">Home</HeaderLink>
                 <Dropdown
-                  items={aboutDropdownItems}
-                  width="130px"
-                  trigger={
-                    <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                      <HeaderLink href="/about" showIcon={true}>About</HeaderLink>
-                    </div>
-                  }
-                />
-                <Dropdown
                   items={serviceDropdownItem}
                   width="270px"
                   trigger={
@@ -192,16 +183,9 @@ export default function Header() {
                     </div>
                   }
                 />
-
-                <Dropdown
-                  items={solutionsDropdownItems}
-                  width="240px"
-                  trigger={
-                    <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                      <HeaderLink href="/solutions" showIcon={true}>Solutions</HeaderLink>
-                    </div>
-                  }
-                />
+                <HeaderLink href="/forte-method">Our Process</HeaderLink>
+                <HeaderLink href="/forte-care">Support & Care</HeaderLink>
+                <HeaderLink href="/forte-guarantee">Guarantee</HeaderLink>
                 <HeaderLink href="/pricing">Pricing</HeaderLink>
               </nav>
 
@@ -607,17 +591,47 @@ export default function Header() {
                     </div>
                   </MobileExpandableMenu>
 
-                  {/* Blog */}
+                  {/* Our Process */}
                   <div className="flex items-center justify-between py-4">
                     <Link
-                      href="/blog"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/blog' || pathname.startsWith('/blog/') ? 'text-[#8D9DFF]' : 'text-white'
+                      href="/forte-method"
+                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/forte-method' ? 'text-[#8D9DFF]' : 'text-white'
                         }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
-                      Blog
+                      Our Process
                     </Link>
-                    {(pathname === '/blog' || pathname.startsWith('/blog/')) && (
+                    {pathname === '/forte-method' && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
+
+                  {/* Support & Care */}
+                  <div className="flex items-center justify-between py-4">
+                    <Link
+                      href="/forte-care"
+                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/forte-care' ? 'text-[#8D9DFF]' : 'text-white'
+                        }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Support & Care
+                    </Link>
+                    {pathname === '/forte-care' && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
+
+                  {/* Guarantee */}
+                  <div className="flex items-center justify-between py-4">
+                    <Link
+                      href="/forte-guarantee"
+                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/forte-guarantee' ? 'text-[#8D9DFF]' : 'text-white'
+                        }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Guarantee
+                    </Link>
+                    {pathname === '/forte-guarantee' && (
                       <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
                     )}
                   </div>
@@ -635,6 +649,20 @@ export default function Header() {
                     {pathname === '/pricing' && (
                       <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
                     )}
+                  </div>
+
+                  {/* Contact CTA */}
+                  <div className="pt-8 pb-4">
+                    <Link
+                      href="/contact"
+                      className="block w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white text-center py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Get Started Today
+                    </Link>
+                    <p className="text-center text-white/80 text-sm mt-3">
+                      📞 (817) 873-6655 • Same day response
+                    </p>
                   </div>
                 </nav>
               </div>

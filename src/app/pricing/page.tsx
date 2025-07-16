@@ -371,6 +371,127 @@ export default function Pricing() {
         {/* ROI Calculator Section */}
         <ROICalculator />
         
+        {/* Forte Ecosystem Section */}
+        <div className="px-4 sm:px-6 lg:px-8 py-16 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12 md:mb-16">
+              <div className="inline-flex items-center gap-2 bg-primary-100 dark:bg-primary-900/30 px-4 py-2 rounded-full mb-6">
+                <span className="text-2xl">🌐</span>
+                <span className="font-semibold text-primary-700 dark:text-primary-300">The Complete System</span>
+              </div>
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                The Forte Ecosystem™: Your Entire Digital Presence, Handled
+              </h2>
+              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
+                You're not just getting a website. You're stepping into a powerful, done-for-you system that's built to grow with you.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-xl border border-gray-200 dark:border-gray-700 mb-12">
+              <blockquote className="text-lg md:text-xl text-gray-700 dark:text-gray-300 italic mb-8 text-center">
+                "At Forte, we don't stop at launch. We become your behind-the-scenes digital team."
+              </blockquote>
+              
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-600 dark:text-primary-400 font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      We start with <strong>Forte Foundation™</strong>
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Your fast, secure, hand-coded website designed to convert visitors into customers.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-600 dark:text-primary-400 font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      Then we evolve into <strong>Forte Pro™</strong>
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Full-service support, analytics, and unlimited updates to keep things sharp.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-4">
+                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center flex-shrink-0">
+                    <span className="text-primary-600 dark:text-primary-400 font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                      We drive traffic through <strong>SEO</strong> and <strong>PPC</strong> strategies
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      Built into your plan, aligned with your goals. No searching around. No tech headaches. Just one unified system.
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="mt-8 p-6 bg-gradient-to-r from-primary-50 to-purple-50 dark:from-primary-900/20 dark:to-purple-900/20 rounded-xl border border-primary-200 dark:border-primary-800">
+                <p className="text-center text-gray-700 dark:text-gray-300 mb-4">
+                  <strong>Whether you're a startup or a scaling business, Forte adapts with you.</strong>
+                </p>
+                <p className="text-center text-gray-600 dark:text-gray-400">
+                  We build, optimize, and manage it all — so you can stay focused on your business.
+                </p>
+              </div>
+            </div>
+
+            {/* Visual Flow */}
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🏗️</span>
+                </div>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Foundation</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Fast, secure website that converts</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🚀</span>
+                </div>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Pro</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Premium support & analytics</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">📈</span>
+                </div>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">SEO / PPC</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Targeted traffic & lead generation</p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl">🔧</span>
+                </div>
+                <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Ongoing Support</h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Continuous optimization & growth</p>
+              </div>
+            </div>
+
+            <div className="text-center">
+              <p className="text-lg text-gray-700 dark:text-gray-300 mb-6">
+                Ready to experience the complete Forte ecosystem?
+              </p>
+              <Link href="/contact" className="text-primary-600 dark:text-primary-400 hover:underline font-semibold text-lg">
+                Start Your Journey with Forte →
+              </Link>
+            </div>
+          </div>
+        </div>
+        
         {/* Additional Help Section */}
         <div className="px-4 sm:px-6 lg:px-8 py-16">
           <div className="max-w-4xl mx-auto text-center">

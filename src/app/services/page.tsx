@@ -1,18 +1,23 @@
-import { Metadata } from 'next';
+"use client";
+
 import { Icon } from "@/components/images/Icon";
 import Link from 'next/link';
 import Image from 'next/image';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
+import { useState } from 'react';
 
-export const metadata: Metadata = {
-  title: 'Our Services',
-  description: 'Professional web development and digital services offered by Forte.',
-};
-
-const cardsData = [
+const coreServices = [
   {
-    title: "Websites That Actually Make You Money",
-    desc: "Forget pretty websites that don't convert. We hand-code lightning-fast sites that turn visitors into customers. No templates, no page builders, just sites that work.",
+    id: "websites",
+    title: "Forte Foundation™ Websites",
+    desc: "Hand-coded, lightning-fast websites that convert visitors into customers. No templates, no plugins, just pure performance.",
+    features: [
+      "Custom coded for speed & SEO",
+      "Mobile-first responsive design", 
+      "Forte Care™ support included",
+      "Built for conversions"
+    ],
+    pricing: "Starting at $200/month",
     linkText: "Get My Converting Website",
     href: "/services/webDesign",
     caseStudy: {
@@ -22,19 +27,16 @@ const cardsData = [
     }
   },
   {
-    title: "Your Website's Personal Bodyguard",
-    desc: "While you sleep, we're monitoring your site 24/7. Unlimited edits, instant fixes, and continuous improvements. Think of us as your website's insurance policy.",
-    linkText: "Protect My Investment Now",
-    href: "/solutions/care",
-    caseStudy: {
-      client: "Bella's Boutique",
-      result: "Zero downtime for 18 months",
-      icon: "👗"
-    }
-  },
-  {
-    title: "Get Found by Customers Who Want to Buy",
-    desc: "Stop being invisible on Google. Our SEO gets you found by people who are actively searching for what you sell. More traffic = more customers = more money.",
+    id: "seo",
+    title: "Forte SEO™ Services",
+    desc: "Get found by customers who are actively searching for what you sell. Comprehensive SEO that drives real results.",
+    features: [
+      "Local & national SEO optimization",
+      "Content strategy & creation",
+      "Technical SEO improvements", 
+      "Monthly performance reports"
+    ],
+    pricing: "Starting at $300/month",
     linkText: "Dominate Google Now",
     href: "/services/seo",
     caseStudy: {
@@ -44,8 +46,16 @@ const cardsData = [
     }
   },
   {
-    title: "Google Ads That Actually Work",
-    desc: "Tired of burning money on ads that don't convert? We create campaigns that bring you qualified leads who are ready to buy, not just tire-kickers.",
+    id: "ppc",
+    title: "Forte PPC™ Advertising",
+    desc: "Google Ads campaigns that bring qualified leads ready to buy. No wasted spend, just results.",
+    features: [
+      "Strategic campaign setup",
+      "Landing page optimization",
+      "Conversion tracking & analysis",
+      "Continuous optimization"
+    ],
+    pricing: "Starting at $400/month",
     linkText: "Stop Wasting Ad Money",
     href: "/services/ads",
     caseStudy: {
@@ -55,94 +65,213 @@ const cardsData = [
     }
   },
   {
-    title: "Find Out What's Killing Your Conversions",
-    desc: "Your website might look good, but is it making you money? Our free audit reveals exactly what's costing you customers (and how to fix it).",
-    linkText: "Get My Free Audit Now",
-    href: "/solutions/seotool",
+    id: "support",
+    title: "Forte Care™ Support",
+    desc: "24/7 monitoring, unlimited updates, and continuous optimization. Your website's personal bodyguard.",
+    features: [
+      "24/7 site monitoring",
+      "Unlimited content updates",
+      "Security & backup management",
+      "Performance optimization"
+    ],
+    pricing: "Included with websites",
+    linkText: "Protect My Investment",
+    href: "/forte-care",
     caseStudy: {
-      client: "Healthcare Clinic",
-      result: "Found 12 critical issues",
-      icon: "🏥"
+      client: "Bella's Boutique", 
+      result: "Zero downtime for 18 months",
+      icon: "👗"
     }
-  },
-  {
-    title: "Social Media That Actually Sells",
-    desc: "Stop posting into the void. We create social media content that builds real relationships and drives actual sales, not just vanity metrics.",
-    linkText: "Turn Likes Into Sales",
-    href: "/services/socialMedia",
-    caseStudy: {
-      client: "Real Estate Agent",
-      result: "3 new clients from social",
-      icon: "🏠"
-    }
-  },
+  }
 ];
 
 export default function ServicePage() {
+  const [activeTab, setActiveTab] = useState('websites');
+
   return (
     <div className="relative">
       <SectionBackgroundAnimation />
       <div className="relative z-10">
-        {/* Hero Section - Mobile Optimized */}
+        {/* Hero Section */}
         <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center">
               <div className="flex items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
                 <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">Solutions That Drive Growth</span>
+                <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">Complete Digital Solutions</span>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight mb-4 sm:mb-6">
-                Stop Throwing Money at Marketing That Doesn't Work
+                Everything You Need to Grow Online
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
-                Tired of "marketing experts" who disappear with your money? We're different. Every service we offer is designed to bring you real customers and measurable results. No fluff, no false promises, just growth.
+                From lightning-fast websites to powerful SEO and PPC campaigns, we provide everything you need to dominate your market online. No juggling multiple vendors - one team, complete solutions.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Services Grid - Mobile Optimized */}
+        {/* Tabbed Services Section */}
         <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-7xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
-              {cardsData.map((card, index) => (
-                <div 
-                  key={index} 
-                  className="group p-4 sm:p-6 lg:p-8 rounded-lg sm:rounded-xl border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414] hover:shadow-md transition-all duration-300 hover:border-primary-700 dark:hover:border-blue-400"
+            
+            {/* Tab Navigation */}
+            <div className="flex flex-wrap justify-center gap-2 mb-12 bg-gray-100 dark:bg-gray-800 rounded-xl p-2">
+              {coreServices.map((service) => (
+                <button
+                  key={service.id}
+                  onClick={() => setActiveTab(service.id)}
+                  className={`px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
+                    activeTab === service.id
+                      ? 'bg-white dark:bg-gray-700 text-primary-700 dark:text-primary-300 shadow-md'
+                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
+                  }`}
                 >
-                  <h3 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4 leading-tight">
-                    {card.title}
-                  </h3>
-                  <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4 sm:mb-6">
-                    {card.desc}
-                  </p>
-                  
-                  {/* Mini Case Study */}
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 mb-4 border-l-4 border-green-500">
-                    <div className="flex items-center gap-2 text-sm">
-                      <span className="text-lg">{card.caseStudy.icon}</span>
-                      <span className="font-medium text-gray-700 dark:text-gray-300">
-                        {card.caseStudy.client}:
-                      </span>
-                      <span className="text-green-600 dark:text-green-400 font-semibold">
-                        {card.caseStudy.result}
-                      </span>
+                  {service.title.split('™')[0]}™
+                </button>
+              ))}
+            </div>
+
+            {/* Active Service Display */}
+            {coreServices.map((service) => (
+              activeTab === service.id && (
+                <div key={service.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                  {/* Service Details */}
+                  <div className="space-y-6">
+                    <div>
+                      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
+                        {service.title}
+                      </h2>
+                      <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
+                        {service.desc}
+                      </p>
+                    </div>
+
+                    {/* Features List */}
+                    <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What's Included:</h3>
+                      <ul className="space-y-3">
+                        {service.features.map((feature, index) => (
+                          <li key={index} className="flex items-start gap-3">
+                            <span className="text-green-500 mt-1">✓</span>
+                            <span className="text-gray-700 dark:text-gray-300">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+
+                    {/* Pricing & CTA */}
+                    <div className="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 border border-primary-200 dark:border-primary-800">
+                      <div className="flex items-center justify-between mb-4">
+                        <span className="text-2xl font-bold text-primary-700 dark:text-primary-300">
+                          {service.pricing}
+                        </span>
+                        <span className="text-sm text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-800 px-3 py-1 rounded-full">
+                          No setup fees
+                        </span>
+                      </div>
+                      <Link
+                        href={service.href}
+                        className="inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 w-full justify-center"
+                      >
+                        {service.linkText}
+                        <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3" />
+                      </Link>
                     </div>
                   </div>
-                  
-                  <Link 
-                    href={card.href} 
-                    className="inline-flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg text-primary-700 dark:text-blue-200 hover:underline font-medium group-hover:text-primary-800 dark:group-hover:text-blue-100 transition-colors duration-200"
-                  >
-                    {card.linkText}
-                    <Icon
-                      name="rightarrow"
-                      alt="right arrow icon"
-                      className="w-2 h-3 sm:w-[7px] sm:h-[12px] transition-transform duration-200 group-hover:translate-x-1"
-                    />
-                  </Link>
+
+                  {/* Case Study & Visual */}
+                  <div className="space-y-6">
+                    {/* Case Study */}
+                    <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl p-8 border border-green-200 dark:border-green-800">
+                      <div className="text-center mb-6">
+                        <div className="text-6xl mb-4">{service.caseStudy.icon}</div>
+                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                          Real Results
+                        </h3>
+                      </div>
+                      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 text-center">
+                        <div className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">
+                          {service.caseStudy.client}
+                        </div>
+                        <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                          {service.caseStudy.result}
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Service Benefits */}
+                    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                        Why Choose Forte™?
+                      </h3>
+                      <div className="space-y-3 text-sm">
+                        <div className="flex items-center gap-3">
+                          <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                          <span className="text-gray-600 dark:text-gray-400">Direct access to the developer</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                          <span className="text-gray-600 dark:text-gray-400">All services work together seamlessly</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                          <span className="text-gray-600 dark:text-gray-400">Same-day response guarantee</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                          <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                          <span className="text-gray-600 dark:text-gray-400">100% satisfaction guarantee</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              ))}
+              )
+            ))}
+          </div>
+        </section>
+
+        {/* Additional Services */}
+        <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Additional Services
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400">
+                Specialized solutions for unique business needs
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-3xl">📱</span>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    Social Media Management
+                  </h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Content that builds relationships and drives sales, not just vanity metrics.
+                </p>
+                <Link href="/services/socialMedia" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
+                  Learn More →
+                </Link>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="flex items-center gap-4 mb-4">
+                  <span className="text-3xl">🔍</span>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    Free Website Audit
+                  </h3>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Discover exactly what's costing you customers with our comprehensive site analysis.
+                </p>
+                <Link href="/solutions/seotool" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
+                  Get Free Audit →
+                </Link>
+              </div>
             </div>
           </div>
         </section>
