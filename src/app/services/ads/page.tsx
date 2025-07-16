@@ -106,6 +106,111 @@ export default function GooglePPCAdsPage() {
         </div>
       </div>
 
+      {/* Case Study Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl mx-4 sm:mx-6 lg:mx-8 mb-12">
+        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold dark:text-white mb-4">
+              Real Google Ads Success Story
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-lg">
+              How we turned a failing ad campaign into a lead generation machine
+            </p>
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Client Info */}
+              <div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center">
+                    <span className="text-2xl">🏠</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold dark:text-white">Summit Roofing</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Local roofing contractor</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+                    <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">
+                      The Challenge
+                    </h4>
+                    <p className="text-red-700 dark:text-red-300 text-sm">
+                      $3,500/month ad spend with only 2-3 quality leads. High cost-per-click, poor-quality traffic, and a landing page that wasn't converting. Previous agency focused on clicks, not customers.
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                      Our PPC Strategy
+                    </h4>
+                    <ul className="text-blue-700 dark:text-blue-300 text-sm space-y-1">
+                      <li>• Rebuilt campaigns with intent-focused keywords</li>
+                      <li>• Created dedicated landing pages for each service</li>
+                      <li>• Implemented negative keywords to eliminate waste</li>
+                      <li>• Added call tracking and conversion optimization</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Results */}
+              <div>
+                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+                  <h4 className="font-semibold text-green-800 dark:text-green-200 mb-4">
+                    The Results (3 Months)
+                  </h4>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        580%
+                      </div>
+                      <div className="text-sm text-green-700 dark:text-green-300">
+                        More Quality Leads
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        67%
+                      </div>
+                      <div className="text-sm text-green-700 dark:text-green-300">
+                        Lower Cost-Per-Lead
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        4.2x
+                      </div>
+                      <div className="text-sm text-green-700 dark:text-green-300">
+                        Return on Ad Spend
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        18
+                      </div>
+                      <div className="text-sm text-green-700 dark:text-green-300">
+                        Qualified Leads/Month
+                      </div>
+                    </div>
+                  </div>
+
+                  <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300">
+                    "Night and day difference. We went from barely getting leads to having more qualified prospects than we can handle. The ROI is incredible."
+                    <footer className="text-sm mt-2 not-italic">
+                      — Mike Torres, Summit Roofing
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="flex flex-col items-center w-full">
         <div className="w-full flex flex-col mb-8 sm:mb-10 md:mb-12 text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter dark:text-secondary-1000 leading-tight mb-4 sm:mb-6">
@@ -263,7 +368,7 @@ export default function GooglePPCAdsPage() {
 
       <div className="flex justify-center w-full mb-16 sm:mb-20 md:mb-24">
         <LightButton href="/contact">
-          Get My Free Website Analysis
+          Fix My Ads & Get More Leads
         </LightButton>
       </div>
 

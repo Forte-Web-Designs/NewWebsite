@@ -161,6 +161,111 @@ export default function ServicePage() {
         </div>
       </section>
 
+      {/* Case Study Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-pink-50 to-blue-50 dark:from-pink-900/20 dark:to-blue-900/20 rounded-xl mx-4 sm:mx-6 lg:mx-8 mb-12">
+        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl md:text-3xl font-bold dark:text-white mb-4">
+              Real Social Media Success Story
+            </h2>
+            <p className="text-gray-600 dark:text-gray-300 text-lg">
+              How consistent social presence transformed a local business
+            </p>
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              {/* Client Info */}
+              <div>
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/40 rounded-xl flex items-center justify-center">
+                    <span className="text-2xl">💄</span>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold dark:text-white">Luxe Beauty Salon</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Local beauty salon</p>
+                  </div>
+                </div>
+
+                <div className="space-y-4">
+                  <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+                    <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">
+                      The Challenge
+                    </h4>
+                    <p className="text-red-700 dark:text-red-300 text-sm">
+                      Sporadic posting, inconsistent branding, and barely any engagement. Their social media looked unprofessional and wasn't bringing in new clients. Owner was too busy running the salon to manage social.
+                    </p>
+                  </div>
+
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                    <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                      Our Social Strategy
+                    </h4>
+                    <ul className="text-blue-700 dark:text-blue-300 text-sm space-y-1">
+                      <li>• Created cohesive brand aesthetic across all platforms</li>
+                      <li>• Developed content calendar showcasing services & results</li>
+                      <li>• Engaged with local community and beauty influencers</li>
+                      <li>• Used strategic hashtags and location targeting</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              {/* Results */}
+              <div>
+                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+                  <h4 className="font-semibold text-green-800 dark:text-green-200 mb-4">
+                    The Results (6 Months)
+                  </h4>
+                  
+                  <div className="grid grid-cols-2 gap-4 mb-6">
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        425%
+                      </div>
+                      <div className="text-sm text-green-700 dark:text-green-300">
+                        Follower Growth
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        850%
+                      </div>
+                      <div className="text-sm text-green-700 dark:text-green-300">
+                        Engagement Increase
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        35%
+                      </div>
+                      <div className="text-sm text-green-700 dark:text-green-300">
+                        New Clients from Social
+                      </div>
+                    </div>
+                    <div className="text-center">
+                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
+                        15+
+                      </div>
+                      <div className="text-sm text-green-700 dark:text-green-300">
+                        Bookings per Month
+                      </div>
+                    </div>
+                  </div>
+
+                  <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300">
+                    "I finally have a professional social presence that brings in real clients. My booking calendar is fuller than it's ever been, and I can focus on what I love - making people beautiful."
+                    <footer className="text-sm mt-2 not-italic">
+                      — Maria Rodriguez, Luxe Beauty Salon
+                    </footer>
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="w-full dark:bg-black bg-white py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto text-center">
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium dark:text-secondary-1000 text-black mb-6 sm:mb-8">
@@ -424,7 +529,7 @@ export default function ServicePage() {
           ))}
         </div>
         <div className="flex justify-center mt-8 sm:mt-12 px-4">
-          <LightButton href="/contact">Get My Free Website Analysis</LightButton>
+          <LightButton href="/contact">Grow My Social Following</LightButton>
         </div>
       </section>
       <section className="dark:bg-black bg-white py-16 sm:py-20 md:py-24 lg:py-32 text-center px-4 sm:px-6 lg:px-8">

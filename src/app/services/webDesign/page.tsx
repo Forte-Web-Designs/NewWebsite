@@ -407,19 +407,94 @@ export default function WebsiteDesignPage() {
         </div>
       </section>
 
+      {/* Mini Case Study Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800">
+        <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 px-4 py-2 rounded-full mb-4">
+                <span className="text-blue-600 dark:text-blue-400 text-sm font-semibold">Case Study</span>
+              </div>
+              <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                From Template Struggle to Custom Success
+              </h2>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 md:p-8 shadow-xl border border-gray-200 dark:border-gray-700">
+              <div className="grid md:grid-cols-2 gap-8 items-center">
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 bg-gradient-to-r from-green-500 to-blue-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">RH</span>
+                    </div>
+                    <div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white">Rivera Healthcare</h3>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">Medical Practice</p>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div>
+                      <span className="text-red-600 dark:text-red-400 font-semibold">The Problem:</span>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        WordPress template site took 8+ seconds to load. Patients were bouncing before booking appointments.
+                      </p>
+                    </div>
+                    
+                    <div>
+                      <span className="text-blue-600 dark:text-blue-400 font-semibold">The Solution:</span>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mt-1">
+                        Custom-coded Forte™ website with optimized appointment booking and patient forms.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="space-y-6">
+                  <div className="text-center p-4 bg-green-50 dark:bg-green-900/20 rounded-xl">
+                    <div className="text-3xl font-bold text-green-600 dark:text-green-400">1.2s</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">New Load Time</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-500">(Previously 8.3s)</div>
+                  </div>
+                  
+                  <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-xl">
+                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">247%</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">More Online Bookings</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-500">First 4 months</div>
+                  </div>
+                  
+                  <div className="text-center p-4 bg-purple-50 dark:bg-purple-900/20 rounded-xl">
+                    <div className="text-3xl font-bold text-purple-600 dark:text-purple-400">$0</div>
+                    <div className="text-sm text-gray-600 dark:text-gray-400">Security Issues</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-500">vs. monthly WordPress fixes</div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="mt-6 p-4 bg-gray-50 dark:bg-gray-700 rounded-xl">
+                <p className="text-sm text-gray-700 dark:text-gray-300 italic">
+                  "We went from losing patients due to our slow website to booking 2-3 new appointments daily through our site. The difference is night and day." 
+                  <span className="font-semibold">- Dr. Maria Rivera, Rivera Healthcare</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Website Pricing Section */}
       <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Ready for a Website That Actually Works?
+              Ready to Ditch Your Template for Good?
             </h2>
             <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-6">
-              Choose your Forte Foundation™ and start building a website that converts visitors into customers. Forte Care™ support included with every plan.
+              Join businesses who made the switch to custom-coded websites. Choose your Forte Foundation™ and start converting more visitors into customers.
             </p>
             <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 max-w-2xl mx-auto">
               <p className="text-sm text-green-700 dark:text-green-300">
-                🏢 <strong>Small Business Friendly:</strong> Start at just $200/month. Add SEO, PPC, and Social Media services as you grow!
+                🚀 <strong>Template Recovery:</strong> We'll migrate your existing content for free - no starting from scratch!
               </p>
             </div>
           </div>

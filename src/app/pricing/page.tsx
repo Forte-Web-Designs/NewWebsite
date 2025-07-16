@@ -155,6 +155,144 @@ export default function Pricing() {
         </div>
         <PricingPage />
         
+        {/* Feature Comparison Table */}
+        <div className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Compare Our Plans Side-by-Side
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                See exactly what's included with each plan and find the perfect fit for your business.
+              </p>
+            </div>
+            
+            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden">
+              <div className="overflow-x-auto">
+                <table className="w-full">
+                  <thead className="bg-gray-50 dark:bg-gray-700">
+                    <tr>
+                      <th className="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">Features</th>
+                      <th className="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">Foundation™<br/><span className="text-sm font-normal text-gray-600 dark:text-gray-400">$200/month</span></th>
+                      <th className="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white relative">
+                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
+                          <span className="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">POPULAR</span>
+                        </div>
+                        Pro™<br/><span className="text-sm font-normal text-gray-600 dark:text-gray-400">$350/month</span>
+                      </th>
+                      <th className="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">Growth Bundle<br/><span className="text-sm font-normal text-gray-600 dark:text-gray-400">$500/month</span></th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                    <tr>
+                      <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">Website Pages</td>
+                      <td className="py-4 px-6 text-center text-gray-600 dark:text-gray-400">5 Pages</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400 font-semibold">10 Pages</td>
+                      <td className="py-4 px-6 text-center text-gray-600 dark:text-gray-400">5 Pages + SEO</td>
+                    </tr>
+                    <tr className="bg-gray-50 dark:bg-gray-800">
+                      <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">Load Time Guarantee</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ &lt;2 seconds</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ &lt;2 seconds</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ &lt;2 seconds</td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">SEO Foundation</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ Built-in</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ Enhanced</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ + Monthly Optimization</td>
+                    </tr>
+                    <tr className="bg-gray-50 dark:bg-gray-800">
+                      <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">Google Analytics Setup</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ Basic</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ Advanced + Conversion Tracking</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ Advanced + Monthly Reports</td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">Content Strategy & Blog Posts</td>
+                      <td className="py-4 px-6 text-center text-gray-400 dark:text-gray-600">Add-on Available</td>
+                      <td className="py-4 px-6 text-center text-gray-400 dark:text-gray-600">Add-on Available</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">✓ 4 Posts/Month</td>
+                    </tr>
+                    <tr className="bg-gray-50 dark:bg-gray-800">
+                      <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">Support Level</td>
+                      <td className="py-4 px-6 text-center text-gray-600 dark:text-gray-400">Email Support</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">Priority Email Support</td>
+                      <td className="py-4 px-6 text-center text-green-600 dark:text-green-400">Priority Support + Monthly Calls</td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">Setup Timeline</td>
+                      <td className="py-4 px-6 text-center text-gray-600 dark:text-gray-400">2-3 weeks</td>
+                      <td className="py-4 px-6 text-center text-gray-600 dark:text-gray-400">3-4 weeks</td>
+                      <td className="py-4 px-6 text-center text-gray-600 dark:text-gray-400">3-4 weeks</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            
+            {/* Value Demonstrations */}
+            <div className="mt-16">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-12">
+                Real Results from Real Clients
+              </h3>
+              
+              <div className="grid md:grid-cols-3 gap-8">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                  <div className="text-center mb-4">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">SC</span>
+                    </div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Summit Consulting</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Foundation™ Plan</p>
+                  </div>
+                  <blockquote className="text-gray-600 dark:text-gray-400 text-sm italic mb-4">
+                    "ROI was immediate. First month with the new site, we booked $15,000 in new consulting contracts. Best $200/month I've ever spent."
+                  </blockquote>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">750%</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-500">First Month ROI</div>
+                  </div>
+                </div>
+                
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border-2 border-primary-500">
+                  <div className="text-center mb-4">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">AD</span>
+                    </div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Alpine Dental</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Pro™ Plan</p>
+                  </div>
+                  <blockquote className="text-gray-600 dark:text-gray-400 text-sm italic mb-4">
+                    "Website pays for itself. We're getting 3-4 new patient calls per week now. The advanced analytics show exactly where patients come from."
+                  </blockquote>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">$28k</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-500">Additional Revenue/Quarter</div>
+                  </div>
+                </div>
+                
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                  <div className="text-center mb-4">
+                    <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                      <span className="text-white font-bold text-lg">ML</span>
+                    </div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white">Modern Landscapes</h4>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Growth Bundle</p>
+                  </div>
+                  <blockquote className="text-gray-600 dark:text-gray-400 text-sm italic mb-4">
+                    "The SEO content is incredible. We rank #1 for 'landscaping near me' and book $50k+ projects monthly through the website."
+                  </blockquote>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">1200%</div>
+                    <div className="text-xs text-gray-500 dark:text-gray-500">Annual ROI</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
         {/* ROI Calculator Section */}
         <ROICalculator />
         

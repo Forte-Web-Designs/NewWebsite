@@ -240,6 +240,232 @@ export default function SocialMediaManagement() {
         subtitle=""
         titleClassName="font-inter-display font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight text-start text-gray-900 dark:text-white"
       />
+
+      {/* Timeline Expectations Section */}
+      <div className="w-full py-16 sm:py-20 lg:py-28">
+        <div className="text-center mb-12">
+          <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF] mb-4">
+            What to Expect: Your Timeline
+          </h2>
+          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
+            Clear milestones and realistic timeframes - no surprises, no delays.
+          </p>
+        </div>
+
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-8">
+            {/* Week 1 */}
+            <div className="relative flex items-start gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">
+                1
+              </div>
+              <div className="flex-1 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Week 1: Discovery & Strategy</h3>
+                  <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">Days 1-7</span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-3">
+                  Deep dive into your business, competitors, and target audience. Define goals, messaging, and project scope.
+                </p>
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>Deliverable:</strong> Project roadmap, content strategy, and design direction
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Week 2-3 */}
+            <div className="relative flex items-start gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">
+                2
+              </div>
+              <div className="flex-1 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Weeks 2-3: Design & Refine</h3>
+                  <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">Days 8-21</span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-3">
+                  Create wireframes and visual designs. Multiple revision rounds to perfect the look and user experience.
+                </p>
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>Deliverable:</strong> Final approved design mockups and user flow
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Week 3-4 */}
+            <div className="relative flex items-start gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center text-white font-bold">
+                3
+              </div>
+              <div className="flex-1 bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Weeks 3-4: Development</h3>
+                  <span className="text-sm text-primary-600 dark:text-primary-400 font-medium">Days 15-28</span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-3">
+                  Hand-code your website with clean, optimized code. Mobile-responsive, fast-loading, and SEO-ready.
+                </p>
+                <div className="bg-gray-50 dark:bg-gray-700 rounded-lg p-3">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>Deliverable:</strong> Fully functional website ready for your review
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Week 4+ */}
+            <div className="relative flex items-start gap-6">
+              <div className="flex-shrink-0 w-12 h-12 bg-green-500 rounded-full flex items-center justify-center text-white font-bold">
+                ✓
+              </div>
+              <div className="flex-1 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl p-6 shadow-lg border border-green-200 dark:border-green-700">
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Launch & Beyond</h3>
+                  <span className="text-sm text-green-600 dark:text-green-400 font-medium">Week 4+</span>
+                </div>
+                <p className="text-gray-600 dark:text-gray-400 mb-3">
+                  Go live with full analytics setup, performance monitoring, and Forte Care™ ongoing support.
+                </p>
+                <div className="bg-white dark:bg-gray-800 rounded-lg p-3">
+                  <p className="text-sm text-gray-700 dark:text-gray-300">
+                    <strong>Ongoing:</strong> Unlimited updates, security monitoring, and performance optimization
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Real Client Examples Section */}
+      <div className="w-full py-16 sm:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900 rounded-2xl">
+        <div className="text-center mb-12">
+          <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF] mb-4">
+            The Forte Method™ in Action
+          </h2>
+          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
+            See how our systematic approach delivers consistent results across different industries.
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8 px-4">
+          {/* Client Example 1 */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">TC</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">TechCorp Consulting</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">B2B Technology Consulting</p>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-red-700 dark:text-red-400 mb-2">Challenge:</h4>
+                <p className="text-sm text-red-600 dark:text-red-300">
+                  WordPress site crashed during a major client presentation. Lost 3 enterprise deals worth $250k.
+                </p>
+              </div>
+              
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-2">Forte Method Solution:</h4>
+                <ul className="text-sm text-blue-600 dark:text-blue-300 space-y-1">
+                  <li>• <strong>Discovery:</strong> Identified need for enterprise-grade reliability</li>
+                  <li>• <strong>Design:</strong> Professional, trust-building layout</li>
+                  <li>• <strong>Build:</strong> Hand-coded for 99.9% uptime</li>
+                  <li>• <strong>Launch:</strong> Stress-tested for high traffic</li>
+                </ul>
+              </div>
+              
+              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2">Results (6 months):</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">Zero</div>
+                    <div className="text-green-700 dark:text-green-300">Downtime</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">$400k</div>
+                    <div className="text-green-700 dark:text-green-300">New Deals</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Client Example 2 */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-xl border border-gray-200 dark:border-gray-700">
+            <div className="flex items-center gap-4 mb-6">
+              <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                <span className="text-white font-bold text-lg">SV</span>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white">Sunrise Veterinary</h3>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Animal Hospital</p>
+              </div>
+            </div>
+            
+            <div className="space-y-4">
+              <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-red-700 dark:text-red-400 mb-2">Challenge:</h4>
+                <p className="text-sm text-red-600 dark:text-red-300">
+                  Old website took 12 seconds to load. Pet owners were going to competitors instead of waiting.
+                </p>
+              </div>
+              
+              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-blue-700 dark:text-blue-400 mb-2">Forte Method Solution:</h4>
+                <ul className="text-sm text-blue-600 dark:text-blue-300 space-y-1">
+                  <li>• <strong>Discovery:</strong> Mobile-first approach for busy pet owners</li>
+                  <li>• <strong>Design:</strong> Easy appointment booking prominent</li>
+                  <li>• <strong>Build:</strong> Optimized for speed and mobile usage</li>
+                  <li>• <strong>Launch:</strong> 1.3-second load time achieved</li>
+                </ul>
+              </div>
+              
+              <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4">
+                <h4 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-2">Results (4 months):</h4>
+                <div className="grid grid-cols-2 gap-4 text-sm">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">185%</div>
+                    <div className="text-green-700 dark:text-green-300">More Bookings</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">1.3s</div>
+                    <div className="text-green-700 dark:text-green-300">Load Time</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* CTA Section */}
+        <div className="text-center mt-12">
+          <div className="max-w-2xl mx-auto">
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-900 dark:text-white mb-4">
+              Ready to Experience the Forte Method™?
+            </h3>
+            <p className="text-gray-600 dark:text-gray-400 mb-6">
+              Join businesses who chose reliability, speed, and results over templates and shortcuts.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="bg-primary-600 text-white px-6 py-3 rounded-lg hover:bg-primary-700 transition-colors font-semibold">
+                Start My Project
+              </button>
+              <button className="border border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 px-6 py-3 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+                View Portfolio
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

@@ -310,7 +310,7 @@ export default function Home() {
                 <div className="text-center space-y-6">
                   <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
                     <p className="font-sans font-normal text-[12px] leading-[14px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
-                      25+ Businesses Growing with Forte
+                      20+ Businesses Growing with Forte
                     </p>
                   </div>
                   
@@ -318,9 +318,34 @@ export default function Home() {
                     <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> That Drive Results
                   </h1>
                   
-                  <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-[#626262] dark:text-white px-4 max-w-2xl mx-auto">
-                    Meticulously built for performance. Hardened for security. Tuned for serious growth.
-                  </p>
+                  <div className="px-4 max-w-2xl mx-auto">
+                    <div className="space-y-3">
+                      <div className="flex items-center gap-3">
+                        <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-sm">⚡</span>
+                        </div>
+                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-[#626262] dark:text-white">
+                          Meticulously built for performance
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-6 h-6 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-sm">🛡️</span>
+                        </div>
+                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-[#626262] dark:text-white">
+                          Hardened for security
+                        </span>
+                      </div>
+                      <div className="flex items-center gap-3">
+                        <div className="w-6 h-6 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center flex-shrink-0">
+                          <span className="text-sm">📈</span>
+                        </div>
+                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-[#626262] dark:text-white">
+                          Tuned for serious growth
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </SimpleScrollReveal>
             </div>
@@ -455,7 +480,7 @@ export default function Home() {
                     <div className="space-y-6">
                       <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
                         <p className="font-sans font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
-                          25+ Businesses Growing with Forte
+                          20+ Businesses Growing with Forte
                         </p>
                       </div>
                       
@@ -466,9 +491,32 @@ export default function Home() {
                       </SimpleScrollReveal>
                       
                       <SimpleScrollReveal direction="up" delay={150}>
-                        <p className="font-display font-medium text-[20px] leading-[28px] tracking-[0%] text-[#626262] dark:text-white max-w-lg">
-                          Meticulously built for performance. Hardened for security. Tuned for serious growth.
-                        </p>
+                        <div className="space-y-4 max-w-lg">
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center flex-shrink-0">
+                              <span className="text-lg">⚡</span>
+                            </div>
+                            <span className="font-display font-medium text-[18px] leading-[24px] text-[#626262] dark:text-white">
+                              Meticulously built for performance
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center flex-shrink-0">
+                              <span className="text-lg">🛡️</span>
+                            </div>
+                            <span className="font-display font-medium text-[18px] leading-[24px] text-[#626262] dark:text-white">
+                              Hardened for security
+                            </span>
+                          </div>
+                          <div className="flex items-center gap-3">
+                            <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center flex-shrink-0">
+                              <span className="text-lg">📈</span>
+                            </div>
+                            <span className="font-display font-medium text-[18px] leading-[24px] text-[#626262] dark:text-white">
+                              Tuned for serious growth
+                            </span>
+                          </div>
+                        </div>
                       </SimpleScrollReveal>
                     </div>
                   </div>
@@ -583,6 +631,73 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Trust Section with Client Results */}
+      <section className="py-12 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-8">
+              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                Real Clients, Real Results
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+                See what our clients achieved with professional websites that actually work
+              </p>
+            </div>
+          </SimpleScrollReveal>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={200}>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">RC</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">RiverSide Clinic</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">3x More Leads</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">From 8 to 25+ patient inquiries per month</p>
+              </div>
+            </SimpleScrollReveal>
+            
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-green-500 to-green-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">PH</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">ProHome Services</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">127% More Traffic</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">Ranking #1 for "HVAC repair near me"</p>
+              </div>
+            </SimpleScrollReveal>
+            
+            <SimpleScrollReveal direction="up" delay={400}>
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700">
+                <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">EB</span>
+                </div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Elite Boutique</h3>
+                <div className="text-2xl font-bold text-green-600 mb-2">$50k+ Revenue</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">First 6 months with new website</p>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+          
+          <SimpleScrollReveal direction="up" delay={500}>
+            <div className="text-center mt-8">
+              <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
+                Results vary by industry and effort. Your success depends on many factors.
+              </p>
+              <div className="flex justify-center gap-4">
+                <LightButton href="/contact" className="bg-primary-600 text-white hover:bg-primary-700">
+                  Get Free 5-Point Audit
+                </LightButton>
+                <LightButton href="/contact" className="border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800">
+                  Schedule Call
+                </LightButton>
               </div>
             </div>
           </SimpleScrollReveal>
@@ -823,10 +938,10 @@ export default function Home() {
               Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
             </p>
             <div className="flex justify-center">
-              <LightButton href="/contact">Get Free 15-Min Strategy Chat</LightButton>
+              <LightButton href="/contact">Get Free 5-Point Audit</LightButton>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
-              Quick 15-minute call to discuss your goals and see if Forte is the right fit
+              Discover exactly what's holding your website back from more leads
             </p>
           </div>
         </div>
