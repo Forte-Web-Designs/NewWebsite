@@ -121,6 +121,7 @@ export default function Header() {
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'PPC Advertising', href: '/services/ads' },
     { label: 'Social Media Management', href: '/services/socialMedia' },
+    { label: 'Forte Care™ Support', href: '/solutions/care' },
     { label: 'View All Services', href: '/services' }
   ];
 
@@ -138,14 +139,13 @@ export default function Header() {
     { label: 'About Us', href: '/about' },
     { label: 'Our Work', href: '/about/work' },
     { label: 'Our Process', href: '/forte-method' },
+    { label: 'Forte Guarantee™', href: '/solutions/guarantee' },
     { label: 'FAQs', href: '/about/faqs' }
   ];
 
   // Dropdown items for Solutions section
   const solutionsDropdownItems = [
     { label: 'Free Website Checkup', href: '/checkup' },
-    { label: 'Forte Care™ Support', href: '/solutions/care' },
-    { label: 'Forte Guarantee™', href: '/solutions/guarantee' },
     { label: 'View All Solutions', href: '/solutions' }
   ];
 
