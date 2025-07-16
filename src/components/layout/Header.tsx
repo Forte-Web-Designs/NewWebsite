@@ -122,9 +122,8 @@ export default function Header() {
     { label: 'FAQs', href: '/about/faqs' }
   ];
 
-  // Dropdown items for Services section (reorganized)
+  // Dropdown items for Services section (updated)
   const serviceDropdownItem = [
-    { label: 'Services', href: '/services' },
     { label: 'Website Design', href: '/services/webDesign' },
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'PPC Advertising', href: '/services/ads' },
@@ -149,7 +148,7 @@ export default function Header() {
         
         <header className={`transition-all duration-300 ${
           isSticky 
-            ? 'fixed top-0 left-0 right-0 z-[60] bg-white/95 backdrop-blur-md shadow-lg py-2' 
+            ? 'fixed top-0 left-0 right-0 z-[100] bg-white/95 dark:bg-gray-900/95 backdrop-blur-md shadow-lg py-2' 
             : 'py-4'
         }`}>
           <div>
@@ -159,7 +158,14 @@ export default function Header() {
                 <Link href="/" prefetch={true} className="hidden md:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
                   <img
                     src="/images/home/logo2.png"
-                    alt="Forte Logo"
+                    alt="Forte Logo (Light Mode)"
+                    className="block dark:hidden"
+                    height={48}
+                  />
+                  <img
+                    src="/images/home/logo1.png"
+                    alt="Forte Logo (Dark Mode)"
+                    className="hidden dark:block"
                     height={48}
                   />
                 </Link>
@@ -168,33 +174,18 @@ export default function Header() {
                 <nav className="hidden md:flex items-center space-x-8">
                   <HeaderLink href="/">Home</HeaderLink>
                   <Dropdown
-                    items={aboutDropdownItems}
-                    width="130px"
-                    trigger={
-                      <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                        <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
-                      </div>
-                    }
-                  />
-                  <Dropdown
                     items={serviceDropdownItem}
                     width="270px"
                     trigger={
-                      <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                         <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
                       </div>
                     }
                   />
-                  <Dropdown
-                    items={solutionsDropdownItems}
-                    width="240px"
-                    trigger={
-                      <div className="relative group text-[#101010] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                        <HeaderLink href="/solutions" showIcon={true}>Forte Solutions™</HeaderLink>
-                      </div>
-                    }
-                  />
-                  <HeaderLink href="/blog">Blog</HeaderLink>
+                  <HeaderLink href="/forte-method">Our Process</HeaderLink>
+                  <HeaderLink href="/solutions/seotool">Forte Site Checkup</HeaderLink>
+                  <HeaderLink href="/forte-care">Support & Care</HeaderLink>
+                  <HeaderLink href="/forte-guarantee">Guarantee</HeaderLink>
                   <HeaderLink href="/pricing">Pricing</HeaderLink>
                 </nav>
 
@@ -332,15 +323,6 @@ export default function Header() {
             <nav className="hidden md:flex items-center space-x-8">
               <HeaderLink href="/">Home</HeaderLink>
               <Dropdown
-                items={aboutDropdownItems}
-                width="130px"
-                trigger={
-                  <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
-                  </div>
-                }
-              />
-              <Dropdown
                 items={serviceDropdownItem}
                 width="270px"
                 trigger={
@@ -349,17 +331,10 @@ export default function Header() {
                   </div>
                 }
               />
-
-              <Dropdown
-                items={solutionsDropdownItems}
-                width="240px"
-                trigger={
-                  <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/solutions" showIcon={true}>Forte Solutions™</HeaderLink>
-                  </div>
-                }
-              />
-              <HeaderLink href="/blog">Blog</HeaderLink>
+              <HeaderLink href="/forte-method">Our Process</HeaderLink>
+              <HeaderLink href="/solutions/seotool">Forte Site Checkup</HeaderLink>
+              <HeaderLink href="/forte-care">Support & Care</HeaderLink>
+              <HeaderLink href="/forte-guarantee">Guarantee</HeaderLink>
               <HeaderLink href="/pricing">Pricing</HeaderLink>
             </nav>
 
