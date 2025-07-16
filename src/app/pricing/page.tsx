@@ -247,11 +247,13 @@ export default function Pricing() {
                     <tr>
                       <th className="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">Features</th>
                       <th className="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">Foundation™<br/><span className="text-sm font-normal text-gray-600 dark:text-gray-400">$200/month</span></th>
-                      <th className="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white relative">
-                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2">
-                          <span className="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">POPULAR</span>
+                      <th className="text-center py-8 px-6 font-semibold text-gray-900 dark:text-white relative">
+                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 z-10">
+                          <span className="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap">POPULAR</span>
                         </div>
-                        Pro™<br/><span className="text-sm font-normal text-gray-600 dark:text-gray-400">$350/month</span>
+                        <div className="mt-3">
+                          Pro™<br/><span className="text-sm font-normal text-gray-600 dark:text-gray-400">$350/month</span>
+                        </div>
                       </th>
                       <th className="text-center py-4 px-6 font-semibold text-gray-900 dark:text-white">Growth Bundle<br/><span className="text-sm font-normal text-gray-600 dark:text-gray-400">$500/month</span></th>
                     </tr>

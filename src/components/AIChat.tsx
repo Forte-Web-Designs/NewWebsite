@@ -212,7 +212,7 @@ const AIChat = () => {
       setMessages([{
         id: '1',
         type: 'bot',
-        content: "Hey there! 👋 I'm Forte AI, Seth's digital assistant. We help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\n💡 *Tip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!*",
+        content: "Hey there! 👋 I'm Forte AI, Seth's digital assistant. We help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
         timestamp: new Date()
       }]);
     }

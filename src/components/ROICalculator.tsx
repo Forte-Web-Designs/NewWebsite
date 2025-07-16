@@ -149,8 +149,18 @@ export default function ROICalculator({ className = "" }: { className?: string }
                       </label>
                       <input
                         type="number"
-                        value={inputs.currentWebsiteCost || ''}
-                        onChange={(e) => handleInputChange('currentWebsiteCost', parseInt(e.target.value) || 0)}
+                        value={inputs.currentWebsiteCost === 0 ? '0' : inputs.currentWebsiteCost || ''}
+                        onChange={(e) => {
+                          const value = e.target.value;
+                          if (value === '') {
+                            handleInputChange('currentWebsiteCost', 0);
+                          } else {
+                            const numValue = parseInt(value);
+                            if (!isNaN(numValue)) {
+                              handleInputChange('currentWebsiteCost', numValue);
+                            }
+                          }
+                        }}
                         placeholder="e.g., 150 or 0"
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
@@ -162,8 +172,18 @@ export default function ROICalculator({ className = "" }: { className?: string }
                       </label>
                       <input
                         type="number"
-                        value={inputs.currentMarketingCost || ''}
-                        onChange={(e) => handleInputChange('currentMarketingCost', parseInt(e.target.value) || 0)}
+                        value={inputs.currentMarketingCost === 0 ? '0' : inputs.currentMarketingCost || ''}
+                        onChange={(e) => {
+                          const value = e.target.value;
+                          if (value === '') {
+                            handleInputChange('currentMarketingCost', 0);
+                          } else {
+                            const numValue = parseInt(value);
+                            if (!isNaN(numValue)) {
+                              handleInputChange('currentMarketingCost', numValue);
+                            }
+                          }
+                        }}
                         placeholder="e.g., 800"
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
@@ -177,8 +197,18 @@ export default function ROICalculator({ className = "" }: { className?: string }
                     </label>
                     <input
                       type="number"
-                      value={inputs.monthlyRevenue || ''}
-                      onChange={(e) => handleInputChange('monthlyRevenue', parseInt(e.target.value) || 0)}
+                      value={inputs.monthlyRevenue === 0 ? '0' : inputs.monthlyRevenue || ''}
+                      onChange={(e) => {
+                        const value = e.target.value;
+                        if (value === '') {
+                          handleInputChange('monthlyRevenue', 0);
+                        } else {
+                          const numValue = parseInt(value);
+                          if (!isNaN(numValue)) {
+                            handleInputChange('monthlyRevenue', numValue);
+                          }
+                        }
+                      }}
                       placeholder="e.g., 25000"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
