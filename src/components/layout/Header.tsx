@@ -364,7 +364,7 @@ export default function Header() {
                     className={`w-[19px] h-[25px] transition-colors duration-300 ${
                       theme === 'dark' 
                         ? 'text-white' 
-                        : 'text-gray-900'
+                        : 'text-blue-600'
                     }`}
                   >
                     <path 

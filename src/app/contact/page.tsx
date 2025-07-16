@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   description: 'Need any kind of services contact us.',
 };
 
-export default function Pricing() {
+export default function Contact() {
   return (
     <div className="relative">
       <SectionBackgroundAnimation />
@@ -62,19 +62,19 @@ export default function Pricing() {
                 Prefer to Schedule a Call?
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Book a free 15-minute strategy session to discuss your project and see if we're a good fit.
+                Book a free 30-minute strategy session to discuss your project and see if we're a good fit.
               </p>
-              <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 min-h-[300px] flex items-center justify-center border-2 border-dashed border-blue-300 dark:border-blue-700">
-                <div className="text-center">
-                  <div className="text-4xl mb-4">📅</div>
-                  <p className="text-blue-800 dark:text-blue-200 font-medium">
-                    Calendly Widget Integration
-                  </p>
-                  <p className="text-sm text-blue-600 dark:text-blue-300 mt-2">
-                    Replace this with your actual Calendly embed code
-                  </p>
-                </div>
-              </div>
+              {/* Calendly inline widget */}
+              <div 
+                className="calendly-inline-widget" 
+                data-url="https://calendly.com/seth-fortewebdesigns/30min" 
+                style={{minWidth: '320px', height: '700px'}}
+              ></div>
+              <script 
+                type="text/javascript" 
+                src="https://assets.calendly.com/assets/external/widget.js" 
+                async
+              ></script>
             </div>
 
             {/* Micro-Conversion Offer */}

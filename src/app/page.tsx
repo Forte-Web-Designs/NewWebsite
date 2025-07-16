@@ -691,11 +691,8 @@ export default function Home() {
               <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                 Results vary by industry and effort. Your success depends on many factors.
               </p>
-              <div className="flex justify-center gap-4">
+              <div className="flex justify-center">
                 <LightButton href="/contact" className="bg-primary-600 text-white hover:bg-primary-700">
-                  Get Free 5-Point Audit
-                </LightButton>
-                <LightButton href="/contact" className="border border-gray-300 text-gray-700 hover:bg-gray-50 dark:border-gray-600 dark:text-gray-300 dark:hover:bg-gray-800">
                   Schedule Call
                 </LightButton>
               </div>
@@ -938,10 +935,10 @@ export default function Home() {
               Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
             </p>
             <div className="flex justify-center">
-              <LightButton href="/contact">Get Free 5-Point Audit</LightButton>
+              <LightButton href="/contact">Schedule Call</LightButton>
             </div>
             <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
-              Discover exactly what's holding your website back from more leads
+              Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals.
             </p>
           </div>
         </div>
