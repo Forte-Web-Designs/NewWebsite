@@ -222,7 +222,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       
       const auditResults = await performMiniAudit(validatedUrl);
       setResults(auditResults);
-    } catch (error) {
+    } catch {
       setResults({
         url: validatedUrl,
         ssl: false,
@@ -235,7 +235,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
     } finally {
       setIsLoading(false);
     }
-  }, [websiteUrl]);
+  }, [websiteUrl, performMiniAudit]);
 
   // Auto-run functionality - Enhanced for mobile
   useEffect(() => {

@@ -66,7 +66,6 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
         return '';
       case 'phone':
         if (!value.trim()) return 'Phone number is required for faster response';
-        const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/;
         const cleanPhone = value.replace(/\D/g, '');
         if (cleanPhone.length < 10) return 'Please enter a valid phone number';
         return '';
@@ -171,7 +170,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           // Add mobile-specific headers
           "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
         },
-        body: new URLSearchParams(formDataToSend as any).toString(),
+        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
       });
 
       if (response.ok) {

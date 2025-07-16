@@ -2,9 +2,18 @@
 
 import { useState } from 'react';
 
+interface DeviceResults {
+  lighthouseResult?: {
+    audits: Record<string, any>;
+    categories: Record<string, { score: number }>;
+    [key: string]: any;
+  };
+  [key: string]: any;
+}
+
 interface AuditResults {
-  desktop: any;
-  mobile: any;
+  desktop: DeviceResults;
+  mobile: DeviceResults;
 }
 
 interface SEOResultsProps {
@@ -36,7 +45,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
   const isOwnDomain = isForteWebDesigns(auditedUrl);
 
   // Helper function to process results for a specific device
-  const processDeviceResults = (deviceResults: any, deviceType: 'Desktop' | 'Mobile') => {
+  const processDeviceResults = (deviceResults: DeviceResults, deviceType: 'Desktop' | 'Mobile') => {
     if (!deviceResults?.lighthouseResult) {
       return null;
     }
@@ -330,7 +339,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
   const downloadPDF = () => {
     if (!desktopData && !mobileData) return;
 
-    const generateDeviceSection = (data: any) => {
+    const generateDeviceSection = (data: typeof desktopData | typeof mobileData) => {
       if (!data) return '';
       
       return `

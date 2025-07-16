@@ -252,7 +252,7 @@ const AIChat = () => {
             "Content-Type": "application/x-www-form-urlencoded",
             "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
           },
-          body: new URLSearchParams(formData as any).toString(),
+          body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
         }).catch(console.error);
       }, 1000);
 
@@ -403,7 +403,7 @@ const AIChat = () => {
           // Add mobile-specific headers for better compatibility
           "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
         },
-        body: new URLSearchParams(formData as any).toString(),
+        body: new URLSearchParams(formData as unknown as Record<string, string>).toString(),
       });
 
       if (response.ok) {

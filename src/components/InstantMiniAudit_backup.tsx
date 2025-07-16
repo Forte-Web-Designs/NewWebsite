@@ -108,7 +108,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       
       const auditResults = await performMiniAudit(validatedUrl);
       setResults(auditResults);
-    } catch (error) {
+    } catch {
       setResults({
         url: validatedUrl,
         ssl: false,

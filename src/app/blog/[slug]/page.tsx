@@ -1,10 +1,12 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { Icon } from '@/components/images/Icon';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import EmailCapture from '@/components/EmailCapture';
 import NewsletterSignup from '@/components/NewsletterSignup';
+
+interface BlogPostPageProps {
+  params: Promise<{ slug: string }>;
+}
 
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
@@ -334,18 +336,21 @@ const blogPosts = [
   // Add more blog posts here...
 ];
 
-interface BlogPostPageProps {
-  params: {
-    slug: string;
-  };
+// Generate static params for all blog posts (required for static export)
+export async function generateStaticParams() {
+  return blogPosts.map((post) => ({
+    slug: post.id,
+  }));
 }
 
+// Generate metadata for each blog post
 export async function generateMetadata({ params }: BlogPostPageProps): Promise<Metadata> {
-  const post = blogPosts.find(p => p.id === params.slug);
+  const { slug } = await params;
+  const post = blogPosts.find(p => p.id === slug);
   
   if (!post) {
     return {
-      title: 'Post Not Found | Forte Web Designs Blog',
+      title: 'Post Not Found',
       description: 'The requested blog post could not be found.'
     };
   }
@@ -353,7 +358,6 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   return {
     title: `${post.title} | Forte Web Designs Blog`,
     description: post.excerpt,
-    keywords: post.tags.join(', '),
     openGraph: {
       title: post.title,
       description: post.excerpt,
@@ -365,163 +369,114 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   };
 }
 
-export default function BlogPost({ params }: BlogPostPageProps) {
-  const post = blogPosts.find(p => p.id === params.slug);
-
+// Main blog post component
+export default async function BlogPost({ params }: BlogPostPageProps) {
+  const { slug } = await params;
+  const post = blogPosts.find(p => p.id === slug);
+  
   if (!post) {
     notFound();
   }
 
-  // Related posts (excluding current post)
+  // Get related posts (excluding current post)
   const relatedPosts = blogPosts
-    .filter(p => p.id !== post.id && (p.category === post.category || p.tags.some(tag => post.tags.includes(tag))))
+    .filter(p => p.id !== slug && p.tags.some(tag => post.tags.includes(tag)))
     .slice(0, 3);
 
   return (
     <div className="relative">
       <SectionBackgroundAnimation />
       
-      <article className="py-16 relative z-10">
+      {/* Article Header */}
+      <section className="pt-24 pb-12 relative z-10">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-          {/* Breadcrumb */}
-          <nav className="mb-8">
-            <ol className="flex items-center space-x-2 text-sm text-gray-600 dark:text-gray-400">
-              <li><Link href="/blog" className="hover:text-blue-600 dark:hover:text-blue-400">Blog</Link></li>
-              <li><span className="mx-2">/</span></li>
-              <li><span className="text-gray-900 dark:text-gray-200">{post.title}</span></li>
-            </ol>
+          <nav className="text-sm text-gray-600 dark:text-gray-400 mb-8">
+            <Link href="/blog" className="hover:text-blue-600 dark:hover:text-blue-400">
+              Blog
+            </Link>
+            <span className="mx-2">→</span>
+            <span className="text-gray-900 dark:text-white">{post.title}</span>
           </nav>
-
-          {/* Article Header */}
-          <header className="mb-12">
-            <div className="mb-4">
-              <span className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-medium px-3 py-1 rounded-full">
-                {post.category}
-              </span>
-            </div>
-            
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white leading-tight mb-6">
-              {post.title}
-            </h1>
-            
-            <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
-              {post.excerpt}
-            </p>
-            
-            <div className="flex flex-wrap items-center gap-6 text-sm text-gray-600 dark:text-gray-400 mb-8">
-              <div className="flex items-center gap-2">
-                <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center">
-                  <span className="text-white font-medium text-sm">SM</span>
-                </div>
-                <span>By {post.author}</span>
-              </div>
-              <span>{new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</span>
-              <span>{post.readTime}</span>
-            </div>
-
-            {/* Featured Image Placeholder */}
-            <div className="relative h-64 md:h-80 bg-gradient-to-br from-blue-500 to-purple-600 rounded-xl mb-8">
-              <div className="absolute inset-0 bg-black/20 rounded-xl"></div>
-              <div className="absolute inset-0 flex items-center justify-center">
-                <h2 className="text-white text-2xl md:text-3xl font-bold text-center px-6">{post.title}</h2>
-              </div>
-            </div>
-
-            {/* Tags */}
-            <div className="flex flex-wrap gap-2">
-              {post.tags.map((tag) => (
-                <span key={tag} className="bg-gray-100 dark:bg-gray-800 text-gray-700 dark:text-gray-300 text-sm px-3 py-1 rounded-full">
-                  #{tag}
+          
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+            <div className="flex flex-wrap gap-2 mb-4">
+              {post.tags.map(tag => (
+                <span key={tag} className="bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium">
+                  {tag}
                 </span>
               ))}
             </div>
-          </header>
-
-          {/* Article Content */}
-          <div className="prose prose-lg dark:prose-invert max-w-none">
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
-          </div>
-
-          {/* Call to Action */}
-          <div className="mt-16 p-8 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-            <div className="text-center">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Need Help Implementing These Strategies?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6 max-w-2xl mx-auto">
-                Don't have time to handle all the technical details? Our team at Forte Web Designs specializes in helping small businesses grow online. Let us handle the implementation while you focus on running your business.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact"
-                  className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors"
-                >
-                  Get a Free Consultation
-                </Link>
-                <Link 
-                  href="/services"
-                  className="bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 text-blue-600 dark:text-blue-400 font-semibold px-8 py-3 rounded-lg border border-blue-600 dark:border-blue-400 transition-colors"
-                >
-                  View Our Services
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          {/* Author Bio */}
-          <div className="mt-16 p-6 bg-white dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
-            <div className="flex items-start gap-4">
-              <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center flex-shrink-0">
-                <span className="text-white font-bold text-xl">SM</span>
-              </div>
-              <div>
-                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Seth Mitchell</h4>
-                <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                  Seth is the founder of Forte Web Designs and has been helping small businesses grow online for over 10 years. 
-                  He specializes in practical, results-driven strategies that actually work for real businesses. When he's not optimizing websites or analyzing SEO data, 
-                  you can find him exploring Dallas with his family or working on his next business project.
-                </p>
-                <div className="mt-3">
-                  <Link href="/about" className="text-blue-600 dark:text-blue-400 text-sm font-medium hover:underline">
-                    Learn more about Seth →
-                  </Link>
+            
+            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+              {post.title}
+            </h1>
+            
+            <p className="text-xl text-gray-600 dark:text-gray-300 mb-6">
+              {post.excerpt}
+            </p>
+            
+            <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+              <div className="flex items-center gap-2">
+                <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/40 rounded-full flex items-center justify-center">
+                  <span className="text-blue-600 dark:text-blue-400 font-semibold text-sm">
+                    {post.author.charAt(0)}
+                  </span>
                 </div>
+                <span>{post.author}</span>
               </div>
+              <span>•</span>
+              <time dateTime={post.date}>
+                {new Date(post.date).toLocaleDateString('en-US', {
+                  year: 'numeric',
+                  month: 'long',
+                  day: 'numeric'
+                })}
+              </time>
+              <span>•</span>
+              <span>{post.readTime}</span>
             </div>
           </div>
         </div>
-      </article>
+      </section>
+
+      {/* Article Content */}
+      <section className="pb-16 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+            <div 
+              className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-strong:text-gray-900 dark:prose-strong:text-white"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
+          </div>
+        </div>
+      </section>
 
       {/* Related Posts */}
       {relatedPosts.length > 0 && (
-        <section className="py-16 bg-gray-50 dark:bg-gray-900/50 relative z-10">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-              Related Articles
-            </h2>
-            <div className="grid md:grid-cols-3 gap-8">
-              {relatedPosts.map((relatedPost) => (
-                <article key={relatedPost.id} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                  <div className="relative h-40 bg-gradient-to-br from-blue-500 to-purple-600">
-                    <div className="absolute inset-0 bg-black/20"></div>
-                    <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-sm rounded-full px-2 py-1">
-                      <span className="text-xs font-semibold text-gray-800">{relatedPost.category}</span>
-                    </div>
+        <section className="pb-16 relative z-10">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">Related Articles</h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              {relatedPosts.map(relatedPost => (
+                <article key={relatedPost.id} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow">
+                  <div className="flex flex-wrap gap-2 mb-3">
+                    {relatedPost.tags.slice(0, 2).map(tag => (
+                      <span key={tag} className="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-200 px-2 py-1 rounded text-xs font-medium">
+                        {tag}
+                      </span>
+                    ))}
                   </div>
-                  <div className="p-5">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-3 line-clamp-2">
-                      {relatedPost.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-2">
-                      {relatedPost.excerpt}
-                    </p>
-                    <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400 mb-3">
-                      <span>{new Date(relatedPost.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</span>
-                      <span>{relatedPost.readTime}</span>
-                    </div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2 line-clamp-2">
+                    {relatedPost.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 line-clamp-3">
+                    {relatedPost.excerpt}
+                  </p>
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs text-gray-500 dark:text-gray-400">{relatedPost.readTime}</span>
                     <Link 
                       href={`/blog/${relatedPost.id}`}
-                      className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 text-sm font-medium hover:text-blue-700 dark:hover:text-blue-300 transition-colors"
+                      className="text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 text-sm font-medium flex items-center gap-1 transition-colors"
                     >
                       Read More
                       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

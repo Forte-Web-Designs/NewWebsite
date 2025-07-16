@@ -2,9 +2,17 @@
 
 import { useState, useEffect } from 'react';
 
+interface DeviceResults {
+  performance: number;
+  accessibility: number;
+  bestPractices: number;
+  seo: number;
+  [key: string]: number;
+}
+
 interface AuditResults {
-  desktop: any;
-  mobile: any;
+  desktop: DeviceResults;
+  mobile: DeviceResults;
 }
 
 interface SEOAuditToolProps {
@@ -30,24 +38,6 @@ export default function SEOAuditTool({
   const [loadingMessage, setLoadingMessage] = useState('');
   const [loadingProgress, setLoadingProgress] = useState(0);
   const [currentStage, setCurrentStage] = useState('');
-
-  // Register the runAudit function with the parent component for auto-run
-  useEffect(() => {
-    if (setAutoRunTrigger) {
-      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-      
-      if (isMobile) {
-        // For mobile, add a small delay to ensure everything is ready
-        setTimeout(() => {
-          setAutoRunTrigger(runAudit);
-          console.log('📱 Mobile auto-run function registered');
-        }, 500);
-      } else {
-        setAutoRunTrigger(runAudit);
-        console.log('💻 Desktop auto-run function registered');
-      }
-    }
-  }, [setAutoRunTrigger]); // Removed websiteUrl dependency to avoid unnecessary re-registrations
 
   const loadingStages = [
     { stage: "Connection", message: "Checking your website's connection...", progress: 10 },
@@ -189,6 +179,24 @@ export default function SEOAuditTool({
       setCurrentStage('');
     }
   };
+
+  // Register the runAudit function with the parent component for auto-run
+  useEffect(() => {
+    if (setAutoRunTrigger) {
+      const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+      
+      if (isMobile) {
+        // For mobile, add a small delay to ensure everything is ready
+        setTimeout(() => {
+          setAutoRunTrigger(runAudit);
+          console.log('📱 Mobile auto-run function registered');
+        }, 500);
+      } else {
+        setAutoRunTrigger(runAudit);
+        console.log('💻 Desktop auto-run function registered');
+      }
+    }
+  }, [setAutoRunTrigger, runAudit]);
 
   return (
     <div ref={auditToolRef} className="w-full max-w-4xl mx-auto px-4 sm:px-6">
