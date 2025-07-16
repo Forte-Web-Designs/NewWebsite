@@ -46,6 +46,39 @@ export default function Contact() {
         </div>
       </section>
 
+      {/* Enhanced Trust Badge Strip */}
+      <section className="py-6 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
+              Why 20+ Businesses Trust Forte Web Designs
+            </h3>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
+              <div className="text-2xl mb-2">🏆</div>
+              <div className="text-sm font-semibold text-gray-900 dark:text-white">Award-Winning</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Hand-coded websites</div>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
+              <div className="text-2xl mb-2">🔒</div>
+              <div className="text-sm font-semibold text-gray-900 dark:text-white">Secure & Fast</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">&lt;2 second load times</div>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
+              <div className="text-2xl mb-2">📈</div>
+              <div className="text-sm font-semibold text-gray-900 dark:text-white">Proven Results</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">3x more leads average</div>
+            </div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
+              <div className="text-2xl mb-2">🤝</div>
+              <div className="text-sm font-semibold text-gray-900 dark:text-white">Local Support</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Dallas-Fort Worth</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="py-12 sm:py-16 md:py-20 relative z-10 px-4 sm:px-6 lg:px-8">
         {/* Hero Section - Mobile Optimized */}
         <div className="text-center mb-8 sm:mb-12">

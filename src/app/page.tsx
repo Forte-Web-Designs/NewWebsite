@@ -599,6 +599,35 @@ export default function Home() {
               <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
                 Trusted by Growing Businesses
               </h2>
+              
+              {/* Industry Icons */}
+              <div className="flex flex-wrap justify-center items-center gap-6 mb-8 opacity-60">
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <span className="text-2xl">🔧</span>
+                  <span className="text-sm font-medium">HVAC</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <span className="text-2xl">👗</span>
+                  <span className="text-sm font-medium">Retail</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <span className="text-2xl">⚖️</span>
+                  <span className="text-sm font-medium">Legal</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <span className="text-2xl">🏥</span>
+                  <span className="text-sm font-medium">Healthcare</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <span className="text-2xl">🏠</span>
+                  <span className="text-sm font-medium">Real Estate</span>
+                </div>
+                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400">
+                  <span className="text-2xl">🍕</span>
+                  <span className="text-sm font-medium">Restaurants</span>
+                </div>
+              </div>
+              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                   <p className="text-gray-600 dark:text-gray-400 mb-4 italic">
@@ -941,6 +970,20 @@ export default function Home() {
             <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
               Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals.
             </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Mini ROI Statement */}
+      <section className="py-8 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 rounded-full px-6 py-3 shadow-lg border border-gray-200 dark:border-gray-700">
+              <span className="text-green-600 dark:text-green-400 font-semibold text-sm">💰 ROI FACT:</span>
+              <span className="text-gray-700 dark:text-gray-300 text-sm">
+                Our average client sees <strong>3x more leads</strong> within 90 days
+              </span>
+            </div>
           </div>
         </div>
       </section>

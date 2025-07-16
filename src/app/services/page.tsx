@@ -13,38 +13,68 @@ const cardsData = [
   {
     title: "Websites That Actually Make You Money",
     desc: "Forget pretty websites that don't convert. We hand-code lightning-fast sites that turn visitors into customers. No templates, no page builders, just sites that work.",
-    linkText: "Show Me How",
+    linkText: "Get My Converting Website",
     href: "/services/webDesign",
+    caseStudy: {
+      client: "Mike's HVAC",
+      result: "2x more service calls in 60 days",
+      icon: "🔧"
+    }
   },
   {
     title: "Your Website's Personal Bodyguard",
     desc: "While you sleep, we're monitoring your site 24/7. Unlimited edits, instant fixes, and continuous improvements. Think of us as your website's insurance policy.",
-    linkText: "Protect My Investment",
+    linkText: "Protect My Investment Now",
     href: "/solutions/care",
+    caseStudy: {
+      client: "Bella's Boutique",
+      result: "Zero downtime for 18 months",
+      icon: "👗"
+    }
   },
   {
     title: "Get Found by Customers Who Want to Buy",
     desc: "Stop being invisible on Google. Our SEO gets you found by people who are actively searching for what you sell. More traffic = more customers = more money.",
-    linkText: "Dominate Google",
+    linkText: "Dominate Google Now",
     href: "/services/seo",
+    caseStudy: {
+      client: "Local Law Firm",
+      result: "Ranking #2 for main keywords",
+      icon: "⚖️"
+    }
   },
   {
     title: "Google Ads That Actually Work",
     desc: "Tired of burning money on ads that don't convert? We create campaigns that bring you qualified leads who are ready to buy, not just tire-kickers.",
     linkText: "Stop Wasting Ad Money",
     href: "/services/ads",
+    caseStudy: {
+      client: "Local Restaurant",
+      result: "50% lower cost per customer",
+      icon: "🍕"
+    }
   },
   {
     title: "Find Out What's Killing Your Conversions",
     desc: "Your website might look good, but is it making you money? Our free audit reveals exactly what's costing you customers (and how to fix it).",
-    linkText: "Get My Free Audit",
+    linkText: "Get My Free Audit Now",
     href: "/solutions/seotool",
+    caseStudy: {
+      client: "Healthcare Clinic",
+      result: "Found 12 critical issues",
+      icon: "🏥"
+    }
   },
   {
     title: "Social Media That Actually Sells",
     desc: "Stop posting into the void. We create social media content that builds real relationships and drives actual sales, not just vanity metrics.",
     linkText: "Turn Likes Into Sales",
     href: "/services/socialMedia",
+    caseStudy: {
+      client: "Real Estate Agent",
+      result: "3 new clients from social",
+      icon: "🏠"
+    }
   },
 ];
 
@@ -86,6 +116,20 @@ export default function ServicePage() {
                   <p className="text-sm sm:text-base md:text-lg text-gray-600 dark:text-gray-400 leading-relaxed mb-4 sm:mb-6">
                     {card.desc}
                   </p>
+                  
+                  {/* Mini Case Study */}
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-3 mb-4 border-l-4 border-green-500">
+                    <div className="flex items-center gap-2 text-sm">
+                      <span className="text-lg">{card.caseStudy.icon}</span>
+                      <span className="font-medium text-gray-700 dark:text-gray-300">
+                        {card.caseStudy.client}:
+                      </span>
+                      <span className="text-green-600 dark:text-green-400 font-semibold">
+                        {card.caseStudy.result}
+                      </span>
+                    </div>
+                  </div>
+                  
                   <Link 
                     href={card.href} 
                     className="inline-flex items-center gap-2 sm:gap-3 text-sm sm:text-base md:text-lg text-primary-700 dark:text-blue-200 hover:underline font-medium group-hover:text-primary-800 dark:group-hover:text-blue-100 transition-colors duration-200"

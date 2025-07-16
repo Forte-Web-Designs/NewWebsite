@@ -155,6 +155,79 @@ export default function Pricing() {
         </div>
         <PricingPage />
         
+        {/* ROI Snippets */}
+        <div className="px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+          <div className="max-w-6xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">
+              See Your Potential ROI
+            </h3>
+            
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Foundation ROI */}
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-center">
+                  <div className="text-3xl mb-3">🌱</div>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Foundation™ ROI</h4>
+                  <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">300% ROI</div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    Average client sees 3x more leads within 60 days
+                  </p>
+                  <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                    <div className="text-xs text-green-700 dark:text-green-400">
+                      <strong>Real Example:</strong> Local contractor went from 2 to 8 monthly leads
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Pro ROI */}
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border-2 border-primary-500">
+                <div className="text-center">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-primary-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
+                      HIGHEST ROI
+                    </span>
+                  </div>
+                  <div className="text-3xl mb-3">📈</div>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Pro™ ROI</h4>
+                  <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">500% ROI</div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    More pages = more opportunities to convert visitors
+                  </p>
+                  <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                    <div className="text-xs text-green-700 dark:text-green-400">
+                      <strong>Real Example:</strong> Service business increased revenue by $4,200/month
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Growth Bundle ROI */}
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="text-center">
+                  <div className="text-3xl mb-3">🚀</div>
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Growth Bundle ROI</h4>
+                  <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">800% ROI</div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    Website + SEO = compound growth month over month
+                  </p>
+                  <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
+                    <div className="text-xs text-green-700 dark:text-green-400">
+                      <strong>Real Example:</strong> HVAC company grew from $8K to $25K monthly revenue
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="text-center mt-8">
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                *ROI calculations based on average client performance over 12 months
+              </p>
+            </div>
+          </div>
+        </div>
+        
         {/* Feature Comparison Table */}
         <div className="px-4 sm:px-6 lg:px-8 py-16 bg-gray-50 dark:bg-gray-900">
           <div className="max-w-6xl mx-auto">

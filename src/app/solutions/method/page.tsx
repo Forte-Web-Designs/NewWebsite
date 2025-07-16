@@ -10,6 +10,18 @@ export const metadata: Metadata = {
 };
 
 export default function SocialMediaManagement() {
+  // Helper function for client examples
+  const getClientExample = (index: number) => {
+    const examples = [
+      "Mike's HVAC discovered 3 competitor advantages that shaped their messaging strategy",
+      "Bella's Boutique refined their homepage 4 times before finding the perfect customer flow", 
+      "TechCorp's hand-coded site loads in 1.2 seconds vs their old WordPress at 8+ seconds",
+      "Sunrise Veterinary went live with perfect mobile optimization and booking integration",
+      "Local law firm added 2 new practice areas after seeing monthly SEO keyword opportunities"
+    ];
+    return examples[index] || "Client saw immediate improvements in user engagement";
+  };
+
   const forteMethodItems = [
     {
       title: "🔍 1. Foundations",
@@ -240,6 +252,57 @@ export default function SocialMediaManagement() {
         subtitle=""
         titleClassName="font-inter-display font-medium text-lg sm:text-xl md:text-2xl lg:text-3xl leading-tight text-start text-gray-900 dark:text-white"
       />
+
+      {/* Enhanced Method Steps with Client Examples */}
+      <div className="w-full py-16 sm:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900 rounded-2xl">
+        <div className="text-center mb-12">
+          <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF] mb-4">
+            Step-by-Step Client Examples
+          </h2>
+          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
+            See how each step of the Forte Method™ created real results for our clients.
+          </p>
+        </div>
+
+        <div className="max-w-6xl mx-auto space-y-8">
+          {forteMethodItems.map((item, index) => (
+            <div key={index} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
+              <div className="grid md:grid-cols-3 gap-6 items-center">
+                <div className="text-center md:text-left">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-500 text-white rounded-full font-bold text-lg mb-3">
+                    {index + 1}
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                    {item.title}
+                  </h3>
+                </div>
+                
+                <div className="md:col-span-2">
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 whitespace-pre-line">
+                    {item.description}
+                  </p>
+                  
+                  <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-4 border-l-4 border-green-500">
+                    <div className="flex items-start gap-3">
+                      <div className="flex-shrink-0 w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <span className="text-white text-sm font-bold">✓</span>
+                      </div>
+                      <div>
+                        <h4 className="text-sm font-semibold text-green-700 dark:text-green-400 mb-1">
+                          Real Client Example:
+                        </h4>
+                        <p className="text-sm text-green-600 dark:text-green-300">
+                          {getClientExample(index)}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
 
       {/* Timeline Expectations Section */}
       <div className="w-full py-16 sm:py-20 lg:py-28">
