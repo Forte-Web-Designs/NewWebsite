@@ -156,7 +156,7 @@ export default function Header() {
             <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex items-center justify-between">
                 {/* Desktop Logo - Hidden on mobile */}
-                <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
+                <Link href="/" prefetch={true} className="hidden md:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
                   <img
                     src="/images/home/logo2.png"
                     alt="Forte Logo"
@@ -165,7 +165,7 @@ export default function Header() {
                 </Link>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden lg:flex items-center space-x-8">
+                <nav className="hidden md:flex items-center space-x-8">
                   <HeaderLink href="/">Home</HeaderLink>
                   <Dropdown
                     items={serviceDropdownItem}
@@ -183,7 +183,7 @@ export default function Header() {
                 </nav>
 
                 {/* Desktop Right Side - Phone Number and Contact Button */}
-                <nav className="hidden lg:flex items-center space-x-6">
+                <nav className="hidden md:flex items-center space-x-6">
                   {/* Phone Number */}
                   <div className="flex flex-col items-end">
                     <a 
@@ -208,7 +208,7 @@ export default function Header() {
 
                 {/* Mobile Menu Button */}
                 <button 
-                  className="lg:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 opacity-0"
+                  className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 opacity-0"
                   aria-label="Toggle mobile menu"
                 >
                   <div className="w-6 h-6 flex flex-col justify-center items-center">
@@ -222,7 +222,7 @@ export default function Header() {
           </div>
 
           {/* Mobile Menu */}
-          <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+          <div className={`md:hidden transition-all duration-300 ease-in-out ${
             mobileMenuOpen 
               ? 'max-h-screen opacity-100' 
               : 'max-h-0 opacity-0 overflow-hidden'
@@ -310,7 +310,7 @@ export default function Header() {
           <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between">
             {/* Desktop Logo - Hidden on mobile */}
-            <Link href="/" prefetch={true} className="hidden lg:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
+            <Link href="/" prefetch={true} className="hidden md:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
               <img
                 src="/images/home/logo2.png"
                 alt="Forte Logo (Light Mode)"
@@ -326,7 +326,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-8">
               <HeaderLink href="/">Home</HeaderLink>
               <Dropdown
                 items={aboutDropdownItems}
@@ -361,7 +361,7 @@ export default function Header() {
             </nav>
 
             {/* Desktop Right Side - Theme Toggle and Contact Button */}
-            <nav className="hidden lg:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-8">
               <div className="ml-4">
                 <ThemeToggle />
               </div>
@@ -371,7 +371,7 @@ export default function Header() {
             </nav>
 
             {/* Mobile Header */}
-            <div className="lg:hidden flex items-center justify-between w-full relative z-[101]">
+            <div className="md:hidden flex items-center justify-between w-full relative z-[101]">
               {/* Mobile Menu Button and Small Logo */}
               <div className="flex items-center w-full gap-[10px]">
                 <button
@@ -389,7 +389,7 @@ export default function Header() {
                     </svg>
                   )}
                 </button>
-                <Link href="/" prefetch={true} className="flex items-center lg:hidden md:block transition-all duration-300 hover:scale-105 cursor-pointer">
+                <Link href="/" prefetch={true} className="flex items-center md:hidden transition-all duration-300 hover:scale-105 cursor-pointer">
                   {/* Mobile Logo - Inline SVG for proper theme support */}
                   <svg 
                     width="19" 
@@ -470,7 +470,7 @@ export default function Header() {
 
           {/* Mobile Menu - Full Screen Overlay */}
           {mobileMenuOpen && (
-            <div className="lg:hidden fixed inset-0 z-[999999] flex flex-col min-h-screen w-full"
+            <div className="md:hidden fixed inset-0 z-[999999] flex flex-col min-h-screen w-full"
               style={{
                 background: theme === "light"
                   ? "linear-gradient(146deg, #FFFFFF 0%, rgb(69 84 179) 100%)"
