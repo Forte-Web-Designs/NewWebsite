@@ -122,7 +122,7 @@ export default function NewsletterSignup({ className = "" }: NewsletterSignupPro
       )}
       
       <p className="text-blue-200 text-sm mt-3">
-        Join 500+ business owners getting weekly insights
+        Join 20+ business owners getting weekly insights
       </p>
     </div>
   );
