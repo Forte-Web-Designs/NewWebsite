@@ -814,15 +814,15 @@ export default function Home() {
                       </div>
                     </div>
 
-                    {/* Compact What We Check */}
-                    <div className="bg-white/5 rounded-lg p-3">
-                      <div className="text-sm font-semibold mb-2 text-blue-300">🔍 What We Check:</div>
-                      <div className="grid grid-cols-1 gap-1 text-xs text-blue-100">
-                        <div>🔥 Speed & Performance</div>
-                        <div>📱 Mobile Optimization</div>
-                        <div>🟢 SEO Foundation</div>
-                        <div>🎨 Design & UX</div>
-                        <div>🔒 Security & Trust</div>
+                    {/* What We Check - Detailed */}
+                    <div className="bg-white/5 rounded-lg p-4">
+                      <div className="text-sm font-semibold mb-3 text-blue-300">🔍 What We Check:</div>
+                      <div className="space-y-2 text-xs text-blue-100">
+                        <div><span className="text-orange-400">🔥</span> <strong>Speed & Performance</strong> – How fast does your site really load?</div>
+                        <div><span className="text-blue-400">📱</span> <strong>Mobile Optimization</strong> – Is your site optimized for phones?</div>
+                        <div><span className="text-green-400">🟢</span> <strong>SEO Foundation</strong> – How visible are you on Google?</div>
+                        <div><span className="text-pink-400">🎨</span> <strong>Design & UX</strong> – Is your homepage clear and conversion-ready?</div>
+                        <div><span className="text-yellow-400">🔒</span> <strong>Security & Trust</strong> – Do visitors feel safe on your site?</div>
                       </div>
                     </div>
 
@@ -837,8 +837,9 @@ export default function Home() {
                   {/* Right Side - Audit Tool */}
                   <div className="bg-white/10 backdrop-blur-sm rounded-xl p-4 border border-white/20">
                     <div className="text-center mb-4">
-                      <div className="text-lg font-bold mb-2">✨ Free 30-Second Audit</div>
-                      <p className="text-blue-200 text-sm">Enter your website URL below to get started:</p>
+                      <div className="text-lg font-bold mb-2">✨ Free 5-Point Website Audit</div>
+                      <p className="text-blue-200 text-sm">See what's helping or hurting your site — instantly.</p>
+                      <p className="text-blue-300 text-xs mt-1">No email. No sales pitch. Just real, helpful insights.</p>
                     </div>
 
                     {/* Audit Component */}
