@@ -114,59 +114,121 @@ export default function ConstructionPage() {
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <ScrollToTop />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-red-100 dark:from-gray-900 dark:to-gray-800 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-orange-700 via-orange-600 to-red-700 text-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SimpleScrollReveal direction="left" delay={100}>
-              <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/30 px-4 py-2 rounded-full">
-                  <Icon name="star" className="w-4 h-4 text-orange-600 dark:text-orange-400" />
-                  <span className="text-sm font-medium text-orange-700 dark:text-orange-300">Construction Specialists</span>
+              <div>
+                <div className="inline-flex items-center gap-2 bg-orange-600/50 text-orange-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                  🏗️ Industry Expertise: Construction
                 </div>
-                
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Construction Websites That 
-                  <span className="text-orange-600 dark:text-orange-400"> Win More Bids</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                  Construction Websites That Turn Prospects Into <span className="text-orange-300">High-Value Project Clients</span>
                 </h1>
-                
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Stop losing projects to competitors with better online presence. Get a construction website that showcases your expertise, builds trust with project owners, and wins more high-value contracts.
+                <p className="text-xl text-orange-100 mb-8 leading-relaxed">
+                  Construction projects start with trust. Your website needs to showcase completed work and build confidence for six-figure investments. We build construction websites that win more bids and grow your business.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <DarkButton href="/contact?industry=construction" className="text-center">
-                    Get My Construction Website
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <DarkButton href="/contact?industry=construction" className="bg-blue-600 hover:bg-blue-700">
+                    Get My Construction Website Quote
                   </DarkButton>
-                  <LightButton href="/checkup" className="text-center">
-                    Free Website Checkup
+                  <LightButton href="/checkup?industry=construction">
+                    Free Construction Website Audit
                   </LightButton>
                 </div>
-                
-                <div className="flex items-center gap-4 pt-4">
+
+                <div className="flex flex-wrap items-center gap-6 text-sm text-orange-200">
                   <div className="flex items-center gap-2">
-                    <Icon name="star" className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">Live in 7-10 days</span>
+                    <span className="text-orange-400">✓</span>
+                    Project Portfolio Showcase
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="star" className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">Project portfolio included</span>
+                    <span className="text-orange-400">✓</span>
+                    Bid-Ready Contact Forms
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-orange-400">✓</span>
+                    Trust Building Elements
                   </div>
                 </div>
               </div>
             </SimpleScrollReveal>
-            
-            {/* Right Content - Image */}
+
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-orange-100 to-red-200 dark:from-gray-700 dark:to-gray-600">
-                  <OptimizedImage
-                    src="/images/industries/construction-website-design.jpg"
-                    alt="Professional construction website design showcase"
-                    width={600}
-                    height={600}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-2xl border-2 border-orange-100">
+                  {/* Header */}
+                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl text-white">
+                    <span className="text-3xl">🏗️</span>
+                    <div>
+                      <h3 className="text-white text-xl font-bold">PREMIER CONSTRUCTION</h3>
+                      <p className="text-orange-100 text-sm font-semibold">🏆 Building Excellence Since 1995 🏆</p>
+                    </div>
+                  </div>
+                  
+                  {/* Services */}
+                  <div className="space-y-4 mb-6">
+                    <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        🏠 <span>Custom Homes</span>
+                      </span>
+                      <span className="font-bold text-blue-600 text-lg">$350K+</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        🏢 <span>Commercial Build</span>
+                      </span>
+                      <span className="font-bold text-green-600 text-lg">$500K+</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        🛁 <span>Renovations</span>
+                      </span>
+                      <span className="font-bold text-purple-600 text-lg">$75K+</span>
+                    </div>
+                  </div>
+
+                  {/* Portfolio Preview */}
+                  <div className="mb-4 bg-gradient-to-r from-orange-100 to-red-100 p-4 rounded-lg">
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="bg-orange-200 rounded h-16 flex items-center justify-center text-orange-700 font-bold text-xs">
+                        🏘️ Recent Projects
+                      </div>
+                      <div className="bg-red-200 rounded h-16 flex items-center justify-center text-red-700 font-bold text-xs">
+                        📋 Testimonials
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Call button */}
+                  <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-4 rounded-xl mb-4 shadow-lg transform hover:scale-105 transition-transform">
+                    <div className="flex items-center justify-center gap-3">
+                      <span className="text-2xl">📞</span>
+                      <div>
+                        <div className="font-bold text-lg">Call (555) BUILD-IT</div>
+                        <div className="text-orange-100 text-sm">Free Project Estimate!</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reviews section */}
+                  <div className="text-center bg-yellow-50 rounded-lg p-4">
+                    <div className="flex items-center justify-center gap-1 mb-2">
+                      <span className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div className="text-gray-700 font-semibold">4.9/5 Stars</div>
+                    <div className="text-gray-600 text-sm">(89 Google Reviews)</div>
+                    <div className="text-orange-600 text-sm font-medium mt-1">🏗️ Licensed & Bonded</div>
+                  </div>
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                  ✅ 28+ Years Experience
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                  🛡️ 2-Year Warranty
                 </div>
               </div>
             </SimpleScrollReveal>

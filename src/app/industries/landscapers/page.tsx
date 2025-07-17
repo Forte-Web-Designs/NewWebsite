@@ -114,59 +114,121 @@ export default function LandscapersPage() {
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <ScrollToTop />
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-green-50 to-emerald-100 dark:from-gray-900 dark:to-gray-800 py-16 lg:py-24">
+      <section className="bg-gradient-to-br from-green-800 via-green-700 to-emerald-800 text-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left Content */}
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SimpleScrollReveal direction="left" delay={100}>
-              <div className="space-y-6">
-                <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 px-4 py-2 rounded-full">
-                  <Icon name="star" className="w-4 h-4 text-green-600 dark:text-green-400" />
-                  <span className="text-sm font-medium text-green-700 dark:text-green-300">Landscaper Specialists</span>
+              <div>
+                <div className="inline-flex items-center gap-2 bg-green-700/50 text-green-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                  🌿 Industry Expertise: Landscaping
                 </div>
-                
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white leading-tight">
-                  Landscaper Websites That 
-                  <span className="text-green-600 dark:text-green-400"> Grow Your Business</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                  Landscaper Websites That Turn Browsers Into <span className="text-green-300">High-Value Project Customers</span>
                 </h1>
-                
-                <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Stop losing projects to competitors with better websites. Get a landscaper website that showcases your beautiful work, captures seasonal leads, and books high-value projects year-round.
+                <p className="text-xl text-green-100 mb-8 leading-relaxed">
+                  Landscaping is visual and seasonal. Your website needs to showcase beautiful transformations and capture leads year-round. We build landscaper websites that sell premium projects and maintain steady revenue.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <DarkButton href="/contact?industry=landscapers" className="text-center">
-                    Get My Landscaper Website
+                <div className="flex flex-col sm:flex-row gap-4 mb-8">
+                  <DarkButton href="/contact?industry=landscaping" className="bg-orange-600 hover:bg-orange-700">
+                    Get My Landscaper Website Quote
                   </DarkButton>
-                  <LightButton href="/checkup" className="text-center">
-                    Free Website Checkup
+                  <LightButton href="/checkup?industry=landscaping">
+                    Free Landscaping Website Audit
                   </LightButton>
                 </div>
-                
-                <div className="flex items-center gap-4 pt-4">
+
+                <div className="flex flex-wrap items-center gap-6 text-sm text-green-200">
                   <div className="flex items-center gap-2">
-                    <Icon name="star" className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">Live in 7-10 days</span>
+                    <span className="text-green-400">✓</span>
+                    Visual Project Galleries
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="star" className="w-4 h-4 text-yellow-400" />
-                    <span className="text-sm text-gray-600 dark:text-gray-400">Seasonal optimization included</span>
+                    <span className="text-green-400">✓</span>
+                    Seasonal Service Pages
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-400">✓</span>
+                    Quote Request Forms
                   </div>
                 </div>
               </div>
             </SimpleScrollReveal>
-            
-            {/* Right Content - Image */}
+
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative">
-                <div className="aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-green-100 to-emerald-200 dark:from-gray-700 dark:to-gray-600">
-                  <OptimizedImage
-                    src="/images/industries/landscaper-website-design.jpg"
-                    alt="Professional landscaper website design showcase"
-                    width={600}
-                    height={600}
-                    className="w-full h-full object-cover"
-                  />
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-2xl border-2 border-green-100">
+                  {/* Header */}
+                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl text-white">
+                    <span className="text-3xl">🌿</span>
+                    <div>
+                      <h3 className="text-white text-xl font-bold">ELITE LANDSCAPING</h3>
+                      <p className="text-green-100 text-sm font-semibold">✨ Transform Your Outdoor Space ✨</p>
+                    </div>
+                  </div>
+                  
+                  {/* Services */}
+                  <div className="space-y-4 mb-6">
+                    <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        🌳 <span>Landscape Design</span>
+                      </span>
+                      <span className="font-bold text-green-600 text-lg">$2,500+</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        💧 <span>Irrigation Install</span>
+                      </span>
+                      <span className="font-bold text-blue-600 text-lg">$3,200+</span>
+                    </div>
+                    <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        🏗️ <span>Hardscaping</span>
+                      </span>
+                      <span className="font-bold text-orange-600 text-lg">$5,000+</span>
+                    </div>
+                  </div>
+
+                  {/* Portfolio Preview */}
+                  <div className="mb-4 bg-gradient-to-r from-green-100 to-emerald-100 p-4 rounded-lg">
+                    <div className="grid grid-cols-2 gap-2">
+                      <div className="bg-green-200 rounded h-16 flex items-center justify-center text-green-700 font-bold text-xs">
+                        🏡 Before/After
+                      </div>
+                      <div className="bg-emerald-200 rounded h-16 flex items-center justify-center text-emerald-700 font-bold text-xs">
+                        🌺 Gallery
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Call button */}
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-4 rounded-xl mb-4 shadow-lg transform hover:scale-105 transition-transform">
+                    <div className="flex items-center justify-center gap-3">
+                      <span className="text-2xl">📞</span>
+                      <div>
+                        <div className="font-bold text-lg">Call (555) LANDSCAPE</div>
+                        <div className="text-green-100 text-sm">Free Consultation!</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Reviews section */}
+                  <div className="text-center bg-yellow-50 rounded-lg p-4">
+                    <div className="flex items-center justify-center gap-1 mb-2">
+                      <span className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div className="text-gray-700 font-semibold">4.8/5 Stars</div>
+                    <div className="text-gray-600 text-sm">(156 Google Reviews)</div>
+                    <div className="text-green-600 text-sm font-medium mt-1">🌿 Licensed & Insured</div>
+                  </div>
+                </div>
+                
+                {/* Floating elements */}
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                  ✅ Free Estimates
+                </div>
+                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                  🌱 20+ Years Exp
                 </div>
               </div>
             </SimpleScrollReveal>
