@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 export default function HealthcarePage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Dallas Family Medicine", location: "Dallas, TX" },
-    { name: "Austin Dental Care", location: "Austin, TX" },
-    { name: "Metro Physical Therapy", location: "Houston, TX" },
-    { name: "Wellness Clinic SA", location: "San Antonio, TX" },
-    { name: "Advanced Cardiology", location: "Fort Worth, TX" }
+    { name: "Family Medicine Associates" },
+    { name: "Premier Dental Care" },
+    { name: "Metro Physical Therapy" },
+    { name: "Wellness Clinic Network" },
+    { name: "Advanced Cardiology Group" }
   ];
 
   // Comparison data
@@ -239,8 +239,6 @@ export default function HealthcarePage() {
                     {clientCompanies.slice(0, 3).map((company, index) => (
                       <div key={index} className="text-gray-700 dark:text-gray-300">
                         <strong>{company.name}</strong>
-                        <br />
-                        <span className="text-gray-500 dark:text-gray-400">{company.location}</span>
                       </div>
                     ))}
                   </div>

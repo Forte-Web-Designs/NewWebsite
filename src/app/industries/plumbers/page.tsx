@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 export default function PlumbersPage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Dallas Elite Plumbing", location: "Dallas, TX" },
-    { name: "Rapid Response Plumbers", location: "Austin, TX" },
-    { name: "Metro Drain Solutions", location: "Houston, TX" },
-    { name: "Emergency Pipe Pros", location: "San Antonio, TX" },
-    { name: "All Hours Plumbing Co", location: "Fort Worth, TX" }
+    { name: "Elite Plumbing Solutions" },
+    { name: "Rapid Response Plumbers" },
+    { name: "Metro Drain Solutions" },
+    { name: "Emergency Pipe Pros" },
+    { name: "All Hours Plumbing Co" }
   ];
 
   // Comparison data
@@ -292,9 +292,6 @@ export default function PlumbersPage() {
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
                     {company.name}
                   </h4>
-                  <p className="text-xs text-gray-500 dark:text-gray-400">
-                    {company.location}
-                  </p>
                 </div>
               ))}
             </div>

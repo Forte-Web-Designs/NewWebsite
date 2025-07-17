@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 export default function RestaurantsPage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Bella Vista Italian", location: "Dallas, TX" },
-    { name: "Smokehouse BBQ Co", location: "Austin, TX" },
-    { name: "Metro Sushi Bar", location: "Houston, TX" },
-    { name: "Taco Libre Kitchen", location: "San Antonio, TX" },
-    { name: "Farm Table Bistro", location: "Fort Worth, TX" }
+    { name: "Bella Vista Italian" },
+    { name: "Smokehouse BBQ Co" },
+    { name: "Metro Sushi Bar" },
+    { name: "Taco Libre Kitchen" },
+    { name: "Farm Table Bistro" }
   ];
 
   // Comparison data
@@ -431,9 +431,6 @@ export default function RestaurantsPage() {
                     <h3 className="font-semibold text-gray-900 dark:text-gray-100 text-sm mb-1">
                       {company.name}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 text-xs">
-                      {company.location}
-                    </p>
                   </div>
                 </div>
               ))}

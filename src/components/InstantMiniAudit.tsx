@@ -311,7 +311,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       <form ref={formRef} onSubmit={handleSubmit}>
         {/* Enhanced Input Field */}
         <div className="relative mb-3">
-          <label htmlFor="website-url" className="block text-white/90 text-sm font-medium mb-1 text-center">
+          <label htmlFor="website-url" className="block text-white text-sm font-medium mb-1 text-center">
             📍 Your Website URL:
           </label>
           <div className="relative">
@@ -332,7 +332,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               type="search"
               value={websiteUrl}
               onChange={(e) => setWebsiteUrl(e.target.value)}
-              className="block bg-white/10 backdrop-blur-sm w-full py-3 px-12 text-white placeholder:text-white/60 text-base rounded-xl border-2 border-white/30 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/30 transition-all duration-300 hover:border-white/50 hover:bg-white/15 shadow-lg"
+              className="block bg-white/15 backdrop-blur-sm w-full py-3 px-12 text-white placeholder:text-white/80 text-base rounded-xl border-2 border-white/40 focus:outline-none focus:border-blue-300 focus:ring-2 focus:ring-blue-300/50 transition-all duration-300 hover:border-white/60 hover:bg-white/20 shadow-lg"
               placeholder="yoursite.com"
               disabled={isLoading}
               required
