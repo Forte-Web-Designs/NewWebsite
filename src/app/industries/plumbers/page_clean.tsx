@@ -1,5 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { OptimizedImage } from '@/components/images/OptimizedImage';
+import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
