@@ -128,7 +128,7 @@ function SiteCheckUpContent() {
                 </span>
                 
                 <h1 className="font-roboto font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-black dark:text-white">
-                  Complete Website Analysis Tool
+                  Curious How Your Website Really Performs?
                 </h1>
                 
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -185,7 +185,7 @@ function SiteCheckUpContent() {
               <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-2xl border border-slate-700">
                 <div className="text-center mb-6 sm:mb-8">
                   <h2 className="text-xl sm:text-2xl font-bold text-white mb-3 sm:mb-4">
-                    Complete Desktop & Mobile Analysis
+                    Free 5-Point Website Audit
                   </h2>
                   <p className="text-sm sm:text-base text-slate-300">
                     Enter your website URL to get started. Most audits complete in under 60 seconds.
