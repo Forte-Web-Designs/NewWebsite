@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
 import ContactForm from "@/components/ContactForm";
-import EmailCapture from "@/components/EmailCapture";
 import CalendlyWidget from "@/components/CalendlyWidget";
 import { Icon } from '@/components/images/Icon';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';

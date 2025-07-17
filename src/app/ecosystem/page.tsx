@@ -1,5 +1,4 @@
 import { Metadata } from "next";
-import Link from "next/link";
 import { PricingPage } from "@/components/pricing";
 import DarkButton from "@/components/DarkButton";
 import LightButton from "@/components/LightButton";

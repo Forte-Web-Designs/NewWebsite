@@ -13,7 +13,6 @@ function SiteCheckUpContent() {
   const [auditResults, setAuditResults] = useState<any>(null);
   const [auditedUrl, setAuditedUrl] = useState("");
   const [showMiniAuditWelcome, setShowMiniAuditWelcome] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
   const resultsRef = useRef<HTMLDivElement>(null);
   const headerRef = useRef<HTMLDivElement>(null);
   const gradesRef = useRef<HTMLDivElement>(null);

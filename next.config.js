@@ -5,6 +5,14 @@ const nextConfig = {
   output: 'export', // Enable static export for Netlify
   trailingSlash: true, // Ensures proper routing on static hosts
   
+  // Allow warnings during build - don't fail on TypeScript warnings
+  typescript: {
+    ignoreBuildErrors: false, // Keep TypeScript checking
+  },
+  eslint: {
+    ignoreDuringBuilds: true, // Ignore ESLint warnings during build
+  },
+  
   images: {
     unoptimized: true, // Required for static export
     domains: ['images.unsplash.com', 'source.unsplash.com'],

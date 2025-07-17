@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import Link from 'next/link';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import { Icon } from '@/components/images/Icon';

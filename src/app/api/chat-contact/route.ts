@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const { name, email, phone, company, message, chatHistory } = body;
+    const { name, email, phone, company, message } = body;
 
     // Here you would typically:
     // 1. Save to database

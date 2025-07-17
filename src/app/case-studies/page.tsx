@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import TestimonialsSection from '@/components/TestimonialsSection';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
