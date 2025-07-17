@@ -143,7 +143,7 @@ export default function Header() {
   // Solutions dropdown
   const solutionsDropdownItems = [
     { label: 'Free Website Checkup', href: '/checkup' },
-    { label: 'SEO Audit Tool', href: '/solutions/seotool' },
+    
     { label: 'Case Studies', href: '/case-studies' }
   ];
 
