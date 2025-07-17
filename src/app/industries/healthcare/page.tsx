@@ -402,16 +402,16 @@ export default function HealthcarePage() {
                   <div className="text-gray-900 dark:text-gray-100">{item.feature}</div>
                   <div className="text-center">
                     {item.typical ? (
-                      <Icon name="check" className="w-5 h-5 text-green-500 mx-auto" />
+                      <span className="text-green-500">✓</span>
                     ) : (
-                      <Icon name="x" className="w-5 h-5 text-red-500 mx-auto" />
+                      <span className="text-red-500">✗</span>
                     )}
                   </div>
                   <div className="text-center">
                     {item.forte ? (
-                      <Icon name="check" className="w-5 h-5 text-green-500 mx-auto" />
+                      <span className="text-green-500">✓</span>
                     ) : (
-                      <Icon name="x" className="w-5 h-5 text-red-500 mx-auto" />
+                      <span className="text-red-500">✗</span>
                     )}
                   </div>
                 </div>
