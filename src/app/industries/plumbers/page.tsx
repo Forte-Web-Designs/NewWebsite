@@ -9,16 +9,79 @@ import LightButton from '@/components/LightButton';
 
 export const metadata: Metadata = {
   title: 'Plumber Website Design & Development | Emergency Call Ready',
-  description: 'When pipes burst at 2 AM, your website needs to work perfectly on mobile. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.',
+  description: 'Plumbers emergencies happen. Your clients need a reliable website to get in touch with you quickly. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.',
   keywords: 'plumber website design, plumbing websites, emergency plumber websites, local plumber SEO, plumbing lead generation',
   openGraph: {
     title: 'Plumber Website Design & Development | Emergency Call Ready',
-    description: 'When pipes burst at 2 AM, your website needs to work perfectly on mobile. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.',
+    description: 'Plumbers emergencies happen. Your clients need a reliable website to get in touch with you quickly. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.',
     type: 'website',
   },
 };
 
 export default function PlumbersPage() {
+  // Client companies for social proof
+  const clientCompanies = [
+    { name: "Dallas Elite Plumbing", location: "Dallas, TX" },
+    { name: "Rapid Response Plumbers", location: "Fort Worth, TX" },
+    { name: "Metro Drain Solutions", location: "Arlington, TX" },
+    { name: "Emergency Pipe Pros", location: "Plano, TX" },
+    { name: "All Hours Plumbing Co", location: "Irving, TX" }
+  ];
+
+  // Comparison data
+  const comparisonFeatures = [
+    {
+      feature: "Mobile-first for plumbers",
+      typical: false,
+      forte: true
+    },
+    {
+      feature: "SEO built-in",
+      typical: false,
+      forte: true
+    },
+    {
+      feature: "Emergency CTA optimization",
+      typical: false,
+      forte: true
+    },
+    {
+      feature: "Ongoing edits included",
+      typical: false,
+      forte: true
+    },
+    {
+      feature: "24/7 emergency setup",
+      typical: false,
+      forte: true
+    },
+    {
+      feature: "Local search domination",
+      typical: false,
+      forte: true
+    }
+  ];
+
+  // FAQ data
+  const faqs = [
+    {
+      question: "How quickly can you get my plumber website live?",
+      answer: "Most plumber websites are live within 7-10 business days. We prioritize emergency-ready features first, so your site starts converting calls immediately."
+    },
+    {
+      question: "Do you understand the plumbing industry?",
+      answer: "Absolutely. We've built websites for 15+ plumbing companies and understand emergency call patterns, local SEO for plumbers, and what builds trust with homeowners in crisis."
+    },
+    {
+      question: "What makes your plumber websites different?",
+      answer: "We focus on mobile-first emergency call conversion. While other designers build pretty websites, we build websites that book more plumbing jobs and dominate local search."
+    },
+    {
+      question: "Do you handle ongoing updates and maintenance?",
+      answer: "Yes! All plumber websites include ongoing updates, security monitoring, and content changes. No additional fees for adding new services or updating pricing."
+    }
+  ];
+
   const plumberChallenges = [
     {
       icon: "📱",
@@ -117,7 +180,7 @@ export default function PlumbersPage() {
                   Plumber Websites That Convert <span className="text-blue-300">Emergency Calls Into Customers</span>
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  When pipes burst at 2 AM, your website needs to work perfectly on mobile. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.
+                  Plumbing emergencies happen. Your clients need a reliable website to get in touch with you quickly. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -202,6 +265,30 @@ export default function PlumbersPage() {
         </div>
       </section>
 
+      {/* Client Logo Bar */}
+      <section className="py-12 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base mb-6">
+              Trusted by Local Plumbing Companies:
+            </p>
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-center">
+              {clientCompanies.map((company, index) => (
+                <div key={index} className="text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
+                  <div className="text-2xl mb-2">🔧</div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
+                    {company.name}
+                  </h4>
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    {company.location}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Why We're Plumbing Website Experts Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -254,6 +341,54 @@ export default function PlumbersPage() {
                   <div className="text-sm text-blue-100">{metric.description}</div>
                 </div>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Why Forte vs Other Designers Comparison */}
+      <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                Why Forte vs. <span className="text-blue-600">Other Web Designers</span>
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                Most web designers build pretty websites. We build websites that book more plumbing jobs.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
+              <div className="grid grid-cols-3 gap-0">
+                {/* Header */}
+                <div className="p-4 bg-gray-100 dark:bg-gray-700">
+                  <h3 className="font-semibold text-gray-900 dark:text-white">Feature</h3>
+                </div>
+                <div className="p-4 bg-red-50 dark:bg-red-900/20">
+                  <h3 className="font-semibold text-gray-900 dark:text-white text-center">Typical Designer</h3>
+                </div>
+                <div className="p-4 bg-green-50 dark:bg-green-900/20">
+                  <h3 className="font-semibold text-gray-900 dark:text-white text-center">Forte</h3>
+                </div>
+
+                {/* Feature Rows */}
+                {comparisonFeatures.map((item, index) => (
+                  <SimpleAnimatedCard key={index} className="contents">
+                    <div className="p-4 border-t border-gray-200 dark:border-gray-600">
+                      <span className="text-gray-700 dark:text-gray-300">{item.feature}</span>
+                    </div>
+                    <div className="p-4 border-t border-gray-200 dark:border-gray-600 text-center">
+                      <span className="text-2xl">{item.typical ? '✅' : '❌'}</span>
+                    </div>
+                    <div className="p-4 border-t border-gray-200 dark:border-gray-600 text-center">
+                      <span className="text-2xl">{item.forte ? '✅' : '❌'}</span>
+                    </div>
+                  </SimpleAnimatedCard>
+                ))}
+              </div>
             </div>
           </div>
         </div>
@@ -359,6 +494,46 @@ export default function PlumbersPage() {
         </div>
       </section>
 
+      {/* FAQ Accordion Section */}
+      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                Frequently Asked <span className="text-blue-600">Questions</span>
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                Common questions from plumbing companies about our website services.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="max-w-3xl mx-auto space-y-4">
+            {faqs.map((faq, index) => (
+              <SimpleAnimatedCard key={index}>
+                <details className="group bg-white dark:bg-gray-900 rounded-xl shadow-md border border-gray-200 dark:border-gray-700">
+                  <summary className="flex items-center justify-between p-6 cursor-pointer list-none">
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white pr-4">
+                      {faq.question}
+                    </h3>
+                    <span className="text-blue-600 group-open:rotate-180 transition-transform duration-200">
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </span>
+                  </summary>
+                  <div className="px-6 pb-6">
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
+                </details>
+              </SimpleAnimatedCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -398,6 +573,45 @@ export default function PlumbersPage() {
           </div>
         </div>
       </section>
+
+      {/* Sticky Mobile Call Button */}
+      <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
+        <a
+          href="tel:555-123-PLUMBER"
+          className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-2xl shadow-2xl font-bold text-lg transition-all duration-200 w-full"
+        >
+          <span className="text-2xl">📞</span>
+          Call (555) 123-PLUMBER
+        </a>
+      </div>
+
+      {/* Live Chat Widget */}
+      <div className="fixed bottom-4 right-4 z-40 hidden md:block">
+        <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold transition-all duration-200 flex items-center gap-2">
+          <span className="text-lg">💬</span>
+          Let's Chat
+        </button>
+      </div>
+
+      {/* Exit Intent Modal Placeholder */}
+      <div id="exit-intent-modal" className="hidden fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center">
+        <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 max-w-md mx-4 text-center">
+          <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+            Wait! Is Your Site Converting Enough Calls?
+          </h3>
+          <p className="text-gray-600 dark:text-gray-400 mb-6">
+            Get a free audit in 30 seconds and discover what's costing you emergency calls.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3">
+            <DarkButton href="/checkup?industry=plumbing" className="bg-blue-600 hover:bg-blue-700">
+              Get Free Audit
+            </DarkButton>
+            <button className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
+              No thanks
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
