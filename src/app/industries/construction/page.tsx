@@ -114,31 +114,31 @@ export default function ConstructionPage() {
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <ScrollToTop />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-700 via-orange-600 to-red-700 text-white py-20 md:py-28">
+      <section className="bg-gradient-to-br from-orange-700 via-orange-600 to-red-700 text-white py-12 sm:py-16 md:py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <SimpleScrollReveal direction="left" delay={100}>
-              <div>
-                <div className="inline-flex items-center gap-2 bg-orange-600/50 text-orange-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+              <div className="text-center lg:text-left">
+                <div className="inline-flex items-center gap-2 bg-orange-600/50 text-orange-200 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
                   🏗️ Industry Expertise: Construction
                 </div>
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                   Construction Websites That Turn Prospects Into <span className="text-orange-300">High-Value Project Clients</span>
                 </h1>
-                <p className="text-xl text-orange-100 mb-8 leading-relaxed">
+                <p className="text-lg sm:text-xl text-orange-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   Construction projects start with trust. Your website needs to showcase completed work and build confidence for six-figure investments. We build construction websites that win more bids and grow your business.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <DarkButton href="/contact?industry=construction" className="bg-blue-600 hover:bg-blue-700">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start">
+                  <DarkButton href="/contact?industry=construction" className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
                     Get My Construction Website Quote
                   </DarkButton>
-                  <LightButton href="/checkup?industry=construction">
+                  <LightButton href="/checkup?industry=construction" className="w-full sm:w-auto">
                     Free Construction Website Audit
                   </LightButton>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-6 text-sm text-orange-200">
+                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-orange-200">
                   <div className="flex items-center gap-2">
                     <span className="text-orange-400">✓</span>
                     Project Portfolio Showcase
@@ -156,78 +156,78 @@ export default function ConstructionPage() {
             </SimpleScrollReveal>
 
             <SimpleScrollReveal direction="right" delay={200}>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-2xl border-2 border-orange-100">
+              <div className="relative mt-8 lg:mt-0">
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl border-2 border-orange-100 max-w-lg mx-auto">
                   {/* Header */}
-                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl text-white">
-                    <span className="text-3xl">🏗️</span>
-                    <div>
-                      <h3 className="text-white text-xl font-bold">PREMIER CONSTRUCTION</h3>
-                      <p className="text-orange-100 text-sm font-semibold">🏆 Building Excellence Since 1995 🏆</p>
+                  <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 p-3 sm:p-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl text-white">
+                    <span className="text-2xl sm:text-3xl">🏗️</span>
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-white text-lg sm:text-xl font-bold truncate">PREMIER CONSTRUCTION</h3>
+                      <p className="text-orange-100 text-xs sm:text-sm font-semibold">🏆 Building Excellence Since 1995 🏆</p>
                     </div>
                   </div>
                   
                   {/* Services */}
-                  <div className="space-y-4 mb-6">
-                    <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2">
-                        🏠 <span>Custom Homes</span>
+                  <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
+                    <div className="flex justify-between items-center p-2 sm:p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2 text-sm sm:text-base">
+                        🏠 <span className="truncate">Custom Homes</span>
                       </span>
-                      <span className="font-bold text-blue-600 text-lg">$350K+</span>
+                      <span className="font-bold text-blue-600 text-base sm:text-lg whitespace-nowrap">$350K+</span>
                     </div>
-                    <div className="flex justify-between items-center p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2">
-                        🏢 <span>Commercial Build</span>
+                    <div className="flex justify-between items-center p-2 sm:p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2 text-sm sm:text-base">
+                        🏢 <span className="truncate">Commercial Build</span>
                       </span>
-                      <span className="font-bold text-green-600 text-lg">$500K+</span>
+                      <span className="font-bold text-green-600 text-base sm:text-lg whitespace-nowrap">$500K+</span>
                     </div>
-                    <div className="flex justify-between items-center p-3 bg-purple-50 rounded-lg border-l-4 border-purple-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2">
-                        🛁 <span>Renovations</span>
+                    <div className="flex justify-between items-center p-2 sm:p-3 bg-purple-50 rounded-lg border-l-4 border-purple-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2 text-sm sm:text-base">
+                        🛁 <span className="truncate">Renovations</span>
                       </span>
-                      <span className="font-bold text-purple-600 text-lg">$75K+</span>
+                      <span className="font-bold text-purple-600 text-base sm:text-lg whitespace-nowrap">$75K+</span>
                     </div>
                   </div>
 
                   {/* Portfolio Preview */}
-                  <div className="mb-4 bg-gradient-to-r from-orange-100 to-red-100 p-4 rounded-lg">
+                  <div className="mb-3 sm:mb-4 bg-gradient-to-r from-orange-100 to-red-100 p-3 sm:p-4 rounded-lg">
                     <div className="grid grid-cols-2 gap-2">
-                      <div className="bg-orange-200 rounded h-16 flex items-center justify-center text-orange-700 font-bold text-xs">
+                      <div className="bg-orange-200 rounded h-12 sm:h-16 flex items-center justify-center text-orange-700 font-bold text-xs">
                         🏘️ Recent Projects
                       </div>
-                      <div className="bg-red-200 rounded h-16 flex items-center justify-center text-red-700 font-bold text-xs">
+                      <div className="bg-red-200 rounded h-12 sm:h-16 flex items-center justify-center text-red-700 font-bold text-xs">
                         📋 Testimonials
                       </div>
                     </div>
                   </div>
 
                   {/* Call button */}
-                  <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-4 rounded-xl mb-4 shadow-lg transform hover:scale-105 transition-transform">
-                    <div className="flex items-center justify-center gap-3">
-                      <span className="text-2xl">📞</span>
+                  <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-3 sm:py-4 rounded-xl mb-3 sm:mb-4 shadow-lg transform hover:scale-105 transition-transform">
+                    <div className="flex items-center justify-center gap-2 sm:gap-3">
+                      <span className="text-xl sm:text-2xl">📞</span>
                       <div>
-                        <div className="font-bold text-lg">Call (555) BUILD-IT</div>
-                        <div className="text-orange-100 text-sm">Free Project Estimate!</div>
+                        <div className="font-bold text-base sm:text-lg">Call (555) BUILD-IT</div>
+                        <div className="text-orange-100 text-xs sm:text-sm">Free Project Estimate!</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Reviews section */}
-                  <div className="text-center bg-yellow-50 rounded-lg p-4">
+                  <div className="text-center bg-yellow-50 rounded-lg p-3 sm:p-4">
                     <div className="flex items-center justify-center gap-1 mb-2">
-                      <span className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
+                      <span className="text-yellow-400 text-lg sm:text-xl">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <div className="text-gray-700 font-semibold">4.9/5 Stars</div>
-                    <div className="text-gray-600 text-sm">(89 Google Reviews)</div>
-                    <div className="text-orange-600 text-sm font-medium mt-1">🏗️ Licensed & Bonded</div>
+                    <div className="text-gray-700 font-semibold text-sm sm:text-base">4.9/5 Stars</div>
+                    <div className="text-gray-600 text-xs sm:text-sm">(89 Google Reviews)</div>
+                    <div className="text-orange-600 text-xs sm:text-sm font-medium mt-1">🏗️ Licensed & Bonded</div>
                   </div>
                 </div>
                 
                 {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg animate-pulse">
                   ✅ 28+ Years Experience
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg">
                   🛡️ 2-Year Warranty
                 </div>
               </div>

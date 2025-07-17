@@ -218,9 +218,7 @@ export default function Header() {
                 width="200px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/pricing" showIcon={true}>
-                      <span className="font-semibold text-blue-600 dark:text-blue-400">Pricing</span>
-                    </HeaderLink>
+                    <HeaderLink href="/pricing" showIcon={true}>Pricing</HeaderLink>
                   </div>
                 }
               />
