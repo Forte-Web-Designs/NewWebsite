@@ -27,7 +27,7 @@ export default function Pricing() {
           <h2 className="font-roboto font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight text-center mb-6">
             Choose Your Growth Plan
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-4">
+          <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-4">
             Start with a Forte Foundation™ website, then add services as your business grows. Clear, predictable monthly pricing with no surprises.
           </p>
           
@@ -66,7 +66,7 @@ export default function Pricing() {
                     <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                       Just Starting Out?
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                       New business or replacing an old website
                     </p>
                     <div className="bg-primary-50 dark:bg-primary-900/30 rounded-lg p-4">
@@ -92,7 +92,7 @@ export default function Pricing() {
                     <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                       Ready to Grow?
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                       Need more pages or want to get found online
                     </p>
                     <div className="bg-primary-50 dark:bg-primary-900/30 rounded-lg p-4">
@@ -113,7 +113,7 @@ export default function Pricing() {
                     <h4 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                       Scale Everything?
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
+                    <p className="text-gray-700 dark:text-gray-300 text-sm mb-4">
                       Dominate your market with full digital presence
                     </p>
                     <div className="bg-primary-50 dark:bg-primary-900/30 rounded-lg p-4">

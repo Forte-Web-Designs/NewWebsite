@@ -194,7 +194,7 @@ export default function Home() {
                         <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center flex-shrink-0">
                           <span className="text-sm">⚡</span>
                         </div>
-                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-[#626262] dark:text-white">
+                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
                           Meticulously built for performance
                         </span>
                       </div>
@@ -202,7 +202,7 @@ export default function Home() {
                         <div className="w-6 h-6 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center flex-shrink-0">
                           <span className="text-sm">🛡️</span>
                         </div>
-                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-[#626262] dark:text-white">
+                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
                           Hardened for security
                         </span>
                       </div>
@@ -210,7 +210,7 @@ export default function Home() {
                         <div className="w-6 h-6 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center flex-shrink-0">
                           <span className="text-sm">📈</span>
                         </div>
-                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-[#626262] dark:text-white">
+                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
                           Tuned for serious growth
                         </span>
                       </div>
@@ -362,7 +362,7 @@ export default function Home() {
                             <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center flex-shrink-0">
                               <span className="text-lg">⚡</span>
                             </div>
-                            <span className="font-display font-medium text-[18px] leading-[24px] text-[#626262] dark:text-white">
+                            <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
                               Meticulously built for performance
                             </span>
                           </div>
@@ -370,7 +370,7 @@ export default function Home() {
                             <div className="w-8 h-8 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center flex-shrink-0">
                               <span className="text-lg">🛡️</span>
                             </div>
-                            <span className="font-display font-medium text-[18px] leading-[24px] text-[#626262] dark:text-white">
+                            <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
                               Hardened for security
                             </span>
                           </div>
@@ -378,7 +378,7 @@ export default function Home() {
                             <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center flex-shrink-0">
                               <span className="text-lg">📈</span>
                             </div>
-                            <span className="font-display font-medium text-[18px] leading-[24px] text-[#626262] dark:text-white">
+                            <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
                               Tuned for serious growth
                             </span>
                           </div>
@@ -1023,7 +1023,7 @@ export default function Home() {
             <h4 className="font-roboto font-medium text-[32px] sm:text-[62px] leading-[36px] sm:leading-[62px] tracking-[-1.24px] text-center text-[#000000] dark:text-[#F1F1EF] mb-6">
               Ready to See What's Possible?
             </h4>
-            <p className="text-[#626262] font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-[#B4B4B4] mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-700 font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-gray-300 mb-8 max-w-2xl mx-auto">
               Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
             </p>
             <div className="flex justify-center">

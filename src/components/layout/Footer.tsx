@@ -105,24 +105,24 @@ export default function Footer() {
                 <Icon name="logo1.png" alt="Forte Logo (Dark Mode)" size={100} folder="home" />
               </div>
             </div>
-            <div className="space-y-1 text-sm dark:text-gray-400 text-primary-1400">
+            <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
               <p>Flexible builds. Lightning-fast performance. Designed to grow with your business.</p>
             </div>
             <div className="flex gap-2 mt-5 flex-wrap">
               <Icon name="mail.svg" alt="email" size={20} folder="footer" />
-              <a className="text-sm font-normal dark:text-white text-black" href="mailto:seth@fortewebdesigns.com">seth@fortewebdesigns.com</a>
+              <a className="text-sm font-normal dark:text-white text-gray-800" href="mailto:seth@fortewebdesigns.com">seth@fortewebdesigns.com</a>
             </div>
           </div>
 
           {/* Dynamic sections from data array */}
           {data.map((section, index) => (
             <div key={index}>
-              <h3 className="text-lg font-semibold dark:text-white mb-4 text-black">{section.heading}</h3>
+              <h3 className="text-lg font-semibold dark:text-white mb-4 text-gray-900">{section.heading}</h3>
               <ul className="space-y-2">
                 {section.points.map((point, pointIndex) => (
                   <li key={pointIndex}>
                     {typeof point === 'string' ? (
-                      <Link href="#" prefetch={true} className="dark:text-gray-300 text-[#2C2C2C] text-sm">
+                      <Link href="#" prefetch={true} className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         {point}
                       </Link>
                     ) : section.heading === "Connect" ? (
@@ -131,12 +131,12 @@ export default function Footer() {
                         prefetch={true}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="dark:text-gray-300 text-[#2C2C2C] text-sm"
+                        className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                       >
                         {point.text}
                       </Link>
                     ) : (
-                      <Link href={point.href} prefetch={true} className="dark:text-gray-300 text-[#2C2C2C] text-sm">
+                      <Link href={point.href} prefetch={true} className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         {point.text}
                       </Link>
                     )}
@@ -148,7 +148,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-16">
-          <p className="dark:text-[#CECECE] text-primary-1050 text-sm md:block hidden  ">
+          <p className="dark:text-gray-400 text-gray-700 text-sm md:block hidden">
             © {new Date().getFullYear()} Forte Web Design. All rights reserved.
           </p>
         </div>

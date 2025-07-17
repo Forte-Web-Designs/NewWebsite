@@ -229,10 +229,8 @@ export default function Header() {
 
                 {/* Desktop Right Side - Theme Toggle and Contact Button */}
                 <nav className="hidden md:flex items-center space-x-8">
-                  {/* Theme Toggle - Hidden during SSR */}
-                  <div className="opacity-0">
-                    <button className="w-6 h-6 rounded-full bg-gray-200"></button>
-                  </div>
+                  {/* Theme Toggle - Always visible */}
+                  <ThemeToggle />
                   <DarkButton href='/contact'>
                     Contact Us
                   </DarkButton>
@@ -240,13 +238,14 @@ export default function Header() {
 
                 {/* Mobile Menu Button */}
                 <button 
-                  className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200 opacity-0"
+                  onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                  className="md:hidden p-2 rounded-md hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors duration-200"
                   aria-label="Toggle mobile menu"
                 >
                   <div className="w-6 h-6 flex flex-col justify-center items-center">
-                    <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300"></span>
-                    <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300 my-1"></span>
-                    <span className="block w-5 h-0.5 bg-gray-600 dark:bg-gray-300 transition-all duration-300"></span>
+                    <span className={`block w-5 h-0.5 bg-gray-700 dark:bg-gray-200 transition-all duration-300 ${mobileMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
+                    <span className={`block w-5 h-0.5 bg-gray-700 dark:bg-gray-200 transition-all duration-300 my-1 ${mobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                    <span className={`block w-5 h-0.5 bg-gray-700 dark:bg-gray-200 transition-all duration-300 ${mobileMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
                   </div>
                 </button>
               </div>
@@ -284,7 +283,7 @@ export default function Header() {
                         key={index}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -299,7 +298,7 @@ export default function Header() {
                         key={index}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -318,7 +317,7 @@ export default function Header() {
                         key={index}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -333,7 +332,7 @@ export default function Header() {
                         key={index}
                         href={item.href}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="block py-2 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        className="block py-2 text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                       >
                         {item.label}
                       </Link>
@@ -341,9 +340,6 @@ export default function Header() {
                   </div>
                 </MobileExpandableMenu>
                 
-                <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
-                  Pricing
-                </Link>
               </div>
 
               {/* Mobile CTA */}

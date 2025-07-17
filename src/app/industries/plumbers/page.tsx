@@ -282,7 +282,7 @@ export default function PlumbersPage() {
       <section className="py-12 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <p className="text-gray-600 dark:text-gray-400 text-sm md:text-base mb-6">
+            <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
               Trusted by Local Plumbing Companies:
             </p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-center">
@@ -310,7 +310,7 @@ export default function PlumbersPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Why We're <span className="text-blue-600">Plumbing Website Experts</span>
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 We've built websites for 15+ plumbing companies and understand exactly what drives emergency calls and builds customer trust in the plumbing industry.
               </p>
             </div>
@@ -327,7 +327,7 @@ export default function PlumbersPage() {
                   <div className="space-y-3">
                     <div>
                       <div className="text-sm font-medium text-red-600 mb-1">The Problem:</div>
-                      <div className="text-sm text-gray-600 dark:text-gray-400">{challenge.problem}</div>
+                      <div className="text-sm text-gray-700 dark:text-gray-300">{challenge.problem}</div>
                     </div>
                     <div>
                       <div className="text-sm font-medium text-green-600 mb-1">Our Solution:</div>
@@ -367,7 +367,7 @@ export default function PlumbersPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Why Forte vs. <span className="text-blue-600">Other Web Designers</span>
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Most web designers build pretty websites. We build websites that book more plumbing jobs.
               </p>
             </div>
@@ -415,7 +415,7 @@ export default function PlumbersPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Essential Features for <span className="text-blue-600">Plumber Websites</span>
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Every plumbing website we build includes these conversion-focused features designed specifically for the plumbing industry.
               </p>
             </div>
@@ -429,7 +429,7 @@ export default function PlumbersPage() {
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
+                  <p className="text-gray-700 dark:text-gray-300">
                     {feature.description}
                   </p>
                 </div>
@@ -456,21 +456,21 @@ export default function PlumbersPage() {
                     <span className="text-green-500 text-lg mt-1">✓</span>
                     <div>
                       <div className="font-semibold text-gray-900 dark:text-white">Mobile-First Redesign</div>
-                      <div className="text-gray-600 dark:text-gray-400">Optimized for emergency calls on mobile devices</div>
+                      <div className="text-gray-700 dark:text-gray-300">Optimized for emergency calls on mobile devices</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 text-lg mt-1">✓</span>
                     <div>
                       <div className="font-semibold text-gray-900 dark:text-white">Local SEO Domination</div>
-                      <div className="text-gray-600 dark:text-gray-400">Ranked #1 for "emergency plumber Dallas"</div>
+                      <div className="text-gray-700 dark:text-gray-300">Ranked #1 for "emergency plumber Dallas"</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 text-lg mt-1">✓</span>
                     <div>
                       <div className="font-semibold text-gray-900 dark:text-white">Trust Building Elements</div>
-                      <div className="text-gray-600 dark:text-gray-400">Clear pricing, reviews, and licensing information</div>
+                      <div className="text-gray-700 dark:text-gray-300">Clear pricing, reviews, and licensing information</div>
                     </div>
                   </div>
                 </div>
@@ -486,19 +486,19 @@ export default function PlumbersPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
                     <div className="text-3xl font-bold text-blue-600 mb-1">67%</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">More Emergency Calls</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300">More Emergency Calls</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-green-600 mb-1">$8K</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Additional Monthly Revenue</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300">Additional Monthly Revenue</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-purple-600 mb-1">2.1x</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Higher Conversion Rate</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300">Higher Conversion Rate</div>
                   </div>
                   <div className="text-center">
                     <div className="text-3xl font-bold text-orange-600 mb-1">30%</div>
-                    <div className="text-sm text-gray-600 dark:text-gray-400">Faster Response Time</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300">Faster Response Time</div>
                   </div>
                 </div>
               </div>
@@ -515,7 +515,7 @@ export default function PlumbersPage() {
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                 Frequently Asked <span className="text-blue-600">Questions</span>
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Common questions from plumbing companies about our website services.
               </p>
             </div>
@@ -536,7 +536,7 @@ export default function PlumbersPage() {
                     </span>
                   </summary>
                   <div className="px-6 pb-6">
-                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>

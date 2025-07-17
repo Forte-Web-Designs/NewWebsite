@@ -33,7 +33,7 @@ export default function WebsiteDesignPage() {
             </h1>
             
             <div className="max-w-4xl mx-auto bg-[#F4F4F4] dark:bg-[#101010] p-4 sm:p-6 lg:p-8 rounded-lg sm:rounded-xl mb-6 sm:mb-8">
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-[#B4B4B4] text-[#626262] leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
                 While your competitors struggle with slow, template-based websites, you could be dominating search results with a 
                 lightning-fast, hand-coded site that converts visitors into customers. Here's why custom beats templates—every single time.
               </p>
@@ -58,7 +58,7 @@ export default function WebsiteDesignPage() {
               <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium font-roboto dark:text-white mb-3 sm:mb-4">
                 The Numbers Don't Lie
               </h2>
-              <p className="text-sm sm:text-base md:text-lg text-[#626262] dark:text-[#B4B4B4] max-w-3xl mx-auto">
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 While template sites struggle to keep up, our custom-coded websites deliver measurable results
               </p>
             </div>
@@ -71,7 +71,7 @@ export default function WebsiteDesignPage() {
                 <p className="text-sm sm:text-base md:text-lg font-semibold dark:text-white text-[#000000] mb-2">
                   Lightning-Fast Load Times
                 </p>
-                <p className="text-xs sm:text-sm text-[#626262] dark:text-[#B4B4B4]">
+                <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                   Visitors stay, engage & convert faster
                 </p>
               </div>
@@ -83,7 +83,7 @@ export default function WebsiteDesignPage() {
                 <p className="text-sm sm:text-base md:text-lg font-semibold dark:text-white text-[#000000] mb-2">
                   Faster Load Times
                 </p>
-                <p className="text-xs sm:text-sm text-[#626262] dark:text-[#B4B4B4]">
+                <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                   Under 2 seconds vs. 4-8 seconds
                 </p>
               </div>
@@ -95,7 +95,7 @@ export default function WebsiteDesignPage() {
                 <p className="text-sm sm:text-base md:text-lg font-semibold dark:text-white text-[#000000] mb-2">
                   Security Vulnerabilities
                 </p>
-                <p className="text-xs sm:text-sm text-[#626262] dark:text-[#B4B4B4]">
+                <p className="text-xs sm:text-sm text-gray-700 dark:text-gray-300">
                   No plugins = no risk
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function WebsiteDesignPage() {
               Your Template Website Is Costing You Money
             </h2>
             <div className="max-w-3xl mx-auto bg-[#F4F4F4] dark:bg-[#101010] p-6 sm:p-8 rounded-xl">
-              <p className="text-[16px] md:text-[18px] font-inter dark:text-[#B4B4B4] text-[#626262]">
+              <p className="text-[16px] md:text-[18px] font-inter dark:text-gray-300 text-gray-700">
                 Every second your site takes to load costs you customers. Every security update you miss puts your business at risk. 
                 Every template limitation holds back your growth. It's time to break free.
               </p>
@@ -132,36 +132,36 @@ export default function WebsiteDesignPage() {
                 <div className="flex items-start">
                   <span className="text-[#FF4444] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Slow loading kills conversions</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">3-8 second load times drive visitors away</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Slow loading kills conversions</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">3-8 second load times drive visitors away</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-[#FF4444] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Security nightmares</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">Constant plugin updates and vulnerabilities</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Security nightmares</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Constant plugin updates and vulnerabilities</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-[#FF4444] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Poor SEO performance</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">Buried in search results behind faster sites</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Poor SEO performance</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Buried in search results behind faster sites</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-[#FF4444] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Looks like everyone else</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">Same templates = zero competitive advantage</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Looks like everyone else</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Same templates = zero competitive advantage</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-[#FF4444] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Ongoing headaches</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">Constant maintenance, updates, and fixes</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Ongoing headaches</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Constant maintenance, updates, and fixes</p>
                   </div>
                 </div>
               </div>
@@ -180,36 +180,36 @@ export default function WebsiteDesignPage() {
                 <div className="flex items-start">
                   <span className="text-[#4CAF50] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Lightning-fast performance</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">Under 2 seconds = higher conversions</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Lightning-fast performance</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Under 2 seconds = higher conversions</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-[#4CAF50] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Bulletproof security</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">No plugins = no vulnerabilities</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Bulletproof security</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">No plugins = no vulnerabilities</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-[#4CAF50] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">SEO dominance</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">Built for Google from day one</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">SEO dominance</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Built for Google from day one</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-[#4CAF50] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Unique brand presence</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">Stand out from your competition</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Unique brand presence</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Stand out from your competition</p>
                   </div>
                 </div>
                 <div className="flex items-start">
                   <span className="text-[#4CAF50] mr-4 mt-1 text-xl">•</span>
                   <div>
-                    <span className="text-[#626262] dark:text-[#B4B4B4] font-medium">Set it and forget it</span>
-                    <p className="text-[#888] dark:text-[#999] text-sm mt-1">Zero maintenance with Forte Care™</p>
+                    <span className="text-gray-700 dark:text-gray-300 font-medium">Set it and forget it</span>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm mt-1">Zero maintenance with Forte Care™</p>
                   </div>
                 </div>
               </div>
@@ -233,7 +233,7 @@ export default function WebsiteDesignPage() {
                 <Icon name="flash" className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-[24px] font-semibold dark:text-white mb-4">Lower Ad Costs</h3>
-              <p className="text-[#626262] dark:text-[#B4B4B4]">
+              <p className="text-gray-700 dark:text-gray-300">
                 Fast sites get better Quality Scores, meaning you pay less per click and get more leads from the same budget.
               </p>
             </div>
@@ -243,7 +243,7 @@ export default function WebsiteDesignPage() {
                 <Icon name="search" className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-[24px] font-semibold dark:text-white mb-4">Higher Rankings</h3>
-              <p className="text-[#626262] dark:text-[#B4B4B4]">
+              <p className="text-gray-700 dark:text-gray-300">
                 Google loves fast, well-coded sites. Our clients regularly outrank template-based competitors.
               </p>
             </div>
@@ -253,7 +253,7 @@ export default function WebsiteDesignPage() {
                 <Icon name="clean" className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-[24px] font-semibold dark:text-white mb-4">More Conversions</h3>
-              <p className="text-[#626262] dark:text-[#B4B4B4]">
+              <p className="text-gray-700 dark:text-gray-300">
                 Every second faster = 7% higher conversion rate. That adds up to serious revenue growth.
               </p>
             </div>
@@ -320,7 +320,7 @@ export default function WebsiteDesignPage() {
                 </svg>
               </summary>
               <div className="mt-4">
-                <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   Choose Forte Foundation™ ($200/month) for a 5-page website or Forte Pro™ ($350/month) for 10 pages. Both include Forte Care™ support, hosting, and our performance guarantee. Add SEO, PPC, or Social Media services when you're ready to grow.
                 </p>
               </div>
@@ -346,7 +346,7 @@ export default function WebsiteDesignPage() {
                 </svg>
               </summary>
               <div className="mt-4">
-                <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   Most Forte™ websites are completed in 4-6 weeks from start to finish. Unlike template sites that take months to customize properly (and often break), our hand-coded approach means it's done right the first time.
                 </p>
               </div>
@@ -372,7 +372,7 @@ export default function WebsiteDesignPage() {
                 </svg>
               </summary>
               <div className="mt-4">
-                <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   Template sites load slowly and lose customers. Forte™ websites load in under 2 seconds, so visitors stay and convert. Templates have security risks from plugins. Forte™ sites are rock-solid secure with zero vulnerabilities. Templates get slower over time. Forte™ sites stay lightning-fast forever.
                 </p>
               </div>
@@ -398,7 +398,7 @@ export default function WebsiteDesignPage() {
                 </svg>
               </summary>
               <div className="mt-4">
-                <p className="text-[#626262] dark:text-[#B4B4B4] leading-relaxed">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   Unlimited content updates, 24/7 security monitoring, performance optimization, backup management, and priority support. Unlike template sites that break when you modify them, Forte™ sites adapt to your changing needs seamlessly.
                 </p>
               </div>

@@ -103,6 +103,11 @@ a:hover,
   --border: #e5e7eb;
   --accent: #6d28d9;
   --radius: 0.5rem;
+  
+  /* Improved text colors for better contrast */
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
 }
 
 .dark {
@@ -112,6 +117,11 @@ a:hover,
   --card-foreground: #ededed;
   --border: #2e2e2e;
   --accent: #8b5cf6;
+  
+  /* Improved text colors for better contrast in dark mode */
+  --text-primary: #f9fafb;
+  --text-secondary: #e5e7eb;
+  --text-muted: #d1d5db;
 }
 
 .no-scrollbar::-webkit-scrollbar {

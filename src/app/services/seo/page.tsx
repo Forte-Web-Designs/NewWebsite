@@ -46,7 +46,7 @@ export default function SeoDesignPage() {
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6 max-w-4xl mx-auto">
           Tired of Being Invisible on Google?
         </h1>
-        <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
+        <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
           Let's be real - if customers can't find you online, you don't exist. Our SEO gets you found by people who are ready to buy what you sell.
         </p>
       </div>
@@ -116,7 +116,7 @@ export default function SeoDesignPage() {
               <div className="text-center">
                 <div className="text-3xl mb-2">🚀</div>
                 <h3 className="text-lg font-bold mb-1">Beyond Built-in SEO</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-300">Taking your website to the next level</p>
+                <p className="text-sm text-gray-700 dark:text-gray-300">Taking your website to the next level</p>
               </div>
             </div>
             <div className="md:w-2/3">
@@ -141,7 +141,7 @@ export default function SeoDesignPage() {
             <h2 className="text-2xl md:text-3xl font-bold dark:text-white mb-4">
               Real SEO Success Story
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-lg">
+            <p className="text-gray-700 dark:text-gray-300 text-lg">
               See how we helped a local business dominate their market
             </p>
           </div>
@@ -156,7 +156,7 @@ export default function SeoDesignPage() {
                   </div>
                   <div>
                     <h3 className="text-xl font-bold dark:text-white">Alpine Physical Therapy</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Local healthcare practice</p>
+                    <p className="text-gray-700 dark:text-gray-300">Local healthcare practice</p>
                   </div>
                 </div>
 
@@ -315,7 +315,7 @@ export default function SeoDesignPage() {
         <h2 className="md:text-[38px] text-[26px] font-medium font-inter dark:text-secondary-1000">
           Who We Love Working With
         </h2>
-        <p className="text-[18px] font-normal font-inter dark:text-primary-1050 text-primary-1400 max-w-[794px] leading-[22px] sm:mt-8 mt-5">
+        <p className="text-[18px] font-normal font-inter dark:text-gray-300 text-gray-700 max-w-[794px] leading-[22px] sm:mt-8 mt-5">
           Whether you're a local service business, online store, or growing company, we've helped all kinds of businesses get found and grow their customer base:
         </p>
 
@@ -325,7 +325,7 @@ export default function SeoDesignPage() {
               name="location"
               className="h-[28px] w-[22px] md:w-[30px] md:h-[30px]"
             />
-            <p className="text-[14px] font-medium font-inter dark:text-white text-primary-1400 leading-[18px] md:w-auto w-[246px]">
+            <p className="text-[14px] font-medium font-inter dark:text-white text-gray-700 leading-[18px] md:w-auto w-[246px]">
               Local Businesses (Contractors, Dentists, Cafes—you name it)
             </p>
           </div>
@@ -334,7 +334,7 @@ export default function SeoDesignPage() {
               name="bag"
               className="h-[28px] w-[22px] md:w-[30px] md:h-[30px]"
             />
-            <p className="text-[14px] font-medium font-inter dark:text-white text-primary-1400 leading-[18px] md:w-auto w-[246px]">
+            <p className="text-[14px] font-medium font-inter dark:text-white text-gray-700 leading-[18px] md:w-auto w-[246px]">
               B2B services (consultants, agencies, software providers)
             </p>
           </div>
@@ -343,7 +343,7 @@ export default function SeoDesignPage() {
               name="cap"
               className="h-[28px] w-[22px] md:w-[30px] md:h-[30px]"
             />
-            <p className="text-[14px] font-medium font-inter dark:text-white text-primary-1400 leading-[18px] md:w-auto w-[246px]">
+            <p className="text-[14px] font-medium font-inter dark:text-white text-gray-700 leading-[18px] md:w-auto w-[246px]">
               Education & training programs
             </p>
           </div>
@@ -352,7 +352,7 @@ export default function SeoDesignPage() {
               name="cursor"
               className="h-[28px] w-[22px] md:w-[30px] md:h-[30px]"
             />
-            <p className="text-[14px] font-medium font-inter dark:text-white text-primary-1400 leading-[18px] md:w-auto w-[246px]">
+            <p className="text-[14px] font-medium font-inter dark:text-white text-gray-700 leading-[18px] md:w-auto w-[246px]">
               Clinics, nonprofits, travel brands, and more
             </p>
           </div>
@@ -364,7 +364,7 @@ export default function SeoDesignPage() {
         <div className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-2xl sm:text-3xl font-bold mb-4 dark:text-white">Built‑In SEO vs. Forte SEO™ Package</h2>
-            <p className="text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+            <p className="text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
               Every Forte™ website comes with SEO foundations built-in. Our Forte SEO™ package takes your online visibility to the next level.
             </p>
           </div>
@@ -437,7 +437,7 @@ export default function SeoDesignPage() {
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black md:leading-8 leading-6 md:w-auto w-[85%]">
                 1. Rock-Solid Technical Foundation
               </h2>
-              <p className="md:text-[18px] text-[14px] font-normal md:leading-[22px] font-inter text-primary-1400 dark:text-primary-1050 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
+              <p className="md:text-[18px] text-[14px] font-normal md:leading-[22px] font-inter text-gray-700 dark:text-gray-300 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
                 Every site we build is lightning-fast and error-free by design. But we go deeper—fixing crawl issues, broken links, and adding the technical magic that makes Google trust your site.
               </p>
             </div>
@@ -445,7 +445,7 @@ export default function SeoDesignPage() {
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black md:leading-8 leading-6 md:w-auto w-[85%]">
                 2. Content That Actually Gets Found
               </h2>
-              <p className="md:text-[18px] text-[14px] font-normal md:leading-[22px] font-inter text-primary-1400 dark:text-primary-1050 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
+              <p className="md:text-[18px] text-[14px] font-normal md:leading-[22px] font-inter text-gray-700 dark:text-gray-300 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
                 We research what your customers are actually searching for, then create content that matches their needs. Whether it's service pages or helpful blog posts, we make sure you show up when it matters.
               </p>
             </div>
@@ -495,7 +495,7 @@ export default function SeoDesignPage() {
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black md:leading-8 leading-6 md:w-auto w-[85%]">
                 3. Local SEO That Works
               </h2>
-              <p className="md:text-[18px] text-[14px] font-normal font-inter md:leading-[22px] text-primary-1400 dark:text-primary-1050  md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
+              <p className="md:text-[18px] text-[14px] font-normal font-inter md:leading-[22px] text-gray-700 dark:text-gray-300  md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
                 We optimize your Google Business Profile and local listings so you show up when people search "near me." Perfect for service businesses, local stores, and anyone who serves their community.
               </p>
             </div>
@@ -503,7 +503,7 @@ export default function SeoDesignPage() {
               <h2 className="md:text-[26px] text-[18px] font-medium font-inter dark:text-secondary-1050 text-black md:leading-8 leading-6 md:w-auto w-[85%]">
                 4. Quality Link Building
               </h2>
-              <p className="md:text-[18px] text-[14px] font-normal font-inter md:leading-[22px] text-primary-1400 dark:text-primary-1050 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
+              <p className="md:text-[18px] text-[14px] font-normal font-inter md:leading-[22px] text-gray-700 dark:text-gray-300 md:mt-3 mt-2.5 leading-[18px] md:w-auto w-[94%]">
                 We build relationships with reputable websites and directories to boost your authority. No spammy shortcuts—just quality connections that Google respects.
               </p>
             </div>
@@ -543,7 +543,7 @@ export default function SeoDesignPage() {
               </button>
             </summary>
             <div className="mt-3 sm:mt-4">
-              <p className="text-sm sm:text-[18px] font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed sm:leading-[22px]">
+              <p className="text-sm sm:text-[18px] font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed sm:leading-[22px]">
                 {faq.answer}
               </p>
             </div>
@@ -562,11 +562,11 @@ export default function SeoDesignPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
               Ready to Start Ranking?
             </h2>
-            <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-6">
+            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-6">
               Add Forte SEO™ to your existing Forte Foundation™ or Pro™ website. Choose the plan that matches your growth goals.
             </p>
             <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-2xl mx-auto mb-8">
-              <p className="text-sm text-gray-600 dark:text-gray-400">
+              <p className="text-sm text-gray-700 dark:text-gray-300">
                 💡 <strong>Small Business Tip:</strong> Most local businesses see great results starting with Foundation + SEO Essential™ ($500/month total)
               </p>
             </div>
@@ -583,7 +583,7 @@ export default function SeoDesignPage() {
               </blockquote>
               <div className="text-sm">
                 <div className="font-semibold text-gray-900 dark:text-white">Carlos Rivera</div>
-                <div className="text-gray-600 dark:text-gray-400">Rivera Auto Repair • Foundation + SEO Essential</div>
+                <div className="text-gray-700 dark:text-gray-300">Rivera Auto Repair • Foundation + SEO Essential</div>
               </div>
             </div>
           </div>
