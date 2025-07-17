@@ -1,6 +1,7 @@
 "use client";
 
 import { Icon } from "@/components/images/Icon";
+import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { useEffect, useState, useRef, Suspense } from "react";
 import SEOAuditTool from "@/components/SEOAuditTool";
 import SEOResults from "@/components/SEOResults";
