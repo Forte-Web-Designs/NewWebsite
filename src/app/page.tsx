@@ -560,7 +560,7 @@ export default function Home() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-8">
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                Curious How Your Website Really Performs?
+                <span className="text-gray-300">Curious How Your</span> <span className="text-blue-400 animate-pulse">Website</span> <span className="text-gray-300">Really</span> <span className="text-green-400 font-extrabold">Performs</span><span className="text-yellow-400">?</span>
               </h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed max-w-3xl mx-auto">
                 Get instant insights on what's helping or hurting your website's success. Our 5-point analysis covers the critical factors that impact your online performance.

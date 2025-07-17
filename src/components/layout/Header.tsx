@@ -120,7 +120,7 @@ export default function Header() {
     { label: 'Website Design', href: '/services/webDesign' },
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'PPC Advertising', href: '/services/ads' },
-    { label: 'Social Media Management', href: '/services/social' },
+    { label: 'Social Media Management', href: '/services/socialMedia' },
     { label: 'View All Services', href: '/services' }
   ];
 
