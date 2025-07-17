@@ -133,17 +133,17 @@ export default function Header() {
     { label: 'All Industries', href: '/industries' }
   ];
 
-  // Simplified Company dropdown
-  const companyDropdownItems = [
+  // About Us dropdown (renamed from Company)
+  const aboutDropdownItems = [
     { label: 'About Us', href: '/about' },
-    { label: 'Our Work Examples', href: '/about/work' },
-    { label: 'Contact Us', href: '/contact' }
+    { label: 'Our Work', href: '/about/work' },
+    { label: 'Case Studies', href: '/case-studies' }
   ];
 
-  // Tools & Resources dropdown
-  const toolsDropdownItems = [
-    { label: 'Free Website Checkup', href: '/checkup' },
-    { label: 'Case Studies', href: '/case-studies' }
+  // Pricing dropdown
+  const pricingDropdownItems = [
+    { label: 'View All Plans', href: '/pricing' },
+    { label: 'Forte Ecosystem™', href: '/ecosystem' }
   ];
 
   // Don't render theme-dependent content until mounted
@@ -212,32 +212,32 @@ export default function Header() {
                 }
               />
 
-              {/* Prominent Pricing Link */}
-              <HeaderLink href="/pricing">
-                <span className="font-semibold text-blue-600 dark:text-blue-400">Pricing</span>
-              </HeaderLink>
-
-              <HeaderLink href="/blog">Blog</HeaderLink>
-              
+              {/* Pricing Dropdown */}
               <Dropdown
-                items={companyDropdownItems}
+                items={pricingDropdownItems}
                 width="200px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/about" showIcon={true}>Company</HeaderLink>
+                    <HeaderLink href="/pricing" showIcon={true}>
+                      <span className="font-semibold text-blue-600 dark:text-blue-400">Pricing</span>
+                    </HeaderLink>
                   </div>
                 }
               />
               
               <Dropdown
-                items={toolsDropdownItems}
-                width="250px"
+                items={aboutDropdownItems}
+                width="180px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/checkup" showIcon={true}>Tools</HeaderLink>
+                    <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
                   </div>
                 }
               />
+
+              <HeaderLink href="/checkup">Free Website Audit</HeaderLink>
+
+              <HeaderLink href="/blog">Blog</HeaderLink>
             </nav>
 
             {/* Desktop Right Side - Theme Toggle and Contact Button */}
@@ -412,60 +412,6 @@ export default function Header() {
                     )}
                   </div>
 
-                  {/* Industries */}
-                  <MobileExpandableMenu
-                    title="Industries"
-                    isActive={pathname.startsWith('/industries')}
-                  >
-                    <div className="pl-6 space-y-3">
-                      {industriesDropdownItems.map((item) => (
-                        <div key={item.href} className="flex items-center justify-between w-full">
-                          <Link
-                            href={item.href}
-                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
-                              }`}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {item.label}
-                          </Link>
-                          {pathname === item.href && (
-                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </MobileExpandableMenu>
-
-                  {/* Pricing - Prominent */}
-                  <div className="flex items-center justify-between py-4">
-                    <Link
-                      href="/pricing"
-                      className={`text-3xl font-bold flex items-center gap-3 ps-5 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-blue-400'
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      💰 Pricing
-                    </Link>
-                    {pathname === '/pricing' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
-
-                  {/* Blog */}
-                  <div className="flex items-center justify-between py-4">
-                    <Link
-                      href="/blog"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/blog' ? 'text-[#8D9DFF]' : 'text-white'
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      📝 Blog
-                    </Link>
-                    {pathname === '/blog' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
-
                   {/* Services */}
                   <MobileExpandableMenu
                     title="Services"
@@ -490,13 +436,13 @@ export default function Header() {
                     </div>
                   </MobileExpandableMenu>
 
-                  {/* Company */}
+                  {/* Industries */}
                   <MobileExpandableMenu
-                    title="Company"
-                    isActive={pathname.startsWith('/about') || pathname.startsWith('/forte-method')}
+                    title="Industries"
+                    isActive={pathname.startsWith('/industries')}
                   >
                     <div className="pl-6 space-y-3">
-                      {companyDropdownItems.map((item) => (
+                      {industriesDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
@@ -514,13 +460,13 @@ export default function Header() {
                     </div>
                   </MobileExpandableMenu>
 
-                  {/* Tools */}
+                  {/* Pricing */}
                   <MobileExpandableMenu
-                    title="Tools"
-                    isActive={pathname.startsWith('/checkup') || pathname.startsWith('/case-studies')}
+                    title="Pricing"
+                    isActive={pathname.startsWith('/pricing') || pathname.startsWith('/ecosystem')}
                   >
                     <div className="pl-6 space-y-3">
-                      {toolsDropdownItems.map((item) => (
+                      {pricingDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
@@ -537,6 +483,60 @@ export default function Header() {
                       ))}
                     </div>
                   </MobileExpandableMenu>
+
+                  {/* About Us */}
+                  <MobileExpandableMenu
+                    title="About Us"
+                    isActive={pathname.startsWith('/about')}
+                  >
+                    <div className="pl-6 space-y-3">
+                      {aboutDropdownItems.map((item) => (
+                        <div key={item.href} className="flex items-center justify-between w-full">
+                          <Link
+                            href={item.href}
+                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                              }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                          {pathname === item.href && (
+                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </MobileExpandableMenu>
+
+                  {/* Free Website Audit */}
+                  <div className="flex items-center justify-between py-4">
+                    <Link
+                      href="/checkup"
+                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/checkup' ? 'text-[#8D9DFF]' : 'text-white'
+                        }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Free Website Audit
+                    </Link>
+                    {pathname === '/checkup' && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
+
+                  {/* Blog - No emoji */}
+                  <div className="flex items-center justify-between py-4">
+                    <Link
+                      href="/blog"
+                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/blog' ? 'text-[#8D9DFF]' : 'text-white'
+                        }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Blog
+                    </Link>
+                    {pathname === '/blog' && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
 
                   {/* Contact CTA */}
                   <div className="pt-8 pb-4">
