@@ -129,13 +129,10 @@ export default function LandscapersPage() {
                   Landscaping is visual and seasonal. Your website needs to showcase beautiful transformations and capture leads year-round. We build landscaper websites that sell premium projects and maintain steady revenue.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start">
-                  <DarkButton href="/contact?industry=landscaping" className="bg-orange-600 hover:bg-orange-700 w-full sm:w-auto">
-                    Get My Landscaper Website Quote
+                <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
+                  <DarkButton href="/contact?industry=landscaping" className="bg-green-600 hover:bg-green-700 w-full sm:w-auto">
+                    Contact Us
                   </DarkButton>
-                  <LightButton href="/checkup?industry=landscaping" className="w-full sm:w-auto">
-                    Free Landscaping Website Audit
-                  </LightButton>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-green-200">

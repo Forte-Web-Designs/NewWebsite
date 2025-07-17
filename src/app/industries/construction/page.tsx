@@ -129,13 +129,10 @@ export default function ConstructionPage() {
                   Construction projects start with trust. Your website needs to showcase completed work and build confidence for six-figure investments. We build construction websites that win more bids and grow your business.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mb-6 sm:mb-8 justify-center lg:justify-start">
-                  <DarkButton href="/contact?industry=construction" className="bg-blue-600 hover:bg-blue-700 w-full sm:w-auto">
-                    Get My Construction Website Quote
+                <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
+                  <DarkButton href="/contact?industry=construction" className="bg-orange-600 hover:bg-orange-700 w-full sm:w-auto">
+                    Contact Us
                   </DarkButton>
-                  <LightButton href="/checkup?industry=construction" className="w-full sm:w-auto">
-                    Free Construction Website Audit
-                  </LightButton>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-orange-200">
