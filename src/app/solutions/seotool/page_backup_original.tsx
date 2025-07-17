@@ -1,4 +1,4 @@
-"use client";
+dit tpoint audit t"use client";
 
 import { Icon } from "@/components/images/Icon";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
