@@ -532,12 +532,9 @@ function SiteCheckUpContent() {
                   <p className="text-lg sm:text-xl mb-8 text-blue-100 max-w-3xl mx-auto group-hover:text-white transition-colors duration-300">
                     Our team can help you implement the recommendations from your audit and maintain peak performance with ongoing optimization.
                   </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <button className="bg-white text-blue-600 font-semibold px-8 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                      Get Professional Help
-                    </button>
-                    <button className="border-2 border-white text-white font-semibold px-8 py-4 rounded-xl hover:bg-white hover:text-blue-600 hover:scale-105 transition-all duration-300">
-                      Learn More About Forte Care™
+                  <div className="flex justify-center">
+                    <button className="bg-white text-blue-600 font-semibold px-12 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg">
+                      Contact Us
                     </button>
                   </div>
                 </div>

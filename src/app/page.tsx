@@ -563,8 +563,37 @@ export default function Home() {
                 Curious How Your Website Really Performs?
               </h2>
               <p className="text-xl text-gray-300 mb-6 leading-relaxed max-w-3xl mx-auto">
-                Get instant insights on speed, mobile performance, SEO basics, design clarity, and security.
+                Get instant insights on what's helping or hurting your website's success. Our 5-point analysis covers the critical factors that impact your online performance.
               </p>
+              
+              {/* 5-Point Analysis Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-6 max-w-5xl mx-auto">
+                <div className="bg-orange-500/20 rounded-lg p-3 border border-orange-400/30">
+                  <div className="text-orange-400 text-2xl mb-2">🔥</div>
+                  <div className="text-sm font-semibold text-white mb-1">Speed & Performance</div>
+                  <div className="text-xs text-orange-200">How fast does your site really load?</div>
+                </div>
+                <div className="bg-blue-500/20 rounded-lg p-3 border border-blue-400/30">
+                  <div className="text-blue-400 text-2xl mb-2">📱</div>
+                  <div className="text-sm font-semibold text-white mb-1">Mobile Optimization</div>
+                  <div className="text-xs text-blue-200">Is your site optimized for phones?</div>
+                </div>
+                <div className="bg-green-500/20 rounded-lg p-3 border border-green-400/30">
+                  <div className="text-green-400 text-2xl mb-2">🟢</div>
+                  <div className="text-sm font-semibold text-white mb-1">SEO Foundation</div>
+                  <div className="text-xs text-green-200">How visible are you on Google?</div>
+                </div>
+                <div className="bg-pink-500/20 rounded-lg p-3 border border-pink-400/30">
+                  <div className="text-pink-400 text-2xl mb-2">🎨</div>
+                  <div className="text-sm font-semibold text-white mb-1">Design & UX</div>
+                  <div className="text-xs text-pink-200">Is your homepage clear and conversion-ready?</div>
+                </div>
+                <div className="bg-yellow-500/20 rounded-lg p-3 border border-yellow-400/30">
+                  <div className="text-yellow-400 text-2xl mb-2">🔒</div>
+                  <div className="text-sm font-semibold text-white mb-1">Security & Trust</div>
+                  <div className="text-xs text-yellow-200">Do visitors feel safe on your site?</div>
+                </div>
+              </div>
               
               <div className="flex flex-wrap items-center gap-6 justify-center text-gray-400">
                 <div className="flex items-center gap-2">
