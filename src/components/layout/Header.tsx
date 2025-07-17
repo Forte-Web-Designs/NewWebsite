@@ -115,38 +115,36 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Dropdown items for Services section
+  // Simplified Services dropdown - focused on clarity
   const servicesDropdownItems = [
-    { label: 'Website Design', href: '/services/webDesign' },
-    { label: 'SEO Services', href: '/services/seo' },
-    { label: 'PPC Advertising', href: '/services/ads' },
-    { label: 'Social Media Management', href: '/services/socialMedia' },
-    { label: 'Forte Care™ Support', href: '/solutions/care' },
+    { label: 'Website Foundation ($200/mo)', href: '/services/webDesign' },
+    { label: 'SEO Services ($300/mo)', href: '/services/seo' },
+    { label: 'PPC Advertising ($400/mo)', href: '/services/ads' },
+    { label: 'Plumber Websites', href: '/industries/plumbers' },
     { label: 'View All Services', href: '/services' }
   ];
 
-  // Dropdown items for Forte Ecosystem™ section
+  // Prominent Forte Ecosystem™ dropdown - main focus
   const ecosystemDropdownItems = [
-    { label: 'Complete Ecosystem Overview', href: '/ecosystem' },
-    { label: 'Forte Foundation™', href: '/pricing#foundation' },
-    { label: 'Forte Pro™', href: '/pricing#pro' },
-    { label: 'Forte Growth™ (+ SEO)', href: '/pricing#growth' },
-    { label: 'Forte Dominate™ (Full Stack)', href: '/pricing#dominate' }
+    { label: 'Foundation Plan - $200/mo', href: '/pricing#foundation' },
+    { label: 'Growth Package - $500/mo', href: '/pricing#growth' },
+    { label: 'Dominate Package - $1,200/mo', href: '/pricing#dominate' },
+    { label: 'How It All Works Together', href: '/ecosystem' },
+    { label: 'View Complete Pricing', href: '/pricing' }
   ];
 
-  // Dropdown items for Company section
+  // Simplified Company dropdown
   const companyDropdownItems = [
-    { label: 'About Us', href: '/about' },
-    { label: 'Our Work', href: '/about/work' },
-    { label: 'Our Process', href: '/forte-method' },
-    { label: 'Forte Guarantee™', href: '/solutions/guarantee' },
-    { label: 'FAQs', href: '/about/faqs' }
+    { label: 'About Forte', href: '/about' },
+    { label: 'Our Work Examples', href: '/about/work' },
+    { label: 'Contact Us', href: '/contact' }
   ];
 
-  // Dropdown items for Solutions section
+  // Solutions dropdown
   const solutionsDropdownItems = [
     { label: 'Free Website Checkup', href: '/checkup' },
-    { label: 'View All Solutions', href: '/solutions' }
+    { label: 'SEO Audit Tool', href: '/solutions/seotool' },
+    { label: 'Case Studies', href: '/case-studies' }
   ];
 
   // Don't render theme-dependent content until mounted - but render the full structure
@@ -185,21 +183,26 @@ export default function Header() {
                   <HeaderLink href="/">Home</HeaderLink>
                   
                   <Dropdown
-                    items={servicesDropdownItems}
-                    width="270px"
-                    trigger={
-                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                        <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
-                      </div>
-                    }
-                  />
-                  
-                  <Dropdown
                     items={ecosystemDropdownItems}
                     width="280px"
                     trigger={
                       <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                         <HeaderLink href="/ecosystem" showIcon={true}>Forte Ecosystem™</HeaderLink>
+                      </div>
+                    }
+                  />
+
+                  {/* Prominent Pricing Link */}
+                  <HeaderLink href="/pricing">
+                    <span className="font-semibold text-blue-600 dark:text-blue-400">Pricing</span>
+                  </HeaderLink>
+                  
+                  <Dropdown
+                    items={servicesDropdownItems}
+                    width="270px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/services" showIcon={true}>Services</HeaderLink>
                       </div>
                     }
                   />
@@ -608,13 +611,13 @@ export default function Header() {
                     )}
                   </div>
 
-                  {/* Services */}
+                  {/* Forte Ecosystem™ */}
                   <MobileExpandableMenu
-                    title="Services"
-                    isActive={pathname.startsWith('/services')}
+                    title="Forte Ecosystem™"
+                    isActive={pathname.startsWith('/ecosystem') || pathname.startsWith('/pricing')}
                   >
                     <div className="pl-6 space-y-3">
-                      {servicesDropdownItems.map((item) => (
+                      {ecosystemDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
@@ -632,13 +635,28 @@ export default function Header() {
                     </div>
                   </MobileExpandableMenu>
 
-                  {/* Forte Ecosystem™ */}
+                  {/* Pricing - Prominent */}
+                  <div className="flex items-center justify-between py-4">
+                    <Link
+                      href="/pricing"
+                      className={`text-3xl font-bold flex items-center gap-3 ps-5 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-blue-400'
+                        }`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      💰 Pricing
+                    </Link>
+                    {pathname === '/pricing' && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
+
+                  {/* Services */}
                   <MobileExpandableMenu
-                    title="Forte Ecosystem™"
-                    isActive={pathname.startsWith('/ecosystem') || pathname.startsWith('/pricing')}
+                    title="Services"
+                    isActive={pathname.startsWith('/services')}
                   >
                     <div className="pl-6 space-y-3">
-                      {ecosystemDropdownItems.map((item) => (
+                      {servicesDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
@@ -703,21 +721,6 @@ export default function Header() {
                       ))}
                     </div>
                   </MobileExpandableMenu>
-
-                  {/* Pricing */}
-                  <div className="flex items-center justify-between py-4">
-                    <Link
-                      href="/pricing"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-white'
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Pricing
-                    </Link>
-                    {pathname === '/pricing' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
 
                   {/* Contact CTA */}
                   <div className="pt-8 pb-4">
