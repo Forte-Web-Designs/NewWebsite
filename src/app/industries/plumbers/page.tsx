@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 export default function PlumbersPage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Dallas Elite Plumbing", location: "Dallas, TX" },
-    { name: "Rapid Response Plumbers", location: "Fort Worth, TX" },
-    { name: "Metro Drain Solutions", location: "Arlington, TX" },
-    { name: "Emergency Pipe Pros", location: "Plano, TX" },
-    { name: "All Hours Plumbing Co", location: "Irving, TX" }
+    { name: "Dallas Elite Plumbing", location: "" },
+    { name: "Rapid Response Plumbers", location: "" },
+    { name: "Metro Drain Solutions", location: "" },
+    { name: "Emergency Pipe Pros", location: "" },
+    { name: "All Hours Plumbing Co", location: "" }
   ];
 
   // Comparison data
@@ -213,51 +213,66 @@ export default function PlumbersPage() {
 
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative">
-                <div className="bg-white rounded-2xl p-8 shadow-2xl">
-                  <div className="flex items-center gap-3 mb-6">
-                    <span className="text-2xl">🔧</span>
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-2xl border-2 border-blue-100">
+                  {/* Header with animated pulse */}
+                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl text-white">
+                    <span className="text-3xl animate-pulse">🚨</span>
                     <div>
-                      <h3 className="text-gray-800 text-lg font-bold">Emergency Plumbing</h3>
-                      <p className="text-gray-600 text-sm">24/7 Service in Dallas Metro</p>
+                      <h3 className="text-white text-xl font-bold">EMERGENCY PLUMBING</h3>
+                      <p className="text-red-100 text-sm font-semibold">⚡ 24/7 Same-Day Service ⚡</p>
                     </div>
                   </div>
                   
-                  <div className="space-y-3 mb-6">
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Drain Cleaning</span>
-                      <span className="font-bold text-gray-800">$89+</span>
+                  {/* Services with enhanced styling */}
+                  <div className="space-y-4 mb-6">
+                    <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        🚰 <span>Drain Cleaning</span>
+                      </span>
+                      <span className="font-bold text-blue-600 text-lg">$89+</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Water Heater Repair</span>
-                      <span className="font-bold text-gray-800">$150+</span>
+                    <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        🔥 <span>Water Heater Repair</span>
+                      </span>
+                      <span className="font-bold text-orange-600 text-lg">$150+</span>
                     </div>
-                    <div className="flex justify-between items-center">
-                      <span className="text-gray-600">Emergency Service</span>
-                      <span className="font-bold text-green-600">Call Now</span>
+                    <div className="flex justify-between items-center p-3 bg-red-50 rounded-lg border-l-4 border-red-500">
+                      <span className="text-gray-700 font-medium flex items-center gap-2">
+                        🆘 <span>Emergency Service</span>
+                      </span>
+                      <span className="font-bold text-red-600 text-lg animate-pulse">CALL NOW!</span>
                     </div>
                   </div>
 
-                  <div className="bg-green-600 text-white text-center py-3 rounded-lg mb-4">
-                    <div className="flex items-center justify-center gap-2">
-                      <span>📞</span>
-                      <span className="font-bold">Call (555) 123-PLUMBER</span>
+                  {/* Enhanced call button */}
+                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-4 rounded-xl mb-4 shadow-lg transform hover:scale-105 transition-transform">
+                    <div className="flex items-center justify-center gap-3">
+                      <span className="text-2xl animate-bounce">📞</span>
+                      <div>
+                        <div className="font-bold text-lg">Call (555) 123-PLUMBER</div>
+                        <div className="text-green-100 text-sm">Click to Call Now!</div>
+                      </div>
                     </div>
                   </div>
 
-                  <div className="text-center">
+                  {/* Enhanced reviews section */}
+                  <div className="text-center bg-yellow-50 rounded-lg p-4">
                     <div className="flex items-center justify-center gap-1 mb-2">
-                      <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                      <span className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
                     </div>
-                    <div className="text-gray-600 text-sm">(247 reviews)</div>
+                    <div className="text-gray-700 font-semibold">4.9/5 Stars</div>
+                    <div className="text-gray-600 text-sm">(247 Google Reviews)</div>
+                    <div className="text-blue-600 text-sm font-medium mt-1">💯 Licensed & Insured</div>
                   </div>
                 </div>
                 
-                {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Licensed & Insured
+                {/* Enhanced floating elements */}
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                  ✅ Licensed & Insured
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-orange-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  30min Response
+                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                  ⚡ 15min Response
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -476,7 +491,7 @@ export default function PlumbersPage() {
                     <div className="text-sm text-gray-600 dark:text-gray-400">More Emergency Calls</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-1">$50K</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1">$8K</div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">Additional Monthly Revenue</div>
                   </div>
                   <div className="text-center">
@@ -547,7 +562,7 @@ export default function PlumbersPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <DarkButton href="/contact?industry=plumbing" className="bg-orange-600 hover:bg-orange-700">
-                Start My Plumber Website - $200/mo
+                Start My Plumber Website
                 <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
               </DarkButton>
               <LightButton href="/checkup?industry=plumbing">
@@ -559,7 +574,7 @@ export default function PlumbersPage() {
             <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm">
               <div className="flex items-center gap-2 justify-center">
                 <span className="text-green-400">✓</span>
-                30-Day Money-Back Guarantee
+                100% Satisfaction Guarantee
               </div>
               <div className="flex items-center gap-2 justify-center">
                 <span className="text-green-400">✓</span>
