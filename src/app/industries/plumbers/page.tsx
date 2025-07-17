@@ -21,11 +21,11 @@ export const metadata: Metadata = {
 export default function PlumbersPage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Dallas Elite Plumbing", location: "" },
-    { name: "Rapid Response Plumbers", location: "" },
-    { name: "Metro Drain Solutions", location: "" },
-    { name: "Emergency Pipe Pros", location: "" },
-    { name: "All Hours Plumbing Co", location: "" }
+    { name: "Dallas Elite Plumbing", location: "Dallas, TX" },
+    { name: "Rapid Response Plumbers", location: "Austin, TX" },
+    { name: "Metro Drain Solutions", location: "Houston, TX" },
+    { name: "Emergency Pipe Pros", location: "San Antonio, TX" },
+    { name: "All Hours Plumbing Co", location: "Fort Worth, TX" }
   ];
 
   // Comparison data
@@ -186,11 +186,9 @@ export default function PlumbersPage() {
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <DarkButton href="/contact?industry=plumbing" className="bg-orange-600 hover:bg-orange-700">
                     Get My Plumber Website Quote
-                    <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
                   </DarkButton>
                   <LightButton href="/checkup?industry=plumbing">
                     Free Plumbing Website Audit
-                    <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
                   </LightButton>
                 </div>
 
@@ -375,31 +373,31 @@ export default function PlumbersPage() {
             </div>
           </SimpleScrollReveal>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden">
-              <div className="grid grid-cols-3 gap-0">
+          <div className="max-w-5xl mx-auto">
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl overflow-hidden shadow-lg">
+              <div className="grid grid-cols-[2fr_1fr_1fr] gap-0">
                 {/* Header */}
-                <div className="p-4 bg-gray-100 dark:bg-gray-700">
-                  <h3 className="font-semibold text-gray-900 dark:text-white">Feature</h3>
+                <div className="p-6 bg-gray-100 dark:bg-gray-700 border-r border-gray-200 dark:border-gray-600">
+                  <h3 className="font-bold text-lg text-gray-900 dark:text-white">Feature</h3>
                 </div>
-                <div className="p-4 bg-red-50 dark:bg-red-900/20">
-                  <h3 className="font-semibold text-gray-900 dark:text-white text-center">Typical Designer</h3>
+                <div className="p-6 bg-red-50 dark:bg-red-900/20 border-r border-gray-200 dark:border-gray-600">
+                  <h3 className="font-bold text-lg text-gray-900 dark:text-white text-center">Typical Designer</h3>
                 </div>
-                <div className="p-4 bg-green-50 dark:bg-green-900/20">
-                  <h3 className="font-semibold text-gray-900 dark:text-white text-center">Forte</h3>
+                <div className="p-6 bg-green-50 dark:bg-green-900/20">
+                  <h3 className="font-bold text-lg text-gray-900 dark:text-white text-center">Forte Web Design</h3>
                 </div>
 
                 {/* Feature Rows */}
                 {comparisonFeatures.map((item, index) => (
                   <SimpleAnimatedCard key={index} className="contents">
-                    <div className="p-4 border-t border-gray-200 dark:border-gray-600">
-                      <span className="text-gray-700 dark:text-gray-300">{item.feature}</span>
+                    <div className="p-4 border-t border-r border-gray-200 dark:border-gray-600 bg-white dark:bg-gray-900">
+                      <span className="text-gray-800 dark:text-gray-200 font-medium">{item.feature}</span>
                     </div>
-                    <div className="p-4 border-t border-gray-200 dark:border-gray-600 text-center">
-                      <span className="text-2xl">{item.typical ? '✅' : '❌'}</span>
+                    <div className="p-4 border-t border-r border-gray-200 dark:border-gray-600 text-center bg-red-25 dark:bg-red-900/10">
+                      <span className="text-3xl">{item.typical ? '✅' : '❌'}</span>
                     </div>
-                    <div className="p-4 border-t border-gray-200 dark:border-gray-600 text-center">
-                      <span className="text-2xl">{item.forte ? '✅' : '❌'}</span>
+                    <div className="p-4 border-t border-gray-200 dark:border-gray-600 text-center bg-green-25 dark:bg-green-900/10">
+                      <span className="text-3xl">{item.forte ? '✅' : '❌'}</span>
                     </div>
                   </SimpleAnimatedCard>
                 ))}
@@ -563,11 +561,9 @@ export default function PlumbersPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <DarkButton href="/contact?industry=plumbing" className="bg-orange-600 hover:bg-orange-700">
                 Start My Plumber Website
-                <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
               </DarkButton>
               <LightButton href="/checkup?industry=plumbing">
                 Get Free Plumbing Website Audit
-                <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
               </LightButton>
             </div>
 
@@ -589,16 +585,7 @@ export default function PlumbersPage() {
         </div>
       </section>
 
-      {/* Sticky Mobile Call Button */}
-      <div className="fixed bottom-4 left-4 right-4 z-50 md:hidden">
-        <a
-          href="tel:555-123-PLUMBER"
-          className="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-700 text-white px-6 py-4 rounded-2xl shadow-2xl font-bold text-lg transition-all duration-200 w-full"
-        >
-          <span className="text-2xl">📞</span>
-          Call (555) 123-PLUMBER
-        </a>
-      </div>
+
 
       {/* Live Chat Widget */}
       <div className="fixed bottom-4 right-4 z-40 hidden md:block">

@@ -551,116 +551,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Free Website Checkup - Comprehensive */}
-      <section className="py-16 md:py-24 bg-white dark:bg-black">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Free Website Checkup - Compact Version */}
+      <section className="py-12 md:py-16 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 relative overflow-hidden">
+        {/* Background decoration */}
+        <div className="absolute inset-0 bg-[url('/images/home/bg-dark.svg')] opacity-30"></div>
+        
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <SimpleScrollReveal direction="up" delay={100}>
-            {/* Left side - Free Analysis intro */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
-              <div>
-                <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                  🚀 Free Analysis
-                </div>
-                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                  Curious How Your Website <span className="text-blue-600">Really</span> <span className="text-purple-600">Performs</span>?
-                </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  Want to see how your website really performs? Our free analysis takes 30 seconds and might surprise you.
-                </p>
-                
-                <div className="flex flex-wrap gap-4 mb-6">
-                  <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
-                    <span className="text-lg">✓</span>
-                    <span className="font-medium">100% Free</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
-                    <span className="text-lg">✓</span>
-                    <span className="font-medium">Instant Results</span>
-                  </div>
-                  <div className="flex items-center gap-2 text-green-600 dark:text-green-400">
-                    <span className="text-lg">✓</span>
-                    <span className="font-medium">No Email Required</span>
-                  </div>
-                </div>
-              </div>
+            <div className="text-center mb-8">
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                Curious How Your Website Really Performs?
+              </h2>
+              <p className="text-xl text-gray-300 mb-6 leading-relaxed max-w-3xl mx-auto">
+                Get instant insights on speed, mobile performance, SEO basics, design clarity, and security.
+              </p>
               
-              {/* Right side - 5-Point Audit Details */}
-              <div className="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 rounded-2xl p-8 text-white">
-                <div className="flex items-center gap-3 mb-6">
-                  <span className="text-2xl">🚀</span>
-                  <h3 className="text-2xl font-bold">Free 5-Point Website Audit</h3>
+              <div className="flex flex-wrap items-center gap-6 justify-center text-gray-400">
+                <div className="flex items-center gap-2">
+                  <span className="text-green-400">✓</span>
+                  <span>100% Free</span>
                 </div>
-                <p className="text-slate-300 mb-6">
-                  See what's helping or hurting your site — instantly.<br/>
-                  No email. No sales pitch. Just real, helpful insights.
-                </p>
-                
-                <div className="space-y-4 mb-6">
-                  <h4 className="text-lg font-semibold text-blue-300 flex items-center gap-2">
-                    <span className="w-6 h-6 bg-blue-600 rounded-full flex items-center justify-center text-xs">✓</span>
-                    What We Check:
-                  </h4>
-                  
-                  <div className="space-y-3 ml-8">
-                    <div className="flex items-start gap-3">
-                      <span className="text-orange-400 text-lg mt-0.5">⚡</span>
-                      <div>
-                        <div className="font-semibold text-orange-300">PageSpeed & Load Time</div>
-                        <div className="text-sm text-slate-400">How fast does your site really load?</div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <span className="text-blue-400 text-lg mt-0.5">📱</span>
-                      <div>
-                        <div className="font-semibold text-blue-300">Mobile Friendliness</div>
-                        <div className="text-sm text-slate-400">Is your site optimized for phones?</div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <span className="text-green-400 text-lg mt-0.5">🔍</span>
-                      <div>
-                        <div className="font-semibold text-green-300">SEO Basics</div>
-                        <div className="text-sm text-slate-400">Can Google actually find and rank you?</div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <span className="text-pink-400 text-lg mt-0.5">🎨</span>
-                      <div>
-                        <div className="font-semibold text-pink-300">Design & Clarity</div>
-                        <div className="text-sm text-slate-400">Is your homepage clear and conversion-ready?</div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <span className="text-yellow-400 text-lg mt-0.5">🛡️</span>
-                      <div>
-                        <div className="font-semibold text-yellow-300">Security & Trust Signals</div>
-                        <div className="text-sm text-slate-400">Do visitors feel safe on your site?</div>
-                      </div>
-                    </div>
-                  </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-400">✓</span>
+                  <span>Instant Results</span>
                 </div>
-                
-                <div className="border-t border-slate-700 pt-6">
-                  <div className="flex items-center gap-2 mb-3">
-                    <span className="text-red-400 text-lg">💡</span>
-                    <h4 className="font-semibold text-red-300">Why It Matters:</h4>
-                  </div>
-                  <p className="text-slate-300 text-sm">
-                    You only get one chance to make a digital first impression. This quick audit shows where you stand — and how to improve.
-                  </p>
-                </div>
-                
-                <div className="mt-6 text-center">
-                  <div className="text-yellow-300 font-bold text-lg mb-2">
-                    ✨ Try It Now (Takes 30 Seconds)
-                  </div>
-                  <div className="text-orange-300 text-sm">
-                    👇 Enter your website below:
-                  </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-400">✓</span>
+                  <span>No Email Required</span>
                 </div>
               </div>
             </div>

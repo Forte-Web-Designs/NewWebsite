@@ -115,22 +115,21 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Simplified Services dropdown - focused on clarity
+  // Restructured Services dropdown - clean without prices
   const servicesDropdownItems = [
-    { label: 'Website Foundation ($200/mo)', href: '/services/webDesign' },
-    { label: 'SEO Services ($300/mo)', href: '/services/seo' },
-    { label: 'PPC Advertising ($400/mo)', href: '/services/ads' },
-    { label: 'Plumber Websites', href: '/industries/plumbers' },
+    { label: 'Website Design', href: '/services/webDesign' },
+    { label: 'SEO Services', href: '/services/seo' },
+    { label: 'PPC Advertising', href: '/services/ads' },
+    { label: 'Social Media Management', href: '/services/social' },
     { label: 'View All Services', href: '/services' }
   ];
 
-  // Prominent Forte Ecosystem™ dropdown - main focus
-  const ecosystemDropdownItems = [
-    { label: 'Foundation Plan - $200/mo', href: '/pricing#foundation' },
-    { label: 'Growth Package - $500/mo', href: '/pricing#growth' },
-    { label: 'Dominate Package - $1,200/mo', href: '/pricing#dominate' },
-    { label: 'How It All Works Together', href: '/ecosystem' },
-    { label: 'View Complete Pricing', href: '/pricing' }
+  // Industry-specific navigation
+  const industriesDropdownItems = [
+    { label: 'Plumber Websites', href: '/industries/plumbers' },
+    { label: 'Restaurant Websites', href: '/industries/restaurants' },
+    { label: 'Healthcare Websites', href: '/industries/healthcare' },
+    { label: 'All Industries', href: '/industries' }
   ];
 
   // Simplified Company dropdown
@@ -183,21 +182,6 @@ export default function Header() {
                   <HeaderLink href="/">Home</HeaderLink>
                   
                   <Dropdown
-                    items={ecosystemDropdownItems}
-                    width="280px"
-                    trigger={
-                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                        <HeaderLink href="/ecosystem" showIcon={true}>Forte Ecosystem™</HeaderLink>
-                      </div>
-                    }
-                  />
-
-                  {/* Prominent Pricing Link */}
-                  <HeaderLink href="/pricing">
-                    <span className="font-semibold text-blue-600 dark:text-blue-400">Pricing</span>
-                  </HeaderLink>
-                  
-                  <Dropdown
                     items={servicesDropdownItems}
                     width="270px"
                     trigger={
@@ -206,6 +190,21 @@ export default function Header() {
                       </div>
                     }
                   />
+
+                  <Dropdown
+                    items={industriesDropdownItems}
+                    width="250px"
+                    trigger={
+                      <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                        <HeaderLink href="/industries" showIcon={true}>Industries</HeaderLink>
+                      </div>
+                    }
+                  />
+
+                  {/* Prominent Pricing Link */}
+                  <HeaderLink href="/pricing">
+                    <span className="font-semibold text-blue-600 dark:text-blue-400">Pricing</span>
+                  </HeaderLink>
                   
                   <Dropdown
                     items={companyDropdownItems}
@@ -293,9 +292,9 @@ export default function Header() {
                   </div>
                 </MobileExpandableMenu>
 
-                <MobileExpandableMenu title="Forte Ecosystem™" isActive={pathname?.startsWith('/ecosystem') || pathname?.startsWith('/pricing')}>
+                <MobileExpandableMenu title="Industries" isActive={pathname?.startsWith('/industries')}>
                   <div className="space-y-2 pl-4">
-                    {ecosystemDropdownItems.map((item, index) => (
+                    {industriesDropdownItems.map((item, index) => (
                       <Link
                         key={index}
                         href={item.href}
@@ -307,6 +306,10 @@ export default function Header() {
                     ))}
                   </div>
                 </MobileExpandableMenu>
+
+                <Link href="/pricing" onClick={() => setMobileMenuOpen(false)} className="block py-2 text-blue-600 dark:text-blue-400 font-semibold hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
+                  💰 Pricing
+                </Link>
 
                 <MobileExpandableMenu title="Company" isActive={pathname?.startsWith('/about') || pathname?.startsWith('/forte-method')}>
                   <div className="space-y-2 pl-4">
@@ -407,11 +410,11 @@ export default function Header() {
                   />
                   
                   <Dropdown
-                    items={ecosystemDropdownItems}
-                    width="280px"
+                    items={industriesDropdownItems}
+                    width="250px"
                     trigger={
                       <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                        <HeaderLink href="/ecosystem" showIcon={true}>Forte Ecosystem™</HeaderLink>
+                        <HeaderLink href="/industries" showIcon={true}>Industries</HeaderLink>
                       </div>
                     }
                   />
@@ -611,13 +614,13 @@ export default function Header() {
                     )}
                   </div>
 
-                  {/* Forte Ecosystem™ */}
+                  {/* Industries */}
                   <MobileExpandableMenu
-                    title="Forte Ecosystem™"
-                    isActive={pathname.startsWith('/ecosystem') || pathname.startsWith('/pricing')}
+                    title="Industries"
+                    isActive={pathname.startsWith('/industries')}
                   >
                     <div className="pl-6 space-y-3">
-                      {ecosystemDropdownItems.map((item) => (
+                      {industriesDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
