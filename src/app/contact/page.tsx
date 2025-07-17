@@ -50,7 +50,7 @@ export default function Contact() {
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
-              Why 20+ Businesses Trust Forte Web Designs
+              Why 25+ Businesses Trust Forte Web Designs
             </h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">

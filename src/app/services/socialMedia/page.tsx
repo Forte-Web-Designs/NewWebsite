@@ -81,10 +81,10 @@ export default function SocialMediaPage() {
           Hey there! 👋
         </span>
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight max-w-4xl text-gray-900 dark:text-gray-100 mb-4 sm:mb-6">
-          Social Media That Actually Works for Your Business
+          Grow Followers, Build Trust, Stay Top-of-Mind
         </h1>
         <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed">
-          Staying active on social media keeps you top-of-mind with customers—but who has time for that? We handle your social presence so you can focus on what you do best: running your business.
+          Stop letting your competitors dominate social media while you're buried in your business. We keep you visible, engaging, and top-of-mind with customers who are ready to buy.
         </p>
       </section>
 

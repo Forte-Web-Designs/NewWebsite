@@ -180,7 +180,7 @@ export default function Home() {
                 <div className="text-center space-y-6">
                   <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
                     <p className="font-sans font-normal text-[12px] leading-[14px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
-                      20+ Businesses Growing with Forte
+                      25+ Businesses Growing with Forte
                     </p>
                   </div>
                   
@@ -346,7 +346,7 @@ export default function Home() {
                     <div className="space-y-6">
                       <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
                         <p className="font-sans font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
-                          20+ Businesses Growing with Forte
+                          25+ Businesses Growing with Forte
                         </p>
                       </div>
                       
@@ -467,7 +467,7 @@ export default function Home() {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Trusted by Growing Businesses</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Join 20+ Businesses Growing with Forte™
+                  Join 25+ Businesses Growing with Forte™
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400">
                   From local contractors to healthcare professionals, businesses choose Forte for results they can measure.

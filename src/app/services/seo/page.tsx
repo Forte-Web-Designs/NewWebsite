@@ -44,10 +44,10 @@ export default function SeoDesignPage() {
           Hi there! 👋
         </span>
         <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6 max-w-4xl mx-auto">
-          Tired of Being Invisible on Google?
+          Get Found. Stay Booked.
         </h1>
         <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
-          Let's be real - if customers can't find you online, you don't exist. Our SEO gets you found by people who are ready to buy what you sell.
+          Stop being invisible on Google. Our SEO doesn't just improve rankings - it drives qualified customers to your door every single day, so you can stop chasing leads and focus on serving them.
         </p>
       </div>
 

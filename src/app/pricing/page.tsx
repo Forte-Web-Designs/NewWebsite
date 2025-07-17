@@ -1,4 +1,3 @@
-
 import { Metadata } from 'next';
 import { PricingPage } from "@/components/pricing";
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
@@ -25,10 +24,10 @@ export default function Pricing() {
           </div>
           
           <h2 className="font-roboto font-medium text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight tracking-tight text-center mb-6">
-            Choose Your Growth Plan
+            Predictable Monthly Plans. No Surprises.
           </h2>
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-4">
-            Start with a Forte Foundation™ website, then add services as your business grows. Clear, predictable monthly pricing with no surprises.
+            Choose from transparent monthly plans or get a one-time website build. All prices include everything you see - no hidden fees, no surprise charges, no contracts.
           </p>
           
           {/* Trust Signals */}
@@ -523,6 +522,112 @@ export default function Pricing() {
                 </Link>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* FAQ Accordion Section */}
+        <div className="px-4 sm:px-6 lg:px-8 py-12 bg-gray-50 dark:bg-gray-900">
+          <div className="max-w-4xl mx-auto">
+            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white text-center mb-8">
+              Frequently Asked Questions
+            </h3>
+            
+            <div className="space-y-4">
+              {/* FAQ Item 1 */}
+              <details className="bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                <summary className="p-6 cursor-pointer font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-colors">
+                  💰 What's included in the monthly pricing?
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 dark:text-gray-300">
+                  <p>Everything you see listed! No hidden fees, no surprise charges. Monthly plans include hosting, security, updates, monitoring, and unlimited content changes. You get a dedicated team, not just a website.</p>
+                </div>
+              </details>
+
+              {/* FAQ Item 2 */}
+              <details className="bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                <summary className="p-6 cursor-pointer font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-colors">
+                  🤔 Monthly vs One-Time: Which should I choose?
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 dark:text-gray-300">
+                  <p><strong>Choose Monthly if:</strong> You want ongoing support, regular updates, and plan to grow your online presence.</p>
+                  <p className="mt-2"><strong>Choose One-Time if:</strong> You prefer to own everything outright and handle your own maintenance/updates.</p>
+                  <p className="mt-2 text-sm text-blue-600 dark:text-blue-400"><strong>Our recommendation:</strong> 90% of clients prefer monthly for the peace of mind and growth support.</p>
+                </div>
+              </details>
+
+              {/* FAQ Item 3 */}
+              <details className="bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                <summary className="p-6 cursor-pointer font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-colors">
+                  📈 How quickly will I see results?
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 dark:text-gray-300">
+                  <p><strong>Website:</strong> Live within 2-3 weeks with immediate improved user experience.</p>
+                  <p className="mt-2"><strong>SEO:</strong> Initial improvements in 6-12 weeks, full results in 3-6 months.</p>
+                  <p className="mt-2"><strong>PPC:</strong> Traffic starts immediately, optimization improves over 4-8 weeks.</p>
+                </div>
+              </details>
+
+              {/* FAQ Item 4 */}
+              <details className="bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                <summary className="p-6 cursor-pointer font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-colors">
+                  🔒 What if I want to cancel?
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 dark:text-gray-300">
+                  <p>No long-term contracts required. Cancel anytime with 30 days notice. If you have a one-time website, you keep everything. If you have a monthly plan, we'll help transition your site to your own hosting if needed.</p>
+                </div>
+              </details>
+
+              {/* FAQ Item 5 */}
+              <details className="bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                <summary className="p-6 cursor-pointer font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-colors">
+                  🛠️ What kind of support do I get?
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 dark:text-gray-300">
+                  <p>Same-day response guaranteed during business hours. Email, phone, and text support. Our Forte Care™ includes unlimited content updates, security monitoring, performance optimization, and technical support.</p>
+                </div>
+              </details>
+
+              {/* FAQ Item 6 */}
+              <details className="bg-white dark:bg-gray-800 rounded-xl shadow-md">
+                <summary className="p-6 cursor-pointer font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 rounded-xl transition-colors">
+                  📞 Can I talk to someone before deciding?
+                </summary>
+                <div className="px-6 pb-6 text-gray-700 dark:text-gray-300">
+                  <p>Absolutely! Call <strong>(817) 873-6655</strong> or schedule a free consultation. We'll review your current situation and recommend the best plan for your specific needs and budget.</p>
+                </div>
+              </details>
+            </div>
+          </div>
+        </div>
+
+        {/* Sticky CTA Section */}
+        <div className="px-4 sm:px-6 lg:px-8 py-12 bg-gradient-to-r from-primary-600 to-primary-800 text-white">
+          <div className="max-w-4xl mx-auto text-center">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Ready to Start Growing?
+            </h3>
+            <p className="text-lg mb-8 text-primary-100">
+              Join 25+ businesses already growing with Forte. Same-day response guaranteed.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Link 
+                href="/contact" 
+                className="bg-white text-primary-700 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
+              >
+                Get Started Today
+              </Link>
+              <Link 
+                href="tel:8178736655" 
+                className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-primary-700 transition-colors text-lg"
+              >
+                Call (817) 873-6655
+              </Link>
+            </div>
+            
+            <p className="text-sm text-primary-200 mt-4">
+              💡 Not sure which plan? <Link href="/pricing/which-plan" className="underline hover:no-underline">Take our 2-minute quiz</Link>
+            </p>
           </div>
         </div>
       </div>

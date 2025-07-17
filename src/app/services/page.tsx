@@ -10,12 +10,12 @@ const coreServices = [
   {
     id: "websites",
     title: "Forte Foundation™ Websites",
-    desc: "Hand-coded, lightning-fast websites that convert visitors into customers. No templates, no plugins, just pure performance.",
+    desc: "Hand-coded websites that work as hard as you do. No templates, no cookie-cutters - just custom-built digital powerhouses that turn visitors into paying customers while you sleep.",
     features: [
-      "Custom coded for speed & SEO",
+      "Custom coded for speed & SEO dominance",
       "Mobile-first responsive design", 
       "Forte Care™ support included",
-      "Built for conversions"
+      "Built for maximum conversions"
     ],
     pricing: "Starting at $200/month",
     linkText: "Get My Converting Website",
@@ -29,12 +29,12 @@ const coreServices = [
   {
     id: "seo",
     title: "Forte SEO™ Services",
-    desc: "Get found by customers who are actively searching for what you sell. Comprehensive SEO that drives real results.",
+    desc: "Get found by customers who are actively searching for what you sell. Our SEO doesn't just improve rankings - it drives qualified leads to your door every single day.",
     features: [
-      "Local & national SEO optimization",
-      "Content strategy & creation",
-      "Technical SEO improvements", 
-      "Monthly performance reports"
+      "Local & national SEO dominance",
+      "Content strategy that converts",
+      "Technical SEO that Google loves", 
+      "Monthly performance & ROI reports"
     ],
     pricing: "Starting at $300/month",
     linkText: "Dominate Google Now",
@@ -48,12 +48,12 @@ const coreServices = [
   {
     id: "ppc",
     title: "Forte PPC™ Advertising",
-    desc: "Google Ads campaigns that bring qualified leads ready to buy. No wasted spend, just results.",
+    desc: "Google Ads campaigns that actually make you money. Stop throwing cash at keywords that don't convert - get campaigns optimized for your bottom line, not just clicks.",
     features: [
-      "Strategic campaign setup",
-      "Landing page optimization",
-      "Conversion tracking & analysis",
-      "Continuous optimization"
+      "Strategic campaign setup & optimization",
+      "Landing page conversion optimization",
+      "Advanced conversion tracking & analysis",
+      "Continuous ROI improvement"
     ],
     pricing: "Starting at $400/month",
     linkText: "Stop Wasting Ad Money",
@@ -101,10 +101,10 @@ export default function ServicePage() {
                 <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">Complete Digital Solutions</span>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight mb-4 sm:mb-6">
-                Everything You Need to Grow Online
+                Your Digital Growth Toolkit
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
-                From lightning-fast websites to powerful SEO and PPC campaigns, we provide everything you need to dominate your market online. No juggling multiple vendors - one team, complete solutions.
+                Stop juggling multiple vendors and scattered strategies. Get everything you need to dominate your market with our integrated suite of proven digital marketing solutions. One team, complete growth, real results.
               </p>
             </div>
           </div>

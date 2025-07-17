@@ -29,13 +29,13 @@ export default function WebsiteDesignPage() {
             </div>
             
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight dark:text-white mb-4 sm:mb-6 max-w-5xl mx-auto">
-              Stop Settling for Cookie-Cutter Templates
+              Websites That Work Harder
             </h1>
             
             <div className="max-w-4xl mx-auto bg-[#F4F4F4] dark:bg-[#101010] p-4 sm:p-6 lg:p-8 rounded-lg sm:rounded-xl mb-6 sm:mb-8">
               <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
-                While your competitors struggle with slow, template-based websites, you could be dominating search results with a 
-                lightning-fast, hand-coded site that converts visitors into customers. Here's why custom beats templates—every single time.
+                While your competitors struggle with slow, template-based websites that leak customers, you could be dominating with a 
+                lightning-fast, hand-coded powerhouse that works around the clock to convert visitors into paying customers.
               </p>
             </div>
 

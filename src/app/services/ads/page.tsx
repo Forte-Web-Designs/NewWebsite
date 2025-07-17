@@ -42,12 +42,10 @@ export default function GooglePPCAdsPage() {
         Hey there! 👋
       </span>
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight max-w-4xl dark:text-secondary-1000 text-center mb-4 sm:mb-6">
-        Google Ads That Actually Get You Customers
+        Google Ads That Actually Perform
       </h1>
       <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 max-w-3xl text-center leading-relaxed mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-        Want to get in front of customers who are ready to buy? Our Google Ads
-        get you found fast, so you can focus on serving great customers instead
-        of waiting for them to find you.
+        Stop throwing money at keywords that don't convert. Our Google Ads campaigns are built for your bottom line - driving qualified leads who are ready to buy, not just click.
       </p>
 
       {/* Problem-Solution Structure */}
