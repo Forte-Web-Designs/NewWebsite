@@ -2,6 +2,7 @@
 
 import { Icon } from "@/components/images/Icon";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
+import { useTheme } from "@/app/providers/ThemeProvider";
 import { useEffect, useState, useRef, Suspense } from "react";
 import SEOAuditTool from "@/components/SEOAuditTool";
 import SEOResults from "@/components/SEOResults";
@@ -82,6 +83,7 @@ const bottomData = [
 ];
 
 function SiteCheckUpContent() {
+  const { theme } = useTheme();
   const searchParams = useSearchParams();
   const [websiteUrl, setWebsiteUrl] = useState("");
   const [auditResults, setAuditResults] = useState<any>(null);
