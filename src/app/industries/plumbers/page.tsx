@@ -1,17 +1,19 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import { OptimizedImage } from '@/components/images/OptimizedImage';
+import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 
 export const metadata: Metadata = {
-  title: 'Plumber Website Design | Mobile-Ready Sites That Book More Jobs',
-  description: 'Custom-built websites for plumbers. Mobile-ready, SEO-optimized, and designed for emergency call conversions. Convert late-night searches into paying customers.',
+  title: 'Plumber Website Design & Development | Emergency Call Ready',
+  description: 'When pipes burst at 2 AM, your website needs to work perfectly on mobile. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.',
   keywords: 'plumber website design, plumbing websites, emergency plumber websites, local plumber SEO, plumbing lead generation',
   openGraph: {
-    title: 'Plumber Website Design | Mobile-Ready Sites That Book More Jobs',
-    description: 'Custom-built websites for plumbers. Mobile-ready, SEO-optimized, and designed for emergency call conversions. Convert late-night searches into paying customers.',
+    title: 'Plumber Website Design & Development | Emergency Call Ready',
+    description: 'When pipes burst at 2 AM, your website needs to work perfectly on mobile. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.',
     type: 'website',
   },
 };
@@ -112,33 +114,35 @@ export default function PlumbersPage() {
                   🔧 Industry Expertise: Plumbing
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Websites That Help Plumbers <span className="text-blue-300">Book More Emergency Jobs</span>
+                  Plumber Websites That Convert <span className="text-blue-300">Emergency Calls Into Customers</span>
                 </h1>
-                <h2 className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  Mobile‑first, call‑ready websites designed to turn late‑night Google searches into paying plumbing customers.
-                </h2>
+                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
+                  When pipes burst at 2 AM, your website needs to work perfectly on mobile. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.
+                </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <DarkButton href="/contact?industry=plumbing" className="bg-orange-600 hover:bg-orange-700">
-                    Start My Plumber Website – $200/mo
+                    Get My Plumber Website Quote
+                    <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
                   </DarkButton>
                   <LightButton href="/checkup?industry=plumbing">
-                    Get Free Plumbing Site Audit
+                    Free Plumbing Website Audit
+                    <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
                   </LightButton>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 text-sm text-blue-200">
                   <div className="flex items-center gap-2">
-                    <span className="text-green-400">✔</span>
-                    Mobile‑Optimized
+                    <span className="text-green-400">✓</span>
+                    Mobile-First Design
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-green-400">✔</span>
-                    Local SEO Built‑In
+                    <span className="text-green-400">✓</span>
+                    Local SEO Optimized
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-green-400">✔</span>
-                    30‑Day Guarantee
+                    <span className="text-green-400">✓</span>
+                    Emergency Call Ready
                   </div>
                 </div>
               </div>
@@ -147,44 +151,41 @@ export default function PlumbersPage() {
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative">
                 <div className="bg-white rounded-2xl p-8 shadow-2xl">
-                  <h3 className="text-gray-800 text-xl font-bold mb-4 text-center">Sample Plumber Website</h3>
+                  <div className="flex items-center gap-3 mb-6">
+                    <span className="text-2xl">🔧</span>
+                    <div>
+                      <h3 className="text-gray-800 text-lg font-bold">Emergency Plumbing</h3>
+                      <p className="text-gray-600 text-sm">24/7 Service in Dallas Metro</p>
+                    </div>
+                  </div>
                   
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {/* Left Column - Services & Pricing */}
-                    <div className="space-y-3">
-                      <h4 className="font-semibold text-gray-800 text-sm">Emergency Services</h4>
-                      <div className="space-y-2 text-sm">
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Drain Cleaning</span>
-                          <span className="font-semibold text-gray-800">$89+</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Water Heater Repair</span>
-                          <span className="font-semibold text-gray-800">$150+</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Pipe Leak Fix</span>
-                          <span className="font-semibold text-gray-800">$120+</span>
-                        </div>
-                        <div className="flex justify-between">
-                          <span className="text-gray-600">Toilet Repair</span>
-                          <span className="font-semibold text-gray-800">$95+</span>
-                        </div>
-                      </div>
+                  <div className="space-y-3 mb-6">
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Drain Cleaning</span>
+                      <span className="font-bold text-gray-800">$89+</span>
                     </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Water Heater Repair</span>
+                      <span className="font-bold text-gray-800">$150+</span>
+                    </div>
+                    <div className="flex justify-between items-center">
+                      <span className="text-gray-600">Emergency Service</span>
+                      <span className="font-bold text-green-600">Call Now</span>
+                    </div>
+                  </div>
 
-                    {/* Right Column - Badge Block */}
-                    <div className="bg-gray-50 rounded-lg p-4 text-center">
-                      <div className="text-sm text-gray-600 mb-2">📍 Serving Dallas Metro</div>
-                      <div className="bg-green-600 text-white px-4 py-2 rounded-lg font-bold text-lg mb-3">
-                        CALL NOW: (214) 555-0123
-                      </div>
-                      <div className="flex items-center justify-center gap-1 mb-2">
-                        <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
-                        <span className="text-gray-600 text-sm ml-2">(247 reviews)</span>
-                      </div>
-                      <div className="text-xs text-gray-500">⏰ 30min Response Time</div>
+                  <div className="bg-green-600 text-white text-center py-3 rounded-lg mb-4">
+                    <div className="flex items-center justify-center gap-2">
+                      <span>📞</span>
+                      <span className="font-bold">Call (555) 123-PLUMBER</span>
                     </div>
+                  </div>
+
+                  <div className="text-center">
+                    <div className="flex items-center justify-center gap-1 mb-2">
+                      <span className="text-yellow-400">⭐⭐⭐⭐⭐</span>
+                    </div>
+                    <div className="text-gray-600 text-sm">(247 reviews)</div>
                   </div>
                 </div>
                 
@@ -201,13 +202,13 @@ export default function PlumbersPage() {
         </div>
       </section>
 
-      {/* Why Plumbers Choose Forte Section */}
+      {/* Why We're Plumbing Website Experts Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Why Plumbers Choose <span className="text-blue-600">Forte</span>
+                Why We're <span className="text-blue-600">Plumbing Website Experts</span>
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                 We've built websites for 15+ plumbing companies and understand exactly what drives emergency calls and builds customer trust in the plumbing industry.
@@ -218,25 +219,19 @@ export default function PlumbersPage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
             {plumberChallenges.map((challenge, index) => (
               <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 h-full shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow">
-                  <div className="text-4xl mb-4 text-center">{challenge.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 text-center">
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 h-full">
+                  <div className="text-3xl mb-4">{challenge.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                     {challenge.title}
                   </h3>
-                  <div className="space-y-4">
-                    <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-3">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-red-500">⚠️</span>
-                        <div className="text-sm font-medium text-red-700 dark:text-red-400">The Problem:</div>
-                      </div>
-                      <div className="text-sm text-red-600 dark:text-red-300">{challenge.problem}</div>
+                  <div className="space-y-3">
+                    <div>
+                      <div className="text-sm font-medium text-red-600 mb-1">The Problem:</div>
+                      <div className="text-sm text-gray-600 dark:text-gray-400">{challenge.problem}</div>
                     </div>
-                    <div className="bg-green-50 dark:bg-green-900/20 rounded-lg p-3">
-                      <div className="flex items-center gap-2 mb-2">
-                        <span className="text-green-500">✅</span>
-                        <div className="text-sm font-medium text-green-700 dark:text-green-400">Our Solution:</div>
-                      </div>
-                      <div className="text-sm text-green-600 dark:text-green-300">{challenge.solution}</div>
+                    <div>
+                      <div className="text-sm font-medium text-green-600 mb-1">Our Solution:</div>
+                      <div className="text-sm text-gray-700 dark:text-gray-300">{challenge.solution}</div>
                     </div>
                   </div>
                 </div>
@@ -245,20 +240,17 @@ export default function PlumbersPage() {
           </div>
 
           {/* Success Metrics */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white shadow-2xl">
+          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
-              <div className="inline-flex items-center gap-2 bg-blue-500/30 text-blue-100 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                📊 Real Results from Plumbing Clients
-              </div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-2">Proven Results for Plumbing Companies</h3>
+              <h3 className="text-2xl font-bold mb-2">Proven Results for Plumbing Companies</h3>
               <p className="text-blue-100">Real metrics from our plumbing clients in the first 6 months</p>
             </div>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {successMetrics.map((metric, index) => (
-                <div key={index} className="text-center bg-blue-500/20 rounded-xl p-6 backdrop-blur-sm">
-                  <div className="text-4xl mb-3">{metric.icon}</div>
-                  <div className="text-3xl md:text-4xl font-bold mb-2 text-white">{metric.metric}</div>
+                <div key={index} className="text-center">
+                  <div className="text-3xl mb-2">{metric.icon}</div>
+                  <div className="text-3xl font-bold mb-1">{metric.metric}</div>
                   <div className="text-sm text-blue-100">{metric.description}</div>
                 </div>
               ))}
@@ -273,7 +265,7 @@ export default function PlumbersPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Everything Your Plumbing Website Needs to <span className="text-blue-600">Convert Emergency Calls</span>
+                Essential Features for <span className="text-blue-600">Plumber Websites</span>
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                 Every plumbing website we build includes these conversion-focused features designed specifically for the plumbing industry.
@@ -334,15 +326,10 @@ export default function PlumbersPage() {
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/case-studies" className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                    Read Full Case Study
-                    <span>→</span>
-                  </Link>
-                  <Link href="/contact?industry=plumbing" className="inline-flex items-center justify-center gap-2 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-6 py-3 rounded-lg font-semibold transition-all">
-                    Get Similar Results
-                  </Link>
-                </div>
+                <Link href="/case-studies" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold">
+                  Read Full Case Study
+                  <span>→</span>
+                </Link>
               </div>
             </SimpleScrollReveal>
 
@@ -377,44 +364,36 @@ export default function PlumbersPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Stop Losing Emergency Calls to Competitors
+              Ready to Dominate Local Plumbing Search?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              While your competitors struggle with outdated websites, you could be booking 2-3x more emergency plumbing jobs with a mobile-first website designed for conversions.
+            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+              Join 15+ plumbing companies who've increased their emergency calls and revenue with our proven plumber website formula.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <DarkButton href="/contact?industry=plumbing" className="bg-orange-600 hover:bg-orange-700 text-lg px-8 py-4">
+              <DarkButton href="/contact?industry=plumbing" className="bg-orange-600 hover:bg-orange-700">
                 Start My Plumber Website - $200/mo
+                <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
               </DarkButton>
-              <LightButton href="/checkup?industry=plumbing" className="text-lg px-8 py-4">
+              <LightButton href="/checkup?industry=plumbing">
                 Get Free Plumbing Website Audit
+                <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3 ml-2" />
               </LightButton>
             </div>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto text-sm">
-              <div className="flex items-center gap-2 justify-center bg-blue-800/30 rounded-lg p-3">
+            <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm">
+              <div className="flex items-center gap-2 justify-center">
                 <span className="text-green-400">✓</span>
-                <span>30-Day Money-Back Guarantee</span>
+                30-Day Money-Back Guarantee
               </div>
-              <div className="flex items-center gap-2 justify-center bg-blue-800/30 rounded-lg p-3">
+              <div className="flex items-center gap-2 justify-center">
                 <span className="text-green-400">✓</span>
-                <span>Mobile-Emergency Optimized</span>
+                Mobile-Optimized Design
               </div>
-              <div className="flex items-center gap-2 justify-center bg-blue-800/30 rounded-lg p-3">
+              <div className="flex items-center gap-2 justify-center">
                 <span className="text-green-400">✓</span>
-                <span>Local SEO Domination</span>
+                Local SEO Included
               </div>
-              <div className="flex items-center gap-2 justify-center bg-blue-800/30 rounded-lg p-3">
-                <span className="text-green-400">✓</span>
-                <span>Same-Day Response</span>
-              </div>
-            </div>
-            
-            <div className="mt-8 p-4 bg-blue-800/40 rounded-xl max-w-2xl mx-auto">
-              <p className="text-blue-100 text-sm">
-                <strong>📞 Ready to talk?</strong> Call <span className="text-white font-semibold">(817) 873-6655</span> or book your free consultation below.
-              </p>
             </div>
           </div>
         </div>
