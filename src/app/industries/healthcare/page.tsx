@@ -6,6 +6,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
   title: 'Healthcare Website Design & Development | Patient-Focused',
@@ -24,8 +25,8 @@ export default function HealthcarePage() {
     { name: "Family Medicine Associates" },
     { name: "Premier Dental Care" },
     { name: "Metro Physical Therapy" },
-    { name: "Wellness Clinic Network" },
-    { name: "Advanced Cardiology Group" }
+    { name: "Pediatric Health Group" },
+    { name: "Advanced Cardiology" }
   ];
 
   // Comparison data
@@ -167,6 +168,7 @@ export default function HealthcarePage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
+      <ScrollToTop />
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Elements */}

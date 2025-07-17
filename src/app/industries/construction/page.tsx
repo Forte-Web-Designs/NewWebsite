@@ -6,6 +6,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
   title: 'Construction Company Website Design | Project-Ready Marketing',
@@ -111,6 +112,7 @@ export default function ConstructionPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
+      <ScrollToTop />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-orange-50 to-red-100 dark:from-gray-900 dark:to-gray-800 py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

@@ -6,6 +6,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
   title: 'Plumber Website Design & Development | Emergency Call Ready',
@@ -167,6 +168,7 @@ export default function PlumbersPage() {
 
   return (
     <div className="min-h-screen">
+      <ScrollToTop />
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

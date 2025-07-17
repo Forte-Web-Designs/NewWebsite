@@ -6,6 +6,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
+import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
   title: 'Restaurant Website Design & Development | Order Ready',
@@ -111,6 +112,7 @@ export default function RestaurantsPage() {
 
   return (
     <>
+      <ScrollToTop />
       {/* Hero Section */}
       <section className="relative py-16 md:py-24 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
