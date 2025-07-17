@@ -225,13 +225,10 @@ export default function HealthcarePage() {
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex flex-col sm:flex-row gap-4">
-                  <DarkButton href="/contact" className="text-center">
-                    Launch My Healthcare Website
+                <div className="flex justify-center lg:justify-start">
+                  <DarkButton href="/contact?industry=healthcare" className="bg-blue-600 hover:bg-blue-700">
+                    Contact Us
                   </DarkButton>
-                  <LightButton href="/pricing" className="text-center">
-                    View Pricing
-                  </LightButton>
                 </div>
 
                 {/* Social Proof */}
@@ -466,8 +463,8 @@ export default function HealthcarePage() {
               Join the healthcare providers already growing their practice with Forte. Get started today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <DarkButton href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
-                Start My Healthcare Website
+              <DarkButton href="/contact?industry=healthcare" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
+                Contact Us
               </DarkButton>
               <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-blue-600">
                 View Pricing
