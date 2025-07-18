@@ -4,12 +4,12 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Service Areas - Professional Web Design Across Texas | Forte Web Designs',
-  description: 'Providing expert web design services throughout Texas. Specializing in Dallas, Fort Worth, and DFW metro area with local expertise and proven results.',
-  keywords: 'web design Texas, Dallas web designer, Fort Worth web designer, DFW web design, local web design services',
+  title: 'Local Web Design Solutions - Dallas, Fort Worth, DFW | Forte Web Designs',
+  description: 'Custom web design for specific Texas markets. Dallas corporate competition, Fort Worth authenticity, DFW metro complexity - we solve your local business challenges.',
+  keywords: 'local web design Texas, Dallas web designer near me, Fort Worth web design, DFW web development, custom websites Texas, local SEO Texas',
   openGraph: {
-    title: 'Service Areas - Professional Web Design Across Texas | Forte Web Designs',
-    description: 'Expert web design services throughout Texas. Local expertise in Dallas, Fort Worth, and DFW metro area.',
+    title: 'Local Web Design Solutions - Dallas, Fort Worth, DFW | Forte Web Designs',
+    description: 'Custom web design for specific Texas markets. Solutions for Dallas corporate competition, Fort Worth authenticity, DFW metro complexity.',
     url: 'https://fortewebdesigns.com/locations',
     type: 'website',
   },
@@ -18,57 +18,193 @@ export const metadata: Metadata = {
   },
 };
 
-const serviceAreas = [
+const topLocations = [
   {
     city: 'Dallas',
+    state: 'Texas',
     slug: 'dallas-web-designer',
-    description: 'Professional web design services for Dallas businesses, from downtown corporate offices to suburban enterprises.',
-    highlights: ['Fortune 500 Experience', 'Local Market Knowledge', 'Same-Day Response'],
+    description: 'Big D means big competition. Every day, 45,000+ businesses fight for the same customers online. Your website either dominates search results or gets buried on page 10.',
+    problem: 'Corporate giants with million-dollar marketing budgets push small businesses into digital obscurity.',
+    solution: 'Custom-coded websites that load instantly and outrank template-based competitors in local searches.',
+    challenges: ['Corporate giants dominating search', 'Template websites looking identical', 'High cost-per-click advertising'],
+    solutions: ['Lightning-fast custom code', 'Local SEO that actually works', 'Authentic brand positioning'],
     population: '1.3M+',
     businesses: '45,000+',
+    keyAreas: ['Downtown Dallas', 'Deep Ellum', 'Uptown', 'Oak Lawn'],
+    marketInsight: 'Dallas customers scroll fast and decide faster. Your website has 3 seconds to win or lose.',
     featured: true,
   },
   {
     city: 'Fort Worth',
+    state: 'Texas', 
     slug: 'fort-worth-web-designer',
-    description: 'Custom web design solutions for Fort Worth companies, blending traditional Texas values with modern digital strategies.',
-    highlights: ['Cowtown Pride', 'Local Partnership Focus', 'Industry Expertise'],
+    description: 'Cowtown is booming, but customers still value authenticity over corporate polish. Your website needs to feel local while competing with Big D neighbors.',
+    problem: 'Generic web design makes Fort Worth businesses look like every other Dallas suburb.',
+    solution: 'Websites that capture Fort Worth\'s unique character while delivering modern functionality.',
+    challenges: ['Being overshadowed by Dallas', 'Balancing tradition with tech', 'Tourist vs. local customer needs'],
+    solutions: ['Authentic Texas branding', 'Mobile-first local optimization', 'Cultural market positioning'],
     population: '950K+',
     businesses: '32,000+',
+    keyAreas: ['Downtown Fort Worth', 'Sundance Square', 'Cultural District', 'Stockyards'],
+    marketInsight: 'Fort Worth customers research thoroughly and choose businesses that feel genuinely local.',
     featured: true,
   },
   {
     city: 'DFW Metro',
-    slug: 'dfw-web-designer',
-    description: 'Comprehensive web design services across the entire Dallas-Fort Worth metroplex, serving all 13 counties.',
-    highlights: ['Metro-Wide Coverage', 'Multi-Location Support', 'Regional Expertise'],
+    state: 'Texas',
+    slug: 'dfw-web-designer', 
+    description: 'Fourth-largest metro in America. Your customers could be in Plano, Frisco, Arlington, or any of 200+ cities. One website needs to work everywhere.',
+    problem: 'Multi-location businesses struggle with websites that don\'t capture local market nuances.',
+    solution: 'Metro-wide optimization that dominates local searches across all DFW markets.',
+    challenges: ['13 counties, 200+ cities', 'Diverse customer bases', 'Complex local SEO'],
+    solutions: ['Multi-location SEO mastery', 'Regional customization', 'Scalable architecture'],
     population: '7.8M+',
     businesses: '180,000+',
+    keyAreas: ['Dallas County', 'Tarrant County', 'Collin County', 'Denton County'],
+    marketInsight: 'DFW customers expect local expertise but demand big-city performance.',
     featured: true,
+  },
+  {
+    city: 'Plano',
+    state: 'Texas',
+    slug: 'plano-web-designer',
+    description: 'Corporate headquarters capital of Texas. Your website competes with Fortune 500 companies for the same affluent customers.',
+    problem: 'Small businesses look amateur next to corporate giants with unlimited budgets.',
+    solution: 'Enterprise-level custom development that makes you look like the established player.',
+    challenges: ['Corporate competition', 'High customer expectations', 'Affluent market standards'],
+    solutions: ['Enterprise-grade development', 'Premium user experience', 'Professional positioning'],
+    population: '285K+',
+    businesses: '8,500+',
+    keyAreas: ['Legacy West', 'Plano East', 'West Plano', 'Downtown Plano'],
+    marketInsight: 'Plano customers have high expectations - your website is your first impression.',
+    featured: false,
+  },
+  {
+    city: 'Frisco',
+    state: 'Texas',
+    slug: 'frisco-web-designer',
+    description: 'Fastest-growing city in America. New businesses open daily, but only the ones with strong digital presence survive the competition.',
+    problem: 'Rapid growth means instant competition - new businesses struggle to get noticed.',
+    solution: 'Fast-launching websites optimized for immediate local search domination.',
+    challenges: ['Rapid business growth', 'New competition daily', 'Young demographic'],
+    solutions: ['Quick-launch optimization', 'Modern mobile design', 'Social integration'],
+    population: '200K+',
+    businesses: '6,200+',
+    keyAreas: ['The Star', 'Frisco Square', 'Stonebriar', 'Legacy West'],
+    marketInsight: 'Frisco customers are tech-savvy and mobile-first - your site must be flawless.',
+    featured: false,
+  },
+  {
+    city: 'Arlington',
+    state: 'Texas',
+    slug: 'arlington-web-designer',
+    description: 'Sports capital of Texas. Your website needs to capture attention in a city where major events bring millions of visitors.',
+    problem: 'Event-driven traffic spikes crash template websites and lose potential customers.',
+    solution: 'High-performance architecture that handles traffic surges and converts visitors.',
+    challenges: ['Event traffic spikes', 'Tourism vs. local focus', 'Competition with venues'],
+    solutions: ['Scalable performance', 'Event-aware optimization', 'Conversion-focused design'],
+    population: '395K+',
+    businesses: '12,000+',
+    keyAreas: ['Downtown Arlington', 'Entertainment District', 'Mansfield Highway', 'Cooper Street'],
+    marketInsight: 'Arlington customers come from everywhere - your website is often their first local contact.',
+    featured: false,
   },
 ];
 
-const benefits = [
+const whyCustomDevelopment = [
   {
-    icon: '📍',
-    title: 'Local Market Knowledge',
-    description: 'Deep understanding of Texas business culture and local market dynamics.',
+    icon: '🏆',
+    title: 'Beyond Templates',
+    description: 'While others use the same WordPress templates for every client, we custom code every website to match your specific market needs.',
   },
   {
-    icon: '⏰',
-    title: 'Same-Day Response',
-    description: 'Quick turnaround times with local availability for meetings and support.',
+    icon: '⚡',
+    title: 'Performance That Wins',
+    description: 'Custom-coded sites load instantly and rank better in search results. No bloated WordPress templates slowing you down.',
   },
   {
-    icon: '⭐',
-    title: 'Proven Track Record',
-    description: 'Successfully serving Texas businesses with measurable results and growth.',
+    icon: '🔒',
+    title: 'Built to Last',
+    description: 'No security vulnerabilities, no constant updates eating into your time. Just pure performance that helps you compete and win.',
   },
 ];
 
 export default function LocationsPage() {
+  // Schema markup for local business
+  const localBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Forte Web Designs",
+    "description": "Professional web design services throughout Texas specializing in Dallas, Fort Worth, and DFW metro area",
+    "url": "https://fortewebdesigns.com",
+    "logo": "https://fortewebdesigns.com/images/home/logo2.png",
+    "image": "https://fortewebdesigns.com/images/home/logo2.png",
+    "telephone": "(817) 873-6655",
+    "email": "info@fortewebdesigns.com",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Grapevine",
+      "addressLocality": "Grapevine",
+      "addressRegion": "TX",
+      "postalCode": "76051",
+      "addressCountry": "US"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "32.9342919",
+      "longitude": "-97.0780654"
+    },
+    "areaServed": [
+      {
+        "@type": "City",
+        "name": "Dallas",
+        "sameAs": "https://en.wikipedia.org/wiki/Dallas"
+      },
+      {
+        "@type": "City", 
+        "name": "Fort Worth",
+        "sameAs": "https://en.wikipedia.org/wiki/Fort_Worth,_Texas"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Dallas-Fort Worth Metroplex",
+        "sameAs": "https://en.wikipedia.org/wiki/Dallas%E2%80%93Fort_Worth_metroplex"
+      }
+    ],
+    "serviceType": [
+      "Web Design",
+      "SEO Services", 
+      "Website Development",
+      "Digital Marketing",
+      "Local SEO"
+    ],
+    "priceRange": "$200-$1200",
+    "paymentAccepted": ["Cash", "Credit Card", "Check"],
+    "currenciesAccepted": "USD",
+    "openingHours": "Mo-Fr 09:00-17:00",
+    "sameAs": [
+      "https://www.facebook.com/fortewebdesigns",
+      "https://www.linkedin.com/company/forte-web-designs"
+    ],
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "25",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   return (
     <div className="relative">
+      {/* Schema markup for search engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(localBusinessSchema),
+        }}
+      />
+      
       <SectionBackgroundAnimation />
       
       <main className="relative z-10">
@@ -78,98 +214,137 @@ export default function LocationsPage() {
             <div className="text-center mb-12">
               <span className="text-sm sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-2 text-primary-1000 mb-4 sm:mb-6">
                 <Icon name="location" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                Service Areas
+                Top Locations
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
-                Professional Web Design Services Across Texas
+                Your Local Market, Your Custom Solution
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
-                Local expertise meets world-class web design. Serving Dallas, Fort Worth, and the entire DFW metroplex with custom digital solutions that drive real business results.
+                Dallas businesses face corporate giants. Fort Worth values authenticity. Plano expects perfection. We build websites that win in your specific market – not generic solutions that work nowhere.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Service Areas Overview */}
+        {/* Top Locations Overview */}
         <section className="py-16 bg-gray-50 dark:bg-gray-900/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Our Service Areas
+                Local Challenges, Custom Solutions
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                From bustling Dallas to historic Fort Worth, we provide comprehensive web design services 
-                throughout Texas with local expertise and personal attention.
+                Every Texas market has unique challenges that template websites can't solve. We build custom solutions that address your specific local business problems.
               </p>
             </div>
 
-            {/* Featured Service Areas */}
+            {/* Featured Locations */}
             <div className="grid md:grid-cols-3 gap-8 mb-16">
-              {serviceAreas.map((area) => (
-                <div key={area.slug} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
+              {topLocations.filter(location => location.featured).map((location) => (
+                <div key={location.slug} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
                   <div className="flex items-start justify-between mb-4">
                     <div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                        {area.city}
+                        {location.city}
                       </h3>
                       <span className="inline-block bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 text-sm px-3 py-1 rounded-full">
-                        {area.population} residents
+                        {location.population} people
                       </span>
                     </div>
-                    {area.featured && (
-                      <span className="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-400 text-sm px-3 py-1 rounded-full">
-                        Featured
-                      </span>
-                    )}
+                    <span className="bg-green-100 dark:bg-green-900/40 text-green-800 dark:text-green-400 text-sm px-3 py-1 rounded-full">
+                      Featured
+                    </span>
                   </div>
                   
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    {area.description}
+                    {location.description}
                   </p>
                   
-                  <div className="space-y-2 mb-6">
-                    {area.highlights.map((highlight) => (
-                      <div key={highlight} className="flex items-center gap-2">
-                        <span className="text-green-500">✓</span>
-                        <span className="text-sm text-gray-600 dark:text-gray-300">
-                          {highlight}
-                        </span>
-                      </div>
-                    ))}
+                  <div className="mb-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
+                    <h4 className="text-sm font-semibold text-red-900 dark:text-red-400 mb-1">The Problem:</h4>
+                    <p className="text-sm text-red-700 dark:text-red-300">{location.problem}</p>
+                  </div>
+                  
+                  <div className="mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
+                    <h4 className="text-sm font-semibold text-green-900 dark:text-green-400 mb-1">Our Solution:</h4>
+                    <p className="text-sm text-green-700 dark:text-green-300">{location.solution}</p>
+                  </div>
+                  
+                  <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                    <h4 className="text-sm font-semibold text-blue-900 dark:text-blue-400 mb-1">Market Insight:</h4>
+                    <p className="text-sm text-blue-700 dark:text-blue-300">{location.marketInsight}</p>
                   </div>
                   
                   <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    <span>{area.businesses} businesses</span>
+                    <span>{location.businesses} businesses</span>
                     <span>Local expertise</span>
                   </div>
                   
                   <Link
-                    href={`/locations/${area.slug}`}
+                    href={`/locations/${location.slug}`}
                     className="inline-flex items-center justify-center w-full bg-blue-600 text-white py-3 px-4 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200 group-hover:shadow-md"
                   >
-                    View {area.city} Services
+                    See {location.city} Solutions
                   </Link>
                 </div>
               ))}
             </div>
+
+            {/* Additional Locations */}
+            <div className="border-t border-gray-200 dark:border-gray-700 pt-12">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                Additional Service Areas
+              </h3>
+              <div className="grid md:grid-cols-3 gap-6">
+                {topLocations.filter(location => !location.featured).map((location) => (
+                  <div key={location.slug} className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-md hover:shadow-lg transition-all duration-300 group">
+                    <div className="flex items-start justify-between mb-3">
+                      <div>
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-1">
+                          {location.city}
+                        </h4>
+                        <span className="text-sm text-gray-500 dark:text-gray-400">
+                          {location.population} • {location.businesses} businesses
+                        </span>
+                      </div>
+                    </div>
+                    
+                    <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                      {location.description}
+                    </p>
+                    
+                    <div className="text-xs text-blue-600 dark:text-blue-400 mb-3">
+                      {location.marketInsight}
+                    </div>
+                    
+                    <Link
+                      href={`/locations/${location.slug}`}
+                      className="inline-flex items-center justify-center w-full bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white py-2 px-3 rounded-lg text-sm font-medium hover:bg-gray-200 dark:hover:bg-gray-600 transition-colors duration-200"
+                    >
+                      Learn More
+                    </Link>
+                  </div>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
-        {/* Why Choose Local */}
+        {/* Why Custom Development */}
         <section className="py-16">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-16">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Why Choose Local Web Design?
+                  Beyond Templates: Texas-Level Performance
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Working with a local Texas web design company offers unique advantages for your business growth.
+                  Competing in Texas means your website needs to be as tough as you are. No WordPress vulnerabilities, no bloated templates, no security headaches.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-3 gap-8">
-                {benefits.map((benefit) => (
+                {whyCustomDevelopment.map((benefit) => (
                   <div key={benefit.title} className="text-center">
                     <div className="text-4xl mb-4">
                       {benefit.icon}
@@ -187,68 +362,67 @@ export default function LocationsPage() {
           </div>
         </section>
 
-        {/* Coverage Map */}
+        {/* Texas Market Coverage */}
         <section className="py-16 bg-gray-50 dark:bg-gray-900/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-                DFW Metro Coverage
+                Built for Texas Business
               </h2>
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                      Complete Metro Coverage
+                      From Local to Metro-Wide
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-6">
-                      We proudly serve all 13 counties in the Dallas-Fort Worth metroplex, 
-                      providing consistent quality and local expertise across the region.
+                      Whether you're a single-location business or expanding across the DFW metroplex, our custom-coded websites scale with your ambitions. No generic solutions – just websites built for your specific Texas market.
                     </p>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Dallas County</span>
+                          <span>Local SEO domination</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Tarrant County</span>
+                          <span>Mobile-first design</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Collin County</span>
+                          <span>Lightning-fast performance</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Denton County</span>
+                          <span>Security built-in</span>
                         </div>
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Rockwall County</span>
+                          <span>No WordPress headaches</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Ellis County</span>
+                          <span>Custom functionality</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Johnson County</span>
+                          <span>Ongoing support</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>And 6 more...</span>
+                          <span>Growth-ready</span>
                         </div>
                       </div>
                     </div>
                   </div>
                   <div className="text-center">
                     <div className="inline-flex items-center justify-center w-32 h-32 bg-blue-100 dark:bg-blue-900 rounded-full mb-4">
-                      <span className="text-4xl">📍</span>
+                      <span className="text-4xl">🏆</span>
                     </div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Based in Grapevine, serving the entire DFW metroplex
+                      Custom-coded websites that win in competitive Texas markets
                     </p>
                   </div>
                 </div>
@@ -262,17 +436,17 @@ export default function LocationsPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
               <h2 className="text-3xl font-bold mb-4">
-                Ready to Work with Local Texas Experts?
+                Stop Losing to Template Websites
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Get a free consultation and see how local expertise can transform your business online.
+                Your competitors are using the same WordPress templates. Stand out with custom-coded solutions that actually work in your local market.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact?utm_source=locations_page&utm_medium=cta_button"
                   className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                 >
-                  Get Free Consultation
+                  Get Local Market Analysis
                 </Link>
                 <Link
                   href="tel:8178736655"

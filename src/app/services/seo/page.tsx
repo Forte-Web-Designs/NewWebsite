@@ -35,8 +35,31 @@ const faqData: FAQItem[] = [
 ];
 
 export default function SeoDesignPage() {
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question.replace(/[^\w\s]/gi, ''), // Remove emojis for clean schema
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
+    <>
+      {/* FAQ Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqSchema)
+        }}
+      />
+      
+      <section className="container max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
       {/* Hero Section - Mobile Optimized */}
       <div className="text-center mb-8 sm:mb-12 lg:mb-16">
         <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">
@@ -591,5 +614,6 @@ export default function SeoDesignPage() {
         </div>
       </section>
     </section>
+    </>
   );
 }

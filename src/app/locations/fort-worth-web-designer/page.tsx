@@ -12,8 +12,84 @@ export const metadata: Metadata = {
 };
 
 export default function FortWorthWebDesigner() {
+  // Schema markup for Fort Worth-specific service
+  const fortWorthBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Forte Web Designs - Fort Worth Web Designer",
+    "description": "Professional web designer serving Fort Worth, TX with custom websites, local SEO, and digital marketing solutions",
+    "url": "https://fortewebdesigns.com/locations/fort-worth-web-designer",
+    "logo": "https://fortewebdesigns.com/images/home/logo2.png",
+    "telephone": "(817) 873-6655",
+    "email": "info@fortewebdesigns.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Fort Worth",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Fort Worth",
+      "sameAs": "https://en.wikipedia.org/wiki/Fort_Worth,_Texas"
+    },
+    "serviceType": [
+      "Web Design Fort Worth",
+      "Website Development Fort Worth", 
+      "SEO Services Fort Worth",
+      "Digital Marketing Fort Worth",
+      "Custom Website Design"
+    ],
+    "priceRange": "$200-$1200",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Design Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Website Design",
+            "description": "Professional website design tailored for Fort Worth businesses"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Local SEO Services",
+            "description": "Search engine optimization to help Fort Worth businesses rank higher locally"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "Digital Marketing",
+            "description": "Complete digital marketing solutions for Fort Worth companies"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "25",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   return (
     <div className="relative">
+      {/* Schema markup for search engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(fortWorthBusinessSchema),
+        }}
+      />
+      
       <SectionBackgroundAnimation />
       
       {/* Hero Section */}

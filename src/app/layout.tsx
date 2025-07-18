@@ -11,6 +11,8 @@ import CriticalCSS from "@/components/performance/CriticalCSS";
 import PerformanceMonitor from "@/components/performance/PerformanceMonitor";
 import JavaScriptOptimizer from "@/components/performance/JavaScriptOptimizer";
 import ResourceHints from "@/components/performance/ResourceHints";
+import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
+import GoogleBusinessSchema from "@/components/seo/GoogleBusinessSchema";
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -110,6 +112,40 @@ export default function RootLayout({
         <link rel="preload" href="/fonts/InterDisplay-Regular.woff2" as="font" type="font/woff2" crossOrigin="" />
         <link rel="preload" href="/fonts/InterDisplay-Medium.woff2" as="font" type="font/woff2" crossOrigin="" />
         
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE || ''} />
+        
+        {/* Enhanced Local SEO Meta Tags */}
+        <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+        
+        {/* Local Business Verification */}
+        <meta name="geo.region" content="US-TX" />
+        <meta name="geo.placename" content="Dallas-Fort Worth" />
+        <meta name="geo.position" content="32.7767;-96.7970" />
+        <meta name="ICBM" content="32.7767, -96.7970" />
+        
+        {/* Local SEO Enhanced Tags */}
+        <meta name="coverage" content="Texas, Dallas, Fort Worth, DFW" />
+        <meta name="distribution" content="local" />
+        <meta name="audience" content="local businesses" />
+        <meta name="target" content="small business owners" />
+        
+        {/* Enhanced Crawling Instructions */}
+        <meta name="revisit-after" content="1 days" />
+        <meta name="rating" content="general" />
+        <meta name="language" content="en-us" />
+        <meta name="doc-type" content="web page" />
+        <meta name="doc-rights" content="copywritten work" />
+        <meta name="doc-class" content="living document" />
+        
+        {/* Local Business Categories */}
+        <meta name="classification" content="web design, SEO services, digital marketing" />
+        <meta name="category" content="professional services" />
+        <meta name="coverage" content="Dallas-Fort Worth Metroplex" />
+        <meta name="distribution" content="local" />
+        <meta name="rating" content="general" />
+        
         {/* Google Tag Manager */}
         <script
           dangerouslySetInnerHTML={{
@@ -152,6 +188,13 @@ export default function RootLayout({
         <CriticalCSS />
         <ResourceHints />
         <JavaScriptOptimizer />
+        
+        {/* Google Analytics 4 */}
+        <GoogleAnalytics />
+        
+        {/* Google Business Profile Schema */}
+        <GoogleBusinessSchema />
+        
         <ThemeProvider>
           <div className="dark:bg-[url(/images/navbar/navbar-bg.png)] bg-[url(/images/navbar/navbar-bg-light.png)] bg-no-repeat">
             <Header />

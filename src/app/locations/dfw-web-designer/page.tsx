@@ -12,8 +12,85 @@ export const metadata: Metadata = {
 };
 
 export default function DFWWebDesigner() {
+  // Schema markup for DFW Metro-specific service
+  const dfwBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Forte Web Designs - DFW Web Designer",
+    "description": "Professional web designer serving the Dallas-Fort Worth metroplex with custom websites, SEO, and digital marketing solutions",
+    "url": "https://fortewebdesigns.com/locations/dfw-web-designer",
+    "logo": "https://fortewebdesigns.com/images/home/logo2.png",
+    "telephone": "(817) 873-6655",
+    "email": "info@fortewebdesigns.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dallas-Fort Worth",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "AdministrativeArea",
+      "name": "Dallas-Fort Worth Metroplex",
+      "sameAs": "https://en.wikipedia.org/wiki/Dallas%E2%80%93Fort_Worth_metroplex"
+    },
+    "serviceType": [
+      "Web Design DFW",
+      "Website Development DFW", 
+      "SEO Services DFW",
+      "Digital Marketing DFW",
+      "Custom Website Design",
+      "Local SEO Services"
+    ],
+    "priceRange": "$200-$1200",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Design Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Website Design",
+            "description": "Professional website design tailored for DFW metroplex businesses"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Local SEO Services",
+            "description": "Search engine optimization to help DFW businesses dominate local search results"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "Digital Marketing",
+            "description": "Complete digital marketing solutions for Dallas-Fort Worth companies"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "25",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   return (
     <div className="relative">
+      {/* Schema markup for search engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(dfwBusinessSchema),
+        }}
+      />
+      
       <SectionBackgroundAnimation />
       
       {/* Hero Section */}

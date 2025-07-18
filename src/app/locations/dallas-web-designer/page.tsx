@@ -12,8 +12,84 @@ export const metadata: Metadata = {
 };
 
 export default function DallasWebDesigner() {
+  // Schema markup for Dallas-specific service
+  const dallasBusinessSchema = {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Forte Web Designs - Dallas Web Designer",
+    "description": "Professional web designer serving Dallas, TX with custom websites, SEO, and digital marketing solutions",
+    "url": "https://fortewebdesigns.com/locations/dallas-web-designer",
+    "logo": "https://fortewebdesigns.com/images/home/logo2.png",
+    "telephone": "(817) 873-6655",
+    "email": "info@fortewebdesigns.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dallas",
+      "addressRegion": "TX",
+      "addressCountry": "US"
+    },
+    "areaServed": {
+      "@type": "City",
+      "name": "Dallas",
+      "sameAs": "https://en.wikipedia.org/wiki/Dallas"
+    },
+    "serviceType": [
+      "Web Design Dallas",
+      "Website Development Dallas", 
+      "SEO Services Dallas",
+      "Digital Marketing Dallas",
+      "Custom Website Design"
+    ],
+    "priceRange": "$200-$1200",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Design Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Custom Website Design",
+            "description": "Professional website design tailored for Dallas businesses"
+          }
+        },
+        {
+          "@type": "Offer", 
+          "itemOffered": {
+            "@type": "Service",
+            "name": "SEO Services",
+            "description": "Search engine optimization to help Dallas businesses rank higher"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service", 
+            "name": "Digital Marketing",
+            "description": "Complete digital marketing solutions for Dallas companies"
+          }
+        }
+      ]
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5.0",
+      "reviewCount": "25",
+      "bestRating": "5",
+      "worstRating": "1"
+    }
+  };
+
   return (
     <div className="relative">
+      {/* Schema markup for search engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(dallasBusinessSchema),
+        }}
+      />
+      
       <SectionBackgroundAnimation />
       
       {/* Hero Section */}

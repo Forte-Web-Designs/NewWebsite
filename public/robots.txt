@@ -2,5 +2,32 @@
 User-agent: *
 Allow: /
 
+# Enhanced Local SEO Crawling Instructions
+# Allow crawling of location-specific pages
+Allow: /locations/*
+Allow: /services/*
+Allow: /industries/*
+Allow: /solutions/*
+Allow: /blog/*
+
+# Disallow sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
 # Sitemap location
-Sitemap: https://www.fortecompany.com/sitemap.xml
+Sitemap: https://fortewebdesigns.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
+
+# Local SEO specific directives
+# Allow Google and Bing to crawl location pages frequently
+User-agent: Googlebot
+Allow: /locations/*
+Crawl-delay: 0
+
+User-agent: Bingbot  
+Allow: /locations/*
+Crawl-delay: 1
