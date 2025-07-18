@@ -278,15 +278,21 @@ export default function Header() {
                 width="180px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/about" showIcon={true}>About</HeaderLink>
+                    <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
                   </div>
                 }
               />
             </nav>
 
-            {/* Desktop Right Side - Theme Toggle only */}
+            {/* Desktop Right Side - Theme Toggle and Contact Button */}
             <nav className="hidden md:flex items-center space-x-4">
               <ThemeToggle />
+              <Link
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors duration-200"
+              >
+                Contact Us
+              </Link>
             </nav>
 
             {/* Mobile Header */}
@@ -754,9 +760,9 @@ export default function Header() {
                     </div>
                   </MobileExpandableMenu>
 
-                  {/* About */}
+                  {/* About Us */}
                   <MobileExpandableMenu
-                    title="About"
+                    title="About Us"
                     isActive={pathname.startsWith('/about') || pathname.startsWith('/case-studies') || pathname.startsWith('/blog')}
                   >
                     <div className="pl-6 space-y-3">
