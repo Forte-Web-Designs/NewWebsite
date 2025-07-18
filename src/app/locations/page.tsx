@@ -47,7 +47,7 @@ const topLocations = [
     businesses: '32,000+',
     keyAreas: ['Downtown Fort Worth', 'Sundance Square', 'Cultural District', 'Stockyards'],
     marketInsight: 'Fort Worth customers research thoroughly and choose businesses that feel genuinely local.',
-    featured: true,
+    featured: false,
   },
   {
     city: 'Texas State',
@@ -62,7 +62,7 @@ const topLocations = [
     businesses: '180,000+',
     keyAreas: ['Dallas County', 'Tarrant County', 'Collin County', 'Denton County'],
     marketInsight: 'Texas customers expect local expertise but demand big-city performance.',
-    featured: true,
+    featured: false,
   },
   {
     city: 'Plano',
@@ -138,7 +138,7 @@ const topLocations = [
     businesses: '35,000+',
     keyAreas: ['Bricktown', 'Midtown', 'Downtown OKC', 'Stockyards City'],
     marketInsight: 'Oklahoma City customers value both professional expertise and genuine local connection.',
-    featured: false,
+    featured: true,
   },
   {
     city: 'Tulsa',
@@ -184,7 +184,7 @@ const topLocations = [
     businesses: '28,000+',
     keyAreas: ['Old Town', 'Nob Hill', 'Westside', 'Northeast Heights'],
     marketInsight: 'Albuquerque customers value authentic local character alongside professional service.',
-    featured: false,
+    featured: true,
   },
   {
     city: 'Santa Fe',
@@ -242,7 +242,7 @@ export default function LocationsPage() {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Forte Web Designs",
-    "description": "Professional web design services throughout Texas specializing in Dallas, Fort Worth, and DFW metro area",
+    "description": "Professional web design services throughout Texas, Oklahoma, and New Mexico specializing in Dallas, Fort Worth, Oklahoma City, and Albuquerque metro areas",
     "url": "https://fortewebdesigns.com",
     "logo": "https://fortewebdesigns.com/images/home/logo2.png",
     "image": "https://fortewebdesigns.com/images/home/logo2.png",
@@ -273,9 +273,34 @@ export default function LocationsPage() {
         "sameAs": "https://en.wikipedia.org/wiki/Fort_Worth,_Texas"
       },
       {
+        "@type": "City",
+        "name": "Oklahoma City",
+        "sameAs": "https://en.wikipedia.org/wiki/Oklahoma_City"
+      },
+      {
+        "@type": "City",
+        "name": "Albuquerque",
+        "sameAs": "https://en.wikipedia.org/wiki/Albuquerque,_New_Mexico"
+      },
+      {
         "@type": "AdministrativeArea",
         "name": "Dallas-Fort Worth Metroplex",
         "sameAs": "https://en.wikipedia.org/wiki/Dallas%E2%80%93Fort_Worth_metroplex"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Texas",
+        "sameAs": "https://en.wikipedia.org/wiki/Texas"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "Oklahoma",
+        "sameAs": "https://en.wikipedia.org/wiki/Oklahoma"
+      },
+      {
+        "@type": "AdministrativeArea",
+        "name": "New Mexico",
+        "sameAs": "https://en.wikipedia.org/wiki/New_Mexico"
       }
     ],
     "serviceType": [
@@ -327,7 +352,7 @@ export default function LocationsPage() {
                 Your Local Market, Your Custom Solution
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
-                Dallas businesses face corporate giants. Fort Worth values authenticity. Plano expects perfection. We build websites that win in your specific market – not generic solutions that work nowhere.
+                Dallas businesses face corporate giants. Oklahoma City competes with energy companies. Albuquerque needs authentic Southwest character. We build websites that win in your specific market – not generic solutions that work nowhere.
               </p>
             </div>
           </div>
@@ -341,7 +366,7 @@ export default function LocationsPage() {
                 Local Challenges, Custom Solutions
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Every Texas market has unique challenges that template websites can't solve. We build custom solutions that address your specific local business problems.
+                Every Southwest market has unique challenges that template websites can't solve. We build custom solutions that address your specific local business problems across Texas, Oklahoma, and New Mexico.
               </p>
             </div>
 
@@ -443,10 +468,10 @@ export default function LocationsPage() {
             <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-16">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Beyond Templates: Texas-Level Performance
+                  Beyond Templates: Southwest-Level Performance
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Competing in Texas means your website needs to be as tough as you are. No WordPress vulnerabilities, no bloated templates, no security headaches.
+                  Competing across Texas, Oklahoma, and New Mexico means your website needs to be as tough as you are. No WordPress vulnerabilities, no bloated templates, no security headaches.
                 </p>
               </div>
 
@@ -469,21 +494,21 @@ export default function LocationsPage() {
           </div>
         </section>
 
-        {/* Texas Market Coverage */}
+        {/* Southwest Market Coverage */}
         <section className="py-16 bg-gray-50 dark:bg-gray-900/50">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
-                Built for Texas Business
+                Built for Southwest Business
               </h2>
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
                 <div className="grid md:grid-cols-2 gap-8 items-center">
                   <div>
                     <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
-                      From Local to Metro-Wide
+                      From Local to Multi-State
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 mb-6">
-                      Whether you're a single-location business or expanding across the DFW metroplex, our custom-coded websites scale with your ambitions. No generic solutions – just websites built for your specific Texas market.
+                      Whether you're a single-location business or expanding across Texas, Oklahoma, and New Mexico, our custom-coded websites scale with your ambitions. No generic solutions – just websites built for your specific Southwest market.
                     </p>
                     <div className="grid grid-cols-2 gap-4 text-sm">
                       <div className="space-y-2">
@@ -529,7 +554,7 @@ export default function LocationsPage() {
                       <span className="text-4xl">🏆</span>
                     </div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">
-                      Custom-coded websites that win in competitive Texas markets
+                      Custom-coded websites that win in competitive Southwest markets
                     </p>
                   </div>
                 </div>
