@@ -13,140 +13,20 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
-    id: 'ai-tools-small-business-2025',
-    title: 'AI Tools Every Small Business Should Use in 2025 (Without Breaking the Bank)',
-    excerpt: 'Discover practical AI tools that can automate tasks, improve customer service, and boost productivity for small businesses. Real tools, real results, realistic budgets.',
+    id: 'why-every-small-business-needs-online-presence',
+    title: 'Why Every Small Business Needs an Online Presence (And How to Start Right)',
+    excerpt: 'Think you can survive without a website? Think your customers will just find you? In today\'s world, being invisible online means being invisible to your customers. Here\'s why that matters and what you can do about it.',
     author: 'Seth Forte',
-    date: '2025-07-15',
-    readTime: '7 min read',
-    category: 'Technology',
-    image: '/images/blog/ai-tools-small-business.webp',
-    tags: ['AI Tools', 'Small Business', 'Productivity', 'Automation'],
-    featured: true
-  },
-  {
-    id: 'local-seo-small-business-2025',
-    title: 'Local SEO for Small Businesses: The Complete 2025 Guide',
-    excerpt: 'Master local SEO to dominate "near me" searches and attract more local customers. Everything you need to know about Google My Business, local citations, and location-based optimization.',
-    author: 'Seth Forte',
-    date: '2025-07-14',
+    date: '2025-07-18',
     readTime: '8 min read',
-    category: 'SEO',
-    image: '/images/blog/local-seo-guide.webp',
-    tags: ['Local SEO', 'Google My Business', 'Small Business', 'Marketing'],
+    category: 'Business',
+    image: '/images/blog/online-presence-business.webp',
+    tags: ['Online Presence', 'Small Business', 'Digital Marketing', 'Website'],
     featured: true
-  },
-  {
-    id: 'website-speed-conversion-rates',
-    title: 'How Website Speed Impacts Your Conversion Rates (And Revenue)',
-    excerpt: 'A 1-second delay can cost you 7% of conversions. Learn how to optimize your website speed and turn more visitors into customers.',
-    author: 'Seth Forte',
-    date: '2025-07-12',
-    readTime: '6 min read',
-    category: 'Performance',
-    image: '/images/blog/website-speed.webp',
-    tags: ['Website Speed', 'Conversions', 'Performance', 'Revenue'],
-    featured: true
-  },
-  {
-    id: 'mobile-first-design-2025',
-    title: 'Mobile-First Design: Why Your Website Must Work Perfectly on Phones',
-    excerpt: 'Over 60% of searches happen on mobile. Discover why mobile-first design is critical for your business success and how to implement it.',
-    author: 'Seth Forte',
-    date: '2025-07-10',
-    readTime: '7 min read',
-    category: 'Design',
-    image: '/images/blog/mobile-first-design.webp',
-    tags: ['Mobile Design', 'User Experience', 'Responsive Design'],
-    featured: false
-  },
-  {
-    id: 'google-ads-vs-seo-small-business',
-    title: 'Google Ads vs SEO: Which Should Small Businesses Choose in 2025?',
-    excerpt: 'Confused about whether to invest in Google Ads or SEO? We break down the pros, cons, and costs to help you make the right decision for your business.',
-    author: 'Seth Forte',
-    date: '2025-07-08',
-    readTime: '9 min read',
-    category: 'Marketing',
-    image: '/images/blog/ads-vs-seo.webp',
-    tags: ['Google Ads', 'SEO', 'Marketing Strategy', 'ROI'],
-    featured: false
-  },
-  {
-    id: 'content-marketing-local-business',
-    title: 'Content Marketing That Actually Works for Local Businesses',
-    excerpt: 'Skip the fluff. Learn practical content marketing strategies that help local businesses attract customers and build authority in their communities.',
-    author: 'Seth Forte',
-    date: '2025-07-05',
-    readTime: '10 min read',
-    category: 'Content',
-    image: '/images/blog/content-marketing.webp',
-    tags: ['Content Marketing', 'Local Business', 'Brand Authority'],
-    featured: false
-  },
-  {
-    id: 'web-design-trends-2025',
-    title: '2025 Web Design Trends That Actually Convert Visitors',
-    excerpt: 'Forget trendy designs that look pretty but don\'t convert. These web design trends for 2025 are proven to turn more visitors into customers.',
-    author: 'Seth Forte',
-    date: '2025-07-03',
-    readTime: '8 min read',
-    category: 'Design',
-    image: '/images/blog/design-trends-2025.webp',
-    tags: ['Web Design', 'Trends', 'Conversions', 'User Experience'],
-    featured: false
-  },
-  {
-    id: 'small-business-website-mistakes',
-    title: '10 Website Mistakes That Are Costing Small Businesses Customers',
-    excerpt: 'These common website mistakes are turning potential customers away. Learn what to fix first to start getting more leads and sales from your website.',
-    author: 'Seth Forte',
-    date: '2025-07-01',
-    readTime: '12 min read',
-    category: 'Design',
-    image: '/images/blog/website-mistakes.webp',
-    tags: ['Website Optimization', 'Small Business', 'Conversions', 'UX'],
-    featured: false
-  },
-  {
-    id: 'social-media-marketing-local-business',
-    title: 'Social Media Marketing for Local Businesses: What Actually Works',
-    excerpt: 'Cut through the social media noise. Discover which platforms and strategies actually drive customers to local businesses in 2025.',
-    author: 'Seth Forte',
-    date: '2025-06-28',
-    readTime: '9 min read',
-    category: 'Marketing',
-    image: '/images/blog/social-media-local.webp',
-    tags: ['Social Media', 'Local Marketing', 'Facebook', 'Instagram'],
-    featured: false
-  },
-  {
-    id: 'google-my-business-optimization',
-    title: 'Google My Business Optimization: The Complete 2025 Checklist',
-    excerpt: 'Master your Google My Business profile to dominate local search results. A step-by-step guide to getting more customers through Google.',
-    author: 'Seth Forte',
-    date: '2025-06-25',
-    readTime: '11 min read',
-    category: 'SEO',
-    image: '/images/blog/google-my-business.webp',
-    tags: ['Google My Business', 'Local SEO', 'Google Maps', 'Reviews'],
-    featured: false
-  },
-  {
-    id: 'website-security-small-business',
-    title: 'Website Security for Small Businesses: Protect Your Online Presence',
-    excerpt: 'Don\'t let hackers destroy your business. Learn essential website security practices that every small business owner needs to know.',
-    author: 'Seth Forte',
-    date: '2025-06-22',
-    readTime: '8 min read',
-    category: 'Security',
-    image: '/images/blog/website-security.webp',
-    tags: ['Website Security', 'SSL', 'Backups', 'Small Business'],
-    featured: false
   }
 ];
 
-const categories = ['All', 'SEO', 'Design', 'Marketing', 'Performance', 'Content', 'Security'];
+const categories = ['All', 'Business'];
 
 export default function Blog() {
   const featuredPosts = blogPosts.filter(post => post.featured);
