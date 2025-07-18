@@ -610,7 +610,7 @@ export default function SeoDesignPage() {
               </div>
             </div>
           </div>
-          <PricingPage serviceType="seo" />
+          <PricingPage />
         </div>
       </section>
     </section>

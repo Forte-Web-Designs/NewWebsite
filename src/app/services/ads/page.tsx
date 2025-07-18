@@ -423,7 +423,7 @@ export default function GooglePPCAdsPage() {
               </p>
             </div>
           </div>
-          <PricingPage serviceType="ppc" />
+          <PricingPage />
         </div>
       </section>
       </div>

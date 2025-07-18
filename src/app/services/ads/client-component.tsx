@@ -273,7 +273,7 @@ export default function GooglePPCAdsClientComponent() {
               </p>
             </div>
           </div>
-          <PricingPage serviceType="ppc" />
+          <PricingPage />
         </div>
       </section>
     </section>

@@ -194,7 +194,7 @@ export default function ForteEcosystemPage() {
       </section>
 
       {/* Pricing Plans */}
-      <PricingPage showEcosystem={true} />
+      <PricingPage />
 
       {/* CTA Section */}
       <section className="py-12 sm:py-16 bg-gray-900 dark:bg-black">

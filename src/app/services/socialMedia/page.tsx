@@ -548,7 +548,7 @@ export default function SocialMediaPage() {
         </div>
 
         <div className="text-left">
-          <PricingPage serviceType="social" />
+          <PricingPage />
         </div>
       </section>
     </>

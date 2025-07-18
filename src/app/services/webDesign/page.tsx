@@ -498,7 +498,7 @@ export default function WebsiteDesignPage() {
               </p>
             </div>
           </div>
-          <PricingPage serviceType="website" />
+          <PricingPage />
         </div>
       </section>
       </div>
