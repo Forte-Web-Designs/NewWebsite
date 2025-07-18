@@ -1,5 +1,6 @@
 'use client';
 import { Dropdown } from '@/components/Dropdown';
+import { MultiLevelDropdown } from '@/components/MultiLevelDropdown';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
@@ -133,11 +134,38 @@ export default function Header() {
     { label: 'All Industries', href: '/industries' }
   ];
 
-  // Locations dropdown - Hierarchical structure
+  // Locations dropdown - Multi-level hierarchical structure
   const locationsDropdownItems = [
-    { label: 'Texas', href: '/locations/texas' },
-    { label: 'Dallas', href: '/locations/texas/dallas' },
-    { label: 'Fort Worth', href: '/locations/texas/fort-worth' },
+    {
+      label: 'Texas',
+      href: '/locations/texas',
+      children: [
+        { label: 'Dallas', href: '/locations/texas/dallas' },
+        { label: 'Fort Worth', href: '/locations/texas/fort-worth' },
+        { label: 'Plano', href: '/locations/texas/plano' },
+        { label: 'Frisco', href: '/locations/texas/frisco' },
+        { label: 'Arlington', href: '/locations/texas/arlington' },
+        { label: 'Irving', href: '/locations/texas/irving' }
+      ]
+    },
+    {
+      label: 'Oklahoma',
+      href: '/locations/oklahoma',
+      children: [
+        { label: 'Oklahoma City', href: '/locations/oklahoma/oklahoma-city' },
+        { label: 'Tulsa', href: '/locations/oklahoma/tulsa' },
+        { label: 'Norman', href: '/locations/oklahoma/norman' }
+      ]
+    },
+    {
+      label: 'New Mexico',
+      href: '/locations/new-mexico',
+      children: [
+        { label: 'Albuquerque', href: '/locations/new-mexico/albuquerque' },
+        { label: 'Santa Fe', href: '/locations/new-mexico/santa-fe' },
+        { label: 'Las Cruces', href: '/locations/new-mexico/las-cruces' }
+      ]
+    },
     { label: 'All Locations', href: '/locations' }
   ];
 
@@ -221,12 +249,12 @@ export default function Header() {
               />
 
               {/* Locations Dropdown */}
-              <Dropdown
+              <MultiLevelDropdown
                 items={locationsDropdownItems}
-                width="220px"
+                width="280px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/locations" showIcon={true}>Locations</HeaderLink>
+                    <HeaderLink href="/locations" showIcon={true}>Top Locations</HeaderLink>
                   </div>
                 }
               />
@@ -479,25 +507,230 @@ export default function Header() {
 
                   {/* Locations */}
                   <MobileExpandableMenu
-                    title="Locations"
+                    title="Top Locations"
                     isActive={pathname.startsWith('/locations')}
                   >
                     <div className="pl-6 space-y-3">
-                      {locationsDropdownItems.map((item) => (
-                        <div key={item.href} className="flex items-center justify-between w-full">
-                          <Link
-                            href={item.href}
-                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
-                              }`}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {item.label}
-                          </Link>
-                          {pathname === item.href && (
-                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
-                          )}
+                      {/* Texas */}
+                      <MobileExpandableMenu
+                        title="Texas"
+                        isActive={pathname.startsWith('/locations/texas')}
+                      >
+                        <div className="pl-6 space-y-3">
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/texas"
+                              className={`text-xl block py-2 ${pathname === '/locations/texas' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Texas Overview
+                            </Link>
+                            {pathname === '/locations/texas' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/texas/dallas"
+                              className={`text-xl block py-2 ${pathname === '/locations/texas/dallas' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Dallas
+                            </Link>
+                            {pathname === '/locations/texas/dallas' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/texas/fort-worth"
+                              className={`text-xl block py-2 ${pathname === '/locations/texas/fort-worth' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Fort Worth
+                            </Link>
+                            {pathname === '/locations/texas/fort-worth' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/texas/plano"
+                              className={`text-xl block py-2 ${pathname === '/locations/texas/plano' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Plano
+                            </Link>
+                            {pathname === '/locations/texas/plano' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/texas/frisco"
+                              className={`text-xl block py-2 ${pathname === '/locations/texas/frisco' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Frisco
+                            </Link>
+                            {pathname === '/locations/texas/frisco' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/texas/arlington"
+                              className={`text-xl block py-2 ${pathname === '/locations/texas/arlington' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Arlington
+                            </Link>
+                            {pathname === '/locations/texas/arlington' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/texas/irving"
+                              className={`text-xl block py-2 ${pathname === '/locations/texas/irving' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Irving
+                            </Link>
+                            {pathname === '/locations/texas/irving' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
                         </div>
-                      ))}
+                      </MobileExpandableMenu>
+                      
+                      {/* Oklahoma */}
+                      <MobileExpandableMenu
+                        title="Oklahoma"
+                        isActive={pathname.startsWith('/locations/oklahoma')}
+                      >
+                        <div className="pl-6 space-y-3">
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/oklahoma"
+                              className={`text-xl block py-2 ${pathname === '/locations/oklahoma' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Oklahoma Overview
+                            </Link>
+                            {pathname === '/locations/oklahoma' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/oklahoma/oklahoma-city"
+                              className={`text-xl block py-2 ${pathname === '/locations/oklahoma/oklahoma-city' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Oklahoma City
+                            </Link>
+                            {pathname === '/locations/oklahoma/oklahoma-city' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/oklahoma/tulsa"
+                              className={`text-xl block py-2 ${pathname === '/locations/oklahoma/tulsa' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Tulsa
+                            </Link>
+                            {pathname === '/locations/oklahoma/tulsa' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/oklahoma/norman"
+                              className={`text-xl block py-2 ${pathname === '/locations/oklahoma/norman' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Norman
+                            </Link>
+                            {pathname === '/locations/oklahoma/norman' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                        </div>
+                      </MobileExpandableMenu>
+                      
+                      {/* New Mexico */}
+                      <MobileExpandableMenu
+                        title="New Mexico"
+                        isActive={pathname.startsWith('/locations/new-mexico')}
+                      >
+                        <div className="pl-6 space-y-3">
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/new-mexico"
+                              className={`text-xl block py-2 ${pathname === '/locations/new-mexico' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              New Mexico Overview
+                            </Link>
+                            {pathname === '/locations/new-mexico' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/new-mexico/albuquerque"
+                              className={`text-xl block py-2 ${pathname === '/locations/new-mexico/albuquerque' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Albuquerque
+                            </Link>
+                            {pathname === '/locations/new-mexico/albuquerque' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/new-mexico/santa-fe"
+                              className={`text-xl block py-2 ${pathname === '/locations/new-mexico/santa-fe' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Santa Fe
+                            </Link>
+                            {pathname === '/locations/new-mexico/santa-fe' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/locations/new-mexico/las-cruces"
+                              className={`text-xl block py-2 ${pathname === '/locations/new-mexico/las-cruces' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Las Cruces
+                            </Link>
+                            {pathname === '/locations/new-mexico/las-cruces' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                        </div>
+                      </MobileExpandableMenu>
+                      
+                      {/* All Locations */}
+                      <div className="flex items-center justify-between w-full">
+                        <Link
+                          href="/locations"
+                          className={`text-2xl block py-2 ${pathname === '/locations' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                          onClick={() => setMobileMenuOpen(false)}
+                        >
+                          All Locations
+                        </Link>
+                        {pathname === '/locations' && (
+                          <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                        )}
+                      </div>
                     </div>
                   </MobileExpandableMenu>
 
