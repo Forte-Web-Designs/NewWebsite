@@ -26,22 +26,37 @@ const newMexicoCities = [
   {
     name: 'Albuquerque',
     slug: 'albuquerque',
-    description: 'Largest city with diverse economy and tech sector growth',
-    population: '562,000+',
+    population: '562K+',
+    featured: true,
+    description: 'High desert, high tech, high competition. Netflix shoots here, but your business needs to stand out among 38,000+ competitors vying for attention.',
+    problem: 'Tech companies and film productions dominate digital marketing, overshadowing local businesses.',
+    solution: 'Desert-fast websites that load instantly and rank higher than template-based competitors.',
+    insight: 'Albuquerque customers appreciate authenticity over corporate polish. Your website has 4 seconds to prove you\'re local.',
+    businesses: '38,000+',
     keyIndustries: ['Technology', 'Healthcare', 'Aerospace', 'Manufacturing']
   },
   {
     name: 'Santa Fe',
     slug: 'santa-fe',
-    description: 'Historic capital city with thriving arts and tourism',
-    population: '87,000+',
+    population: '87K+',
+    featured: true,
+    description: 'The City Different attracts 2+ million visitors annually. Your website needs to capture both tourists and locals without losing either.',
+    problem: 'Most Santa Fe businesses target either tourists or locals, missing massive revenue from the other market.',
+    solution: 'Culturally-intelligent websites that adapt messaging for tourists vs. residents automatically.',
+    insight: 'Santa Fe customers expect artistic excellence and cultural sensitivity. Your website must honor both.',
+    businesses: '6,200+',
     keyIndustries: ['Tourism', 'Arts', 'Government', 'Healthcare']
   },
   {
     name: 'Las Cruces',
     slug: 'las-cruces',
-    description: 'Growing university town with agriculture and research',
-    population: '111,000+',
+    population: '111K+',
+    featured: false,
+    description: 'Growing university town with agricultural roots. NMSU brings 14,000+ students who research everything online before buying.',
+    problem: 'Las Cruces businesses struggle to balance student-friendly pricing with professional service messaging.',
+    solution: 'Smart websites that showcase value for students while demonstrating quality for professionals.',
+    insight: 'Las Cruces customers comparison shop extensively. Your website must clearly communicate unique value.',
+    businesses: '7,500+',
     keyIndustries: ['Education', 'Agriculture', 'Research', 'Manufacturing']
   }
 ];
@@ -86,40 +101,65 @@ export default function NewMexicoPage() {
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
               New Mexico Cities We Serve
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-1 lg:grid-cols-2 gap-8">
               {newMexicoCities.map((city) => (
-                <div key={city.slug} className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-lg transition-shadow">
-                  <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                    {city.name}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <div key={city.slug} className={`bg-gray-50 dark:bg-gray-800 rounded-lg p-6 hover:shadow-lg transition-shadow relative ${city.featured ? 'ring-2 ring-blue-500' : ''}`}>
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                      {city.name}
+                    </h3>
+                    {city.featured && (
+                      <span className="bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                        Featured
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-2">
+                    {city.population} people
+                  </p>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
                     {city.description}
                   </p>
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
-                      Population: {city.population}
-                    </p>
-                  </div>
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">
-                      Key Industries:
-                    </p>
-                    <div className="flex flex-wrap gap-2">
-                      {city.keyIndustries.map((industry, index) => (
-                        <span
-                          key={index}
-                          className="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded dark:bg-blue-900 dark:text-blue-300"
-                        >
-                          {industry}
-                        </span>
-                      ))}
+                  
+                  <div className="space-y-3 mb-4">
+                    <div>
+                      <p className="text-sm font-semibold text-red-600 dark:text-red-400 mb-1">
+                        The Problem:
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {city.problem}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-green-600 dark:text-green-400 mb-1">
+                        Our Solution:
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {city.solution}
+                      </p>
+                    </div>
+                    <div>
+                      <p className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-1">
+                        Market Insight:
+                      </p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400">
+                        {city.insight}
+                      </p>
                     </div>
                   </div>
+
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="text-sm text-gray-500 dark:text-gray-400">
+                      <p>{city.businesses} businesses</p>
+                      <p>Local expertise</p>
+                    </div>
+                  </div>
+
                   <Link
                     href={`/locations/new-mexico/${city.slug}`}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
+                    className="inline-flex items-center bg-blue-600 text-white px-4 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
                   >
-                    Learn More
+                    See {city.name} Solutions
                     <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
