@@ -64,7 +64,7 @@ export default function SocialMediaManagement() {
         <h1 className="font-roboto font-medium text-2xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight tracking-tight text-center text-black dark:text-secondary-1000 max-w-4xl mx-auto">
           The Forte Method™: Our Process, Your Results
         </h1>
-        <p className="font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-center text-[#626262] dark:text-primary-1050 max-w-3xl mx-auto px-4">
+        <p className="font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto px-4">
           At Forte Web Designs, we don't believe in overcomplicating things. No
           fluff. No gimmicks. Just a clear, proven system that delivers fast,
           secure, and high-converting websites—every time. Here's what makes our
@@ -78,7 +78,7 @@ export default function SocialMediaManagement() {
           <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF]">
             Speed Comes First
           </h2>
-          <p className="max-w-3xl font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
+          <p className="max-w-3xl font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 px-4">
             Your site's speed and user experience directly affect your traffic,
             SEO, and conversion rates. That's why we build sites that load in
             under a second, deliver lightning-fast speed, and give your visitors an
@@ -100,7 +100,7 @@ export default function SocialMediaManagement() {
                 Faster load times
               </p>
               <Icon name="equals" className="w-3 h-2 sm:w-4 sm:h-3" />
-              <p className="text-sm sm:text-base md:text-lg leading-tight font-normal font-inter dark:text-primary-1050 mt-2">
+              <p className="text-sm sm:text-base md:text-lg leading-tight font-normal font-inter dark:text-gray-300 mt-2">
                 higher conversions.
               </p>
             </div>
@@ -118,7 +118,7 @@ export default function SocialMediaManagement() {
                 Clean code
               </p>
               <Icon name="equals" className="w-3 h-2 sm:w-4 sm:h-3" />
-              <p className="text-sm sm:text-base md:text-lg leading-tight font-normal font-inter dark:text-primary-1050 mt-2">
+              <p className="text-sm sm:text-base md:text-lg leading-tight font-normal font-inter dark:text-gray-300 mt-2">
                 Better search rankings.
               </p>
             </div>
@@ -136,7 +136,7 @@ export default function SocialMediaManagement() {
                 Better UX
               </p>
               <Icon name="equals" className="w-3 h-2 sm:w-4 sm:h-3" />
-              <p className="text-sm sm:text-base md:text-lg leading-tight font-normal font-inter dark:text-primary-1050 mt-2">
+              <p className="text-sm sm:text-base md:text-lg leading-tight font-normal font-inter dark:text-gray-300 mt-2">
                 Customers who stick around.
               </p>
             </div>
@@ -189,7 +189,7 @@ export default function SocialMediaManagement() {
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-inter dark:text-secondary-1050">
               Design That Fits:
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-[#B4B4B4] text-[#626262]">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
               Every website we build is fully custom-coded from the ground up,
               no templates.
             </p>
@@ -199,7 +199,7 @@ export default function SocialMediaManagement() {
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-inter dark:text-secondary-1050">
               Rock-Solid Security:
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-[#B4B4B4] text-[#626262]">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
               Our static sites don't use databases—so there's nothing to hack.
             </p>
           </div>
@@ -208,7 +208,7 @@ export default function SocialMediaManagement() {
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-inter dark:text-secondary-1050">
               SEO-Ready:
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-[#B4B4B4] text-[#626262]">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
               Titles, tags, structure—all dialed in to help you rank.
             </p>
           </div>
@@ -217,7 +217,7 @@ export default function SocialMediaManagement() {
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-inter dark:text-secondary-1050">
               Unlimited Edits:
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-[#B4B4B4] text-[#626262]">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
               Need a tweak? We've got you, no ticket system required.
             </p>
           </div>
@@ -226,7 +226,7 @@ export default function SocialMediaManagement() {
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-inter dark:text-secondary-1050">
               Lifetime Support:
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-[#B4B4B4] text-[#626262]">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
               You get us—not a robot and U.S. based.
             </p>
           </div>
@@ -235,7 +235,7 @@ export default function SocialMediaManagement() {
             <h3 className="text-base sm:text-lg md:text-xl lg:text-2xl font-medium font-inter dark:text-secondary-1050">
               Satisfaction Guarantee:
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-[#B4B4B4] text-[#626262]">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
               If we cant design something you love, we'll make it right. Period.
             </p>
           </div>
@@ -248,7 +248,7 @@ export default function SocialMediaManagement() {
           <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF] mb-4">
             The Forte Method™: Step-by-Step Process
           </h2>
-          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
+          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 px-4">
             Our proprietary 5-step system ensures every site we launch is fast, secure, and conversion-optimized with real client examples.
           </p>
         </div>
@@ -299,7 +299,7 @@ export default function SocialMediaManagement() {
           <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF] mb-4">
             What to Expect: Your Timeline
           </h2>
-          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
+          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 px-4">
             Clear milestones and realistic timeframes - no surprises, no delays.
           </p>
         </div>
@@ -399,7 +399,7 @@ export default function SocialMediaManagement() {
           <h2 className="font-inter-display font-medium text-xl sm:text-2xl md:text-3xl lg:text-4xl leading-tight text-black dark:text-[#FFFFFF] mb-4">
             The Forte Method™ in Action
           </h2>
-          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-[#626262] dark:text-primary-1050 px-4">
+          <p className="max-w-3xl mx-auto font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 px-4">
             See how our systematic approach delivers consistent results across different industries.
           </p>
         </div>

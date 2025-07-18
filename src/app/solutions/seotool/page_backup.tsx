@@ -366,7 +366,7 @@ function SiteCheckUpContent() {
           <h1 className="text-[26px] max-w-[794px] font-medium font-roboto mt-5 w-[90%] max-[768px]:leading-[40px] dark:text-secondary-1000 md:text-center">
             What Is Forte Care™?
           </h1>
-          <p className="text-[18px] font-normal font-inter text-primary-1400 dark:text-primary-1050 lg:w-[794px] md:w-[740px] w-[90%] mt-5 md:text-center">
+          <p className="text-[18px] font-normal font-inter text-gray-700 dark:text-gray-300 lg:w-[794px] md:w-[740px] w-[90%] mt-5 md:text-center">
             Forte Care™ is our premium, ongoing support and optimization
             service— built to keep your website running fast, secure, and fully
             dialed-in long after launch. Whether you need content updates,
@@ -383,7 +383,7 @@ function SiteCheckUpContent() {
                 <h2 className="font-inter-display font-medium text-[26px] leading-[30px] text-black dark:text-[#FFFFFF]">
                   Your free checkup starts here!
                 </h2>
-                <p className="mt-4 font-inter font-normal text-[16px] leading-[20px] text-[#626262] dark:text-primary-1050">
+                <p className="mt-4 font-inter font-normal text-[16px] leading-[20px] text-[#626262] dark:text-gray-300">
                   We'll scan your site for speed, SEO, accessibility, and more.
                 </p>
               </div>
@@ -419,7 +419,7 @@ function SiteCheckUpContent() {
                   <h2 className="font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal align-middle sm:text-center text-black dark:text-[#FFFFFF] mt-4">
                     Your free checkup starts here!
                   </h2>
-                  <p className="md:mt-6  px-[197px]  font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center align-middle text-[#626262] dark:text-primary-1050">
+                  <p className="md:mt-6  px-[197px]  font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center align-middle text-[#626262] dark:text-gray-300">
                     We’ll scan your site for speed, SEO, accessibility, and
                     more. Most audits finish in under a minute—even for larger
                     sites.
@@ -494,7 +494,7 @@ function SiteCheckUpContent() {
                     <h5 className="font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-black dark:text-[#FFFFFF]">
                       {data.heading}
                     </h5>
-                    <p className="mt-3 font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-primary-1400 dark:text-[#B4B4B4]">
+                    <p className="mt-3 font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-gray-700 dark:text-[#B4B4B4]">
                       {data.content}
                     </p>
                   </div>
@@ -514,7 +514,7 @@ function SiteCheckUpContent() {
                   <h5 className="font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-black dark:text-[#FFFFFF]">
                     Links
                   </h5>
-                  <p className="mt-3 font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-primary-1400 dark:text-[#B4B4B4]">
+                  <p className="mt-3 font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-gray-700 dark:text-[#B4B4B4]">
                     Are your internal & external links clean, functional, and SEO, friendly?
                   </p>
                 </div>
@@ -553,7 +553,7 @@ function SiteCheckUpContent() {
                   <h5 className="font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-black dark:text-[#FFFFFF]">
                     Images
                   </h5>
-                  <p className="mt-3 font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-primary-1400 dark:text-[#B4B4B4]">
+                  <p className="mt-3 font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-gray-700 dark:text-[#B4B4B4]">
                     Are your images optimized for performance and accessibility?
                   </p>
                 </div>
@@ -574,7 +574,7 @@ function SiteCheckUpContent() {
                     <h5 className="font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-black dark:text-[#FFFFFF]">
                       {item.heading}
                     </h5>
-                    <p className="mt-3 font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-primary-1400 dark:text-[#B4B4B4]">
+                    <p className="mt-3 font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal align-middle text-gray-700 dark:text-[#B4B4B4]">
                       {item.content}
                     </p>
                   </div>

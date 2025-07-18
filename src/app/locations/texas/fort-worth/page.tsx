@@ -100,7 +100,7 @@ export default function FortWorthPage() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
                 Fort Worth Web Design That Honors Cowtown Character
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
                 Fort Worth customers value authenticity over corporate polish. We build websites that capture Cowtown's unique character while delivering modern functionality that competes with Big D neighbors.
               </p>
             </div>

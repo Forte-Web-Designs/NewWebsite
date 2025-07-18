@@ -192,7 +192,7 @@ export default function Blog() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
               Grow Your Business Online
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-3xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
               Practical tips, proven strategies, and expert insights to help your business succeed online
             </p>
           </div>

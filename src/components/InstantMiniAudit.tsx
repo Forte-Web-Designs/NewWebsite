@@ -302,7 +302,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       {/* Compact Instructions Banner - Only show if no results */}
       {!results && !autoRunUrl && (
         <div className="text-center mb-3">
-          <div className="text-xs text-white/80 bg-white/10 rounded-lg p-2 border border-white/20">
+          <div className="text-xs text-gray-700 dark:text-white/80 bg-gray-100 dark:bg-white/10 rounded-lg p-2 border border-gray-300 dark:border-white/20">
             👇 <strong>Enter your website below:</strong>
           </div>
         </div>
@@ -311,7 +311,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       <form ref={formRef} onSubmit={handleSubmit}>
         {/* Enhanced Input Field */}
         <div className="relative mb-3">
-          <label htmlFor="website-url" className="block text-white text-sm font-medium mb-1 text-center">
+          <label htmlFor="website-url" className="block text-gray-700 dark:text-white text-sm font-medium mb-1 text-center">
             📍 Your Website URL:
           </label>
           <div className="relative">
@@ -332,7 +332,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               type="search"
               value={websiteUrl}
               onChange={(e) => setWebsiteUrl(e.target.value)}
-              className="block bg-white/15 backdrop-blur-sm w-full py-3 px-12 text-white placeholder:text-white/80 text-base rounded-xl border-2 border-white/40 focus:outline-none focus:border-blue-300 focus:ring-2 focus:ring-blue-300/50 transition-all duration-300 hover:border-white/60 hover:bg-white/20 shadow-lg"
+              className="block bg-white/90 dark:bg-white/15 backdrop-blur-sm w-full py-3 px-12 text-gray-900 dark:text-white placeholder:text-gray-500 dark:placeholder:text-white/80 text-base rounded-xl border-2 border-gray-300 dark:border-white/40 focus:outline-none focus:border-blue-500 dark:focus:border-blue-300 focus:ring-2 focus:ring-blue-500/50 dark:focus:ring-blue-300/50 transition-all duration-300 hover:border-gray-400 dark:hover:border-white/60 hover:bg-white dark:hover:bg-white/20 shadow-lg"
               placeholder="yoursite.com"
               disabled={isLoading}
               required
@@ -340,7 +340,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
             <button
               type="submit"
               disabled={isLoading || !websiteUrl.trim()}
-              className="absolute inset-y-0 end-0 flex items-center pe-4 text-white/70 hover:text-white transition-colors duration-300 disabled:opacity-50"
+              className="absolute inset-y-0 end-0 flex items-center pe-4 text-gray-500 dark:text-white/70 hover:text-gray-700 dark:hover:text-white transition-colors duration-300 disabled:opacity-50"
               aria-label="Analyze website"
             >
               {isLoading ? (
@@ -389,7 +389,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               )}
             </button>
             {websiteUrl.trim() && (
-              <div className="text-xs text-white/70 mt-2 px-2">
+              <div className="text-xs text-gray-600 dark:text-white/70 mt-2 px-2">
                 ⚡ Results in 30 seconds • 100% Free • No email required
               </div>
             )}
@@ -399,29 +399,29 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
 
       {/* Enhanced Results Display with Sales Psychology */}
       {results && (
-        <div className="mt-4 p-4 bg-gradient-to-br from-white/15 to-white/5 dark:from-white/10 dark:to-white/5 rounded-xl border border-white/30 backdrop-blur-sm shadow-xl">
+        <div className="mt-4 p-4 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-white/15 dark:to-white/5 rounded-xl border border-gray-200 dark:border-white/30 backdrop-blur-sm shadow-xl">
           {results.error ? (
             <div className="text-center">
-              <div className="text-red-400 text-sm mb-3 p-3 bg-red-500/20 rounded-lg border border-red-400/30">
+              <div className="text-red-600 dark:text-red-400 text-sm mb-3 p-3 bg-red-100 dark:bg-red-500/20 rounded-lg border border-red-300 dark:border-red-400/30">
                 {results.error}
               </div>
               <button
                 onClick={() => setResults(null)}
-                className="text-white/80 hover:text-white text-sm underline"
+                className="text-gray-600 dark:text-white/80 hover:text-gray-800 dark:hover:text-white text-sm underline"
               >
                 Try again
               </button>
             </div>
           ) : results.isLoading ? (
             <div className="text-center py-4 px-2">
-              <div className="animate-pulse text-white/90">
+              <div className="animate-pulse text-gray-800 dark:text-white/90">
                 <div className="text-base sm:text-lg mb-3 font-medium">🔍 Analyzing {results.url}...</div>
-                <div className="text-xs sm:text-sm text-white/70 mb-4">Checking SSL, speed, mobile compatibility, and SEO basics</div>
+                <div className="text-xs sm:text-sm text-gray-600 dark:text-white/70 mb-4">Checking SSL, speed, mobile compatibility, and SEO basics</div>
                 <div className="flex justify-center mb-4">
                   <div className="w-6 h-6 sm:w-8 sm:h-8 border-2 sm:border-3 border-blue-400 border-t-transparent rounded-full animate-spin"></div>
                 </div>
                 {/* Mobile-optimized progress steps */}
-                <div className="text-xs text-white/60 space-y-1">
+                <div className="text-xs text-gray-500 dark:text-white/60 space-y-1">
                   <div>⚡ Testing page speed...</div>
                   <div>📱 Checking mobile compatibility...</div>
                   <div>🔒 Verifying SSL certificate...</div>
@@ -432,34 +432,34 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
           ) : (
             <div className="space-y-4">
               <div className="text-center mb-4">
-                <div className="text-white font-semibold text-lg mb-1">✅ Mini-Audit Complete!</div>
-                <div className="text-blue-300 text-sm break-all bg-white/10 rounded-lg p-2 border border-white/20">{results.url}</div>
+                <div className="text-gray-800 dark:text-white font-semibold text-lg mb-1">✅ Mini-Audit Complete!</div>
+                <div className="text-blue-600 dark:text-blue-300 text-sm break-all bg-blue-50 dark:bg-white/10 rounded-lg p-2 border border-blue-200 dark:border-white/20">{results.url}</div>
               </div>
               
               <div className="grid grid-cols-2 gap-2 text-sm">
-                <div className="flex items-center justify-between bg-white/10 rounded-lg p-2 border border-white/20">
-                  <span className="text-white/90 font-medium text-xs">🔒 SSL:</span>
-                  <span className={results.ssl ? 'text-green-400 font-semibold text-xs' : 'text-red-400 font-semibold text-xs'}>
+                <div className="flex items-center justify-between bg-gray-50 dark:bg-white/10 rounded-lg p-2 border border-gray-200 dark:border-white/20">
+                  <span className="text-gray-700 dark:text-white/90 font-medium text-xs">🔒 SSL:</span>
+                  <span className={results.ssl ? 'text-green-600 dark:text-green-400 font-semibold text-xs' : 'text-red-600 dark:text-red-400 font-semibold text-xs'}>
                     {results.ssl ? '✅' : '❌'}
                   </span>
                 </div>
                 
-                <div className="flex items-center justify-between bg-white/10 rounded-lg p-2 border border-white/20">
-                  <span className="text-white/90 font-medium text-xs">⚡ Speed:</span>
-                  <span className={results.loadTime < 3 ? 'text-green-400 font-semibold text-xs' : results.loadTime < 5 ? 'text-yellow-400 font-semibold text-xs' : 'text-red-400 font-semibold text-xs'}>
+                <div className="flex items-center justify-between bg-gray-50 dark:bg-white/10 rounded-lg p-2 border border-gray-200 dark:border-white/20">
+                  <span className="text-gray-700 dark:text-white/90 font-medium text-xs">⚡ Speed:</span>
+                  <span className={results.loadTime < 3 ? 'text-green-600 dark:text-green-400 font-semibold text-xs' : results.loadTime < 5 ? 'text-yellow-600 dark:text-yellow-400 font-semibold text-xs' : 'text-red-600 dark:text-red-400 font-semibold text-xs'}>
                     {results.loadTime}s
                   </span>
                 </div>
                 
-                <div className="flex items-center justify-between bg-white/10 rounded-lg p-2 border border-white/20">
-                  <span className="text-white/90 font-medium text-xs">📱 Mobile:</span>
-                  <span className={results.mobileFriendly ? 'text-green-400 font-semibold text-xs' : 'text-red-400 font-semibold text-xs'}>
+                <div className="flex items-center justify-between bg-gray-50 dark:bg-white/10 rounded-lg p-2 border border-gray-200 dark:border-white/20">
+                  <span className="text-gray-700 dark:text-white/90 font-medium text-xs">📱 Mobile:</span>
+                  <span className={results.mobileFriendly ? 'text-green-600 dark:text-green-400 font-semibold text-xs' : 'text-red-600 dark:text-red-400 font-semibold text-xs'}>
                     {results.mobileFriendly ? 'Yes' : 'No'}
                   </span>
                 </div>
                 
-                <div className="flex items-center justify-between bg-white/10 rounded-lg p-2 border border-white/20">
-                  <span className="text-white/90 font-medium text-xs">🎯 SEO:</span>
+                <div className="flex items-center justify-between bg-gray-50 dark:bg-white/10 rounded-lg p-2 border border-gray-200 dark:border-white/20">
+                  <span className="text-gray-700 dark:text-white/90 font-medium text-xs">🎯 SEO:</span>
                   <span className={`${getScoreColor(results.seoScore)} font-semibold text-xs`}>
                     {getScoreIcon(results.seoScore)} {results.seoScore}/10
                   </span>
@@ -467,24 +467,24 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
               </div>
               
               {/* Enhanced CTA Section with Specific Issue Identification */}
-              <div className="text-center pt-3 border-t border-white/30">
+              <div className="text-center pt-3 border-t border-gray-200 dark:border-white/30">
                 {/* Special congratulatory message for perfect scores */}
                 {results.seoScore === 10 ? (
-                  <div className="mb-3 p-4 bg-gradient-to-r from-purple-600/30 to-pink-600/30 rounded-xl border-2 border-purple-400/50 shadow-2xl">
+                  <div className="mb-3 p-4 bg-gradient-to-r from-purple-100 to-pink-100 dark:from-purple-600/30 dark:to-pink-600/30 rounded-xl border-2 border-purple-300 dark:border-purple-400/50 shadow-2xl">
                     <div className="text-xl mb-2">🎉🏆🎉</div>
-                    <div className="text-white font-bold text-lg mb-2">
+                    <div className="text-gray-800 dark:text-white font-bold text-lg mb-2">
                       CONGRATULATIONS!
                     </div>
-                    <div className="text-white/95 text-sm mb-3 leading-relaxed">
+                    <div className="text-gray-700 dark:text-white/95 text-sm mb-3 leading-relaxed">
                       Perfect 10/10 score! Your website is crushing it with fast speeds, security, mobile optimization, and SEO.
                     </div>
-                    <div className="text-white/90 text-xs mb-3">
+                    <div className="text-gray-600 dark:text-white/90 text-xs mb-3">
                       <span className="font-semibold">Fun fact:</span> Only 0.1% achieve this score! 🌟
                     </div>
                   </div>
                 ) : (
-                  <div className="mb-3 p-3 bg-gradient-to-r from-orange-600/20 to-red-600/20 rounded-lg border border-orange-400/40">
-                  <div className="text-white font-medium text-sm mb-2">
+                  <div className="mb-3 p-3 bg-gradient-to-r from-orange-100 to-red-100 dark:from-orange-600/20 dark:to-red-600/20 rounded-lg border border-orange-300 dark:border-orange-400/40">
+                  <div className="text-gray-800 dark:text-white font-medium text-sm mb-2">
                     {results.seoScore >= 8 
                       ? "🚀 High Performer Alert!" 
                       : results.seoScore >= 6
@@ -492,7 +492,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                       : "🚨 Issues Found"
                     }
                   </div>
-                    <div className="text-white/90 text-xs mb-2">
+                    <div className="text-gray-700 dark:text-white/90 text-xs mb-2">
                       {results.seoScore >= 8 
                         ? "Your site performs well, but Google changes its algorithm 500+ times yearly. High performers lose 15-30% traffic without maintenance."
                         : results.seoScore >= 6
@@ -535,13 +535,13 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                   )}
                 </button>
                 
-                <div className="text-xs text-white/70 mt-2 space-y-1">
+                <div className="text-xs text-gray-600 dark:text-white/70 mt-2 space-y-1">
                   {isNavigating ? (
-                    <div className="text-green-300 space-y-1">
+                    <div className="text-green-600 dark:text-green-300 space-y-1">
                       <div className="font-semibold text-xs">
                         🚀 <strong>Starting analysis...</strong>
                       </div>
-                      <div className="sm:hidden text-orange-200 bg-orange-500/20 rounded-lg p-2 border border-orange-400/30 text-xs">
+                      <div className="sm:hidden text-orange-700 dark:text-orange-200 bg-orange-100 dark:bg-orange-500/20 rounded-lg p-2 border border-orange-300 dark:border-orange-400/30 text-xs">
                         📱 <strong>Mobile:</strong> Press "Run Audit" when page loads!
                       </div>
                     </div>
@@ -553,9 +553,9 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                 </div>
                 
                 {/* Optional Next Step CTA - More compact */}
-                <div className="mt-4 pt-3 border-t border-white/30">
-                  <div className="bg-gradient-to-r from-green-600/20 to-blue-600/20 rounded-xl p-3 border border-green-400/30">
-                    <h4 className="text-white font-semibold text-xs mb-2 text-center">
+                <div className="mt-4 pt-3 border-t border-gray-200 dark:border-white/30">
+                  <div className="bg-gradient-to-r from-green-100 to-blue-100 dark:from-green-600/20 dark:to-blue-600/20 rounded-xl p-3 border border-green-300 dark:border-green-400/30">
+                    <h4 className="text-gray-800 dark:text-white font-semibold text-xs mb-2 text-center">
                       🔧 Want us to fix this?
                     </h4>
                     <div className="text-center">
@@ -570,13 +570,13 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                 </div>
                 
                 {/* Try Another Website Option */}
-                <div className="mt-3 pt-2 border-t border-white/20">
+                <div className="mt-3 pt-2 border-t border-gray-200 dark:border-white/20">
                   <button
                     onClick={() => {
                       setResults(null);
                       setWebsiteUrl("");
                     }}
-                    className="text-white/80 hover:text-white text-xs underline transition-colors duration-300 cursor-pointer"
+                    className="text-gray-600 dark:text-white/80 hover:text-gray-800 dark:hover:text-white text-xs underline transition-colors duration-300 cursor-pointer"
                     data-clickable
                   >
                     🔄 Try a different website

@@ -89,7 +89,7 @@ export default function DallasPage() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
                 Dallas Web Design That Dominates Big D
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
                 In a city of 45,000+ businesses, your website either dominates search results or gets buried on page 10. We build custom-coded websites that outperform template competitors in Dallas's most competitive market.
               </p>
             </div>

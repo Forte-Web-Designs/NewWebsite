@@ -45,7 +45,7 @@ export default function GooglePPCAdsClientComponent() {
       <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight max-w-4xl dark:text-secondary-1000 text-center mb-4 sm:mb-6">
         Google Ads That Actually Get You Customers
       </h1>
-      <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 max-w-3xl text-center leading-relaxed mb-12 sm:mb-16 md:mb-20 lg:mb-24">
+      <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 max-w-3xl text-center leading-relaxed mb-12 sm:mb-16 md:mb-20 lg:mb-24">
         Want to get in front of customers who are ready to buy? Our Google Ads
         get you found fast, so you can focus on serving great customers instead
         of waiting for them to find you.
@@ -56,7 +56,7 @@ export default function GooglePPCAdsClientComponent() {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter dark:text-secondary-1000 leading-tight mb-4 sm:mb-6">
             Why Our Google Ads Actually Work
           </h2>
-          <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 max-w-3xl mx-auto leading-relaxed">
             We don't just throw money at Google and hope for the best. We create
             smart, targeted campaigns that turn clicks into customers while
             keeping your budget happy.
@@ -69,7 +69,7 @@ export default function GooglePPCAdsClientComponent() {
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
                 1. We Get to Know Your Business
               </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
                 First things first - we learn about your goals, your customers,
                 and what success looks like for you. Then we build a strategy that
                 actually fits your budget.
@@ -79,7 +79,7 @@ export default function GooglePPCAdsClientComponent() {
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
                 2. Smart Targeting That Works
               </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
                 We find the keywords your customers are actually using and target
                 the right people at the right time. No wasted clicks on people who
                 aren't ready to buy.
@@ -89,7 +89,7 @@ export default function GooglePPCAdsClientComponent() {
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
                 3. Ads That Actually Convert
               </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-primary-1400 dark:text-primary-1050 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed">
                 We write clear, compelling ads that speak to your customers'
                 needs and get them to take action. No fluff, just results.
               </p>
@@ -98,7 +98,7 @@ export default function GooglePPCAdsClientComponent() {
               <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
                 4. Constant Optimization
               </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-primary-1400 dark:text-primary-1050 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed">
                 We watch your campaigns like a hawk, testing and tweaking to make
                 sure every dollar works harder. You'll see exactly what's working
                 and what's not.
@@ -138,7 +138,7 @@ export default function GooglePPCAdsClientComponent() {
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 mb-2 sm:mb-3">
               Right Audience, Right Time
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-primary-1050 text-primary-1400">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-gray-300 text-gray-700">
               We target people actively searching for what you offer, when
               they're ready to buy. No wasted ad spend on tire-kickers.
             </p>
@@ -165,7 +165,7 @@ export default function GooglePPCAdsClientComponent() {
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 mb-2 sm:mb-3">
               ROI That Makes Sense
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-primary-1050 text-primary-1400">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-gray-300 text-gray-700">
               Every campaign is built to turn ad spend into actual revenue. We
               track what matters and optimize for real business results.
             </p>
@@ -192,7 +192,7 @@ export default function GooglePPCAdsClientComponent() {
             <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 mb-2 sm:mb-3">
               Always Getting Better
             </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-primary-1050 text-primary-1400">
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-gray-300 text-gray-700">
               We're constantly testing, learning, and improving your campaigns.
               What worked last month might not work next month - we stay on top
               of it all.
@@ -248,7 +248,7 @@ export default function GooglePPCAdsClientComponent() {
                 className={`overflow-hidden transition-all duration-300 ${expandedIndex === index ? "max-h-[500px] mt-3 sm:mt-4" : "max-h-0"
                   }`}
               >
-                <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed">
+                <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
                   {faq.answer}
                 </p>
               </div>

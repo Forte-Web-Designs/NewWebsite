@@ -49,7 +49,7 @@ export default function ServicesPage() {
               </h1>
             </div>
             <div>
-              <p className="font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-center text-[#626262] dark:text-[#B4B4B4]">
+              <p className="font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-center text-gray-700 dark:text-gray-300">
                 {data[0].description}
               </p>
             </div>
@@ -104,7 +104,7 @@ export default function ServicesPage() {
               {data.slice(1).map((item, index) => (
                 <div key={index} className='grid gap-[13px] p-6 rounded-lg border border-[#DCDCDC] bg-white shadow-sm dark:border-[#323232] dark:bg-[#141414]'>
                   <h3 className="font-inter font-medium sm:text-[26px] text-[18px] leading-[24px] sm:leading-[32px] tracking-normal align-middle dark:text-[#EEEEEE] text-black">{item.title}</h3>
-                  <p className="text-[#626262] dark:text-[#B4B4B4] font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] tracking-normal align-middle">
+                  <p className="text-gray-700 dark:text-gray-300 font-inter font-normal text-[14px] sm:text-[18px] leading-[18px] sm:leading-[22px] tracking-normal align-middle">
                     {item.description}
                   </p>
                 </div>

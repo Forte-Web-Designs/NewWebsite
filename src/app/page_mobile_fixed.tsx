@@ -221,7 +221,7 @@ export default function Home() {
                     Your Business Deserves a Website That <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Actually Works for You</span>
                   </h1>
                   
-                  <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-[#626262] dark:text-white px-4 max-w-2xl mx-auto">
+                  <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-gray-700 dark:text-white px-4 max-w-2xl mx-auto">
                     Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
                   </p>
                   
@@ -361,7 +361,7 @@ export default function Home() {
                       </SimpleScrollReveal>
                       
                       <SimpleScrollReveal direction="up" delay={300}>
-                        <p className="font-display font-medium text-[20px] leading-[28px] tracking-[0%] text-[#626262] dark:text-white max-w-lg">
+                        <p className="font-display font-medium text-[20px] leading-[28px] tracking-[0%] text-gray-700 dark:text-white max-w-lg">
                           Your website should be working as hard as you are. We build sites that look amazing and actually bring in customers. Simple as that.
                         </p>
                       </SimpleScrollReveal>
@@ -623,7 +623,7 @@ export default function Home() {
             <h4 className="font-roboto font-medium text-[32px] sm:text-[62px] leading-[36px] sm:leading-[62px] tracking-[-1.24px] text-center text-[#000000] dark:text-[#F1F1EF] mb-6">
               Ready to See What's Possible?
             </h4>
-            <p className="text-[#626262] font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-[#B4B4B4] mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-700 dark:text-gray-300 font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center mb-8 max-w-2xl mx-auto">
               Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
             </p>
             <div className="flex justify-center">

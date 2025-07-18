@@ -75,7 +75,7 @@ export default function NewMexicoPage() {
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
                 Built for Southwest Business
               </h1>
-              <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
+              <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
                 Every New Mexico market has unique challenges. From Albuquerque's tech scene to Santa Fe's artistic heritage, we build websites that honor your local culture while driving results.
               </p>
             </div>

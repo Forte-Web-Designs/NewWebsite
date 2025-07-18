@@ -134,7 +134,7 @@ export const TestimonialSlider = () => {
               </div>
 
               <div className="md:mt-8 mt-5 sm:ml-8 ml-5">
-                <div className="dark:text-gray-300 text-primary-1400 sm:text-sm text-[12px]">
+                <div className="text-gray-700 dark:text-gray-300 sm:text-sm text-[12px]">
                   {t.author} • {t.role}
                 </div>
               </div>

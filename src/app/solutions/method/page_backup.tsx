@@ -53,7 +53,7 @@ export default function SocialMediaManagement() {
         <h1 className=" md:max-w-[794px] font-roboto font-medium text-[32px] sm:text-[62px] sm:leading-[62px] leading-[40px] tracking-[-1.24px] sm:text-center text-start align-middle text-black w-full max-[767px]:leading-[40px] dark:text-secondary-1000 md:text-center">
           The Forte Method™: Our Process, Your Results
         </h1>
-        <p className=" dark:text-primary-1050 lg:w-[794px] md:w-[740px] w-[94%] font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262]">
+        <p className=" dark:text-gray-300 lg:w-[794px] md:w-[740px] w-[94%] font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262]">
           At Forte Web Designs, we don’t believe in overcomplicating things. No
           fluff. No gimmicks. Just a clear, proven system that delivers fast,
           secure, and high-converting websites—every time. Here’s what makes our
@@ -65,7 +65,7 @@ export default function SocialMediaManagement() {
           <h2 className="font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal align-middle sm:text-center text-black dark:text-[#FFFFFF]">
             Performance Comes First
           </h2>
-          <p className=" max-w-[794px]  font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center align-middle text-[#626262] dark:text-primary-1050">
+          <p className=" max-w-[794px]  font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center align-middle text-[#626262] dark:text-gray-300">
             Your site’s speed and user experience directly affect your traffic,
             SEO, and conversion rates. That’s why we build sites that load in
             under a second, crush PageSpeed scores, and give your visitors an
@@ -96,7 +96,7 @@ export default function SocialMediaManagement() {
                 Faster load times
               </p>
               <Icon name="equals" className="w-4 h-3" />
-              <p className="sm:text-[18px] text-[14px] sm:leading-[32px] leading-[22px] font-normal font-inter dark:text-primary-1050 mt-1">
+              <p className="sm:text-[18px] text-[14px] sm:leading-[32px] leading-[22px] font-normal font-inter dark:text-gray-300 mt-1">
                 higher conversions.
               </p>
             </div>
@@ -124,7 +124,7 @@ export default function SocialMediaManagement() {
                 Clean code
               </p>
               <Icon name="equals" className="w-4 h-3" />
-              <p className="sm:text-[18px] text-[14px] sm:leading-[32px] leading-[22px] font-normal font-inter dark:text-primary-1050 mt-1">
+              <p className="sm:text-[18px] text-[14px] sm:leading-[32px] leading-[22px] font-normal font-inter dark:text-gray-300 mt-1">
                 Stronger SEO performance.
               </p>
             </div>
@@ -152,7 +152,7 @@ export default function SocialMediaManagement() {
                 Better UX
               </p>
               <Icon name="equals" className="w-4 h-3" />
-              <p className="sm:text-[18px] text-[14px] sm:leading-[32px] leading-[22px] font-normal font-inter dark:text-primary-1050 mt-1">
+              <p className="sm:text-[18px] text-[14px] sm:leading-[32px] leading-[22px] font-normal font-inter dark:text-gray-300 mt-1">
                 Customers who stick around.
               </p>
             </div>

@@ -103,7 +103,7 @@ export default function FortWorthWebDesigner() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
               Professional Web Designer Serving Fort Worth, TX
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-primary-1050 text-primary-1400 leading-relaxed max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
               Custom website design and development for Fort Worth businesses. Get found, get calls, get results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">

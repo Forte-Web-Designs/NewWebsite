@@ -203,7 +203,7 @@ export default function SolutionsPage() {
                   : "max-h-0"
                 }`}
             >
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 text-primary-1250 leading-relaxed">
+              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-primary-1250 leading-relaxed">
                 {faq.answer}
               </p>
             </div>

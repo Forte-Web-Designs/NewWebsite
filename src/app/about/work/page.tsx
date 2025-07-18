@@ -26,7 +26,7 @@ export default function SolutionsPage() {
             <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
               Real Results for Real Businesses
             </h1>
-            <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-primary-1050 max-w-4xl mx-auto leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 max-w-4xl mx-auto leading-relaxed">
               From local service providers to growing online brands, we build
               websites that load fast, rank well, and drive real results. Every
               site is hand-crafted for performance, security, and tailored to your
@@ -142,7 +142,7 @@ export default function SolutionsPage() {
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-medium font-inter dark:text-secondary-1000 leading-tight mb-4 sm:mb-6">
               Behind Every Project Is a Business that Grew
             </h2>
-          <p className="md:text-[18px] text-[14px] max-[767px]:leading-4 font-normal font-inter text-primary-1400 dark:text-primary-1050 mt-5">
+          <p className="md:text-[18px] text-[14px] max-[767px]:leading-4 font-normal font-inter text-gray-700 dark:text-gray-300 mt-5">
             We don’t believe in one-size-fits-all websites. Every site we build
             is hand-coded for speed, strategy, and long-term success. Your
             business deserves a web presence that’s not just beautiful—but built
