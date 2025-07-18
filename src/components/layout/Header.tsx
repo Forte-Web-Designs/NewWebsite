@@ -133,11 +133,11 @@ export default function Header() {
     { label: 'All Industries', href: '/industries' }
   ];
 
-  // Locations dropdown - Texas cities
+  // Locations dropdown - Hierarchical structure
   const locationsDropdownItems = [
-    { label: 'Dallas Web Designer', href: '/locations/dallas-web-designer' },
-    { label: 'Fort Worth Web Designer', href: '/locations/fort-worth-web-designer' },
-    { label: 'DFW Web Designer', href: '/locations/dfw-web-designer' },
+    { label: 'Texas', href: '/locations/texas' },
+    { label: 'Dallas', href: '/locations/texas/dallas' },
+    { label: 'Fort Worth', href: '/locations/texas/fort-worth' },
     { label: 'All Locations', href: '/locations' }
   ];
 

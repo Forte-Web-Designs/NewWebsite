@@ -44,9 +44,3 @@ export default function GoogleSearchConsole() {
     </>
   );
 }
-      <meta name="coverage" content="Dallas-Fort Worth Metroplex" />
-      <meta name="distribution" content="local" />
-      <meta name="rating" content="general" />
-    </Head>
-  );
-}

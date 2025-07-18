@@ -1,4 +1,4 @@
-import { Organization, LocalBusiness, WebSite } from 'schema-dts';
+import React from 'react';
 
 interface LocalSEOSchemaProps {
   businessName: string;
@@ -42,7 +42,7 @@ export default function LocalSEOSchema({
   ]
 }: LocalSEOSchemaProps) {
   
-  const organizationSchema: Organization = {
+  const organizationSchema = {
     "@type": "Organization",
     "@id": `${website}/#organization`,
     name: businessName,
@@ -87,7 +87,7 @@ export default function LocalSEOSchema({
     }
   };
 
-  const localBusinessSchema: LocalBusiness = {
+  const localBusinessSchema = {
     "@type": "LocalBusiness",
     "@id": `${website}/#localbusiness`,
     name: businessName,
@@ -187,7 +187,7 @@ export default function LocalSEOSchema({
     ]
   };
 
-  const websiteSchema: WebSite = {
+  const websiteSchema = {
     "@type": "WebSite",
     "@id": `${website}/#website`,
     name: businessName,
