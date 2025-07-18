@@ -23,7 +23,7 @@ const blogPosts = [
 
       <p>Here's the truth: if your business isn't online, to most people, it doesn't exist. And in 2025, being invisible is the fastest way to fall behind.</p>
 
-      <h2>Do I really need a online presence?</h2>
+      <h2>Do I really need an online presence?</h2>
 
       <p>Flip the question. When you search for a business, what are you hoping to find?</p>
 
@@ -35,7 +35,7 @@ const blogPosts = [
 
       <p>Now ask yourself: are you showing up that way?</p>
 
-      <p>Your website, of example, isn't just digital real estate. It's your handshake. Your storefront. Your best pitch... always ready 24/7.</p>
+      <p>Your website, for example, isn't just digital real estate. It's your handshake. Your storefront. Your best pitch... always ready 24/7.</p>
 
       <h2>So what actually counts as an "online presence"?</h2>
 
@@ -108,7 +108,7 @@ const blogPosts = [
         <li>Get listed in places where people already search</li>
       </ul>
 
-      <p>You don't have to have a masters in interning degree to do this.</p>
+      <p>You don't have to have a masters in marketing degree to do this.</p>
 
       <p>You started your business to do what you're great at, so don't try to master everything. Just:</p>
 
@@ -260,13 +260,14 @@ export default async function BlogPost({ params }: BlogPostPageProps) {
           <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
             <div 
               className="prose prose-lg dark:prose-invert max-w-none 
-                prose-headings:text-gray-900 dark:prose-headings:text-white prose-headings:font-semibold prose-headings:mb-6 prose-headings:mt-8
-                prose-h2:text-2xl prose-h2:mb-4 prose-h2:mt-10 prose-h2:font-bold
-                prose-h3:text-xl prose-h3:mb-3 prose-h3:mt-8 prose-h3:font-semibold
-                prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:mb-6 prose-p:leading-relaxed prose-p:text-lg
-                prose-ul:mb-6 prose-ul:mt-4 prose-li:mb-2 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:leading-relaxed
+                prose-headings:text-gray-900 dark:prose-headings:text-white prose-headings:font-semibold prose-headings:mb-8 prose-headings:mt-12
+                prose-h2:text-2xl prose-h2:mb-6 prose-h2:mt-16 prose-h2:font-bold prose-h2:border-b prose-h2:border-gray-200 dark:prose-h2:border-gray-700 prose-h2:pb-4
+                prose-h3:text-xl prose-h3:mb-4 prose-h3:mt-12 prose-h3:font-semibold
+                prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:mb-8 prose-p:leading-relaxed prose-p:text-lg
+                prose-ul:mb-8 prose-ul:mt-6 prose-li:mb-3 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:leading-relaxed prose-li:text-lg
                 prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:font-medium
-                prose-strong:text-gray-900 dark:prose-strong:text-white prose-strong:font-semibold"
+                prose-strong:text-gray-900 dark:prose-strong:text-white prose-strong:font-semibold
+                [&>p:first-child]:mt-0"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>
