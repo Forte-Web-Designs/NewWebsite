@@ -160,8 +160,12 @@ const faqData = [
     answer: 'We offer flexible monthly plans (12-month commitment, then month-to-month) or one-time payment options. Monthly plans include Forte Care™ support, hosting, and unlimited updates. One-time payments start at $2,500-$4,300 with optional maintenance plans.'
   },
   {
+    question: 'Can I pay a one-time fee for my website instead of monthly?',
+    answer: 'Absolutely! You can choose between monthly plans or a one-time payment. Our 5-page custom website is $2,500 one-time. Our 10-page site is $4,300 one-time. You own the site fully and can add support or hosting as needed. This is perfect for businesses that prefer to pay once and own their website outright.'
+  },
+  {
     question: 'What\'s included in Forte Care™?',
-    answer: 'Forte Care™ includes unlimited content updates, security monitoring, speed optimization, monthly reports, technical support, and regular backups. It ensures your website stays fast, secure, and optimized for growth.'
+    answer: 'Forte Care™ includes unlimited content updates, security monitoring, speed optimization, monthly reports, technical support, and regular backups. It ensures your website stays fast, secure, and optimized for growth. Note: Forte Care™ is included in all monthly plans. For one-time sites, it\'s available as an optional maintenance plan.'
   },
   {
     question: 'What is the Forte Ecosystem™?',
@@ -432,65 +436,58 @@ function AddOnServicesGrid({ isMonthly }: { isMonthly: boolean }) {
 // Bundled plans section
 function BundledPlansSection({ isMonthly }: { isMonthly: boolean }) {
   return (
-    <div className="mb-16">
-      <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-        Bundled Plans - Save More
-      </h3>
-      <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-        Get everything you need to dominate your market with our bundled packages. Save money while getting the complete Forte Ecosystem™.
-      </p>
-      
-      <div className="grid md:grid-cols-3 gap-8">
-        {bundledPlans.map((plan, index) => (
-          <div key={plan.id} className={`bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 ${
-            plan.isPopular ? 'border-blue-500 relative' : 'border-gray-200 dark:border-gray-700'
-          }`}>
-            {plan.isPopular && (
-              <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                  Most Popular
-                </div>
-              </div>
-            )}
-            
-            <div className="text-center mb-6">
-              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">{plan.name}</h4>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">{plan.description}</p>
-              
-              <div className="mb-4">
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
-                  {isMonthly ? plan.monthlyPrice : plan.oneTimePrice}
-                  <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">
-                    {isMonthly ? '/month' : 'one-time'}
-                  </span>
-                </div>
-                <div className="text-sm text-gray-500 dark:text-gray-400 line-through">
-                  {isMonthly ? plan.originalMonthlyPrice : plan.originalOneTimePrice}
-                </div>
-                <div className="text-sm text-green-600 dark:text-green-400 font-semibold">
-                  Save {plan.savings}
-                </div>
+    <div className="grid md:grid-cols-3 gap-8">
+      {bundledPlans.map((plan, index) => (
+        <div key={plan.id} className={`bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 ${
+          plan.isPopular ? 'border-blue-500 relative' : 'border-gray-200 dark:border-gray-700'
+        }`}>
+          {plan.isPopular && (
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+              <div className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                Most Popular
               </div>
             </div>
-            
-            <div className="mb-8">
-              <h5 className="font-semibold text-gray-900 dark:text-white mb-3">Includes:</h5>
-              <ul className="space-y-2">
-                {plan.includes.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start gap-2">
-                    <span className="text-green-500 mt-1">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300 text-sm">{item}</span>
-                  </li>
-                ))}
-              </ul>
+          )}
+          
+          <div className="text-center mb-6">
+            <div className="flex items-center justify-center gap-2 mb-2">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white">{plan.name}</h4>
+              <div className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 px-2 py-1 rounded-full text-xs font-semibold">
+                Save {plan.savings}
+              </div>
             </div>
+            <p className="text-gray-600 dark:text-gray-400 mb-4">{plan.description}</p>
             
-            <Link href="/contact" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
-              {plan.ctaText}
-            </Link>
+            <div className="mb-4">
+              <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+                {isMonthly ? plan.monthlyPrice : plan.oneTimePrice}
+                <span className="text-sm text-gray-500 dark:text-gray-400 ml-1">
+                  {isMonthly ? '/month' : 'one-time'}
+                </span>
+              </div>
+              <div className="text-sm text-gray-500 dark:text-gray-400 line-through">
+                {isMonthly ? plan.originalMonthlyPrice : plan.originalOneTimePrice}
+              </div>
+            </div>
           </div>
-        ))}
-      </div>
+          
+          <div className="mb-8">
+            <h5 className="font-semibold text-gray-900 dark:text-white mb-3">Includes:</h5>
+            <ul className="space-y-2">
+              {plan.includes.map((item, itemIndex) => (
+                <li key={itemIndex} className="flex items-start gap-2">
+                  <span className="text-green-500 mt-1">✓</span>
+                  <span className="text-gray-700 dark:text-gray-300 text-sm">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          
+          <Link href="/contact" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+            {plan.ctaText}
+          </Link>
+        </div>
+      ))}
     </div>
   );
 }
@@ -546,6 +543,12 @@ export function PricingPage() {
               Choose your foundation plan, then add services as your business grows. Every Forte™ website comes with Forte Care™ included.
             </p>
             
+            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-3xl mx-auto mb-8 border border-blue-200 dark:border-blue-700">
+              <p className="text-sm text-blue-800 dark:text-blue-200">
+                <strong>Note:</strong> Forte Care™ is included in all monthly plans. For one-time sites, it's available as an optional maintenance plan.
+              </p>
+            </div>
+            
             {/* Pricing Toggle */}
             <PricingToggle isMonthly={isMonthly} onToggle={setIsMonthly} />
           </div>
@@ -557,6 +560,133 @@ export function PricingPage() {
             <ComparisonTable isMonthly={isMonthly} />
           </div>
         </SimpleScrollReveal>
+
+        {/* One-Time Pricing Table - Only show when one-time is selected */}
+        {!isMonthly && (
+          <SimpleScrollReveal direction="up" delay={500}>
+            <div className="mb-16">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                  💳 One-Time Website Options (Own Your Site Outright)
+                </h3>
+                <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-12 max-w-3xl mx-auto">
+                  Prefer to pay once and own your website? We offer flat-rate one-time builds with no ongoing commitments.
+                </p>
+                
+                <div className="overflow-x-auto">
+                  <table className="w-full max-w-4xl mx-auto">
+                    <thead>
+                      <tr className="border-b-2 border-gray-200 dark:border-gray-700">
+                        <th className="text-left py-4 px-6 font-bold text-gray-900 dark:text-white text-lg">Website Package</th>
+                        <th className="text-center py-4 px-6 font-bold text-blue-600 dark:text-blue-400 text-lg">One-Time Price</th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
+                      <tr className="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+                        <td className="py-6 px-6">
+                          <div>
+                            <div className="font-semibold text-gray-900 dark:text-white text-lg">5-Page Custom Website</div>
+                            <div className="text-gray-600 dark:text-gray-400 text-sm mt-1">Perfect for small businesses and startups</div>
+                          </div>
+                        </td>
+                        <td className="py-6 px-6 text-center">
+                          <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">$2,500</div>
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+                        <td className="py-6 px-6">
+                          <div>
+                            <div className="font-semibold text-gray-900 dark:text-white text-lg">10-Page Custom Website</div>
+                            <div className="text-gray-600 dark:text-gray-400 text-sm mt-1">Ideal for established businesses with more content</div>
+                          </div>
+                        </td>
+                        <td className="py-6 px-6 text-center">
+                          <div className="text-3xl font-bold text-blue-600 dark:text-blue-400">$4,300</div>
+                        </td>
+                      </tr>
+                      <tr className="hover:bg-gray-50 dark:hover:bg-gray-700/50">
+                        <td className="py-6 px-6">
+                          <div>
+                            <div className="font-semibold text-gray-900 dark:text-white text-lg">Custom / Large Websites</div>
+                            <div className="text-gray-600 dark:text-gray-400 text-sm mt-1">Enterprise solutions with complex requirements</div>
+                          </div>
+                        </td>
+                        <td className="py-6 px-6 text-center">
+                          <div className="text-2xl font-bold text-gray-700 dark:text-gray-300">Custom Quote</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                
+                <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
+                  <p className="text-center text-gray-700 dark:text-gray-300">
+                    <strong>Note:</strong> Forte Care™ and hosting can be added as optional services for one-time websites.
+                  </p>
+                </div>
+                
+                <div className="mt-8 text-center">
+                  <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                    Get Your One-Time Quote
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        )}
+
+        {/* One-Time Pricing Table - Only show when One-Time is selected */}
+        {!isMonthly && (
+          <SimpleScrollReveal direction="up" delay={500}>
+            <div className="mb-16 bg-purple-50 dark:bg-purple-900/20 rounded-2xl p-8 border border-purple-200 dark:border-purple-700">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                💳 One-Time Website Options (Own Your Site Outright)
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-8 max-w-3xl mx-auto">
+                Prefer to pay once and own your website? We offer flat-rate one-time builds:
+              </p>
+              
+              <div className="overflow-x-auto">
+                <table className="w-full max-w-2xl mx-auto bg-white dark:bg-gray-800 rounded-lg shadow-md">
+                  <thead>
+                    <tr className="border-b border-gray-200 dark:border-gray-700">
+                      <th className="text-left py-4 px-6 font-semibold text-gray-900 dark:text-white">Website</th>
+                      <th className="text-right py-4 px-6 font-semibold text-gray-900 dark:text-white">One-Time Price</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-4 px-6 text-gray-700 dark:text-gray-300">5-Page Custom Website</td>
+                      <td className="py-4 px-6 text-right text-xl font-bold text-blue-600 dark:text-blue-400">$2,500</td>
+                    </tr>
+                    <tr className="border-b border-gray-100 dark:border-gray-800">
+                      <td className="py-4 px-6 text-gray-700 dark:text-gray-300">10-Page Custom Website</td>
+                      <td className="py-4 px-6 text-right text-xl font-bold text-blue-600 dark:text-blue-400">$4,300</td>
+                    </tr>
+                    <tr>
+                      <td className="py-4 px-6 text-gray-700 dark:text-gray-300">Custom / Large Websites</td>
+                      <td className="py-4 px-6 text-right text-lg font-semibold text-purple-600 dark:text-purple-400">
+                        <Link href="/contact" className="hover:underline">Custom Quote</Link>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              
+              <div className="text-center mt-6 p-4 bg-white dark:bg-gray-800 rounded-lg max-w-2xl mx-auto">
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <strong>Note:</strong> Forte Care™ and hosting can be added as optional services for one-time websites.
+                </p>
+              </div>
+              
+              <div className="text-center mt-6">
+                <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                  Get One-Time Pricing Quote
+                </Link>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        )}
 
         {/* Forte Ecosystem Timeline */}
         <SimpleScrollReveal direction="up" delay={600}>
@@ -572,7 +702,19 @@ export function PricingPage() {
 
         {/* Bundled Plans */}
         <SimpleScrollReveal direction="up" delay={1000}>
-          <BundledPlansSection isMonthly={isMonthly} />
+          <div className="mb-16">
+            {/* Bundle Section Header */}
+            <div className="text-center mb-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                💰 Money-Saving Bundle Packages
+              </h3>
+              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                Combine services and save big! Each bundle is designed to meet you where you're at — whether you're launching, scaling, or dominating your local market.
+              </p>
+            </div>
+            
+            <BundledPlansSection isMonthly={isMonthly} />
+          </div>
         </SimpleScrollReveal>
 
         {/* FAQ Section */}
