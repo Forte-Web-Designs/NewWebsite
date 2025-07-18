@@ -133,6 +133,14 @@ export default function Header() {
     { label: 'All Industries', href: '/industries' }
   ];
 
+  // Locations dropdown - Texas cities
+  const locationsDropdownItems = [
+    { label: 'Dallas Web Designer', href: '/locations/dallas-web-designer' },
+    { label: 'Fort Worth Web Designer', href: '/locations/fort-worth-web-designer' },
+    { label: 'DFW Web Designer', href: '/locations/dfw-web-designer' },
+    { label: 'All Locations', href: '/locations' }
+  ];
+
   // About Us dropdown (renamed from Company)
   const aboutDropdownItems = [
     { label: 'About Us', href: '/about' },
@@ -208,6 +216,17 @@ export default function Header() {
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
                     <HeaderLink href="/industries" showIcon={true}>Industries</HeaderLink>
+                  </div>
+                }
+              />
+
+              {/* Locations Dropdown */}
+              <Dropdown
+                items={locationsDropdownItems}
+                width="220px"
+                trigger={
+                  <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                    <HeaderLink href="/locations" showIcon={true}>Locations</HeaderLink>
                   </div>
                 }
               />
@@ -441,6 +460,30 @@ export default function Header() {
                   >
                     <div className="pl-6 space-y-3">
                       {industriesDropdownItems.map((item) => (
+                        <div key={item.href} className="flex items-center justify-between w-full">
+                          <Link
+                            href={item.href}
+                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                              }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                          {pathname === item.href && (
+                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </MobileExpandableMenu>
+
+                  {/* Locations */}
+                  <MobileExpandableMenu
+                    title="Locations"
+                    isActive={pathname.startsWith('/locations')}
+                  >
+                    <div className="pl-6 space-y-3">
+                      {locationsDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center justify-between w-full">
                           <Link
                             href={item.href}
