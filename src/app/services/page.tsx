@@ -9,7 +9,7 @@ import { useState } from 'react';
 const coreServices = [
   {
     id: "websites",
-    title: "Forte Foundation™ Websites",
+    title: "Website Design",
     desc: "Hand-coded websites that work as hard as you do. No templates, no cookie-cutters - just custom-built digital powerhouses that turn visitors into paying customers while you sleep.",
     features: [
       "Custom coded for speed & SEO dominance",
@@ -28,7 +28,7 @@ const coreServices = [
   },
   {
     id: "seo",
-    title: "Forte SEO™ Services",
+    title: "SEO Services",
     desc: "Get found by customers who are actively searching for what you sell. Our SEO doesn't just improve rankings - it drives qualified leads to your door every single day.",
     features: [
       "Local & national SEO dominance",
@@ -47,7 +47,7 @@ const coreServices = [
   },
   {
     id: "ppc",
-    title: "Forte PPC™ Advertising",
+    title: "PPC Advertising",
     desc: "Google Ads campaigns that actually make you money. Stop throwing cash at keywords that don't convert - get campaigns optimized for your bottom line, not just clicks.",
     features: [
       "Strategic campaign setup & optimization",
@@ -65,22 +65,41 @@ const coreServices = [
     }
   },
   {
-    id: "support",
-    title: "Forte Care™ Support",
-    desc: "24/7 monitoring, unlimited updates, and continuous optimization. Your website's personal bodyguard.",
+    id: "social",
+    title: "Social Media Management",
+    desc: "Stop posting into the void. Our social media strategies build real relationships that convert followers into loyal customers. Every post, every story, every interaction designed to grow your bottom line.",
     features: [
-      "24/7 site monitoring",
-      "Unlimited content updates",
-      "Security & backup management",
-      "Performance optimization"
+      "Platform-specific content strategy",
+      "Professional content creation & design",
+      "Community management & engagement",
+      "Performance analytics & optimization"
     ],
-    pricing: "Included with websites",
-    linkText: "Protect My Investment",
-    href: "/forte-care",
+    pricing: "Starting at $500/month",
+    linkText: "Build My Community",
+    href: "/services/socialMedia",
     caseStudy: {
-      client: "Bella's Boutique", 
-      result: "Zero downtime for 18 months",
-      icon: "👗"
+      client: "Local Fitness Studio",
+      result: "3x more class bookings from social",
+      icon: "💪"
+    }
+  },
+  {
+    id: "audit",
+    title: "Free Website Audit",
+    desc: "Discover exactly what's costing you customers with our comprehensive website analysis. Get a detailed report showing every issue holding your site back from peak performance.",
+    features: [
+      "Complete SEO analysis",
+      "Speed & performance testing",
+      "Mobile responsiveness check",
+      "Conversion optimization review"
+    ],
+    pricing: "100% Free",
+    linkText: "Get My Free Audit",
+    href: "/checkup",
+    caseStudy: {
+      client: "Local Contractor",
+      result: "Found 12 critical issues costing leads",
+      icon: "🔍"
     }
   }
 ];
@@ -101,10 +120,10 @@ export default function ServicePage() {
                 <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">Complete Digital Solutions</span>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight mb-4 sm:mb-6">
-                Your Digital Growth Toolkit
+                Complete Digital Marketing Solutions
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
-                Stop juggling multiple vendors and scattered strategies. Get everything you need to dominate your market with our integrated suite of proven digital marketing solutions. One team, complete growth, real results.
+                From stunning websites to powerful SEO, strategic advertising to social media management - get everything you need to dominate your market. One team, comprehensive solutions, guaranteed results.
               </p>
             </div>
           </div>
@@ -126,7 +145,7 @@ export default function ServicePage() {
                       : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
                   }`}
                 >
-                  {service.title.split('™')[0]}™
+                  {service.title}
                 </button>
               ))}
             </div>
@@ -245,31 +264,31 @@ export default function ServicePage() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-3xl">📱</span>
+                  <span className="text-3xl">🛡️</span>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    Social Media Management
+                    Forte Care™ Support
                   </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Content that builds relationships and drives sales, not just vanity metrics.
+                  24/7 monitoring, unlimited updates, and continuous optimization. Your website's personal bodyguard.
                 </p>
-                <Link href="/services/socialMedia" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
+                <Link href="/forte-care" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
                   Learn More →
                 </Link>
               </div>
 
               <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                 <div className="flex items-center gap-4 mb-4">
-                  <span className="text-3xl">🔍</span>
+                  <span className="text-3xl">🏢</span>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    Free Website Audit
+                    Enterprise Solutions
                   </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Discover exactly what's costing you customers with our comprehensive site analysis.
+                  Custom digital solutions for large businesses and organizations with complex needs.
                 </p>
-                <Link href="/solutions/seotool" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
-                  Get Free Audit →
+                <Link href="/contact" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
+                  Contact Us →
                 </Link>
               </div>
             </div>
