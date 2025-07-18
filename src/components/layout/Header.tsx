@@ -141,6 +141,7 @@ export default function Header() {
       label: 'Texas',
       href: '/locations/texas',
       children: [
+        { label: 'Texas', href: '/locations/texas' },
         { label: 'Dallas', href: '/locations/texas/dallas' },
         { label: 'Fort Worth', href: '/locations/texas/fort-worth' },
         { label: 'Plano', href: '/locations/texas/plano' },
@@ -153,6 +154,7 @@ export default function Header() {
       label: 'Oklahoma',
       href: '/locations/oklahoma',
       children: [
+        { label: 'Oklahoma', href: '/locations/oklahoma' },
         { label: 'Oklahoma City', href: '/locations/oklahoma/oklahoma-city' },
         { label: 'Tulsa', href: '/locations/oklahoma/tulsa' },
         { label: 'Norman', href: '/locations/oklahoma/norman' }
@@ -162,6 +164,7 @@ export default function Header() {
       label: 'New Mexico',
       href: '/locations/new-mexico',
       children: [
+        { label: 'New Mexico', href: '/locations/new-mexico' },
         { label: 'Albuquerque', href: '/locations/new-mexico/albuquerque' },
         { label: 'Santa Fe', href: '/locations/new-mexico/santa-fe' },
         { label: 'Las Cruces', href: '/locations/new-mexico/las-cruces' }
@@ -522,7 +525,7 @@ export default function Header() {
                               className={`text-xl block py-2 ${pathname === '/locations/texas' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
-                              Texas Overview
+                              Texas
                             </Link>
                             {pathname === '/locations/texas' && (
                               <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
@@ -615,7 +618,7 @@ export default function Header() {
                               className={`text-xl block py-2 ${pathname === '/locations/oklahoma' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
-                              Oklahoma Overview
+                              Oklahoma
                             </Link>
                             {pathname === '/locations/oklahoma' && (
                               <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
@@ -672,7 +675,7 @@ export default function Header() {
                               className={`text-xl block py-2 ${pathname === '/locations/new-mexico' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
-                              New Mexico Overview
+                              New Mexico
                             </Link>
                             {pathname === '/locations/new-mexico' && (
                               <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
