@@ -121,6 +121,7 @@ export default function Header() {
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'PPC Advertising', href: '/services/ads' },
     { label: 'Social Media Management', href: '/services/socialMedia' },
+    { label: 'Free Website Audit', href: '/checkup' },
     { label: 'View All Services', href: '/services' }
   ];
 
@@ -169,17 +170,19 @@ export default function Header() {
     { label: 'All Locations', href: '/locations' }
   ];
 
-  // About Us dropdown (renamed from Company)
+  // About Us dropdown (renamed from Company) - Combined with additional info
   const aboutDropdownItems = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Work', href: '/about/work' },
-    { label: 'Case Studies', href: '/case-studies' }
+    { label: 'Case Studies', href: '/case-studies' },
+    { label: 'Blog', href: '/blog' }
   ];
 
-  // Pricing dropdown
+  // Pricing dropdown - Combined with ecosystem
   const pricingDropdownItems = [
     { label: 'View All Plans', href: '/pricing' },
-    { label: 'Forte Ecosystem™', href: '/ecosystem' }
+    { label: 'Forte Ecosystem™', href: '/ecosystem' },
+    { label: 'Contact Us', href: '/contact' }
   ];
 
   // Don't render theme-dependent content until mounted
@@ -254,7 +257,7 @@ export default function Header() {
                 width="280px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/locations" showIcon={true}>Top Locations</HeaderLink>
+                    <HeaderLink href="/locations" showIcon={true}>Locations</HeaderLink>
                   </div>
                 }
               />
@@ -275,22 +278,15 @@ export default function Header() {
                 width="180px"
                 trigger={
                   <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/about" showIcon={true}>About Us</HeaderLink>
+                    <HeaderLink href="/about" showIcon={true}>About</HeaderLink>
                   </div>
                 }
               />
-
-              <HeaderLink href="/checkup">Free Website Audit</HeaderLink>
-
-              <HeaderLink href="/blog">Blog</HeaderLink>
             </nav>
 
-            {/* Desktop Right Side - Theme Toggle and Contact Button */}
-            <nav className="hidden md:flex items-center space-x-8">
+            {/* Desktop Right Side - Theme Toggle only */}
+            <nav className="hidden md:flex items-center space-x-4">
               <ThemeToggle />
-              <DarkButton href='/contact'>
-                Contact Us
-              </DarkButton>
             </nav>
 
             {/* Mobile Header */}
@@ -460,7 +456,7 @@ export default function Header() {
                   {/* Services */}
                   <MobileExpandableMenu
                     title="Services"
-                    isActive={pathname.startsWith('/services')}
+                    isActive={pathname.startsWith('/services') || pathname.startsWith('/checkup')}
                   >
                     <div className="pl-6 space-y-3">
                       {servicesDropdownItems.map((item) => (
@@ -507,7 +503,7 @@ export default function Header() {
 
                   {/* Locations */}
                   <MobileExpandableMenu
-                    title="Top Locations"
+                    title="Locations"
                     isActive={pathname.startsWith('/locations')}
                   >
                     <div className="pl-6 space-y-3">
@@ -737,7 +733,7 @@ export default function Header() {
                   {/* Pricing */}
                   <MobileExpandableMenu
                     title="Pricing"
-                    isActive={pathname.startsWith('/pricing') || pathname.startsWith('/ecosystem')}
+                    isActive={pathname.startsWith('/pricing') || pathname.startsWith('/ecosystem') || pathname.startsWith('/contact')}
                   >
                     <div className="pl-6 space-y-3">
                       {pricingDropdownItems.map((item) => (
@@ -758,10 +754,10 @@ export default function Header() {
                     </div>
                   </MobileExpandableMenu>
 
-                  {/* About Us */}
+                  {/* About */}
                   <MobileExpandableMenu
-                    title="About Us"
-                    isActive={pathname.startsWith('/about')}
+                    title="About"
+                    isActive={pathname.startsWith('/about') || pathname.startsWith('/case-studies') || pathname.startsWith('/blog')}
                   >
                     <div className="pl-6 space-y-3">
                       {aboutDropdownItems.map((item) => (
@@ -781,36 +777,6 @@ export default function Header() {
                       ))}
                     </div>
                   </MobileExpandableMenu>
-
-                  {/* Free Website Audit */}
-                  <div className="flex items-center justify-between py-4">
-                    <Link
-                      href="/checkup"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/checkup' ? 'text-[#8D9DFF]' : 'text-white'
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Free Website Audit
-                    </Link>
-                    {pathname === '/checkup' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
-
-                  {/* Blog - No emoji */}
-                  <div className="flex items-center justify-between py-4">
-                    <Link
-                      href="/blog"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/blog' ? 'text-[#8D9DFF]' : 'text-white'
-                        }`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Blog
-                    </Link>
-                    {pathname === '/blog' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
 
                   {/* Contact CTA */}
                   <div className="pt-8 pb-4">
