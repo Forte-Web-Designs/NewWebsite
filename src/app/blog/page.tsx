@@ -15,10 +15,10 @@ const blogPosts = [
   {
     id: 'why-every-small-business-needs-online-presence',
     title: 'Why Every Small Business Needs an Online Presence (And How to Start Right)',
-    excerpt: 'Think you can survive without a website? Think your customers will just find you? In today\'s world, being invisible online means being invisible to your customers. Here\'s why that matters and what you can do about it.',
+    excerpt: 'When was the last time you cracked open a phone book? Walked around town hoping the perfect business would magically appear? Here\'s the truth: if your business isn\'t online, to most people, it doesn\'t exist.',
     author: 'Seth Forte',
     date: '2025-07-18',
-    readTime: '8 min read',
+    readTime: '6 min read',
     category: 'Business',
     image: '/images/blog/online-presence-business.webp',
     tags: ['Online Presence', 'Small Business', 'Digital Marketing', 'Website'],

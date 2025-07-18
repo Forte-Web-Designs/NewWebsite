@@ -13,149 +13,137 @@ const blogPosts = [
   {
     id: 'why-every-small-business-needs-online-presence',
     title: 'Why Every Small Business Needs an Online Presence (And How to Start Right)',
-    excerpt: 'Think you can survive without a website? Think your customers will just find you? In today\'s world, being invisible online means being invisible to your customers. Here\'s why that matters and what you can do about it.',
+    excerpt: 'When was the last time you cracked open a phone book? Walked around town hoping the perfect business would magically appear? Here\'s the truth: if your business isn\'t online, to most people, it doesn\'t exist.',
     content: `
-      <p>Let me ask you something: when was the last time you looked for a business in the phone book? When did you last drive around town hoping to stumble upon exactly what you needed? Right. That's not how the world works anymore.</p>
+      <p>Let me ask you this. When was the last time you cracked open a phone book? Walked around town hoping the perfect business would magically appear? When was the last time you called a business without a solid looking website and felt confident someone would answer?</p>
 
-      <p>Yet somehow, there are still business owners who think they can thrive without an online presence. "My customers know where to find me," they say. "Word of mouth is enough." "I don't need all that complicated internet stuff."</p>
+      <p>Exactly. That world is gone.</p>
 
-      <p>Here's the uncomfortable truth: if your business isn't online, you're invisible to most of your potential customers. And in 2025, being invisible is a choice that could cost you everything.</p>
+      <p>And yet, some business owners still believe the digital world is optional. "My customers know me." "I've got word of mouth."</p>
 
-      <h2>The Real Question Isn't Whether You Need to Be Online</h2>
+      <p>Here's the truth: if your business isn't online, to most people, it doesn't exist. And in 2025, being invisible is the fastest way to fall behind.</p>
 
-      <p>The question is: do you want to control how people find you and what they think when they do?</p>
+      <h2>Do I really need a online presence?</h2>
 
-      <p>Because here's what happens when you don't have an online presence:</p>
+      <p>Flip the question. When you search for a business, what are you hoping to find?</p>
 
       <ul>
-        <li>Someone searches for your type of business, and your competitors show up instead</li>
-        <li>A potential customer tries to find your hours, and they can't</li>
-        <li>People want to see your work before they call, but there's nothing to see</li>
-        <li>Your competitors tell the story of your industry, and you're not part of it</li>
+        <li>Someone real</li>
+        <li>Someone credible</li>
+        <li>Someone who makes it easy to say "yes"</li>
       </ul>
 
-      <p>But when you do have a proper online presence, something different happens. You become the obvious choice. You're there when people are looking. You're ready with answers when they have questions.</p>
+      <p>Now ask yourself: are you showing up that way?</p>
 
-      <h2>What Does "Online Presence" Actually Mean?</h2>
+      <p>Your website, of example, isn't just digital real estate. It's your handshake. Your storefront. Your best pitch... always ready 24/7.</p>
 
-      <p>It's not just having a website. It's being findable, trustworthy, and helpful in the digital spaces where your customers spend their time.</p>
+      <h2>So what actually counts as an "online presence"?</h2>
 
-      <p>Think of it this way: if your business were a person, your online presence would be its reputation, its ability to hold a conversation, and its way of showing up consistently in your community.</p>
+      <p>Think of it like your business's digital footprint:</p>
 
-      <h3>The Foundation: A Website That Works</h3>
-
-      <p>Your website isn't a brochure. It's not a business card. It's your hardest-working employee.</p>
-
-      <p>A good website does three things:</p>
       <ul>
-        <li><strong>Answers questions</strong> before people have to ask them</li>
-        <li><strong>Builds trust</strong> through social proof and professionalism</li>
-        <li><strong>Makes it easy</strong> for people to take the next step</li>
+        <li>A website that works (fast, mobile-friendly, clear)</li>
+        <li>A Google Business profile that's accurate and active</li>
+        <li>Reviews that build trust</li>
+        <li>Local listings that help people find you</li>
+        <li>Social media, if you've got something to say</li>
       </ul>
 
-      <p>What does this look like in practice? It means when someone finds your site, they immediately understand what you do, why you're good at it, and how to get started with you.</p>
+      <p>Together, they answer the customer's silent question: "Can I trust this business?"</p>
 
-      <h3>Local Visibility: Being Found When It Matters</h3>
+      <h2>Four reasons your online presence matters (more than you think):</h2>
 
-      <p>Most small businesses serve local customers. So when someone in your area searches for what you do, you want to be the first thing they see.</p>
+      <h3>1. Trust</h3>
+      <p>People trust what they can see. And 56% say they won't trust you if you don't have a website. That's not a maybe. That's a dealbreaker.</p>
 
-      <p>This isn't about gaming the system. It's about being genuinely helpful and available when people need you.</p>
+      <h3>2. Control</h3>
+      <p>If people are searching your name, they're going to find something. Make sure it's the right story and not a dead link, outdated listing, or a blank result.</p>
 
-      <p>Local visibility means:</p>
+      <h3>3. Experience</h3>
+      <p>Your site is your best employee. It should answer questions, show your work, and make it easy to reach you, no follow-ups needed.</p>
+
+      <h3>4. Growth</h3>
+      <p>Even the most old-school businesses are scaling faster with a sharp online presence. Because the game isn't just local anymore, it's digital.</p>
+
+      <h2>Where to start (and not get overwhelmed)</h2>
+
+      <h3>Step 1: Know your story</h3>
+      <p>Forget all the buzzwords and stories. Just be clear.</p>
+
       <ul>
-        <li>Showing up in Google Maps when people search nearby</li>
-        <li>Having accurate information everywhere your business is mentioned</li>
-        <li>Being part of the conversation in your community</li>
+        <li>What problem do you solve?</li>
+        <li>Why do people come back?</li>
+        <li>What do your best customers love about working with you?</li>
       </ul>
 
-      <h3>Social Proof: Letting Others Tell Your Story</h3>
+      <p>That's your story. Build everything else around that.</p>
 
-      <p>People don't just want to know that you exist. They want to know that you're good at what you do.</p>
+      <h3>Step 2: Own your name</h3>
+      <p>Secure your domain. Set up your Google profile. Lock in your business info across the web.</p>
 
-      <p>Social proof isn't about bragging. It's about showing, not telling. It's customer reviews, project photos, and testimonials that speak for themselves.</p>
+      <p>It's the modern version of putting a sign on your building. If people can't find you, you don't exist.</p>
 
-      <p>When someone can see that others have worked with you and had a good experience, the decision to choose you becomes easier.</p>
+      <h3>Step 3: Build the kind of website that actually helps</h3>
+      <p>And this is the most important part. The colors of your website matter far less than the accessibility of your website.</p>
 
-      <h2>But I Don't Have Time for All That Digital Stuff</h2>
+      <p>You need a site that:</p>
 
-      <p>I get it. You're busy running your business. You got into this to do the work you love, not to become a marketing expert.</p>
-
-      <p>But here's the thing: building an online presence isn't about becoming a digital marketing guru. It's about making smart decisions that work for your specific business and your specific customers.</p>
-
-      <p>You don't need to be on every platform. You don't need to post every day. You don't need to understand every algorithm.</p>
-
-      <p>You need to be where your customers are, when they're looking for you, with the information they need to choose you.</p>
-
-      <h2>Starting Right: The Foundation First</h2>
-
-      <p>If you're starting from scratch, don't try to do everything at once. Build a solid foundation first.</p>
-
-      <h3>Step 1: Get Your Story Straight</h3>
-
-      <p>Before you build anything, you need to be clear about what you do and why it matters.</p>
-
-      <p>Ask yourself:</p>
       <ul>
-        <li>What problem do I solve for my customers?</li>
-        <li>What makes me different from my competitors?</li>
-        <li>What do my best customers have in common?</li>
+        <li>Loads quickly</li>
+        <li>Looks clean and professional</li>
+        <li>Explains what you do in plain English</li>
+        <li>Makes it easy to book, call, or ask a question</li>
       </ul>
 
-      <p>Your online presence should tell this story clearly and consistently everywhere it appears.</p>
+      <p>If your site confuses people, you're losing them.</p>
 
-      <h3>Step 2: Claim Your Digital Real Estate</h3>
+      <h3>Step 4: Get visible where it matters</h3>
+      <p>You want to be the business that pops up when someone in your town types "best [your service] near me."</p>
 
-      <p>Get your domain name. Set up your Google My Business profile. Make sure your business information is consistent across all platforms.</p>
+      <p>How?</p>
 
-      <p>This isn't glamorous work, but it's essential. It's like putting up a sign for your business—people need to know where to find you.</p>
-
-      <h3>Step 3: Build a Website That Works</h3>
-
-      <p>Your website should do three things well:</p>
       <ul>
-        <li><strong>Explain what you do</strong> clearly and simply</li>
-        <li><strong>Show that you're good at it</strong> through examples and testimonials</li>
-        <li><strong>Make it easy to get started</strong> with clear contact information and calls to action</li>
+        <li>Keep your Google Business profile up to date</li>
+        <li>Ask your happy customers to leave reviews</li>
+        <li>Get listed in places where people already search</li>
       </ul>
 
-      <p>Don't overcomplicate this. A simple, professional website that loads quickly and works on phones is infinitely better than a fancy site that confuses people.</p>
+      <p>You don't have to have a masters in interning degree to do this.</p>
 
-      <h3>Step 4: Get Found Locally</h3>
+      <p>You started your business to do what you're great at, so don't try to master everything. Just:</p>
 
-      <p>Make sure your business shows up when people search for your services in your area.</p>
-
-      <p>This means:</p>
       <ul>
-        <li>Optimizing your Google My Business profile</li>
-        <li>Getting listed in relevant local directories</li>
-        <li>Encouraging satisfied customers to leave reviews</li>
+        <li>Show up where your customers look</li>
+        <li>Make it easy for them to say "yes"</li>
+        <li>Be consistent</li>
       </ul>
 
-      <h2>The Cost of Not Acting</h2>
+      <p>That's it. That's the whole play.</p>
 
-      <p>Every day you wait is a day your competitors are building relationships with your potential customers.</p>
+      <h2>The cost of hiding in plain sight</h2>
 
-      <p>Think about it: someone needs your services right now. They're searching online, reading reviews, comparing options. If you're not part of that conversation, you've already lost.</p>
+      <p>Every time someone searches and doesn't find you, you're handing business to your competitors.</p>
 
-      <p>But it's not just about the customers you're losing today. It's about the compound effect of being invisible while your competitors become the obvious choice in your market.</p>
+      <p>And no, it's not about chasing trends or posting on TikTok. It's about showing up, clearly, confidently, and consistently.</p>
 
-      <h2>What's Your Next Step?</h2>
+      <h2>TL;DR: Start here</h2>
 
-      <p>You don't have to transform your entire business overnight. But you do need to start.</p>
+      <ul>
+        <li>Get a domain</li>
+        <li>Launch a clean website</li>
+        <li>Set up your Google profile</li>
+        <li>Ask for reviews</li>
+      </ul>
 
-      <p>Pick one thing and do it well. Maybe it's finally getting a professional website. Maybe it's cleaning up your Google My Business profile. Maybe it's asking your best customers to leave reviews.</p>
+      <p>You don't need to be flashy. You just need to be present.</p>
 
-      <p>The key is to start with something that matters to your customers and makes it easier for them to choose you.</p>
+      <p>And if you want help building a site that actually works? That's what we do at Forte Web Designs.</p>
 
-      <p>Because at the end of the day, that's what an online presence is really about: being there when your customers need you, with the information they need to make a confident decision.</p>
-
-      <p>Your business deserves to be found. Your customers deserve to find you easily. And you deserve to control how your story is told.</p>
-
-      <p>The question isn't whether you need an online presence. The question is: what are you going to do about it?</p>
+      <p>Let's build something that earns trust, and turns clicks into customers.</p>
     `,
     author: 'Seth Forte',
     date: '2025-07-18',
-    readTime: '8 min read',
+    readTime: '6 min read',
     category: 'Business',
     image: '/images/blog/online-presence-business.webp',
     tags: ['Online Presence', 'Small Business', 'Digital Marketing', 'Website'],
@@ -271,7 +259,14 @@ export default async function BlogPost({ params }: BlogPostPageProps) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
             <div 
-              className="prose prose-lg dark:prose-invert max-w-none prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-strong:text-gray-900 dark:prose-strong:text-white"
+              className="prose prose-lg dark:prose-invert max-w-none 
+                prose-headings:text-gray-900 dark:prose-headings:text-white prose-headings:font-semibold prose-headings:mb-6 prose-headings:mt-8
+                prose-h2:text-2xl prose-h2:mb-4 prose-h2:mt-10 prose-h2:font-bold
+                prose-h3:text-xl prose-h3:mb-3 prose-h3:mt-8 prose-h3:font-semibold
+                prose-p:text-gray-700 dark:prose-p:text-gray-300 prose-p:mb-6 prose-p:leading-relaxed prose-p:text-lg
+                prose-ul:mb-6 prose-ul:mt-4 prose-li:mb-2 prose-li:text-gray-700 dark:prose-li:text-gray-300 prose-li:leading-relaxed
+                prose-a:text-blue-600 dark:prose-a:text-blue-400 prose-a:font-medium
+                prose-strong:text-gray-900 dark:prose-strong:text-white prose-strong:font-semibold"
               dangerouslySetInnerHTML={{ __html: post.content }}
             />
           </div>
