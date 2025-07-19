@@ -30,6 +30,46 @@ export default function IndustriesPage() {
       avgIncrease: '67%'
     },
     {
+      name: 'Restaurants',
+      icon: '🍕',
+      href: '/industries/restaurants',
+      description: 'Menu-focused websites with online ordering integration',
+      features: ['Online Menus', 'Reservation Systems', 'Photo Galleries', 'Location Info'],
+      available: true,
+      clients: '12+',
+      avgIncrease: '85%'
+    },
+    {
+      name: 'Landscapers',
+      icon: '🌿',
+      href: '/industries/landscapers',
+      description: 'Visual portfolio websites showcasing outdoor transformations',
+      features: ['Before/After Galleries', 'Seasonal Services', 'Quote Requests', 'Visual Portfolios'],
+      available: true,
+      clients: '10+',
+      avgIncrease: '78%'
+    },
+    {
+      name: 'Construction',
+      icon: '🏗️',
+      href: '/industries/construction',
+      description: 'Project showcase websites with detailed portfolio sections',
+      features: ['Project Portfolios', 'Before/After Galleries', 'Estimate Requests', 'Timeline Management'],
+      available: true,
+      clients: '8+',
+      avgIncrease: '45%'
+    },
+    {
+      name: 'Healthcare',
+      icon: '⚕️',
+      href: '/industries/healthcare',
+      description: 'HIPAA-compliant websites with patient portal integration',
+      features: ['HIPAA Compliance', 'Appointment Booking', 'Patient Portals', 'Insurance Info'],
+      available: true,
+      clients: '6+',
+      avgIncrease: '52%'
+    },
+    {
       name: 'HVAC Companies',
       icon: '🌡️',
       href: '#',
@@ -45,36 +85,6 @@ export default function IndustriesPage() {
       href: '#',
       description: 'Safety-focused websites with clear emergency protocols',
       features: ['Safety Certifications', 'Emergency Services', 'Project Galleries', 'Free Estimates'],
-      available: false,
-      clients: 'Coming Soon',
-      avgIncrease: ''
-    },
-    {
-      name: 'Contractors',
-      icon: '🏗️',
-      href: '#',
-      description: 'Project showcase websites with detailed portfolio sections',
-      features: ['Project Portfolios', 'Before/After Galleries', 'Estimate Requests', 'Timeline Management'],
-      available: false,
-      clients: 'Coming Soon',
-      avgIncrease: ''
-    },
-    {
-      name: 'Restaurants',
-      icon: '🍕',
-      href: '#',
-      description: 'Menu-focused websites with online ordering integration',
-      features: ['Online Menus', 'Reservation Systems', 'Photo Galleries', 'Location Info'],
-      available: false,
-      clients: 'Coming Soon',
-      avgIncrease: ''
-    },
-    {
-      name: 'Healthcare',
-      icon: '⚕️',
-      href: '#',
-      description: 'HIPAA-compliant websites with patient portal integration',
-      features: ['HIPAA Compliance', 'Appointment Booking', 'Patient Portals', 'Insurance Info'],
       available: false,
       clients: 'Coming Soon',
       avgIncrease: ''
