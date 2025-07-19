@@ -9,12 +9,12 @@ import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'Construction Company Website Design | Project-Ready Marketing',
-  description: 'Construction projects start with trust. Your website needs to showcase completed work and build confidence for six-figure projects. We build construction websites that win more bids.',
-  keywords: 'construction website design, contractor websites, construction company websites, construction marketing, project showcase',
+  title: 'Construction Websites Built to Win Bids and Build Trust',
+  description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. Custom-coded sites for construction companies that turn browsers into buyers—and estimates into jobs.',
+  keywords: 'construction website design, contractor websites, construction company websites, mobile construction quotes, construction bid optimization',
   openGraph: {
-    title: 'Construction Company Website Design | Project-Ready Marketing',
-    description: 'Construction projects start with trust. Your website needs to showcase completed work and build confidence for six-figure projects. We build construction websites that win more bids.',
+    title: 'Construction Websites Built to Win Bids and Build Trust',
+    description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. Custom-coded sites for construction companies that turn browsers into buyers—and estimates into jobs.',
     type: 'website',
   },
 };
@@ -22,42 +22,47 @@ export const metadata: Metadata = {
 export default function ConstructionPage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Premier Construction Group" },
-    { name: "Solid Foundation Builders" },
-    { name: "Metro Commercial Contractors" },
-    { name: "Elite Building Solutions" },
-    { name: "Professional Construction Co" }
+    { name: "SouthCore Contracting", location: "Albuquerque" },
+    { name: "Premier Construction Group", location: "Dallas" },
+    { name: "Solid Foundation Builders", location: "Houston" },
+    { name: "Metro Commercial Contractors", location: "Austin" },
+    { name: "Elite Building Solutions", location: "Fort Worth" }
   ];
 
   // Comparison data
   const comparisonFeatures = [
     {
-      feature: "Project portfolio showcase",
+      feature: "Built for Construction",
       typical: false,
       forte: true
     },
     {
-      feature: "Bid request optimization",
+      feature: "Hand-Coded (No Builders)",
       typical: false,
       forte: true
     },
     {
-      feature: "Safety & licensing display",
+      feature: "Mobile Quote Tools",
       typical: false,
       forte: true
     },
     {
-      feature: "Ongoing edits included",
+      feature: "Project Portfolios Included",
       typical: false,
       forte: true
     },
     {
-      feature: "Mobile-responsive design",
+      feature: "Local SEO Strategy",
       typical: false,
       forte: true
     },
     {
-      feature: "Local SEO optimization",
+      feature: "Emergency Edits/Support",
+      typical: false,
+      forte: true
+    },
+    {
+      feature: "Industry Experience",
       typical: false,
       forte: true
     }
@@ -66,47 +71,47 @@ export default function ConstructionPage() {
   // FAQ data
   const faqs = [
     {
-      question: "How quickly can you get my construction website live?",
-      answer: "Most construction websites are live within 7-10 business days. We prioritize project portfolios and contact forms first, so your site starts generating leads immediately."
+      question: "How fast can you launch my site?",
+      answer: "We typically launch construction websites in 2–4 weeks depending on size and content prep. Rush services available."
     },
     {
-      question: "Do you understand the construction industry?",
-      answer: "Absolutely. We've built websites for 18+ construction companies and understand project showcasing, bid processes, and what builds trust for high-value construction projects."
+      question: "Can you help with project photos or copy?",
+      answer: "Yes. We can assist with writing, structure, and even AI-enhanced formatting for case studies and job highlights."
     },
     {
-      question: "What makes your construction websites different?",
-      answer: "We focus on trust-building and project showcasing. While other designers build basic websites, we build websites that demonstrate your expertise and win more construction bids."
+      question: "Do I own the website?",
+      answer: "With one-time payment plans, you own your website 100%. We also offer monthly options with support included."
     },
     {
-      question: "Do you handle ongoing updates and maintenance?",
-      answer: "Yes! All construction websites include ongoing updates, security monitoring, and content changes. Perfect for adding new project photos and updating services."
+      question: "Can I add more service areas or specialties later?",
+      answer: "Absolutely. We design flexible sites that grow with your business."
     }
   ];
 
   const constructionChallenges = [
     {
       icon: "🏗️",
-      title: "High-Value Projects",
-      problem: "Competing for $50,000+ construction contracts",
-      solution: "Professional presentation that builds trust"
-    },
-    {
-      icon: "📸",
-      title: "Showcasing Complex Work",
-      problem: "Construction projects are complex and visual",
-      solution: "Professional project galleries and case studies"
-    },
-    {
-      icon: "🤝",
-      title: "Building Trust",
-      problem: "Clients need confidence for major investments",
-      solution: "Licensing, insurance, and testimonial display"
+      title: "Project Confidence",
+      problem: "Most contractor websites lack social proof and authority",
+      solution: "Showcase high-value project galleries, licenses, insurance, reviews, and local awards"
     },
     {
       icon: "📱",
-      title: "Mobile Decision Making",
-      problem: "Project managers browse on mobile devices",
-      solution: "Mobile-optimized portfolios and contact forms"
+      title: "Mobile Estimates On-the-Go", 
+      problem: "Homeowners and property managers search on mobile",
+      solution: "One-tap call buttons, quick quote forms, and responsive design"
+    },
+    {
+      icon: "📍",
+      title: "Local SEO for Regional Projects",
+      problem: "Competing with dozens of firms in your service area",
+      solution: "Geo-targeted SEO, Google Business integration, city-based landing pages"
+    },
+    {
+      icon: "📆",
+      title: "Close More Bids",
+      problem: "Clunky websites slow down lead generation",
+      solution: "Clear CTAs, downloadable capability statements, and fast-loading project galleries"
     }
   ];
 
@@ -123,30 +128,41 @@ export default function ConstructionPage() {
                   🏗️ Industry Expertise: Construction
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                  Construction Websites That Turn Prospects Into <span className="text-orange-300">High-Value Project Clients</span>
+                  Construction Websites Built to <span className="text-orange-300">Win Bids</span> and <span className="text-orange-300">Build Trust</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-orange-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Construction projects start with trust. Your website needs to showcase completed work and build confidence for six-figure investments. We build construction websites that win more bids and grow your business.
+                  In construction, reputation and clarity win projects. Your website should act like your best foreman: organized, authoritative, and ready to close the deal. At Forte, we design custom-coded sites for construction companies that turn browsers into buyers—and estimates into jobs.
                 </p>
                 
-                <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
-                  <DarkButton href="/contact?industry=construction" className="bg-orange-600 hover:bg-orange-700 w-full sm:w-auto">
-                    Contact Us
-                  </DarkButton>
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
+                  <Link 
+                    href="/contact?industry=construction"
+                    className="bg-white text-orange-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
+                  >
+                    Get My Construction Website Quote
+                  </Link>
+                  <Link 
+                    href="/checkup"
+                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-700 transition-colors text-center"
+                  >
+                    Free Website Audit for Contractors
+                  </Link>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-orange-200">
-                  <div className="flex items-center gap-2">
-                    <span className="text-orange-400">✓</span>
-                    Project Portfolio Showcase
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-orange-400">✓</span>
-                    Bid-Ready Contact Forms
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-orange-400">✓</span>
-                    Trust Building Elements
+                <div className="mb-8">
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-orange-200">
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-400">✅</span>
+                      <span>Mobile-Optimized</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-orange-300">🛠️</span>
+                      <span>Quote-Ready</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-orange-300">📍</span>
+                      <span>Local SEO-Enhanced</span>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -233,16 +249,195 @@ export default function ConstructionPage() {
         </div>
       </section>
 
-      {/* Industry Challenges Section */}
+      {/* What's Included Section */}
+      <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                What's Included in Every Construction Website
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                All Forte construction websites come standard with:
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <SimpleAnimatedCard>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 h-full">
+                  <div className="text-green-500 text-2xl mb-4">✅</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    Fast, mobile-first responsive design
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Built for property managers and homeowners who browse on mobile
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 h-full">
+                  <div className="text-green-500 text-2xl mb-4">✅</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    Project portfolio with before/after galleries
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Showcase your best work organized by project category
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 h-full">
+                  <div className="text-green-500 text-2xl mb-4">✅</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    Embedded review widgets (Google, Angi, etc.)
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Build trust with real customer testimonials and ratings
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 h-full">
+                  <div className="text-green-500 text-2xl mb-4">✅</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    "Request a Bid" or "Get a Quote" callouts
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Clear CTAs that turn visitors into leads
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 h-full">
+                  <div className="text-green-500 text-2xl mb-4">✅</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    Service area map with coverage zones
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Show exactly where you work and response times
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 h-full">
+                  <div className="text-green-500 text-2xl mb-4">✅</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                    Trust indicators: license #, insurance, years in business
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Display credentials that build confidence for major projects
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+            </div>
+
+            <div className="mt-12 text-center">
+              <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-xl p-6">
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Optional Add-ons:</h4>
+                <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
+                  <span className="bg-white dark:bg-gray-800 px-3 py-1 rounded-full">OSHA certifications</span>
+                  <span className="bg-white dark:bg-gray-800 px-3 py-1 rounded-full">Team bios</span>
+                  <span className="bg-white dark:bg-gray-800 px-3 py-1 rounded-full">Trade partner logos</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Section */}
+      <section className="py-16 md:py-24 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                Real Results: New Mexico Commercial Builder Sees 2.6x Lead Growth
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                See how SouthCore Contracting transformed their business with a professionally designed website.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="max-w-4xl mx-auto">
+            <SimpleAnimatedCard>
+              <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 lg:p-12 shadow-lg">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                    <span className="text-2xl text-white">🏗️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">SouthCore Contracting</h3>
+                    <p className="text-orange-600 dark:text-orange-400 font-semibold">Albuquerque, NM • Commercial Builder</p>
+                  </div>
+                </div>
+                
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+                  "After redesigning their outdated site, SouthCore experienced significant growth in commercial bid requests and secured major new projects in their first 90 days."
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">2.6x</div>
+                    <div className="text-gray-600 dark:text-gray-400">More Commercial Bid Requests</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">#1</div>
+                    <div className="text-gray-600 dark:text-gray-400">Ranking for "commercial contractors in Albuquerque"</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">1.3s</div>
+                    <div className="text-gray-600 dark:text-gray-400">Average site load speed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">$47K+</div>
+                    <div className="text-gray-600 dark:text-gray-400">New project revenue (first 90 days)</div>
+                  </div>
+                </div>
+
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                    <span className="text-orange-500">🏗️</span>
+                    What We Did:
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span className="text-gray-700 dark:text-gray-300">SEO-optimized city pages</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span className="text-gray-700 dark:text-gray-300">Portfolio by project category</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span className="text-gray-700 dark:text-gray-300">Live form integration for RFQs</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SimpleAnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Construction Industry Challenges Section */}
       <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                We Understand Construction Challenges
+                Why Construction Companies Need Industry-Specific Websites
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Every construction company faces unique challenges. We've built websites for contractors for years and know exactly what wins bids.
+                Unlike generic web design agencies, we <strong>understand what actually matters</strong> to contractors and construction firms:
               </p>
             </div>
           </SimpleScrollReveal>
@@ -250,21 +445,85 @@ export default function ConstructionPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {constructionChallenges.map((challenge, index) => (
               <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="text-3xl mb-4">{challenge.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow h-full">
+                  <div className="text-4xl mb-4">{challenge.icon}</div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
                     {challenge.title}
                   </h3>
-                  <p className="text-sm text-red-600 dark:text-red-400 mb-3 font-medium">
-                    Problem: {challenge.problem}
-                  </p>
-                  <p className="text-sm text-orange-600 dark:text-orange-400 font-medium">
-                    Our Solution: {challenge.solution}
-                  </p>
+                  <div className="space-y-4">
+                    <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
+                      <p className="text-sm text-red-700 dark:text-red-300 font-medium">
+                        📉 <em>Problem:</em> {challenge.problem}
+                      </p>
+                    </div>
+                    <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
+                      <p className="text-sm text-green-700 dark:text-green-300 font-medium">
+                        ✅ <em>Our Solution:</em> {challenge.solution}
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </SimpleAnimatedCard>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Comparison Table Section */}
+      <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal>
+            <div className="text-center mb-12">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Why Forte Over Generic Agencies?
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-400">
+                You deserve more than a cookie-cutter site. You deserve a system built to showcase your craftsmanship and win projects.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+          
+          <SimpleScrollReveal delay={0.2}>
+            <div className="max-w-6xl mx-auto">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden">
+                <div className="grid grid-cols-4 gap-4 p-6 bg-gray-100 dark:bg-gray-700">
+                  <div className="font-semibold text-gray-900 dark:text-white">Feature</div>
+                  <div className="font-semibold text-gray-900 dark:text-white text-center">Template Site Builders</div>
+                  <div className="font-semibold text-gray-900 dark:text-white text-center">Local Marketing Agency</div>
+                  <div className="font-semibold text-orange-600 dark:text-orange-400 text-center">Forte Web Designs</div>
+                </div>
+                
+                {comparisonFeatures.map((item, index) => (
+                  <div key={index} className="grid grid-cols-4 gap-4 p-6 border-t border-gray-200 dark:border-gray-600">
+                    <div className="text-gray-900 dark:text-white font-medium">{item.feature}</div>
+                    <div className="text-center flex justify-center">
+                      <span className="text-red-500 text-xl">❌</span>
+                    </div>
+                    <div className="text-center flex justify-center">
+                      {item.feature === "Mobile Quote Tools" || item.feature === "Project Portfolios Included" ? (
+                        <span className="text-yellow-500 text-sm">✅ (sometimes extra)</span>
+                      ) : (
+                        <span className="text-red-500 text-xl">❌</span>
+                      )}
+                    </div>
+                    <div className="text-center flex justify-center">
+                      {item.forte ? (
+                        item.feature === "Industry Experience" ? (
+                          <span className="text-green-500 text-sm">✅ (10+ contractors served)</span>
+                        ) : item.feature === "Project Portfolios Included" ? (
+                          <span className="text-green-500 text-sm">✅ (always)</span>
+                        ) : (
+                          <span className="text-green-500 text-xl">✅</span>
+                        )
+                      ) : (
+                        <span className="text-red-500 text-xl">❌</span>
+                      )}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </SimpleScrollReveal>
         </div>
       </section>
 
@@ -299,60 +558,16 @@ export default function ConstructionPage() {
         </div>
       </section>
 
-      {/* Comparison Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Forte vs. Typical Construction Websites
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                See why construction companies choose Forte over generic website builders
-              </p>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-3 gap-4 p-6 bg-gray-50 dark:bg-gray-600">
-                <div></div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-600 dark:text-gray-300">Typical Websites</h3>
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-orange-600 dark:text-orange-400">Forte Websites</h3>
-                </div>
-              </div>
-              
-              {comparisonFeatures.map((item, index) => (
-                <div key={index} className="grid grid-cols-3 gap-4 p-4 border-b border-gray-200 dark:border-gray-600 last:border-b-0">
-                  <div className="font-medium text-gray-900 dark:text-white">
-                    {item.feature}
-                  </div>
-                  <div className="text-center">
-                    <span className="text-red-500">✗</span>
-                  </div>
-                  <div className="text-center">
-                    <span className="text-green-500">✓</span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Frequently Asked Questions
+                Common Questions
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Common questions from construction business owners
+                Everything you need to know about construction website development
               </p>
             </div>
           </SimpleScrollReveal>
@@ -380,10 +595,10 @@ export default function ConstructionPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                Ready to Win More Construction Projects?
+                Ready to Build Your Online Presence?
               </h2>
               <p className="text-xl mb-8 text-orange-100">
-                Join successful construction companies who are winning more bids with professional websites
+                Join the contractors, remodelers, and builders who trust Forte to deliver websites that convert.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -391,13 +606,13 @@ export default function ConstructionPage() {
                   href="/contact?industry=construction"
                   className="bg-white text-orange-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
                 >
-                  Get My Construction Website
+                  Get My Construction Website Quote
                 </Link>
                 <Link 
-                  href="tel:8178736655"
+                  href="/checkup"
                   className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-600 transition-colors text-lg"
                 >
-                  Call (817) 873-6655
+                  Free Contractor Website Audit
                 </Link>
               </div>
               

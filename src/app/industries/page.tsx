@@ -53,11 +53,11 @@ export default function IndustriesPage() {
       name: 'Construction',
       icon: '🏗️',
       href: '/industries/construction',
-      description: 'Project showcase websites with detailed portfolio sections',
-      features: ['Project Portfolios', 'Before/After Galleries', 'Estimate Requests', 'Timeline Management'],
+      description: 'Custom-coded construction websites built to win bids and build trust with project showcases',
+      features: ['Project Portfolio Showcase', 'Mobile Quote Tools', 'Trust Indicators', 'Bid Request Forms'],
       available: true,
-      clients: '3',
-      avgIncrease: '45%'
+      clients: '10',
+      avgIncrease: '160%'
     },
     {
       name: 'Healthcare',
