@@ -18,10 +18,10 @@ function getInitialTheme(): Theme {
     if (storedTheme) {
       return storedTheme;
     }
-    // Always default to dark mode, ignoring system preference
-    return 'dark';
+    // Always default to light mode, ignoring system preference
+    return 'light';
   }
-  return 'dark';
+  return 'light';
 }
 
 export function ThemeProvider({ children }: { children: ReactNode }) {

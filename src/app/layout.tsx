@@ -170,8 +170,8 @@ export default function RootLayout({
                     const stored = localStorage.getItem('theme');
                     if (stored) return stored;
                   }
-                  // Always default to dark mode
-                  return 'dark';
+                  // Always default to light mode
+                  return 'light';
                 }
                 
                 const theme = getTheme();
