@@ -64,12 +64,14 @@ module.exports = {
         },
       },
       fontFamily: {
-        sans: ["-apple-system", "BlinkMacSystemFont", "San Francisco", "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
-        display: ["-apple-system", "BlinkMacSystemFont", "San Francisco", "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
-        body: ["-apple-system", "BlinkMacSystemFont", "San Francisco", "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
-        // Apple system font
-        "apple-system": ["-apple-system", "BlinkMacSystemFont", "San Francisco", "SF Pro Display", "SF Pro Text", "Helvetica Neue", "Helvetica", "Arial", "system-ui", "sans-serif"],
-        // Backup: Original fonts (kept for easy revert)
+        sans: ["var(--font-roboto)", "system-ui", "sans-serif"],
+        display: [
+          "var(--font-inter-display)",
+          "var(--font-inter)",
+          "system-ui",
+          "sans-serif",
+        ],
+        body: ["var(--font-inter)", "system-ui", "sans-serif"],
         roboto: ["var(--font-roboto)", "system-ui", "sans-serif"],
         inter: ["var(--font-inter)", "system-ui", "sans-serif"],
         "inter-display": [
