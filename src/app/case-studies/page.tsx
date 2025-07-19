@@ -213,12 +213,12 @@ export default function CaseStudiesPage() {
                     <div className="mb-4">
                       <div className="text-blue-600 dark:text-blue-300 text-3xl font-bold mb-2">TechCorp Solutions</div>
                       <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">SaaS</div>
-                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+127% organic traffic in 6 months</div>
+                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+85% organic traffic in 6 months</div>
                     </div>
                     <div className="flex-1">
                       <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Challenge:</strong> Despite near-perfect technical SEO, TechCorp Solutions was steadily losing market share to aggressive SaaS competitors.</p>
                       <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Solution:</strong> Deep competitive analysis uncovered three high-impact strategies their rivals were using, including targeted content clusters and advanced link-building.</p>
-                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Reclaimed the #1 Google ranking for 15 high-value SaaS keywords, driving a 127% increase in organic traffic and restoring their industry leadership.</p>
+                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Reclaimed the #1 Google ranking for 15 high-value SaaS keywords, driving an 85% increase in organic traffic and restoring their industry leadership.</p>
                     </div>
                   </div>
                   {/* BluePeak Digital */}

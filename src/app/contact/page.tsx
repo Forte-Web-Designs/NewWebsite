@@ -67,7 +67,7 @@ export default function Contact() {
             <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
               <div className="text-2xl mb-2">📈</div>
               <div className="text-sm font-semibold text-gray-900 dark:text-white">Proven Results</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">3x more leads average</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">2x more leads average</div>
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
               <div className="text-2xl mb-2">🤝</div>

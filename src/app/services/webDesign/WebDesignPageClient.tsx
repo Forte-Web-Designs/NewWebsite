@@ -717,7 +717,7 @@ export default function WebDesignPageClient() {
                   </div>
                 </div>
                 <blockquote className="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center italic mb-4 sm:mb-6">
-                  "Forte built a site that actually converts. We're seeing 3x the leads — and they update everything fast."
+                  "Forte built a site that actually converts. We're seeing 2x the leads — and they update everything fast."
                 </blockquote>
                 <div className="text-center">
                   <div className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">— Mike Chen, Elite Home Services</div>

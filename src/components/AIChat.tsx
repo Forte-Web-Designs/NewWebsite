@@ -276,7 +276,7 @@ const AIChat = () => {
 
     // ROI/Results questions
     if (msg.includes('results') || msg.includes('roi') || msg.includes('return') || msg.includes('worth it') || msg.includes('effective')) {
-      return "Love that you're asking about results! 📈 That's exactly how we think too.\n\nHere's what our clients typically see:\n• 40-60% more website traffic in 3 months\n• 2-3x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 25+ leads/month in just 4 months. Another doubled their revenue in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty.\n\n[📞 Ready to discuss your goals? Contact us here](/contact)";
+      return "Love that you're asking about results! 📈 That's exactly how we think too.\n\nHere's what our clients typically see:\n• 30-50% more website traffic in 3 months\n• 2x more leads from their website\n• Better Google rankings (often page 1)\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 18+ leads/month in just 4 months. Another increased their revenue by 85% in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty.\n\n[📞 Ready to discuss your goals? Contact us here](/contact)";
     }
 
     // Contact/meeting questions

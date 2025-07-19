@@ -356,7 +356,7 @@ export default function PlumbersPage() {
                     <div className="text-sm text-gray-600 dark:text-gray-400">More Emergency Calls</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-1">$50K</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1">$12K</div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">Additional Monthly Revenue</div>
                   </div>
                   <div className="text-center">

@@ -725,7 +725,7 @@ export default function Home() {
                   Every element is strategically designed to turn visitors into customers, not just look pretty.
                 </p>
                 <div className="text-sm text-purple-700 dark:text-purple-300 bg-purple-100 dark:bg-purple-900/40 px-3 py-1 rounded-full inline-block">
-                  3x more leads average
+                  2x more leads average
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -882,8 +882,8 @@ export default function Home() {
                   <span className="text-white font-bold text-lg">RC</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">RiverSide Clinic</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">3x More Leads</div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">From 8 to 25+ patient inquiries per month</p>
+                <div className="text-2xl font-bold text-green-600 mb-2">2.5x More Leads</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">From 8 to 20+ patient inquiries per month</p>
               </div>
             </SimpleScrollReveal>
             
@@ -893,7 +893,7 @@ export default function Home() {
                   <span className="text-white font-bold text-lg">PH</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">ProHome Services</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">127% More Traffic</div>
+                <div className="text-2xl font-bold text-green-600 mb-2">85% More Traffic</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Ranking #1 for "HVAC repair near me"</p>
               </div>
             </SimpleScrollReveal>
@@ -904,7 +904,7 @@ export default function Home() {
                   <span className="text-white font-bold text-lg">EB</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Elite Boutique</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$50k+ Revenue</div>
+                <div className="text-2xl font-bold text-green-600 mb-2">$18k+ Revenue</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">First 6 months with new website</p>
               </div>
             </SimpleScrollReveal>
@@ -1301,7 +1301,7 @@ export default function Home() {
             <div className="inline-flex items-center gap-3 bg-white dark:bg-gray-800 rounded-full px-6 py-3 shadow-lg border border-gray-200 dark:border-gray-700">
               <span className="text-green-600 dark:text-green-400 font-semibold text-sm">💰 ROI FACT:</span>
               <span className="text-gray-700 dark:text-gray-300 text-sm">
-                Our average client sees <strong>3x more leads</strong> within 90 days
+                Our average client sees <strong>2x more leads</strong> within 90 days
               </span>
             </div>
           </div>

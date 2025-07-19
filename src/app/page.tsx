@@ -651,8 +651,8 @@ export default function Home() {
                   <span className="text-white font-bold text-lg">RC</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">RiverSide Clinic</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">3x More Leads</div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">From 8 to 25+ patient inquiries per month</p>
+                <div className="text-2xl font-bold text-green-600 mb-2">2.5x More Leads</div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">From 8 to 20+ patient inquiries per month</p>
               </div>
             </SimpleScrollReveal>
             
@@ -662,7 +662,7 @@ export default function Home() {
                   <span className="text-white font-bold text-lg">PH</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">ProHome Services</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">127% More Traffic</div>
+                <div className="text-2xl font-bold text-green-600 mb-2">85% More Traffic</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">Ranking #1 for "HVAC repair near me"</p>
               </div>
             </SimpleScrollReveal>
@@ -673,7 +673,7 @@ export default function Home() {
                   <span className="text-white font-bold text-lg">EB</span>
                 </div>
                 <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Elite Boutique</h3>
-                <div className="text-2xl font-bold text-green-600 mb-2">$50k+ Revenue</div>
+                <div className="text-2xl font-bold text-green-600 mb-2">$18k+ Revenue</div>
                 <p className="text-sm text-gray-600 dark:text-gray-400">First 6 months with new website</p>
               </div>
             </SimpleScrollReveal>

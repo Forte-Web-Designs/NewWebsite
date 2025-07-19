@@ -421,7 +421,7 @@ export default function SocialMediaManagement() {
               <div className="bg-red-50 dark:bg-red-900/20 rounded-lg p-4">
                 <h4 className="text-sm font-semibold text-red-700 dark:text-red-400 mb-2">Challenge:</h4>
                 <p className="text-sm text-red-600 dark:text-red-300">
-                  WordPress site crashed during a major client presentation. Lost 3 enterprise deals worth $250k.
+                  WordPress site crashed during a major client presentation. Lost 3 enterprise deals worth $90k.
                 </p>
               </div>
               
@@ -443,7 +443,7 @@ export default function SocialMediaManagement() {
                     <div className="text-green-700 dark:text-green-300">Downtime</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">$400k</div>
+                    <div className="text-2xl font-bold text-green-600 dark:text-green-400">$85k</div>
                     <div className="text-green-700 dark:text-green-300">New Deals</div>
                   </div>
                 </div>

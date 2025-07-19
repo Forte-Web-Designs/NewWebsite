@@ -11,10 +11,10 @@ const caseStudies = [
     company: "TechCorp Solutions",
     industry: "SaaS",
     initialScore: "9/10",
-    improvement: "+127% organic traffic",
+    improvement: "+85% organic traffic",
     challenge: "Despite near-perfect technical SEO, TechCorp Solutions was steadily losing market share to aggressive SaaS competitors.",
     solution: "Conducted a deep competitive analysis, uncovering three high-impact strategies their rivals were using (including targeted content clusters and advanced link-building).",
-    results: "Reclaimed the #1 Google ranking for 15 high-value SaaS keywords, driving a 127% increase in organic traffic and restoring their industry leadership.",
+    results: "Reclaimed the #1 Google ranking for 15 high-value SaaS keywords, driving an 85% increase in organic traffic and restoring their industry leadership.",
     timeframe: "6 months"
   },
   {

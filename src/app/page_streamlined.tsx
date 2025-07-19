@@ -455,8 +455,8 @@ export default function Home() {
                   <span className="text-white font-bold text-lg">RC</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">RiverSide Clinic</h3>
-                <div className="text-3xl font-bold text-green-600 mb-3">3x More Leads</div>
-                <p className="text-gray-600 dark:text-gray-400">From 8 to 25+ patient inquiries per month</p>
+                <div className="text-3xl font-bold text-green-600 mb-3">2.5x More Leads</div>
+                <p className="text-gray-600 dark:text-gray-400">From 8 to 20+ patient inquiries per month</p>
               </SimpleAnimatedCard>
             </SimpleScrollReveal>
             
@@ -466,7 +466,7 @@ export default function Home() {
                   <span className="text-white font-bold text-lg">PH</span>
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">ProHome Services</h3>
-                <div className="text-3xl font-bold text-green-600 mb-3">127% More Traffic</div>
+                <div className="text-3xl font-bold text-green-600 mb-3">85% More Traffic</div>
                 <p className="text-gray-600 dark:text-gray-400">Ranking #1 for "HVAC repair near me"</p>
               </SimpleAnimatedCard>
             </SimpleScrollReveal>
