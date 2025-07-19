@@ -1,11 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import LightButton from "@/components/LightButton";
-import { BackgroundImage } from "@/components/images/BackgroundImage";
+import { useState, useEffect } from "react";
 import { Icon } from "@/components/images/Icon";
-import { OptimizedImage } from "@/components/images/OptimizedImage";
-import { PricingPage } from "@/components/pricing";
+import LightButton from "@/components/LightButton";
 
 type FAQItem = {
   question: string;
@@ -14,31 +11,35 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "What Platforms Do You Manage? 📱",
-    answer:
-      "We focus on the big three that actually drive business: Facebook, Instagram, and Google Business Profile. These are where your local customers spend their time and where consistent posting makes the biggest impact on your bottom line.",
+    question: "What platforms do you manage?",
+    answer: "We focus on the platforms where your local customers actually spend time: Facebook, Instagram, and Google Business Profile. These three platforms drive the most engagement and business results for local service businesses."
   },
   {
-    question: "How Does Forte Social™ Pricing Work? 💰",
-    answer:
-      "Forte Social™ works as an add-on to your Forte™ website. Choose Forte Social Essential™ (+$200/month) for consistent posting and engagement, or Forte Social Growth™ (+$350/month) for advanced content creation and community management. Both require an active Forte Foundation™ or Pro™ website. Save with ecosystem packages - like Forte Brand Boost™ which includes website + SEO + social for just $700/month (saving $200/month).",
+    question: "How much content do you create?",
+    answer: "Our Social Media service includes 15 professionally designed posts per month (3-4 per week) across your key platforms, plus Stories and community engagement. All content is custom-created to match your brand and speak directly to your local audience."
   },
   {
-    question: "How Much Content Do You Create? 📅",
-    answer:
-      "Forte Social Essential™ includes 12 posts per month (3 per week) across 2 platforms, while Forte Social Growth™ includes 20 posts per month (5 per week) across 3 platforms, plus Stories and Reels creation. All content is custom-designed to match your brand and engage your audience.",
+    question: "Do you handle customer interactions?",
+    answer: "Absolutely! We monitor and professionally respond to all comments, messages, and reviews within 4 business hours. This includes answering questions, thanking customers, and managing your online reputation."
   },
   {
-    question: "Do You Handle Customer Interactions? 💬",
-    answer:
-      "Absolutely! Both plans include professional monitoring and response to comments, messages, and reviews within business hours. Forte Social Growth™ also includes proactive community management to keep your audience engaged and build stronger customer relationships.",
+    question: "How do you measure success?",
+    answer: "We provide monthly reports showing follower growth, engagement rates, reach, and website traffic from social media. Most clients see 3-5x engagement increases and 25-40% more website visits from social within 90 days."
   },
+  {
+    question: "Can you work with existing social accounts?",
+    answer: "Yes! We can optimize and take over your existing Facebook, Instagram, and Google Business Profile accounts. If you don't have accounts set up, we'll create professional profiles that match your brand."
+  },
+  {
+    question: "What if I want to post something myself?",
+    answer: "No problem! We provide you with access to approve all posts before they go live, and you can always add your own posts. Many clients love being able to share behind-the-scenes moments while we handle the consistent, professional content."
+  }
 ];
 
 export default function SocialMediaPage() {
   const [isMobile, setIsMobile] = useState(false);
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
 
-  // Handle responsive gradient directions
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -49,165 +50,204 @@ export default function SocialMediaPage() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const gradientConfig = {
-    leftColumn: {
-      desktop: "269deg",
-      mobile: "180deg"
-    },
-    centerTop: {
-      desktop: "359deg",
-      mobile: "180deg"
-    },
-    centerMiddle: {
-      desktop: "269deg",
-      mobile: "135deg"
-    },
-    centerBottom: {
-      desktop: "179deg",
-      mobile: "0deg"
-    },
-    rightColumn: {
-      desktop: "459deg",
-      mobile: "0deg"
-    }
+    const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
   };
 
   return (
     <>
       {/* Hero Section */}
-      <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-normal font-roboto flex items-center gap-2 text-blue-600 dark:text-blue-400 mb-4 sm:mb-6">
-          <Icon name="star" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-          Hey there! 👋
-        </span>
-        <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight max-w-4xl text-gray-900 dark:text-gray-100 mb-4 sm:mb-6">
-          Grow Followers, Build Trust, Stay Top-of-Mind
-        </h1>
-        <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 max-w-3xl leading-relaxed">
-          Stop letting your competitors dominate social media while you're buried in your business. We keep you visible, engaging, and top-of-mind with customers who are ready to buy.
-        </p>
+      <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center">
+        <div className="max-w-4xl mx-auto">
+          <span className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm sm:text-base md:text-lg font-medium mb-4 sm:mb-6">
+            <Icon name="star" className="h-4 w-4 sm:h-5 sm:w-5" />
+            Social Media Management
+          </span>
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4 sm:mb-6">
+            Social Media That Actually <span className="text-blue-600">Connects</span>
+          </h1>
+          <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 sm:mb-10 leading-relaxed">
+            Stop letting your competitors dominate social media while you're buried in your business. We keep you visible, engaging, and top-of-mind with customers who are ready to buy.
+          </p>
+          <LightButton href="/contact" className="text-lg px-8 py-4">
+            Get Started Today
+          </LightButton>
+        </div>
       </section>
 
-      {/* Problem-Solution Section */}
-      <section className="w-full bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 dark:text-gray-100 mb-8 sm:mb-12 text-center">
-            Social Media That Actually Drives Business
-          </h2>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mb-12">
-            {/* Problem Statement */}
-            <div className="bg-red-50 dark:bg-red-900/20 rounded-xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-semibold text-red-800 dark:text-red-300 mb-4 flex items-center gap-2">
-                <span>❌</span> The Problem You're Facing
-              </h3>
-              <ul className="space-y-3 text-sm sm:text-base text-red-700 dark:text-red-200">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">×</span>
-                  <span>You know you need to be on social media, but posting consistently feels impossible</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">×</span>
-                  <span>Your competitors are more active online and getting the customers you should have</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">×</span>
-                  <span>You've tried posting yourself, but engagement is low and it takes forever</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">×</span>
-                  <span>Managing multiple platforms while running your business is overwhelming</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">×</span>
-                  <span>You're missing out on local customers who discover businesses through social media</span>
-                </li>
-              </ul>
-            </div>
-            
-            {/* Solution & Benefits */}
-            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-semibold text-green-800 dark:text-green-300 mb-4 flex items-center gap-2">
-                <span>✅</span> The Forte Social™ Solution
-              </h3>
-              <ul className="space-y-3 text-sm sm:text-base text-green-700 dark:text-green-200 mb-6">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Professional content calendar with 3-5 posts per week across your key platforms</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Custom-designed posts that reflect your brand and engage your local audience</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>We handle all comments, messages, and customer interactions professionally</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Focus on Facebook, Instagram, and Google Business Profile where customers actually are</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  <span>Monthly growth reports showing engagement and reach</span>
-                </li>
-              </ul>
+      {/* Problem Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-800/50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+              The Social Media Reality Check
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              See yourself in this? You're not alone.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+            {/* Before (Problems) */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-red-200 dark:border-red-800">
+              <div className="text-center mb-8">
+                <div className="text-6xl mb-4">😤</div>
+                <h3 className="text-2xl font-bold text-red-700 dark:text-red-300 mb-2">Before Forte Social™</h3>
+                <p className="text-red-600 dark:text-red-400">What most business owners deal with</p>
+              </div>
               
-              <div className="bg-green-100 dark:bg-green-800/30 rounded-lg p-4">
-                <p className="text-sm sm:text-base font-medium text-green-800 dark:text-green-200">
-                  <span className="font-bold">Expected Results:</span> 3-5x more social engagement, consistent brand visibility, increased local awareness, and more website traffic from social platforms within the first 90 days.
-                </p>
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-red-500 text-xl mt-1">✗</span>
+                  <p className="text-gray-700 dark:text-gray-300">You know you need to be on social media, but posting consistently feels impossible</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-red-500 text-xl mt-1">✗</span>
+                  <p className="text-gray-700 dark:text-gray-300">Your competitors are more active online and getting the customers you should have</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-red-500 text-xl mt-1">✗</span>
+                  <p className="text-gray-700 dark:text-gray-300">You've tried posting yourself, but engagement is low and it takes forever</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-red-500 text-xl mt-1">✗</span>
+                  <p className="text-gray-700 dark:text-gray-300">Managing multiple platforms while running your business is overwhelming</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-red-500 text-xl mt-1">✗</span>
+                  <p className="text-gray-700 dark:text-gray-300">You're missing out on local customers who discover businesses through social media</p>
+                </div>
+              </div>
+            </div>
+
+            {/* After (Solution) */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-green-200 dark:border-green-800">
+              <div className="text-center mb-8">
+                <div className="text-6xl mb-4">🚀</div>
+                <h3 className="text-2xl font-bold text-green-700 dark:text-green-300 mb-2">With Forte Social™</h3>
+                <p className="text-green-600 dark:text-green-400">What our clients experience</p>
+              </div>
+              
+              <div className="space-y-4">
+                <div className="flex items-start gap-3">
+                  <span className="text-green-500 text-xl mt-1">✓</span>
+                  <p className="text-gray-700 dark:text-gray-300">Professional content calendar with 3-4 posts per week across your key platforms</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-green-500 text-xl mt-1">✓</span>
+                  <p className="text-gray-700 dark:text-gray-300">Custom-designed posts that reflect your brand and engage your local audience</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-green-500 text-xl mt-1">✓</span>
+                  <p className="text-gray-700 dark:text-gray-300">We handle all comments, messages, and customer interactions professionally</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-green-500 text-xl mt-1">✓</span>
+                  <p className="text-gray-700 dark:text-gray-300">Focus on Facebook, Instagram, and Google Business Profile where customers actually are</p>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-green-500 text-xl mt-1">✓</span>
+                  <p className="text-gray-700 dark:text-gray-300">Monthly growth reports showing engagement and reach</p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Case Study Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-pink-50 to-blue-50 dark:from-pink-900/20 dark:to-blue-900/20 rounded-xl mx-4 sm:mx-6 lg:mx-8 mb-12">
-        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Forte Social™ Solution Grid */}
+      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-900">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-              Real Social Media Success Story
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+              How Forte Social™ Works
             </h2>
-            <p className="text-gray-700 dark:text-gray-300 text-lg">
-              How consistent social presence transformed a local business
+            <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              Professional social media management that actually drives business results
             </p>
           </div>
 
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8">
+              <div className="text-4xl mb-4">📅</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Content Planning</h3>
+              <p className="text-gray-700 dark:text-gray-300">Custom content calendars tailored to your business, industry, and local community events.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-purple-50 to-pink-100 dark:from-purple-900/20 dark:to-pink-900/20 rounded-2xl p-8">
+              <div className="text-4xl mb-4">🎨</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Brand-Matched Design</h3>
+              <p className="text-gray-700 dark:text-gray-300">Every post designed to match your brand colors, fonts, and voice for consistent recognition.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-green-50 to-teal-100 dark:from-green-900/20 dark:to-teal-900/20 rounded-2xl p-8">
+              <div className="text-4xl mb-4">🎯</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Local Focus</h3>
+              <p className="text-gray-700 dark:text-gray-300">Content that speaks directly to your local market and showcases your community involvement.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-orange-50 to-red-100 dark:from-orange-900/20 dark:to-red-900/20 rounded-2xl p-8">
+              <div className="text-4xl mb-4">💬</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Community Management</h3>
+              <p className="text-gray-700 dark:text-gray-300">We respond to comments, messages, and reviews to keep your audience engaged and happy.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-yellow-50 to-orange-100 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-2xl p-8">
+              <div className="text-4xl mb-4">📊</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Performance Tracking</h3>
+              <p className="text-gray-700 dark:text-gray-300">Monthly reports showing follower growth, engagement rates, and website traffic from social.</p>
+            </div>
+
+            <div className="bg-gradient-to-br from-cyan-50 to-blue-100 dark:from-cyan-900/20 dark:to-blue-900/20 rounded-2xl p-8">
+              <div className="text-4xl mb-4">⚡</div>
+              <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-4">Quick Response</h3>
+              <p className="text-gray-700 dark:text-gray-300">All customer interactions handled within 4 business hours to maintain professional image.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Case Study Spotlight */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-pink-50 to-blue-50 dark:from-pink-900/20 dark:to-blue-900/20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+              Case Study Spotlight
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Real results from real businesses
+            </p>
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-2xl">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
               {/* Client Info */}
               <div>
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-pink-100 dark:bg-pink-900/40 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">💄</span>
+                  <div className="w-16 h-16 bg-gradient-to-br from-orange-400 to-pink-500 rounded-2xl flex items-center justify-center">
+                    <span className="text-2xl">☕</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100">Luxe Beauty Salon</h3>
-                    <p className="text-gray-700 dark:text-gray-300">Local beauty salon</p>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">Main Street Coffee Co.</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Local coffee shop & bakery</p>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
-                    <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">
-                      The Challenge
-                    </h4>
-                    <p className="text-red-700 dark:text-red-300 text-sm">
-                      Sporadic posting, inconsistent branding, and barely any engagement. Their social media looked unprofessional and wasn't bringing in new clients. Owner was too busy running the salon to manage social.
+                <div className="space-y-6">
+                  <div className="bg-red-50 dark:bg-red-900/20 p-6 rounded-xl border border-red-200 dark:border-red-700">
+                    <h4 className="font-bold text-red-800 dark:text-red-200 mb-3">The Challenge</h4>
+                    <p className="text-red-700 dark:text-red-300">
+                      Inconsistent posting, photos of food looked unprofessional, and barely any customer engagement. They were losing customers to the trendy coffee chain that just opened across the street.
                     </p>
                   </div>
 
-                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-                    <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
-                      Our Social Strategy
-                    </h4>
-                    <ul className="text-blue-700 dark:text-blue-300 text-sm space-y-1">
-                      <li>• Created cohesive brand aesthetic across all platforms</li>
-                      <li>• Developed content calendar showcasing services & results</li>
-                      <li>• Engaged with local community and beauty influencers</li>
-                      <li>• Used strategic hashtags and location targeting</li>
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700">
+                    <h4 className="font-bold text-blue-800 dark:text-blue-200 mb-3">Our Strategy</h4>
+                    <ul className="text-blue-700 dark:text-blue-300 space-y-2">
+                      <li>• Professional food photography and lifestyle content</li>
+                      <li>• Daily specials and behind-the-scenes content</li>
+                      <li>• Customer feature posts and community involvement</li>
+                      <li>• Local event promotion and partnerships</li>
                     </ul>
                   </div>
                 </div>
@@ -215,50 +255,50 @@ export default function SocialMediaPage() {
 
               {/* Results */}
               <div>
-                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-                  <h4 className="font-semibold text-green-800 dark:text-green-200 mb-4">
-                    The Results (6 Months)
+                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl border border-green-200 dark:border-green-700">
+                  <h4 className="font-bold text-green-800 dark:text-green-200 mb-6 text-center">
+                    6-Month Results
                   </h4>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="grid grid-cols-2 gap-4 mb-8">
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        425%
+                      <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                        340%
                       </div>
                       <div className="text-sm text-green-700 dark:text-green-300">
                         Follower Growth
                       </div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        850%
+                      <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                        520%
                       </div>
                       <div className="text-sm text-green-700 dark:text-green-300">
-                        Engagement Increase
+                        Engagement Rate
                       </div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        35%
+                      <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                        45%
                       </div>
                       <div className="text-sm text-green-700 dark:text-green-300">
-                        New Clients from Social
+                        New Customers from Social
                       </div>
                     </div>
                     <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        15+
+                      <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                        $8,400
                       </div>
                       <div className="text-sm text-green-700 dark:text-green-300">
-                        Bookings per Month
+                        Monthly Revenue Increase
                       </div>
                     </div>
                   </div>
 
-                  <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300">
-                    "I finally have a professional social presence that brings in real clients. My booking calendar is fuller than it's ever been, and I can focus on what I love - making people beautiful."
-                    <footer className="text-sm mt-2 not-italic">
-                      — Maria Rodriguez, Luxe Beauty Salon
+                  <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300 text-center">
+                    "Our social media went from embarrassing to enviable. Now customers come in saying they follow us online, and we're busier than ever. That coffee chain across the street? They're struggling while we're thriving."
+                    <footer className="text-sm mt-2 not-italic font-medium">
+                      — Sarah Chen, Owner
                     </footer>
                   </blockquote>
                 </div>
@@ -268,287 +308,283 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
-      <section className="w-full bg-white dark:bg-gray-900 py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 dark:text-gray-100 mb-6 sm:mb-8">
-            Here's the Thing About Social Media...
+      {/* Why Social Media Matters Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-12 text-center">
+            Why Social Media Matters for Your Business
           </h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 bg-gray-50 dark:bg-gray-800 rounded-[20px] w-full">
-            <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-14 p-6 sm:p-8 md:p-10 lg:p-[60px] order-2 lg:order-1 text-left">
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Content */}
+            <div className="space-y-8">
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter text-gray-900 dark:text-gray-100 mb-2 sm:mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                   It's About Building Relationships
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   Your customers scroll social media every day. When they see your business sharing helpful tips, community events, or behind-the-scenes moments, you become the obvious choice when they need your services.
                 </p>
               </div>
+              
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter text-gray-900 dark:text-gray-100 mb-2 sm:mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                   Consistency Is Everything
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   Posting once in a while doesn't cut it. Your audience needs to see you regularly to remember you exist. We keep you visible with content that actually matters to your local community.
                 </p>
               </div>
+              
               <div>
-                <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter text-gray-900 dark:text-gray-100 mb-2 sm:mb-3">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
                   It Supports Everything Else
                 </h3>
-                <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   Social media makes your website, Google ads, and word-of-mouth marketing work better. When people hear about you, they check you out online—and active social profiles build instant credibility.
                 </p>
               </div>
             </div>
-            <div className="flex items-center justify-center p-6 sm:p-8 md:p-10 lg:p-[60px] order-1 lg:order-2">
-              <div className="w-full h-64 sm:h-80 lg:h-96 flex items-center justify-center">
-                <div className="relative w-48 h-48 sm:w-64 sm:h-64 lg:w-80 lg:h-80">
-                  {/* Social Media Growth Animation */}
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-blue-500/20 rounded-full backdrop-blur-sm animate-pulse"></div>
-                  <div className="absolute inset-6 bg-gradient-to-l from-cyan-500/30 via-blue-500/30 to-indigo-500/30 rounded-full backdrop-blur-sm" style={{
-                    animation: 'spin 15s linear infinite'
-                  }}></div>
-                  <div className="absolute inset-12 bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full backdrop-blur-sm" style={{
-                    animation: 'bounce 3s ease-in-out infinite'
-                  }}></div>
-                  
-                  {/* Center content */}
-                  <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
-                    <div className="text-4xl sm:text-5xl lg:text-6xl mb-3 sm:mb-4" style={{
-                      animation: 'bounce 2s ease-in-out infinite'
-                    }}>📱</div>
-                    <div className="text-sm sm:text-lg lg:text-xl font-semibold text-gray-800 dark:text-gray-200">
-                      Social Engagement
-                    </div>
-                  </div>
 
-                  {/* Floating particles */}
-                  <div className="absolute top-8 left-8 w-3 h-3 bg-blue-400 rounded-full animate-ping"></div>
-                  <div className="absolute top-16 right-12 w-2 h-2 bg-purple-400 rounded-full" style={{
-                    animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
-                    animationDelay: '0.5s'
-                  }}></div>
-                  <div className="absolute bottom-12 left-16 w-4 h-4 bg-pink-400 rounded-full" style={{
-                    animation: 'ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite',
-                    animationDelay: '1s'
-                  }}></div>
-                  <div className="absolute bottom-8 right-8 w-2 h-2 bg-cyan-400 rounded-full animate-ping" style={{
-                    animationDelay: '1.5s'
-                  }}></div>
+            {/* Visual Element */}
+            <div className="flex items-center justify-center">
+              <div className="relative w-80 h-80">
+                {/* Animated Social Growth Visualization */}
+                <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-blue-500/20 rounded-full animate-pulse"></div>
+                <div className="absolute inset-6 bg-gradient-to-l from-cyan-500/30 via-blue-500/30 to-indigo-500/30 rounded-full" 
+                     style={{ animation: 'spin 20s linear infinite' }}></div>
+                <div className="absolute inset-12 bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full" 
+                     style={{ animation: 'bounce 3s ease-in-out infinite' }}></div>
+                
+                {/* Center content */}
+                <div className="absolute inset-0 flex flex-col items-center justify-center text-center">
+                  <div className="text-6xl mb-4" style={{ animation: 'bounce 2s ease-in-out infinite' }}>📱</div>
+                  <div className="text-xl font-bold text-gray-800 dark:text-gray-200">Social Growth</div>
                 </div>
+
+                {/* Floating elements */}
+                <div className="absolute top-8 left-8 text-2xl animate-ping">💬</div>
+                <div className="absolute top-16 right-12 text-lg" 
+                     style={{ animation: 'ping 2s infinite', animationDelay: '0.5s' }}>❤️</div>
+                <div className="absolute bottom-12 left-16 text-2xl" 
+                     style={{ animation: 'ping 2.5s infinite', animationDelay: '1s' }}>📍</div>
+                <div className="absolute bottom-8 right-8 text-lg animate-ping" 
+                     style={{ animationDelay: '1.5s' }}>🔔</div>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100 py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 min-h-screen flex flex-col items-center justify-center">
-        <div className="text-center mb-8 sm:mb-10 md:mb-12">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-900 dark:text-gray-100">
-            What You Get With Our Social Media Management:
+      {/* Package Details Table */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-800/50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+              What's Included in Your Social Media Management
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Everything you need for a professional social media presence
+            </p>
+          </div>
+
+          <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-2xl overflow-hidden">
+            <div className="overflow-x-auto">
+              <table className="w-full">
+                <thead className="bg-gradient-to-r from-blue-600 to-purple-600 text-white">
+                  <tr>
+                    <th className="px-6 py-4 text-left text-lg font-bold">Feature</th>
+                    <th className="px-6 py-4 text-center text-lg font-bold">Forte Social™</th>
+                  </tr>
+                </thead>
+                <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
+                  <tr>
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Monthly Posts</td>
+                    <td className="px-6 py-4 text-center text-green-600 dark:text-green-400 font-bold">15 posts (3-4/week)</td>
+                  </tr>
+                  <tr className="bg-gray-50 dark:bg-gray-700/50">
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Platforms Covered</td>
+                    <td className="px-6 py-4 text-center text-gray-700 dark:text-gray-300">Facebook, Instagram, Google Business Profile</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Custom Graphics & Design</td>
+                    <td className="px-6 py-4 text-center text-green-600 dark:text-green-400">✓</td>
+                  </tr>
+                  <tr className="bg-gray-50 dark:bg-gray-700/50">
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Content Calendar Planning</td>
+                    <td className="px-6 py-4 text-center text-green-600 dark:text-green-400">✓</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Community Management</td>
+                    <td className="px-6 py-4 text-center text-green-600 dark:text-green-400">✓ (4-hour response time)</td>
+                  </tr>
+                  <tr className="bg-gray-50 dark:bg-gray-700/50">
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Review Monitoring & Response</td>
+                    <td className="px-6 py-4 text-center text-green-600 dark:text-green-400">✓</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Monthly Growth Reports</td>
+                    <td className="px-6 py-4 text-center text-green-600 dark:text-green-400">✓</td>
+                  </tr>
+                  <tr className="bg-gray-50 dark:bg-gray-700/50">
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Local Community Focus</td>
+                    <td className="px-6 py-4 text-center text-green-600 dark:text-green-400">✓</td>
+                  </tr>
+                  <tr>
+                    <td className="px-6 py-4 font-medium text-gray-900 dark:text-gray-100">Brand-Matched Design</td>
+                    <td className="px-6 py-4 text-center text-green-600 dark:text-green-400">✓</td>
+                  </tr>
+                  <tr className="bg-blue-50 dark:bg-blue-900/20">
+                    <td className="px-6 py-4 font-bold text-lg text-gray-900 dark:text-gray-100">Monthly Investment</td>
+                    <td className="px-6 py-4 text-center text-2xl font-bold text-blue-600 dark:text-blue-400">$200/month</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">
+              * Requires active Forte Foundation™ or Pro™ website
+            </p>
+            <p className="text-sm text-gray-500 dark:text-gray-500">
+              💡 <strong>Popular Combo:</strong> Forte Foundation™ + Social = $400/month total
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Pricing Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+            Simple, Transparent Pricing
           </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 max-w-6xl mx-auto w-full items-center">
-          {/* Left Column */}
-          <div className="flex flex-col gap-4 sm:gap-6">
-            <div
-              className="inline-block p-[1px] rounded-[20px]"
-              style={{
-                background: `linear-gradient(${isMobile ? gradientConfig.leftColumn.mobile : gradientConfig.leftColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
-              }}
-            >
-              <div className="bg-white dark:bg-gray-800 border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-gray-900 dark:text-gray-100 p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-gray-700">
-                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">Content That Connects</h5>
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                  Posts designed to reflect your brand and actually engage your local audience
-                </p>
-              </div>
-            </div>
-
-            <div
-              className="inline-block p-[1px] rounded-[20px]"
-              style={{
-                background: `linear-gradient(${isMobile ? gradientConfig.leftColumn.mobile : gradientConfig.leftColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
-              }}
-            >
-              <div className="bg-white dark:bg-gray-800 border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-gray-900 dark:text-gray-100 p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-gray-700">
-                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">Smart Planning</h5>
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                  Monthly calendars that keep your message consistent and on-brand
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Center Column */}
-          <div className="flex flex-col items-center gap-4 sm:gap-6">
-            <div
-              className="inline-block p-[1px] rounded-[20px]"
-              style={{
-                background: `linear-gradient(${isMobile ? gradientConfig.centerTop.mobile : gradientConfig.centerTop.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
-              }}
-            >
-              <div className="bg-white dark:bg-gray-800 border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-gray-900 dark:text-gray-100 p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-gray-700 w-full">
-                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">
-                  Platform Management
-                </h5>
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                  Facebook, Instagram, and Google Business Profile covered
-                </p>
-              </div>
-            </div>
-            <div
-              className="inline-block p-[1px] rounded-[20px]"
-              style={{
-                background: `linear-gradient(${isMobile ? gradientConfig.centerMiddle.mobile : gradientConfig.centerMiddle.desktop}, #203FFC 100%, transparent 100%, black 100%)`,
-              }}
-            >
-              <div className="bg-white dark:bg-gray-800 border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-gray-900 dark:text-gray-100 p-8 sm:p-10 md:p-12 lg:p-14 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)] border dark:border-gray-700 w-full">
-                {/* Social Media Growth Animation */}
-                <div className="flex justify-center items-center w-48 sm:w-56 md:w-64 lg:w-[270px] h-40 sm:h-48 md:h-56 lg:h-[250px] mx-auto relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-pink-500/20 via-purple-500/20 to-blue-500/20 rounded-full backdrop-blur-sm animate-pulse"></div>
-                  <div className="absolute inset-6 bg-gradient-to-l from-cyan-500/30 via-blue-500/30 to-indigo-500/30 rounded-full backdrop-blur-sm" style={{
-                    animation: 'spin 15s linear infinite'
-                  }}></div>
-                  <div className="absolute inset-12 bg-gradient-to-r from-purple-500/40 to-pink-500/40 rounded-full backdrop-blur-sm" style={{
-                    animation: 'bounce 3s ease-in-out infinite'
-                  }}></div>
-                  
-                  {/* Center content */}
-                  <div className="relative z-10 text-center">
-                    <div className="text-3xl sm:text-4xl md:text-5xl mb-2 sm:mb-4" style={{
-                      animation: 'bounce 2s ease-in-out infinite'
-                    }}>📱</div>
-                    <div className="text-base sm:text-lg font-semibold text-gray-900 dark:text-gray-100">Social Growth</div>
-                  </div>
-
-                  {/* Floating social icons */}
-                  <div className="absolute top-8 left-8 text-lg animate-ping">💬</div>
-                  <div className="absolute top-16 right-12 text-sm" style={{
-                    animation: 'ping 2s cubic-bezier(0, 0, 0.2, 1) infinite',
-                    animationDelay: '0.5s'
-                  }}>❤️</div>
-                  <div className="absolute bottom-12 left-16 text-lg" style={{
-                    animation: 'ping 2.5s cubic-bezier(0, 0, 0.2, 1) infinite',
-                    animationDelay: '1s'
-                  }}>📍</div>
-                  <div className="absolute bottom-8 right-8 text-sm animate-ping" style={{
-                    animationDelay: '1.5s'
-                  }}>🔔</div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="inline-block p-[1px] rounded-[20px]"
-              style={{
-                background: `linear-gradient(${isMobile ? gradientConfig.centerBottom.mobile : gradientConfig.centerBottom.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
-              }}
-            >
-              <div className="bg-white dark:bg-gray-800 border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-gray-900 dark:text-gray-100 p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-gray-700 w-full">
-                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">
-                  Growth Reports
-                </h5>
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                  Simple stats to show growth, engagement, and ROI
-                </p>
-              </div>
-            </div>
-          </div>
-
-          {/* Right Column */}
-          <div className="flex flex-col gap-4 sm:gap-6">
-            <div
-              className="inline-block p-[1px] rounded-[20px]"
-              style={{
-                background: `linear-gradient(${isMobile ? gradientConfig.rightColumn.mobile : gradientConfig.rightColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
-              }}
-            >
-              <div className="bg-white dark:bg-gray-800 border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-gray-900 dark:text-gray-100 p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-gray-700">
-                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">
-                  We Handle the Conversations
-                </h5>
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                  We monitor and respond to comments and messages professionally
-                </p>
-              </div>
-            </div>
-            <div
-              className="inline-block p-[1px] rounded-[20px]"
-              style={{
-                background: `linear-gradient(${isMobile ? gradientConfig.rightColumn.mobile : gradientConfig.rightColumn.desktop}, #203FFC 30%, transparent 100%, black 100%)`,
-              }}
-            >
-              <div className="bg-white dark:bg-gray-800 border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-gray-900 dark:text-gray-100 p-6 sm:p-8 md:p-9 rounded-[20px] text-center dark:shadow-md border dark:border-gray-700">
-                <h5 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium mb-3 sm:mb-4">Local Focus</h5>
-                <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300">
-                  Everything we do is tailored to your local market and ideal customers
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="bg-white dark:bg-gray-900 py-16 sm:py-20 md:py-24 lg:py-32">
-        <div className="container mx-auto flex flex-col gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 xl:px-16 items-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter text-gray-900 dark:text-gray-100 text-center mb-4 sm:mb-6 md:mb-9">
-            Quick Questions...
-          </h2>
-
-          {faqData?.map((faq, index) => (
-            <details
-              key={index}
-              className="bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 md:p-8 rounded-2xl transition-all duration-300 w-full max-w-4xl group"
-              open={index === 0}
-            >
-              <summary className="flex justify-between items-center cursor-pointer list-none">
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter text-gray-900 dark:text-gray-100 leading-tight pr-4">
-                  {faq.question}
-                </h2>
-                <button className="transform transition-transform duration-300 flex-shrink-0 group-open:rotate-[270deg] rotate-90">
-                  <svg
-                    viewBox="0 0 7 13"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="h-3 w-2 sm:h-[14px] sm:w-2 transition-transform duration-300"
-                  >
-                    <path
-                      d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
-                  0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
-                  7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
-                      className="fill-gray-900 dark:fill-gray-100"
-                    />
-                  </svg>
-                </button>
-              </summary>
-              <div className="mt-3 sm:mt-4">
-                <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
-                  {faq.answer}
-                </p>
-              </div>
-            </details>
-          ))}
-        </div>
-        <div className="flex justify-center mt-8 sm:mt-12 px-4">
-          <LightButton href="/contact">Grow My Social Following</LightButton>
-        </div>
-      </section>
-      <section className="bg-white dark:bg-gray-900 py-16 sm:py-20 md:py-24 lg:py-32 text-center px-4 sm:px-6 lg:px-8">
-        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter text-gray-900 dark:text-gray-100 mb-6 sm:mb-8">
-          Ready to Build Your Social Media Presence?
-        </h2>
-        <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-700 dark:text-gray-300 max-w-4xl mx-auto mb-8 sm:mb-12">
-          Add Forte Social™ to your existing Forte Foundation™ or Pro™ website. Plans start at just +$200/month and scale with your growth goals.
-        </p>
-        <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-2xl mx-auto mb-8">
-          <p className="text-sm text-gray-700 dark:text-gray-300">
-            💡 <strong>Small Business Tip:</strong> Most restaurants and service businesses love Foundation + Social Essential™ ($400/month total)
+          <p className="text-xl text-gray-600 dark:text-gray-400 mb-12">
+            Professional social media management that fits your budget
           </p>
-        </div>
 
-        <div className="text-left">
-          <PricingPage />
+          <div className="bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-3xl p-8 shadow-2xl">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">Forte Social™</h3>
+              <div className="mb-6">
+                <span className="text-5xl font-bold text-blue-600 dark:text-blue-400">$200</span>
+                <span className="text-xl text-gray-600 dark:text-gray-400">/month</span>
+              </div>
+              
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 mb-8 text-left">
+                <h4 className="font-bold text-gray-900 dark:text-gray-100 mb-4">Everything You Need:</h4>
+                <ul className="space-y-3">
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-lg">✓</span>
+                    <span className="text-gray-700 dark:text-gray-300">15 professional posts per month across Facebook, Instagram & Google Business Profile</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-lg">✓</span>
+                    <span className="text-gray-700 dark:text-gray-300">Custom graphics and content that match your brand</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-lg">✓</span>
+                    <span className="text-gray-700 dark:text-gray-300">Community management with 4-hour response time</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-lg">✓</span>
+                    <span className="text-gray-700 dark:text-gray-300">Monthly growth reports and analytics</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-500 text-lg">✓</span>
+                    <span className="text-gray-700 dark:text-gray-300">Content calendar with local community focus</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-blue-100 dark:bg-blue-900/30 rounded-xl p-4 mb-6">
+                <p className="text-sm text-blue-800 dark:text-blue-200">
+                  <strong>Requirements:</strong> Active Forte Foundation™ or Pro™ website required. 
+                  Add to any existing Forte™ package for just $200/month.
+                </p>
+              </div>
+
+              <LightButton href="/contact" className="w-full text-lg py-4">
+                Start Growing Your Social Presence
+              </LightButton>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-800/50 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-xl text-gray-600 dark:text-gray-400">
+              Everything you need to know about our social media management
+            </p>
+          </div>
+
+          <div className="space-y-6">
+            {faqData.map((faq, index) => (
+              <div 
+                key={index} 
+                className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg overflow-hidden"
+              >
+                <button
+                  className="w-full px-8 py-6 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                  onClick={() => toggleFAQ(index)}
+                >
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100 pr-4">
+                    {faq.question}
+                  </h3>
+                  <span className={`text-2xl text-blue-600 dark:text-blue-400 transition-transform duration-300 ${openFAQ === index ? 'rotate-45' : ''}`}>
+                    +
+                  </span>
+                </button>
+                {openFAQ === index && (
+                  <div className="px-8 pb-6 text-gray-700 dark:text-gray-300 leading-relaxed">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA Section */}
+      <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
+            Ready to Transform Your Social Media?
+          </h2>
+          <p className="text-xl mb-8 opacity-90 leading-relaxed">
+            Stop watching your competitors get all the social media attention. Let's build your professional presence and start connecting with customers who are ready to buy.
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+            <div className="text-center">
+              <div className="text-3xl mb-2">🚀</div>
+              <div className="text-sm font-medium opacity-90">Launch in 7 days</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">📱</div>
+              <div className="text-sm font-medium opacity-90">3 platforms managed</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl mb-2">📈</div>
+              <div className="text-sm font-medium opacity-90">Growth guaranteed</div>
+            </div>
+          </div>
+
+          <LightButton href="/contact" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-4">
+            Let's Grow Your Following
+          </LightButton>
+          
+          <p className="text-sm mt-4 opacity-75">
+            Add to any Forte™ website package • No long-term contracts • Cancel anytime
+          </p>
         </div>
       </section>
     </>
