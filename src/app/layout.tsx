@@ -14,6 +14,10 @@ import ResourceHints from "@/components/performance/ResourceHints";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import GoogleBusinessSchema from "@/components/seo/GoogleBusinessSchema";
 
+// Apple-style system font stack (mimics SF Pro Display/Text)
+// Note: We'll define this directly in CSS variables since it's a system font stack
+
+// Backup: Original fonts (commented out for easy revert)
 const roboto = Roboto({
   variable: "--font-roboto",
   weight: ["300", "400", "500", "700"],
@@ -184,7 +188,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${roboto.variable} ${inter.variable} ${interDisplay.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
+      <body className={`font-apple-system antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
         <CriticalCSS />
         <ResourceHints />
         <JavaScriptOptimizer />
