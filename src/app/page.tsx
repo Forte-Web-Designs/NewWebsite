@@ -775,7 +775,7 @@ export default function Home() {
                 <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
                   Whether you start with just a website or go full ecosystem, we build, optimize, and manage it all—so you can stay focused on your business.
                 </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <LightButton href="/ecosystem" className="bg-blue-600 text-white hover:bg-blue-700">
                     Learn About the Ecosystem
                   </LightButton>

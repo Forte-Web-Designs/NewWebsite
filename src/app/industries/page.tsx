@@ -358,7 +358,7 @@ export default function IndustriesPage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <DarkButton href="/contact" className="bg-orange-600 hover:bg-orange-700">
-                Discuss My Industry - $200/mo
+                Discuss My Industry
               </DarkButton>
               <Link href="/checkup" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                 Get Free Industry Analysis
