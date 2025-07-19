@@ -684,9 +684,9 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         {/* Desktop Results */}
         {desktopData && (
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-4 md:justify-start justify-center">
               <div className="text-2xl">🖥️</div>
-              <div>
+              <div className="md:text-left text-center">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white">Desktop Results</h3>
                 <div className={`text-2xl font-bold ${desktopData.overallGrade.color}`}>
                   {desktopData.overallGrade.grade} - {desktopData.overallScore}/100
@@ -725,9 +725,9 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         {/* Mobile Results */}
         {mobileData && (
           <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-4">
-            <div className="flex items-center gap-3 mb-4">
+            <div className="flex items-center gap-3 mb-4 md:justify-start justify-center">
               <div className="text-2xl">📱</div>
-              <div>
+              <div className="md:text-left text-center">
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white">Mobile Results</h3>
                 <div className={`text-2xl font-bold ${mobileData.overallGrade.color}`}>
                   {mobileData.overallGrade.grade} - {mobileData.overallScore}/100
