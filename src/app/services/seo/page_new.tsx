@@ -515,7 +515,7 @@ export default function SeoDesignPage() {
                   Choose the Right SEO Plan for Your Goals
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-                  Requires a Forte Foundation™ or Pro™ website. Save with our Growth Bundle or Dominate Bundle.
+                  Requires a Forte Foundation™ or Pro™ website design package. Save with our Growth Bundle or Dominate Bundle.
                 </p>
               </div>
 

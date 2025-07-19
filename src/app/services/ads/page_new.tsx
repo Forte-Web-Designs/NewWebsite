@@ -19,7 +19,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Do I need a Forte website to use PPC?",
-    answer: "Yes — landing pages matter. All campaigns are built on your Forte Foundation™ or Pro™ site. We need conversion-focused pages to maximize your ad spend.",
+    answer: "Yes — landing pages matter. All campaigns are built on your Forte Foundation™ or Pro™ website design package. We need conversion-focused pages to maximize your ad spend.",
   },
   {
     question: "Can I cancel after a few months?",

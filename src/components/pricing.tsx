@@ -678,7 +678,7 @@ export function PricingPage() {
               Start Your Forte™ Ecosystem
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-              Choose your foundation plan, then add services as your business grows.
+              Choose your website design foundation, then add services as your business grows.
             </p>
             
             <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-3xl mx-auto mb-8 border border-blue-200 dark:border-blue-700">

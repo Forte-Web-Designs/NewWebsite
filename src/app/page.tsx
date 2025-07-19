@@ -866,18 +866,19 @@ export default function Home() {
                 Start Your Growth Journey for <span className="text-blue-600">$200/Month</span>
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Why spend $5,000+ upfront when you can start building your success today? Our Foundation Plan gets you a professional website that actually works — for the cost of a few dinners out.
+                Why spend $5,000+ upfront when you can start building your success today? Our Foundation™ website design package gets you a professional website that actually works — for the cost of a few dinners out.
               </p>
             </div>
 
             <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {/* Foundation Plan - Primary */}
+              {/* Foundation™ Website Design Package - Primary */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border-2 border-blue-500 shadow-xl relative transform hover:scale-105 transition-all duration-300">
                 <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                   <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
                 </div>
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Foundation</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Foundation™</h3>
+                  <div className="text-xs font-semibold text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full mb-2">Website Design Package</div>
                   <div className="text-4xl font-bold text-blue-600 mb-2">$200<span className="text-lg text-gray-500">/mo</span></div>
                   <p className="text-gray-600 dark:text-gray-400">Perfect starting point for serious businesses</p>
                 </div>
@@ -904,14 +905,15 @@ export default function Home() {
                   </li>
                 </ul>
                 <Link href="/pricing#foundation" className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
-                  Start at $200/mo
+                  Start Foundation™
                 </Link>
               </div>
 
               {/* Growth Package */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Growth</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Growth™</h3>
+                  <div className="text-xs font-semibold text-green-600 bg-green-50 dark:bg-green-900/30 px-3 py-1 rounded-full mb-2">Website + SEO Services Bundle</div>
                   <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">$500<span className="text-lg text-gray-500">/mo</span></div>
                   <p className="text-gray-600 dark:text-gray-400">Foundation + SEO for visibility</p>
                 </div>
@@ -938,14 +940,15 @@ export default function Home() {
                   </li>
                 </ul>
                 <Link href="/pricing#growth" className="block w-full bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-semibold transition-colors">
-                  Upgrade to Growth
+                  Choose Growth™
                 </Link>
               </div>
 
               {/* Dominate Package */}
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
                 <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Dominate</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Dominate™</h3>
+                  <div className="text-xs font-semibold text-purple-600 bg-purple-50 dark:bg-purple-900/30 px-3 py-1 rounded-full mb-2">Complete Digital Marketing Bundle</div>
                   <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">$1,200<span className="text-lg text-gray-500">/mo</span></div>
                   <p className="text-gray-600 dark:text-gray-400">Complete digital dominance</p>
                 </div>
@@ -972,7 +975,7 @@ export default function Home() {
                   </li>
                 </ul>
                 <Link href="/pricing#dominate" className="block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
-                  Go Full Dominate
+                  Choose Dominate™
                 </Link>
               </div>
             </div>
