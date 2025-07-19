@@ -82,12 +82,12 @@ export default function IndustriesPage() {
     {
       name: 'Electricians',
       icon: '⚡',
-      href: '#',
+      href: '/industries/electricians',
       description: 'Safety-focused websites with clear emergency protocols',
       features: ['Safety Certifications', 'Emergency Services', 'Project Galleries', 'Free Estimates'],
-      available: false,
-      clients: 'Coming Soon',
-      avgIncrease: ''
+      available: true,
+      clients: '14+',
+      avgIncrease: '62%'
     }
   ];
 
