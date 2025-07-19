@@ -1,15 +1,11 @@
-import React from "react";
-import LightButton from "@/components/LightButton";
-import { Icon } from "@/components/images/Icon";
-import { OptimizedImage } from "@/components/images/OptimizedImage";
-import { PricingPage } from "@/components/pricing";
-import { Metadata } from "next";
+"use client";
 
-export const metadata: Metadata = {
-  title: "Google Ads That Actually Work",
-  description:
-    "Professional Google Ads management that gets results. We help small businesses get found and grow with targeted PPC campaigns.",
-};
+import { useState } from "react";
+import LightButton from "@/components/LightButton";
+import DarkButton from "@/components/DarkButton";
+import { Icon } from "@/components/images/Icon";
+import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
+import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 
 type FAQItem = {
   question: string;
@@ -18,415 +14,542 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "How Does Forte PPC™ Pricing Work? 💰",
-    answer:
-      "Forte PPC™ requires an active Forte Foundation™ ($200/month) or Forte Pro™ ($350/month) website. Then add Forte PPC Starter™ (+$400/month) or Forte PPC Growth™ (+$650/month) plus your ad spend budget. For example: Foundation + PPC Starter = $600/month + ad spend.",
+    question: "How much should I spend on Google Ads?",
+    answer: "We recommend $1,000/month to start. You can scale up once we optimize performance and prove ROI with your initial budget.",
   },
   {
-    question: "What's Included in Ad Management? 🎯",
-    answer:
-      "Both plans include full campaign setup, keyword research, ad copy creation, landing page creation, and detailed reporting. Forte PPC Growth™ adds multi-platform campaigns, advanced tracking, and detailed ROI analysis.",
+    question: "Do I need a Forte website to use PPC?",
+    answer: "Yes — landing pages matter. All campaigns are built on your Forte Foundation™ or Pro™ site. We need conversion-focused pages to maximize your ad spend.",
   },
   {
-    question: "How Much Should I Budget for Ad Spend? 💵",
-    answer:
-      "We typically recommend starting with $1,000-3,000/month in ad spend, depending on your market and goals. Our management fee is separate from your ad budget - we'll help you determine the right spend level for maximum ROI.",
+    question: "Can I cancel after a few months?",
+    answer: "Plans require a 12-month minimum commitment, then go month-to-month. This gives us time to properly optimize and scale your campaigns.",
+  },
+  {
+    question: "Will I see results quickly?",
+    answer: "Most campaigns see strong lead flow in the first 30–60 days after optimization. Initial setup and testing typically takes 2-3 weeks.",
   },
 ];
 
 export default function GooglePPCAdsPage() {
+  const [openFAQ, setOpenFAQ] = useState<number | null>(null);
+
+  const toggleFAQ = (index: number) => {
+    setOpenFAQ(openFAQ === index ? null : index);
+  };
+
+  // FAQ Schema for SEO
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqData.map((faq) => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
-    <section className="container max-w-7xl mx-auto flex flex-col items-center px-4 sm:px-6 lg:px-8 py-12 sm:py-16 md:py-20 lg:py-24">
-      <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-normal font-roboto flex items-center gap-2 text-primary-1000 mb-4 sm:mb-6">
-        <Icon name="star" className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6" />
-        Hey there! 👋
-      </span>
-      <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-medium font-roboto leading-tight max-w-4xl dark:text-secondary-1000 text-center mb-4 sm:mb-6">
-        Google Ads That Actually Perform
-      </h1>
-      <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 max-w-3xl text-center leading-relaxed mb-12 sm:mb-16 md:mb-20 lg:mb-24">
-        Stop throwing money at keywords that don't convert. Our Google Ads campaigns are built for your bottom line - driving qualified leads who are ready to buy, not just click.
-      </p>
+    <div className="relative">
+      <SectionBackgroundAnimation />
+      <div className="relative z-10">
+        {/* FAQ Schema Markup */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(faqSchema)
+          }}
+        />
+        
+        {/* Hero Section */}
+        <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
+          <div className="container max-w-7xl mx-auto text-center">
+            <SimpleScrollReveal direction="up" delay={200}>
+              <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full mb-6 border border-blue-200 dark:border-blue-700">
+                <Icon name="star" className="w-4 h-4 text-blue-600" />
+                <span className="text-blue-600 dark:text-blue-400 text-sm font-medium">
+                  Google Ads That Convert
+                </span>
+              </div>
+            
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-roboto leading-tight dark:text-white mb-6 max-w-5xl mx-auto">
+                Google Ads That <span className="text-blue-600 dark:text-blue-400">Actually Perform</span>
+              </h1>
+              
+              <p className="text-xl sm:text-2xl font-normal text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
+                Tired of paying for clicks that don't convert? Our Google Ads are built to deliver ROI — not vanity metrics. We help you turn ad spend into paying customers, fast.
+              </p>
 
-      {/* Problem-Solution Structure */}
-      <div className="py-8 sm:py-12 mb-12">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-          {/* Problem Statement */}
-          <div className="space-y-6">
-            <div className="bg-red-50 dark:bg-red-900/20 rounded-xl p-6 border border-red-200 dark:border-red-800">
-              <h3 className="text-xl font-semibold text-red-800 dark:text-red-200 mb-3">
-                Struggling with Google Ads?
-              </h3>
-              <ul className="space-y-2 text-red-700 dark:text-red-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">×</span>
-                  Spending money on ads but getting few quality leads
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">×</span>
-                  Clicks that don't convert into actual customers
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-red-500 mt-1">×</span>
-                  Competing against big companies with huge ad budgets
-                </li>
-              </ul>
-            </div>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
+                <LightButton href="/contact">Fix My Ads & Get More Leads</LightButton>
+                <DarkButton href="#pricing" className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600">
+                  Book a Free Ad Review
+                </DarkButton>
+              </div>
+            </SimpleScrollReveal>
           </div>
+        </section>
 
-          {/* Solution & Benefits */}
-          <div className="space-y-6">
-            <div className="bg-green-50 dark:bg-green-900/20 rounded-xl p-6 border border-green-200 dark:border-green-800">
-              <h3 className="text-xl font-semibold text-green-800 dark:text-green-200 mb-3">
-                Forte PPC™ Solution
-              </h3>
-              <ul className="space-y-2 text-green-700 dark:text-green-300">
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  Smart targeting to reach customers ready to buy
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  Landing pages optimized for conversions
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-green-500 mt-1">✓</span>
-                  Budget improvements to maximize ROI
-                </li>
-              </ul>
-              <div className="mt-4 p-3 bg-green-100 dark:bg-green-800/30 rounded-lg">
-                <p className="text-sm font-medium text-green-800 dark:text-green-200">
-                  Expected Results: 3-5x return on ad spend within 60 days
+        {/* Common PPC Problems Section */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-red-50 dark:bg-red-900/10">
+          <div className="container max-w-7xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  Struggling with Google Ads? You're Not Alone.
+                </h2>
+              </div>
+
+              <div className="max-w-4xl mx-auto">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-red-200 dark:border-red-700">
+                  <div className="grid md:grid-cols-3 gap-6">
+                    <div className="text-center">
+                      <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl">💸</span>
+                      </div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">High Spend, Low-Quality Leads</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Burning through budget without getting qualified prospects</p>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl">🔄</span>
+                      </div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Clicks That Don't Convert</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Traffic that looks good on paper but never turns into customers</p>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl">🏢</span>
+                      </div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Competing with Giants</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Trying to outbid massive companies on tiny budgets</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Forte PPC™ Solution Section */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+          <div className="container max-w-7xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={400}>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  Smart Ads That Deliver Results
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
+                  We build your campaigns from the ground up — using smart targeting, custom landing pages, and constant optimization to stretch every dollar.
                 </p>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
 
-      {/* Case Study Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl mx-4 sm:mx-6 lg:mx-8 mb-12">
-        <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-2xl md:text-3xl font-bold dark:text-white mb-4">
-              Real Google Ads Success Story
-            </h2>
-            <p className="text-gray-700 dark:text-gray-300 text-lg">
-              How we turned a failing ad campaign into a lead generation machine
-            </p>
-          </div>
-
-          <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              {/* Client Info */}
-              <div>
-                <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center">
-                    <span className="text-2xl">🏠</span>
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200 dark:border-gray-700 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                  <div className="flex items-start gap-3">
+                    <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
+                      <span className="text-green-500 text-xl">✅</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">High-intent keyword targeting</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Reach buyers, not browsers</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold dark:text-white">Summit Roofing</h3>
-                    <p className="text-gray-700 dark:text-gray-300">Local roofing contractor</p>
+
+                  <div className="flex items-start gap-3">
+                    <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
+                      <span className="text-green-500 text-xl">✅</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Landing pages built for conversions</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Turn clicks into customers</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
+                      <span className="text-green-500 text-xl">✅</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Real-time optimization</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Reduce wasted spend daily</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
+                      <span className="text-green-500 text-xl">✅</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Weekly reporting & strategy</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Know exactly what's working</p>
+                    </div>
                   </div>
                 </div>
 
-                <div className="space-y-4">
-                  <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
-                    <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">
-                      The Challenge
-                    </h4>
-                    <p className="text-red-700 dark:text-red-300 text-sm">
-                      $3,500/month ad spend with only 2-3 quality leads. High cost-per-click, poor-quality traffic, and a landing page that wasn't converting. Previous agency focused on clicks, not customers.
+                <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700 text-center">
+                  <p className="text-blue-800 dark:text-blue-200 font-semibold text-lg">
+                    Most clients see 3–5x Return on Ad Spend (ROAS) within the first 60 days.
+                  </p>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Case Study Spotlight */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+          <div className="container max-w-7xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={500}>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  Case Study Spotlight
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                  How we transformed a struggling ad campaign into a lead generation machine
+                </p>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200 dark:border-gray-700 max-w-6xl mx-auto">
+                <div className="grid lg:grid-cols-2 gap-8 items-center">
+                  {/* Client Info */}
+                  <div>
+                    <div className="flex items-center gap-4 mb-8">
+                      <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center">
+                        <span className="text-2xl">🏠</span>
+                      </div>
+                      <div>
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Summit Roofing</h3>
+                        <p className="text-gray-600 dark:text-gray-400">Local roofing contractor</p>
+                      </div>
+                    </div>
+
+                    <div className="space-y-4 mb-8">
+                      <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
+                        <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">
+                          Challenge
+                        </h4>
+                        <p className="text-red-700 dark:text-red-300 text-sm">
+                          $3,500/month ad budget, only 2–3 leads per month
+                        </p>
+                      </div>
+
+                      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                        <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
+                          Fix
+                        </h4>
+                        <ul className="text-blue-700 dark:text-blue-300 text-sm space-y-1">
+                          <li>• Rebuilt campaign targeting local, service-based keywords</li>
+                          <li>• Created service-specific landing pages</li>
+                          <li>• Added negative keywords to filter out bad traffic</li>
+                          <li>• Installed call/conversion tracking</li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Results */}
+                  <div>
+                    <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
+                      <h4 className="font-semibold text-green-800 dark:text-green-200 mb-6 text-center text-xl">
+                        Results (3 Months):
+                      </h4>
+                      
+                      <div className="grid grid-cols-1 gap-6 mb-6">
+                        <div className="grid grid-cols-3 gap-4">
+                          <div className="text-center">
+                            <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                              📈 580%
+                            </div>
+                            <div className="text-sm text-green-700 dark:text-green-300">
+                              more leads
+                            </div>
+                          </div>
+                          <div className="text-center">
+                            <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                              💰 67%
+                            </div>
+                            <div className="text-sm text-green-700 dark:text-green-300">
+                              lower cost per lead
+                            </div>
+                          </div>
+                          <div className="text-center">
+                            <div className="text-3xl font-bold text-green-600 dark:text-green-400">
+                              🚀 4.2x
+                            </div>
+                            <div className="text-sm text-green-700 dark:text-green-300">
+                              Return on Ad Spend
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300 text-center">
+                        "Night and day difference. We went from barely getting leads to having more qualified prospects than we can handle."
+                        <footer className="text-sm mt-2 not-italic font-semibold">
+                          — Mike Torres, Summit Roofing
+                        </footer>
+                      </blockquote>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Why Our PPC Campaigns Work */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+          <div className="container max-w-7xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={600}>
+              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  Why Our PPC Campaigns Work
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                  No guesswork. No wasted spend. Just proven strategies that turn clicks into customers.
+                </p>
+              </div>
+
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🎯</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">1. We Learn Your Business</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    We start with strategy — understanding your goals, budget, and who you want to reach.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
+                  <div className="bg-purple-100 dark:bg-purple-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🔍</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">2. Laser-Focused Targeting</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    We don't guess. We use data-driven keyword research to reach buyers, not browsers.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
+                  <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🎨</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">3. Conversion-Focused Ads</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    No fluff. Just clear messaging that turns clicks into customers.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
+                  <div className="bg-orange-100 dark:bg-orange-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">⚡</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">4. Constant Testing</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    We manage, monitor, and tweak your campaigns every week. No "set it and forget it."
+                  </p>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* PPC Features & Deliverables */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+          <div className="container max-w-7xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={700}>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  PPC Features & Deliverables
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                  Everything you need for successful Google Ads campaigns, all included
+                </p>
+              </div>
+
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden max-w-4xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-6 p-8">
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Campaign Setup & Targeting</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Landing Page Optimization</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Ad Copy Writing</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Keyword & Negative Keyword Strategy</span>
+                    </div>
+                  </div>
+                  
+                  <div className="space-y-4">
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Bid Management</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Conversion Tracking</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Weekly Reporting</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">A/B Testing</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Pricing Section */}
+        <section id="pricing" className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
+          <div className="container max-w-7xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={800}>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  Pricing: Forte PPC™
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                  Professional Google Ads management with proven results
+                </p>
+              </div>
+
+              <div className="max-w-3xl mx-auto">
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🚀</span>
+                  </div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Forte PPC™</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">Complete Google Ads management + ad spend</p>
+                  
+                  <div className="text-center mb-6">
+                    <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">$400</div>
+                    <div className="text-gray-500 dark:text-gray-400 mb-1">/month + ad spend</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">(12-month minimum)</div>
+                  </div>
+                  
+                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-6">
+                    <p className="text-blue-800 dark:text-blue-200 font-semibold">
+                      ⚡ Starter Budget Recommendation:
+                    </p>
+                    <p className="text-blue-700 dark:text-blue-300 text-sm mt-1">
+                      Start with $1,000/month ad spend + $400 management = $1,400/month total investment.
                     </p>
                   </div>
-
-                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
-                    <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
-                      Our PPC Strategy
-                    </h4>
-                    <ul className="text-blue-700 dark:text-blue-300 text-sm space-y-1">
-                      <li>• Rebuilt campaigns with intent-focused keywords</li>
-                      <li>• Created dedicated landing pages for each service</li>
-                      <li>• Implemented negative keywords to eliminate waste</li>
-                      <li>• Added call tracking and conversion optimization</li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-
-              {/* Results */}
-              <div>
-                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
-                  <h4 className="font-semibold text-green-800 dark:text-green-200 mb-4">
-                    The Results (3 Months)
-                  </h4>
                   
-                  <div className="grid grid-cols-2 gap-4 mb-6">
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        580%
-                      </div>
-                      <div className="text-sm text-green-700 dark:text-green-300">
-                        More Quality Leads
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        67%
-                      </div>
-                      <div className="text-sm text-green-700 dark:text-green-300">
-                        Lower Cost-Per-Lead
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        4.2x
-                      </div>
-                      <div className="text-sm text-green-700 dark:text-green-300">
-                        Return on Ad Spend
-                      </div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                        18
-                      </div>
-                      <div className="text-sm text-green-700 dark:text-green-300">
-                        Qualified Leads/Month
-                      </div>
-                    </div>
+                  <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg mb-6">
+                    <p className="text-amber-800 dark:text-amber-200 text-sm">
+                      Want SEO + PPC together? Check out the <strong>Forte Growth™ Bundle</strong> and save $150/month.
+                    </p>
                   </div>
-
-                  <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300">
-                    "Night and day difference. We went from barely getting leads to having more qualified prospects than we can handle. The ROI is incredible."
-                    <footer className="text-sm mt-2 not-italic">
-                      — Mike Torres, Summit Roofing
-                    </footer>
-                  </blockquote>
+                  
+                  <div className="text-center">
+                    <LightButton href="/contact" className="w-full mb-4">Get Started with PPC</LightButton>
+                    <DarkButton href="/pricing" className="w-full bg-gray-600 hover:bg-gray-700 text-white border-gray-600">
+                      View All Bundles
+                    </DarkButton>
+                  </div>
                 </div>
               </div>
-            </div>
+            </SimpleScrollReveal>
           </div>
-        </div>
-      </section>
+        </section>
 
-      <div className="flex flex-col items-center w-full">
-        <div className="w-full flex flex-col mb-8 sm:mb-10 md:mb-12 text-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter dark:text-secondary-1000 leading-tight mb-4 sm:mb-6">
-            Why Our Google Ads Actually Work
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 max-w-3xl mx-auto leading-relaxed">
-            We don't just throw money at Google and hope for the best. We create
-            smart, targeted campaigns that turn clicks into customers while
-            keeping your budget happy.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 dark:bg-primary-1150 bg-secondary-1350 rounded-[20px] w-full mb-12 sm:mb-16 md:mb-20">
-          <div className="flex flex-col gap-6 sm:gap-8 md:gap-10 lg:gap-14 p-6 sm:p-8 md:p-10 lg:p-[60px] order-2 lg:order-1">
-            <div>
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
-                1. We Get to Know Your Business
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
-                First things first - we learn about your goals, your customers,
-                and what success looks like for you. Then we build a strategy that
-                actually fits your budget.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
-                2. Smart Targeting That Works
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
-                We find the keywords your customers are actually using and target
-                the right people at the right time. No wasted clicks on people who
-                aren't ready to buy.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
-                3. Ads That Actually Convert
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed">
-                We write clear, compelling ads that speak to your customers'
-                needs and get them to take action. No fluff, just results.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black mb-2 sm:mb-3">
-                4. Constant Improvements
-              </h2>
-              <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed">
-                We watch your campaigns like a hawk, testing and tweaking to make
-                sure every dollar works harder. You'll see exactly what's working
-                and what's not.
-              </p>
-            </div>
-          </div>
-          <div className="flex items-center justify-center p-6 sm:p-8 md:p-10 lg:p-[60px] order-1 lg:order-2">
-            <div className="relative w-80 h-80 sm:w-96 sm:h-96 md:w-[28rem] md:h-[28rem] flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-br from-blue-400/20 via-purple-500/20 to-pink-500/20 rounded-full animate-pulse backdrop-blur-sm" />
-              <div className="absolute inset-4 bg-gradient-to-br from-blue-500/30 via-purple-600/30 to-pink-600/30 rounded-full animate-pulse animation-delay-75 backdrop-blur-sm" />
-              <div className="absolute inset-8 bg-gradient-to-br from-blue-600/40 via-purple-700/40 to-pink-700/40 rounded-full animate-pulse animation-delay-150 backdrop-blur-sm" />
-              <div className="text-8xl sm:text-9xl animate-bounce">📈</div>
-              <div className="absolute -top-4 -left-4 w-8 h-8 bg-blue-500/60 rounded-full animate-bounce animation-delay-300" />
-              <div className="absolute -top-2 -right-6 w-6 h-6 bg-purple-500/60 rounded-full animate-bounce animation-delay-500" />
-              <div className="absolute -bottom-6 -left-2 w-10 h-10 bg-pink-500/60 rounded-full animate-bounce animation-delay-700" />
-              <div className="absolute -bottom-4 -right-4 w-7 h-7 bg-green-500/60 rounded-full animate-bounce animation-delay-900" />
-              <div className="absolute top-1/4 -right-8 w-5 h-5 bg-yellow-500/60 rounded-full animate-bounce animation-delay-1100" />
-              <div className="absolute bottom-1/3 -left-6 w-4 h-4 bg-indigo-500/60 rounded-full animate-bounce animation-delay-1300" />
-            </div>
-          </div>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:gap-10 lg:gap-12 mb-12 sm:mb-16 md:mb-20 w-full">
-        <div className="dark:bg-[linear-gradient(180deg,#101010_0%,rgba(16,16,16,0)_100%)] bg-[linear-gradient(180deg,#f4f4f4_0%,#f4f4f4_100%)] p-6 sm:p-8 md:p-10 lg:p-16 rounded-2xl flex flex-col justify-center items-center text-center gap-4 sm:gap-6">
-          <div
-            className="
-                border 
-                border-transparent 
-                p-[1px] 
-                bg-[linear-gradient(136.13deg,#565656_16.43%,#000000_49.99%)] 
-                bg-origin-border
-                rounded-[90px]
-                w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[120px] lg:h-[120px] flex justify-center items-center
-            "
-          >
-            <div className="p-2">
-              <Icon name="target" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-[34px] lg:h-9" />
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 mb-2 sm:mb-3">
-              Right Audience, Right Time
-            </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-gray-300 text-gray-700">
-              We target people actively searching for what you offer, when
-              they're ready to buy. No wasted ad spend on tire-kickers.
-            </p>
-          </div>
-        </div>
-        <div className="dark:bg-[linear-gradient(180deg,#101010_0%,rgba(16,16,16,0)_100%)] bg-[linear-gradient(180deg,#f4f4f4_0%,#f4f4f4_100%)] p-6 sm:p-8 md:p-10 lg:p-16 rounded-2xl flex flex-col justify-center items-center text-center gap-4 sm:gap-6">
-          <div
-            className="
-                border 
-                border-transparent 
-                p-[1px] 
-                bg-[linear-gradient(136.13deg,#565656_16.43%,#000000_49.99%)] 
-                bg-origin-border
-                rounded-[90px]
-                w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[120px] lg:h-[120px] flex justify-center items-center
-            "
-          >
-            <div className="p-2">
-              <Icon name="dollar" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-[34px] lg:h-9" />
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 mb-2 sm:mb-3">
-              ROI That Makes Sense
-            </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-gray-300 text-gray-700">
-              Every campaign is built to turn ad spend into actual revenue. We
-              track what matters and optimize for real business results.
-            </p>
-          </div>
-        </div>
-        <div className="dark:bg-[linear-gradient(180deg,#101010_0%,rgba(16,16,16,0)_100%)] bg-[linear-gradient(180deg,#f4f4f4_0%,#f4f4f4_100%)] p-6 sm:p-8 md:p-10 lg:p-16 rounded-2xl flex flex-col justify-center items-center text-center gap-4 sm:gap-6">
-          <div
-            className="
-                border 
-                border-transparent 
-                p-[1px] 
-                bg-[linear-gradient(136.13deg,#565656_16.43%,#000000_49.99%)] 
-                bg-origin-border
-                rounded-[90px]
-                w-20 h-20 sm:w-24 sm:h-24 md:w-28 md:h-28 lg:w-[120px] lg:h-[120px] flex justify-center items-center
-            "
-          >
-            <div className="p-2">
-              <Icon name="calendar" className="w-6 h-6 sm:w-7 sm:h-7 md:w-8 md:h-8 lg:w-[34px] lg:h-9" />
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 mb-2 sm:mb-3">
-              Always Getting Better
-            </h3>
-            <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter dark:text-gray-300 text-gray-700">
-              We're constantly testing, learning, and improving your campaigns.
-              What worked last month might not work next month - we stay on top
-              of it all.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div className="flex justify-center w-full mb-16 sm:mb-20 md:mb-24">
-        <LightButton href="/contact">
-          Fix My Ads & Get More Leads
-        </LightButton>
-      </div>
-
-      {/* FAQ Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 w-full">
-        <div className="container mx-auto flex flex-col gap-6 sm:gap-8 px-4 sm:px-6 lg:px-8 xl:px-16 items-center">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[38px] font-medium font-inter text-black dark:text-secondary-1000 text-center mb-4 sm:mb-6 md:mb-9">
-            Quick Questions...
-          </h2>
-
-          {faqData?.map((faq, index) => (
-            <details key={index} className="dark:bg-primary-1150 bg-secondary-1350 p-4 sm:p-6 md:p-8 rounded-2xl w-full max-w-4xl group">
-              <summary className="flex justify-between items-center cursor-pointer list-none">
-                <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] font-medium font-inter dark:text-secondary-1050 text-black leading-tight pr-4">
-                  {faq.question}
+        {/* FAQ Section */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+          <div className="container max-w-4xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={900}>
+              <div className="text-center mb-12">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  Frequently Asked Questions
                 </h2>
-                <svg
-                  viewBox="0 0 7 13"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-3 w-2 sm:h-[14px] sm:w-2 transition-transform duration-300 group-open:rotate-[270deg] rotate-90 flex-shrink-0"
-                >
-                  <path
-                    d="M1.01932 12.0736C0.884094 12.1984 0.700785 12.2686 0.509661 12.2686C0.318537 12.2686 0.135229 12.1984 0 12.0736V0.463543C0.135229 
-                0.338685 0.318537 0.268555 0.509661 0.268555C0.700785 0.268555 0.884094 0.338685 1.01932 0.463543L6.78908 5.7974C6.92414 5.92241 7 6.09187
-                7 6.26855C7 6.44524 6.92414 6.6147 6.78908 6.73971L1.01932 12.0736Z"
-                    className="fill-gray-900 dark:fill-white"
-                  />
-                </svg>
-              </summary>
-              <div className="mt-3 sm:mt-4">
-                <p className="text-sm sm:text-base md:text-lg font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed">
-                  {faq.answer}
-                </p>
               </div>
-            </details>
-          ))}
-        </div>
-      </section>
 
-      {/* PPC Pricing Section */}
-      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900 w-full">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-              Ready to Drive More Traffic?
-            </h2>
-            <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-6">
-              Add Forte PPC™ to your existing Forte Foundation™ or Pro™ website. Plans start at just +$400/month plus your ad spend budget.
-            </p>
-            <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-2xl mx-auto">
-              <p className="text-sm text-gray-700 dark:text-gray-300">
-                💡 <strong>Small Business Tip:</strong> Start with $1,000/month ad budget + $400 management = $1,400/month total investment
-              </p>
-            </div>
+              <div className="space-y-4">
+                {faqData.map((faq, index) => (
+                  <div key={index} className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 shadow-sm">
+                    <button
+                      className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors"
+                      onClick={() => toggleFAQ(index)}
+                    >
+                      <h3 className="font-semibold text-gray-900 dark:text-white">
+                        {faq.question}
+                      </h3>
+                      <Icon
+                        name="down-arrow"
+                        className={`w-4 h-4 text-gray-500 transition-transform duration-200 ${
+                          openFAQ === index ? 'rotate-180' : ''
+                        }`}
+                      />
+                    </button>
+                    {openFAQ === index && (
+                      <div className="px-6 pb-4">
+                        <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                          {faq.answer}
+                        </p>
+                      </div>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </SimpleScrollReveal>
           </div>
-          <PricingPage />
-        </div>
-      </section>
+        </section>
+
+        {/* Final CTA Section */}
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-blue-600 dark:bg-blue-800">
+          <div className="container max-w-7xl mx-auto text-center">
+            <SimpleScrollReveal direction="up" delay={1000}>
+              <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
+                Let's Turn Your Ad Budget into Real Business Growth
+              </h2>
+              <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                You've got a great business. Let's make sure customers can find it.
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+                <div className="flex items-center gap-2 text-white">
+                  <span className="text-lg">📞</span>
+                  <span className="text-lg font-semibold">Call us: (817) 873-6655</span>
+                </div>
+                <div className="flex items-center gap-2 text-white">
+                  <span className="text-lg">📧</span>
+                  <a href="mailto:seth@fortewebdesigns.com" className="text-lg font-semibold hover:text-blue-200 transition-colors">
+                    Email: seth@fortewebdesigns.com
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <LightButton href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
+                  Fix My Ads & Get More Leads
+                </LightButton>
+                <DarkButton href="/pricing" className="bg-blue-800 hover:bg-blue-900 text-white border-blue-800">
+                  Start My Forte™ Ecosystem
+                </DarkButton>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
       </div>
-    </section>
+    </div>
   );
 }
