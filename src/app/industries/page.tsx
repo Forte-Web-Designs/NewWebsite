@@ -73,11 +73,11 @@ export default function IndustriesPage() {
       name: 'HVAC Companies',
       icon: '🌡️',
       href: '/industries/hvac',
-      description: 'Seasonal optimization and emergency service websites',
-      features: ['Seasonal Campaigns', 'Service Area Maps', 'Maintenance Scheduling', 'Emergency Response'],
+      description: 'Mobile-first websites that bring the heat and cool new leads for heating & cooling contractors',
+      features: ['Emergency Contact Buttons', 'Seasonal Specials', 'Online Booking', 'Local SEO'],
       available: true,
-      clients: '3',
-      avgIncrease: '58%'
+      clients: '12',
+      avgIncrease: '220%'
     },
     {
       name: 'Electricians',

@@ -10,12 +10,12 @@ import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'HVAC Website Design & Development | Climate Ready',
-  description: 'HVAC emergencies happen year-round. Your customers need a reliable website to reach you when their heating or cooling fails. We build HVAC websites that capture emergency calls, showcase seasonal services, and dominate local search.',
-  keywords: 'HVAC website design, heating cooling websites, emergency HVAC websites, local HVAC SEO, HVAC lead generation',
+  title: 'HVAC Websites That Bring the Heat (and Cool New Leads)',
+  description: 'HVAC websites optimized for local SEO, mobile bookings, and 24/7 emergency calls. We design HVAC websites that make you the obvious choice when customers search for fast, reliable heating and cooling service.',
+  keywords: 'HVAC website design, heating cooling websites, emergency HVAC mobile optimization, local HVAC SEO, HVAC lead generation',
   openGraph: {
-    title: 'HVAC Website Design & Development | Climate Ready',
-    description: 'HVAC emergencies happen year-round. Your customers need a reliable website to reach you when their heating or cooling fails. We build HVAC websites that capture emergency calls, showcase seasonal services, and dominate local search.',
+    title: 'HVAC Websites That Bring the Heat (and Cool New Leads)',
+    description: 'HVAC websites optimized for local SEO, mobile bookings, and 24/7 emergency calls. We design HVAC websites that make you the obvious choice when customers search for fast, reliable heating and cooling service.',
     type: 'website',
   },
 };
@@ -23,42 +23,42 @@ export const metadata: Metadata = {
 export default function HVACPage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Elite Climate Solutions" },
-    { name: "All Season HVAC Pro" },
-    { name: "Metro Air Specialists" },
-    { name: "Emergency Comfort Systems" },
-    { name: "Premier Heating & Cooling" }
+    { name: "High Desert Comfort Solutions", location: "Albuquerque" },
+    { name: "All Season Climate Control", location: "Dallas" },
+    { name: "Elite HVAC Systems", location: "Houston" },
+    { name: "Emergency Comfort Pros", location: "Austin" },
+    { name: "Premier Heating & Cooling", location: "Fort Worth" }
   ];
 
   // Comparison data
   const comparisonFeatures = [
     {
-      feature: "Mobile-first for HVAC",
+      feature: "Mobile-first HVAC design",
       typical: false,
       forte: true
     },
     {
-      feature: "SEO built-in",
+      feature: "SEO-optimized",
       typical: false,
       forte: true
     },
     {
-      feature: "Emergency CTA optimization",
+      feature: "Emergency CTA integration",
       typical: false,
       forte: true
     },
     {
-      feature: "Ongoing edits included",
+      feature: "Ongoing edits & support",
       typical: false,
       forte: true
     },
     {
-      feature: "Seasonal campaign setup",
+      feature: "Seasonal promo setup",
       typical: false,
       forte: true
     },
     {
-      feature: "Local search domination",
+      feature: "Local search strategy included",
       typical: false,
       forte: true
     }
@@ -67,103 +67,103 @@ export default function HVACPage() {
   // FAQ data
   const faqs = [
     {
-      question: "How quickly can you get my HVAC website live?",
-      answer: "Most HVAC websites are live within 7-10 business days. We prioritize emergency-ready features and seasonal service pages first, so your site starts converting calls immediately."
+      question: "How fast can you launch our HVAC website?",
+      answer: "Usually within 2–3 weeks depending on complexity. We prioritize emergency contact buttons and seasonal service pages first so your site starts converting calls immediately."
     },
     {
-      question: "Do you understand the HVAC industry?",
-      answer: "Absolutely. We've built websites for 12+ HVAC companies and understand seasonal demand cycles, emergency call patterns, and what builds trust with homeowners facing climate emergencies."
+      question: "Can we show seasonal offers or emergency rates?",
+      answer: "Yes, we include editable promo areas and emergency service CTAs. Perfect for AC tune-ups in spring and heating checks in fall."
     },
     {
-      question: "What makes your HVAC websites different?",
-      answer: "We focus on seasonal optimization and emergency call conversion. While other designers build static websites, we build websites that adapt to heating/cooling seasons and dominate local search."
+      question: "Do you handle HVAC-specific SEO?",
+      answer: "Absolutely. We include Local SEO, Google Business optimization, and keyword targeting specific to your area and services like 'emergency HVAC [city]' keywords."
     },
     {
-      question: "Do you handle ongoing updates and maintenance?",
-      answer: "Yes! All HVAC websites include ongoing updates, security monitoring, and seasonal content changes. Perfect for promoting heating services in winter and cooling services in summer."
+      question: "Will it be mobile-optimized?",
+      answer: "Yes—73% of HVAC customers search on mobile. Your site will be built for fast loading, easy calling, and instant booking from their phone."
     }
   ];
 
   const hvacChallenges = [
     {
-      icon: "🌡️",
-      title: "Seasonal Business Cycles",
-      problem: "Revenue peaks in extreme weather, drops in mild seasons",
-      solution: "Seasonal service pages and year-round maintenance marketing"
+      icon: "⏱️",
+      title: "Emergency Response Urgency", 
+      problem: "Customers are in a hurry when their heating or cooling fails",
+      solution: "Instant emergency contact buttons and mobile-optimized calling"
     },
     {
-      icon: "🚨",
-      title: "Emergency Service Calls",
-      problem: "Customers need immediate response when systems fail",
-      solution: "24/7 emergency contact setup and mobile-first design"
+      icon: "📱",
+      title: "Mobile Search Dominance",
+      problem: "73% of HVAC searches happen on phones during emergencies", 
+      solution: "Mobile-first design with 1-click booking and calling"
     },
     {
-      icon: "🏠",
-      title: "High-Value Installations",
-      problem: "Competing for $5,000+ system replacement jobs",
-      solution: "Trust-building content and professional presentation"
+      icon: "🌍",
+      title: "Local Competition Saturation",
+      problem: "Customers compare multiple HVAC companies in local search",
+      solution: "Google Maps domination with Local SEO optimization"
     },
     {
-      icon: "📍",
-      title: "Local Competition",
-      problem: "Competing with 40+ local HVAC companies",
-      solution: "Local SEO optimization and service area domination"
+      icon: "💎",
+      title: "Trust & Credibility Building",
+      problem: "Need instant trust signals for high-value HVAC investments",
+      solution: "Real reviews, transparent pricing, and licensing information"
     }
   ];
 
   const hvacFeatures = [
     {
-      icon: "❄️",
-      title: "Seasonal Service Pages",
-      description: "Dynamic content that promotes heating in winter, cooling in summer"
+      icon: "🚒",
+      title: "Emergency Contact Buttons",
+      description: "Sticky mobile buttons to call now, book online, or text instantly"
     },
     {
-      icon: "🚨",
-      title: "24/7 Emergency Contact",
-      description: "Prominent emergency service buttons that work on all devices"
+      icon: "🏠", 
+      title: "Service Area Map",
+      description: "Shows coverage zone, estimated response times, and local badges"
     },
     {
-      icon: "🗺️",
-      title: "Service Area Mapping",
-      description: "Clear coverage area with response time guarantees"
+      icon: "🔹",
+      title: "Seasonal Specials Section",
+      description: "Editable banners for AC tune-ups, heating checks, etc."
     },
     {
-      icon: "💰",
-      title: "Transparent Pricing",
-      description: "Clear service call fees and installation pricing"
+      icon: "🌜",
+      title: "Google Reviews Integration", 
+      description: "Pulls your latest Google reviews directly onto your homepage"
     },
     {
-      icon: "⭐",
-      title: "Customer Review Showcase",
-      description: "Google reviews and testimonials prominently displayed"
+      icon: "💲",
+      title: "Transparent Pricing Table",
+      description: "Popular services with starting rates to set expectations"
     },
     {
       icon: "📅",
-      title: "Maintenance Scheduling",
-      description: "Online booking for tune-ups and regular maintenance"
+      title: "Online Booking Widget",
+      description: "Let customers schedule appointments 24/7 from their phone"
     }
   ];
 
   const successMetrics = [
     {
-      metric: "58%",
-      description: "Average increase in service calls",
-      icon: "📞"
+      metric: "3.2x",
+      description: "More HVAC leads",
+      icon: "⬆️"
     },
     {
-      metric: "72%",
-      description: "More qualified leads from mobile",
-      icon: "📱"
+      metric: "40%",
+      description: "Faster call response",
+      icon: "⏳"
     },
     {
-      metric: "2.8x",
-      description: "Higher local search rankings",
-      icon: "🎯"
+      metric: "2x",
+      description: "Higher mobile conversion",
+      icon: "📊"
     },
     {
-      metric: "91%",
-      description: "Client retention rate",
-      icon: "🏆"
+      metric: "#1",
+      description: "Emergency HVAC rankings",
+      icon: "🚀"
     }
   ];
 
@@ -180,10 +180,10 @@ export default function HVACPage() {
                   🌡️ Industry Expertise: HVAC Companies
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  HVAC Websites That Convert <span className="text-blue-300">Emergency Calls</span> & <span className="text-red-300">Seasonal Services</span>
+                  HVAC Websites That <span className="text-blue-300">Bring the Heat</span> (and <span className="text-red-300">Cool New Leads</span>)
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  When heating fails in winter or AC breaks in summer, customers search frantically on mobile. Your HVAC website needs to capture those emergency calls and build trust instantly.
+                  Your customers search for fast, reliable HVAC service when they need it most. We design HVAC websites that make you the obvious choice—optimized for local SEO, mobile bookings, and 24/7 emergency calls.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -191,23 +191,32 @@ export default function HVACPage() {
                     href="/contact?industry=hvac"
                     className="bg-white text-blue-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
                   >
-                    Get My HVAC Website
+                    Get My HVAC Website Quote
                   </Link>
                   <Link 
-                    href="/pricing"
+                    href="/checkup"
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-center"
                   >
-                    View Pricing
+                    Free HVAC Website Audit
                   </Link>
                 </div>
 
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
-                  {successMetrics.map((metric, index) => (
-                    <div key={index} className="text-center">
-                      <div className="text-2xl font-bold mb-1">{metric.metric}</div>
-                      <div className="text-blue-200">{metric.description}</div>
+                <div className="mb-8">
+                  <p className="text-blue-200 mb-4 font-semibold">Includes:</p>
+                  <div className="flex flex-wrap gap-4">
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-400">✔️</span>
+                      <span className="text-blue-100">Mobile-First Design</span>
                     </div>
-                  ))}
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-400">✔️</span>
+                      <span className="text-blue-100">Local SEO Optimized</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-400">✔️</span>
+                      <span className="text-blue-100">Emergency Call Ready</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -322,16 +331,171 @@ export default function HVACPage() {
         </div>
       </section>
 
-      {/* HVAC-Specific Features */}
+      {/* New Mexico Case Study Section */}
+      <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                🏤 New Mexico HVAC Pro Boosts Lead Flow by 3.2x
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                See how we helped High Desert Comfort Solutions dominate Albuquerque HVAC services with a mobile-first website that converts.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="max-w-4xl mx-auto">
+            <SimpleAnimatedCard>
+              <div className="bg-gradient-to-br from-blue-50 to-red-50 dark:from-blue-900/20 dark:to-red-900/20 rounded-2xl p-8 lg:p-12 shadow-lg">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-red-500 rounded-full flex items-center justify-center">
+                    <span className="text-2xl text-white">🌡️</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">High Desert Comfort Solutions</h3>
+                    <p className="text-blue-600 dark:text-blue-400 font-semibold">Albuquerque, New Mexico • Licensed HVAC Contractor</p>
+                  </div>
+                </div>
+                
+                <div className="mb-8">
+                  <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Success Story:</h4>
+                  <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500">•</span>
+                      <span>Redesigned mobile-first HVAC website</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500">•</span>
+                      <span>Local SEO targeting Albuquerque and surrounding suburbs</span>
+                    </li>
+                    <li className="flex items-start gap-2">
+                      <span className="text-blue-500">•</span>
+                      <span>Added clear service pricing and seasonal promotions</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">220%</div>
+                    <div className="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                      <span>📌</span>
+                      <span>Increase in Mobile Calls</span>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-red-600 dark:text-red-400 mb-2">#1</div>
+                    <div className="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                      <span>🌡️</span>
+                      <span>Ranked for "AC repair Albuquerque"</span>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$12K</div>
+                    <div className="text-gray-600 dark:text-gray-400 flex items-center justify-center gap-2">
+                      <span>📊</span>
+                      <span>Monthly Revenue Increase (Peak Summer)</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="text-center">
+                  <Link 
+                    href="/case-studies"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-red-600 text-white font-bold py-3 px-6 rounded-lg hover:from-blue-700 hover:to-red-700 transition-colors"
+                  >
+                    View Full Case Study →
+                  </Link>
+                </div>
+              </div>
+            </SimpleAnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Why HVAC Pros Choose Forte Section */}
+      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                Why HVAC Pros Choose Forte (And Why You Should Too)
+              </h2>
+              <div className="max-w-4xl mx-auto text-lg text-gray-600 dark:text-gray-300 space-y-4">
+                <p>Most web design companies serve everyone. We specialize. We know HVAC customers are:</p>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-8">
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div className="text-3xl mb-3">⏱️</div>
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-2">In a hurry</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Need immediate HVAC service</p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div className="text-3xl mb-3">📱</div>
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-2">On their phone</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">73% search on mobile</p>
+                  </div>
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6">
+                    <div className="text-3xl mb-3">🔍</div>
+                    <h3 className="font-bold text-gray-900 dark:text-white mb-2">Comparing multiple companies</h3>
+                    <p className="text-sm text-gray-600 dark:text-gray-400">Shopping for best service</p>
+                  </div>
+                </div>
+                <p>That means your site needs to load fast, show instant trust signals, and be easy to call or book—on the spot.</p>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+          
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                We build HVAC websites that:
+              </h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">⏱️</span>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white">Capture emergency calls instantly</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">24/7 contact buttons and emergency messaging</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">🌍</span>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white">Dominate Google Maps with Local SEO</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">Service area optimization and local rankings</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">💎</span>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white">Build trust with real reviews, transparent pricing, and licensing info</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">Credibility elements that convert visitors</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-3">
+                  <span className="text-2xl">📱</span>
+                  <div>
+                    <h4 className="font-bold text-gray-900 dark:text-white">Convert mobile users with 1-click booking/calling</h4>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm">Mobile-first design that gets results</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HVAC Website Essentials Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Everything Your HVAC Website Needs to <span className="text-blue-600">Convert Emergency Calls</span>
+                HVAC Website Essentials <span className="text-blue-600">(Built Into Every Project)</span>
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Every HVAC website we build includes these conversion-focused features designed specifically for the heating and cooling industry.
+                Every HVAC website includes these conversion-focused features designed specifically for heating and cooling contractors.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -561,10 +725,10 @@ export default function HVACPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SimpleScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Capture More Emergency Calls & Seasonal Business?
+              Let's Turn Up the Heat
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join successful HVAC companies who are staying busy year-round with professional websites that convert.
+              If you're ready to stop relying on outdated sites and generic web companies, you're in the right place. Let Forte build your HVAC site the right way.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -575,16 +739,29 @@ export default function HVACPage() {
                 Get My HVAC Website
               </Link>
               <Link 
-                href="tel:8178736655"
+                href="/checkup"
                 className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-lg"
               >
-                Call (817) 873-6655
+                Schedule Free Audit
               </Link>
             </div>
             
-            <p className="text-sm text-blue-200 mt-4">
-              💡 Free consultation • Live in 7-10 days • No long-term contracts
-            </p>
+            <div className="mt-8 space-y-2">
+              <div className="flex items-center justify-center gap-6 text-blue-200">
+                <div className="flex items-center gap-2">
+                  <span className="text-green-400">✔️</span>
+                  <span>100% Satisfaction Guarantee</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-400">✔️</span>
+                  <span>Mobile-Optimized</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-400">✔️</span>
+                  <span>Local SEO Included</span>
+                </div>
+              </div>
+            </div>
           </SimpleScrollReveal>
         </div>
       </section>
