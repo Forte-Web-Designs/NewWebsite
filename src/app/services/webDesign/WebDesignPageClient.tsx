@@ -78,7 +78,7 @@ export default function WebDesignPageClient() {
                   <DarkButton className="w-full sm:w-auto">Start Your Project</DarkButton>
                 </Link>
                 <Link href="/pricing" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold py-3 px-6 text-center">
-                  [ View All Pricing ]
+                  View All Pricing
                 </Link>
               </div>
               
@@ -476,7 +476,7 @@ export default function WebDesignPageClient() {
                   Want to attract more traffic and rank higher? Our SEO services plug directly into your Forte site.
                 </p>
                 <Link href="/services/seo" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 sm:px-6 rounded-lg transition-colors inline-block text-sm sm:text-base">
-                  [ Learn More About SEO ]
+                  Learn More About SEO
                 </Link>
               </div>
             </div>
@@ -622,7 +622,7 @@ export default function WebDesignPageClient() {
                   <div className="bg-green-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mb-4">
                     <Icon name="search" className="w-8 h-8" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">[ Forte SEO™ ]</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Forte SEO™</h4>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Get found on Google</p>
                 </div>
                 
@@ -637,7 +637,7 @@ export default function WebDesignPageClient() {
                   <div className="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mb-4">
                     <span className="text-2xl">🎯</span>
                   </div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">[ Forte PPC™ ]</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Forte PPC™</h4>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Drive leads fast with Google Ads</p>
                 </div>
                 
@@ -652,7 +652,7 @@ export default function WebDesignPageClient() {
                   <div className="bg-pink-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mb-4">
                     <Icon name="users" className="w-8 h-8" />
                   </div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">[ Forte Social™ ]</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Forte Social™</h4>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">Stay top of mind on social media</p>
                 </div>
                 
@@ -727,7 +727,7 @@ export default function WebDesignPageClient() {
 
             <div className="text-center mt-8 sm:mt-12">
               <Link href="/case-studies" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition-colors text-sm sm:text-base">
-                [ View More Success Stories ]
+                View More Success Stories
               </Link>
             </div>
           </SimpleScrollReveal>
@@ -763,7 +763,7 @@ export default function WebDesignPageClient() {
                 Contact Us
               </Link>
               <Link href="/pricing" className="border border-white text-white hover:bg-white hover:text-blue-600 font-semibold py-3 px-6 sm:px-8 rounded-lg transition-colors text-sm sm:text-base">
-                [ Compare Plans ]
+                Compare Plans
               </Link>
             </div>
           </SimpleScrollReveal>
