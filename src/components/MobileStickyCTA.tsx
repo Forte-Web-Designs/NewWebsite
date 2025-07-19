@@ -22,7 +22,7 @@ export default function MobileStickyCTA() {
   return (
     <>
       {/* Mobile Sticky CTA - Only visible on mobile */}
-      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[110] bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl border-t border-white/20">
+      <div className="lg:hidden fixed bottom-0 left-0 right-0 z-[90] bg-gradient-to-r from-blue-600 to-purple-600 text-white shadow-2xl border-t border-white/20">
         <div className="px-4 py-3">
           {!isExpanded ? (
             // Collapsed state
