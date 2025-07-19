@@ -83,11 +83,11 @@ export default function IndustriesPage() {
       name: 'Electricians',
       icon: '⚡',
       href: '/industries/electricians',
-      description: 'Safety-focused websites with clear emergency protocols',
-      features: ['Safety Certifications', 'Emergency Services', 'Project Galleries', 'Free Estimates'],
+      description: 'Mobile-first websites that power up lead generation and capture emergency service calls',
+      features: ['Emergency Call Optimization', 'License & Insurance Display', 'Service Area Maps', 'Online Estimates'],
       available: true,
-      clients: '3',
-      avgIncrease: '62%'
+      clients: '18',
+      avgIncrease: '59%'
     }
   ];
 

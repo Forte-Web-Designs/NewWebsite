@@ -10,12 +10,12 @@ import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'Electrician Website Design & Development | Power Ready',
-  description: 'Electrical emergencies require immediate response. Your customers need a reliable website to reach you when power fails or safety issues arise. We build electrician websites that capture emergency calls, showcase safety credentials, and dominate local search.',
-  keywords: 'electrician website design, electrical websites, emergency electrician websites, local electrician SEO, electrical lead generation',
+  title: 'Electrician Website Design That Powers Up Lead Generation',
+  description: 'Mobile-first electrician websites that convert emergency calls into customers. We don\'t build just "pretty" websites. We build high-converting electrician websites that capture every service call, showcase safety credentials, and dominate local search.',
+  keywords: 'electrician website design, electrical contractor websites, emergency electrician SEO, local electrician marketing, electrical lead generation',
   openGraph: {
-    title: 'Electrician Website Design & Development | Power Ready',
-    description: 'Electrical emergencies require immediate response. Your customers need a reliable website to reach you when power fails or safety issues arise. We build electrician websites that capture emergency calls, showcase safety credentials, and dominate local search.',
+    title: 'Electrician Website Design That Powers Up Lead Generation',
+    description: 'Mobile-first electrician websites that convert emergency calls into customers. We don\'t build just "pretty" websites. We build high-converting electrician websites that capture every service call, showcase safety credentials, and dominate local search.',
     type: 'website',
   },
 };
@@ -23,42 +23,47 @@ export const metadata: Metadata = {
 export default function ElectriciansPage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Elite Electrical Solutions" },
-    { name: "PowerMax Electric Co" },
-    { name: "Metro Wire Specialists" },
-    { name: "Emergency Power Pros" },
-    { name: "Premier Electrical Services" }
+    { name: "Precision Power Techs", location: "Austin" },
+    { name: "Reliable Electric Solutions", location: "Dallas" },
+    { name: "Master Volt Specialists", location: "Houston" },
+    { name: "Emergency Power Pros", location: "San Antonio" },
+    { name: "Elite Electrical Services", location: "Fort Worth" }
   ];
 
   // Comparison data
   const comparisonFeatures = [
     {
-      feature: "Mobile-first for electricians",
+      feature: "Emergency Call Optimization",
       typical: false,
       forte: true
     },
     {
-      feature: "SEO built-in",
+      feature: "Mobile-First Design",
       typical: false,
       forte: true
     },
     {
-      feature: "Emergency CTA optimization",
+      feature: "SEO Built-In",
       typical: false,
       forte: true
     },
     {
-      feature: "Ongoing edits included",
+      feature: "Safety Credential Display",
       typical: false,
       forte: true
     },
     {
-      feature: "Safety certification display",
+      feature: "Service Area Targeting",
       typical: false,
       forte: true
     },
     {
-      feature: "Local search domination",
+      feature: "Ongoing Updates Included",
+      typical: false,
+      forte: true
+    },
+    {
+      feature: "Lead Generation Focus",
       typical: false,
       forte: true
     }
@@ -67,102 +72,120 @@ export default function ElectriciansPage() {
   // FAQ data
   const faqs = [
     {
-      question: "How quickly can you get my electrician website live?",
-      answer: "Most electrician websites are live within 7-10 business days. We prioritize emergency-ready features and safety certifications first, so your site starts converting calls immediately."
+      question: "How fast can my electrician website go live?",
+      answer: "Most electrician websites are live within 7-10 business days. We prioritize emergency service optimization and safety credential display first, ensuring your site starts converting calls from day one."
     },
     {
-      question: "Do you understand the electrical industry?",
-      answer: "Absolutely. We've built websites for 14+ electrical companies and understand emergency call patterns, safety requirements, and what builds trust with homeowners facing electrical issues."
+      question: "Do you specialize in electrical contractor websites?",
+      answer: "Yes! We've built websites for 18+ electrical contractors and understand emergency response patterns, licensing requirements, and what builds trust with homeowners facing electrical emergencies."
     },
     {
-      question: "What makes your electrician websites different?",
-      answer: "We focus on safety-first messaging and emergency call conversion. While other designers build basic websites, we build websites that emphasize safety credentials and dominate local search for electrical services."
+      question: "What makes your electrician websites convert better?",
+      answer: "We focus on mobile-first emergency call optimization, safety-first messaging, and local search domination. While other designers build basic websites, we build conversion-focused websites that turn website visitors into paying customers."
     },
     {
-      question: "Do you handle ongoing updates and maintenance?",
-      answer: "Yes! All electrician websites include ongoing updates, security monitoring, and content changes. Perfect for adding new services or updating safety certifications."
+      question: "Will my website work on mobile devices?",
+      answer: "Absolutely! 73% of electrical service searches happen on mobile. Our electrician websites are built mobile-first with emergency contact buttons, clear pricing, and fast-loading service pages."
+    },
+    {
+      question: "Can I update my services and pricing?",
+      answer: "Yes! All electrician websites include ongoing updates, content changes, and pricing adjustments. Perfect for seasonal services, new certifications, or service area expansions."
+    },
+    {
+      question: "Do you handle local SEO for electrical contractors?",
+      answer: "Every electrician website includes local SEO optimization for your service area. We optimize for emergency electrical services, panel upgrades, and other high-value electrical work in your city."
     }
   ];
 
   const electricianChallenges = [
     {
       icon: "⚡",
-      title: "Emergency Electrical Issues",
-      problem: "Power outages and electrical failures require immediate response",
-      solution: "24/7 emergency contact setup and mobile-first design"
+      title: "Emergency Service Calls",
+      problem: "Customers need immediate response for power outages and electrical hazards",
+      solution: "Mobile-optimized emergency contact and 24/7 service messaging"
     },
     {
       icon: "🛡️",
-      title: "Safety & Trust Concerns",
-      problem: "Customers worry about electrical safety and contractor credibility",
-      solution: "Prominent safety certifications and licensing displays"
+      title: "Safety & Licensing Trust",
+      problem: "Homeowners worry about electrical safety and contractor legitimacy",
+      solution: "Prominent license display, insurance proof, and safety certifications"
     },
     {
-      icon: "🏠",
-      title: "High-Value Projects",
-      problem: "Competing for $3,000+ panel upgrades and whole-home rewiring",
-      solution: "Professional presentation and project portfolio showcase"
+      icon: "💰",
+      title: "High-Value Project Competition",
+      problem: "Competing for $3,500+ panel upgrades and whole-home electrical work",
+      solution: "Professional presentation with project portfolios and transparent pricing"
     },
     {
       icon: "📍",
-      title: "Local Competition",
-      problem: "Competing with 35+ local electricians in search results",
-      solution: "Local SEO optimization and service area domination"
+      title: "Local Search Competition",
+      problem: "Competing with 40+ electrical contractors in local search results",
+      solution: "Local SEO optimization and service area domination strategies"
     }
   ];
 
   const electricianFeatures = [
     {
-      icon: "🚨",
-      title: "24/7 Emergency Contact",
-      description: "Prominent emergency service buttons for power outages and electrical hazards"
+      icon: "⚡",
+      title: "Emergency Service Button",
+      description: "Prominent 24/7 emergency contact for power outages and electrical hazards"
     },
     {
       icon: "🛡️",
-      title: "Safety Certifications",
-      description: "Licensed, bonded, and insured credentials prominently displayed"
-    },
-    {
-      icon: "🗺️",
-      title: "Service Area Mapping",
-      description: "Clear coverage area with emergency response time guarantees"
+      title: "License & Insurance Display",
+      description: "Licensed electrician credentials and insurance proof prominently featured"
     },
     {
       icon: "💰",
-      title: "Transparent Pricing",
-      description: "Clear service call fees and project pricing estimates"
+      title: "Transparent Service Pricing",
+      description: "Clear service call fees, panel upgrade costs, and electrical repair pricing"
+    },
+    {
+      icon: "📍",
+      title: "Service Area Coverage",
+      description: "Interactive service area maps with emergency response time guarantees"
     },
     {
       icon: "⭐",
-      title: "Customer Review Showcase",
-      description: "Google reviews and safety testimonials prominently featured"
+      title: "Customer Safety Reviews",
+      description: "Google reviews and safety testimonials from satisfied homeowners"
     },
     {
       icon: "📋",
-      title: "Free Estimate Forms",
-      description: "Online forms for project quotes and electrical inspections"
+      title: "Online Estimate Forms",
+      description: "Easy electrical project quotes and safety inspection scheduling"
+    },
+    {
+      icon: "🏠",
+      title: "Project Portfolio Gallery",
+      description: "Before/after photos of panel upgrades, rewiring, and electrical installations"
+    },
+    {
+      icon: "📞",
+      title: "Click-to-Call Optimization",
+      description: "Mobile-optimized phone numbers that convert website visitors into calls"
     }
   ];
 
   const successMetrics = [
     {
-      metric: "62%",
-      description: "Average increase in service calls",
-      icon: "📞"
-    },
-    {
-      metric: "78%",
-      description: "More qualified leads from mobile",
+      metric: "59%",
+      description: "More mobile leads",
       icon: "📱"
     },
     {
-      metric: "2.6x",
-      description: "Higher local search rankings",
+      metric: "73%",
+      description: "Increase in service calls",
+      icon: "📞"
+    },
+    {
+      metric: "2.8x",
+      description: "Higher local rankings",
       icon: "🎯"
     },
     {
-      metric: "93%",
-      description: "Client retention rate",
+      metric: "94%",
+      description: "Client satisfaction rate",
       icon: "🏆"
     }
   ];
@@ -177,13 +200,13 @@ export default function ElectriciansPage() {
             <SimpleScrollReveal direction="left" delay={100}>
               <div>
                 <div className="inline-flex items-center gap-2 bg-yellow-600/50 text-yellow-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                  ⚡ Industry Expertise: Licensed Electricians
+                  ⚡ Specializing in Electrical Contractor Websites
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Electrician Websites That Convert <span className="text-yellow-300">Emergency Calls</span> & <span className="text-yellow-300">Build Trust</span>
+                  Electrician Websites That <span className="text-yellow-300">Power Up</span> Your Lead Generation
                 </h1>
                 <p className="text-xl text-yellow-100 mb-8 leading-relaxed">
-                  When power fails or electrical hazards arise, customers search frantically for licensed electricians. Your website needs to capture those emergency calls while showcasing your safety credentials and expertise.
+                  We don't build just "pretty" websites. We build high-converting, mobile-first electrician websites that capture every emergency service call, showcase safety credentials, and dominate local search for electrical contractors.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -322,8 +345,95 @@ export default function ElectriciansPage() {
         </div>
       </section>
 
-      {/* Electrician-Specific Features */}
+      {/* Case Study Section */}
       <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                Real Results from Austin Electrical Contractors
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                See how we helped Precision Power Techs dominate Austin electrical services with a mobile-first website that converts.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="max-w-4xl mx-auto">
+            <SimpleAnimatedCard>
+              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-2xl p-8 lg:p-12 shadow-lg">
+                <div className="flex items-center gap-4 mb-6">
+                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+                    <span className="text-2xl text-white">⚡</span>
+                  </div>
+                  <div>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Precision Power Techs</h3>
+                    <p className="text-yellow-600 dark:text-yellow-400 font-semibold">Austin, Texas • Licensed Electrical Contractor</p>
+                  </div>
+                </div>
+                
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+                  "Our old website wasn't mobile-friendly and we were losing emergency service calls to competitors. Forte built us a conversion-focused website that captures every lead and showcases our 15+ years of electrical expertise."
+                </p>
+
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">59%</div>
+                    <div className="text-gray-600 dark:text-gray-400">More Mobile Leads</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-500 mt-1">in 60 days</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$9,200</div>
+                    <div className="text-gray-600 dark:text-gray-400">Additional Monthly Revenue</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-500 mt-1">from new projects</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">#1</div>
+                    <div className="text-gray-600 dark:text-gray-400">Google Ranking</div>
+                    <div className="text-sm text-gray-500 dark:text-gray-500 mt-1">"Austin electrician"</div>
+                  </div>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+                    <span className="text-yellow-500">⚡</span>
+                    What We Delivered for Precision Power Techs:
+                  </h4>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-gray-700 dark:text-gray-300">Mobile-optimized emergency contact</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-gray-700 dark:text-gray-300">Master electrician license display</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-gray-700 dark:text-gray-300">Local Austin SEO optimization</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-gray-700 dark:text-gray-300">Panel upgrade project gallery</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-gray-700 dark:text-gray-300">Transparent electrical pricing</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span className="text-gray-700 dark:text-gray-300">Online electrical estimate forms</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SimpleAnimatedCard>
+          </div>
+        </div>
+      </section>
+
+      {/* Electrician-Specific Features */}
+      <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
@@ -561,10 +671,10 @@ export default function ElectriciansPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SimpleScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Capture More Emergency Calls & Build Customer Trust?
+              Ready to Power Up Your Lead Generation & Capture More Service Calls?
             </h2>
             <p className="text-xl text-yellow-100 mb-8 max-w-3xl mx-auto">
-              Join successful electricians who are staying busy year-round with professional websites that emphasize safety and convert visitors into customers.
+              Join successful electrical contractors across Texas who trust Forte with mobile-first websites that convert emergency calls into paying customers. No contracts, no hassles—just results.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
