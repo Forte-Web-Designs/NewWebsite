@@ -157,7 +157,7 @@ const bundledPlans = [
 const faqData = [
   {
     question: 'What payment options do you offer?',
-    answer: 'We offer flexible monthly plans (12-month commitment, then month-to-month) or one-time payment options. Monthly plans include Forte Care™ support, hosting, and unlimited updates. One-time payments start at $2,500-$4,300 with optional maintenance plans.'
+    answer: 'We offer flexible monthly plans with a 12-month minimum commitment, then month-to-month, or one-time payment options. Monthly plans include Forte Care™ support, hosting, and unlimited updates. One-time payments start at $2,500-$4,300 with optional maintenance plans.'
   },
   {
     question: 'Can I pay a one-time fee for my website instead of monthly?',
@@ -168,12 +168,16 @@ const faqData = [
     answer: 'Forte Care™ includes unlimited content updates, security monitoring, speed optimization, monthly reports, technical support, and regular backups. It ensures your website stays fast, secure, and optimized for growth. Note: Forte Care™ is included in all monthly plans. For one-time sites, it\'s available as an optional maintenance plan.'
   },
   {
+    question: 'Why do monthly plans require a 12-month commitment?',
+    answer: 'The 12-month commitment allows us to provide premium hosting, Forte Care™ support, and unlimited updates at a lower monthly rate. After your initial 12 months, your plan automatically becomes month-to-month with no long-term commitment. This structure ensures we can deliver consistent, high-quality service while keeping costs affordable.'
+  },
+  {
     question: 'What is the Forte Ecosystem™?',
     answer: 'The Forte Ecosystem™ is our integrated approach to digital marketing. Start with a website, then add SEO, Google Ads, and Social Media as your business grows. Each service works together to maximize your online presence and results.'
   },
   {
     question: 'Can I switch between monthly and one-time pricing?',
-    answer: 'Yes! You can start with monthly and switch to one-time payment later (with credit for payments made). You can also upgrade or downgrade plans anytime to match your business needs.'
+    answer: 'Yes! You can start with monthly (12-month minimum) and switch to one-time payment later with credit for payments made. You can also upgrade or downgrade plans anytime to match your business needs. Monthly plans require a 12-month commitment initially, then become month-to-month.'
   },
   {
     question: 'Do you offer custom websites?',
@@ -262,6 +266,11 @@ function ComparisonTable({ isMonthly }: { isMonthly: boolean }) {
                   <div className="text-blue-600 dark:text-blue-400 font-bold text-xl mt-1">
                     {isMonthly ? '$200/mo' : '$2,500'}
                   </div>
+                  {isMonthly && (
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      12-month minimum
+                    </div>
+                  )}
                 </div>
               </th>
               <th className="text-center py-6 px-4 font-semibold text-blue-600 dark:text-blue-400">
@@ -270,6 +279,11 @@ function ComparisonTable({ isMonthly }: { isMonthly: boolean }) {
                   <div className="text-blue-600 dark:text-blue-400 font-bold text-xl mt-1">
                     {isMonthly ? '$350/mo' : '$4,300'}
                   </div>
+                  {isMonthly && (
+                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      12-month minimum
+                    </div>
+                  )}
                 </div>
               </th>
             </tr>
@@ -378,7 +392,8 @@ function EcosystemTimeline() {
 
       <div className="text-center">
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-          <strong>Total Investment:</strong> Foundation → Growth → Scale → Dominate = $1,100/month for complete digital domination
+          <strong>Total Investment:</strong> Foundation → Growth → Scale → Dominate = $1,100/month for complete digital domination<br />
+          <span className="text-xs">*Monthly plans require 12-month minimum commitment, then month-to-month</span>
         </p>
         <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
           Start Your Journey
@@ -412,6 +427,11 @@ function AddOnServicesGrid({ isMonthly }: { isMonthly: boolean }) {
                   {isMonthly ? '/month' : 'one-time'}
                 </span>
               </div>
+              {isMonthly && (
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  12-month minimum
+                </div>
+              )}
             </div>
             
             <ul className="space-y-3 mb-8">
@@ -465,6 +485,11 @@ function BundledPlansSection({ isMonthly }: { isMonthly: boolean }) {
                   {isMonthly ? '/month' : 'one-time'}
                 </span>
               </div>
+              {isMonthly && (
+                <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                  12-month minimum commitment
+                </div>
+              )}
               <div className="text-sm text-gray-500 dark:text-gray-400 line-through">
                 {isMonthly ? plan.originalMonthlyPrice : plan.originalOneTimePrice}
               </div>
@@ -540,12 +565,13 @@ export function PricingPage() {
               Start Your Forte™ Ecosystem
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-              Choose your foundation plan, then add services as your business grows. Every Forte™ website comes with Forte Care™ included.
+              Choose your foundation plan, then add services as your business grows.
             </p>
             
             <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-3xl mx-auto mb-8 border border-blue-200 dark:border-blue-700">
               <p className="text-sm text-blue-800 dark:text-blue-200">
-                <strong>Note:</strong> Forte Care™ is included in all monthly plans. For one-time sites, it's available as an optional maintenance plan.
+                <strong>Monthly Plans:</strong> 12-month minimum commitment, then month-to-month. Includes Forte Care™ support, hosting, and unlimited updates.<br />
+                <strong>One-Time Plans:</strong> Pay once and own your website. Forte Care™ available as optional maintenance service.
               </p>
             </div>
             
