@@ -26,6 +26,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
   const [isLoading, setIsLoading] = useState(false);
   const [autoRunTriggered, setAutoRunTriggered] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
+  const ctaButtonRef = useRef<HTMLButtonElement>(null);
 
   const validateUrl = (url: string): string | null => {
     if (!url.trim()) return null;
@@ -236,6 +237,26 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       setIsLoading(false);
     }
   }, [websiteUrl, performMiniAudit]);
+
+  // Mobile scroll to CTA button when mini audit completes
+  useEffect(() => {
+    if (results && !results.isLoading && !results.error && ctaButtonRef.current) {
+      // Check if this is a mobile device
+      const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent) || window.innerWidth < 768;
+      
+      if (isMobileDevice) {
+        // Add a delay to ensure the results are fully rendered
+        setTimeout(() => {
+          if (ctaButtonRef.current) {
+            ctaButtonRef.current.scrollIntoView({ 
+              behavior: 'smooth', 
+              block: 'center' 
+            });
+          }
+        }, 1000); // 1 second delay to let user see the results first
+      }
+    }
+  }, [results]);
 
   // Auto-run functionality - Enhanced for mobile
   useEffect(() => {
@@ -504,6 +525,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                 )}
                 
                 <button
+                  ref={ctaButtonRef}
                   onClick={() => {
                     if (results.seoScore >= 8) {
                       // High performers get competitive analysis

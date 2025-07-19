@@ -514,7 +514,38 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
             onClick={() => {
               const gradesElement = document.querySelector('[data-mobile-scroll-target]');
               if (gradesElement) {
-                gradesElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                // Custom slow scroll function that allows users to see screenshots
+                const slowScrollToElement = (element: Element) => {
+                  const elementRect = element.getBoundingClientRect();
+                  const elementTop = elementRect.top + window.pageYOffset;
+                  const windowHeight = window.innerHeight;
+                  const targetPosition = elementTop - (windowHeight / 2 - elementRect.height / 2);
+                  const startPosition = window.pageYOffset;
+                  const distance = targetPosition - startPosition;
+                  const duration = 2500; // 2.5 seconds for slower scroll
+                  let start: number | null = null;
+
+                  const animation = (currentTime: number) => {
+                    if (start === null) start = currentTime;
+                    const timeElapsed = currentTime - start;
+                    const progress = Math.min(timeElapsed / duration, 1);
+                    
+                    // Ease-in-out animation curve for smooth experience
+                    const ease = progress < 0.5 
+                      ? 2 * progress * progress 
+                      : 1 - Math.pow(-2 * progress + 2, 3) / 2;
+                    
+                    window.scrollTo(0, startPosition + distance * ease);
+                    
+                    if (timeElapsed < duration) {
+                      requestAnimationFrame(animation);
+                    }
+                  };
+
+                  requestAnimationFrame(animation);
+                };
+
+                slowScrollToElement(gradesElement);
               }
             }}
             className="inline-flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 text-sm"
