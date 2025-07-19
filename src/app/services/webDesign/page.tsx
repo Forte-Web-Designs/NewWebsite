@@ -1,5 +1,3 @@
-'use client';
-
 import { Icon } from '@/components/images/Icon';
 import Link from 'next/link';
 import { Metadata } from 'next';
