@@ -237,7 +237,11 @@ function PricingToggle({ isMonthly, onToggle }: PricingToggleProps) {
 }
 
 // Comparison table component
-function ComparisonTable({ isMonthly }: { isMonthly: boolean }) {
+function ComparisonTable({ isMonthly, selectedPlan, onPlanSelect }: { 
+  isMonthly: boolean; 
+  selectedPlan: 'foundation' | 'pro';
+  onPlanSelect: (plan: 'foundation' | 'pro') => void;
+}) {
   const features = [
     'Pages Included',
     'Hosting + Domain',
@@ -250,81 +254,187 @@ function ComparisonTable({ isMonthly }: { isMonthly: boolean }) {
   ];
 
   return (
-    <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
-      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-        Plan Comparison
-      </h3>
-      
-      <div className="overflow-x-auto">
-        <table className="w-full">
-          <thead>
-            <tr className="border-b border-gray-200 dark:border-gray-700">
-              <th className="text-left py-6 px-4 font-semibold text-gray-900 dark:text-white">Feature</th>
-              <th className="text-center py-6 px-4 font-semibold text-gray-900 dark:text-white">
-                <div className="flex flex-col items-center">
-                  <div className="font-bold text-lg">Foundation</div>
-                  <div className="text-blue-600 dark:text-blue-400 font-bold text-xl mt-1">
-                    {isMonthly ? '$200/mo' : '$2,500'}
-                  </div>
-                  {isMonthly && (
-                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      12-month minimum
+    <>
+      {/* Desktop: Show both columns side by side */}
+      <div className="hidden md:block bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+        <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+          Plan Comparison
+        </h3>
+        
+        <div className="overflow-x-auto">
+          <table className="w-full">
+            <thead>
+              <tr className="border-b border-gray-200 dark:border-gray-700">
+                <th className="text-left py-6 px-4 font-semibold text-gray-900 dark:text-white">Feature</th>
+                <th className="text-center py-6 px-4 font-semibold text-gray-900 dark:text-white">
+                  <div className="flex flex-col items-center">
+                    <div className="font-bold text-lg">Foundation</div>
+                    <div className="text-blue-600 dark:text-blue-400 font-bold text-xl mt-1">
+                      {isMonthly ? '$200/mo' : '$2,500'}
                     </div>
-                  )}
-                </div>
-              </th>
-              <th className="text-center py-6 px-4 font-semibold text-blue-600 dark:text-blue-400">
-                <div className="flex flex-col items-center">
-                  <div className="font-bold text-lg">Pro ⭐</div>
-                  <div className="text-blue-600 dark:text-blue-400 font-bold text-xl mt-1">
-                    {isMonthly ? '$350/mo' : '$4,300'}
+                    {isMonthly && (
+                      <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        12-month minimum
+                      </div>
+                    )}
                   </div>
-                  {isMonthly && (
-                    <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
-                      12-month minimum
+                </th>
+                <th className="text-center py-6 px-4 font-semibold text-blue-600 dark:text-blue-400">
+                  <div className="flex flex-col items-center">
+                    <div className="font-bold text-lg">Pro ⭐</div>
+                    <div className="text-blue-600 dark:text-blue-400 font-bold text-xl mt-1">
+                      {isMonthly ? '$350/mo' : '$4,300'}
                     </div>
-                  )}
-                </div>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {features.map((feature, index) => (
-              <tr key={index} className="border-b border-gray-100 dark:border-gray-800">
-                <td className="py-4 px-4 text-gray-700 dark:text-gray-300 font-medium">{feature}</td>
-                <td className="py-4 px-4 text-center">
-                  <span className={`${
-                    mainPlans[0].features[feature as keyof typeof mainPlans[0]['features']] === '❌' 
-                      ? 'text-red-500' 
-                      : 'text-green-500'
-                  }`}>
-                    {mainPlans[0].features[feature as keyof typeof mainPlans[0]['features']]}
-                  </span>
-                </td>
-                <td className="py-4 px-4 text-center">
-                  <span className={`${
-                    mainPlans[1].features[feature as keyof typeof mainPlans[1]['features']] === '❌' 
-                      ? 'text-red-500' 
-                      : 'text-green-500'
-                  }`}>
-                    {mainPlans[1].features[feature as keyof typeof mainPlans[1]['features']]}
-                  </span>
-                </td>
+                    {isMonthly && (
+                      <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                        12-month minimum
+                      </div>
+                    )}
+                  </div>
+                </th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {features.map((feature, index) => (
+                <tr key={index} className="border-b border-gray-100 dark:border-gray-800">
+                  <td className="py-4 px-4 text-gray-700 dark:text-gray-300 font-medium">{feature}</td>
+                  <td className="py-4 px-4 text-center">
+                    <span className={`${
+                      mainPlans[0].features[feature as keyof typeof mainPlans[0]['features']] === '❌' 
+                        ? 'text-red-500' 
+                        : 'text-green-500'
+                    }`}>
+                      {mainPlans[0].features[feature as keyof typeof mainPlans[0]['features']]}
+                    </span>
+                  </td>
+                  <td className="py-4 px-4 text-center">
+                    <span className={`${
+                      mainPlans[1].features[feature as keyof typeof mainPlans[1]['features']] === '❌' 
+                        ? 'text-red-500' 
+                        : 'text-green-500'
+                    }`}>
+                      {mainPlans[1].features[feature as keyof typeof mainPlans[1]['features']]}
+                    </span>
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+        
+        <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
+          <Link href="/contact" className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+            Choose Foundation
+          </Link>
+          <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+            Choose Pro
+          </Link>
+        </div>
       </div>
-      
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-        <Link href="/contact" className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
-          Choose Foundation
-        </Link>
-        <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
-          Choose Pro
-        </Link>
+
+      {/* Mobile: Show selected plan card format */}
+      <div className="md:hidden space-y-4">
+        {/* Plan Selection Tabs */}
+        <div className="flex bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
+          <button
+            onClick={() => onPlanSelect('foundation')}
+            className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              selectedPlan === 'foundation'
+                ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm'
+                : 'text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            Foundation
+          </button>
+          <button
+            onClick={() => onPlanSelect('pro')}
+            className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+              selectedPlan === 'pro'
+                ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm'
+                : 'text-gray-700 dark:text-gray-300'
+            }`}
+          >
+            Pro ⭐
+          </button>
+        </div>
+
+        {/* Selected Plan Details */}
+        <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6">
+          <div className="text-center mb-6">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+              {selectedPlan === 'foundation' ? 'Forte Foundation™' : 'Forte Pro™'}
+              {selectedPlan === 'pro' && ' ⭐'}
+            </h3>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">
+              {selectedPlan === 'foundation' 
+                ? (isMonthly ? '$200/mo' : '$2,500')
+                : (isMonthly ? '$350/mo' : '$4,300')
+              }
+            </div>
+            <div className="text-xs text-gray-500 dark:text-gray-400">
+              {isMonthly ? '12-month minimum' : 'one-time'}
+            </div>
+          </div>
+
+          {/* Feature List */}
+          <div className="space-y-3 mb-6">
+            <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+              <span className="font-medium text-gray-900 dark:text-white">Pages Included</span>
+              <span className="font-semibold text-gray-900 dark:text-white">
+                {selectedPlan === 'foundation' ? '5 pages' : '10 pages'}
+              </span>
+            </div>
+            <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+              <span className="font-medium text-gray-900 dark:text-white">Hosting + Domain</span>
+              <span className="text-green-500 text-xl">✅</span>
+            </div>
+            <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+              <span className="font-medium text-gray-900 dark:text-white">Mobile-Responsive Design</span>
+              <span className="text-green-500 text-xl">✅</span>
+            </div>
+            <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+              <span className="font-medium text-gray-900 dark:text-white">SEO-Ready Foundation</span>
+              <span className="text-green-500 text-xl">✅</span>
+            </div>
+            <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+              <span className="font-medium text-gray-900 dark:text-white">Basic Analytics</span>
+              <span className="text-green-500 text-xl">✅</span>
+            </div>
+            <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+              <span className="font-medium text-gray-900 dark:text-white">Conversion Tracking</span>
+              <span className={selectedPlan === 'foundation' ? 'text-red-500 text-xl' : 'text-green-500 text-xl'}>
+                {selectedPlan === 'foundation' ? '❌' : '✅'}
+              </span>
+            </div>
+            <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+              <span className="font-medium text-gray-900 dark:text-white">Priority Support</span>
+              <span className={selectedPlan === 'foundation' ? 'text-red-500 text-xl' : 'text-green-500 text-xl'}>
+                {selectedPlan === 'foundation' ? '❌' : '✅'}
+              </span>
+            </div>
+            <div className="flex items-center justify-between py-2">
+              <span className="font-medium text-gray-900 dark:text-white">Forte Care™ Included</span>
+              <div className="text-right">
+                <span className="text-green-500 text-xl">✅</span>
+                {selectedPlan === 'pro' && (
+                  <div className="text-xs text-gray-600 dark:text-gray-400">(faster response)</div>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="text-center">
+            <Link 
+              href="/contact" 
+              className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block w-full"
+            >
+              Choose {selectedPlan === 'foundation' ? 'Foundation' : 'Pro'}
+            </Link>
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
@@ -553,6 +663,7 @@ function FAQAccordion() {
 // Main pricing page component
 export function PricingPage() {
   const [isMonthly, setIsMonthly] = useState(true);
+  const [selectedPlan, setSelectedPlan] = useState<'foundation' | 'pro'>('foundation');
 
   return (
     <section className="py-16 md:py-24">
@@ -583,7 +694,11 @@ export function PricingPage() {
         {/* Side-by-Side Comparison Table */}
         <SimpleScrollReveal direction="up" delay={400}>
           <div className="mb-16">
-            <ComparisonTable isMonthly={isMonthly} />
+            <ComparisonTable 
+              isMonthly={isMonthly} 
+              selectedPlan={selectedPlan} 
+              onPlanSelect={setSelectedPlan}
+            />
           </div>
         </SimpleScrollReveal>
 
@@ -599,7 +714,8 @@ export function PricingPage() {
                   Prefer to pay once and own your website? We offer flat-rate one-time builds with no ongoing commitments.
                 </p>
                 
-                <div className="overflow-x-auto">
+                {/* Desktop Table */}
+                <div className="hidden sm:block overflow-x-auto">
                   <table className="w-full max-w-4xl mx-auto">
                     <thead>
                       <tr className="border-b-2 border-gray-200 dark:border-gray-700">
@@ -643,6 +759,45 @@ export function PricingPage() {
                       </tr>
                     </tbody>
                   </table>
+                </div>
+
+                {/* Mobile Card Layout */}
+                <div className="sm:hidden space-y-4">
+                  <div className="bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 p-6">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 dark:text-white text-lg mb-1">5-Page Custom Website</h4>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm">Perfect for small businesses and startups</p>
+                      </div>
+                      <div className="text-right ml-4">
+                        <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">$2,500</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 p-6">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 dark:text-white text-lg mb-1">10-Page Custom Website</h4>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm">Ideal for established businesses with more content</p>
+                      </div>
+                      <div className="text-right ml-4">
+                        <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">$4,300</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="bg-white dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 p-6">
+                    <div className="flex items-start justify-between">
+                      <div className="flex-1">
+                        <h4 className="font-semibold text-gray-900 dark:text-white text-lg mb-1">Custom / Large Websites</h4>
+                        <p className="text-gray-600 dark:text-gray-400 text-sm">Enterprise solutions with complex requirements</p>
+                      </div>
+                      <div className="text-right ml-4">
+                        <Link href="/contact" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                          Custom Quote
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
                 </div>
                 
                 <div className="mt-8 p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
