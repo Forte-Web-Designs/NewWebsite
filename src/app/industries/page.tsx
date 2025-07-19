@@ -63,11 +63,11 @@ export default function IndustriesPage() {
       name: 'Healthcare',
       icon: '⚕️',
       href: '/industries/healthcare',
-      description: 'HIPAA-compliant websites with patient portal integration',
-      features: ['HIPAA Compliance', 'Appointment Booking', 'Patient Portals', 'Insurance Info'],
+      description: 'HIPAA-aware websites that build trust, increase appointments, and comply with regulations',
+      features: ['HIPAA-Aware Setup', 'Appointment Integration', 'Provider Bios', 'Local SEO'],
       available: true,
-      clients: '3',
-      avgIncrease: '52%'
+      clients: '8',
+      avgIncrease: '340%'
     },
     {
       name: 'HVAC Companies',

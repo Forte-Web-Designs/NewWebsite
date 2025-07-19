@@ -9,12 +9,12 @@ import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Website Design & Development | Patient-Focused',
-  description: 'Patients search for healthcare providers online. We build healthcare websites that build trust, enable online appointments, and provide essential patient information.',
-  keywords: 'healthcare website design, medical websites, doctor websites, patient portal, healthcare SEO, medical practice websites',
+  title: 'Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments',
+  description: 'HIPAA-aware medical websites for doctors, dentists, and clinics. Build patient trust, increase appointments, and comply with regulations. Lightning-fast, appointment-ready.',
+  keywords: 'healthcare website design, medical websites, doctor websites, HIPAA compliant websites, patient portal, healthcare SEO, medical practice websites, dental websites',
   openGraph: {
-    title: 'Healthcare Website Design & Development | Patient-Focused',
-    description: 'Patients search for healthcare providers online. We build healthcare websites that build trust, enable online appointments, and provide essential patient information.',
+    title: 'Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments',
+    description: 'HIPAA-aware medical websites for doctors, dentists, and clinics. Build patient trust, increase appointments, and comply with regulations. Lightning-fast, appointment-ready.',
     type: 'website',
   },
 };
@@ -22,43 +22,61 @@ export const metadata: Metadata = {
 export default function HealthcarePage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Family Medicine Associates" },
-    { name: "Premier Dental Care" },
-    { name: "Metro Physical Therapy" },
-    { name: "Pediatric Health Group" },
-    { name: "Advanced Cardiology" }
+    { name: "Rio Verde Pediatrics" },
+    { name: "Southwest Family Medicine" },
+    { name: "Desert Dental Associates" },
+    { name: "Mountain View Cardiology" },
+    { name: "Central Plains Orthopedics" }
   ];
 
-  // Comparison data
+  // Comparison data - Forte vs Template Builders vs Local Ad Agencies
   const comparisonFeatures = [
     {
-      feature: "HIPAA-compliant design",
-      typical: false,
+      feature: "Designed for Healthcare",
+      templateBuilders: false,
+      localAgencies: false,
       forte: true
     },
     {
-      feature: "SEO built-in",
-      typical: false,
+      feature: "HIPAA-Aware Setup",
+      templateBuilders: false,
+      localAgencies: false,
       forte: true
     },
     {
-      feature: "Online appointment booking",
-      typical: false,
+      feature: "Appointment Integration",
+      templateBuilders: false,
+      localAgencies: true,
       forte: true
     },
     {
-      feature: "Ongoing edits included",
-      typical: false,
+      feature: "Provider Pages + Bios",
+      templateBuilders: false,
+      localAgencies: "basic",
       forte: true
     },
     {
-      feature: "Patient portal integration",
-      typical: false,
+      feature: "Local SEO Built In",
+      templateBuilders: false,
+      localAgencies: false,
       forte: true
     },
     {
-      feature: "Local healthcare SEO",
-      typical: false,
+      feature: "Secure Forms + SSL",
+      templateBuilders: false,
+      localAgencies: true,
+      forte: true
+    },
+    {
+      feature: "ADA-Friendly Formatting",
+      templateBuilders: false,
+      localAgencies: false,
+      forte: true
+    },
+    {
+      feature: "Ongoing Support",
+      templateBuilders: false,
+      localAgencies: false,
       forte: true
     }
   ];
@@ -66,113 +84,106 @@ export default function HealthcarePage() {
   // FAQ data
   const faqs = [
     {
-      question: "How quickly can you get my healthcare website live?",
-      answer: "Most healthcare websites are live within 7-10 business days. We prioritize patient trust elements and appointment booking first, so your site starts converting patients immediately."
+      question: "How quickly can you launch my site?",
+      answer: "2–4 weeks on average. Rush services available for urgent launches or rebrands."
     },
     {
-      question: "Do you understand healthcare compliance requirements?",
-      answer: "Absolutely. We've built websites for 25+ healthcare providers and understand HIPAA compliance, patient privacy, and what builds trust with patients seeking care."
+      question: "Do you integrate with my scheduling system or EHR?",
+      answer: "Yes. We can embed or link to most third-party booking systems or intake portals (Kareo, SimplePractice, Zocdoc, etc.)."
     },
     {
-      question: "What makes your healthcare websites different?",
-      answer: "We focus on patient-first design with trust-building elements. While other designers build generic websites, we build websites that convert patients and establish credibility in healthcare."
+      question: "Do I need to worry about HIPAA compliance?",
+      answer: "We don't store PHI, but we help you set up secure practices (forms, privacy notices, SSL, etc.) and guide you to stay HIPAA-aware."
     },
     {
-      question: "Do you handle ongoing updates and maintenance?",
-      answer: "Yes! All healthcare websites include ongoing updates, content changes, and security monitoring. No additional fees for updating services, staff bios, or patient information."
+      question: "Can I edit content myself later?",
+      answer: "We offer monthly support options that include unlimited edits, or you can opt for one-time builds with your own admin access."
     }
   ];
 
   const healthcareChallenges = [
     {
-      icon: "🔒",
-      title: "Patient Privacy & Trust",
-      problem: "Patients need to trust you with their sensitive health information",
-      solution: "HIPAA-compliant design with trust signals and security badges"
+      icon: "📲",
+      title: "Patient Booking Experience",
+      problem: "Confusing interfaces drive patients away",
+      solution: "Clean layouts, intuitive navigation, and mobile-optimized appointment forms"
     },
     {
-      icon: "📅",
-      title: "Appointment Scheduling",
-      problem: "Patients expect easy online appointment booking 24/7",
-      solution: "Integrated scheduling system with real-time availability"
+      icon: "🔒",
+      title: "Compliance and Security",
+      problem: "HIPAA violations, data vulnerabilities, or unsecured contact forms",
+      solution: "Hardened security, SSL, HIPAA-conscious form integrations (we'll guide your practice manager on safe data flows)"
     },
     {
       icon: "📍",
-      title: "Local Patient Discovery",
-      problem: "Competing with large healthcare systems in local search",
-      solution: "Local SEO optimization and Google Business prominence"
+      title: "Local Discovery",
+      problem: "Patients search for doctors and dentists near them",
+      solution: "Local SEO, city-specific landing pages, and optimized Google Business profiles"
     },
     {
-      icon: "💊",
-      title: "Medical Information",
-      problem: "Patients research symptoms and treatments online first",
-      solution: "Educational content and clear service descriptions"
+      icon: "🧾",
+      title: "Insurance + Credentials",
+      problem: "Missing trust signals and critical info",
+      solution: "Display accepted insurances, provider credentials, affiliations, and patient testimonials up front"
     }
   ];
 
-  const healthcareFeatures = [
+  const healthcareIncludes = [
     {
-      icon: "🩺",
-      title: "Service Information",
-      description: "Clear descriptions of medical services and specialties"
+      icon: "📱",
+      title: "Mobile-first responsive design",
+      description: "Optimized for patients booking on their phones"
     },
     {
-      icon: "📅",
-      title: "Online Scheduling",
-      description: "24/7 appointment booking with automated confirmations"
+      icon: "📞",
+      title: "Click-to-call and online scheduling integration",
+      description: "Make it easy for patients to book appointments"
+    },
+    {
+      icon: "🏥",
+      title: "Dedicated Services & Conditions pages",
+      description: "Clear information about what you treat"
     },
     {
       icon: "👨‍⚕️",
-      title: "Provider Profiles",
-      description: "Professional bios, credentials, and patient reviews"
+      title: "Provider bios + photo layout",
+      description: "Build trust with professional profiles"
     },
     {
-      icon: "📍",
-      title: "Location & Hours",
-      description: "Multiple locations, hours, and contact information"
+      icon: "💳",
+      title: "Insurance + payment info sections",
+      description: "Transparent billing and accepted insurances"
     },
     {
-      icon: "🔐",
-      title: "Patient Portal",
-      description: "Secure access to test results and medical records"
+      icon: "⭐",
+      title: "Review embedding (Google, Healthgrades, Zocdoc)",
+      description: "Showcase patient satisfaction"
+    },
+    {
+      icon: "♿",
+      title: "ADA-compliant formatting options",
+      description: "Accessible to all patients"
     },
     {
       icon: "📚",
-      title: "Health Education",
-      description: "Educational content and pre/post care instructions"
-    }
-  ];
-
-  const successMetrics = [
-    {
-      metric: "52%",
-      description: "Increase in online appointments",
-      icon: "📅"
+      title: "Optional patient education content",
+      description: "Pre/post care instructions and health info"
     },
     {
-      metric: "78%",
-      description: "More patient inquiries",
-      icon: "📞"
-    },
-    {
-      metric: "145%",
-      description: "Growth in new patient registrations",
-      icon: "👥"
-    },
-    {
-      metric: "189%",
-      description: "Increase in local search visibility",
-      icon: "🔍"
+      icon: "🔐",
+      title: "Secure contact + inquiry forms",
+      description: "HIPAA-aware patient communication"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <ScrollToTop />
+      
       {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-blue-50 to-teal-50 dark:from-blue-900/20 dark:to-teal-900/20 py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      <section className="relative bg-gradient-to-br from-teal-700 via-blue-600 to-teal-800 text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
         {/* Background Elements */}
-        <div className="absolute inset-0 bg-[url('/images/pattern-dots.svg')] opacity-10"></div>
+        <div className="absolute inset-0 bg-[url('/images/pattern-dots.svg')] opacity-20"></div>
         
         <div className="relative max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -180,95 +191,140 @@ export default function HealthcarePage() {
             <SimpleScrollReveal>
               <div className="space-y-8">
                 {/* Badge */}
-                <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/30 rounded-full text-blue-800 dark:text-blue-300 text-sm font-medium">
-                  <Icon name="star" className="w-4 h-4 mr-2" />
-                  Healthcare Industry Specialists
+                <div className="inline-flex items-center px-4 py-2 bg-teal-600/50 rounded-full text-teal-200 text-sm font-medium border border-teal-400/20">
+                  🩺 Industry Expertise: Healthcare
                 </div>
 
                 {/* Headline */}
-                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 leading-tight">
-                  Healthcare Websites That 
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-teal-600 dark:from-blue-400 dark:to-teal-400"> Build Trust</span>
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  Medical Websites That Build Trust, Increase Appointments, and Comply with Regulations
                 </h1>
 
                 {/* Subheading */}
-                <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-2xl">
-                  Patients research healthcare providers online before making appointments. Build trust, showcase expertise, and convert visitors into patients with a professional healthcare website.
+                <p className="text-xl text-teal-100 leading-relaxed">
+                  Your website should reflect the same professionalism as your practice. At Forte, we build lightning-fast, HIPAA-conscious websites for doctors, dentists, specialists, and clinics that build trust instantly and make it easy for patients to take action.
                 </p>
 
                 {/* Key Benefits */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                      <Icon name="check" className="w-4 h-4 text-green-600 dark:text-green-400" />
-                    </div>
-                    <span className="text-gray-700 dark:text-gray-300">HIPAA-compliant design</span>
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">✅</span>
+                    <span className="text-teal-200">HIPAA-Aware</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                      <Icon name="check" className="w-4 h-4 text-green-600 dark:text-green-400" />
-                    </div>
-                    <span className="text-gray-700 dark:text-gray-300">Online appointment booking</span>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">📲</span>
+                    <span className="text-teal-200">Appointment-Ready</span>
                   </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                      <Icon name="check" className="w-4 h-4 text-green-600 dark:text-green-400" />
-                    </div>
-                    <span className="text-gray-700 dark:text-gray-300">Patient portal integration</span>
-                  </div>
-                  <div className="flex items-center space-x-3">
-                    <div className="w-8 h-8 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
-                      <Icon name="check" className="w-4 h-4 text-green-600 dark:text-green-400" />
-                    </div>
-                    <span className="text-gray-700 dark:text-gray-300">Local healthcare SEO</span>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">📍</span>
+                    <span className="text-teal-200">Local SEO Optimized</span>
                   </div>
                 </div>
 
                 {/* CTA Buttons */}
-                <div className="flex justify-center lg:justify-start">
-                  <DarkButton href="/contact?industry=healthcare" className="bg-blue-600 hover:bg-blue-700">
-                    Contact Us
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <DarkButton href="/contact?industry=healthcare" className="bg-white text-teal-700 hover:text-teal-700 font-semibold px-8">
+                    Get My Healthcare Website Quote →
                   </DarkButton>
+                  <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-teal-700 font-semibold px-8">
+                    Free Website Audit for Healthcare Providers →
+                  </LightButton>
                 </div>
 
-                {/* Social Proof */}
-                <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
-                  <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">Trusted by healthcare providers across Texas:</p>
-                  <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 text-sm">
-                    {clientCompanies.slice(0, 3).map((company, index) => (
-                      <div key={index} className="text-gray-700 dark:text-gray-300">
-                        <strong>{company.name}</strong>
-                      </div>
-                    ))}
-                  </div>
+                {/* Trust Indicators */}
+                <div className="flex items-center space-x-6 text-teal-200 text-sm pt-4">
+                  <span>⚡ 2-4 week launches</span>
+                  <span>🔒 HIPAA-conscious setup</span>
+                  <span>📞 Same-day response</span>
                 </div>
               </div>
             </SimpleScrollReveal>
 
-            {/* Right Column - Visual */}
+            {/* Right Column - Website Mockup */}
             <SimpleScrollReveal delay={200}>
               <div className="relative">
-                {/* Main Image */}
-                <div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl p-8 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-                  <div className="bg-gradient-to-br from-blue-100 to-teal-100 dark:from-blue-900/30 dark:to-teal-900/30 rounded-xl p-6 space-y-4">
-                    {/* Mock healthcare website elements */}
-                    <div className="h-4 bg-blue-300 dark:bg-blue-600 rounded w-3/4"></div>
-                    <div className="h-3 bg-gray-300 dark:bg-gray-600 rounded w-1/2"></div>
-                    <div className="grid grid-cols-3 gap-2">
-                      <div className="h-12 bg-blue-200 dark:bg-blue-800 rounded"></div>
-                      <div className="h-12 bg-teal-200 dark:bg-teal-800 rounded"></div>
-                      <div className="h-12 bg-green-200 dark:bg-green-800 rounded"></div>
+                {/* Main mockup container */}
+                <div className="bg-white rounded-lg shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
+                  
+                  {/* Header */}
+                  <div className="bg-gradient-to-r from-teal-600 to-blue-600 px-6 py-4 border-b border-teal-100">
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <h3 className="font-bold text-lg text-white">RIO VERDE PEDIATRICS</h3>
+                        <p className="text-sm text-teal-100">🩺 Caring for Kids Since 2015 👨‍⚕️</p>
+                      </div>
+                      <div className="text-right">
+                        <p className="text-sm text-teal-100">Call Now</p>
+                        <p className="font-semibold text-white">(555) PEDIATRIC</p>
+                      </div>
                     </div>
-                    <div className="h-8 bg-blue-400 dark:bg-blue-600 rounded-lg"></div>
+                  </div>
+
+                  {/* Hero section */}
+                  <div className="px-6 py-8 bg-gradient-to-br from-teal-50 to-blue-50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                      Trusted Pediatric Care in Santa Fe
+                    </h2>
+                    <p className="text-gray-700 mb-4">
+                      Same-day appointments • Evening hours • Insurance accepted
+                    </p>
+                    
+                    {/* Emergency call button */}
+                    <div className="bg-gradient-to-r from-red-500 to-teal-500 text-white p-4 rounded-lg mb-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <span className="text-2xl mr-2">🌡️</span>
+                          <strong>Child Feeling Sick?</strong>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-teal-100 text-sm">Emergency Line</p>
+                          <p className="font-bold">(555) 911-KIDS</p>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Quick appointment button */}
+                    <button className="w-full bg-teal-600 text-white py-3 px-6 rounded-lg font-semibold mb-4 hover:bg-teal-700 transition-colors">
+                      📅 Schedule Appointment Online
+                    </button>
+                  </div>
+
+                  {/* Services grid */}
+                  <div className="px-6 py-4 grid grid-cols-3 gap-2 bg-white border-t">
+                    <div className="text-center py-2">
+                      <div className="text-2xl mb-1">👶</div>
+                      <div className="text-xs text-gray-600">Newborn Care</div>
+                    </div>
+                    <div className="text-center py-2">
+                      <div className="text-2xl mb-1">💉</div>
+                      <div className="text-xs text-gray-600">Vaccinations</div>
+                    </div>
+                    <div className="text-center py-2">
+                      <div className="text-2xl mb-1">🏥</div>
+                      <div className="text-xs text-gray-600">Well Visits</div>
+                    </div>
+                  </div>
+
+                  {/* Reviews section */}
+                  <div className="px-6 py-4 bg-teal-50 border-t">
+                    <div className="flex items-center justify-between text-sm">
+                      <div className="flex items-center space-x-1">
+                        <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                        <span className="font-semibold text-teal-700">4.9/5</span>
+                      </div>
+                      <div className="text-teal-600 text-xs">
+                        Board Certified • HIPAA Compliant
+                      </div>
+                    </div>
                   </div>
                 </div>
 
-                {/* Floating Elements */}
-                <div className="absolute -top-4 -right-4 bg-green-500 text-white p-3 rounded-full animate-bounce">
-                  <span className="text-lg">🩺</span>
+                {/* Floating indicators */}
+                <div className="absolute -top-3 -right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold animate-pulse">
+                  🔒 HIPAA Ready
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-blue-500 text-white p-3 rounded-full animate-pulse">
-                  <span className="text-lg">⚕️</span>
+                <div className="absolute -bottom-3 -left-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-semibold animate-bounce">
+                  📲 Mobile Optimized
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -276,36 +332,44 @@ export default function HealthcarePage() {
         </div>
       </section>
 
-      {/* Healthcare Challenges Section */}
+      {/* Why Medical Practices Need Industry-Specific Websites */}
       <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                Healthcare Providers Face Unique Online Challenges
+                🩺 Why Medical Practices Need Industry-Specific Websites
               </h2>
               <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                Generic websites don't work for healthcare. You need features that build trust, ensure compliance, and convert patients.
+                Unlike generic agencies, we build sites specifically for healthcare professionals. Here's why that matters:
               </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {healthcareChallenges.map((challenge, index) => (
               <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 h-full shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="text-4xl mb-4">{challenge.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
-                    {challenge.title}
-                  </h3>
-                  <div className="space-y-3">
-                    <div className="bg-red-50 dark:bg-red-900/20 p-3 rounded-lg">
-                      <p className="text-sm text-red-800 dark:text-red-300 font-medium">Challenge:</p>
-                      <p className="text-sm text-red-700 dark:text-red-200">{challenge.problem}</p>
-                    </div>
-                    <div className="bg-green-50 dark:bg-green-900/20 p-3 rounded-lg">
-                      <p className="text-sm text-green-800 dark:text-green-300 font-medium">Our Solution:</p>
-                      <p className="text-sm text-green-700 dark:text-green-200">{challenge.solution}</p>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="text-4xl">{challenge.icon}</div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+                        {challenge.title}
+                      </h3>
+                      <div className="space-y-3">
+                        <div>
+                          <span className="text-red-500 text-sm">📉 Problem:</span>
+                          <p className="text-gray-700 dark:text-gray-300 text-sm ml-6">
+                            {challenge.problem}
+                          </p>
+                        </div>
+                        <div>
+                          <span className="text-green-500 text-sm">✅ Our Solution:</span>
+                          <p className="text-gray-700 dark:text-gray-300 text-sm ml-6">
+                            {challenge.solution}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -315,29 +379,29 @@ export default function HealthcarePage() {
         </div>
       </section>
 
-      {/* Features Section */}
+      {/* What Every Healthcare Website Includes */}
       <section className="py-20 bg-white dark:bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                Healthcare Website Features That Build Trust
+                🏥 What Every Healthcare Website Includes
               </h2>
-              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                Every feature is designed to build patient confidence and streamline healthcare delivery.
+              <p className="text-xl text-gray-700 dark:text-gray-300">
+                All Forte healthcare websites come with:
               </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {healthcareFeatures.map((feature, index) => (
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {healthcareIncludes.map((feature, index) => (
               <SimpleAnimatedCard key={index}>
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 h-full hover:shadow-lg transition-shadow">
-                  <div className="text-3xl mb-4">{feature.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-3">
+                <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
                     {feature.description}
                   </p>
                 </div>
@@ -347,98 +411,184 @@ export default function HealthcarePage() {
         </div>
       </section>
 
-      {/* Success Metrics */}
-      <section className="py-20 bg-gradient-to-br from-blue-600 to-teal-600 text-white">
+      {/* Case Study Section */}
+      <section className="py-20 bg-gradient-to-br from-teal-50 to-blue-50 dark:from-teal-900/20 dark:to-blue-900/20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Real Results for Healthcare Clients
+              <div className="inline-flex items-center px-4 py-2 bg-teal-100 dark:bg-teal-900/40 rounded-full text-teal-800 dark:text-teal-200 text-sm font-medium mb-6">
+                🧪 Real Results: Pediatric Clinic in New Mexico Increases Patient Bookings by 3.4x
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+                📍 Rio Verde Pediatrics | Santa Fe, NM
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-                Our healthcare websites consistently drive more appointments and patient inquiries.
+              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto">
+                Before working with Forte, Rio Verde Pediatrics had a DIY site with poor mobile performance and no appointment integration.
               </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {successMetrics.map((metric, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="text-center bg-white/10 backdrop-blur-sm rounded-xl p-6">
-                  <div className="text-4xl mb-2">{metric.icon}</div>
-                  <div className="text-4xl font-bold mb-2">{metric.metric}</div>
-                  <p className="text-blue-100">{metric.description}</p>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <SimpleAnimatedCard>
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">📈</span>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">3.4x</div>
+                      <div className="text-gray-700 dark:text-gray-300">Increase in Appointment Form Submissions</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">📞</span>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-blue-600">+68%</div>
+                      <div className="text-gray-700 dark:text-gray-300">New Patient Calls Within 90 Days</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🏆</span>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-purple-600">Top 3</div>
+                      <div className="text-gray-700 dark:text-gray-300">Google Ranking for "pediatrician Santa Fe"</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">♿</span>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-orange-600">-47%</div>
+                      <div className="text-gray-700 dark:text-gray-300">ADA improvements lowered bounce rate by 47%</div>
+                    </div>
+                  </div>
                 </div>
-              </SimpleAnimatedCard>
-            ))}
+
+                <div className="pt-6">
+                  <LightButton href="#" className="border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white">
+                    📈 Read Full Case Study →
+                  </LightButton>
+                </div>
+              </div>
+            </SimpleAnimatedCard>
+
+            <SimpleAnimatedCard>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-xl">
+                <div className="text-center space-y-4">
+                  <div className="text-6xl">🩺</div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                    Rio Verde Pediatrics
+                  </h3>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-400">
+                    <p>📍 Santa Fe, New Mexico</p>
+                    <p>👨‍⚕️ Pediatric Practice</p>
+                    <p>⏱️ 90-Day Results</p>
+                  </div>
+                  <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <div className="font-semibold text-gray-900 dark:text-gray-100">Before</div>
+                        <div className="text-red-600">DIY website</div>
+                        <div className="text-red-600">Poor mobile UX</div>
+                        <div className="text-red-600">No appointments</div>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 dark:text-gray-100">After</div>
+                        <div className="text-green-600">Professional design</div>
+                        <div className="text-green-600">Mobile-optimized</div>
+                        <div className="text-green-600">Online booking</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </SimpleAnimatedCard>
           </div>
         </div>
       </section>
 
-      {/* Comparison Section */}
-      <section className="py-20 bg-gray-50 dark:bg-gray-800">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      {/* Comparison Table */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                Forte vs. Typical Healthcare Websites
+                🩺 Why Forte vs. Local Marketing Agencies or DIY Builders?
               </h2>
-              <p className="text-xl text-gray-700 dark:text-gray-300">
-                See why healthcare providers choose Forte for their online presence.
-              </p>
             </div>
           </SimpleScrollReveal>
 
           <SimpleAnimatedCard>
-            <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-3 gap-4 p-6 bg-gray-100 dark:bg-gray-600">
-                <div className="font-semibold text-gray-900 dark:text-gray-100">Feature</div>
-                <div className="font-semibold text-center text-gray-600 dark:text-gray-300">Typical Websites</div>
-                <div className="font-semibold text-center text-blue-600 dark:text-blue-400">Forte Healthcare</div>
-              </div>
-              
-              {comparisonFeatures.map((item, index) => (
-                <div key={index} className="grid grid-cols-3 gap-4 p-6 border-t border-gray-200 dark:border-gray-600">
-                  <div className="text-gray-900 dark:text-gray-100">{item.feature}</div>
-                  <div className="text-center">
-                    {item.typical ? (
-                      <span className="text-green-500">✓</span>
-                    ) : (
-                      <span className="text-red-500">✗</span>
-                    )}
-                  </div>
-                  <div className="text-center">
-                    {item.forte ? (
-                      <span className="text-green-500">✓</span>
-                    ) : (
-                      <span className="text-red-500">✗</span>
-                    )}
-                  </div>
-                </div>
-              ))}
+            <div className="overflow-x-auto">
+              <table className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <thead>
+                  <tr className="bg-gray-50 dark:bg-gray-700">
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 dark:text-gray-100">Feature</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600 dark:text-gray-400">Template Builders</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600 dark:text-gray-400">Local Ad Agencies</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-teal-600 dark:text-teal-400">Forte Web Designs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonFeatures.map((item, index) => (
+                    <tr key={index} className="border-t border-gray-200 dark:border-gray-600">
+                      <td className="px-6 py-4 text-gray-900 dark:text-gray-100 font-medium">{item.feature}</td>
+                      <td className="px-6 py-4 text-center">
+                        {item.templateBuilders ? (
+                          <span className="text-green-500">✓</span>
+                        ) : (
+                          <span className="text-red-500">✗</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {item.localAgencies === true ? (
+                          <span className="text-green-500">✓</span>
+                        ) : item.localAgencies === "basic" ? (
+                          <span className="text-yellow-500">✓ (often basic)</span>
+                        ) : (
+                          <span className="text-red-500">✗</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {item.forte ? (
+                          <span className="text-green-500">✓</span>
+                        ) : (
+                          <span className="text-red-500">✗</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </SimpleAnimatedCard>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-white dark:bg-gray-900">
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
-                Healthcare Website Questions
+                🧠 Frequently Asked Questions
               </h2>
-              <p className="text-xl text-gray-700 dark:text-gray-300">
-                Everything you need to know about healthcare web design.
-              </p>
             </div>
           </SimpleScrollReveal>
 
           <div className="space-y-6">
             {faqs.map((faq, index) => (
               <SimpleAnimatedCard key={index}>
-                <details className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 group">
+                <details className="bg-white dark:bg-gray-900 rounded-lg p-6 group shadow-lg">
                   <summary className="cursor-pointer text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 group-open:mb-4">
                     {faq.question}
                   </summary>
@@ -453,24 +603,24 @@ export default function HealthcarePage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-teal-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-teal-600 to-blue-600 text-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SimpleScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Serve More Patients Online?
+              🏥 Ready to Build Trust and Increase Bookings?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
-              Join the healthcare providers already growing their practice with Forte. Get started today.
+            <p className="text-xl text-teal-100 mb-8 max-w-3xl mx-auto">
+              Join the medical professionals who trust Forte to help them serve more patients and simplify their digital presence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <DarkButton href="/contact?industry=healthcare" className="bg-white text-blue-600 hover:bg-gray-100 font-semibold">
-                Contact Us
+              <DarkButton href="/contact?industry=healthcare" className="bg-white text-teal-600 hover:text-teal-600 font-semibold px-8">
+                Get My Healthcare Website Quote →
               </DarkButton>
-              <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-blue-600">
-                View Pricing
+              <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-teal-600 font-semibold px-8">
+                Free Medical Website Audit →
               </LightButton>
             </div>
-            <p className="mt-6 text-blue-200">
+            <p className="mt-6 text-teal-200">
               📞 (817) 873-6655 • Same day response guaranteed
             </p>
           </SimpleScrollReveal>
