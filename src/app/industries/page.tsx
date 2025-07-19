@@ -33,11 +33,11 @@ export default function IndustriesPage() {
       name: 'Restaurants',
       icon: '🍕',
       href: '/industries/restaurants',
-      description: 'Menu-focused websites with online ordering integration',
-      features: ['Online Menus', 'Reservation Systems', 'Photo Galleries', 'Location Info'],
+      description: 'Restaurant websites that fill tables and drive online orders with mobile-first design',
+      features: ['Mobile-Optimized Menus', 'Local SEO & Maps', 'Online Ordering Integration', 'Review Display'],
       available: true,
-      clients: '5',
-      avgIncrease: '85%'
+      clients: '8',
+      avgIncrease: '63%'
     },
     {
       name: 'Landscapers',
