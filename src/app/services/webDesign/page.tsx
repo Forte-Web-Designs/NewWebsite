@@ -74,7 +74,7 @@ export default function WebsiteDesignPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <Icon name="zap" className="w-6 h-6 text-green-600 dark:text-green-400" />
+                      <span className="text-2xl">⚡</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ Loads instantly</h4>
@@ -84,7 +84,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <Icon name="smartphone" className="w-6 h-6 text-green-600 dark:text-green-400" />
+                      <span className="text-2xl">📱</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ Looks great on every device</h4>
@@ -94,7 +94,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <Icon name="trending-up" className="w-6 h-6 text-green-600 dark:text-green-400" />
+                      <span className="text-2xl">📈</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ Converts more visitors into customers</h4>
@@ -104,7 +104,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <Icon name="shield" className="w-6 h-6 text-green-600 dark:text-green-400" />
+                      <span className="text-2xl">🔒</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">✅ Stays secure with no plugins or backdoors</h4>
@@ -417,7 +417,7 @@ export default function WebsiteDesignPage() {
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
                   <div className="text-center mb-6">
                     <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Icon name="credit-card" className="w-8 h-8 text-green-600 dark:text-green-400" />
+                      <span className="text-3xl">💳</span>
                     </div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">One-Time Payment</h3>
                     <p className="text-gray-600 dark:text-gray-400">Own your site outright, optional support available</p>
@@ -508,7 +508,7 @@ export default function WebsiteDesignPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
-                      <Icon name="edit" className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <span className="text-2xl">✏️</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">• Unlimited content edits</h4>
@@ -518,7 +518,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
-                      <Icon name="server" className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <span className="text-2xl">🖥️</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">• Hosting + uptime monitoring</h4>
@@ -528,7 +528,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
-                      <Icon name="zap" className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <span className="text-2xl">⚡</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">• Speed & performance optimization</h4>
@@ -538,7 +538,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
-                      <Icon name="shield" className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <span className="text-2xl">🔒</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">• SSL & security updates</h4>
@@ -548,7 +548,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
-                      <Icon name="hard-drive" className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <span className="text-2xl">💾</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">• Monthly site backups</h4>
@@ -558,7 +558,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
-                      <Icon name="link" className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <span className="text-2xl">🔗</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">• Broken link scans</h4>
@@ -568,7 +568,7 @@ export default function WebsiteDesignPage() {
 
                   <div className="flex items-start gap-3">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-2 rounded-lg">
-                      <Icon name="trending-up" className="w-6 h-6 text-blue-600 dark:text-blue-400" />
+                      <span className="text-2xl">📈</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-2">• Growth recommendations</h4>
@@ -606,7 +606,7 @@ export default function WebsiteDesignPage() {
                 <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 mb-12">
                   <div className="flex flex-col items-center text-center">
                     <div className="bg-blue-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mb-4">
-                      <Icon name="globe" className="w-8 h-8" />
+                      <span className="text-2xl">🌐</span>
                     </div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Website</h4>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">Your foundation for growth</p>
@@ -616,7 +616,7 @@ export default function WebsiteDesignPage() {
                     <Icon name="arrow-right" className="w-8 h-8" />
                   </div>
                   <div className="md:hidden text-gray-400">
-                    <Icon name="arrow-down" className="w-8 h-8" />
+                    <span className="text-3xl">⬇️</span>
                   </div>
                   
                   <div className="flex flex-col items-center text-center">
@@ -631,12 +631,12 @@ export default function WebsiteDesignPage() {
                     <Icon name="arrow-right" className="w-8 h-8" />
                   </div>
                   <div className="md:hidden text-gray-400">
-                    <Icon name="arrow-down" className="w-8 h-8" />
+                    <span className="text-3xl">⬇️</span>
                   </div>
                   
                   <div className="flex flex-col items-center text-center">
                     <div className="bg-purple-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mb-4">
-                      <Icon name="target" className="w-8 h-8" />
+                      <span className="text-2xl">🎯</span>
                     </div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">[ Forte PPC™ ]</h4>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">Drive leads fast with Google Ads</p>
@@ -646,7 +646,7 @@ export default function WebsiteDesignPage() {
                     <Icon name="arrow-right" className="w-8 h-8" />
                   </div>
                   <div className="md:hidden text-gray-400">
-                    <Icon name="arrow-down" className="w-8 h-8" />
+                    <span className="text-3xl">⬇️</span>
                   </div>
                   
                   <div className="flex flex-col items-center text-center">
@@ -661,12 +661,12 @@ export default function WebsiteDesignPage() {
                     <Icon name="arrow-right" className="w-8 h-8" />
                   </div>
                   <div className="md:hidden text-gray-400">
-                    <Icon name="arrow-down" className="w-8 h-8" />
+                    <span className="text-3xl">⬇️</span>
                   </div>
                   
                   <div className="flex flex-col items-center text-center">
                     <div className="bg-orange-500 text-white rounded-full w-16 h-16 flex items-center justify-center text-xl font-bold mb-4">
-                      <Icon name="trending-up" className="w-8 h-8" />
+                      <span className="text-2xl">📈</span>
                     </div>
                     <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Growth</h4>
                     <p className="text-gray-600 dark:text-gray-400 text-sm">Scale your business</p>
@@ -714,7 +714,7 @@ export default function WebsiteDesignPage() {
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
                   <div className="text-center mb-6">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Icon name="trending-up" className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                      <span className="text-3xl">📈</span>
                     </div>
                   </div>
                   <blockquote className="text-lg text-gray-700 dark:text-gray-300 text-center italic mb-6">
@@ -748,13 +748,13 @@ export default function WebsiteDesignPage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
                 <div className="flex items-center gap-2 text-white">
-                  <Icon name="phone" className="w-5 h-5" />
-                  <span className="text-lg font-semibold">📞 Call us: (817) 873-6655</span>
+                  <span className="text-lg">📞</span>
+                  <span className="text-lg font-semibold">Call us: (817) 873-6655</span>
                 </div>
                 <div className="flex items-center gap-2 text-white">
-                  <Icon name="mail" className="w-5 h-5" />
+                  <span className="text-lg">📧</span>
                   <a href="mailto:seth@fortewebdesigns.com" className="text-lg font-semibold hover:text-blue-200 transition-colors">
-                    📧 Email: seth@fortewebdesigns.com
+                    Email: seth@fortewebdesigns.com
                   </a>
                 </div>
               </div>
