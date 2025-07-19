@@ -240,7 +240,7 @@ export default function SocialMediaManagement() {
 
           <div className="grid sm:gap-[24px] gap-[16px]">
             <h3 className="sm:text-[26px] sm:leading-[32px] text-[18px] font-medium font-inter dark:text-secondary-1050">
-              Money-Back Guarantee:
+              Client Satisfaction Guarantee:
             </h3>
             <p className="sm:text-[18px] text-[14px] sm:leading-[22px] font-normal font-inter md:leading-[22px] leading-4 dark:text-[#B4B4B4] text-[#626262]">
               If we cant design something you love, we’ll refund you. Period.

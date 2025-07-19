@@ -445,10 +445,10 @@ export default function SocialMediaPage() {
 
           <div className="mt-8 text-center">
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              * Requires active Forte Foundation™ or Pro™ website
+              * Requires active Forte Foundation™ or Pro™ website design package
             </p>
             <p className="text-sm text-gray-500 dark:text-gray-500">
-              💡 <strong>Popular Combo:</strong> Forte Foundation™ + Social = $400/month total
+              💡 <strong>Popular Combo:</strong> Forte Foundation™ website design + Social media management = $400/month total
             </p>
           </div>
         </div>
@@ -500,7 +500,7 @@ export default function SocialMediaPage() {
 
               <div className="bg-blue-100 dark:bg-blue-900/30 rounded-xl p-4 mb-6">
                 <p className="text-sm text-blue-800 dark:text-blue-200">
-                  <strong>Requirements:</strong> Active Forte Foundation™ or Pro™ website required. 
+                  <strong>Requirements:</strong> Active Forte Foundation™ or Pro™ website design package required. 
                   Add to any existing Forte™ package for just $200/month.
                 </p>
               </div>

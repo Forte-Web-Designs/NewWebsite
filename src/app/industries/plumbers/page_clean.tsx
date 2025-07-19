@@ -140,7 +140,7 @@ export default function PlumbersPage() {
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="text-green-400">✔</span>
-                    30‑Day Guarantee
+                    100% Satisfaction Guarantee
                   </div>
                 </div>
               </div>
@@ -397,7 +397,7 @@ export default function PlumbersPage() {
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto text-sm">
               <div className="flex items-center gap-2 justify-center bg-blue-800/30 rounded-lg p-3">
                 <span className="text-green-400">✓</span>
-                <span>30-Day Money-Back Guarantee</span>
+                <span>100% Client Satisfaction Guarantee</span>
               </div>
               <div className="flex items-center gap-2 justify-center bg-blue-800/30 rounded-lg p-3">
                 <span className="text-green-400">✓</span>

@@ -36,12 +36,12 @@ const businessTypes = [
 ];
 
 const fortePackages = [
-  { value: 'foundation', label: 'Forte Foundation™', cost: 200 },
-  { value: 'growth', label: 'Forte Growth™ (Foundation + SEO)', cost: 500 },
-  { value: 'brand-boost', label: 'Forte Brand Boost™ (Foundation + SEO + Social)', cost: 700 },
-  { value: 'dominate', label: 'Forte Dominate™ (Full Ecosystem)', cost: 1200 },
-  { value: 'pro', label: 'Forte Pro™', cost: 350 },
-  { value: 'pro-seo', label: 'Forte Pro™ + SEO Growth', cost: 850 }
+  { value: 'foundation', label: 'Forte Foundation™ (Website Design)', cost: 200 },
+  { value: 'growth', label: 'Forte Growth™ (Website + SEO)', cost: 500 },
+  { value: 'brand-boost', label: 'Forte Brand Boost™ (Website + SEO + Social Media)', cost: 700 },
+  { value: 'dominate', label: 'Forte Dominate™ (Complete Digital Marketing)', cost: 1200 },
+  { value: 'pro', label: 'Forte Pro™ (Website Design)', cost: 350 },
+  { value: 'pro-seo', label: 'Forte Pro™ + SEO Services', cost: 850 }
 ];
 
 export default function ROICalculator({ className = "" }: { className?: string }) {

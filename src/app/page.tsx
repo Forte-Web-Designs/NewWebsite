@@ -718,24 +718,28 @@ export default function Home() {
                 <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Foundation™</h3>
+                  <p className="text-xs text-blue-600 dark:text-blue-400 mb-2">Website Design Package</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Fast, secure website that converts visitors into customers</p>
                 </div>
                 
                 <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Pro™</h3>
+                  <p className="text-xs text-purple-600 dark:text-purple-400 mb-2">Website Design Package</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Premium support, analytics, and unlimited updates</p>
                 </div>
                 
                 <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">SEO & PPC</h3>
+                  <p className="text-xs text-green-600 dark:text-green-400 mb-2">SEO Services & Google Ads Packages</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Strategic traffic generation that brings qualified leads</p>
                 </div>
                 
                 <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
                   <div className="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
                   <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Social Media</h3>
+                  <p className="text-xs text-orange-600 dark:text-orange-400 mb-2">Social Media Management Package</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400">Consistent brand presence and community engagement</p>
                 </div>
               </div>
@@ -1003,7 +1007,7 @@ export default function Home() {
                 <span>→</span>
               </Link>
               <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-                30-day money-back guarantee • No setup fees • Cancel anytime
+                100% client satisfaction guarantee • No setup fees • Cancel anytime
               </p>
             </div>
           </SimpleScrollReveal>

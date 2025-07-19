@@ -17,10 +17,10 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Can I start with just a website and add more later?",
-    answer: "Absolutely! Most clients start with Forte Foundation™ ($200/month) and add services as they grow. You can upgrade to include SEO, PPC, or social media management at any time. Our ecosystem is designed to scale with your business needs."
+    answer: "Absolutely! Most clients start with Forte Foundation™ website design package ($200/month) and add services as they grow. You can upgrade to include SEO, PPC, or social media management at any time. Our ecosystem is designed to scale with your business needs."
   },
   {
-    question: "What's the difference between Foundation and Pro?",
+    question: "What's the difference between Foundation and Pro website design packages?",
     answer: "Foundation includes your custom-coded website, basic analytics, and standard support. Pro adds advanced analytics, priority support, unlimited content updates, conversion optimization, and a dedicated account manager for $100/month more."
   },
   {
@@ -284,7 +284,10 @@ export default function ForteEcosystemPage() {
             <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-3xl">🏗️</span>
-                <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300">Forte Foundation™</h3>
+                <div>
+                  <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300">Forte Foundation™</h3>
+                  <p className="text-sm text-blue-600 dark:text-blue-400">Website Design Package</p>
+                </div>
               </div>
               
               <ul className="space-y-3 text-blue-700 dark:text-blue-300">
@@ -319,7 +322,10 @@ export default function ForteEcosystemPage() {
             <div className="bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-3xl">⚡</span>
-                <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">Forte Pro™</h3>
+                <div>
+                  <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">Forte Pro™</h3>
+                  <p className="text-sm text-purple-600 dark:text-purple-400">Website Design Package</p>
+                </div>
               </div>
               
               <ul className="space-y-3 text-purple-700 dark:text-purple-300">

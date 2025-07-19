@@ -173,7 +173,7 @@ export default function FortCarePage() {
                       <span>Security monitoring</span>
                     </li>
                   </ul>
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">Included with Foundation™ plans</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">Included with Foundation™ website design plans</p>
                 </div>
                 
                 <div className="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 border-2 border-primary-500 relative">

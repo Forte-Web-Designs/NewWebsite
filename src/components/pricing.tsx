@@ -12,6 +12,7 @@ const mainPlans = [
   {
     id: 'foundation',
     name: 'Forte Foundation™',
+    description: 'Website Design Package',
     monthlyPrice: '$200',
     oneTimePrice: '$2,500',
     subtitle: 'Perfect Starting Point',
@@ -30,6 +31,7 @@ const mainPlans = [
   {
     id: 'pro',
     name: 'Forte Pro™',
+    description: 'Website Design Package',
     monthlyPrice: '$350',
     oneTimePrice: '$4,300',
     subtitle: 'Most Popular Choice',
@@ -55,7 +57,7 @@ const addonServices = [
     name: 'Forte SEO™',
     monthlyPrice: '$300',
     oneTimePrice: '$3,600',
-    subtitle: 'Boost Your Rankings',
+    subtitle: 'SEO Services Package',
     description: 'Professional SEO that gets results',
     features: [
       'Keyword Research & Strategy',
@@ -74,7 +76,7 @@ const addonServices = [
     name: 'Forte PPC™',
     monthlyPrice: '$400',
     oneTimePrice: '$4,800',
-    subtitle: 'Drive Immediate Traffic',
+    subtitle: 'Google Ads Management Package',
     description: 'Google Ads that convert',
     features: [
       'Campaign Setup & Management',
@@ -93,7 +95,7 @@ const addonServices = [
     name: 'Forte Social™',
     monthlyPrice: '$200',
     oneTimePrice: '$2,400',
-    subtitle: 'Build Your Community',
+    subtitle: 'Social Media Management Package',
     description: 'Social media that engages',
     features: [
       '12 Custom Posts/Month',
@@ -118,7 +120,7 @@ const bundledPlans = [
     oneTimePrice: '$5,400',
     originalMonthlyPrice: '$500',
     originalOneTimePrice: '$6,000',
-    subtitle: 'Website + SEO',
+    subtitle: 'Website Design + SEO Bundle',
     description: 'Perfect for getting found online',
     includes: ['Foundation Website', 'SEO Essential'],
     ctaText: 'Start Growing',
@@ -131,7 +133,7 @@ const bundledPlans = [
     oneTimePrice: '$9,000',
     originalMonthlyPrice: '$900',
     originalOneTimePrice: '$10,800',
-    subtitle: 'Website + SEO + PPC',
+    subtitle: 'Website Design + SEO + Google Ads Bundle',
     description: 'Drive traffic and convert visitors',
     includes: ['Foundation Website', 'SEO Essential', 'PPC Starter'],
     ctaText: 'Accelerate Growth',
@@ -145,7 +147,7 @@ const bundledPlans = [
     oneTimePrice: '$11,400',
     originalMonthlyPrice: '$1,150',
     originalOneTimePrice: '$13,800',
-    subtitle: 'Complete Digital Presence',
+    subtitle: 'Complete Digital Marketing Bundle',
     description: 'Everything you need to succeed',
     includes: ['Pro Website', 'SEO Growth', 'PPC Growth', 'Social Essential'],
     ctaText: 'Dominate Your Market',
@@ -521,7 +523,7 @@ function AddOnServicesGrid({ isMonthly }: { isMonthly: boolean }) {
         Add-On Services
       </h3>
       <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-12 max-w-3xl mx-auto">
-        Enhance your Forte Foundation™ or Pro™ website with these specialized services designed to drive traffic and grow your business.
+        Enhance your Forte Foundation™ or Pro™ website design package with these specialized services designed to drive traffic and grow your business.
       </p>
       
       <div className="grid md:grid-cols-3 gap-8">
