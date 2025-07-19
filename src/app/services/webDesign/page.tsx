@@ -242,8 +242,9 @@ export default function WebsiteDesignPage() {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                   Website Packages
                 </h2>
-                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-                  Choose the perfect foundation for your business growth
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
+                  <strong>Monthly Plans:</strong> 12-month minimum commitment, then month-to-month. Includes Forte Care™ support, hosting, and unlimited updates.<br/>
+                  <strong>One-Time Plans:</strong> Pay once and own your website. Forte Care™ available as optional maintenance service.
                 </p>
               </div>
 
@@ -252,64 +253,111 @@ export default function WebsiteDesignPage() {
                   <table className="w-full">
                     <thead className="bg-gray-50 dark:bg-gray-700">
                       <tr>
-                        <th className="text-left py-6 px-6 font-bold text-gray-900 dark:text-white text-lg">Plan</th>
-                        <th className="text-center py-6 px-6 font-bold text-gray-900 dark:text-white text-lg">Pages</th>
-                        <th className="text-center py-6 px-6 font-bold text-gray-900 dark:text-white text-lg">Price (Monthly)</th>
-                        <th className="text-center py-6 px-6 font-bold text-gray-900 dark:text-white text-lg">One-Time Option</th>
+                        <th className="text-left py-6 px-6 font-bold text-gray-900 dark:text-white text-lg">Feature</th>
+                        <th className="text-center py-6 px-6 font-bold text-gray-900 dark:text-white text-lg">
+                          Foundation<br/>
+                          <span className="text-blue-600 dark:text-blue-400 text-2xl font-bold">$200/mo</span><br/>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">12-month minimum</span>
+                        </th>
+                        <th className="text-center py-6 px-6 font-bold text-gray-900 dark:text-white text-lg">
+                          Pro ⭐<br/>
+                          <span className="text-blue-600 dark:text-blue-400 text-2xl font-bold">$350/mo</span><br/>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">12-month minimum</span>
+                        </th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                       <tr>
-                        <td className="py-6 px-6">
-                          <div>
-                            <div className="font-bold text-gray-900 dark:text-white text-lg">Foundation™</div>
-                            <div className="text-gray-600 dark:text-gray-400 text-sm">Perfect starting point</div>
-                          </div>
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">Pages Included</td>
+                        <td className="py-4 px-6 text-center font-semibold text-gray-900 dark:text-white">5 pages</td>
+                        <td className="py-4 px-6 text-center font-semibold text-gray-900 dark:text-white">10 pages</td>
+                      </tr>
+                      <tr className="bg-gray-50/50 dark:bg-gray-800/50">
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">Hosting + Domain</td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
                         </td>
-                        <td className="py-6 px-6 text-center font-semibold text-gray-900 dark:text-white">5 Pages</td>
-                        <td className="py-6 px-6 text-center">
-                          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">$200/mo</div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">12-month minimum</div>
-                        </td>
-                        <td className="py-6 px-6 text-center">
-                          <div className="text-2xl font-bold text-green-600 dark:text-green-400">$2,500</div>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
                         </td>
                       </tr>
-                      <tr className="bg-blue-50/50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-700">
-                        <td className="py-6 px-6">
-                          <div className="flex items-center gap-2">
-                            <div>
-                              <div className="font-bold text-gray-900 dark:text-white text-lg">Pro™</div>
-                              <div className="text-gray-600 dark:text-gray-400 text-sm">Most popular choice</div>
-                            </div>
-                            <div className="bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
-                              Popular
-                            </div>
+                      <tr>
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">Mobile-Responsive Design</td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                      </tr>
+                      <tr className="bg-gray-50/50 dark:bg-gray-800/50">
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">SEO-Ready Foundation</td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">Basic Analytics</td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                      </tr>
+                      <tr className="bg-gray-50/50 dark:bg-gray-800/50">
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">Conversion Tracking</td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-red-500 text-xl">❌</span>
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">Priority Support</td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-red-500 text-xl">❌</span>
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                      </tr>
+                      <tr className="bg-gray-50/50 dark:bg-gray-800/50">
+                        <td className="py-4 px-6 font-semibold text-gray-900 dark:text-white">Forte Care™ Included</td>
+                        <td className="py-4 px-6 text-center">
+                          <span className="text-green-500 text-xl">✅</span>
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                          <div className="flex flex-col items-center">
+                            <span className="text-green-500 text-xl">✅</span>
+                            <span className="text-xs text-gray-600 dark:text-gray-400">(with faster response times)</span>
                           </div>
-                        </td>
-                        <td className="py-6 px-6 text-center font-semibold text-gray-900 dark:text-white">10 Pages</td>
-                        <td className="py-6 px-6 text-center">
-                          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">$350/mo</div>
-                          <div className="text-xs text-gray-500 dark:text-gray-400">12-month minimum</div>
-                        </td>
-                        <td className="py-6 px-6 text-center">
-                          <div className="text-2xl font-bold text-green-600 dark:text-green-400">$4,300</div>
                         </td>
                       </tr>
                     </tbody>
                   </table>
                 </div>
                 
-                <div className="p-6 bg-gray-50 dark:bg-gray-700 text-center">
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    <strong>Note:</strong> Hosting, Forte Care™, and SEO foundation included in all plans
-                  </p>
-                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                    <Link href="/pricing" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                      Compare Full Plans
-                    </Link>
-                    <Link href="/contact" className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors">
-                      Get Custom Quote
+                <div className="p-6 bg-gray-50 dark:bg-gray-700">
+                  <div className="grid md:grid-cols-2 gap-4 mb-6">
+                    <div className="text-center">
+                      <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block w-full">
+                        Choose Foundation
+                      </Link>
+                    </div>
+                    <div className="text-center">
+                      <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block w-full">
+                        Choose Pro
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="text-center">
+                    <Link href="/pricing" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+                      View Complete Pricing Details & One-Time Options
                     </Link>
                   </div>
                 </div>
