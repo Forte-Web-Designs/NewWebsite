@@ -9,8 +9,8 @@ export default function MobileStickyCTA() {
 
   useEffect(() => {
     const handleScroll = () => {
-      // Show after scrolling 100px
-      setIsVisible(window.scrollY > 100);
+      // Show after scrolling 400px for better mobile UX
+      setIsVisible(window.scrollY > 400);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
