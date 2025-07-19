@@ -569,9 +569,9 @@ function SiteCheckUpContent() {
                     Our team can help you implement the recommendations from your audit and maintain peak performance with ongoing optimization.
                   </p>
                   <div className="flex justify-center">
-                    <button className="bg-white text-blue-600 font-semibold px-12 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg">
+                    <a href="/contact" className="bg-white text-blue-600 font-semibold px-12 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg inline-block">
                       Contact Us
-                    </button>
+                    </a>
                   </div>
                 </div>
               </div>
