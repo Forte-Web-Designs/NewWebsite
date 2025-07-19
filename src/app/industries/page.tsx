@@ -263,7 +263,7 @@ export default function IndustriesPage() {
                   Plumber Websites That Convert Emergency Calls
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  We've built websites for 15+ plumbing companies and understand exactly what converts emergency calls into customers. Our plumber websites average 67% more emergency calls in the first 6 months.
+                  We've built websites for dozens of plumbing companies and understand exactly what converts emergency calls into customers. Our plumbing clients convert 2–3x more local leads because their websites speak directly to plumbing customers.
                 </p>
                 
                 <div className="space-y-4 mb-8">

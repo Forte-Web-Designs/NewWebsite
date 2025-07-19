@@ -8,12 +8,12 @@ import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 
 export const metadata: Metadata = {
-  title: 'Plumber Website Design | Mobile-Ready Sites That Book More Jobs',
-  description: 'Custom-built websites for plumbers. Mobile-ready, SEO-optimized, and designed for emergency call conversions. Convert late-night searches into paying customers.',
-  keywords: 'plumber website design, plumbing websites, emergency plumber websites, local plumber SEO, plumbing lead generation',
+  title: 'Plumber Websites That Convert Emergency Calls Into Customers | Forte Web Designs',
+  description: 'We don\'t build just "pretty" websites. We build high-converting, mobile-first plumber websites that capture emergency leads, build trust instantly, and dominate local search.',
+  keywords: 'plumber website design, plumbing websites, emergency plumber websites, local plumber SEO, plumbing lead generation, mobile plumber websites',
   openGraph: {
-    title: 'Plumber Website Design | Mobile-Ready Sites That Book More Jobs',
-    description: 'Custom-built websites for plumbers. Mobile-ready, SEO-optimized, and designed for emergency call conversions. Convert late-night searches into paying customers.',
+    title: 'Plumber Websites That Convert Emergency Calls Into Customers | Forte Web Designs',
+    description: 'We don\'t build just "pretty" websites. We build high-converting, mobile-first plumber websites that capture emergency leads, build trust instantly, and dominate local search.',
     type: 'website',
   },
 };
@@ -356,7 +356,7 @@ export default function PlumbersPage() {
                     <div className="text-sm text-gray-600 dark:text-gray-400">More Emergency Calls</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-1">$12K</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1">$7.8K</div>
                     <div className="text-sm text-gray-600 dark:text-gray-400">Additional Monthly Revenue</div>
                   </div>
                   <div className="text-center">

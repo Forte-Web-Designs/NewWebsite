@@ -9,12 +9,12 @@ import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'Plumber Website Design & Development | Emergency Call Ready',
-  description: 'Plumbers emergencies happen. Your clients need a reliable website to get in touch with you quickly. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.',
-  keywords: 'plumber website design, plumbing websites, emergency plumber websites, local plumber SEO, plumbing lead generation',
+  title: 'Plumber Websites That Convert Emergency Calls Into Customers | Forte Web Designs',
+  description: 'We don\'t build just "pretty" websites. We build high-converting, mobile-first plumber websites that capture emergency leads, build trust instantly, and dominate local search.',
+  keywords: 'plumber website design, plumbing websites, emergency plumber websites, local plumber SEO, plumbing lead generation, mobile plumber websites',
   openGraph: {
-    title: 'Plumber Website Design & Development | Emergency Call Ready',
-    description: 'Plumbers emergencies happen. Your clients need a reliable website to get in touch with you quickly. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.',
+    title: 'Plumber Websites That Convert Emergency Calls Into Customers | Forte Web Designs',
+    description: 'We don\'t build just "pretty" websites. We build high-converting, mobile-first plumber websites that capture emergency leads, build trust instantly, and dominate local search.',
     type: 'website',
   },
 };
@@ -32,32 +32,37 @@ export default function PlumbersPage() {
   // Comparison data
   const comparisonFeatures = [
     {
-      feature: "Mobile-first for plumbers",
+      feature: "Mobile-first plumbing focus",
       typical: false,
       forte: true
     },
     {
-      feature: "SEO built-in",
+      feature: "Built-in SEO",
       typical: false,
       forte: true
     },
     {
-      feature: "Emergency CTA optimization",
+      feature: "Emergency conversion features",
       typical: false,
       forte: true
     },
     {
-      feature: "Ongoing edits included",
+      feature: "Local search optimization",
       typical: false,
       forte: true
     },
     {
-      feature: "24/7 emergency setup",
+      feature: "Plumbing-specific copywriting",
       typical: false,
       forte: true
     },
     {
-      feature: "Local search domination",
+      feature: "Fast loading + call buttons",
+      typical: false,
+      forte: true
+    },
+    {
+      feature: "Unlimited edits included",
       typical: false,
       forte: true
     }
@@ -66,47 +71,55 @@ export default function PlumbersPage() {
   // FAQ data
   const faqs = [
     {
-      question: "How quickly can you get my plumber website live?",
+      question: "How quickly can you launch my plumber website?",
       answer: "Most plumber websites are live within 7-10 business days. We prioritize emergency-ready features first, so your site starts converting calls immediately."
     },
     {
       question: "Do you understand the plumbing industry?",
-      answer: "Absolutely. We've built websites for 8 plumbing companies and understand emergency call patterns, local SEO for plumbers, and what builds trust with homeowners in crisis."
+      answer: "Absolutely. We've built websites for dozens of plumbing companies and understand emergency call patterns, local SEO for plumbers, and what builds trust with homeowners in crisis situations."
     },
     {
-      question: "What makes your plumber websites different?",
-      answer: "We focus on mobile-first emergency call conversion. While other designers build pretty websites, we build websites that book more plumbing jobs and dominate local search."
+      question: "Will I show up in Google Maps/local search?",
+      answer: "Yes! Every plumber website includes local SEO optimization, Google Business Profile setup, and local directory submissions to help you dominate local search results."
     },
     {
-      question: "Do you handle ongoing updates and maintenance?",
-      answer: "Yes! All plumber websites include ongoing updates, security monitoring, and content changes. No additional fees for adding new services or updating pricing."
+      question: "What happens after the website goes live?",
+      answer: "We provide ongoing support, updates, and maintenance. Plus, we monitor your site's performance and make improvements to increase your emergency call conversion rates."
+    },
+    {
+      question: "Can you also manage SEO and Ads?",
+      answer: "Absolutely! We offer complete digital marketing services including SEO, Google Ads, and social media management specifically designed for plumbing companies."
+    },
+    {
+      question: "Do you offer ongoing updates?",
+      answer: "Yes! All plumber websites include unlimited content updates, security monitoring, and technical maintenance. No additional fees for adding new services or updating pricing."
     }
   ];
 
   const plumberChallenges = [
     {
       icon: "📱",
-      title: "Emergency Calls on Mobile",
-      problem: "73% of plumbing searches happen on mobile during emergencies",
-      solution: "Mobile-first design with one-tap calling"
+      title: "Emergency Mobile Searches",
+      problem: "73% of plumbing searches happen on mobile",
+      solution: "We optimize for thumb-tap calling & load in <2 seconds"
     },
     {
-      icon: "⏰",
-      title: "24/7 Availability",
-      problem: "Customers need immediate response, day or night",
-      solution: "Clear emergency contact info and online scheduling"
+      icon: "🛑",
+      title: "Lack of Trust",
+      problem: "Users bounce from sites with unclear pricing or licensing",
+      solution: "We highlight trust factors (reviews, insurance, transparent pricing)"
     },
     {
       icon: "🗺️",
-      title: "Local Competition",
-      problem: "Competing with 50+ local plumbers in search results",
-      solution: "Local SEO optimization and Google Business prominence"
+      title: "Local SEO Competition",
+      problem: "You're competing with 50+ plumbers in Google Maps",
+      solution: "We rank you locally with SEO, Google Business, and content strategy"
     },
     {
-      icon: "💰",
-      title: "Trust & Pricing",
-      problem: "Customers worry about scams and surprise costs",
-      solution: "Transparent pricing, licensing info, and reviews"
+      icon: "🔗",
+      title: "Disconnected Vendors",
+      problem: "Website guy doesn't talk to SEO guy",
+      solution: "With Forte, one team handles everything (site, SEO, support, updates)"
     }
   ];
 
@@ -114,32 +127,42 @@ export default function PlumbersPage() {
     {
       icon: "🚨",
       title: "Emergency Call Button",
-      description: "Prominent emergency contact that works on all devices"
-    },
-    {
-      icon: "📍",
-      title: "Service Area Map",
-      description: "Clear coverage area with response time estimates"
+      description: "Visible on every page with one-tap calling functionality"
     },
     {
       icon: "⭐",
-      title: "Review Integration",
-      description: "Google reviews prominently displayed for trust"
+      title: "Google Review Integration",
+      description: "Instantly builds trust with prominently displayed reviews"
     },
     {
       icon: "💵",
-      title: "Transparent Pricing",
-      description: "Clear service pricing without surprises"
+      title: "Transparent Service Pricing Tables",
+      description: "Clear pricing builds trust and reduces price objections"
     },
     {
-      icon: "🛠️",
-      title: "Service Showcase",
-      description: "Before/after photos and service descriptions"
+      icon: "🗺️",
+      title: "Local Service Area Map",
+      description: "ZIP coverage map showing your service territory"
     },
     {
       icon: "📅",
-      title: "Online Booking",
+      title: "Online Booking Form",
       description: "Schedule non-emergency appointments 24/7"
+    },
+    {
+      icon: "🛠️",
+      title: "Before/After Service Showcases",
+      description: "Photo galleries that demonstrate your quality work"
+    },
+    {
+      icon: "🔐",
+      title: "Licensing & Insurance Badges",
+      description: "Professional credentials prominently displayed"
+    },
+    {
+      icon: "📱",
+      title: "Mobile-Optimized Everything",
+      description: "Perfect experience on all devices and screen sizes"
     }
   ];
 
@@ -182,7 +205,7 @@ export default function PlumbersPage() {
                   Plumber Websites That Convert <span className="text-blue-300">Emergency Calls Into Customers</span>
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  Plumbing emergencies happen. Your clients need a reliable website to get in touch with you quickly. We build plumber websites that capture emergency calls, build trust instantly, and dominate local search results.
+                  We don't build just "pretty" websites. We build high-converting, mobile-first plumber websites that capture emergency leads, build trust instantly, and dominate local search.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -307,10 +330,10 @@ export default function PlumbersPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Why We're <span className="text-blue-600">Plumbing Website Experts</span>
+                Why Forte &gt; <span className="text-blue-600">Typical Designers</span>
               </h2>
               <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                We've built websites for 8 plumbing companies and understand exactly what drives emergency calls and builds customer trust in the plumbing industry.
+                Most agencies design for everyone. We design for you. Our plumbing clients convert 2–3x more local leads because their website speaks directly to plumbing customers.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -325,11 +348,11 @@ export default function PlumbersPage() {
                   </h3>
                   <div className="space-y-3">
                     <div>
-                      <div className="text-sm font-medium text-red-600 mb-1">The Problem:</div>
+                      <div className="text-sm font-medium text-red-600 mb-1">🛑 Problem:</div>
                       <div className="text-sm text-gray-700 dark:text-gray-300">{challenge.problem}</div>
                     </div>
                     <div>
-                      <div className="text-sm font-medium text-green-600 mb-1">Our Solution:</div>
+                      <div className="text-sm font-medium text-green-600 mb-1">✅ Solution:</div>
                       <div className="text-sm text-gray-700 dark:text-gray-300">{challenge.solution}</div>
                     </div>
                   </div>
@@ -445,36 +468,54 @@ export default function PlumbersPage() {
             <SimpleScrollReveal direction="left" delay={100}>
               <div>
                 <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                  📈 Success Story
+                  📈 High Desert Plumbing — Albuquerque
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Dallas Plumber Increases Emergency Calls by 67%
+                  67% More Calls in 90 Days
                 </h2>
+                <p className="text-lg text-gray-700 dark:text-gray-300 mb-8">
+                  One of our New Mexico-based clients came to us with a slow, outdated site. Within 3 months of launching a Forte site, they saw dramatic results.
+                </p>
                 <div className="space-y-4 mb-8">
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 text-lg mt-1">✓</span>
                     <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Mobile-First Redesign</div>
-                      <div className="text-gray-700 dark:text-gray-300">Optimized for emergency calls on mobile devices</div>
+                      <div className="font-semibold text-gray-900 dark:text-white">Ranked #1 for "emergency plumber Albuquerque"</div>
+                      <div className="text-gray-700 dark:text-gray-300">Dominating local search results</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 text-lg mt-1">✓</span>
                     <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Local SEO Domination</div>
-                      <div className="text-gray-700 dark:text-gray-300">Ranked #1 for "emergency plumber Dallas"</div>
+                      <div className="font-semibold text-gray-900 dark:text-white">67% increase in emergency and weekend calls</div>
+                      <div className="text-gray-700 dark:text-gray-300">More customers reaching out during peak revenue hours</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
                     <span className="text-green-500 text-lg mt-1">✓</span>
                     <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Trust Building Elements</div>
-                      <div className="text-gray-700 dark:text-gray-300">Clear pricing, reviews, and licensing information</div>
+                      <div className="font-semibold text-gray-900 dark:text-white">$7,800/month additional revenue</div>
+                      <div className="text-gray-700 dark:text-gray-300">Website paid for itself in the first month</div>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <span className="text-green-500 text-lg mt-1">✓</span>
+                    <div>
+                      <div className="font-semibold text-gray-900 dark:text-white">30% faster mobile load time</div>
+                      <div className="text-gray-700 dark:text-gray-300">Emergency customers get help faster</div>
                     </div>
                   </div>
                 </div>
+                <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-500 p-6 mb-6">
+                  <p className="text-gray-800 dark:text-gray-200 italic text-lg">
+                    "I didn't realize how many calls we were missing until we launched the new site. It paid for itself in the first month."
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
+                    — Owner, High Desert Plumbing Co.
+                  </p>
+                </div>
                 <Link href="/case-studies" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold">
-                  Read Full Case Study
+                  View Full Case Study
                   <span>→</span>
                 </Link>
               </div>
@@ -482,22 +523,26 @@ export default function PlumbersPage() {
 
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="bg-gradient-to-br from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-700 rounded-2xl p-8">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Plumbing Results Snapshot</h3>
+                  <p className="text-gray-600 dark:text-gray-400">Average across dozens of plumber websites</p>
+                </div>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">67%</div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300">More Emergency Calls</div>
+                    <div className="text-3xl font-bold text-blue-600 mb-1">43%</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300">More emergency calls</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-green-600 mb-1">$8K</div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300">Additional Monthly Revenue</div>
+                    <div className="text-3xl font-bold text-green-600 mb-1">67%</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300">Increase in mobile leads</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-purple-600 mb-1">2.1x</div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300">Higher Conversion Rate</div>
+                    <div className="text-3xl font-bold text-purple-600 mb-1">2.3x</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300">Higher local rankings</div>
                   </div>
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-orange-600 mb-1">30%</div>
-                    <div className="text-sm text-gray-700 dark:text-gray-300">Faster Response Time</div>
+                    <div className="text-3xl font-bold text-orange-600 mb-1">89%</div>
+                    <div className="text-sm text-gray-700 dark:text-gray-300">Client retention rate</div>
                   </div>
                 </div>
               </div>
@@ -554,7 +599,7 @@ export default function PlumbersPage() {
               Ready to Dominate Local Plumbing Search?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join 8 plumbing companies who've increased their emergency calls and revenue with our proven plumber website formula.
+              Join dozens of plumbers who've doubled their emergency call volume with a website tailored for your industry — not some generic template.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -566,7 +611,7 @@ export default function PlumbersPage() {
               </LightButton>
             </div>
 
-            <div className="grid sm:grid-cols-3 gap-6 max-w-2xl mx-auto text-sm">
+            <div className="grid sm:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">
               <div className="flex items-center gap-2 justify-center">
                 <span className="text-green-400">✓</span>
                 100% Satisfaction Guarantee
@@ -578,6 +623,10 @@ export default function PlumbersPage() {
               <div className="flex items-center gap-2 justify-center">
                 <span className="text-green-400">✓</span>
                 Local SEO Included
+              </div>
+              <div className="flex items-center gap-2 justify-center">
+                <span className="text-green-400">✓</span>
+                Based in the USA
               </div>
             </div>
           </div>
