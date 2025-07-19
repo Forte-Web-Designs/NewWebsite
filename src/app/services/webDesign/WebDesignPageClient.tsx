@@ -42,6 +42,7 @@ function PricingToggle({ isMonthly, onToggle }: PricingToggleProps) {
 
 export default function WebDesignPageClient() {
   const [isMonthly, setIsMonthly] = useState(true);
+  const [selectedPlan, setSelectedPlan] = useState<'foundation' | 'pro'>('foundation');
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
@@ -212,7 +213,8 @@ export default function WebDesignPageClient() {
               <PricingToggle isMonthly={isMonthly} onToggle={setIsMonthly} />
             </div>
 
-            <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
+            {/* Desktop: Show both columns side by side */}
+            <div className="hidden md:block bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 overflow-hidden">
               <div className="overflow-x-auto">
                 <table className="w-full min-w-[500px]">
                   <thead className="bg-gray-50 dark:bg-gray-700">
@@ -332,6 +334,116 @@ export default function WebDesignPageClient() {
                     View Complete Pricing Details & One-Time Options
                   </Link>
                 </div>
+              </div>
+            </div>
+
+            {/* Mobile: Show selected plan card format */}
+            <div className="md:hidden space-y-4">
+              {/* Plan Selection Tabs */}
+              <div className="flex bg-gray-100 dark:bg-gray-700 rounded-lg p-1">
+                <button
+                  onClick={() => setSelectedPlan('foundation')}
+                  className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+                    selectedPlan === 'foundation'
+                      ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm'
+                      : 'text-gray-700 dark:text-gray-300'
+                  }`}
+                >
+                  Foundation
+                </button>
+                <button
+                  onClick={() => setSelectedPlan('pro')}
+                  className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
+                    selectedPlan === 'pro'
+                      ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm'
+                      : 'text-gray-700 dark:text-gray-300'
+                  }`}
+                >
+                  Pro ⭐
+                </button>
+              </div>
+
+              {/* Selected Plan Details */}
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6">
+                <div className="text-center mb-6">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    {selectedPlan === 'foundation' ? 'Forte Foundation™' : 'Forte Pro™'}
+                    {selectedPlan === 'pro' && ' ⭐'}
+                  </h3>
+                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">
+                    {selectedPlan === 'foundation' 
+                      ? (isMonthly ? '$200/mo' : '$2,500')
+                      : (isMonthly ? '$350/mo' : '$4,300')
+                    }
+                  </div>
+                  <div className="text-xs text-gray-500 dark:text-gray-400">
+                    {isMonthly ? '12-month minimum' : 'one-time'}
+                  </div>
+                </div>
+
+                {/* Feature List */}
+                <div className="space-y-3 mb-6">
+                  <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+                    <span className="font-medium text-gray-900 dark:text-white">Pages Included</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">
+                      {selectedPlan === 'foundation' ? '5 pages' : '10 pages'}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+                    <span className="font-medium text-gray-900 dark:text-white">Hosting + Domain</span>
+                    <span className="text-green-500 text-xl">✅</span>
+                  </div>
+                  <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+                    <span className="font-medium text-gray-900 dark:text-white">Mobile-Responsive Design</span>
+                    <span className="text-green-500 text-xl">✅</span>
+                  </div>
+                  <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+                    <span className="font-medium text-gray-900 dark:text-white">SEO-Ready Foundation</span>
+                    <span className="text-green-500 text-xl">✅</span>
+                  </div>
+                  <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+                    <span className="font-medium text-gray-900 dark:text-white">Basic Analytics</span>
+                    <span className="text-green-500 text-xl">✅</span>
+                  </div>
+                  <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+                    <span className="font-medium text-gray-900 dark:text-white">Conversion Tracking</span>
+                    <span className={selectedPlan === 'foundation' ? 'text-red-500 text-xl' : 'text-green-500 text-xl'}>
+                      {selectedPlan === 'foundation' ? '❌' : '✅'}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-2 border-b border-gray-100 dark:border-gray-700">
+                    <span className="font-medium text-gray-900 dark:text-white">Priority Support</span>
+                    <span className={selectedPlan === 'foundation' ? 'text-red-500 text-xl' : 'text-green-500 text-xl'}>
+                      {selectedPlan === 'foundation' ? '❌' : '✅'}
+                    </span>
+                  </div>
+                  <div className="flex items-center justify-between py-2">
+                    <span className="font-medium text-gray-900 dark:text-white">Forte Care™ Included</span>
+                    <div className="text-right">
+                      <span className="text-green-500 text-xl">✅</span>
+                      {selectedPlan === 'pro' && (
+                        <div className="text-xs text-gray-600 dark:text-gray-400">(faster response)</div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+
+                {/* CTA Button */}
+                <div className="text-center">
+                  <Link 
+                    href="/contact" 
+                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block w-full"
+                  >
+                    Choose {selectedPlan === 'foundation' ? 'Foundation' : 'Pro'}
+                  </Link>
+                </div>
+              </div>
+              
+              {/* Compare All Plans Link */}
+              <div className="text-center">
+                <Link href="/pricing" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+                  View Complete Pricing Details & One-Time Options
+                </Link>
               </div>
             </div>
           </SimpleScrollReveal>
