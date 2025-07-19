@@ -43,11 +43,11 @@ export default function IndustriesPage() {
       name: 'Landscapers',
       icon: '🌿',
       href: '/industries/landscapers',
-      description: 'Visual portfolio websites showcasing outdoor transformations',
-      features: ['Before/After Galleries', 'Seasonal Services', 'Quote Requests', 'Visual Portfolios'],
+      description: 'Visual websites that turn visitors into local leads with stunning project galleries',
+      features: ['Before/After Galleries', 'Seasonal Services', 'Local SEO', 'Mobile Booking'],
       available: true,
-      clients: '4',
-      avgIncrease: '78%'
+      clients: '12',
+      avgIncrease: '54%'
     },
     {
       name: 'Construction',

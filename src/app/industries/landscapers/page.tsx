@@ -9,12 +9,12 @@ import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
-  title: 'Landscaper Website Design & Development | Seasonal Marketing Ready',
-  description: 'Landscaping is seasonal. Your website needs to work year-round to capture spring projects and maintain winter leads. We build landscaper websites that showcase beautiful work and book more projects.',
-  keywords: 'landscaper website design, landscaping websites, lawn care websites, landscape design websites, seasonal marketing',
+  title: 'Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads',
+  description: 'Stunning, SEO-optimized landscaping websites that showcase your work, rank on Google, and bring in new clients every week. Visual design, local SEO, mobile booking ready.',
+  keywords: 'landscaping website design, landscaper websites, lawn care websites, landscape design websites, visual portfolio, local SEO, landscaping leads',
   openGraph: {
-    title: 'Landscaper Website Design & Development | Seasonal Marketing Ready',
-    description: 'Landscaping is seasonal. Your website needs to work year-round to capture spring projects and maintain winter leads. We build landscaper websites that showcase beautiful work and book more projects.',
+    title: 'Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads',
+    description: 'Stunning, SEO-optimized landscaping websites that showcase your work, rank on Google, and bring in new clients every week. Visual design, local SEO, mobile booking ready.',
     type: 'website',
   },
 };
@@ -22,43 +22,61 @@ export const metadata: Metadata = {
 export default function LandscapersPage() {
   // Client companies for social proof
   const clientCompanies = [
-    { name: "Elite Landscape Design" },
-    { name: "Green Valley Lawn Care" },
-    { name: "Premier Outdoor Solutions" },
-    { name: "Seasonal Landscape Pros" },
-    { name: "Nature's Touch Landscaping" }
+    { name: "Sandia Landscaping Pros" },
+    { name: "Desert Bloom Landscapes" },
+    { name: "Mountain View Outdoor Design" },
+    { name: "Rio Grande Lawn Care" },
+    { name: "Southwest Garden Solutions" }
   ];
 
-  // Comparison data
+  // Comparison data - Forte vs Template Sites vs Local Ad Agencies
   const comparisonFeatures = [
     {
-      feature: "Seasonal service optimization",
-      typical: false,
+      feature: "Built for Landscapers",
+      templateSites: false,
+      localAgencies: false,
       forte: true
     },
     {
-      feature: "Before/after photo galleries",
-      typical: false,
+      feature: "Before/After Gallery Layouts",
+      templateSites: false,
+      localAgencies: false,
       forte: true
     },
     {
-      feature: "Quote request forms",
-      typical: false,
+      feature: "Local SEO Optimization",
+      templateSites: false,
+      localAgencies: false,
       forte: true
     },
     {
-      feature: "Ongoing edits included",
-      typical: false,
+      feature: "Service Area Mapping",
+      templateSites: false,
+      localAgencies: false,
       forte: true
     },
     {
-      feature: "Local SEO optimization",
-      typical: false,
+      feature: "Mobile Tap-to-Call",
+      templateSites: false,
+      localAgencies: true,
       forte: true
     },
     {
-      feature: "Mobile-responsive design",
-      typical: false,
+      feature: "Portfolio & Project Filtering",
+      templateSites: false,
+      localAgencies: false,
+      forte: true
+    },
+    {
+      feature: "Google Reviews Integration",
+      templateSites: false,
+      localAgencies: true,
+      forte: true
+    },
+    {
+      feature: "Edits & Updates Included",
+      templateSites: false,
+      localAgencies: false,
       forte: true
     }
   ];
@@ -66,166 +84,245 @@ export default function LandscapersPage() {
   // FAQ data
   const faqs = [
     {
-      question: "How quickly can you get my landscaper website live?",
-      answer: "Most landscaper websites are live within 7-10 business days. We prioritize seasonal service pages and portfolio galleries first, so your site starts attracting clients immediately."
+      question: "Do you build sites for lawn care and hardscaping companies too?",
+      answer: "Yes! We've worked with landscaping, hardscaping, irrigation, sod, and general yard maintenance businesses."
     },
     {
-      question: "Do you understand the landscaping industry?",
-      answer: "Absolutely. We've built websites for 12+ landscaping companies and understand seasonal marketing, project showcasing, and what builds trust with homeowners for outdoor investments."
+      question: "How long does it take to launch?",
+      answer: "Most sites go live in 2–4 weeks, depending on your portfolio and revisions."
     },
     {
-      question: "What makes your landscaper websites different?",
-      answer: "We focus on visual storytelling and seasonal service optimization. While other designers build basic websites, we build websites that showcase your work beautifully and convert visitors into high-value projects."
+      question: "Can I show off specific projects?",
+      answer: "Absolutely — we build gallery sections and organize projects by service or season."
     },
     {
-      question: "Do you handle ongoing updates and maintenance?",
-      answer: "Yes! All landscaper websites include ongoing updates, security monitoring, and content changes. Perfect for updating seasonal services and adding new project photos."
+      question: "Do I need to write the content?",
+      answer: "Nope — we write the content for you. You just send us the list of services, any testimonials, and photos."
     }
   ];
 
-  const landscaperChallenges = [
+  const landscapingChallenges = [
     {
-      icon: "🌱",
-      title: "Seasonal Business Cycles",
-      problem: "Revenue varies dramatically between seasons",
-      solution: "Year-round marketing with seasonal service pages"
+      icon: "📱",
+      title: "Mobile Leads First",
+      problem: "71% of landscaping clients find a company from their phone",
+      solution: "Tap-to-call buttons, mobile-optimized galleries, and fast load times"
+    },
+    {
+      icon: "📍",
+      title: "Local Search Domination",
+      problem: "You're competing with 20+ local landscaping companies online",
+      solution: "Local SEO strategy, Google Business integration, and area-specific service pages"
+    },
+    {
+      icon: "📷",
+      title: "Visual Trust + Portfolio",
+      problem: "Homeowners want proof your work is high quality",
+      solution: "Organized before/after galleries, project categories, and real customer photos"
+    },
+    {
+      icon: "💬",
+      title: "Reviews + Contact Simplicity",
+      problem: "No reviews shown or buried contact info kills trust",
+      solution: "5-star Google reviews displayed + easy inquiry forms with response time expectations"
+    }
+  ];
+
+  const landscapingIncludes = [
+    {
+      icon: "📱",
+      title: "Mobile-first, fast-loading structure",
+      description: "Optimized for customers browsing on phones"
     },
     {
       icon: "📸",
-      title: "Showcasing Visual Work",
-      problem: "Landscaping is visual - customers need to see results",
-      solution: "Professional photo galleries and before/after showcases"
+      title: "Before/After image galleries",
+      description: "Showcase your transformations professionally"
     },
     {
-      icon: "💰",
-      title: "High-Value Projects",
-      problem: "Competing for $5,000+ landscaping projects",
-      solution: "Trust-building content and professional presentation"
+      icon: "📞",
+      title: "Tap-to-call & contact form CTAs",
+      description: "Make it easy for customers to reach you"
     },
     {
-      icon: "📱",
-      title: "Mobile Browsing",
-      problem: "Homeowners browse landscaping ideas on mobile",
-      solution: "Mobile-optimized galleries and easy quote requests"
+      icon: "🎯",
+      title: "Local SEO keyword targeting",
+      description: "Rank higher in local search results"
+    },
+    {
+      icon: "⭐",
+      title: "Google Reviews prominently displayed",
+      description: "Build trust with social proof"
+    },
+    {
+      icon: "🗺️",
+      title: "Project showcase and service area map",
+      description: "Show your work and coverage area"
+    },
+    {
+      icon: "📅",
+      title: "Seasonal offers or booking lead times (optional)",
+      description: "Manage expectations and seasonal demand"
+    },
+    {
+      icon: "📈",
+      title: "Site built to grow with you",
+      description: "Can add booking, SEO, PPC anytime"
     }
   ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <ScrollToTop />
+      
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-green-800 via-green-700 to-emerald-800 text-white py-12 sm:py-16 md:py-20 lg:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
-            <SimpleScrollReveal direction="left" delay={100}>
-              <div className="text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 bg-green-700/50 text-green-200 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+      <section className="relative bg-gradient-to-br from-green-700 via-emerald-600 to-green-800 text-white py-20 px-4 sm:px-6 lg:px-8 overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0 bg-[url('/images/pattern-dots.svg')] opacity-20"></div>
+        
+        <div className="relative max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Content */}
+            <SimpleScrollReveal>
+              <div className="space-y-8">
+                {/* Badge */}
+                <div className="inline-flex items-center px-4 py-2 bg-green-600/50 rounded-full text-green-200 text-sm font-medium border border-green-400/20">
                   🌿 Industry Expertise: Landscaping
                 </div>
-                <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                  Landscaper Websites That Turn Browsers Into <span className="text-green-300">High-Value Project Customers</span>
+
+                {/* Headline */}
+                <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
+                  Landscaping Websites That Turn Visitors Into Local Leads
                 </h1>
-                <p className="text-lg sm:text-xl text-green-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Landscaping is visual and seasonal. Your website needs to showcase beautiful transformations and capture leads year-round. We build landscaper websites that sell premium projects and maintain steady revenue.
+
+                {/* Subheading */}
+                <p className="text-xl text-green-100 leading-relaxed">
+                  Your landscaping work is visual — your website should be too. At Forte, we build stunning, SEO-optimized websites that showcase your work, rank on Google, and bring in new clients every week.
                 </p>
-                
-                <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
-                  <DarkButton href="/contact?industry=landscaping" className="bg-green-600 hover:bg-green-700 w-full sm:w-auto">
-                    Contact Us
-                  </DarkButton>
+
+                {/* Key Benefits */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">📷</span>
+                    <span className="text-green-200">Visual Design</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">📍</span>
+                    <span className="text-green-200">Local SEO</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">📱</span>
+                    <span className="text-green-200">Mobile Booking</span>
+                  </div>
                 </div>
 
-                <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-green-200">
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-400">✓</span>
-                    Visual Project Galleries
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-400">✓</span>
-                    Seasonal Service Pages
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <span className="text-green-400">✓</span>
-                    Quote Request Forms
-                  </div>
+                {/* CTA Buttons */}
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <DarkButton href="/contact?industry=landscaping" className="bg-white text-green-700 hover:text-green-700 font-semibold px-8">
+                    Get My Landscaping Website Quote →
+                  </DarkButton>
+                  <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8">
+                    Free Website Audit for Landscapers →
+                  </LightButton>
+                </div>
+
+                {/* Trust Indicators */}
+                <div className="flex items-center space-x-6 text-green-200 text-sm pt-4">
+                  <span>⚡ 2-4 week launches</span>
+                  <span>📷 Visual galleries</span>
+                  <span>📞 Same-day response</span>
                 </div>
               </div>
             </SimpleScrollReveal>
 
-            <SimpleScrollReveal direction="right" delay={200}>
-              <div className="relative mt-8 lg:mt-0">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl border-2 border-green-100 max-w-lg mx-auto">
-                  {/* Header */}
-                  <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 p-3 sm:p-4 bg-gradient-to-r from-green-600 to-emerald-600 rounded-xl text-white">
-                    <span className="text-2xl sm:text-3xl">🌿</span>
-                    <div className="min-w-0 flex-1">
-                      <h3 className="text-white text-lg sm:text-xl font-bold truncate">ELITE LANDSCAPING</h3>
-                      <p className="text-green-100 text-xs sm:text-sm font-semibold">✨ Transform Your Outdoor Space ✨</p>
-                    </div>
-                  </div>
+            {/* Right Column - Website Mockup */}
+            <SimpleScrollReveal delay={200}>
+              <div className="relative">
+                {/* Main mockup container */}
+                <div className="bg-white rounded-lg shadow-2xl overflow-hidden transform hover:scale-105 transition-transform duration-300">
                   
-                  {/* Services */}
-                  <div className="space-y-3 sm:space-y-4 mb-4 sm:mb-6">
-                    <div className="flex justify-between items-center p-2 sm:p-3 bg-green-50 rounded-lg border-l-4 border-green-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2 text-sm sm:text-base">
-                        🌳 <span className="truncate">Landscape Design</span>
-                      </span>
-                      <span className="font-bold text-green-600 text-base sm:text-lg whitespace-nowrap">$2,500+</span>
-                    </div>
-                    <div className="flex justify-between items-center p-2 sm:p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2 text-sm sm:text-base">
-                        💧 <span className="truncate">Irrigation Install</span>
-                      </span>
-                      <span className="font-bold text-blue-600 text-base sm:text-lg whitespace-nowrap">$3,200+</span>
-                    </div>
-                    <div className="flex justify-between items-center p-2 sm:p-3 bg-orange-50 rounded-lg border-l-4 border-orange-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2 text-sm sm:text-base">
-                        🏗️ <span className="truncate">Hardscaping</span>
-                      </span>
-                      <span className="font-bold text-orange-600 text-base sm:text-lg whitespace-nowrap">$5,000+</span>
-                    </div>
-                  </div>
-
-                  {/* Portfolio Preview */}
-                  <div className="mb-3 sm:mb-4 bg-gradient-to-r from-green-100 to-emerald-100 p-3 sm:p-4 rounded-lg">
-                    <div className="grid grid-cols-2 gap-2">
-                      <div className="bg-green-200 rounded h-12 sm:h-16 flex items-center justify-center text-green-700 font-bold text-xs">
-                        🏡 Before/After
-                      </div>
-                      <div className="bg-emerald-200 rounded h-12 sm:h-16 flex items-center justify-center text-emerald-700 font-bold text-xs">
-                        🌺 Gallery
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Call button */}
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-3 sm:py-4 rounded-xl mb-3 sm:mb-4 shadow-lg transform hover:scale-105 transition-transform">
-                    <div className="flex items-center justify-center gap-2 sm:gap-3">
-                      <span className="text-xl sm:text-2xl">📞</span>
+                  {/* Header */}
+                  <div className="bg-gradient-to-r from-green-600 to-emerald-600 px-6 py-4 border-b border-green-100">
+                    <div className="flex items-center justify-between">
                       <div>
-                        <div className="font-bold text-base sm:text-lg">Call (555) LANDSCAPE</div>
-                        <div className="text-green-100 text-xs sm:text-sm">Free Consultation!</div>
+                        <h3 className="font-bold text-lg text-white">SANDIA LANDSCAPING PROS</h3>
+                        <p className="text-sm text-green-100">🌿 Transforming Albuquerque Yards Since 2018 🌱</p>
                       </div>
+                      <div className="text-right">
+                        <p className="text-sm text-green-100">Call Now</p>
+                        <p className="font-semibold text-white">(505) LANDSCAPE</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Hero section */}
+                  <div className="px-6 py-8 bg-gradient-to-br from-green-50 to-emerald-50">
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                      Award-Winning Landscaping in Albuquerque
+                    </h2>
+                    <p className="text-gray-700 mb-4">
+                      Free estimates • Licensed & insured • 2-year warranty
+                    </p>
+                    
+                    {/* Before/After showcase */}
+                    <div className="bg-white p-4 rounded-lg mb-4 shadow-md">
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="text-center">
+                          <div className="h-16 bg-gradient-to-br from-red-100 to-yellow-100 rounded mb-1"></div>
+                          <span className="text-xs text-gray-600">Before</span>
+                        </div>
+                        <div className="text-center">
+                          <div className="h-16 bg-gradient-to-br from-green-200 to-emerald-300 rounded mb-1"></div>
+                          <span className="text-xs text-gray-600">After</span>
+                        </div>
+                      </div>
+                      <p className="text-center text-sm text-green-700 mt-2 font-semibold">
+                        Complete Yard Transformation
+                      </p>
+                    </div>
+
+                    {/* Quick quote button */}
+                    <button className="w-full bg-green-600 text-white py-3 px-6 rounded-lg font-semibold mb-4 hover:bg-green-700 transition-colors">
+                      📞 Get Free Quote Now
+                    </button>
+                  </div>
+
+                  {/* Services grid */}
+                  <div className="px-6 py-4 grid grid-cols-3 gap-2 bg-white border-t">
+                    <div className="text-center py-2">
+                      <div className="text-2xl mb-1">🌿</div>
+                      <div className="text-xs text-gray-600">Landscaping</div>
+                    </div>
+                    <div className="text-center py-2">
+                      <div className="text-2xl mb-1">🌱</div>
+                      <div className="text-xs text-gray-600">Lawn Care</div>
+                    </div>
+                    <div className="text-center py-2">
+                      <div className="text-2xl mb-1">🧱</div>
+                      <div className="text-xs text-gray-600">Hardscaping</div>
                     </div>
                   </div>
 
                   {/* Reviews section */}
-                  <div className="text-center bg-yellow-50 rounded-lg p-3 sm:p-4">
-                    <div className="flex items-center justify-center gap-1 mb-2">
-                      <span className="text-yellow-400 text-lg sm:text-xl">⭐⭐⭐⭐⭐</span>
+                  <div className="px-6 py-4 bg-green-50 border-t">
+                    <div className="flex items-center justify-between text-sm">
+                      <div className="flex items-center space-x-1">
+                        <span className="text-yellow-500">⭐⭐⭐⭐⭐</span>
+                        <span className="font-semibold text-green-700">4.9/5</span>
+                      </div>
+                      <div className="text-green-600 text-xs">
+                        Licensed • Insured • 2-Year Warranty
+                      </div>
                     </div>
-                    <div className="text-gray-700 font-semibold text-sm sm:text-base">4.8/5 Stars</div>
-                    <div className="text-gray-600 text-xs sm:text-sm">(156 Google Reviews)</div>
-                    <div className="text-green-600 text-xs sm:text-sm font-medium mt-1">🌿 Licensed & Insured</div>
                   </div>
                 </div>
-                
-                {/* Floating elements */}
-                <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg animate-pulse">
-                  ✅ Free Estimates
+
+                {/* Floating indicators */}
+                <div className="absolute -top-3 -right-3 bg-blue-500 text-white text-xs px-2 py-1 rounded-full font-semibold animate-pulse">
+                  📍 Local SEO Ready
                 </div>
-                <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg">
-                  🌱 20+ Years Exp
+                <div className="absolute -bottom-3 -left-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold animate-bounce">
+                  📷 Visual Galleries
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -233,33 +330,77 @@ export default function LandscapersPage() {
         </div>
       </section>
 
-      {/* Industry Challenges Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
+      {/* Why Landscapers Need a Tailored Website */}
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                We Understand Landscaper Challenges
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                🌱 Why Landscapers Need a Tailored Website (Not a Generic One)
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Every landscaping business faces unique challenges. We've built websites for landscapers for years and know exactly what works.
+              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
+                Most agencies just slap your name on a template. We build landscaping websites that actually convert — because we know your customers, your services, and how they search.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {landscapingChallenges.map((challenge, index) => (
+              <SimpleAnimatedCard key={index}>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300">
+                  <div className="flex items-start space-x-4">
+                    <div className="text-4xl">{challenge.icon}</div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-gray-100 mb-2">
+                        {challenge.title}
+                      </h3>
+                      <div className="space-y-3">
+                        <div>
+                          <span className="text-red-500 text-sm">📉 Problem:</span>
+                          <p className="text-gray-700 dark:text-gray-300 text-sm ml-6">
+                            {challenge.problem}
+                          </p>
+                        </div>
+                        <div>
+                          <span className="text-green-500 text-sm">✅ Solution:</span>
+                          <p className="text-gray-700 dark:text-gray-300 text-sm ml-6">
+                            {challenge.solution}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </SimpleAnimatedCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What Every Landscaping Website Includes */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                🌼 What Every Landscaping Website from Forte Includes
+              </h2>
+              <p className="text-xl text-gray-700 dark:text-gray-300">
+                All Forte landscaping websites are conversion-ready with:
               </p>
             </div>
           </SimpleScrollReveal>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {landscaperChallenges.map((challenge, index) => (
+            {landscapingIncludes.map((feature, index) => (
               <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 shadow-lg hover:shadow-xl transition-shadow">
-                  <div className="text-3xl mb-4">{challenge.icon}</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                    {challenge.title}
+                <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl h-full">
+                  <div className="text-4xl mb-4">{feature.icon}</div>
+                  <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2">
+                    {feature.title}
                   </h3>
-                  <p className="text-sm text-red-600 dark:text-red-400 mb-3 font-medium">
-                    Problem: {challenge.problem}
-                  </p>
-                  <p className="text-sm text-green-600 dark:text-green-400 font-medium">
-                    Our Solution: {challenge.solution}
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    {feature.description}
                   </p>
                 </div>
               </SimpleAnimatedCard>
@@ -268,105 +409,188 @@ export default function LandscapersPage() {
         </div>
       </section>
 
-      {/* Social Proof Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Trusted by Leading Landscapers
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                Join successful landscaping companies already growing with Forte websites
-              </p>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
-            {clientCompanies.map((company, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center hover:bg-green-50 dark:hover:bg-green-900/20 transition-colors">
-                  <div className="w-12 h-12 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Icon name="star" className="w-6 h-6 text-green-600 dark:text-green-400" />
-                  </div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white text-sm">
-                    {company.name}
-                  </h3>
-                </div>
-              </SimpleAnimatedCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Comparison Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
+      {/* Case Study Section */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Forte vs. Typical Landscaper Websites
+              <div className="inline-flex items-center px-4 py-2 bg-green-100 dark:bg-green-900/40 rounded-full text-green-800 dark:text-green-200 text-sm font-medium mb-6">
+                🌳 Real Results: Albuquerque Landscapes Grew 54% in Leads in 90 Days
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-6">
+                📍 Sandia Landscaping Pros | Albuquerque, NM
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                See why landscapers choose Forte over generic website builders
+              <p className="text-xl text-gray-700 dark:text-gray-300 max-w-4xl mx-auto">
+                Before Forte: Slow DIY website, no galleries, no clear calls to action.
               </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-3 gap-4 p-6 bg-gray-50 dark:bg-gray-600">
-                <div></div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-gray-600 dark:text-gray-300">Typical Websites</h3>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <SimpleAnimatedCard>
+              <div className="space-y-8">
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">📈</span>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-green-600">54%</div>
+                      <div className="text-gray-700 dark:text-gray-300">increase in form inquiries</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🔍</span>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-blue-600">2.7x</div>
+                      <div className="text-gray-700 dark:text-gray-300">higher Google visibility</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">🏆</span>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-purple-600">#1</div>
+                      <div className="text-gray-700 dark:text-gray-300">Ranked for "landscaping Albuquerque" within 90 days</div>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/30 rounded-full flex items-center justify-center">
+                      <span className="text-2xl">💰</span>
+                    </div>
+                    <div>
+                      <div className="text-3xl font-bold text-orange-600">+18%</div>
+                      <div className="text-gray-700 dark:text-gray-300">Average job size grew due to improved visual trust</div>
+                    </div>
+                  </div>
                 </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-green-600 dark:text-green-400">Forte Websites</h3>
+
+                <div className="pt-6">
+                  <LightButton href="#" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white">
+                    📈 Read Full Case Study →
+                  </LightButton>
                 </div>
               </div>
-              
-              {comparisonFeatures.map((item, index) => (
-                <div key={index} className="grid grid-cols-3 gap-4 p-4 border-b border-gray-200 dark:border-gray-600 last:border-b-0">
-                  <div className="font-medium text-gray-900 dark:text-white">
-                    {item.feature}
+            </SimpleAnimatedCard>
+
+            <SimpleAnimatedCard>
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-xl">
+                <div className="text-center space-y-4">
+                  <div className="text-6xl">🌿</div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100">
+                    Sandia Landscaping Pros
+                  </h3>
+                  <div className="space-y-2 text-gray-600 dark:text-gray-400">
+                    <p>📍 Albuquerque, New Mexico</p>
+                    <p>🌿 Full-Service Landscaping</p>
+                    <p>⏱️ 90-Day Results</p>
                   </div>
-                  <div className="text-center">
-                    <span className="text-red-500">✗</span>
-                  </div>
-                  <div className="text-center">
-                    <span className="text-green-500">✓</span>
+                  <div className="pt-4 border-t border-gray-200 dark:border-gray-700">
+                    <div className="grid grid-cols-2 gap-4 text-sm">
+                      <div>
+                        <div className="font-semibold text-gray-900 dark:text-gray-100">Before</div>
+                        <div className="text-red-600">Slow DIY site</div>
+                        <div className="text-red-600">No galleries</div>
+                        <div className="text-red-600">No clear CTAs</div>
+                      </div>
+                      <div>
+                        <div className="font-semibold text-gray-900 dark:text-gray-100">After</div>
+                        <div className="text-green-600">Professional design</div>
+                        <div className="text-green-600">Visual galleries</div>
+                        <div className="text-green-600">Clear conversions</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
+              </div>
+            </SimpleAnimatedCard>
           </div>
+        </div>
+      </section>
+
+      {/* Comparison Table */}
+      <section className="py-20 bg-white dark:bg-gray-900">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                🍃 Why Forte vs. Other Agencies or DIY Builders?
+              </h2>
+            </div>
+          </SimpleScrollReveal>
+
+          <SimpleAnimatedCard>
+            <div className="overflow-x-auto">
+              <table className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg overflow-hidden">
+                <thead>
+                  <tr className="bg-gray-50 dark:bg-gray-700">
+                    <th className="px-6 py-4 text-left text-sm font-semibold text-gray-900 dark:text-gray-100">Feature</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600 dark:text-gray-400">Template Sites</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-gray-600 dark:text-gray-400">Local Ad Agencies</th>
+                    <th className="px-6 py-4 text-center text-sm font-semibold text-green-600 dark:text-green-400">Forte Web Designs</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {comparisonFeatures.map((item, index) => (
+                    <tr key={index} className="border-t border-gray-200 dark:border-gray-600">
+                      <td className="px-6 py-4 text-gray-900 dark:text-gray-100 font-medium">{item.feature}</td>
+                      <td className="px-6 py-4 text-center">
+                        {item.templateSites ? (
+                          <span className="text-green-500">✓</span>
+                        ) : (
+                          <span className="text-red-500">✗</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {item.localAgencies ? (
+                          <span className="text-green-500">✓</span>
+                        ) : (
+                          <span className="text-red-500">✗</span>
+                        )}
+                      </td>
+                      <td className="px-6 py-4 text-center">
+                        {item.forte ? (
+                          <span className="text-green-500">✓</span>
+                        ) : (
+                          <span className="text-red-500">✗</span>
+                        )}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </SimpleAnimatedCard>
         </div>
       </section>
 
       {/* FAQ Section */}
-      <section className="py-16 lg:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
+      <section className="py-20 bg-gray-50 dark:bg-gray-800">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal>
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Frequently Asked Questions
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-gray-100 mb-4">
+                🌿 Frequently Asked Questions
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300">
-                Common questions from landscaping business owners
-              </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="max-w-3xl mx-auto space-y-4">
+          <div className="space-y-6">
             {faqs.map((faq, index) => (
               <SimpleAnimatedCard key={index}>
-                <details className="bg-white dark:bg-gray-700 rounded-lg shadow-md group">
-                  <summary className="p-6 cursor-pointer font-semibold text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-600 rounded-lg transition-colors">
+                <details className="bg-white dark:bg-gray-900 rounded-lg p-6 group shadow-lg">
+                  <summary className="cursor-pointer text-lg font-semibold text-gray-900 dark:text-gray-100 mb-2 group-open:mb-4">
                     {faq.question}
                   </summary>
-                  <div className="px-6 pb-6 text-gray-700 dark:text-gray-300">
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                     {faq.answer}
-                  </div>
+                  </p>
                 </details>
               </SimpleAnimatedCard>
             ))}
@@ -374,37 +598,27 @@ export default function LandscapersPage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-green-600 to-emerald-700 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center">
-              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                Ready to Grow Your Landscaping Business?
-              </h2>
-              <p className="text-xl mb-8 text-green-100">
-                Join successful landscapers who are booking more projects with professional websites
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact?industry=landscapers"
-                  className="bg-white text-green-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
-                >
-                  Get My Landscaper Website
-                </Link>
-                <Link 
-                  href="tel:8178736655"
-                  className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-green-600 transition-colors text-lg"
-                >
-                  Call (817) 873-6655
-                </Link>
-              </div>
-              
-              <p className="text-sm text-green-200 mt-4">
-                💡 Free consultation • Live in 7-10 days • No long-term contracts
-              </p>
+      {/* Final CTA */}
+      <section className="py-20 bg-gradient-to-r from-green-600 to-emerald-600 text-white">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <SimpleScrollReveal>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              🧱 Ready to Get More Landscaping Clients?
+            </h2>
+            <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
+              Join landscapers who trust Forte to turn their work into a lead-generating machine. Let's build a site that showcases your talent and drives real results.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <DarkButton href="/contact?industry=landscaping" className="bg-white text-green-600 hover:text-green-600 font-semibold px-8">
+                Get My Landscaping Website Quote →
+              </DarkButton>
+              <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-green-600 font-semibold px-8">
+                Free Site Audit for Landscapers →
+              </LightButton>
             </div>
+            <p className="mt-6 text-green-200">
+              📞 (817) 873-6655 • Same day response guaranteed
+            </p>
           </SimpleScrollReveal>
         </div>
       </section>
