@@ -20,6 +20,7 @@ interface SEOAuditToolProps {
   setWebsiteUrl: (url: string) => void;
   onResultsUpdate: (results: AuditResults | null, url: string) => void;
   onResultsReady?: () => void;
+  onAuditStart?: () => void; // New callback for when audit starts
   setAutoRunTrigger?: (triggerFunction: () => void) => void;
   shouldHighlightButton?: boolean;
   auditToolRef?: React.RefObject<HTMLDivElement | null>;
@@ -30,6 +31,7 @@ export default function SEOAuditTool({
   setWebsiteUrl, 
   onResultsUpdate,
   onResultsReady,
+  onAuditStart,
   setAutoRunTrigger,
   shouldHighlightButton = false,
   auditToolRef
@@ -82,6 +84,11 @@ export default function SEOAuditTool({
     setIsLoading(true);
     setLoadingProgress(0);
     onResultsUpdate(null, validatedUrl);
+    
+    // Trigger auto-scroll to loading bar when audit starts
+    if (onAuditStart) {
+      onAuditStart();
+    }
 
     // Animate through loading stages
     let currentStageIndex = 0;

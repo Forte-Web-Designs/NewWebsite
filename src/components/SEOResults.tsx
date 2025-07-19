@@ -507,6 +507,25 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
           Results for <span className="break-all text-blue-600">{auditedUrl}</span>
         </h2>
+        
+        {/* Mobile Orange CTA Button */}
+        <div className="md:hidden mb-4">
+          <button
+            onClick={() => {
+              const gradesElement = document.querySelector('[data-mobile-scroll-target]');
+              if (gradesElement) {
+                gradesElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }}
+            className="inline-flex items-center gap-2 px-4 py-3 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-semibold rounded-lg shadow-lg transform hover:scale-105 transition-all duration-200 text-sm"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+            Scroll down to see full analysis
+          </button>
+        </div>
+
         <h3 className="text-lg font-medium text-gray-700 dark:text-gray-300">
           Desktop & Mobile Website Health Overview
         </h3>
@@ -716,7 +735,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
       </div>
 
       {/* Combined Findings */}
-      <div ref={gradesRef} className="space-y-4 mb-6">
+      <div ref={gradesRef} data-mobile-scroll-target className="space-y-4 mb-6">
         <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
           Key Findings Across Desktop & Mobile
         </h3>

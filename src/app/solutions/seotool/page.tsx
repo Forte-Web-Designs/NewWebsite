@@ -45,7 +45,7 @@ function SiteCheckUpContent() {
         return;
       }
       
-      // Handle autorun
+      // Handle autorun - AUTO START AUDIT IMMEDIATELY
       if (autorunParam === 'true') {
         const isMobileDevice = /Mobi|Android/i.test(navigator.userAgent);
         
@@ -56,15 +56,37 @@ function SiteCheckUpContent() {
         
         const attemptAutoRun = () => {
           if (triggerAutoRun.current) {
+            // Automatically start the audit
             triggerAutoRun.current();
+            
+            // Auto-scroll to the audit section when audit starts
+            setTimeout(() => {
+              if (auditToolRef.current) {
+                auditToolRef.current.scrollIntoView({ 
+                  behavior: 'smooth', 
+                  block: 'center' 
+                });
+              }
+            }, 800);
+            
             return true;
           } else {
-            // Fallback attempts
+            // Fallback attempts with auto-scroll
             const fallbackAttempts = [1000, 2000, 3000, 5000];
             fallbackAttempts.forEach((delay) => {
               setTimeout(() => {
                 if (triggerAutoRun.current && !document.querySelector('.audit-results')) {
                   triggerAutoRun.current();
+                  
+                  // Auto-scroll after triggering
+                  setTimeout(() => {
+                    if (auditToolRef.current) {
+                      auditToolRef.current.scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'center' 
+                      });
+                    }
+                  }, 800);
                 }
               }, delay);
             });
@@ -72,7 +94,8 @@ function SiteCheckUpContent() {
           }
         };
         
-        setTimeout(attemptAutoRun, 1500);
+        // Start immediately with shorter delay
+        setTimeout(attemptAutoRun, 800);
       }
     }
   }, [searchParams]);
@@ -99,6 +122,18 @@ function SiteCheckUpContent() {
           });
         }
       }, 800);
+    }
+  };
+
+  // New function to scroll to audit tool (loading bar area)
+  const scrollToAuditTool = () => {
+    if (auditToolRef.current) {
+      setTimeout(() => {
+        auditToolRef.current?.scrollIntoView({ 
+          behavior: 'smooth', 
+          block: 'center' 
+        });
+      }, 500);
     }
   };
 
@@ -247,6 +282,7 @@ function SiteCheckUpContent() {
                       setWebsiteUrl={setWebsiteUrl}
                       onResultsUpdate={handleResultsUpdate}
                       onResultsReady={scrollToResults}
+                      onAuditStart={scrollToAuditTool}
                       setAutoRunTrigger={setAutoRunTrigger}
                       shouldHighlightButton={shouldHighlightButton}
                       auditToolRef={auditToolRef}

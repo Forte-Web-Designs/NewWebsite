@@ -620,7 +620,7 @@ export default function Home() {
                 }>
                   <InstantMiniAudit 
                     onFullAuditClick={(url: string, seoScore?: number) => {
-                      window.location.href = `/solutions/seotool?url=${encodeURIComponent(url)}&score=${seoScore || 0}`;
+                      window.location.href = `/solutions/seotool?url=${encodeURIComponent(url)}&score=${seoScore || 0}&autorun=true`;
                     }}
                   />
                 </Suspense>
