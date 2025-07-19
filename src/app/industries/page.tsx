@@ -50,6 +50,16 @@ export default function IndustriesPage() {
       avgIncrease: '54%'
     },
     {
+      name: 'Handyman Services',
+      icon: '🛠️',
+      href: '/industries/handyman',
+      description: 'Fast, mobile-ready websites that turn "fix-it" searches into real paying jobs',
+      features: ['Tap-to-Call Optimization', 'Local SEO & Zip Targeting', 'Before/After Galleries', 'Trust Building'],
+      available: true,
+      clients: '6',
+      avgIncrease: '212%'
+    },
+    {
       name: 'Construction',
       icon: '🏗️',
       href: '/industries/construction',
