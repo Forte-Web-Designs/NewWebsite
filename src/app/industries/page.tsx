@@ -26,7 +26,7 @@ export default function IndustriesPage() {
       description: 'Emergency-ready websites that convert mobile traffic into service calls',
       features: ['24/7 Emergency Contact', 'Local SEO', 'Mobile-First Design', 'Review Integration'],
       available: true,
-      clients: '15+',
+      clients: '8',
       avgIncrease: '67%'
     },
     {
@@ -36,7 +36,7 @@ export default function IndustriesPage() {
       description: 'Menu-focused websites with online ordering integration',
       features: ['Online Menus', 'Reservation Systems', 'Photo Galleries', 'Location Info'],
       available: true,
-      clients: '12+',
+      clients: '5',
       avgIncrease: '85%'
     },
     {
@@ -46,7 +46,7 @@ export default function IndustriesPage() {
       description: 'Visual portfolio websites showcasing outdoor transformations',
       features: ['Before/After Galleries', 'Seasonal Services', 'Quote Requests', 'Visual Portfolios'],
       available: true,
-      clients: '10+',
+      clients: '4',
       avgIncrease: '78%'
     },
     {
@@ -56,7 +56,7 @@ export default function IndustriesPage() {
       description: 'Project showcase websites with detailed portfolio sections',
       features: ['Project Portfolios', 'Before/After Galleries', 'Estimate Requests', 'Timeline Management'],
       available: true,
-      clients: '8+',
+      clients: '3',
       avgIncrease: '45%'
     },
     {
@@ -66,7 +66,7 @@ export default function IndustriesPage() {
       description: 'HIPAA-compliant websites with patient portal integration',
       features: ['HIPAA Compliance', 'Appointment Booking', 'Patient Portals', 'Insurance Info'],
       available: true,
-      clients: '6+',
+      clients: '3',
       avgIncrease: '52%'
     },
     {
@@ -76,7 +76,7 @@ export default function IndustriesPage() {
       description: 'Seasonal optimization and emergency service websites',
       features: ['Seasonal Campaigns', 'Service Area Maps', 'Maintenance Scheduling', 'Emergency Response'],
       available: true,
-      clients: '12+',
+      clients: '3',
       avgIncrease: '58%'
     },
     {
@@ -86,7 +86,7 @@ export default function IndustriesPage() {
       description: 'Safety-focused websites with clear emergency protocols',
       features: ['Safety Certifications', 'Emergency Services', 'Project Galleries', 'Free Estimates'],
       available: true,
-      clients: '14+',
+      clients: '3',
       avgIncrease: '62%'
     }
   ];

@@ -71,7 +71,7 @@ export default function PlumbersPage() {
     },
     {
       question: "Do you understand the plumbing industry?",
-      answer: "Absolutely. We've built websites for 15+ plumbing companies and understand emergency call patterns, local SEO for plumbers, and what builds trust with homeowners in crisis."
+      answer: "Absolutely. We've built websites for 8 plumbing companies and understand emergency call patterns, local SEO for plumbers, and what builds trust with homeowners in crisis."
     },
     {
       question: "What makes your plumber websites different?",
@@ -310,7 +310,7 @@ export default function PlumbersPage() {
                 Why We're <span className="text-blue-600">Plumbing Website Experts</span>
               </h2>
               <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                We've built websites for 15+ plumbing companies and understand exactly what drives emergency calls and builds customer trust in the plumbing industry.
+                We've built websites for 8 plumbing companies and understand exactly what drives emergency calls and builds customer trust in the plumbing industry.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -554,7 +554,7 @@ export default function PlumbersPage() {
               Ready to Dominate Local Plumbing Search?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join 15+ plumbing companies who've increased their emergency calls and revenue with our proven plumber website formula.
+              Join 8 plumbing companies who've increased their emergency calls and revenue with our proven plumber website formula.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
