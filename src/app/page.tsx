@@ -749,8 +749,8 @@ export default function Home() {
             <SimpleScrollReveal direction="up" delay={300}>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                 <div className="p-6 bg-red-50 dark:bg-red-900/20 rounded-xl border border-red-200 dark:border-red-800/50">
-                  <h3 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4">❌ The Old Way (Multiple Vendors)</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
+                  <h3 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4 text-center md:text-left">❌ The Old Way (Multiple Vendors)</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm text-center md:text-left">
                     <li>• Website guy doesn't talk to SEO guy</li>
                     <li>• PPC ads send traffic to slow pages</li>
                     <li>• Nobody takes responsibility for results</li>
@@ -759,8 +759,8 @@ export default function Home() {
                 </div>
                 
                 <div className="p-6 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-800/50">
-                  <h3 className="text-xl font-semibold text-green-600 dark:text-green-400 mb-4">✅ The Forte Way (One Team)</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm">
+                  <h3 className="text-xl font-semibold text-green-600 dark:text-green-400 mb-4 text-center md:text-left">✅ The Forte Way (One Team)</h3>
+                  <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm text-center md:text-left">
                     <li>• Everything designed to work together</li>
                     <li>• PPC ads → optimized landing pages</li>
                     <li>• One team accountable for your success</li>
