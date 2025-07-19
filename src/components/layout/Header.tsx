@@ -132,6 +132,7 @@ export default function Header() {
     { label: 'Healthcare Websites', href: '/industries/healthcare' },
     { label: 'Landscaper Websites', href: '/industries/landscapers' },
     { label: 'Construction Websites', href: '/industries/construction' },
+    { label: 'HVAC Websites', href: '/industries/hvac' },
     { label: 'All Industries', href: '/industries' }
   ];
 

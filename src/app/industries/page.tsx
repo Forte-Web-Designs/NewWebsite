@@ -72,12 +72,12 @@ export default function IndustriesPage() {
     {
       name: 'HVAC Companies',
       icon: '🌡️',
-      href: '#',
+      href: '/industries/hvac',
       description: 'Seasonal optimization and emergency service websites',
       features: ['Seasonal Campaigns', 'Service Area Maps', 'Maintenance Scheduling', 'Emergency Response'],
-      available: false,
-      clients: 'Coming Soon',
-      avgIncrease: ''
+      available: true,
+      clients: '12+',
+      avgIncrease: '58%'
     },
     {
       name: 'Electricians',
