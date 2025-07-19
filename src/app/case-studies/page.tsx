@@ -213,12 +213,12 @@ export default function CaseStudiesPage() {
                     <div className="mb-4">
                       <div className="text-blue-600 dark:text-blue-300 text-3xl font-bold mb-2">TechCorp Solutions</div>
                       <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">SaaS</div>
-                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+85% organic traffic in 6 months</div>
+                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+60% organic traffic in 6 months</div>
                     </div>
                     <div className="flex-1">
                       <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Challenge:</strong> Despite near-perfect technical SEO, TechCorp Solutions was steadily losing market share to aggressive SaaS competitors.</p>
                       <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Solution:</strong> Deep competitive analysis uncovered three high-impact strategies their rivals were using, including targeted content clusters and advanced link-building.</p>
-                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Reclaimed the #1 Google ranking for 15 high-value SaaS keywords, driving an 85% increase in organic traffic and restoring their industry leadership.</p>
+                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Reclaimed the #1 Google ranking for 15 high-value SaaS keywords, driving a 60% increase in organic traffic and restoring their industry leadership.</p>
                     </div>
                   </div>
                   {/* BluePeak Digital */}
@@ -226,7 +226,7 @@ export default function CaseStudiesPage() {
                     <div className="mb-4">
                       <div className="text-blue-600 dark:text-blue-300 text-3xl font-bold mb-2">BluePeak Digital</div>
                       <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Digital Marketing Agency</div>
-                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+89% lead quality in 4 months</div>
+                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+65% lead quality in 4 months</div>
                     </div>
                     <div className="flex-1">
                       <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Challenge:</strong> BluePeak Digital had strong SEO scores but struggled with low conversion rates and underperforming lead quality.</p>
@@ -239,12 +239,12 @@ export default function CaseStudiesPage() {
                     <div className="mb-4">
                       <div className="text-blue-600 dark:text-blue-300 text-3xl font-bold mb-2">Luxora Home</div>
                       <div className="text-sm text-gray-500 dark:text-gray-400 mb-1">Premium E-commerce (Home & Lifestyle)</div>
-                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+203% revenue in 8 months</div>
+                      <div className="text-xs text-green-600 dark:text-green-400 font-semibold mb-2">+125% revenue in 8 months</div>
                     </div>
                     <div className="flex-1">
                       <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Challenge:</strong> Luxora Home’s site was technically flawless, but they were losing customers to larger, established competitors.</p>
                       <p className="text-gray-700 dark:text-gray-300 mb-2"><strong>Solution:</strong> Leveraged advanced competitive intelligence and strategic brand positioning to target commercial-intent keywords and optimize product landing pages.</p>
-                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Outranked three major retail competitors for high-converting keywords, resulting in a 203% increase in online revenue and a surge in new customer acquisition.</p>
+                      <p className="text-gray-700 dark:text-gray-300"><strong>Results:</strong> Outranked three major retail competitors for high-converting keywords, resulting in a 125% increase in online revenue and a surge in new customer acquisition.</p>
                     </div>
                   </div>
                 </div>

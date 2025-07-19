@@ -29,9 +29,9 @@ Created a specialized competitive analysis landing page specifically for website
 
 ### 4. **Case Studies Section**
 **Three compelling examples:**
-- TechCorp Solutions: 9/10 → +127% organic traffic
-- Elite Marketing Agency: 8/10 → +89% lead quality  
-- Premium E-commerce: 9/10 → +203% revenue
+- TechCorp Solutions: 9/10 → +60% organic traffic
+- Elite Marketing Agency: 8/10 → +65% lead quality  
+- Premium E-commerce: 9/10 → +125% revenue
 
 **Each shows:**
 - Initial high score
