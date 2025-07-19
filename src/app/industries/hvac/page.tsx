@@ -171,31 +171,31 @@ export default function HVACPage() {
     <div className="min-h-screen">
       <ScrollToTop />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-700 via-red-600 to-orange-800 text-white py-20 md:py-28">
+      <section className="bg-gradient-to-br from-blue-600 via-red-600 to-blue-700 text-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SimpleScrollReveal direction="left" delay={100}>
               <div>
-                <div className="inline-flex items-center gap-2 bg-orange-600/50 text-orange-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <div className="inline-flex items-center gap-2 bg-blue-600/50 text-blue-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   🌡️ Industry Expertise: HVAC Companies
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  HVAC Websites That Convert <span className="text-orange-300">Emergency Calls</span> & <span className="text-orange-300">Seasonal Services</span>
+                  HVAC Websites That Convert <span className="text-blue-300">Emergency Calls</span> & <span className="text-red-300">Seasonal Services</span>
                 </h1>
-                <p className="text-xl text-orange-100 mb-8 leading-relaxed">
+                <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                   When heating fails in winter or AC breaks in summer, customers search frantically on mobile. Your HVAC website needs to capture those emergency calls and build trust instantly.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link 
                     href="/contact?industry=hvac"
-                    className="bg-white text-orange-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
+                    className="bg-white text-blue-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
                   >
                     Get My HVAC Website
                   </Link>
                   <Link 
                     href="/pricing"
-                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-700 transition-colors text-center"
+                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-center"
                   >
                     View Pricing
                   </Link>
@@ -205,7 +205,7 @@ export default function HVACPage() {
                   {successMetrics.map((metric, index) => (
                     <div key={index} className="text-center">
                       <div className="text-2xl font-bold mb-1">{metric.metric}</div>
-                      <div className="text-orange-200">{metric.description}</div>
+                      <div className="text-blue-200">{metric.description}</div>
                     </div>
                   ))}
                 </div>
@@ -214,13 +214,13 @@ export default function HVACPage() {
 
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 lg:p-8 shadow-2xl border-2 border-orange-100">
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 lg:p-8 shadow-2xl border-2 border-blue-100">
                   {/* Header */}
-                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl text-white">
+                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-blue-600 to-red-600 rounded-xl text-white">
                     <span className="text-3xl">🌡️</span>
                     <div>
                       <h3 className="text-white text-xl font-bold">ELITE CLIMATE SOLUTIONS</h3>
-                      <p className="text-orange-100 text-sm font-semibold">⭐ Licensed & Insured ⭐</p>
+                      <p className="text-blue-100 text-sm font-semibold">❄️ Heating & Cooling Experts 🔥</p>
                     </div>
                   </div>
                   
@@ -247,33 +247,33 @@ export default function HVACPage() {
                   </div>
 
                   {/* Emergency Call Button */}
-                  <div className="bg-gradient-to-r from-orange-500 to-red-500 text-white text-center py-4 rounded-xl mb-4 shadow-lg transform hover:scale-105 transition-transform">
+                  <div className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-center py-4 rounded-xl mb-4 shadow-lg transform hover:scale-105 transition-transform">
                     <div className="flex items-center justify-center gap-3">
-                      <span className="text-2xl">🚨</span>
+                      <span className="text-2xl">🌡️</span>
                       <div>
                         <div className="font-bold text-lg">24/7 Emergency Service</div>
-                        <div className="text-orange-100 text-sm">Call (555) HVAC-911</div>
+                        <div className="text-blue-100 text-sm">Call (555) CLIMATE-1</div>
                       </div>
                     </div>
                   </div>
 
                   {/* Reviews section */}
-                  <div className="text-center bg-yellow-50 rounded-lg p-4">
+                  <div className="text-center bg-blue-50 rounded-lg p-4">
                     <div className="flex items-center justify-center gap-1 mb-2">
                       <span className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
                     </div>
                     <div className="text-gray-700 font-semibold">4.9/5 Stars</div>
                     <div className="text-gray-600 text-sm">(127 Google Reviews)</div>
-                    <div className="text-orange-600 text-sm font-medium mt-1">🌡️ Same Day Service</div>
+                    <div className="text-blue-600 text-sm font-medium mt-1">🌡️ Licensed HVAC Professionals</div>
                   </div>
                 </div>
                 
                 {/* Floating elements */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
-                  ❄️ AC Season Ready
+                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
+                  🔥 Heating Ready
                 </div>
-                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  🔥 Heating Experts
+                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
+                  ❄️ Cooling Ready
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -328,7 +328,7 @@ export default function HVACPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Everything Your HVAC Website Needs to <span className="text-orange-600">Convert Emergency Calls</span>
+                Everything Your HVAC Website Needs to <span className="text-blue-600">Convert Emergency Calls</span>
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
                 Every HVAC website we build includes these conversion-focused features designed specifically for the heating and cooling industry.
@@ -374,7 +374,7 @@ export default function HVACPage() {
                 <div className="grid grid-cols-3 gap-4 p-6 bg-gray-100 dark:bg-gray-700">
                   <div className="font-semibold text-gray-900 dark:text-white">Feature</div>
                   <div className="font-semibold text-gray-900 dark:text-white text-center">Typical HVAC Sites</div>
-                  <div className="font-semibold text-orange-600 dark:text-orange-400 text-center">Forte HVAC Sites</div>
+                  <div className="font-semibold text-blue-600 dark:text-blue-400 text-center">Forte HVAC Sites</div>
                 </div>
                 
                 {comparisonFeatures.map((item, index) => (
@@ -403,7 +403,7 @@ export default function HVACPage() {
       </section>
 
       {/* Case Study */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-50 to-red-50 dark:from-blue-900/20 dark:to-red-900/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal>
             <div className="text-center mb-12">
@@ -422,7 +422,7 @@ export default function HVACPage() {
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="p-8 lg:p-12">
                     <div className="mb-6">
-                      <div className="inline-flex items-center gap-2 bg-orange-100 dark:bg-orange-900/40 text-orange-800 dark:text-orange-200 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                      <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-200 px-3 py-1 rounded-full text-sm font-medium mb-4">
                         Case Study
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
@@ -511,7 +511,7 @@ export default function HVACPage() {
               {clientCompanies.map((company, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-3">
-                    <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/40 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-full flex items-center justify-center mx-auto mb-3">
                       <span className="text-xl">🌡️</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
@@ -557,32 +557,32 @@ export default function HVACPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-orange-600 to-red-600 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-red-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SimpleScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Capture More Emergency Calls & Seasonal Business?
             </h2>
-            <p className="text-xl text-orange-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
               Join successful HVAC companies who are staying busy year-round with professional websites that convert.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact?industry=hvac"
-                className="bg-white text-orange-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                className="bg-white text-blue-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
               >
                 Get My HVAC Website
               </Link>
               <Link 
                 href="tel:8178736655"
-                className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-700 transition-colors text-lg"
+                className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-lg"
               >
                 Call (817) 873-6655
               </Link>
             </div>
             
-            <p className="text-sm text-orange-200 mt-4">
+            <p className="text-sm text-blue-200 mt-4">
               💡 Free consultation • Live in 7-10 days • No long-term contracts
             </p>
           </SimpleScrollReveal>
