@@ -3,8 +3,8 @@
 import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { Icon } from "@/components/images/Icon";
 import Image from 'next/image';
+import Link from 'next/link';
 import { useState, useEffect } from "react";
-import LightButton from "@/components/LightButton";
 import { useTheme } from "@/app/providers/ThemeProvider";
 
 const faqs = [
@@ -19,7 +19,7 @@ const faqs = [
   {
     title: "Still Not Sure?",
     content: [
-      "We’re here to help! Contact our support team anytime."
+      "We're here to help! Contact our support team anytime."
     ]
   }
 ];
@@ -61,7 +61,6 @@ export default function ServicePage() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-
   const gradientConfig = {
     leftColumn: {
       desktop: "269deg",
@@ -85,7 +84,6 @@ export default function ServicePage() {
     }
   };
 
-
   return (
     <>
       {/* Hero Section */}
@@ -94,15 +92,15 @@ export default function ServicePage() {
           <div className="max-w-3xl mx-auto md:text-center text-start sm:gap-[24px] gap-[22px] grid">
             <div className="flex gap-2 md:justify-center align-middle items-center">
               <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} />
-              <span className="md:text-[24px] text-[12px] font-normal leading-[12px] sm:leading-[24px] flex items-center text-center sm:justify-center sm:gap-2 gap-1 text-primary-1000 ">
-                We Keep It Simple. And Powerful.
+              <span className="md:text-[24px] text-[12px] font-normal leading-[12px] sm:leading-[24px] flex items-center text-center sm:justify-center sm:gap-2 gap-1 text-primary-1000">
+                Ongoing Website Excellence
               </span>
             </div>
             <h1 className="font-roboto font-medium text-[32px] sm:text-[62px] sm:leading-[62px] leading-[40px] tracking-[-1.24px] sm:text-center text-start align-middle text-black dark:text-[#FFFFFF]">
-              A Personalized Approach To Your Websites Well-Being
+              Forte Care™: Your Website's Success Partner
             </h1>
-            <p className="font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262]  dark:text-[#B4B4B4]">
-              At Forte Web Designs, we don’t believe in overcomplicating things. No fluff. No gimmicks. Just a clear, proven system that delivers fast, secure, and high-converting websites—every time. Here’s what makes our process different:
+            <p className="font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262] dark:text-[#B4B4B4]">
+              Premium website maintenance and optimization service that keeps your site fast, secure, and high-converting. Focus on your business while we handle the tech.
             </p>
           </div>
         </div>
@@ -146,8 +144,9 @@ export default function ServicePage() {
         </section>
       )}
 
-      <section className="py-9  md:px-10 sm:px-6 lg:px-0 md:py-16">
-        <div className=" container mx-auto xxl:px-8 sm:px-6 lg:px-8 px-4">
+      {/* What is Forte Care Section */}
+      <section className="py-9 md:px-10 sm:px-6 lg:px-0 md:py-16">
+        <div className="container mx-auto xxl:px-8 sm:px-6 lg:px-8 px-4">
           <div className="grid gap-[24px]">
             <div className="">
               <h2 className="font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal align-middle sm:text-center text-start text-black dark:text-[#FFFFFF]">
@@ -155,16 +154,21 @@ export default function ServicePage() {
               </h2>
             </div>
             <div className="">
-              <p className="font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262]  dark:text-[#B4B4B4]">Forte Care™ is our premium, ongoing support and optimization service— built to keep your <br /> website running fast, secure, and fully dialed-in long after launch. Whether you need content <br /> updates, performance tuning, or just peace of mind, we’re your behind-the-scenes team.</p>
+              <p className="font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal sm:text-center text-start align-middle text-[#626262] dark:text-[#B4B4B4]">
+                Forte Care™ is our premium, ongoing support and optimization service—built to keep your website running fast, secure, and fully dialed-in long after launch. Whether you need content updates, performance tuning, or just peace of mind, we're your behind-the-scenes team.
+              </p>
             </div>
             <div className="">
-              <h4 className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal sm:text-center text-start align-middle dark:text-[#EEEEEE] text-[black]">! Already included with most Forte website plans.</h4>
+              <h4 className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal sm:text-center text-start align-middle dark:text-[#EEEEEE] text-[black]">
+                ✅ Already included with most Forte website plans.
+              </h4>
             </div>
           </div>
         </div>
       </section>
-      {/* ============Test Setion=== */}
-      <section className=" dark:bg-black text-white py-20 px-4 min-h-scree items-center justify-center grid sm:gap-[48px] gap-[24px]">
+
+      {/* Features Grid Section */}
+      <section className="dark:bg-black text-white py-20 px-4 min-h-scree items-center justify-center grid sm:gap-[48px] gap-[24px]">
         <div className="text-center">
           <h2 className="font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal align-middle sm:text-center text-start text-black dark:text-[#FFFFFF]">
             Every Forte Care™ Plan Includes:
@@ -180,7 +184,7 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] min-h-[120px] md:h-[150px] flex items-center justify-center font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center">
-                Speed Optimization & Performance Checks
+                Speed Optimization & Performance Monitoring
               </div>
             </div>
             <div
@@ -190,7 +194,7 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] min-h-[120px] md:h-[150px] flex items-center justify-center font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center">
-                Quarterly Performance Reports
+                Monthly Performance Reports
               </div>
             </div>
           </div>
@@ -202,7 +206,7 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] w-full font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center flex items-center justify-center min-h-[60px]">
-                Unlimited Content Edits
+                Unlimited Content Updates
               </div>
             </div>
             <div
@@ -212,7 +216,7 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] text-center dark:shadow-[0_0_50px_rgba(85,135,255,0.4)] border dark:border-[#1A1A1A] w-full flex items-center justify-center">
-                {/* Animated Care Circle - Same style as SEO Growth */}
+                {/* Animated Care Circle */}
                 <div className="w-48 h-40 sm:w-56 sm:h-48 md:w-64 md:h-56 lg:w-[270px] lg:h-[250px] relative flex items-center justify-center">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-500/30 via-blue-600/40 to-purple-600/30 animate-pulse shadow-2xl"></div>
                   <div className="absolute inset-4 rounded-full bg-gradient-to-tr from-blue-400/20 to-indigo-500/30 animate-pulse delay-300"></div>
@@ -235,7 +239,7 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] w-full font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center flex items-center justify-center min-h-[60px]">
-                Monthly Site Backups
+                Automatic Backups
               </div>
             </div>
           </div>
@@ -248,7 +252,7 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] min-h-[120px] md:h-[150px] flex items-center justify-center font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center">
-                Hosting Management & Uptime Monitoring
+                Security & Uptime Monitoring
               </div>
             </div>
             <div
@@ -258,30 +262,28 @@ export default function ServicePage() {
               }}
             >
               <div className="bg-white dark:bg-[#101010] border-gray-300 shadow-[inset_0_0_12px_0_#DFDFDF] text-black dark:text-white p-4 sm:p-6 rounded-[20px] dark:shadow-md border dark:border-[#1A1A1A] min-h-[120px] md:h-[150px] flex items-center justify-center font-inter font-medium text-base sm:text-lg md:text-xl lg:text-2xl leading-tight tracking-normal text-center">
-                Broken Link Fixes
+                Technical Support & Maintenance
               </div>
             </div>
           </div>
         </div>
       </section>
 
-
-
-      <section className="w-full dark:bg-black bg-white  py-16 px-4 overflow-hidden" >
+      {/* Monthly Health Review Section */}
+      <section className="w-full dark:bg-black bg-white py-16 px-4 overflow-hidden">
         <div className="max-w-6xl mx-auto">
-
-          <div className="max-w-6xl mx-auto grid md:grid-cols-6 gap-8 items-start dark:bg-black bg-white ">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-6 gap-8 items-start dark:bg-black bg-white">
             <div className="col-span-6 lg:col-span-3 px-[20px] sm:px-0 grid gap-[24px]">
-              <h2 className="dark:text-white text-black ont-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal align-middle ">
-                Bonus:<br />Monthly Website Health Review
+              <h2 className="dark:text-white text-black font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal align-middle">
+                Monthly Website Health Review
               </h2>
-              <p className="font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal  text-start align-middle text-[#626262]  dark:text-[#B4B4B4]">
-                Every month, you’ll receive a custom Website Health Review: a proactive checkup with key insights, recommendations, and alerts—so you’re never left guessing about your site’s performance or stability.
+              <p className="font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal text-start align-middle text-[#626262] dark:text-[#B4B4B4]">
+                Every month, you'll receive a custom Website Health Review: a proactive checkup with key insights, recommendations, and alerts—so you're never left guessing about your site's performance or stability.
               </p>
             </div>
 
             <div className="col-span-6 lg:col-span-3 relative border border-[#5C5C5C] rounded-[16px] grid gap-[24px]">
-              {/* Animated Star Excellence Circle - Top Right */}
+              {/* Animated Excellence Circle */}
               <div className="absolute -top-16 -right-12 z-10 lg:block hidden">
                 <div className="w-[150px] h-[119px] relative flex items-center justify-center">
                   <div className="absolute inset-0 rounded-full bg-gradient-to-bl from-yellow-500/30 via-orange-600/40 to-red-600/30 animate-pulse shadow-2xl"></div>
@@ -303,62 +305,74 @@ export default function ServicePage() {
                 }}
               >
                 <ul className="list-disc pl-5 space-y-3 text-sm">
-                  <li className="text-white font-display font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">Site speed & performance grades</li>
-                  <li className="text-white font-isplay font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">SSL & security checkups</li>
-                  <li className="text-white font-display font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">Update alerts & improvement tips</li>
-                  <li className="text-white font-display font-medium text-[18px] leading-[24px] sm:text-[26px] sm:leading-[32px] tracking-normal align-middle">Content & SEO suggestions</li>
+                  <li className="text-white font-medium text-[16px] leading-[22px] sm:text-[20px] sm:leading-[26px] tracking-normal">Site speed & performance grades</li>
+                  <li className="text-white font-medium text-[16px] leading-[22px] sm:text-[20px] sm:leading-[26px] tracking-normal">SSL & security checkups</li>
+                  <li className="text-white font-medium text-[16px] leading-[22px] sm:text-[20px] sm:leading-[26px] tracking-normal">Update alerts & improvement tips</li>
+                  <li className="text-white font-medium text-[16px] leading-[22px] sm:text-[20px] sm:leading-[26px] tracking-normal">Content & SEO optimization suggestions</li>
                 </ul>
               </div>
-
             </div>
           </div>
 
-
           <p className="font-inter font-medium text-[18px] sm:text-[26px] leading-[24px] sm:leading-[32px] tracking-normal sm:text-center text-start align-middle dark:text-[#EEEEEE] text-[black] lg:mt-28 mt-6 mx-auto">
-            It’s like having a digital pit crew—quietly keeping everything running in top condition so you can focus on growing your business.
+            It's like having a digital pit crew—quietly keeping everything running in top condition so you can focus on growing your business.
           </p>
         </div>
       </section>
 
-      <section className=" dark:bg-black bg-white">
-
-        <div className="container  text-white flex flex-col sm:items-center sm:justify-center sm:px-4 sm:py-16 px-[20px] mx-auto sm:gap-[24px] gap-[22px]">
-          <h2 className="font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal flex align-middle sm:text-center text-start text-black dark:text-[#FFFFFF]">Quick Questions...</h2>
+      {/* FAQ Section */}
+      <section className="dark:bg-black bg-white">
+        <div className="container text-white flex flex-col sm:items-center sm:justify-center sm:px-4 sm:py-16 px-[20px] mx-auto sm:gap-[24px] gap-[22px]">
+          <h2 className="font-inter-display font-medium text-[26px] sm:text-[38px] leading-[30px] sm:leading-[38px] tracking-normal flex align-middle sm:text-center text-start text-black dark:text-[#FFFFFF]">
+            Quick Questions...
+          </h2>
 
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="w-[100%]  mb-2  dark:bg-primary-1150 bg-[#F4F4F4] rounded-[16px] sm:p-[32px] overflow-hidden "
+              className="w-[100%] mb-2 dark:bg-primary-1150 bg-[#F4F4F4] rounded-[16px] sm:p-[32px] overflow-hidden"
             >
               <button
                 onClick={() => toggle(index)}
                 className="w-[100%] flex justify-between items-center text-left sm:p-0 px-6 py-7 cursor-pointer hover:bg-black/5 dark:hover:bg-white/5 transition-colors duration-200"
                 data-clickable
               >
-                <span className="font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle text-[#000000] dark:text-[white]">{faq.title}</span>
+                <span className="font-inter font-medium sm:text-[26px] text-[18px] leading-[22px] sm:leading-[32px] tracking-normal text-center align-middle text-[#000000] dark:text-[white]">
+                  {faq.title}
+                </span>
                 <Icon
                   name={theme === "dark" ? "selector-light" : "selector"}
                   alt="right arrow icon"
-                  className={`w-[15px] h-[20px] transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''
-                    }`}
+                  className={`w-[15px] h-[20px] transform transition-transform duration-300 ${openIndex === index ? 'rotate-180' : ''}`}
                 />
               </button>
 
               {openIndex === index && (
-                <div className=" text-md space-y-2 md:pt-[14px] sm:p-0 px-6 py-7">
+                <div className="text-md space-y-2 md:pt-[14px] sm:p-0 px-6 py-7">
                   {faq.content.map((line, i) => (
-                    <p className="font-inter font-normal text-[14px]  sm:text-[18px]  sm:leading-[22px] leading-[16px] tracking-normal  text-start align-middle text-[#626262]  dark:text-[#B4B4B4]" key={i}>{line}</p>
+                    <p 
+                      className="font-inter font-normal text-[14px] sm:text-[18px] sm:leading-[22px] leading-[16px] tracking-normal text-start align-middle text-[#626262] dark:text-[#B4B4B4]" 
+                      key={i}
+                    >
+                      {line}
+                    </p>
                   ))}
                 </div>
               )}
             </div>
           ))}
         </div>
+        
+        {/* CTA Section */}
         <div className="flex justify-center flex-col sm:flex-row mx-auto mb-32 sm:mt-0 mt-[26.5px] sm:ml-0 ml-[44px]">
-          <LightButton href="/contact" className="md:text-[18px] md:leading-[18px] text-[11px] leading-[11px]">Get My Free Website Analysis</LightButton>
+          <Link 
+            href="/contact" 
+            className="bg-primary-1000 text-white font-semibold py-4 px-8 rounded-lg hover:bg-primary-900 transition-colors text-center md:text-[18px] md:leading-[18px] text-[11px] leading-[11px]"
+          >
+            Get My Free Website Analysis
+          </Link>
         </div>
       </section>
-
     </>
   );
 }
