@@ -4,8 +4,6 @@ import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
-import DarkButton from '@/components/DarkButton';
-import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
@@ -223,12 +221,18 @@ export default function HealthcarePage() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <DarkButton href="/contact?industry=healthcare" className="bg-white text-teal-700 hover:text-teal-700 font-semibold px-8">
+                  <Link 
+                    href="/contact?industry=healthcare"
+                    className="bg-white text-teal-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
+                  >
                     Get My Healthcare Website Quote →
-                  </DarkButton>
-                  <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-teal-700 font-semibold px-8">
+                  </Link>
+                  <Link 
+                    href="/pricing"
+                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-teal-700 transition-colors text-center"
+                  >
                     Free Website Audit for Healthcare Providers →
-                  </LightButton>
+                  </Link>
                 </div>
 
                 {/* Trust Indicators */}
@@ -474,9 +478,12 @@ export default function HealthcarePage() {
                 </div>
 
                 <div className="pt-6">
-                  <LightButton href="#" className="border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white">
+                  <Link 
+                    href="#"
+                    className="border-2 border-teal-600 text-teal-600 bg-transparent font-bold py-3 px-6 rounded-lg hover:bg-teal-600 hover:text-white transition-colors text-center inline-block"
+                  >
                     📈 Read Full Case Study →
-                  </LightButton>
+                  </Link>
                 </div>
               </div>
             </SimpleAnimatedCard>
@@ -613,12 +620,18 @@ export default function HealthcarePage() {
               Join the medical professionals who trust Forte to help them serve more patients and simplify their digital presence.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <DarkButton href="/contact?industry=healthcare" className="bg-white text-teal-600 hover:text-teal-600 font-semibold px-8">
+              <Link 
+                href="/contact?industry=healthcare"
+                className="bg-white text-teal-600 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
+              >
                 Get My Healthcare Website Quote →
-              </DarkButton>
-              <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-teal-600 font-semibold px-8">
+              </Link>
+              <Link 
+                href="/pricing"
+                className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-teal-600 transition-colors text-center"
+              >
                 Free Medical Website Audit →
-              </LightButton>
+              </Link>
             </div>
             <p className="mt-6 text-teal-200">
               📞 (817) 873-6655 • Same day response guaranteed

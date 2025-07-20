@@ -4,8 +4,6 @@ import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
-import DarkButton from '@/components/DarkButton';
-import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
@@ -218,12 +216,12 @@ export default function LandscapersPage() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <DarkButton href="/contact?industry=landscaping" className="bg-white text-green-700 hover:text-green-700 font-semibold px-8">
+                  <Link href="/contact?industry=landscaping" className="bg-white text-green-700 hover:text-green-700 font-semibold px-8 py-4 rounded-lg text-center transition-colors">
                     Get My Landscaping Website Quote →
-                  </DarkButton>
-                  <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8">
+                  </Link>
+                  <Link href="/pricing" className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors">
                     Free Website Audit for Landscapers →
-                  </LightButton>
+                  </Link>
                 </div>
 
                 {/* Trust Indicators */}
@@ -472,9 +470,9 @@ export default function LandscapersPage() {
                 </div>
 
                 <div className="pt-6">
-                  <LightButton href="#" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white">
+                  <Link href="#" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white border-2 font-semibold py-3 px-6 rounded-lg inline-block transition-colors">
                     📈 Read Full Case Study →
-                  </LightButton>
+                  </Link>
                 </div>
               </div>
             </SimpleAnimatedCard>
@@ -609,12 +607,12 @@ export default function LandscapersPage() {
               Join landscapers who trust Forte to turn their work into a lead-generating machine. Let's build a site that showcases your talent and drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <DarkButton href="/contact?industry=landscaping" className="bg-white text-green-600 hover:text-green-600 font-semibold px-8">
+              <Link href="/contact?industry=landscaping" className="bg-white text-green-600 hover:text-green-600 font-semibold px-8 py-4 rounded-lg text-center transition-colors">
                 Get My Landscaping Website Quote →
-              </DarkButton>
-              <LightButton href="/pricing" className="border-white text-white hover:bg-white hover:text-green-600 font-semibold px-8">
+              </Link>
+              <Link href="/pricing" className="border-white text-white hover:bg-white hover:text-green-600 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors">
                 Free Site Audit for Landscapers →
-              </LightButton>
+              </Link>
             </div>
             <p className="mt-6 text-green-200">
               📞 (817) 873-6655 • Same day response guaranteed

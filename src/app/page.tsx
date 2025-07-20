@@ -841,10 +841,10 @@ export default function Home() {
                 <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
                   <div className="text-center">
                     <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">
-                      <SimpleAnimatedCounter end={1000} suffix="s" />
+                      <SimpleAnimatedCounter end={100} suffix="%" />
                     </h3>
                     <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
-                      Of Leads Generated
+                      U.S.A.-Based Support<br />& Development
                     </p>
                   </div>
                 </div>
