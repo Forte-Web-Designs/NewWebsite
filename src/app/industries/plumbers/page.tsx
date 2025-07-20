@@ -4,8 +4,6 @@ import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
-import DarkButton from '@/components/DarkButton';
-import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
 
 export const metadata: Metadata = {
@@ -209,12 +207,18 @@ export default function PlumbersPage() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <DarkButton href="/contact?industry=plumbing" className="bg-white text-cyan-700 hover:bg-gray-100">
+                  <Link 
+                    href="/contact?industry=plumbing"
+                    className="bg-white text-cyan-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
+                  >
                     Get My Plumber Website Quote
-                  </DarkButton>
-                  <LightButton href="/checkup?industry=plumbing">
+                  </Link>
+                  <Link 
+                    href="/checkup?industry=plumbing"
+                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-700 transition-colors text-center"
+                  >
                     Free Plumbing Website Audit
-                  </LightButton>
+                  </Link>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 text-sm text-blue-200">
@@ -603,12 +607,18 @@ export default function PlumbersPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <DarkButton href="/contact?industry=plumbing" className="bg-white text-cyan-700 hover:bg-gray-100">
+              <Link 
+                href="/contact?industry=plumbing"
+                className="bg-white text-cyan-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
+              >
                 Start My Plumber Website
-              </DarkButton>
-              <LightButton href="/checkup?industry=plumbing">
+              </Link>
+              <Link 
+                href="/checkup?industry=plumbing"
+                className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-700 transition-colors text-center"
+              >
                 Get Free Plumbing Website Audit
-              </LightButton>
+              </Link>
             </div>
 
             <div className="grid sm:grid-cols-4 gap-6 max-w-3xl mx-auto text-sm">
@@ -653,9 +663,12 @@ export default function PlumbersPage() {
             Get a free audit in 30 seconds and discover what's costing you emergency calls.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <DarkButton href="/checkup?industry=plumbing" className="bg-cyan-600 hover:bg-cyan-700">
+            <Link 
+              href="/checkup?industry=plumbing"
+              className="bg-cyan-600 hover:bg-cyan-700 text-white font-bold py-3 px-6 rounded-lg transition-colors text-center"
+            >
               Get Free Audit
-            </DarkButton>
+            </Link>
             <button className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
               No thanks
             </button>
