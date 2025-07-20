@@ -60,6 +60,16 @@ export default function IndustriesPage() {
       avgIncrease: '212%'
     },
     {
+      name: 'Painters',
+      icon: '🎨',
+      href: '/industries/painters',
+      description: 'Clean, professional painter websites that turn brush strokes into booked jobs',
+      features: ['Dynamic Project Galleries', 'Service-Specific Pages', 'Mobile Quote CTAs', 'Local SEO'],
+      available: true,
+      clients: '7',
+      avgIncrease: '143%'
+    },
+    {
       name: 'Construction',
       icon: '🏗️',
       href: '/industries/construction',
