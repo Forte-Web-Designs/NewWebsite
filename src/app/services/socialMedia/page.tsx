@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Link from "next/link";
 import { Icon } from "@/components/images/Icon";
 import LightButton from "@/components/LightButton";
 
@@ -307,6 +308,32 @@ export default function SocialMediaPage() {
           </div>
         </div>
       </section>
+
+      {/* Forte Care™ Promotional Snippet */}
+      <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8 border border-green-200 dark:border-green-700 max-w-4xl mx-auto mt-12 mb-8">
+        <div className="flex items-start gap-6">
+          <div className="flex-shrink-0">
+            <div className="w-16 h-16 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
+              <span className="text-2xl">🏠</span>
+            </div>
+          </div>
+          <div className="flex-1">
+            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+              Your Digital Home Needs Maintenance
+            </h3>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Social media drives traffic to your website, but if your site is slow, outdated, or broken, you'll lose those visitors. Forte Care™ keeps your digital home in perfect condition – ensuring fast loading, fresh content, and seamless user experience so your social media efforts actually convert.
+            </p>
+            <Link
+              href="/solutions/care"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+            >
+              <span>Maintain Your Digital Home</span>
+              <span className="text-sm">→</span>
+            </Link>
+          </div>
+        </div>
+      </div>
 
       {/* Why Social Media Matters Section */}
       <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8">

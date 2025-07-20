@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import LightButton from "@/components/LightButton";
 import DarkButton from "@/components/DarkButton";
 import { Icon } from "@/components/images/Icon";
@@ -395,6 +396,34 @@ export default function SeoDesignPage() {
             </SimpleScrollReveal>
           </div>
         </section>
+
+        {/* Forte Care™ Promotional Snippet */}
+        <SimpleScrollReveal direction="up" delay={650}>
+          <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8 border border-green-200 dark:border-green-700 max-w-4xl mx-auto mt-12 mb-8">
+            <div className="flex items-start gap-6">
+              <div className="flex-shrink-0">
+                <div className="w-16 h-16 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
+                  <span className="text-2xl">🩺</span>
+                </div>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  Your Website's Monthly Checkup
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 mb-4">
+                  Just like you get regular health checkups to catch problems early, your website needs monthly monitoring to stay healthy. Forte Care™ provides ongoing SEO monitoring, performance optimization, and technical maintenance so your rankings stay strong and your site keeps attracting customers.
+                </p>
+                <Link
+                  href="/solutions/care"
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                >
+                  <span>Get Your Website Checkup</span>
+                  <span className="text-sm">→</span>
+                </Link>
+              </div>
+            </div>
+          </div>
+        </SimpleScrollReveal>
 
         {/* Real Client Results - Case Study */}
         <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">

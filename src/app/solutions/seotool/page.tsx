@@ -578,6 +578,167 @@ function SiteCheckUpContent() {
             </div>
           </div>
         </section>
+
+        {/* Trusted by Local Businesses & Forte Care Section */}
+        <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            {/* Social Proof */}
+            <div className="text-center mb-12">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                Trusted by 25+ Local Businesses
+              </h3>
+              <div className="flex justify-center gap-1 mb-4">
+                <span className="text-yellow-400 text-xl">⭐️</span>
+                <span className="text-yellow-400 text-xl">⭐️</span>
+                <span className="text-yellow-400 text-xl">⭐️</span>
+                <span className="text-yellow-400 text-xl">⭐️</span>
+                <span className="text-yellow-400 text-xl">⭐️</span>
+              </div>
+              <blockquote className="text-gray-700 dark:text-gray-300 italic text-lg max-w-3xl mx-auto mb-4">
+                "I had no idea how slow and outdated my old site was. Forte's audit showed me everything I was missing—and then they fixed it better than I expected."
+              </blockquote>
+              <cite className="text-gray-500 dark:text-gray-400 font-medium">
+                — Mike R., ProHome HVAC
+              </cite>
+            </div>
+
+            {/* Forte Care Section */}
+            <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg">
+              <div className="text-center mb-8">
+                <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 px-4 py-2 rounded-full mb-4">
+                  <span className="text-xl">💡</span>
+                  <span className="text-green-800 dark:text-green-200 font-semibold">Keep Your Website Optimized</span>
+                </div>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  Keep Your Website Tuned Like a High-Performance Engine
+                </h2>
+                <p className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto">
+                  Even a great site needs regular tune-ups. Search engines update, competitors improve, and customer expectations shift. That's why we created <strong>Forte Care™</strong>—our ongoing support and optimization service to keep your site running like a well-oiled machine.
+                </p>
+              </div>
+
+              {/* Industry Analogies */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                  <span className="text-2xl">🛠️</span>
+                  Think of Forte Care™ Like This:
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 text-sm">
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">🧰</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Plumbers:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like regular pipe maintenance—preventing slow leaks that cost you money.</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">⚡</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Electricians:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like inspecting your panel—ensuring no circuits are overloaded or burning out.</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">❄️</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">HVAC:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like tuning your AC before summer—don't wait until your system fails.</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">🏥</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Healthcare:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like a monthly checkup—prevention is always cheaper than treatment.</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">🧱</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Construction:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like inspecting your foundation—issues unnoticed now become costly later.</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">🍽️</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Restaurants:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like daily kitchen cleanings—consistency and safety matter.</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">🎨</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Painters:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like doing touch-ups before clients notice peeling—keep your brand sharp.</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">🌳</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Landscapers:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like mowing, trimming, and mulching regularly—curb appeal is everything.</span>
+                    </div>
+                  </div>
+                  <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                    <span className="text-lg flex-shrink-0">🧰</span>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Handyman Services:</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like checking your toolbox—make sure every tool works when you need it.</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Features & Benefits */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
+                  <span className="text-2xl">🔄</span>
+                  With Forte Care™, you get:
+                </h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                    <span className="text-green-500">•</span>
+                    <span>Speed checks and optimization</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                    <span className="text-green-500">•</span>
+                    <span>SSL & security monitoring</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                    <span className="text-green-500">•</span>
+                    <span>Unlimited content edits</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-700 dark:text-gray-300">
+                    <span className="text-green-500">•</span>
+                    <span>Proactive monthly Website Health Reviews</span>
+                  </div>
+                </div>
+              </div>
+
+              {/* Availability & CTA */}
+              <div className="text-center border-t border-gray-200 dark:border-gray-600 pt-6">
+                <div className="flex flex-wrap justify-center items-center gap-4 mb-6 text-sm">
+                  <div className="flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-3 py-2 rounded-full">
+                    <span className="text-green-600">✅</span>
+                    <span className="text-green-800 dark:text-green-200 font-medium">Already included in most plans</span>
+                  </div>
+                  <div className="flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 px-3 py-2 rounded-full">
+                    <span className="text-blue-600">💬</span>
+                    <span className="text-blue-800 dark:text-blue-200 font-medium">Available as an add-on for standalone audits</span>
+                  </div>
+                </div>
+                <a 
+                  href="/solutions/care" 
+                  className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  <span className="text-xl">💻</span>
+                  <span>Learn About Forte Care™</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   );

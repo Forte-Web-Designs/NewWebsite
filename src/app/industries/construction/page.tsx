@@ -558,6 +558,34 @@ export default function ConstructionPage() {
         </div>
       </section>
 
+      {/* Forte Care™ Promotional Snippet */}
+      <SimpleScrollReveal direction="up" delay={800}>
+        <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8 border border-green-200 dark:border-green-700 max-w-4xl mx-auto mt-12 mb-8">
+          <div className="flex items-start gap-6">
+            <div className="flex-shrink-0">
+              <div className="w-16 h-16 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
+                <span className="text-2xl">🏗️</span>
+              </div>
+            </div>
+            <div className="flex-1">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                Like Foundation Inspections for Your Digital Presence
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300 mb-4">
+                You wouldn't skip foundation inspections on a building project, right? Your website needs the same attention to structural integrity. Forte Care™ provides ongoing "digital inspections" – security monitoring, performance checks, and technical maintenance – ensuring your online foundation stays solid and continues bringing in quality leads.
+              </p>
+              <Link
+                href="/solutions/care"
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              >
+                <span>Inspect Your Digital Foundation</span>
+                <span className="text-sm">→</span>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </SimpleScrollReveal>
+
       {/* FAQ Section */}
       <section className="py-16 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

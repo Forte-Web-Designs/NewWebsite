@@ -694,471 +694,215 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Forte Ecosystem Overview */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900/50 dark:to-gray-800/50">
+      {/* Value Proposition Section */}
+      <section className="py-16 md:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-4">
-                🌐 The Complete System
+          {/* Forte Care™ Promotional Snippet */}
+          <SimpleScrollReveal direction="up" delay={400}>
+            <div className="bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-2xl p-8 border border-green-200 dark:border-green-700 max-w-4xl mx-auto mt-12 mb-8">
+              <div className="flex items-start gap-6">
+                <div className="flex-shrink-0">
+                  <div className="w-16 h-16 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">🏁</span>
+                  </div>
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    Your Website's Digital Pit Crew
+                  </h3>
+                  <p className="text-gray-700 dark:text-gray-300 mb-4">
+                    Just like race cars need regular tune-ups to stay competitive, your website needs ongoing optimization to keep winning customers. Forte Care™ is your dedicated pit crew – monitoring performance, making improvements, and keeping you ahead of the competition.
+                  </p>
+                  <Link
+                    href="/solutions/care"
+                    className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+                  >
+                    <span>Learn About Forte Care™</span>
+                    <span className="text-sm">→</span>
+                  </Link>
+                </div>
               </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                The Forte Ecosystem™
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto mb-8">
-                Your entire digital presence, handled by one expert team. No more juggling multiple vendors—everything works together seamlessly.
-              </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="max-w-6xl mx-auto">
-            {/* Ecosystem Flow */}
-            <SimpleScrollReveal direction="up" delay={200}>
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-                <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">1</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Foundation™</h3>
-                  <p className="text-xs text-blue-600 dark:text-blue-400 mb-2">Website Design Package</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Fast, secure website that converts visitors into customers</p>
-                </div>
-                
-                <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">2</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Pro™</h3>
-                  <p className="text-xs text-purple-600 dark:text-purple-400 mb-2">Website Design Package</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Premium support, analytics, and unlimited updates</p>
-                </div>
-                
-                <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">3</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">SEO & PPC</h3>
-                  <p className="text-xs text-green-600 dark:text-green-400 mb-2">SEO Services & Google Ads Packages</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Strategic traffic generation that brings qualified leads</p>
-                </div>
-                
-                <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow">
-                  <div className="w-12 h-12 bg-orange-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-xl font-bold">4</div>
-                  <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Social Media</h3>
-                  <p className="text-xs text-orange-600 dark:text-orange-400 mb-2">Social Media Management Package</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Consistent brand presence and community engagement</p>
-                </div>
-              </div>
-            </SimpleScrollReveal>
-
-            {/* Value Comparison */}
-            <SimpleScrollReveal direction="up" delay={300}>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-                <div className="p-6 bg-red-50 dark:bg-red-900/20 rounded-xl border border-red-200 dark:border-red-800/50">
-                  <h3 className="text-xl font-semibold text-red-600 dark:text-red-400 mb-4 text-center md:text-left">❌ The Old Way (Multiple Vendors)</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm text-center md:text-left">
-                    <li>• Website guy doesn't talk to SEO guy</li>
-                    <li>• PPC ads send traffic to slow pages</li>
-                    <li>• Nobody takes responsibility for results</li>
-                    <li>• Higher costs, constant vendor management</li>
-                  </ul>
-                </div>
-                
-                <div className="p-6 bg-green-50 dark:bg-green-900/20 rounded-xl border border-green-200 dark:border-green-800/50">
-                  <h3 className="text-xl font-semibold text-green-600 dark:text-green-400 mb-4 text-center md:text-left">✅ The Forte Way (One Team)</h3>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400 text-sm text-center md:text-left">
-                    <li>• Everything designed to work together</li>
-                    <li>• PPC ads → optimized landing pages</li>
-                    <li>• One team accountable for your success</li>
-                    <li>• Better results, lower total cost</li>
-                  </ul>
-                </div>
-              </div>
-            </SimpleScrollReveal>
-
-            <SimpleScrollReveal direction="up" delay={400}>
-              <div className="text-center">
-                <p className="text-gray-600 dark:text-gray-400 mb-6 max-w-2xl mx-auto">
-                  Whether you start with just a website or go full ecosystem, we build, optimize, and manage it all—so you can stay focused on your business.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <LightButton href="/ecosystem" className="bg-blue-600 text-white hover:bg-blue-700">
-                    Learn About the Ecosystem
-                  </LightButton>
-                  <LightButton href="/pricing" className="border border-gray-300 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800">
-                    View Pricing
-                  </LightButton>
-                </div>
-              </div>
-            </SimpleScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Stats Section */}
-      <section className="bg-[#FFFFFF] dark:bg-[#000000] py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12 md:mb-16">
-            <div className="inline-flex items-center gap-2 bg-[#F4F4F4] dark:bg-[#101010] px-4 py-2 rounded-full mb-6">
-              <Icon name="star-icon" alt="star-icon" className="w-[18px] h-[18px]" />
-              <p className="font-sans font-normal text-[14px] sm:text-lg text-[#8D9DFF]">
-                Why Businesses Choose Forte Web Designs
-              </p>
+          {/* Pricing Value Proposition */}
+          <div className="text-center mt-12">
+            <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto">
+              <h3 className="text-2xl font-bold mb-4">Why Our Pricing Makes Sense</h3>
+          <div className="grid md:grid-cols-3 gap-6 text-sm">
+            <div>
+              <div className="text-3xl mb-2">🚫</div>
+              <div className="font-semibold">No Huge Upfront Costs</div>
+              <div className="opacity-90">Start growing immediately instead of waiting months to save up $5,000+</div>
             </div>
-            <h2 className="text-[32px] sm:text-[56px] lg:text-[62px] leading-[36px] sm:leading-[56px] lg:leading-[62px] font-medium font-Roboto text-[#000000] dark:text-[#F1F1EF] mb-6">
-              Real Results for Real Businesses
-            </h2>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-            {/* Stats Cards */}
-            <SimpleScrollReveal direction="up" delay={50}>
-              <SimpleAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
-                <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
-                  <div className="text-center">
-                    <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">
-                      <SimpleAnimatedCounter end={100} suffix="%" />
-                    </h3>
-                    <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
-                      Client Satisfaction<br />Guarantee
-                    </p>
-                  </div>
-                </div>
-              </SimpleAnimatedCard>
-            </SimpleScrollReveal>
-
-            <SimpleScrollReveal direction="up" delay={100}>
-              <SimpleAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
-                <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
-                  <div className="text-center">
-                    <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">
-                      <SimpleAnimatedCounter end={25} suffix="+" />
-                    </h3>
-                    <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
-                      Businesses Growing<br />with Forte
-                    </p>
-                  </div>
-                </div>
-              </SimpleAnimatedCard>
-            </SimpleScrollReveal>
-
-            <SimpleScrollReveal direction="up" delay={600}>
-              <SimpleAnimatedCard hoverEffect="glow" className="bg-white dark:bg-[#101010] rounded-xl p-6 sm:p-8 text-center border border-[#E5E5E5] dark:border-[#262626] shadow-sm">
-                <div className="bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,rgba(244,244,244,0.8)_138%)] dark:bg-[radial-gradient(87%_57%_at_48%_18%,#203FFC_-13%,#101010_138%)] rounded-xl p-8 mb-4 min-h-[160px] flex items-center justify-center">
-                  <div className="text-center">
-                    <h3 className="font-roboto font-bold text-[42px] sm:text-[52px] leading-[1] text-white mb-3">
-                      <SimpleAnimatedCounter end={100} suffix="%" />
-                    </h3>
-                    <p className="font-roboto text-[14px] sm:text-[16px] text-white font-medium leading-tight">
-                      U.S.A.-Based Support<br />& Development
-                    </p>
-                  </div>
-                </div>
-              </SimpleAnimatedCard>
-            </SimpleScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* Pricing Storytelling Section */}
-      <section className="bg-gradient-to-br from-slate-50 to-blue-50 dark:from-slate-900 dark:to-blue-900/20 py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                💰 Simple, Transparent Pricing
-              </div>
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
-                Start Your Growth Journey for <span className="text-blue-600">$200/Month</span>
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Why spend $5,000+ upfront when you can start building your success today? Our Foundation™ website design package gets you a professional website that actually works — for the cost of a few dinners out.
-              </p>
+            <div>
+              <div className="text-3xl mb-2">📈</div>
+              <div className="font-semibold">Predictable Investment</div>
+              <div className="opacity-90">Know exactly what you're paying each month with no surprise bills</div>
             </div>
-
-            <div className="grid lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-              {/* Foundation™ Website Design Package - Primary */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border-2 border-blue-500 shadow-xl relative transform hover:scale-105 transition-all duration-300">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <span className="bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-semibold">Most Popular</span>
-                </div>
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Foundation™</h3>
-                  <div className="text-xs font-semibold text-blue-600 bg-blue-50 dark:bg-blue-900/30 px-3 py-1 rounded-full mb-2">Website Design Package</div>
-                  <div className="text-4xl font-bold text-blue-600 mb-2">$200<span className="text-lg text-gray-500">/mo</span></div>
-                  <p className="text-gray-600 dark:text-gray-400">Perfect starting point for serious businesses</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Hand-coded website (no WordPress vulnerabilities)</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Lightning-fast loading (under 2 seconds)</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Mobile-optimized design</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">SSL security & hosting included</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Unlimited edits & support</span>
-                  </li>
-                </ul>
-                <Link href="/pricing#foundation" className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
-                  Start Foundation™
-                </Link>
-              </div>
-
-              {/* Growth Package */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Growth™</h3>
-                  <div className="text-xs font-semibold text-green-600 bg-green-50 dark:bg-green-900/30 px-3 py-1 rounded-full mb-2">Website + SEO Services Bundle</div>
-                  <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">$500<span className="text-lg text-gray-500">/mo</span></div>
-                  <p className="text-gray-600 dark:text-gray-400">Foundation + SEO for visibility</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Everything in Foundation</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Professional SEO optimization</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Google Business setup</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Monthly SEO reports</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Content optimization</span>
-                  </li>
-                </ul>
-                <Link href="/pricing#growth" className="block w-full bg-gray-800 hover:bg-gray-900 dark:bg-gray-700 dark:hover:bg-gray-600 text-white text-center py-3 rounded-lg font-semibold transition-colors">
-                  Choose Growth™
-                </Link>
-              </div>
-
-              {/* Dominate Package */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300">
-                <div className="text-center mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Dominate™</h3>
-                  <div className="text-xs font-semibold text-purple-600 bg-purple-50 dark:bg-purple-900/30 px-3 py-1 rounded-full mb-2">Complete Digital Marketing Bundle</div>
-                  <div className="text-4xl font-bold text-gray-900 dark:text-white mb-2">$1,200<span className="text-lg text-gray-500">/mo</span></div>
-                  <p className="text-gray-600 dark:text-gray-400">Complete digital dominance</p>
-                </div>
-                <ul className="space-y-3 mb-8">
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Everything in Growth</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Google Ads management</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Social media management</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Advanced analytics & reporting</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <span className="text-green-500 text-lg">✓</span>
-                    <span className="text-gray-700 dark:text-gray-300">Priority support & strategy</span>
-                  </li>
-                </ul>
-                <Link href="/pricing#dominate" className="block w-full bg-purple-600 hover:bg-purple-700 text-white text-center py-3 rounded-lg font-semibold transition-colors">
-                  Choose Dominate™
-                </Link>
-              </div>
-            </div>
-
-            {/* Value Proposition */}
-            <div className="text-center mt-12">
-              <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto">
-                <h3 className="text-2xl font-bold mb-4">Why Our Pricing Makes Sense</h3>
-                <div className="grid md:grid-cols-3 gap-6 text-sm">
-                  <div>
-                    <div className="text-3xl mb-2">🚫</div>
-                    <div className="font-semibold">No Huge Upfront Costs</div>
-                    <div className="opacity-90">Start growing immediately instead of waiting months to save up $5,000+</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl mb-2">📈</div>
-                    <div className="font-semibold">Predictable Investment</div>
-                    <div className="opacity-90">Know exactly what you're paying each month with no surprise bills</div>
-                  </div>
-                  <div>
-                    <div className="text-3xl mb-2">🛠️</div>
-                    <div className="font-semibold">Always Current</div>
-                    <div className="opacity-90">Your site stays updated, secure, and optimized as technology evolves</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div className="text-center mt-8">
-              <Link href="/pricing" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                View Complete Pricing Details
-                <span>→</span>
-              </Link>
-              <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
-                100% client satisfaction guarantee • No setup fees • Cancel anytime
-              </p>
-            </div>
-          </SimpleScrollReveal>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="bg-[#FFFFFF] dark:bg-[#000000] py-16 md:py-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="flex justify-center gap-1 mb-4">
-              <Icon name="star-icon" alt="star-icon" className="w-[18px] h-[18px] mt-1" />
-              <p className="font-sans font-normal text-[12px] sm:text-2xl leading-6 tracking-[-0.24px] text-[#8D9DFF]">
-                Proudly a USA Based Company
-              </p>
-            </div>
-            <h4 className="font-roboto font-medium text-[32px] sm:text-[62px] leading-[36px] sm:leading-[62px] tracking-[-1.24px] text-center text-[#000000] dark:text-[#F1F1EF] mb-6">
-              Ready to See What's Possible?
-            </h4>
-            <p className="text-gray-700 font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
-            </p>
-            <div className="flex justify-center">
-              <LightButton href="/contact">Schedule Call</LightButton>
-            </div>
-            <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
-              Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals.
-            </p>
-          </div>
-        </div>      </section>
-
-      {/* Contact Section - Enhanced with Calendly and Map */}
-      <section className="py-12 sm:py-16 md:py-20 relative z-10 px-4 sm:px-6 lg:px-8">
-        <SectionBackgroundAnimation />
-        
-        {/* Trust Bar */}
-        <div className="mb-12 text-center">
-          <div className="py-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg max-w-4xl mx-auto">
-            <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm font-medium text-blue-800 dark:text-blue-200">
-              <div className="flex items-center gap-2">
-                <span className="text-blue-600">🇺🇸</span>
-                USA-based Team
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-blue-600">⚡</span>
-                24-hr Response
-              </div>
-              <div className="flex items-center gap-2">
-                <span className="text-blue-600">✅</span>
-                100% Satisfaction Guarantee
-              </div>
+            <div>
+              <div className="text-3xl mb-2">🛠️</div>
+              <div className="font-semibold">Always Current</div>
+              <div className="opacity-90">Your site stays updated, secure, and optimized as technology evolves</div>
             </div>
           </div>
         </div>
+      </div>
 
-        {/* Hero Section */}
-        <div className="text-center mb-8 sm:mb-12">
-          <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">
-            <Icon name="star" className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
-            Ready to Get Started?
-          </span>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6 max-w-4xl mx-auto">
-            Let's Build Something Amazing Together
-          </h2>
-          <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-            Ready to transform your online presence? Get started with a free 5-point website audit or schedule a strategy call.
+      <div className="text-center mt-8">
+        <Link href="/pricing" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
+          View Complete Pricing Details
+          <span>→</span>
+        </Link>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mt-4">
+          100% client satisfaction guarantee • No setup fees • Cancel anytime
+        </p>
+      </div>
+    </div>
+  </section>
+
+  {/* CTA Section */}
+  <section className="bg-[#FFFFFF] dark:bg-[#000000] py-16 md:py-24">
+    <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="text-center">
+        <div className="flex justify-center gap-1 mb-4">
+          <Icon name="star-icon" alt="star-icon" className="w-[18px] h-[18px] mt-1" />
+          <p className="font-sans font-normal text-[12px] sm:text-2xl leading-6 tracking-[-0.24px] text-[#8D9DFF]">
+            Proudly a USA Based Company
           </p>
         </div>
+        <h4 className="font-roboto font-medium text-[32px] sm:text-[62px] leading-[36px] sm:leading-[62px] tracking-[-1.24px] text-center text-[#000000] dark:text-[#F1F1EF] mb-6">
+          Ready to See What's Possible?
+        </h4>
+        <p className="text-gray-700 font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+          Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
+        </p>
+        <div className="flex justify-center">
+          <LightButton href="/contact">Schedule Call</LightButton>
+        </div>
+        <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
+          Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals.
+        </p>
+      </div>
+    </div>      </section>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
-          {/* Contact Form */}
-          <div>
-            <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div></div>}>
-              <ContactForm />
+    {/* Contact Section - Enhanced with Calendly and Map */}
+    <section className="py-12 sm:py-16 md:py-20 relative z-10 px-4 sm:px-6 lg:px-8">
+      <SectionBackgroundAnimation />
+      
+      {/* Trust Bar */}
+      <div className="mb-12 text-center">
+        <div className="py-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg max-w-4xl mx-auto">
+          <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm font-medium text-blue-800 dark:text-blue-200">
+            <div className="flex items-center gap-2">
+              <span className="text-blue-600">🇺🇸</span>
+              USA-based Team
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-blue-600">⚡</span>
+              24-hr Response
+            </div>
+            <div className="flex items-center gap-2">
+              <span className="text-blue-600">✅</span>
+              100% Satisfaction Guarantee
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Hero Section */}
+      <div className="text-center mb-8 sm:mb-12">
+        <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">
+          <Icon name="star" className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
+          Ready to Get Started?
+        </span>
+        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6 max-w-4xl mx-auto">
+          Let's Build Something Amazing Together
+        </h2>
+        <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
+          Ready to transform your online presence? Get started with a free 5-point website audit or schedule a strategy call.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
+        {/* Contact Form */}
+        <div>
+          <Suspense fallback={<div className="min-h-[400px] flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600"></div></div>}>
+            <ContactForm />
+          </Suspense>
+        </div>
+
+        {/* Booking Widget & Engaging Map */}
+        <div className="space-y-8">
+          {/* Calendly Booking Widget */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
+            <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+              Prefer to Schedule a Call?
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-6">
+              Book a free 30-minute strategy session to discuss your project and see if we're a good fit.
+            </p>
+            <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+              <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
             </Suspense>
           </div>
 
-          {/* Booking Widget & Engaging Map */}
-          <div className="space-y-8">
-            {/* Calendly Booking Widget */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Prefer to Schedule a Call?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Book a free 30-minute strategy session to discuss your project and see if we're a good fit.
-              </p>
-              <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
-                <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
-              </Suspense>
-            </div>
-
-            {/* Interactive Location Map */}
-            <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">📍</span>
-                </div>
-                <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
-                    Dallas-Fort Worth Based
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    Proudly serving businesses throughout Texas and nationwide with cutting-edge web solutions.
-                  </p>
+          {/* Interactive Location Map */}
+          <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center flex-shrink-0">
+                <span className="text-2xl">📍</span>
+              </div>
+              <div className="flex-1">
+                <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
+                  Dallas-Fort Worth Based
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                  Proudly serving businesses throughout Texas and nationwide with cutting-edge web solutions.
+                </p>
+                
+                {/* Interactive Google Map */}
+                <div className="relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-600" style={{height: '300px'}}>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429516.5330124774!2d-97.0945249!3d32.8206721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                    width="100%"
+                    height="100%"
+                    style={{border: 0}}
+                    allowFullScreen
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                    title="Dallas, Texas Location"
+                  ></iframe>
                   
-                  {/* Interactive Google Map */}
-                  <div className="relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-600" style={{height: '300px'}}>
-                    <iframe
-                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429516.5330124774!2d-97.0945249!3d32.8206721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-                      width="100%"
-                      height="100%"
-                      style={{border: 0}}
-                      allowFullScreen
-                      loading="lazy"
-                      referrerPolicy="no-referrer-when-downgrade"
-                      title="Dallas, Texas Location"
-                    ></iframe>
-                    
-                    {/* Tech overlay effect */}
-                    <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none"></div>
-                    
-                    {/* Floating tech elements */}
-                    <div className="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-300 shadow-lg">
-                      🚀 Serving DFW & Beyond
-                    </div>
+                  {/* Tech overlay effect */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none"></div>
+                  
+                  {/* Floating tech elements */}
+                  <div className="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-300 shadow-lg">
+                    🚀 Serving DFW & Beyond
                   </div>
-                  
-                  {/* Tech stats */}
-                  <div className="mt-4 grid grid-cols-3 gap-4 text-center">
-                    <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
-                      <div className="text-lg font-bold text-blue-600 dark:text-blue-400">20+</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Businesses</div>
-                    </div>
-                    <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
-                      <div className="text-lg font-bold text-green-600 dark:text-green-400">24hr</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Response Time</div>
-                    </div>
-                    <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
-                      <div className="text-lg font-bold text-purple-600 dark:text-purple-400">5★</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Client Rating</div>
-                    </div>
+                </div>
+                
+                {/* Tech stats */}
+                <div className="mt-4 grid grid-cols-3 gap-4 text-center">
+                  <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
+                    <div className="text-lg font-bold text-blue-600 dark:text-blue-400">20+</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Businesses</div>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
+                    <div className="text-lg font-bold text-green-600 dark:text-green-400">24hr</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Response Time</div>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
+                    <div className="text-lg font-bold text-purple-600 dark:text-purple-400">5★</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Client Rating</div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
       </section>
     </>
   );
