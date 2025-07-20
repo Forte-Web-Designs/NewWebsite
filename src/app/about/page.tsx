@@ -117,7 +117,7 @@ export default function AboutUs() {
                 Websites That Actually <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Fit Your Business</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                We don't build generic sites for "everyone." At Forte Web Designs, we specialize in crafting websites with purpose—tailored to your specific industry, your customers, and your growth goals.
+                We don't build generic sites for "everyone." Forte Web Designs specializes in crafting websites with purpose—tailored to your specific industry, your customers, and your growth goals.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -152,13 +152,10 @@ export default function AboutUs() {
                     Your business is unique. Your website should be, too.
                   </p>
                   <p>
-                    At Forte, we design with intention. We take time to understand your market, your audience, and how people actually buy from businesses like yours. Then we hand-build a site that's fast, secure, easy to update, and built to perform—not just at launch, but for years to come.
+                    Forte Web Designs designs with intention. We take time to understand your market, your audience, and how people actually buy from businesses like yours. Then we hand-build a site that's fast, secure, easy to update, and built to perform—not just at launch, but for years to come.
                   </p>
                   <p>
                     You'll never be left guessing. You'll never feel like a number. And you'll always know your website was built with your success in mind.
-                  </p>
-                  <p className="text-xl font-semibold text-gray-900 dark:text-white">
-                    — Seth
                   </p>
                 </div>
               </SimpleScrollReveal>
