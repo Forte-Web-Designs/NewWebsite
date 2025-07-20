@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import { OptimizedImage } from '@/components/images/OptimizedImage';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 
@@ -167,10 +168,22 @@ export default function AboutUs() {
                   <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 p-8">
                     <div className="flex items-center justify-center h-full">
                       <div className="text-center">
-                        <div className="w-32 h-32 mx-auto bg-gradient-to-br from-blue-500 to-purple-600 rounded-full flex items-center justify-center mb-4">
-                          <span className="text-white text-4xl font-bold">S</span>
+                        <div className="relative w-32 h-32 mx-auto mb-4">
+                          <div className="w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-br from-blue-500 to-purple-600 shadow-lg">
+                            <OptimizedImage
+                              src="/images/about/headshot.jpg"
+                              alt="Seth, Founder of Forte Web Designs"
+                              width={128}
+                              height={128}
+                              className="w-full h-full object-cover"
+                              priority={true}
+                              sizes="128px"
+                            />
+                          </div>
+                          {/* Gradient border effect */}
+                          <div className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-purple-600 -z-10"></div>
                         </div>
-                        <p className="text-gray-600 dark:text-gray-300 text-lg">Seth, Founder</p>
+                        <p className="text-gray-600 dark:text-gray-300 text-lg font-medium">Seth, Founder</p>
                         <p className="text-gray-500 dark:text-gray-400">Forte Web Designs</p>
                       </div>
                     </div>
