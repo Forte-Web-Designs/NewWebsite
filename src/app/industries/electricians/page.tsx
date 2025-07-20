@@ -194,31 +194,31 @@ export default function ElectriciansPage() {
     <div className="min-h-screen">
       <ScrollToTop />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-yellow-600 via-orange-600 to-yellow-700 text-white py-20 md:py-28">
+      <section className="bg-gradient-to-br from-sky-700 via-blue-600 to-slate-700 text-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SimpleScrollReveal direction="left" delay={100}>
               <div>
-                <div className="inline-flex items-center gap-2 bg-yellow-600/50 text-yellow-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <div className="inline-flex items-center gap-2 bg-sky-600/50 text-sky-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   ⚡ Specializing in Electrical Contractor Websites
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  Electrician Websites That <span className="text-yellow-300">Power Up</span> Your Lead Generation
+                  Electrician Websites That <span className="text-sky-300">Power Up</span> Your Lead Generation
                 </h1>
-                <p className="text-xl text-yellow-100 mb-8 leading-relaxed">
+                <p className="text-xl text-sky-100 mb-8 leading-relaxed">
                   We don't build just "pretty" websites. We build high-converting, mobile-first electrician websites that capture every emergency service call, showcase safety credentials, and dominate local search for electrical contractors.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link 
                     href="/contact?industry=electrician"
-                    className="bg-white text-yellow-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
+                    className="bg-white text-sky-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
                   >
                     Get My Electrician Website
                   </Link>
                   <Link 
                     href="/pricing"
-                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-yellow-700 transition-colors text-center"
+                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-sky-700 transition-colors text-center"
                   >
                     View Pricing
                   </Link>
@@ -228,7 +228,7 @@ export default function ElectriciansPage() {
                   {successMetrics.map((metric, index) => (
                     <div key={index} className="text-center">
                       <div className="text-2xl font-bold mb-1">{metric.metric}</div>
-                      <div className="text-yellow-200">{metric.description}</div>
+                      <div className="text-sky-200">{metric.description}</div>
                     </div>
                   ))}
                 </div>
@@ -237,13 +237,13 @@ export default function ElectriciansPage() {
 
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 lg:p-8 shadow-2xl border-2 border-yellow-100">
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-6 lg:p-8 shadow-2xl border-2 border-sky-100">
                   {/* Header */}
-                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-yellow-600 to-orange-600 rounded-xl text-white">
+                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-sky-600 to-blue-600 rounded-xl text-white">
                     <span className="text-3xl">⚡</span>
                     <div>
                       <h3 className="text-white text-xl font-bold">POWERMAX ELECTRIC CO</h3>
-                      <p className="text-yellow-100 text-sm font-semibold">🛡️ Licensed & Insured ⚡</p>
+                      <p className="text-sky-100 text-sm font-semibold">🛡️ Licensed & Insured ⚡</p>
                     </div>
                   </div>
                   
@@ -287,7 +287,7 @@ export default function ElectriciansPage() {
                     </div>
                     <div className="text-gray-700 font-semibold">4.9/5 Stars</div>
                     <div className="text-gray-600 text-sm">(143 Google Reviews)</div>
-                    <div className="text-yellow-600 text-sm font-medium mt-1">⚡ Master Electrician Licensed</div>
+                    <div className="text-sky-600 text-sm font-medium mt-1">⚡ Master Electrician Licensed</div>
                   </div>
                 </div>
                 
@@ -361,14 +361,14 @@ export default function ElectriciansPage() {
 
           <div className="max-w-4xl mx-auto">
             <SimpleAnimatedCard>
-              <div className="bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20 rounded-2xl p-8 lg:p-12 shadow-lg">
+              <div className="bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-900/20 dark:to-blue-900/20 rounded-2xl p-8 lg:p-12 shadow-lg">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-yellow-500 to-orange-500 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-sky-500 to-blue-500 rounded-full flex items-center justify-center">
                     <span className="text-2xl text-white">⚡</span>
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Precision Power Techs</h3>
-                    <p className="text-yellow-600 dark:text-yellow-400 font-semibold">Austin, Texas • Licensed Electrical Contractor</p>
+                    <p className="text-sky-600 dark:text-sky-400 font-semibold">Austin, Texas • Licensed Electrical Contractor</p>
                   </div>
                 </div>
                 
@@ -378,7 +378,7 @@ export default function ElectriciansPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">59%</div>
+                    <div className="text-4xl font-bold text-sky-600 dark:text-sky-400 mb-2">59%</div>
                     <div className="text-gray-600 dark:text-gray-400">More Mobile Leads</div>
                     <div className="text-sm text-gray-500 dark:text-gray-500 mt-1">in 60 days</div>
                   </div>
@@ -396,7 +396,7 @@ export default function ElectriciansPage() {
 
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                    <span className="text-yellow-500">⚡</span>
+                    <span className="text-sky-500">⚡</span>
                     What We Delivered for Precision Power Techs:
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -435,15 +435,14 @@ export default function ElectriciansPage() {
       {/* Electrician-Specific Features */}
       <section className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Everything Your Electrician Website Needs to <span className="text-yellow-600">Convert Emergency Calls</span>
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Every electrician website we build includes these conversion-focused features designed specifically for the electrical services industry.
-              </p>
-            </div>
+          <SimpleScrollReveal direction="up" delay={100}>              <div className="text-center mb-16">
+                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  Everything Your Electrician Website Needs to <span className="text-sky-600">Convert Emergency Calls</span>
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+                  Every electrician website we build includes these conversion-focused features designed specifically for the electrical services industry.
+                </p>
+              </div>
           </SimpleScrollReveal>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -484,7 +483,7 @@ export default function ElectriciansPage() {
                 <div className="grid grid-cols-3 gap-4 p-6 bg-gray-100 dark:bg-gray-700">
                   <div className="font-semibold text-gray-900 dark:text-white">Feature</div>
                   <div className="font-semibold text-gray-900 dark:text-white text-center">Typical Electrician Sites</div>
-                  <div className="font-semibold text-yellow-600 dark:text-yellow-400 text-center">Forte Electrician Sites</div>
+                  <div className="font-semibold text-sky-600 dark:text-sky-400 text-center">Forte Electrician Sites</div>
                 </div>
                 
                 {comparisonFeatures.map((item, index) => (
@@ -513,7 +512,7 @@ export default function ElectriciansPage() {
       </section>
 
       {/* Case Study */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-yellow-50 to-orange-50 dark:from-yellow-900/20 dark:to-orange-900/20">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-sky-50 to-blue-50 dark:from-sky-900/20 dark:to-blue-900/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal>
             <div className="text-center mb-12">
@@ -532,7 +531,7 @@ export default function ElectriciansPage() {
                 <div className="grid lg:grid-cols-2 gap-0">
                   <div className="p-8 lg:p-12">
                     <div className="mb-6">
-                      <div className="inline-flex items-center gap-2 bg-yellow-100 dark:bg-yellow-900/40 text-yellow-800 dark:text-yellow-200 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                      <div className="inline-flex items-center gap-2 bg-sky-100 dark:bg-sky-900/40 text-sky-800 dark:text-sky-200 px-3 py-1 rounded-full text-sm font-medium mb-4">
                         Case Study
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
@@ -621,7 +620,7 @@ export default function ElectriciansPage() {
               {clientCompanies.map((company, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-3">
-                    <div className="w-12 h-12 bg-yellow-100 dark:bg-yellow-900/40 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <div className="w-12 h-12 bg-sky-100 dark:bg-sky-900/40 rounded-full flex items-center justify-center mx-auto mb-3">
                       <span className="text-xl">⚡</span>
                     </div>
                     <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
@@ -667,32 +666,32 @@ export default function ElectriciansPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-yellow-600 to-orange-600 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-sky-600 to-blue-600 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <SimpleScrollReveal>
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Power Up Your Lead Generation & Capture More Service Calls?
             </h2>
-            <p className="text-xl text-yellow-100 mb-8 max-w-3xl mx-auto">
+            <p className="text-xl text-sky-100 mb-8 max-w-3xl mx-auto">
               Join successful electrical contractors across Texas who trust Forte with mobile-first websites that convert emergency calls into paying customers. No contracts, no hassles—just results.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link 
                 href="/contact?industry=electrician"
-                className="bg-white text-yellow-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
+                className="bg-white text-sky-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
               >
                 Get My Electrician Website
               </Link>
               <Link 
                 href="tel:8178736655"
-                className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-yellow-700 transition-colors text-lg"
+                className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-sky-700 transition-colors text-lg"
               >
                 Call (817) 873-6655
               </Link>
             </div>
             
-            <p className="text-sm text-yellow-200 mt-4">
+            <p className="text-sm text-sky-200 mt-4">
               💡 Free consultation • Live in 7-10 days • No long-term contracts
             </p>
           </SimpleScrollReveal>

@@ -119,48 +119,48 @@ export default function ConstructionPage() {
     <div className="min-h-screen bg-white dark:bg-gray-900">
       <ScrollToTop />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-orange-700 via-orange-600 to-red-700 text-white py-12 sm:py-16 md:py-20 lg:py-28">
+      <section className="bg-gradient-to-br from-slate-700 via-gray-700 to-slate-800 text-white py-12 sm:py-16 md:py-20 lg:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             <SimpleScrollReveal direction="left" delay={100}>
               <div className="text-center lg:text-left">
-                <div className="inline-flex items-center gap-2 bg-orange-600/50 text-orange-200 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
+                <div className="inline-flex items-center gap-2 bg-slate-600/50 text-slate-200 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
                   🏗️ Industry Expertise: Construction
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                  Construction Websites Built to <span className="text-orange-300">Win Bids</span> and <span className="text-orange-300">Build Trust</span>
+                  Construction Websites Built to <span className="text-slate-300">Win Bids</span> and <span className="text-slate-300">Build Trust</span>
                 </h1>
-                <p className="text-lg sm:text-xl text-orange-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
+                <p className="text-lg sm:text-xl text-slate-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
                   In construction, reputation and clarity win projects. Your website should act like your best foreman: organized, authoritative, and ready to close the deal. At Forte, we design custom-coded sites for construction companies that turn browsers into buyers—and estimates into jobs.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
                   <Link 
                     href="/contact?industry=construction"
-                    className="bg-white text-orange-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
+                    className="bg-white text-slate-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
                   >
                     Get My Construction Website Quote
                   </Link>
                   <Link 
                     href="/checkup"
-                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-700 transition-colors text-center"
+                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-slate-700 transition-colors text-center"
                   >
                     Free Website Audit for Contractors
                   </Link>
                 </div>
 
                 <div className="mb-8">
-                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-orange-200">
+                  <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-slate-200">
                     <div className="flex items-center gap-2">
                       <span className="text-green-400">✅</span>
                       <span>Mobile-Optimized</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-orange-300">🛠️</span>
+                      <span className="text-slate-300">🛠️</span>
                       <span>Quote-Ready</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-orange-300">📍</span>
+                      <span className="text-slate-300">📍</span>
                       <span>Local SEO-Enhanced</span>
                     </div>
                   </div>
@@ -170,13 +170,13 @@ export default function ConstructionPage() {
 
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative mt-8 lg:mt-0">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl border-2 border-orange-100 max-w-lg mx-auto">
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl border-2 border-slate-100 max-w-lg mx-auto">
                   {/* Header */}
-                  <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 p-3 sm:p-4 bg-gradient-to-r from-orange-600 to-red-600 rounded-xl text-white">
+                  <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 p-3 sm:p-4 bg-gradient-to-r from-slate-600 to-gray-600 rounded-xl text-white">
                     <span className="text-2xl sm:text-3xl">🏗️</span>
                     <div className="min-w-0 flex-1">
                       <h3 className="text-white text-lg sm:text-xl font-bold truncate">PREMIER CONSTRUCTION</h3>
-                      <p className="text-orange-100 text-xs sm:text-sm font-semibold">🏆 Building Excellence Since 1995 🏆</p>
+                      <p className="text-slate-100 text-xs sm:text-sm font-semibold">🏆 Building Excellence Since 1995 🏆</p>
                     </div>
                   </div>
                   
@@ -203,24 +203,24 @@ export default function ConstructionPage() {
                   </div>
 
                   {/* Portfolio Preview */}
-                  <div className="mb-3 sm:mb-4 bg-gradient-to-r from-orange-100 to-red-100 p-3 sm:p-4 rounded-lg">
+                  <div className="mb-3 sm:mb-4 bg-gradient-to-r from-slate-100 to-gray-100 p-3 sm:p-4 rounded-lg">
                     <div className="grid grid-cols-2 gap-2">
-                      <div className="bg-orange-200 rounded h-12 sm:h-16 flex items-center justify-center text-orange-700 font-bold text-xs">
+                      <div className="bg-slate-200 rounded h-12 sm:h-16 flex items-center justify-center text-slate-700 font-bold text-xs">
                         🏘️ Recent Projects
                       </div>
-                      <div className="bg-red-200 rounded h-12 sm:h-16 flex items-center justify-center text-red-700 font-bold text-xs">
+                      <div className="bg-gray-200 rounded h-12 sm:h-16 flex items-center justify-center text-gray-700 font-bold text-xs">
                         📋 Testimonials
                       </div>
                     </div>
                   </div>
 
                   {/* Call button */}
-                  <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white text-center py-3 sm:py-4 rounded-xl mb-3 sm:mb-4 shadow-lg transform hover:scale-105 transition-transform">
+                  <div className="bg-gradient-to-r from-slate-500 to-slate-600 text-white text-center py-3 sm:py-4 rounded-xl mb-3 sm:mb-4 shadow-lg transform hover:scale-105 transition-transform">
                     <div className="flex items-center justify-center gap-2 sm:gap-3">
                       <span className="text-xl sm:text-2xl">📞</span>
                       <div>
                         <div className="font-bold text-base sm:text-lg">Call (555) BUILD-IT</div>
-                        <div className="text-orange-100 text-xs sm:text-sm">Free Project Estimate!</div>
+                        <div className="text-slate-100 text-xs sm:text-sm">Free Project Estimate!</div>
                       </div>
                     </div>
                   </div>
@@ -232,12 +232,12 @@ export default function ConstructionPage() {
                     </div>
                     <div className="text-gray-700 font-semibold text-sm sm:text-base">4.9/5 Stars</div>
                     <div className="text-gray-600 text-xs sm:text-sm">(89 Google Reviews)</div>
-                    <div className="text-orange-600 text-xs sm:text-sm font-medium mt-1">🏗️ Licensed & Bonded</div>
+                    <div className="text-slate-600 text-xs sm:text-sm font-medium mt-1">🏗️ Licensed & Bonded</div>
                   </div>
                 </div>
                 
                 {/* Floating elements */}
-                <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-gradient-to-r from-orange-500 to-orange-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg animate-pulse">
+                <div className="absolute -top-2 sm:-top-4 -right-2 sm:-right-4 bg-gradient-to-r from-slate-500 to-slate-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg animate-pulse">
                   ✅ 28+ Years Experience
                 </div>
                 <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-gradient-to-r from-blue-500 to-blue-600 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg">
@@ -339,7 +339,7 @@ export default function ConstructionPage() {
             </div>
 
             <div className="mt-12 text-center">
-              <div className="bg-gradient-to-r from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 rounded-xl p-6">
+              <div className="bg-gradient-to-r from-slate-50 to-gray-50 dark:from-slate-900/20 dark:to-gray-900/20 rounded-xl p-6">
                 <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Optional Add-ons:</h4>
                 <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-600 dark:text-gray-400">
                   <span className="bg-white dark:bg-gray-800 px-3 py-1 rounded-full">OSHA certifications</span>
@@ -353,7 +353,7 @@ export default function ConstructionPage() {
       </section>
 
       {/* Case Study Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-slate-50 to-gray-50 dark:from-slate-900/20 dark:to-gray-900/20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
@@ -370,12 +370,12 @@ export default function ConstructionPage() {
             <SimpleAnimatedCard>
               <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 lg:p-12 shadow-lg">
                 <div className="flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-full flex items-center justify-center">
+                  <div className="w-16 h-16 bg-gradient-to-br from-slate-500 to-gray-500 rounded-full flex items-center justify-center">
                     <span className="text-2xl text-white">🏗️</span>
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white">SouthCore Contracting</h3>
-                    <p className="text-orange-600 dark:text-orange-400 font-semibold">Albuquerque, NM • Commercial Builder</p>
+                    <p className="text-slate-600 dark:text-slate-400 font-semibold">Albuquerque, NM • Commercial Builder</p>
                   </div>
                 </div>
                 
@@ -385,7 +385,7 @@ export default function ConstructionPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">2.6x</div>
+                    <div className="text-4xl font-bold text-slate-600 dark:text-slate-400 mb-2">2.6x</div>
                     <div className="text-gray-600 dark:text-gray-400">More Commercial Bid Requests</div>
                   </div>
                   <div className="text-center">
@@ -404,7 +404,7 @@ export default function ConstructionPage() {
 
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-                    <span className="text-orange-500">🏗️</span>
+                    <span className="text-slate-500">🏗️</span>
                     What We Did:
                   </h4>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -490,7 +490,7 @@ export default function ConstructionPage() {
                   <div className="font-semibold text-gray-900 dark:text-white">Feature</div>
                   <div className="font-semibold text-gray-900 dark:text-white text-center">Template Site Builders</div>
                   <div className="font-semibold text-gray-900 dark:text-white text-center">Local Marketing Agency</div>
-                  <div className="font-semibold text-orange-600 dark:text-orange-400 text-center">Forte Web Designs</div>
+                  <div className="font-semibold text-slate-600 dark:text-slate-400 text-center">Forte Web Designs</div>
                 </div>
                 
                 {comparisonFeatures.map((item, index) => (
@@ -544,9 +544,9 @@ export default function ConstructionPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {clientCompanies.map((company, index) => (
               <SimpleAnimatedCard key={index}>
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center hover:bg-orange-50 dark:hover:bg-orange-900/20 transition-colors">
-                  <div className="w-12 h-12 bg-orange-100 dark:bg-orange-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Icon name="star" className="w-6 h-6 text-orange-600 dark:text-orange-400" />
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center hover:bg-slate-50 dark:hover:bg-slate-900/20 transition-colors">
+                  <div className="w-12 h-12 bg-slate-100 dark:bg-slate-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <Icon name="star" className="w-6 h-6 text-slate-600 dark:text-slate-400" />
                   </div>
                   <h3 className="font-semibold text-gray-900 dark:text-white text-sm">
                     {company.name}
@@ -590,33 +590,33 @@ export default function ConstructionPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-orange-600 to-red-700 text-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-slate-600 to-gray-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 Ready to Build Your Online Presence?
               </h2>
-              <p className="text-xl mb-8 text-orange-100">
+              <p className="text-xl mb-8 text-slate-100">
                 Join the contractors, remodelers, and builders who trust Forte to deliver websites that convert.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link 
                   href="/contact?industry=construction"
-                  className="bg-white text-orange-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
+                  className="bg-white text-slate-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get My Construction Website Quote
                 </Link>
                 <Link 
                   href="/checkup"
-                  className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-600 transition-colors text-lg"
+                  className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-slate-600 transition-colors text-lg"
                 >
                   Free Contractor Website Audit
                 </Link>
               </div>
               
-              <p className="text-sm text-orange-200 mt-4">
+              <p className="text-sm text-slate-200 mt-4">
                 💡 Free consultation • Live in 7-10 days • No long-term contracts
               </p>
             </div>
