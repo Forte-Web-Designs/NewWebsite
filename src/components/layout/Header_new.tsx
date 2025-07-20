@@ -129,6 +129,8 @@ export default function Header() {
     { label: 'Restaurant Websites', href: '/industries/restaurants' },
     { label: 'Healthcare Websites', href: '/industries/healthcare' },
     { label: 'Landscaper Websites', href: '/industries/landscapers' },
+    { label: 'Handyman Services', href: '/industries/handyman' },
+    { label: 'Painter Websites', href: '/industries/painters' },
     { label: 'Construction Websites', href: '/industries/construction' },
     { label: 'HVAC Websites', href: '/industries/hvac' },
     { label: 'Electrician Websites', href: '/industries/electricians' },
