@@ -583,7 +583,7 @@ export default function SocialMediaPage() {
           </LightButton>
           
           <p className="text-sm mt-4 opacity-75">
-            Add to any Forte™ website package • No long-term contracts • Cancel anytime
+            Add to any Forte™ website package • Cancel anytime
           </p>
         </div>
       </section>

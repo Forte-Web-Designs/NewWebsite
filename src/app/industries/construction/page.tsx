@@ -617,7 +617,7 @@ export default function ConstructionPage() {
               </div>
               
               <p className="text-sm text-slate-200 mt-4">
-                💡 Free consultation • Live in 7-10 days • No long-term contracts
+                💡 Free consultation • Live in 7-10 days
               </p>
             </div>
           </SimpleScrollReveal>

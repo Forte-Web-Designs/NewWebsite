@@ -524,7 +524,7 @@ export default function HandymanPage() {
               </div>
               
               <p className="text-sm text-amber-200 mt-4">
-                💡 Free consultation • Live in 7-10 days • No long-term contracts
+                💡 Free consultation • Live in 7-10 days
               </p>
             </div>
           </SimpleScrollReveal>

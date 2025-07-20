@@ -673,7 +673,7 @@ export default function ElectriciansPage() {
               Ready to Power Up Your Lead Generation & Capture More Service Calls?
             </h2>
             <p className="text-xl text-sky-100 mb-8 max-w-3xl mx-auto">
-              Join successful electrical contractors across Texas who trust Forte with mobile-first websites that convert emergency calls into paying customers. No contracts, no hassles—just results.
+              Join successful electrical contractors across Texas who trust Forte with mobile-first websites that convert emergency calls into paying customers. Professional results you can count on.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -692,7 +692,7 @@ export default function ElectriciansPage() {
             </div>
             
             <p className="text-sm text-sky-200 mt-4">
-              💡 Free consultation • Live in 7-10 days • No long-term contracts
+              💡 Free consultation • Live in 7-10 days
             </p>
           </SimpleScrollReveal>
         </div>

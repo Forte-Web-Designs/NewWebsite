@@ -193,23 +193,23 @@ export default function PlumbersPage() {
     <div className="min-h-screen">
       <ScrollToTop />
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white py-20 md:py-28">
+      <section className="bg-gradient-to-br from-blue-600 via-cyan-600 to-blue-700 text-white py-20 md:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <SimpleScrollReveal direction="left" delay={100}>
               <div>
-                <div className="inline-flex items-center gap-2 bg-blue-800/50 text-blue-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
+                <div className="inline-flex items-center gap-2 bg-blue-600/50 text-blue-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
                   🔧 Industry Expertise: Plumbing
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Plumber Websites That Convert <span className="text-blue-300">Emergency Calls Into Customers</span>
+                  Plumber Websites That Convert <span className="text-cyan-300">Emergency Calls Into Customers</span>
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
                   We don't build just "pretty" websites. We build high-converting, mobile-first plumber websites that capture emergency leads, build trust instantly, and dominate local search.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <DarkButton href="/contact?industry=plumbing" className="bg-orange-600 hover:bg-orange-700">
+                  <DarkButton href="/contact?industry=plumbing" className="bg-white text-cyan-700 hover:bg-gray-100">
                     Get My Plumber Website Quote
                   </DarkButton>
                   <LightButton href="/checkup?industry=plumbing">
@@ -236,13 +236,13 @@ export default function PlumbersPage() {
 
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-2xl border-2 border-blue-100">
+                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-2xl border-2 border-cyan-100">
                   {/* Header with animated pulse */}
-                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl text-white">
+                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl text-white">
                     <span className="text-3xl animate-pulse">🚨</span>
                     <div>
-                      <h3 className="text-white text-xl font-bold">EMERGENCY PLUMBING</h3>
-                      <p className="text-red-100 text-sm font-semibold">⚡ 24/7 Same-Day Service ⚡</p>
+                      <h3 className="text-white text-xl font-bold">RAPID PLUMBING PROS</h3>
+                      <p className="text-cyan-100 text-sm font-semibold">💧 24/7 Emergency Service 💧</p>
                     </div>
                   </div>
                   
@@ -286,7 +286,7 @@ export default function PlumbersPage() {
                     </div>
                     <div className="text-gray-700 font-semibold">4.9/5 Stars</div>
                     <div className="text-gray-600 text-sm">(247 Google Reviews)</div>
-                    <div className="text-blue-600 text-sm font-medium mt-1">💯 Licensed & Insured</div>
+                    <div className="text-cyan-600 text-sm font-medium mt-1">💯 Licensed & Insured</div>
                   </div>
                 </div>
                 
@@ -330,7 +330,7 @@ export default function PlumbersPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Why Forte &gt; <span className="text-blue-600">Typical Designers</span>
+                Why Forte &gt; <span className="text-cyan-600">Typical Designers</span>
               </h2>
               <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Most agencies design for everyone. We design for you. Our plumbing clients convert 2–3x more local leads because their website speaks directly to plumbing customers.
@@ -362,10 +362,10 @@ export default function PlumbersPage() {
           </div>
 
           {/* Success Metrics */}
-          <div className="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
+          <div className="bg-gradient-to-r from-blue-600 to-cyan-700 rounded-2xl p-8 text-white">
             <div className="text-center mb-8">
               <h3 className="text-2xl font-bold mb-2">Proven Results for Plumbing Companies</h3>
-              <p className="text-blue-100">Real metrics from our plumbing clients in the first 6 months</p>
+              <p className="text-cyan-100">Real metrics from our plumbing clients in the first 6 months</p>
             </div>
             
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -373,7 +373,7 @@ export default function PlumbersPage() {
                 <div key={index} className="text-center">
                   <div className="text-3xl mb-2">{metric.icon}</div>
                   <div className="text-3xl font-bold mb-1">{metric.metric}</div>
-                  <div className="text-sm text-blue-100">{metric.description}</div>
+                  <div className="text-sm text-cyan-100">{metric.description}</div>
                 </div>
               ))}
             </div>
@@ -387,7 +387,7 @@ export default function PlumbersPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Why Forte vs. <span className="text-blue-600">Other Web Designers</span>
+                Why Forte vs. <span className="text-cyan-600">Other Web Designers</span>
               </h2>
               <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Most web designers build pretty websites. We build websites that book more plumbing jobs.
@@ -435,7 +435,7 @@ export default function PlumbersPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Essential Features for <span className="text-blue-600">Plumber Websites</span>
+                Essential Features for <span className="text-cyan-600">Plumber Websites</span>
               </h2>
               <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Every plumbing website we build includes these conversion-focused features designed specifically for the plumbing industry.
@@ -514,7 +514,7 @@ export default function PlumbersPage() {
                     — Owner, High Desert Plumbing Co.
                   </p>
                 </div>
-                <Link href="/case-studies" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-700 font-semibold">
+                <Link href="/case-studies" className="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 font-semibold">
                   View Full Case Study
                   <span>→</span>
                 </Link>
@@ -529,7 +529,7 @@ export default function PlumbersPage() {
                 </div>
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center">
-                    <div className="text-3xl font-bold text-blue-600 mb-1">43%</div>
+                    <div className="text-3xl font-bold text-cyan-600 mb-1">43%</div>
                     <div className="text-sm text-gray-700 dark:text-gray-300">More emergency calls</div>
                   </div>
                   <div className="text-center">
@@ -557,7 +557,7 @@ export default function PlumbersPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-12">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Frequently Asked <span className="text-blue-600">Questions</span>
+                Frequently Asked <span className="text-cyan-600">Questions</span>
               </h2>
               <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
                 Common questions from plumbing companies about our website services.
@@ -573,7 +573,7 @@ export default function PlumbersPage() {
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white pr-4">
                       {faq.question}
                     </h3>
-                    <span className="text-blue-600 group-open:rotate-180 transition-transform duration-200">
+                    <span className="text-cyan-600 group-open:rotate-180 transition-transform duration-200">
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
@@ -592,18 +592,18 @@ export default function PlumbersPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-900 to-blue-800 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-600 to-cyan-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               Ready to Dominate Local Plumbing Search?
             </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+            <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
               Join dozens of plumbers who've doubled their emergency call volume with a website tailored for your industry — not some generic template.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-              <DarkButton href="/contact?industry=plumbing" className="bg-orange-600 hover:bg-orange-700">
+              <DarkButton href="/contact?industry=plumbing" className="bg-white text-cyan-700 hover:bg-gray-100">
                 Start My Plumber Website
               </DarkButton>
               <LightButton href="/checkup?industry=plumbing">
@@ -637,7 +637,7 @@ export default function PlumbersPage() {
 
       {/* Live Chat Widget */}
       <div className="fixed bottom-4 right-4 z-40 hidden md:block">
-        <button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold transition-all duration-200 flex items-center gap-2">
+        <button className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold transition-all duration-200 flex items-center gap-2">
           <span className="text-lg">💬</span>
           Let's Chat
         </button>
@@ -653,7 +653,7 @@ export default function PlumbersPage() {
             Get a free audit in 30 seconds and discover what's costing you emergency calls.
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <DarkButton href="/checkup?industry=plumbing" className="bg-blue-600 hover:bg-blue-700">
+            <DarkButton href="/checkup?industry=plumbing" className="bg-cyan-600 hover:bg-cyan-700">
               Get Free Audit
             </DarkButton>
             <button className="text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200">
