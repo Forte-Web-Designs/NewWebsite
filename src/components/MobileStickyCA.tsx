@@ -20,8 +20,8 @@ export default function MobileStickyCTA() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Hide the mobile sticky CTA on the plumbers page
-  if (pathname === '/industries/plumbers') return null;
+  // Hide the mobile sticky CTA on the plumbers page  
+  if (pathname?.includes('/industries/plumbers')) return null;
   
   if (!isVisible) return null;
 
@@ -35,7 +35,7 @@ export default function MobileStickyCTA() {
             <div className="flex items-center justify-between">
               <div className="flex-1 mr-2">
                 <p className="text-sm font-semibold leading-tight">Ready to grow your business?</p>
-                <p className="text-xs text-blue-100 leading-tight">Free website analysis</p>
+                <p className="text-xs text-blue-100 leading-tight">Start your website today</p>
               </div>
               <div className="flex items-center gap-1">
                 <Link
@@ -72,7 +72,7 @@ export default function MobileStickyCTA() {
                   href="/contact"
                   className="bg-white text-blue-600 px-2 py-1.5 rounded-lg font-medium text-sm text-center hover:bg-gray-50 transition-colors"
                 >
-                  Free Analysis
+                  Get Started
                 </Link>
                 <Link
                   href="/pricing"
