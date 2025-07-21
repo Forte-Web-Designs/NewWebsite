@@ -212,7 +212,7 @@ const AIChat = () => {
       setMessages([{
         id: '1',
         type: 'bot',
-        content: "Hey there! 👋 I'm Sophia, Seth's digital assistant. I'm here to make sure you have a smooth experience. We help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
+        content: "👋 Hey there! I'm Sophia — Seth's digital assistant.\n\nI'm here to make sure everything goes smoothly while you're here. At Forte Web Designs, we help small businesses grow with custom websites tailored to their specific industry that actually bring in customers — not just sit there looking pretty.\n\nWhat brings you here today? Looking to grow your business online?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
         timestamp: new Date()
       }]);
     }
@@ -515,7 +515,7 @@ const AIChat = () => {
               </div>
               <div>
                 <h3 className="font-semibold text-sm lg:text-base">Sophia (Client Success)</h3>
-                <p className="text-xs text-blue-100">AI chatbot • Here to help! 🤖</p>
+                <p className="text-xs text-blue-100">Forte AI chatbot • Here to help! 🤖</p>
               </div>
             </div>
             <div className="flex items-center gap-1 lg:gap-2">
