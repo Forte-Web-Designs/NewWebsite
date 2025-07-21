@@ -5,7 +5,6 @@ import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
-import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments',
@@ -19,14 +18,6 @@ export const metadata: Metadata = {
 };
 
 export default function HealthcarePage() {
-  return (
-    <IndustryPageWrapper industry="healthcare" businessType="medical practice">
-      <HealthcareContent />
-    </IndustryPageWrapper>
-  );
-}
-
-function HealthcareContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Rio Verde Pediatrics" },

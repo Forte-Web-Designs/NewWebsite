@@ -9,7 +9,6 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
-import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'HVAC Websites That Bring the Heat (and Cool New Leads)',
@@ -23,14 +22,6 @@ export const metadata: Metadata = {
 };
 
 export default function HVACPage() {
-  return (
-    <IndustryPageWrapper industry="hvac" businessType="hvac">
-      <HVACContent />
-    </IndustryPageWrapper>
-  );
-}
-
-function HVACContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "High Desert Comfort Solutions", location: "Albuquerque" },
@@ -197,18 +188,18 @@ function HVACContent() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <button 
-                    data-open-modal
+                  <Link 
+                    href="/contact?industry=hvac"
                     className="bg-white text-blue-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
                   >
                     Get My HVAC Website Quote
-                  </button>
-                  <button 
-                    data-open-modal
+                  </Link>
+                  <Link 
+                    href="/contact?industry=hvac"
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-center"
                   >
                     Schedule Free Consultation
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="mb-8">
@@ -770,12 +761,12 @@ function HVACContent() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                data-open-modal
+              <Link 
+                href="/contact?industry=hvac"
                 className="bg-white text-blue-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
               >
                 Get My HVAC Website
-              </button>
+              </Link>
               <Link 
                 href="tel:8178736655"
                 className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-lg"

@@ -8,7 +8,6 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
-import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Construction Websites Built to Win Bids and Build Trust',
@@ -22,14 +21,6 @@ export const metadata: Metadata = {
 };
 
 export default function ConstructionPage() {
-  return (
-    <IndustryPageWrapper industry="construction" businessType="construction">
-      <ConstructionContent />
-    </IndustryPageWrapper>
-  );
-}
-
-function ConstructionContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "SouthCore Contracting", location: "Albuquerque" },
@@ -145,18 +136,18 @@ function ConstructionContent() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
-                  <button 
-                    data-open-modal
+                  <Link 
+                    href="/contact?industry=construction"
                     className="bg-white text-slate-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
                   >
                     Get My Construction Website Quote
-                  </button>
-                  <button 
-                    data-open-modal
+                  </Link>
+                  <Link 
+                    href="/contact?industry=construction"
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-slate-700 transition-colors text-center"
                   >
                     Schedule Free Consultation
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="mb-8">
@@ -640,12 +631,12 @@ function ConstructionContent() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  data-open-modal
+                <Link 
+                  href="/contact?industry=construction"
                   className="bg-white text-slate-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get My Construction Website Quote
-                </button>
+                </Link>
                 <Link 
                   href="tel:8178736655"
                   className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-slate-600 transition-colors text-lg"

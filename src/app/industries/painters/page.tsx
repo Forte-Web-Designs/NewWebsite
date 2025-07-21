@@ -8,7 +8,6 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
-import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Painter Website Design | Websites That Turn Brush Strokes Into Booked Jobs',
@@ -22,14 +21,6 @@ export const metadata: Metadata = {
 };
 
 export default function PaintersPage() {
-  return (
-    <IndustryPageWrapper industry="painters" businessType="painting">
-      <PaintersContent />
-    </IndustryPageWrapper>
-  );
-}
-
-function PaintersContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Precision Paint Co" },
@@ -140,9 +131,9 @@ function PaintersContent() {
                 </p>
                 
                 <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
-                  <button data-open-modal className="bg-purple-600 hover:bg-purple-700 w-full sm:w-auto text-white font-bold py-4 px-8 rounded-lg transition-colors">
+                  <Link href="/contact?industry=painters" className="bg-purple-600 hover:bg-purple-700 w-full sm:w-auto text-white font-bold py-4 px-8 rounded-lg transition-colors">
                     Get My Painter Website Quote
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-purple-200">
@@ -547,12 +538,12 @@ function PaintersContent() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button 
-                  data-open-modal
+                <Link 
+                  href="/contact?industry=painters"
                   className="bg-white text-purple-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get My Painter Website Quote
-                </button>
+                </Link>
                 <Link 
                   href="tel:8178736655"
                   className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-purple-600 transition-colors text-lg"

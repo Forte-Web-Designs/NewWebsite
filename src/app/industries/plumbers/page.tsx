@@ -6,7 +6,6 @@ import { getCompanyLogo } from '@/components/CompanyLogos';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
-import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Plumber Websites That Convert Emergency Calls Into Customers | Forte Web Designs',
@@ -20,14 +19,6 @@ export const metadata: Metadata = {
 };
 
 export default function PlumbersPage() {
-  return (
-    <IndustryPageWrapper industry="plumbers" businessType="plumbing">
-      <PlumbersContent />
-    </IndustryPageWrapper>
-  );
-}
-
-function PlumbersContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Elite Plumbing Solutions" },
@@ -217,18 +208,18 @@ function PlumbersContent() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <button 
-                    data-open-modal
+                  <Link 
+                    href="/contact?industry=plumbers"
                     className="bg-white text-cyan-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
                   >
                     Get My Plumber Website Quote
-                  </button>
-                  <button 
-                    data-open-modal
+                  </Link>
+                  <Link 
+                    href="/contact?industry=plumbers"
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-700 transition-colors text-center"
                   >
                     Schedule Free Consultation
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 text-sm text-blue-200">

@@ -9,7 +9,6 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
-import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Electrician Website Design That Powers Up Lead Generation',
@@ -23,14 +22,6 @@ export const metadata: Metadata = {
 };
 
 export default function ElectriciansPage() {
-  return (
-    <IndustryPageWrapper industry="electricians" businessType="electrical contractor">
-      <ElectriciansContent />
-    </IndustryPageWrapper>
-  );
-}
-
-function ElectriciansContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Precision Power Techs", location: "Austin" },
@@ -220,18 +211,18 @@ function ElectriciansContent() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <button 
-                    data-open-modal
+                  <Link 
+                    href="/contact?industry=electricians"
                     className="bg-white text-sky-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
                   >
                     Get My Electrician Website
-                  </button>
-                  <button 
-                    data-open-modal
+                  </Link>
+                  <Link 
+                    href="/contact?industry=electricians"
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-sky-700 transition-colors text-center"
                   >
                     Schedule Free Consultation
-                  </button>
+                  </Link>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
@@ -715,12 +706,12 @@ function ElectriciansContent() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button 
-                data-open-modal
+              <Link 
+                href="/contact?industry=electricians"
                 className="bg-white text-sky-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
               >
                 Get My Electrician Website
-              </button>
+              </Link>
               <Link 
                 href="tel:8178736655"
                 className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-sky-700 transition-colors text-lg"
