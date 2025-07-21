@@ -233,70 +233,108 @@ export default function PlumberPageClient() {
                   </div>
                 </div>
               </div>
-            </SimpleScrollReveal>
-
-            <SimpleScrollReveal direction="right" delay={200}>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-8 shadow-2xl border-2 border-cyan-100">
-                  {/* Header with animated pulse */}
-                  <div className="flex items-center gap-4 mb-6 p-4 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-xl text-white">
-                    <span className="text-3xl animate-pulse">🚨</span>
-                    <div>
-                      <h3 className="text-white text-xl font-bold">RAPID PLUMBING PROS</h3>
-                      <p className="text-cyan-100 text-sm font-semibold">💧 24/7 Emergency Service 💧</p>
-                    </div>
-                  </div>
+            </SimpleScrollReveal>            <SimpleScrollReveal direction="right" delay={200}>
+              <div className="text-center">
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  🔧 See What Your Website Could Look Like
+                </h3>
+                <p className="text-blue-100 text-sm md:text-base max-w-lg mx-auto mb-8">
+                  Real examples of how we showcase emergency services for plumbing clients — built for speed, clarity, and trust.
+                </p>
+                
+                {/* Device Preview Container */}
+                <div className="flex flex-col lg:flex-row gap-8 justify-center items-start">
                   
-                  {/* Services with enhanced styling */}
-                  <div className="space-y-4 mb-6">
-                    <div className="flex justify-between items-center p-3 bg-blue-50 rounded-lg border-l-4 border-blue-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2">
-                        🚰 <span>Drain Cleaning</span>
-                      </span>
-                      <span className="font-bold text-blue-600 text-lg">$89+</span>
+                  {/* Desktop Preview */}
+                  <div className="flex-1 max-w-md">
+                    <p className="text-blue-200 text-sm mb-3">💻 Desktop Preview</p>
+                    <div className="bg-gradient-to-b from-gray-800 to-gray-900 p-3 rounded-2xl shadow-2xl">
+                      {/* Laptop Frame */}
+                      <div className="bg-gray-900 rounded-lg p-1">
+                        <div className="bg-white rounded-md overflow-hidden shadow-lg" style={{aspectRatio: '16/10'}}>
+                          {/* Website Content - Desktop Version */}
+                          <div className="p-4 text-left h-full flex flex-col">
+                            {/* Header */}
+                            <div className="flex items-center gap-3 mb-4 p-3 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-lg text-white">
+                              <span className="text-lg">🚨</span>
+                              <div>
+                                <h4 className="text-white text-sm font-bold">RAPID PLUMBING PROS</h4>
+                                <p className="text-cyan-100 text-xs">💧 24/7 Emergency Service</p>
+                              </div>
+                            </div>
+                            
+                            {/* Services Grid - Desktop */}
+                            <div className="grid grid-cols-2 gap-2 mb-3 flex-1">
+                              <div className="bg-blue-50 p-2 rounded border-l-2 border-blue-500">
+                                <div className="text-xs text-gray-700">🚰 Drain Cleaning</div>
+                                <div className="font-bold text-blue-600 text-xs">$89+</div>
+                              </div>
+                              <div className="bg-orange-50 p-2 rounded border-l-2 border-orange-500">
+                                <div className="text-xs text-gray-700">🔥 Water Heater</div>
+                                <div className="font-bold text-orange-600 text-xs">$150+</div>
+                              </div>
+                            </div>
+                            
+                            {/* Call Button - Desktop */}
+                            <div className="bg-green-500 text-white text-center py-2 rounded text-xs font-bold">
+                              📞 CALL (555) 123-PLUMBER
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-gray-800 h-2 rounded-b-lg"></div>
                     </div>
-                    <div className="flex justify-between items-center p-3 bg-orange-50 rounded-lg border-l-4 border-orange-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2">
-                        🔥 <span>Water Heater Repair</span>
-                      </span>
-                      <span className="font-bold text-orange-600 text-lg">$150+</span>
-                    </div>
-                    <div className="flex justify-between items-center p-3 bg-red-50 rounded-lg border-l-4 border-red-500">
-                      <span className="text-gray-700 font-medium flex items-center gap-2">
-                        🆘 <span>Emergency Service</span>
-                      </span>
-                      <span className="font-bold text-red-600 text-lg animate-pulse">CALL NOW!</span>
-                    </div>
+                    <p className="text-blue-300 text-xs mt-2 italic">This is a preview of your emergency section</p>
                   </div>
 
-                  {/* Enhanced call button */}
-                  <div className="bg-gradient-to-r from-green-500 to-green-600 text-white text-center py-4 rounded-xl mb-4 shadow-lg transform hover:scale-105 transition-transform">
-                    <div className="flex items-center justify-center gap-3">
-                      <span className="text-2xl animate-bounce">📞</span>
-                      <div>
-                        <div className="font-bold text-lg">Call (555) 123-PLUMBER</div>
-                        <div className="text-green-100 text-sm">Click to Call Now!</div>
+                  {/* Mobile Preview */}  
+                  <div className="flex-1 max-w-xs">
+                    <p className="text-blue-200 text-sm mb-3">📱 Mobile Preview</p>
+                    <div className="bg-gray-900 p-2 rounded-3xl shadow-2xl mx-auto" style={{width: '180px'}}>
+                      {/* Phone Frame */}
+                      <div className="bg-black rounded-3xl p-1">
+                        <div className="bg-white rounded-2xl overflow-hidden" style={{aspectRatio: '9/19.5'}}>
+                          {/* Website Content - Mobile Version */}
+                          <div className="p-3 text-left h-full flex flex-col">
+                            {/* Header - Mobile */}
+                            <div className="text-center mb-3 p-2 bg-gradient-to-r from-blue-600 to-cyan-600 rounded text-white">
+                              <div className="text-lg mb-1">🚨</div>
+                              <h4 className="text-white text-xs font-bold">RAPID PLUMBING</h4>
+                              <p className="text-cyan-100 text-xs">24/7 Emergency</p>
+                            </div>
+                            
+                            {/* Services Stack - Mobile */}
+                            <div className="space-y-2 mb-3 flex-1">
+                              <div className="bg-blue-50 p-2 rounded border-l-2 border-blue-500">
+                                <div className="text-xs text-gray-700">🚰 Drain Cleaning - $89+</div>
+                              </div>
+                              <div className="bg-orange-50 p-2 rounded border-l-2 border-orange-500">
+                                <div className="text-xs text-gray-700">🔥 Water Heater - $150+</div>
+                              </div>
+                              <div className="bg-red-50 p-2 rounded border-l-2 border-red-500">
+                                <div className="text-xs text-red-600 font-bold">🆘 Emergency - CALL NOW!</div>
+                              </div>
+                            </div>
+                            
+                            {/* Large Mobile Call Button */}
+                            <div className="bg-green-500 text-white text-center py-3 rounded font-bold text-sm">
+                              📞 TAP TO CALL NOW
+                            </div>
+                            
+                            {/* Reviews - Mobile */}
+                            <div className="text-center mt-2">
+                              <div className="text-yellow-400 text-xs">⭐⭐⭐⭐⭐ 4.9/5</div>
+                              <div className="text-gray-500 text-xs">Licensed & Insured</div>
+                            </div>
+                          </div>
+                        </div>
+                        {/* Home indicator */}
+                        <div className="bg-white/20 w-16 h-1 rounded-full mx-auto mt-1"></div>
                       </div>
                     </div>
+                    <p className="text-blue-300 text-xs mt-2 italic">Mobile version with one-tap calling</p>
                   </div>
-
-                  {/* Enhanced reviews section */}
-                  <div className="text-center bg-yellow-50 rounded-lg p-4">
-                    <div className="flex items-center justify-center gap-1 mb-2">
-                      <span className="text-yellow-400 text-xl">⭐⭐⭐⭐⭐</span>
-                    </div>
-                    <div className="text-gray-700 font-semibold">4.9/5 Stars</div>
-                    <div className="text-gray-600 text-sm">(247 Google Reviews)</div>
-                    <div className="text-cyan-600 text-sm font-medium mt-1">💯 Licensed & Insured</div>
-                  </div>
-                </div>
-                
-                {/* Enhanced floating elements */}
-                <div className="absolute -top-4 -right-4 bg-gradient-to-r from-green-500 to-green-600 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg animate-pulse">
-                  ✅ Licensed & Insured
-                </div>
-                <div className="absolute -bottom-4 -left-4 bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full text-sm font-bold shadow-lg">
-                  ⚡ 15min Response
+                  
                 </div>
               </div>
             </SimpleScrollReveal>
