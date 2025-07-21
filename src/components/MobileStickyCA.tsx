@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Icon } from '@/components/images/Icon';
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -18,6 +20,9 @@ export default function MobileStickyCTA() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Hide the mobile sticky CTA on the plumbers page
+  if (pathname === '/industries/plumbers') return null;
+  
   if (!isVisible) return null;
 
   return (
