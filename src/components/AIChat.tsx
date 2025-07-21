@@ -212,7 +212,7 @@ const AIChat = () => {
       setMessages([{
         id: '1',
         type: 'bot',
-        content: "Hey there! 👋 I'm Sophia, Seth's digital assistant. We help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
+        content: "Hey there! 👋 I'm Sophia, Seth's digital assistant. I'm here to make sure you have a smooth experience. We help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
         timestamp: new Date()
       }]);
     }
@@ -316,7 +316,7 @@ const AIChat = () => {
 
     // Simple greetings
     if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || msg === 'good morning' || msg === 'good afternoon') {
-      return "Hey! 👋 Great to meet you! \n\nI'm Sophia, Seth's digital assistant. Seth and the team help small businesses get more customers through websites that actually work.\n\nI can help you learn about our services, see examples of our work, or get you connected with Seth for a free consultation.\n\n[📞 Ready to chat with Seth? Contact us here](/contact)";
+      return "Hey! 👋 Great to meet you! \n\nI'm Sophia, your AI assistant for Forte Web Designs. Seth and the team help small businesses get more customers through websites that actually work.\n\nI can help you learn about our services, see examples of our work, or get you connected with Seth for a free consultation.\n\n[📞 Ready to chat with Seth? Contact us here](/contact)";
     }
 
     // Thank you responses
@@ -514,8 +514,8 @@ const AIChat = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-sm lg:text-base">Sophia</h3>
-                <p className="text-xs text-blue-100">Seth's digital assistant • Here to help! 🚀</p>
+                <h3 className="font-semibold text-sm lg:text-base">Sophia (Client Success)</h3>
+                <p className="text-xs text-blue-100">AI chatbot • Here to help! 🤖</p>
               </div>
             </div>
             <div className="flex items-center gap-1 lg:gap-2">

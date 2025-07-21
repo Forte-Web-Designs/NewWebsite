@@ -109,7 +109,7 @@ s
 7. Automatic form hide with success message in chat
 
 ### **Chat Experience**
-1. "Forte AI" greets as Seth's digital assistant
+1. "Sophia" greets as Seth's digital assistant
 2. Larger, more readable chat window
 3. Enhanced message styling with better contrast
 4. Smooth scrolling and better spacing
@@ -149,7 +149,7 @@ s
 The AI chat is now significantly more user-friendly with:
 - **Better readability** through improved sizing and typography
 - **Seamless form experience** with auto-advancement and validation
-- **Professional branding** with Forte AI as Seth's assistant
+- **Professional branding** with Sophia as Seth's assistant
 - **Mobile optimization** for touch devices
 - **Quality feedback** through enhanced UI states
 - **Smooth interactions** with proper animations and transitions
