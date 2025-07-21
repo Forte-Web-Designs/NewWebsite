@@ -190,44 +190,44 @@ export default function PlumberLeadModal({ isOpen, onClose, trigger = 'button' }
 
   return (
     <div className="modal-overlay fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-gray-900 rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto shadow-2xl">
+      <div className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-sm md:max-w-md lg:max-w-lg max-h-[90vh] overflow-y-auto shadow-2xl">
         {/* Header */}
-        <div className="relative p-6 pb-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="relative p-4 md:p-6 pb-3 md:pb-4 border-b border-gray-200 dark:border-gray-700">
           <button
             onClick={onClose}
-            className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
+            className="absolute top-3 right-3 md:top-4 md:right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             aria-label="Close modal"
           >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
           
-          <div className="text-center">
-            <div className="text-3xl mb-2">🛠️</div>
-            <h2 className="text-xl font-bold text-gray-900 dark:text-white">
+          <div className="text-center pr-8">
+            <div className="text-2xl md:text-3xl mb-2">🛠️</div>
+            <h2 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white">
               Let's Build Your Plumbing Website Right
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm">
+            <p className="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-snug">
               Tell us what you need, and we'll get back to you within 1 business day. No pressure — just real help from a team that gets your industry.
             </p>
           </div>
         </div>
 
         {/* Content */}
-        <div className="p-6">
+        <div className="p-4 md:p-6">
           {showSuccess ? (
-            <div className="text-center space-y-4">
-              <div className="text-4xl">✅</div>
+            <div className="text-center space-y-3 md:space-y-4">
+              <div className="text-3xl md:text-4xl">✅</div>
               <h3 className="text-lg font-semibold text-green-600 dark:text-green-400">
                 Thanks, we got it!
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed px-2">
                 A member of the Forte team will follow up within 1 business day. We've helped plumbers like you bring in more emergency calls and local leads — now let's do the same for your business.
               </p>
               <button
                 onClick={onClose}
-                className="mt-4 px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors"
+                className="mt-3 md:mt-4 px-6 py-2 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors"
               >
                 Close
               </button>
@@ -239,7 +239,7 @@ export default function PlumberLeadModal({ isOpen, onClose, trigger = 'button' }
               data-netlify="true"
               data-netlify-honeypot="bot-field"
               onSubmit={handleSubmit}
-              className="space-y-4"
+              className="space-y-3 md:space-y-4"
             >
               {/* Hidden fields for Netlify */}
               <input type="hidden" name="form-name" value="Plumber Inquiry" />
@@ -253,91 +253,93 @@ export default function PlumberLeadModal({ isOpen, onClose, trigger = 'button' }
 
               {/* Error Message */}
               {submitError && (
-                <div className="p-4 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
+                <div className="p-3 bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800 rounded-lg">
                   <p className="text-red-600 dark:text-red-400 text-sm">{submitError}</p>
                 </div>
               )}
 
-              {/* First Name */}
-              <div>
-                <input
-                  type="text"
-                  name="firstName"
-                  placeholder="e.g. John"
-                  value={formData.firstName}
-                  onChange={handleInputChange}
-                  required
-                  className={`w-full px-4 py-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 ${
-                    fieldErrors.firstName 
-                      ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
-                      : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                  } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
-                />
-                {fieldErrors.firstName && (
-                  <p className="mt-1 text-sm text-red-500">{fieldErrors.firstName}</p>
-                )}
+              {/* Name and Business Name - Row on desktop */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div>
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    value={formData.firstName}
+                    onChange={handleInputChange}
+                    required
+                    className={`w-full px-3 py-2.5 md:px-4 md:py-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 ${
+                      fieldErrors.firstName 
+                        ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
+                        : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
+                    } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
+                  />
+                  {fieldErrors.firstName && (
+                    <p className="mt-1 text-xs text-red-500">{fieldErrors.firstName}</p>
+                  )}
+                </div>
+
+                <div>
+                  <input
+                    type="text"
+                    name="businessName"
+                    placeholder="Business Name"
+                    value={formData.businessName}
+                    onChange={handleInputChange}
+                    className="w-full px-3 py-2.5 md:px-4 md:py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
+                  />
+                </div>
               </div>
 
-              {/* Business Name */}
-              <div>
-                <input
-                  type="text"
-                  name="businessName"
-                  placeholder="e.g. Rapid Response Plumbing"
-                  value={formData.businessName}
-                  onChange={handleInputChange}
-                  className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400"
-                />
-              </div>
+              {/* Email and Phone - Row on desktop */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                <div>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email Address"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className={`w-full px-3 py-2.5 md:px-4 md:py-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 ${
+                      fieldErrors.email 
+                        ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
+                        : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
+                    } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
+                  />
+                  {fieldErrors.email && (
+                    <p className="mt-1 text-xs text-red-500">{fieldErrors.email}</p>
+                  )}
+                </div>
 
-              {/* Email */}
-              <div>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="e.g. john@rapidplumbing.com"
-                  value={formData.email}
-                  onChange={handleInputChange}
-                  required
-                  className={`w-full px-4 py-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 ${
-                    fieldErrors.email 
-                      ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
-                      : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                  } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
-                />
-                {fieldErrors.email && (
-                  <p className="mt-1 text-sm text-red-500">{fieldErrors.email}</p>
-                )}
-              </div>
-
-              {/* Phone */}
-              <div>
-                <input
-                  type="tel"
-                  name="phone"
-                  placeholder="e.g. (555) 123-4567"
-                  value={formData.phone}
-                  onChange={handleInputChange}
-                  className={`w-full px-4 py-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 ${
-                    fieldErrors.phone 
-                      ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
-                      : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                  } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
-                />
-                {fieldErrors.phone && (
-                  <p className="mt-1 text-sm text-red-500">{fieldErrors.phone}</p>
-                )}
+                <div>
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    className={`w-full px-3 py-2.5 md:px-4 md:py-3 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 ${
+                      fieldErrors.phone 
+                        ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
+                        : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
+                    } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
+                  />
+                  {fieldErrors.phone && (
+                    <p className="mt-1 text-xs text-red-500">{fieldErrors.phone}</p>
+                  )}
+                </div>
               </div>
 
               {/* Message */}
               <div>
                 <textarea
                   name="message"
-                  placeholder="Tell us what you need help with…"
+                  placeholder="How can we help you?"
                   value={formData.message}
                   onChange={handleInputChange}
-                  rows={3}
-                  className="w-full px-4 py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
+                  rows={2}
+                  className="w-full px-3 py-2.5 md:px-4 md:py-3 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none"
                 />
               </div>
 
@@ -345,7 +347,7 @@ export default function PlumberLeadModal({ isOpen, onClose, trigger = 'button' }
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className={`w-full py-3 px-6 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50 ${
+                className={`w-full py-2.5 md:py-3 px-6 bg-cyan-600 hover:bg-cyan-700 text-white font-semibold rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-cyan-400/50 ${
                   isSubmitting ? 'opacity-70 cursor-not-allowed' : ''
                 }`}
               >
