@@ -4,10 +4,12 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Icon } from '@/components/images/Icon';
+import GenericContactModal from '@/components/GenericContactModal';
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -20,9 +22,6 @@ export default function MobileStickyCTA() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Hide the mobile sticky CTA on the plumbers page  
-  if (pathname?.includes('/industries/plumbers')) return null;
-  
   if (!isVisible) return null;
 
   return (
@@ -38,12 +37,12 @@ export default function MobileStickyCTA() {
                 <p className="text-xs text-blue-100 leading-tight">Start your website today</p>
               </div>
               <div className="flex items-center gap-1">
-                <Link
-                  href="/contact"
+                <button
+                  onClick={() => setIsModalOpen(true)}
                   className="bg-white text-blue-600 px-3 py-1.5 rounded-lg font-semibold text-sm hover:bg-gray-50 transition-colors"
                 >
                   Get Started
-                </Link>
+                </button>
                 <button
                   onClick={() => setIsExpanded(true)}
                   className="p-1.5 hover:bg-white/10 rounded-lg transition-colors"
@@ -68,12 +67,12 @@ export default function MobileStickyCTA() {
               </div>
               
               <div className="grid grid-cols-2 gap-1.5">
-                <Link
-                  href="/contact"
+                <button
+                  onClick={() => setIsModalOpen(true)}
                   className="bg-white text-blue-600 px-2 py-1.5 rounded-lg font-medium text-sm text-center hover:bg-gray-50 transition-colors"
                 >
                   Get Started
-                </Link>
+                </button>
                 <Link
                   href="/pricing"
                   className="bg-white/20 backdrop-blur-sm text-white px-2 py-1.5 rounded-lg font-medium text-sm text-center hover:bg-white/30 transition-colors border border-white/30"
@@ -99,6 +98,15 @@ export default function MobileStickyCTA() {
 
       {/* Spacer to prevent content from being hidden behind sticky CTA - Reduced height */}
       <div className="lg:hidden h-12" />
+
+      {/* Generic Contact Modal */}
+      <GenericContactModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        trigger="mobile-sticky-cta"
+        title="Get Started Today"
+        subtitle="Tell us about your project and we'll get back to you within 24 hours"
+      />
     </>
   );
 }
