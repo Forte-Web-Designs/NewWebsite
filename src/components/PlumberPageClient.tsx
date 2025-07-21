@@ -10,6 +10,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
 import PlumberLeadModal from '@/components/PlumberLeadModal';
 import { usePlumberLeadModal } from '@/hooks/usePlumberLeadModal';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export default function PlumberPageClient() {
   const { isModalOpen, trigger, openModal, closeModal } = usePlumberLeadModal();
@@ -676,6 +677,17 @@ export default function PlumberPageClient() {
         isOpen={isModalOpen}
         onClose={closeModal}
         trigger={trigger}
+      />
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="plumbers"
+        formName="Plumber Inquiry"
+        title="Let's Build Your Plumber Website Right"
+        subtitle="Tell us about your plumbing business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        mobileCtaText="Ready to fix more leads?"
+        mobileCtaSubtext="Get your plumber website today"
+        mobileBgGradient="bg-gradient-to-r from-blue-600 to-teal-600"
       />
     </div>
   );
