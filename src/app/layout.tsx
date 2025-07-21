@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 import AIChat from "@/components/AIChat";
+import MobileStickyCTA from "@/components/MobileStickyCA";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import CriticalCSS from "@/components/performance/CriticalCSS";
 import PerformanceMonitor from "@/components/performance/PerformanceMonitor";
@@ -206,6 +207,7 @@ export default function RootLayout({
           <Footer />
           <BackToTopButton />
           <AIChat />
+          <MobileStickyCTA />
           <PerformanceMonitor />
         </ThemeProvider>
       </body>
