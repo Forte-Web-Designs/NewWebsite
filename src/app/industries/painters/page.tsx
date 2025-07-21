@@ -122,7 +122,7 @@ export default function PaintersPage() {
             <SimpleScrollReveal direction="left" delay={100}>
               <div className="text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 bg-purple-700/50 text-purple-200 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-4 sm:mb-6">
-                  🎨 Industry Expertise: Painters
+                  🖌️ Industry Expertise: Painters
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
                   Painter Websites That Turn <span className="text-purple-300">Brush Strokes Into Booked Jobs</span>
@@ -159,7 +159,7 @@ export default function PaintersPage() {
                 <div className="bg-gradient-to-br from-white to-gray-50 rounded-2xl p-4 sm:p-6 lg:p-8 shadow-2xl border-2 border-purple-100 max-w-lg mx-auto">
                   {/* Header */}
                   <div className="flex items-center gap-3 sm:gap-4 mb-4 sm:mb-6 p-3 sm:p-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-xl text-white">
-                    <span className="text-2xl sm:text-3xl">🎨</span>
+                    <span className="text-2xl sm:text-3xl">🖌️</span>
                     <div className="min-w-0 flex-1">
                       <h3 className="text-white text-lg sm:text-xl font-bold truncate">PRECISION PAINT CO</h3>
                       <p className="text-purple-100 text-xs sm:text-sm font-semibold">🏠 Professional Painting</p>
@@ -218,7 +218,7 @@ export default function PaintersPage() {
                     </div>
                     <div className="text-gray-700 font-semibold text-sm sm:text-base">4.8/5 Stars</div>
                     <div className="text-gray-600 text-xs sm:text-sm">(124 Google Reviews)</div>
-                    <div className="text-purple-600 text-xs sm:text-sm font-medium mt-1">🎨 Licensed & Insured</div>
+                    <div className="text-purple-600 text-xs sm:text-sm font-medium mt-1">🖌️ Licensed & Insured</div>
                   </div>
                 </div>
                 
@@ -227,7 +227,7 @@ export default function PaintersPage() {
                   ✅ Free Color Consult
                 </div>
                 <div className="absolute -bottom-2 sm:-bottom-4 -left-2 sm:-left-4 bg-gradient-to-r from-blue-500 to-indigo-500 text-white px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-lg">
-                  🎨 12+ Years Experience
+                  🖌️ 12+ Years Experience
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -367,7 +367,7 @@ export default function PaintersPage() {
                 <div className="grid lg:grid-cols-2 gap-8 items-center mb-8">
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                      🎨 Precision Paint Co | Edmond, OK
+                      🖌️ Precision Paint Co | Edmond, OK
                     </h3>
                     <p className="text-gray-600 dark:text-gray-400 mb-4">
                       Before: Outdated site with no portfolio, no SEO, and no mobile CTA.
@@ -532,7 +532,7 @@ export default function PaintersPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                🎨 Let's Paint a Better Online Presence
+                🖌️ Let's Paint a Better Online Presence
               </h2>
               <p className="text-xl mb-8 text-purple-100">
                 Don't blend into the competition. Get a painter website built to convert — tailored to your craft, optimized for growth.

@@ -667,7 +667,7 @@ function SiteCheckUpContent() {
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                    <span className="text-lg flex-shrink-0">🎨</span>
+                    <span className="text-lg flex-shrink-0">🖌️</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Painters:</span>
                       <span className="text-gray-600 dark:text-gray-300"> Like doing touch-ups before clients notice peeling—keep your brand sharp.</span>
