@@ -212,7 +212,7 @@ const AIChat = () => {
       setMessages([{
         id: '1',
         type: 'bot',
-        content: "Hey there! 👋 I'm Forte AI, Seth's digital assistant. We help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
+        content: "Hey there! 👋 I'm Sophia, Seth's digital assistant. We help small businesses get more customers online with websites that actually work.\n\nWhat brings you here today? Looking to grow your business online?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
         timestamp: new Date()
       }]);
     }
@@ -316,7 +316,7 @@ const AIChat = () => {
 
     // Simple greetings
     if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || msg === 'good morning' || msg === 'good afternoon') {
-      return "Hey! 👋 Great to meet you! \n\nI'm Forte AI, Seth's digital assistant. Seth and the team help small businesses get more customers through websites that actually work.\n\nI can help you learn about our services, see examples of our work, or get you connected with Seth for a free consultation.\n\n[📞 Ready to chat with Seth? Contact us here](/contact)";
+      return "Hey! 👋 Great to meet you! \n\nI'm Sophia, Seth's digital assistant. Seth and the team help small businesses get more customers through websites that actually work.\n\nI can help you learn about our services, see examples of our work, or get you connected with Seth for a free consultation.\n\n[📞 Ready to chat with Seth? Contact us here](/contact)";
     }
 
     // Thank you responses
@@ -514,7 +514,7 @@ const AIChat = () => {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-sm lg:text-base">Forte AI</h3>
+                <h3 className="font-semibold text-sm lg:text-base">Sophia</h3>
                 <p className="text-xs text-blue-100">Seth's digital assistant • Here to help! 🚀</p>
               </div>
             </div>
@@ -575,7 +575,7 @@ const AIChat = () => {
                       <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-100"></div>
                       <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce delay-200"></div>
                     </div>
-                    <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">Forte AI is typing...</span>
+                    <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">Sophia is typing...</span>
                   </div>
                 </div>
               </div>

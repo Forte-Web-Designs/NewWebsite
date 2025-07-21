@@ -7,7 +7,7 @@ s
 ## 🎨 **Visual & Readability Enhancements**
 
 ### **AI Assistant Rebranding**
-- **Name Changed**: "Chat with Seth" → "Forte AI"
+- **Name Changed**: "Chat with Seth" → "Sophia"
 - **Subtitle**: "Seth's digital assistant • Here to help! 🚀"
 - **Personality**: AI assistant representing Seth, not first-person responses
 
@@ -23,7 +23,7 @@ s
 - **Layout**: Improved max-width `max-w-[80%] lg:max-w-[85%]`
 
 ### **Enhanced Typing Indicator**
-- **Visual**: Blue dots instead of gray with "Forte AI is typing..." text
+- **Visual**: Blue dots instead of gray with "Sophia is typing..." text
 - **Styling**: Better shadow and border matching message style
 - **Animation**: Smooth bounce animation with proper delays
 
