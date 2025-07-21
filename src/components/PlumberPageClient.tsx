@@ -235,175 +235,69 @@ export default function PlumberPageClient() {
               </div>
             </SimpleScrollReveal>            <SimpleScrollReveal direction="right" delay={200}>
               <div className="text-center">
-                <div className="mb-6">
+                <div className="mb-8">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
-                    See Exactly What Your Website Could Look Like
+                    💡 How We Showcase Emergency Services
                   </h3>
-                  <p className="text-blue-100 text-sm md:text-base max-w-2xl mx-auto mb-2">
-                    Here's how we design plumbing websites to earn trust, respond fast, and convert emergency searches into real jobs—on desktop and mobile.
+                  <p className="text-blue-100 text-sm md:text-base max-w-2xl mx-auto mb-8">
+                    Here's how we'd design your emergency section to stand out, build trust, and capture urgent calls:
                   </p>
                 </div>
                 
-                {/* Device Preview Container */}
-                <div className="flex flex-col lg:flex-row gap-8 justify-center items-start">
-                  
-                  {/* Desktop Preview */}
-                  <div className="flex-1 max-w-lg">
-                    <p className="text-blue-200 text-sm mb-3 font-medium">💻 Desktop layout tailored for emergency response</p>
-                    <div className="bg-gradient-to-b from-gray-800 to-gray-900 p-4 rounded-2xl shadow-2xl">
-                      {/* Laptop Frame */}
-                      <div className="bg-gray-900 rounded-lg p-2">
-                        <div className="bg-white rounded-md overflow-hidden shadow-lg" style={{aspectRatio: '16/9'}}>
-                          {/* Website Content - Desktop Version */}
-                          <div className="p-6 text-left h-full flex flex-col bg-gradient-to-br from-blue-50 to-white">
-                            
-                            {/* Professional Header */}
-                            <div className="flex items-center justify-between mb-6">
-                              <div className="flex items-center gap-4">
-                                <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-lg flex items-center justify-center text-white font-bold text-lg">
-                                  🚨
-                                </div>
-                                <div>
-                                  <h4 className="text-gray-900 text-lg font-bold leading-tight">EMERGENCY PLUMBING SERVICES</h4>
-                                  <p className="text-red-600 text-sm font-semibold">Available 24/7 — Fast, Reliable, Local</p>
-                                </div>
-                              </div>
-                              <div className="text-right">
-                                <div className="text-green-600 text-xs font-semibold mb-1">⏱️ 15 Min Avg Response</div>
-                                <div className="text-yellow-500 text-sm">★★★★★</div>
-                                <div className="text-gray-600 text-xs">4.9 based on 247 reviews</div>
-                              </div>
-                            </div>
-                            
-                            {/* Services Grid - Desktop */}
-                            <div className="grid grid-cols-2 gap-4 mb-6 flex-1">
-                              <div className="bg-white border border-blue-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <span className="text-blue-600 text-lg">✅</span>
-                                  <span className="text-gray-900 font-semibold text-sm">Leak Detection & Repair</span>
-                                </div>
-                              </div>
-                              <div className="bg-white border border-orange-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <span className="text-orange-600 text-lg">✅</span>
-                                  <span className="text-gray-900 font-semibold text-sm">Drain Cleaning</span>
-                                </div>
-                                <div className="text-orange-600 font-bold text-sm">Starting at $89</div>
-                              </div>
-                              <div className="bg-white border border-red-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <span className="text-red-600 text-lg">✅</span>
-                                  <span className="text-gray-900 font-semibold text-sm">Water Heater Repair</span>
-                                </div>
-                                <div className="text-red-600 font-bold text-sm">Starting at $150</div>
-                              </div>
-                              <div className="bg-white border border-purple-200 rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow">
-                                <div className="flex items-center gap-2 mb-2">
-                                  <span className="text-purple-600 text-lg">✅</span>
-                                  <span className="text-gray-900 font-semibold text-sm">Sewer Line Issues</span>
-                                </div>
-                              </div>
-                            </div>
-                            
-                            {/* Bottom Section */}
-                            <div className="flex items-center justify-between">
-                              <div className="flex items-center gap-4">
-                                <div className="text-gray-900">
-                                  <div className="text-lg font-bold">📞 Need Help Now?</div>
-                                  <div className="text-red-600 font-bold text-lg">(505) 123-4567</div>
-                                </div>
-                                <div className="flex items-center gap-2 text-xs text-gray-600">
-                                  <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full">Licensed & Insured</span>
-                                </div>
-                              </div>
-                              
-                              <button className="bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-6 py-3 rounded-lg font-bold text-sm shadow-lg transform hover:scale-105 transition-all">
-                                🔘 TAP TO CALL NOW
-                              </button>
-                            </div>
-                          </div>
+                {/* Static Visual Preview Block */}
+                <div className="max-w-2xl mx-auto">
+                  <div className="bg-white rounded-2xl p-8 shadow-xl border border-gray-200">
+                    {/* Sample Emergency Section */}
+                    <div className="text-center mb-6">
+                      <div className="flex items-center justify-center gap-3 mb-3">
+                        <div className="w-10 h-10 bg-gradient-to-br from-red-500 to-red-600 rounded-lg flex items-center justify-center text-white font-bold text-lg">
+                          🚨
+                        </div>
+                        <div className="text-left">
+                          <h4 className="text-gray-800 text-xl font-bold leading-tight">RAPID PLUMBING PROS</h4>
+                          <p className="text-red-600 text-sm font-semibold">💧 24/7 Emergency Service</p>
                         </div>
                       </div>
-                      <div className="bg-gray-800 h-2 rounded-b-lg"></div>
                     </div>
-                  </div>
-
-                  {/* Mobile Preview */}  
-                  <div className="flex-1 max-w-xs">
-                    <p className="text-blue-200 text-sm mb-3 font-medium">📱 Mobile-first design with one-tap calling</p>
-                    <div className="bg-gray-900 p-3 rounded-3xl shadow-2xl mx-auto" style={{width: '200px'}}>
-                      {/* Phone Frame */}
-                      <div className="bg-black rounded-3xl p-1">
-                        <div className="bg-white rounded-2xl overflow-hidden" style={{aspectRatio: '9/19'}}>
-                          {/* Website Content - Mobile Version */}
-                          <div className="p-4 text-left h-full flex flex-col bg-gradient-to-br from-blue-50 to-white">
-                            
-                            {/* Mobile Header */}
-                            <div className="text-center mb-4 p-3 bg-gradient-to-r from-red-600 to-red-700 rounded-xl text-white shadow-lg">
-                              <div className="text-2xl mb-1">🚨</div>
-                              <h4 className="text-white text-sm font-bold leading-tight">EMERGENCY PLUMBING</h4>
-                              <h4 className="text-white text-sm font-bold leading-tight">SERVICES</h4>
-                              <p className="text-red-200 text-xs font-medium mt-1">Available 24/7 — Fast, Reliable, Local</p>
-                            </div>
-                            
-                            {/* Services Stack - Mobile */}
-                            <div className="space-y-2 mb-4 flex-1">
-                              <div className="bg-white border-l-4 border-blue-500 p-3 rounded shadow-sm">
-                                <div className="flex items-center gap-2">
-                                  <span className="text-blue-600">✅</span>
-                                  <span className="text-gray-900 font-medium text-xs">Leak Detection & Repair</span>
-                                </div>
-                              </div>
-                              <div className="bg-white border-l-4 border-orange-500 p-3 rounded shadow-sm">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <span className="text-orange-600">✅</span>
-                                  <span className="text-gray-900 font-medium text-xs">Drain Cleaning</span>
-                                </div>
-                                <div className="text-orange-600 font-bold text-xs ml-6">Starting at $89</div>
-                              </div>
-                              <div className="bg-white border-l-4 border-red-500 p-3 rounded shadow-sm">
-                                <div className="flex items-center gap-2 mb-1">
-                                  <span className="text-red-600">✅</span>
-                                  <span className="text-gray-900 font-medium text-xs">Water Heater Repair</span>
-                                </div>
-                                <div className="text-red-600 font-bold text-xs ml-6">Starting at $150</div>
-                              </div>
-                              <div className="bg-white border-l-4 border-purple-500 p-3 rounded shadow-sm">
-                                <div className="flex items-center gap-2">
-                                  <span className="text-purple-600">✅</span>
-                                  <span className="text-gray-900 font-medium text-xs">Sewer Line Issues</span>
-                                </div>
-                              </div>
-                            </div>
-                            
-                            {/* Contact Section */}
-                            <div className="text-center mb-3">
-                              <div className="text-gray-900 text-sm font-bold mb-1">📞 Need Help Now? Call</div>
-                              <div className="text-red-600 font-bold text-lg mb-2">(505) 123-4567</div>
-                            </div>
-                            
-                            {/* Large Mobile Call Button */}
-                            <button className="bg-gradient-to-r from-green-600 to-green-700 text-white text-center py-4 rounded-xl font-bold text-sm shadow-lg transform active:scale-95 transition-all mb-3">
-                              🔘 TAP TO CALL NOW
-                            </button>
-                            
-                            {/* Trust Indicators */}
-                            <div className="text-center">
-                              <div className="text-yellow-500 text-sm mb-1">⭐⭐⭐⭐⭐ 4.9/5</div>
-                              <div className="text-gray-600 text-xs mb-2">Based on 247 reviews</div>
-                              <div className="flex justify-center gap-2">
-                                <span className="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">Licensed & Insured</span>
-                                <span className="bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium">⏱️ 15 Min Response</span>
-                              </div>
-                            </div>
-                          </div>
+                    
+                    {/* Services List */}
+                    <div className="space-y-3 mb-6">
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border-l-4 border-blue-500">
+                        <div className="flex items-center gap-2">
+                          <span className="text-blue-600">🛠️</span>
+                          <span className="text-gray-800 font-medium">Drain Cleaning</span>
                         </div>
-                        {/* Home indicator */}
-                        <div className="bg-white/30 w-20 h-1 rounded-full mx-auto mt-2"></div>
+                        <span className="text-blue-600 font-bold">$89+</span>
+                      </div>
+                      <div className="flex items-center justify-between p-3 bg-gray-50 rounded-lg border-l-4 border-orange-500">
+                        <div className="flex items-center gap-2">
+                          <span className="text-orange-600">🔥</span>
+                          <span className="text-gray-800 font-medium">Water Heater</span>
+                        </div>
+                        <span className="text-orange-600 font-bold">$150+</span>
+                      </div>
+                      <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg border-l-4 border-red-500">
+                        <div className="flex items-center gap-2">
+                          <span className="text-red-600">🆘</span>
+                          <span className="text-red-600 font-semibold">Emergency</span>
+                        </div>
+                        <span className="text-red-600 font-bold">CALL NOW!</span>
+                      </div>
+                    </div>
+                    
+                    {/* CTA Button */}
+                    <div className="text-center">
+                      <div className="inline-flex items-center gap-2 bg-gradient-to-r from-green-600 to-green-700 text-white px-8 py-4 rounded-xl font-bold text-lg shadow-lg cursor-default">
+                        <span>📞</span>
+                        <span>TAP TO CALL NOW →</span>
                       </div>
                     </div>
                   </div>
                   
+                  {/* Disclaimer */}
+                  <p className="text-blue-300 text-sm text-center mt-4 italic">
+                    This is a sample layout to demonstrate how your emergency services could be presented.
+                  </p>
                 </div>
               </div>
             </SimpleScrollReveal>
