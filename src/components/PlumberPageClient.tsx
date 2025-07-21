@@ -670,17 +670,6 @@ export default function PlumberPageClient() {
         </div>
       </section>
 
-      {/* Live Chat Widget */}
-      <div className="fixed bottom-4 right-4 z-40 hidden md:block">
-        <button 
-          onClick={() => openModal('chat-widget')}
-          className="bg-cyan-600 hover:bg-cyan-700 text-white px-6 py-3 rounded-full shadow-lg font-semibold transition-all duration-200 flex items-center gap-2 cursor-pointer"
-        >
-          <span className="text-lg">💬</span>
-          Let's Chat
-        </button>
-      </div>
-
       {/* Lead Capture Modal */}
       <PlumberLeadModal 
         isOpen={isModalOpen}
