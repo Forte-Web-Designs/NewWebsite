@@ -48,15 +48,15 @@ export default function SimpleAnimatedInput({
 
   const inputClasses = `
     w-full px-4 py-3 rounded-lg 
-    bg-white/25 backdrop-blur-md border-2
-    ${error ? 'border-red-400/70 focus:border-red-400' : 'border-white/50 hover:border-white/70 focus:border-blue-400'}
-    text-white placeholder-white/80 font-medium
-    focus:outline-none focus:ring-2 ${error ? 'focus:ring-red-400/50' : 'focus:ring-blue-400/50'}
-    ${error ? 'focus:bg-red-50/10' : 'focus:bg-white/30'} focus:placeholder-white/60 focus:shadow-lg 
+    bg-white dark:bg-gray-800 border-2
+    ${error ? 'border-red-400/70 focus:border-red-400' : 'border-gray-300 dark:border-gray-600 hover:border-gray-400 dark:hover:border-gray-500 focus:border-blue-500'}
+    text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium
+    focus:outline-none focus:ring-2 ${error ? 'focus:ring-red-400/50' : 'focus:ring-blue-500/50'}
+    ${error ? 'focus:bg-red-50 dark:focus:bg-red-900/20' : 'focus:bg-gray-50 dark:focus:bg-gray-700'} focus:placeholder-gray-400 dark:focus:placeholder-gray-500 focus:shadow-lg 
     ${error ? 'focus:shadow-red-500/20' : 'focus:shadow-blue-500/20'}
-    transition-all duration-300 shadow-md
-    ${isFocused ? (error ? 'bg-red-50/15 border-red-400/80 shadow-lg shadow-red-500/15' : 'bg-white/35 border-white/80 shadow-lg shadow-blue-500/15') : ''}
-    ${error ? 'placeholder-red-200/80' : 'placeholder-white/60'}
+    transition-all duration-300 shadow-sm
+    ${isFocused ? (error ? 'bg-red-50 dark:bg-red-900/20 border-red-400/80 shadow-lg shadow-red-500/15' : 'bg-gray-50 dark:bg-gray-700 border-blue-500 shadow-lg shadow-blue-500/15') : ''}
+    ${error ? 'placeholder-red-400 dark:placeholder-red-400' : 'placeholder-gray-500 dark:placeholder-gray-400'}
     ${className}
   `;
 
@@ -83,7 +83,7 @@ export default function SimpleAnimatedInput({
           className={inputClasses}
         />
         {error && (
-          <div className="mt-2 text-red-300 text-sm flex items-center gap-2">
+          <div className="mt-2 text-red-600 dark:text-red-400 text-sm flex items-center gap-2">
             <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
@@ -112,7 +112,7 @@ export default function SimpleAnimatedInput({
         className={inputClasses}
       />
       {error && (
-        <div className="mt-2 text-red-300 text-sm flex items-center gap-2">
+        <div className="mt-2 text-red-600 dark:text-red-400 text-sm flex items-center gap-2">
           <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
