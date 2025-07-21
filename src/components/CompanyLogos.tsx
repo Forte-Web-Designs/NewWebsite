@@ -4,454 +4,426 @@ interface LogoProps {
   className?: string;
 }
 
-// HVAC Company Logos
+// HVAC Company Logos - Designed for authenticity and variety
 export const EliteClimateControlLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="28" fill="#2563EB" stroke="#1D4ED8" strokeWidth="2"/>
-    <path d="M32 12v8M32 44v8M12 32h8M44 32h8" stroke="white" strokeWidth="3" strokeLinecap="round"/>
-    <circle cx="32" cy="32" r="8" fill="#DC2626"/>
-    <circle cx="32" cy="32" r="4" fill="white"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-gray-700 text-[6px] font-bold">ELITE AC</text>
+    {/* Simple text wordmark (like Ford, IBM) */}
+    <text x="32" y="24" textAnchor="middle" className="fill-blue-600 text-[9px] font-black">ELITE</text>
+    <text x="32" y="34" textAnchor="middle" className="fill-gray-600 text-[5px] font-medium">CLIMATE CONTROL</text>
+    <rect x="20" y="38" width="24" height="2" fill="#2563EB"/>
   </svg>
 );
 
 export const AllSeasonHVACLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="16" width="48" height="32" rx="6" fill="#10B981" stroke="#059669" strokeWidth="2"/>
-    <rect x="12" y="20" width="8" height="24" fill="white" opacity="0.8"/>
-    <rect x="22" y="20" width="8" height="24" fill="white" opacity="0.6"/>
-    <rect x="32" y="20" width="8" height="24" fill="white" opacity="0.4"/>
-    <rect x="42" y="20" width="8" height="24" fill="white" opacity="0.2"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-green-700 text-[5px] font-bold">ALL SEASON</text>
+    {/* Icon-only logo (like Shell, BP) */}
+    <rect x="16" y="16" width="32" height="32" fill="#10B981" rx="16"/>
+    <circle cx="32" cy="32" r="12" fill="white"/>
+    <text x="32" y="37" textAnchor="middle" className="fill-green-600 text-[8px] font-black">AS</text>
   </svg>
 );
 
 export const ComfortZoneHVACLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="12" width="40" height="40" rx="8" fill="#F59E0B" stroke="#D97706" strokeWidth="2"/>
-    <path d="M20 32h24M32 20v24" stroke="white" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="24" cy="24" r="3" fill="#EF4444"/>
-    <circle cx="40" cy="24" r="3" fill="#3B82F6"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-amber-700 text-[5px] font-bold">COMFORT</text>
+    {/* Badge/emblem style (like Harley Davidson) */}
+    <circle cx="32" cy="32" r="26" fill="#F59E0B" stroke="#D97706" strokeWidth="3"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="28" textAnchor="middle" className="fill-orange-600 text-[6px] font-bold">COMFORT</text>
+    <text x="32" y="36" textAnchor="middle" className="fill-orange-600 text-[6px] font-bold">ZONE</text>
   </svg>
 );
 
 export const PremierHeatingLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="32,8 48,24 48,48 16,48 16,24" fill="#7C3AED" stroke="#6D28D9" strokeWidth="2"/>
-    <rect x="20" y="28" width="24" height="16" rx="2" fill="white"/>
-    <rect x="24" y="32" width="4" height="8" fill="#7C3AED"/>
-    <rect x="30" y="32" width="4" height="8" fill="#7C3AED"/>
-    <rect x="36" y="32" width="4" height="8" fill="#7C3AED"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-purple-700 text-[5px] font-bold">PREMIER</text>
+    {/* Corporate rectangular (like Walmart, Best Buy) */}
+    <rect x="8" y="24" width="48" height="16" fill="#7C3AED" rx="2"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-white text-[7px] font-black">PREMIER HEATING</text>
   </svg>
 );
 
 export const EmergencyClimateProLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="28" fill="#DC2626" stroke="#B91C1C" strokeWidth="2"/>
-    <polygon points="32,12 40,28 24,28" fill="white"/>
-    <rect x="28" y="28" width="8" height="16" fill="white"/>
-    <rect x="24" y="44" width="16" height="4" rx="2" fill="white"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-red-700 text-[4px] font-bold">EMERGENCY</text>
+    {/* Simple geometric (like Target, Mastercard) */}
+    <circle cx="32" cy="32" r="24" fill="#DC2626"/>
+    <circle cx="32" cy="32" r="16" fill="white"/>
+    <text x="32" y="36" textAnchor="middle" className="fill-red-600 text-[6px] font-black">24/7</text>
   </svg>
 );
 
-// Restaurant Company Logos
+// Restaurant Company Logos - Designed for authenticity and variety  
 export const RedOakSmokehouseLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="20" width="48" height="28" rx="4" fill="#92400E" stroke="#78350F" strokeWidth="2"/>
-    <rect x="12" y="24" width="40" height="20" rx="2" fill="#FDE68A"/>
-    <path d="M16 28h32M16 32h32M16 36h32M16 40h32" stroke="#92400E" strokeWidth="1"/>
-    <circle cx="48" cy="16" r="4" fill="#6B7280" opacity="0.7"/>
-    <circle cx="44" cy="12" r="2" fill="#6B7280" opacity="0.5"/>
-    <circle cx="52" cy="12" r="2" fill="#6B7280" opacity="0.3"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-amber-800 text-[4px] font-bold">RED OAK BBQ</text>
+    {/* Vintage script text (like Coca-Cola, Kellogg's) */}
+    <text x="32" y="28" textAnchor="middle" className="fill-amber-800 text-[8px] font-bold italic">Red Oak</text>
+    <text x="32" y="38" textAnchor="middle" className="fill-amber-600 text-[5px] font-medium">SMOKEHOUSE</text>
   </svg>
 );
 
 export const BellaVistaItalianLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="32" cy="28" rx="24" ry="20" fill="#059669" stroke="#047857" strokeWidth="2"/>
-    <path d="M20 20c4-8 16-8 20 0s16 8 20 0" stroke="white" strokeWidth="3" fill="none"/>
-    <circle cx="26" cy="32" r="3" fill="#DC2626"/>
-    <circle cx="32" cy="30" r="3" fill="#DC2626"/>
-    <circle cx="38" cy="32" r="3" fill="#DC2626"/>
-    <path d="M24 38h16" stroke="white" strokeWidth="2" strokeLinecap="round"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-green-700 text-[4px] font-bold">BELLA VISTA</text>
+    {/* Circle monogram (like Starbucks, BMW) */}
+    <circle cx="32" cy="32" r="24" fill="#059669" stroke="#047857" strokeWidth="2"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="37" textAnchor="middle" className="fill-green-600 text-[12px] font-bold">BV</text>
   </svg>
 );
 
 export const MetroSushiBarLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="26" fill="#1F2937" stroke="#111827" strokeWidth="2"/>
-    <circle cx="32" cy="32" r="18" fill="white"/>
-    <circle cx="32" cy="32" r="12" fill="#EF4444"/>
-    <circle cx="32" cy="32" r="6" fill="white"/>
-    <rect x="16" y="30" width="32" height="4" fill="#374151"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-gray-700 text-[4px] font-bold">METRO SUSHI</text>
+    {/* Minimal text only (like IKEA, MUJI) */}
+    <text x="32" y="30" textAnchor="middle" className="fill-gray-800 text-[7px] font-bold">METRO</text>
+    <text x="32" y="38" textAnchor="middle" className="fill-red-600 text-[7px] font-bold">SUSHI</text>
   </svg>
 );
 
 export const FarmTableBistroLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="12" width="40" height="40" rx="20" fill="#16A34A" stroke="#15803D" strokeWidth="2"/>
-    <path d="M28 20v8h8v-8M32 28v12M24 40h16" stroke="white" strokeWidth="3" strokeLinecap="round"/>
-    <circle cx="20" cy="24" r="2" fill="#22C55E"/>
-    <circle cx="44" cy="24" r="2" fill="#22C55E"/>
-    <circle cx="20" cy="40" r="2" fill="#22C55E"/>
-    <circle cx="44" cy="40" r="2" fill="#22C55E"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-green-700 text-[4px] font-bold">FARM TABLE</text>
+    {/* House/badge shape (like Whole Foods) */}
+    <polygon points="32,12 50,28 50,50 14,50 14,28" fill="#16A34A"/>
+    <polygon points="32,18 44,30 44,44 20,44 20,30" fill="white"/>
+    <text x="32" y="32" textAnchor="middle" className="fill-green-600 text-[4px] font-bold">FARM</text>
+    <text x="32" y="38" textAnchor="middle" className="fill-green-600 text-[4px] font-bold">TABLE</text>
   </svg>
 );
 
 export const TacoLibreKitchenLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="26" fill="#EA580C" stroke="#C2410C" strokeWidth="2"/>
-    <path d="M12 32c8-16 32-16 40 0c-8 16-32 16-40 0z" fill="#FED7AA"/>
-    <ellipse cx="32" cy="28" rx="16" ry="4" fill="#92400E"/>
-    <circle cx="24" cy="30" r="2" fill="#EF4444"/>
-    <circle cx="32" cy="30" r="2" fill="#22C55E"/>
-    <circle cx="40" cy="30" r="2" fill="#EAB308"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-orange-700 text-[4px] font-bold">TACO LIBRE</text>
+    {/* Simple rectangular logo (like Subway) */}
+    <rect x="12" y="20" width="40" height="24" fill="#EA580C" rx="4"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-white text-[6px] font-black">TACO LIBRE</text>
   </svg>
 );
 
-// Landscaping Company Logos
+// Landscaping Company Logos - Designed for authenticity and variety
 export const SandiaLandscapingLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="32,8 48,24 40,40 24,40 16,24" fill="#16A34A" stroke="#15803D" strokeWidth="2"/>
-    <circle cx="28" cy="28" r="6" fill="#22C55E"/>
-    <circle cx="36" cy="28" r="4" fill="#22C55E"/>
-    <path d="M20 40c4-4 8-4 12 0s8 4 12 0" stroke="#15803D" strokeWidth="2" fill="none"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-green-700 text-[4px] font-bold">SANDIA</text>
+    {/* Simple text with underline (like John Deere) */}
+    <text x="32" y="30" textAnchor="middle" className="fill-green-700 text-[8px] font-black">SANDIA</text>
+    <text x="32" y="38" textAnchor="middle" className="fill-green-600 text-[5px] font-medium">LANDSCAPING</text>
+    <rect x="18" y="42" width="28" height="2" fill="#16A34A"/>
   </svg>
 );
 
 export const DesertBloomLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="26" fill="#F59E0B" stroke="#D97706" strokeWidth="2"/>
-    <path d="M32 16c-8 4-8 12 0 16c8-4 8-12 0-16z" fill="#DC2626"/>
-    <path d="M24 24c-4 8 4 16 8 12c4-4-4-12-8-12z" fill="#DC2626"/>
-    <path d="M40 24c4 8-4 16-8 12c-4-4 4-12 8-12z" fill="#DC2626"/>
-    <circle cx="32" cy="36" r="3" fill="#22C55E"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-amber-700 text-[3px] font-bold">DESERT BLOOM</text>
+    {/* Circle with initials (like GE, HP) */}
+    <circle cx="32" cy="32" r="24" fill="#F59E0B"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="37" textAnchor="middle" className="fill-orange-600 text-[10px] font-black">DB</text>
   </svg>
 );
 
 export const MountainViewOutdoorLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="8,40 24,16 40,24 56,40 8,40" fill="#6B7280" stroke="#4B5563" strokeWidth="2"/>
-    <polygon points="8,40 20,28 36,32 56,40 8,40" fill="#9CA3AF"/>
-    <rect x="8" y="40" width="48" height="8" fill="#16A34A"/>
-    <circle cx="16" cy="44" r="1" fill="#22C55E"/>
-    <circle cx="24" cy="44" r="1" fill="#22C55E"/>
-    <circle cx="32" cy="44" r="1" fill="#22C55E"/>
-    <circle cx="40" cy="44" r="1" fill="#22C55E"/>
-    <circle cx="48" cy="44" r="1" fill="#22C55E"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-gray-700 text-[3px] font-bold">MOUNTAIN VIEW</text>
+    {/* Simple rectangular corporate (like REI) */}
+    <rect x="10" y="22" width="44" height="20" fill="#6B7280" rx="2"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-white text-[6px] font-bold">MOUNTAIN VIEW</text>
   </svg>
 );
 
 export const RioGrandeLawnCareLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="24" width="48" height="24" rx="12" fill="#3B82F6" stroke="#2563EB" strokeWidth="2"/>
-    <path d="M12 32c12-8 28-8 40 0" stroke="white" strokeWidth="2" fill="none"/>
-    <path d="M16 36c8-4 24-4 32 0" stroke="white" strokeWidth="1" fill="none"/>
-    <rect x="8" y="36" width="48" height="12" fill="#16A34A"/>
-    <path d="M12 40h4v4h-4zM20 40h4v4h-4zM28 40h4v4h-4zM36 40h4v4h-4zM44 40h4v4h-4z" fill="#22C55E"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-green-700 text-[4px] font-bold">RIO GRANDE</text>
+    {/* Badge/emblem style (like National Park Service) */}
+    <circle cx="32" cy="32" r="26" fill="#3B82F6" stroke="#2563EB" strokeWidth="2"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="28" textAnchor="middle" className="fill-blue-600 text-[5px] font-bold">RIO</text>
+    <text x="32" y="36" textAnchor="middle" className="fill-blue-600 text-[5px] font-bold">GRANDE</text>
   </svg>
 );
 
 export const SouthwestGardenLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="12" width="40" height="40" rx="6" fill="#0891B2" stroke="#0E7490" strokeWidth="2"/>
-    <circle cx="24" cy="24" r="6" fill="#22C55E"/>
-    <circle cx="40" cy="24" r="4" fill="#EAB308"/>
-    <circle cx="24" cy="40" r="4" fill="#DC2626"/>
-    <circle cx="40" cy="40" r="6" fill="#A855F7"/>
-    <path d="M16 32h32" stroke="white" strokeWidth="2"/>
-    <path d="M32 16v32" stroke="white" strokeWidth="2"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-cyan-700 text-[3px] font-bold">SOUTHWEST</text>
+    {/* Text wordmark only (like Home Depot) */}
+    <text x="32" y="26" textAnchor="middle" className="fill-cyan-600 text-[7px] font-black">SOUTHWEST</text>
+    <text x="32" y="36" textAnchor="middle" className="fill-cyan-500 text-[6px] font-medium">GARDEN</text>
+    <rect x="16" y="40" width="32" height="2" fill="#0891B2"/>
   </svg>
 );
 
-// Handyman Company Logos
+// Handyman Company Logos - Designed for authenticity and variety
 export const RedRiverHandymanLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="16" width="48" height="32" rx="4" fill="#DC2626" stroke="#B91C1C" strokeWidth="2"/>
-    <rect x="16" y="24" width="32" height="16" rx="2" fill="white"/>
-    <path d="M24 32h16M28 28v8M36 28v8" stroke="#DC2626" strokeWidth="2" strokeLinecap="round"/>
-    <circle cx="44" cy="20" r="3" fill="#FCD34D"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-red-700 text-[4px] font-bold">RED RIVER</text>
+    {/* Simple geometric (like Ace Hardware) */}
+    <rect x="16" y="16" width="32" height="32" fill="#DC2626" rx="6"/>
+    <rect x="22" y="22" width="20" height="20" fill="white" rx="2"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-red-600 text-[6px] font-black">RR</text>
   </svg>
 );
 
 export const AllFixHomeServicesLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="32,8 52,28 52,48 12,48 12,28" fill="#2563EB" stroke="#1D4ED8" strokeWidth="2"/>
-    <rect x="20" y="32" width="24" height="16" rx="2" fill="white"/>
-    <circle cx="24" cy="36" r="2" fill="#2563EB"/>
-    <rect x="28" y="34" width="8" height="4" fill="#2563EB"/>
-    <circle cx="40" cy="36" r="2" fill="#2563EB"/>
-    <rect x="20" y="42" width="24" height="2" fill="#2563EB"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-blue-700 text-[4px] font-bold">ALL-FIX</text>
+    {/* Text wordmark (like Lowe's) */}
+    <text x="32" y="28" textAnchor="middle" className="fill-blue-600 text-[8px] font-black">ALL-FIX</text>
+    <text x="32" y="36" textAnchor="middle" className="fill-blue-500 text-[5px] font-medium">HOME SERVICES</text>
   </svg>
 );
 
 export const ReliableRepairsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="26" fill="#059669" stroke="#047857" strokeWidth="2"/>
-    <rect x="24" y="16" width="16" height="32" rx="2" fill="white"/>
-    <path d="M28 24h8M28 28h8M28 32h8M28 36h8M28 40h8" stroke="#059669" strokeWidth="2"/>
-    <circle cx="32" cy="20" r="2" fill="#059669"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-green-700 text-[4px] font-bold">RELIABLE</text>
+    {/* Circle monogram (like GE) */}
+    <circle cx="32" cy="32" r="24" fill="#059669"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="37" textAnchor="middle" className="fill-green-600 text-[10px] font-bold">✓</text>
   </svg>
 );
 
 export const QuickFixSolutionsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="12" width="40" height="40" rx="8" fill="#F59E0B" stroke="#D97706" strokeWidth="2"/>
-    <path d="M24 24l16 16M40 24L24 40" stroke="white" strokeWidth="4" strokeLinecap="round"/>
-    <circle cx="32" cy="32" r="6" fill="white"/>
-    <path d="M32 26v12M26 32h12" stroke="#F59E0B" strokeWidth="2"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-amber-700 text-[4px] font-bold">QUICK FIX</text>
+    {/* Corporate rectangular (like Best Buy) */}
+    <rect x="10" y="24" width="44" height="16" fill="#F59E0B" rx="2"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-white text-[6px] font-black">QUICK FIX</text>
   </svg>
 );
 
 export const HomeHelperProLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="32,8 54,30 50,30 50,52 14,52 14,30 10,30" fill="#7C3AED" stroke="#6D28D9" strokeWidth="2"/>
-    <rect x="22" y="34" width="20" height="18" rx="2" fill="white"/>
-    <rect x="26" y="38" width="4" height="8" fill="#7C3AED"/>
-    <rect x="34" y="38" width="4" height="8" fill="#7C3AED"/>
-    <rect x="26" y="46" width="12" height="6" rx="1" fill="#7C3AED"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-purple-700 text-[4px] font-bold">HOME HELPER</text>
+    {/* Badge/shield style (like Better Business Bureau) */}
+    <polygon points="32,8 48,20 48,44 32,56 16,44 16,20" fill="#7C3AED"/>
+    <polygon points="32,14 42,24 42,42 32,50 22,42 22,24" fill="white"/>
+    <text x="32" y="30" textAnchor="middle" className="fill-purple-600 text-[5px] font-bold">HOME</text>
+    <text x="32" y="36" textAnchor="middle" className="fill-purple-600 text-[5px] font-bold">HELPER</text>
   </svg>
 );
 
-// Painters Company Logos
+// Painters Company Logos - Designed for authenticity and variety
 export const PrecisionPaintCoLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="12" width="40" height="40" rx="6" fill="#1F2937" stroke="#111827" strokeWidth="2"/>
-    <rect x="16" y="16" width="32" height="12" fill="#EF4444"/>
-    <rect x="16" y="28" width="32" height="12" fill="white"/>
-    <rect x="16" y="40" width="32" height="8" fill="#3B82F6"/>
-    <circle cx="20" cy="22" r="2" fill="white"/>
-    <circle cx="44" cy="22" r="2" fill="white"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-gray-700 text-[4px] font-bold">PRECISION</text>
+    {/* Simple text wordmark (like Ford, IBM) */}
+    <text x="32" y="26" textAnchor="middle" className="fill-blue-600 text-[10px] font-black">PRECISION</text>
+    <text x="32" y="38" textAnchor="middle" className="fill-gray-600 text-[6px] font-medium">PAINT CO</text>
+    <rect x="18" y="42" width="28" height="2" fill="#2563EB"/>
   </svg>
 );
 
 export const EliteInteriorPaintingLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="26" fill="#7C3AED" stroke="#6D28D9" strokeWidth="2"/>
-    <path d="M20 20h24v24H20z" fill="white"/>
-    <path d="M24 24v16M28 24v16M32 24v16M36 24v16M40 24v16" stroke="#7C3AED" strokeWidth="2"/>
-    <rect x="18" y="42" width="28" height="4" rx="2" fill="#FCD34D"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-purple-700 text-[4px] font-bold">ELITE PAINT</text>
+    {/* Icon-only monogram (like Nike, BMW) */}
+    <circle cx="32" cy="32" r="24" fill="#7C3AED"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="38" textAnchor="middle" className="fill-purple-600 text-[12px] font-black">E</text>
   </svg>
 );
 
 export const ProExteriorSolutionsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="32,8 54,30 54,52 10,52 10,30" fill="#059669" stroke="#047857" strokeWidth="2"/>
-    <rect x="18" y="32" width="28" height="20" rx="2" fill="white"/>
-    <rect x="22" y="36" width="8" height="12" fill="#059669"/>
-    <rect x="34" y="36" width="8" height="12" fill="#059669"/>
-    <rect x="26" y="44" width="12" height="8" rx="1" fill="#059669"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-green-700 text-[4px] font-bold">PRO EXTERIOR</text>
+    {/* Badge/shield style (like Harley Davidson) */}
+    <polygon points="32,8 48,20 48,44 32,56 16,44 16,20" fill="#059669"/>
+    <polygon points="32,14 42,24 42,42 32,50 22,42 22,24" fill="white"/>
+    <text x="32" y="30" textAnchor="middle" className="fill-green-600 text-[5px] font-bold">PRO</text>
+    <text x="32" y="36" textAnchor="middle" className="fill-green-600 text-[5px] font-bold">EXTERIOR</text>
   </svg>
 );
 
 export const ColorCraftPaintersLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="8" width="48" height="48" rx="24" fill="#F59E0B" stroke="#D97706" strokeWidth="2"/>
-    <circle cx="24" cy="24" r="6" fill="#EF4444"/>
-    <circle cx="40" cy="24" r="6" fill="#3B82F6"/>
-    <circle cx="24" cy="40" r="6" fill="#22C55E"/>
-    <circle cx="40" cy="40" r="6" fill="#A855F7"/>
-    <circle cx="32" cy="32" r="4" fill="white"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-amber-700 text-[4px] font-bold">COLOR CRAFT</text>
+    {/* Corporate rectangular (like Microsoft, Walmart) */}
+    <rect x="8" y="24" width="48" height="16" fill="#F59E0B" rx="2"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-white text-[7px] font-black">COLOR CRAFT</text>
   </svg>
 );
 
 export const PremierPaintWorksLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="16" width="40" height="32" rx="4" fill="#0891B2" stroke="#0E7490" strokeWidth="2"/>
-    <path d="M16 24l8 8l8-8l8 8l8-8v16H16V24z" fill="white"/>
-    <rect x="28" y="20" width="8" height="24" fill="#0891B2"/>
-    <circle cx="32" cy="28" r="3" fill="white"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-cyan-700 text-[4px] font-bold">PREMIER</text>
+    {/* Simple geometric (like Target, AT&T) */}
+    <rect x="16" y="16" width="32" height="32" fill="#0891B2" rx="16"/>
+    <circle cx="32" cy="32" r="12" fill="white"/>
+    <circle cx="32" cy="32" r="8" fill="#0891B2"/>
+    <circle cx="32" cy="32" r="4" fill="white"/>
   </svg>
 );
 
-// Construction Company Logos  
+// Construction Company Logos - Designed for authenticity and variety
 export const SouthCoreContractingLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="8" width="48" height="48" rx="8" fill="#1F2937" stroke="#111827" strokeWidth="2"/>
-    <rect x="16" y="16" width="32" height="24" fill="#F59E0B"/>
-    <rect x="20" y="20" width="24" height="4" fill="white"/>
-    <rect x="20" y="28" width="24" height="4" fill="white"/>
-    <rect x="20" y="36" width="24" height="4" fill="white"/>
-    <rect x="16" y="40" width="32" height="8" fill="#DC2626"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-gray-700 text-[3px] font-bold">SOUTHCORE</text>
+    {/* Simple text wordmark (like John Deere, Ford) */}
+    <text x="32" y="22" textAnchor="middle" className="fill-gray-700 text-[9px] font-black">SOUTHCORE</text>
+    <text x="32" y="34" textAnchor="middle" className="fill-gray-600 text-[6px] font-medium">CONTRACTING</text>
+    <rect x="16" y="38" width="32" height="3" fill="#1F2937"/>
+    <rect x="20" y="42" width="24" height="1" fill="#6B7280"/>
   </svg>
 );
 
 export const PremierConstructionLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="32,8 56,32 32,56 8,32" fill="#2563EB" stroke="#1D4ED8" strokeWidth="2"/>
-    <rect x="24" y="24" width="16" height="16" rx="2" fill="white"/>
-    <path d="M28 28h8M28 32h8M28 36h8" stroke="#2563EB" strokeWidth="2"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-blue-700 text-[4px] font-bold">PREMIER</text>
+    {/* Icon-only monogram (like GE, HP) */}
+    <circle cx="32" cy="32" r="24" fill="#2563EB"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="38" textAnchor="middle" className="fill-blue-600 text-[12px] font-black">P</text>
   </svg>
 );
 
 export const SolidFoundationLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="32" width="48" height="16" fill="#78716C" stroke="#57534E" strokeWidth="2"/>
-    <polygon points="16,32 24,16 40,16 48,32" fill="#059669" stroke="#047857" strokeWidth="2"/>
-    <rect x="12" y="40" width="40" height="4" fill="#44403C"/>
-    <rect x="28" y="20" width="8" height="12" fill="white"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-stone-700 text-[3px] font-bold">SOLID FOUND.</text>
+    {/* Corporate rectangular (like Microsoft, Best Buy) */}
+    <rect x="8" y="24" width="48" height="16" fill="#78716C" rx="2"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-white text-[6px] font-black">SOLID FOUNDATION</text>
   </svg>
 );
 
 export const MetroCommercialLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="12" width="40" height="40" rx="4" fill="#0891B2" stroke="#0E7490" strokeWidth="2"/>
-    <rect x="16" y="16" width="10" height="32" fill="white"/>
-    <rect x="38" y="16" width="10" height="32" fill="white"/>
-    <rect x="26" y="24" width="12" height="24" fill="white"/>
-    <rect x="18" y="20" width="6" height="4" fill="#0891B2"/>
-    <rect x="18" y="28" width="6" height="4" fill="#0891B2"/>
-    <rect x="18" y="36" width="6" height="4" fill="#0891B2"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-cyan-700 text-[4px] font-bold">METRO</text>
+    {/* Badge/shield style (like fire dept) */}
+    <polygon points="32,8 48,20 48,44 32,56 16,44 16,20" fill="#0891B2"/>
+    <polygon points="32,14 42,24 42,42 32,50 22,42 22,24" fill="white"/>
+    <text x="32" y="28" textAnchor="middle" className="fill-cyan-600 text-[5px] font-bold">METRO</text>
+    <text x="32" y="34" textAnchor="middle" className="fill-cyan-600 text-[5px] font-bold">COMMERCIAL</text>
   </svg>
 );
 
 export const EliteBuildingSolutionsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="32,8 52,24 52,48 12,48 12,24" fill="#7C3AED" stroke="#6D28D9" strokeWidth="2"/>
-    <rect x="18" y="28" width="28" height="20" rx="2" fill="white"/>
-    <rect x="22" y="32" width="6" height="8" fill="#7C3AED"/>
-    <rect x="29" y="32" width="6" height="8" fill="#7C3AED"/>
-    <rect x="36" y="32" width="6" height="8" fill="#7C3AED"/>
-    <rect x="22" y="40" width="20" height="8" rx="1" fill="#7C3AED"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-purple-700 text-[4px] font-bold">ELITE BUILD</text>
+    {/* Simple geometric (like Chase, AT&T) */}
+    <rect x="16" y="16" width="32" height="32" fill="#7C3AED" rx="6"/>
+    <rect x="20" y="20" width="24" height="24" fill="white" rx="2"/>
+    <rect x="24" y="24" width="16" height="16" fill="#7C3AED" rx="1"/>
+    <rect x="28" y="28" width="8" height="8" fill="white"/>
   </svg>
 );
 
-// Healthcare Company Logos
+// Healthcare Company Logos - Designed for authenticity and variety
 export const RioVerdePediatricsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="26" fill="#06B6D4" stroke="#0891B2" strokeWidth="2"/>
-    <path d="M32 16v32M16 32h32" stroke="white" strokeWidth="6" strokeLinecap="round"/>
-    <circle cx="32" cy="32" r="8" fill="white"/>
-    <path d="M32 26v12M26 32h12" stroke="#06B6D4" strokeWidth="2"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-cyan-700 text-[4px] font-bold">RIO VERDE</text>
+    {/* Simple text wordmark (like Kaiser, Mayo Clinic) */}
+    <text x="32" y="24" textAnchor="middle" className="fill-cyan-600 text-[8px] font-black">RIO VERDE</text>
+    <text x="32" y="34" textAnchor="middle" className="fill-cyan-500 text-[6px] font-medium">PEDIATRICS</text>
+    <rect x="20" y="38" width="24" height="2" fill="#06B6D4"/>
   </svg>
 );
 
 export const SouthwestFamilyMedicineLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="16" width="48" height="32" rx="16" fill="#059669" stroke="#047857" strokeWidth="2"/>
-    <circle cx="24" cy="28" r="4" fill="white"/>
-    <circle cx="40" cy="28" r="4" fill="white"/>
-    <path d="M24 36c2 4 6 4 8 4s6 0 8-4" stroke="white" strokeWidth="3" fill="none" strokeLinecap="round"/>
-    <text x="32" y="56" textAnchor="middle" className="fill-green-700 text-[3px] font-bold">SW FAMILY</text>
+    {/* Icon-only monogram (like Cleveland Clinic) */}
+    <circle cx="32" cy="32" r="24" fill="#059669"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="38" textAnchor="middle" className="fill-green-600 text-[10px] font-black">SF</text>
   </svg>
 );
 
 export const DesertDentalAssociatesLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <ellipse cx="32" cy="32" rx="24" ry="26" fill="white" stroke="#2563EB" strokeWidth="3"/>
-    <path d="M20 28c4-4 8-4 12 0s8 4 12 0" stroke="#2563EB" strokeWidth="2" fill="none"/>
-    <rect x="22" y="32" width="4" height="8" rx="2" fill="#2563EB"/>
-    <rect x="26" y="30" width="4" height="10" rx="2" fill="#2563EB"/>
-    <rect x="30" y="28" width="4" height="12" rx="2" fill="#2563EB"/>
-    <rect x="34" y="30" width="4" height="10" rx="2" fill="#2563EB"/>
-    <rect x="38" y="32" width="4" height="8" rx="2" fill="#2563EB"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-blue-700 text-[3px] font-bold">DESERT DENTAL</text>
+    {/* Corporate rectangular (like United Health) */}
+    <rect x="8" y="24" width="48" height="16" fill="#2563EB" rx="2"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-white text-[6px] font-black">DESERT DENTAL</text>
   </svg>
 );
 
 export const MountainViewCardiologyLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M32 12c-6 0-12 4-12 10c0 12 12 24 12 30c0-6 12-18 12-30c0-6-6-10-12-10z" fill="#DC2626" stroke="#B91C1C" strokeWidth="2"/>
-    <circle cx="32" cy="22" r="6" fill="white"/>
-    <path d="M32 18v8M28 22h8" stroke="#DC2626" strokeWidth="2"/>
-    <path d="M16 40c8-4 16-4 32 0c-8 8-24 8-32 0z" fill="#6B7280"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-red-700 text-[3px] font-bold">MTN VIEW</text>
+    {/* Badge/shield style (like medical cross) */}
+    <polygon points="32,8 48,20 48,44 32,56 16,44 16,20" fill="#DC2626"/>
+    <polygon points="32,14 42,24 42,42 32,50 22,42 22,24" fill="white"/>
+    <path d="M32 20v24M20 32h24" stroke="#DC2626" strokeWidth="3" strokeLinecap="round"/>
   </svg>
 );
 
 export const CentralPlainsOrthopedicsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="12" width="40" height="40" rx="8" fill="#0891B2" stroke="#0E7490" strokeWidth="2"/>
-    <ellipse cx="32" cy="28" rx="12" ry="8" fill="white"/>
-    <rect x="28" y="28" width="8" height="16" rx="2" fill="white"/>
-    <circle cx="32" cy="44" r="4" fill="white"/>
-    <path d="M24 32h16M24 36h16" stroke="#0891B2" strokeWidth="1"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-cyan-700 text-[3px] font-bold">CENTRAL PLAINS</text>
+    {/* Simple geometric (like modern medical logos) */}
+    <rect x="16" y="16" width="32" height="32" fill="#0891B2" rx="16"/>
+    <circle cx="32" cy="32" r="14" fill="white"/>
+    <circle cx="32" cy="32" r="10" fill="#0891B2"/>
+    <circle cx="32" cy="32" r="6" fill="white"/>
+    <circle cx="32" cy="32" r="2" fill="#0891B2"/>
   </svg>
 );
 
-// Electrician Company Logos
+// Electrician Company Logos - Designed for authenticity and variety
 export const PrecisionPowerTechsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="26" fill="#FCD34D" stroke="#F59E0B" strokeWidth="2"/>
-    <polygon points="32,12 40,28 24,28" fill="#1F2937"/>
-    <rect x="28" y="28" width="8" height="16" fill="#1F2937"/>
-    <rect x="24" y="44" width="16" height="4" rx="2" fill="#1F2937"/>
-    <circle cx="20" cy="20" r="2" fill="#EF4444"/>
-    <circle cx="44" cy="20" r="2" fill="#EF4444"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-amber-700 text-[4px] font-bold">PRECISION</text>
+    {/* Simple text wordmark (like Westinghouse, GE) */}
+    <text x="32" y="24" textAnchor="middle" className="fill-amber-600 text-[8px] font-black">PRECISION</text>
+    <text x="32" y="34" textAnchor="middle" className="fill-amber-600 text-[6px] font-medium">POWER TECHS</text>
+    <rect x="18" y="38" width="28" height="2" fill="#F59E0B"/>
   </svg>
 );
 
 export const ReliableElectricSolutionsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="8" y="12" width="48" height="40" rx="6" fill="#2563EB" stroke="#1D4ED8" strokeWidth="2"/>
-    <circle cx="32" cy="32" r="16" fill="white"/>
-    <path d="M24 24l16 16M40 24L24 40" stroke="#2563EB" strokeWidth="3" strokeLinecap="round"/>
-    <circle cx="32" cy="32" r="6" fill="#2563EB"/>
-    <circle cx="32" cy="32" r="2" fill="white"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-blue-700 text-[4px] font-bold">RELIABLE</text>
+    {/* Icon-only monogram (like Tesla, Siemens) */}
+    <circle cx="32" cy="32" r="24" fill="#2563EB"/>
+    <circle cx="32" cy="32" r="18" fill="white"/>
+    <text x="32" y="38" textAnchor="middle" className="fill-blue-600 text-[12px] font-black">R</text>
   </svg>
 );
 
 export const MasterVoltSpecialistsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <polygon points="32,8 56,32 32,56 8,32" fill="#7C3AED" stroke="#6D28D9" strokeWidth="2"/>
-    <polygon points="32,16 44,32 32,48 20,32" fill="white"/>
-    <polygon points="32,20 36,32 32,44 28,32" fill="#7C3AED"/>
-    <path d="M16 16l8 8M48 16l-8 8M16 48l8-8M48 48l-8-8" stroke="#FCD34D" strokeWidth="2"/>
-    <text x="32" y="60" textAnchor="middle" className="fill-purple-700 text-[4px] font-bold">MASTER VOLT</text>
+    {/* Corporate rectangular (like Schneider Electric) */}
+    <rect x="8" y="24" width="48" height="16" fill="#7C3AED" rx="2"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-white text-[6px] font-black">MASTER VOLT</text>
   </svg>
 );
 
 export const EmergencyPowerProLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <circle cx="32" cy="32" r="26" fill="#DC2626" stroke="#B91C1C" strokeWidth="2"/>
-    <polygon points="32,12 40,28 28,28 36,44 24,44 32,12" fill="white"/>
-    <circle cx="16" cy="16" r="3" fill="#FCD34D" opacity="0.8"/>
-    <circle cx="48" cy="16" r="3" fill="#FCD34D" opacity="0.8"/>
-    <circle cx="16" cy="48" r="3" fill="#FCD34D" opacity="0.8"/>
-    <circle cx="48" cy="48" r="3" fill="#FCD34D" opacity="0.8"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-red-700 text-[3px] font-bold">EMERGENCY</text>
+    {/* Badge/shield style (like electrical safety logos) */}
+    <polygon points="32,8 48,20 48,44 32,56 16,44 16,20" fill="#DC2626"/>
+    <polygon points="32,14 42,24 42,42 32,50 22,42 22,24" fill="white"/>
+    <polygon points="32,18 36,28 28,28 32,38 36,28" fill="#DC2626"/>
   </svg>
 );
 
 export const EliteElectricalServicesLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
   <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="12" y="12" width="40" height="40" rx="8" fill="#059669" stroke="#047857" strokeWidth="2"/>
+    {/* Simple geometric (like power company logos) */}
+    <rect x="16" y="16" width="32" height="32" fill="#059669" rx="16"/>
     <circle cx="32" cy="32" r="14" fill="white"/>
-    <path d="M32 20v6M32 38v6M20 32h6M38 32h6" stroke="#059669" strokeWidth="3" strokeLinecap="round"/>
-    <circle cx="32" cy="32" r="4" fill="#059669"/>
-    <text x="32" y="58" textAnchor="middle" className="fill-green-700 text-[4px] font-bold">ELITE ELECTRIC</text>
+    <circle cx="32" cy="32" r="10" fill="#059669"/>
+    <circle cx="32" cy="32" r="6" fill="white"/>
+    <polygon points="32,26 34,32 30,32" fill="#059669"/>
+    <polygon points="32,38 30,32 34,32" fill="#059669"/>
+  </svg>
+);
+
+// Plumbing Company Logos - Designed for authenticity and variety
+export const ElitePlumbingSolutionsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Simple text-only wordmark logo (like IBM, Google) */}
+    <text x="32" y="22" textAnchor="middle" className="fill-blue-600 text-[8px] font-black">ELITE</text>
+    <text x="32" y="32" textAnchor="middle" className="fill-gray-700 text-[6px] font-medium">Plumbing</text>
+    <text x="32" y="42" textAnchor="middle" className="fill-gray-700 text-[6px] font-medium">Solutions</text>
+    <rect x="16" y="46" width="32" height="1" fill="#2563EB"/>
+  </svg>
+);
+
+export const RapidResponsePlumbersLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Simple icon-only logo (like Nike swoosh, Apple) */}
+    <circle cx="32" cy="32" r="24" fill="#DC2626"/>
+    <circle cx="32" cy="32" r="20" fill="white"/>
+    <circle cx="32" cy="32" r="16" fill="#DC2626"/>
+    {/* Simple "RR" monogram */}
+    <text x="32" y="38" textAnchor="middle" className="fill-white text-[14px] font-black">RR</text>
+  </svg>
+);
+
+export const MetroDrainSolutionsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Corporate rectangular logo (like Microsoft, IBM) */}
+    <rect x="8" y="20" width="48" height="24" fill="#059669" rx="2"/>
+    <rect x="12" y="24" width="40" height="16" fill="white" rx="1"/>
+    <text x="32" y="34" textAnchor="middle" className="fill-green-600 text-[7px] font-bold">METRO DRAIN</text>
+    <rect x="28" y="36" width="8" height="1" fill="#059669"/>
+  </svg>
+);
+
+export const EmergencyPipeProsLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Badge-style logo (like fire dept, police) */}
+    <path d="M32 8 L44 16 L44 40 L32 52 L20 40 L20 16 Z" fill="#1F2937" stroke="#374151" strokeWidth="2"/>
+    <path d="M32 12 L40 18 L40 38 L32 46 L24 38 L24 18 Z" fill="white"/>
+    <text x="32" y="26" textAnchor="middle" className="fill-gray-800 text-[5px] font-black">EMERGENCY</text>
+    <text x="32" y="32" textAnchor="middle" className="fill-gray-800 text-[5px] font-black">PIPE</text>
+    <text x="32" y="38" textAnchor="middle" className="fill-gray-800 text-[5px] font-black">PROS</text>
+  </svg>
+);
+
+export const AllHoursPlumbingCoLogo: React.FC<LogoProps> = ({ className = "w-12 h-12" }) => (
+  <svg className={className} viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+    {/* Simple geometric logo (like Chase bank, AT&T) */}
+    <rect x="16" y="16" width="32" height="32" fill="#F59E0B" rx="4"/>
+    <circle cx="32" cy="32" r="10" fill="white"/>
+    <text x="32" y="36" textAnchor="middle" className="fill-orange-500 text-[6px] font-black">24</text>
   </svg>
 );
 
@@ -593,10 +565,21 @@ export const getCompanyLogo = (companyName: string, industry?: string, className
     return <EliteElectricalServicesLogo className={className} />;
   }
 
-  // Plumbing Companies (from existing PlumbingCompanyLogos)
+  // Plumbing Companies (integrated from PlumbingCompanyLogos)
   if (companyName.includes("Elite Plumbing")) {
-    // Import from existing plumbing component
-    return <EliteClimateControlLogo className={className} />; // Temporary fallback
+    return <ElitePlumbingSolutionsLogo className={className} />;
+  }
+  if (companyName.includes("Rapid Response")) {
+    return <RapidResponsePlumbersLogo className={className} />;
+  }
+  if (companyName.includes("Metro Drain")) {
+    return <MetroDrainSolutionsLogo className={className} />;
+  }
+  if (companyName.includes("Emergency Pipe")) {
+    return <EmergencyPipeProsLogo className={className} />;
+  }
+  if (companyName.includes("All Hours Plumbing") || companyName.includes("All Hours")) {
+    return <AllHoursPlumbingCoLogo className={className} />;
   }
 
   // Default fallback - simple geometric logo

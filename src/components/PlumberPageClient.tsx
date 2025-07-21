@@ -311,13 +311,13 @@ export default function PlumberPageClient() {
             <p className="text-gray-700 dark:text-gray-300 text-sm md:text-base mb-6">
               Trusted by Local Plumbing Companies:
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-center">
+            <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-start">
               {clientCompanies.map((company, index) => (
-                <div key={index} className="text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex justify-center mb-2">
-                    {getCompanyLogo(company.name, "w-12 h-12")}
+                <div key={index} className="text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm hover:shadow-md transition-shadow h-24 flex flex-col justify-center">
+                  <div className="flex justify-center mb-2 flex-1 items-center">
+                    {getCompanyLogo(company.name, "plumbing", "w-12 h-12")}
                   </div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
+                  <h4 className="font-semibold text-gray-900 dark:text-white text-xs leading-tight">
                     {company.name}
                   </h4>
                 </div>
