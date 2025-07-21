@@ -8,6 +8,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'Handyman Website Design | Websites That Turn Searches Into Service Calls',
@@ -559,6 +560,17 @@ export default function HandymanPage() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="handyman"
+        formName="Handyman Inquiry"
+        title="Let's Build Your Handyman Website Right"
+        subtitle="Tell us about your handyman business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        mobileCtaText="Ready to fix more leads?"
+        mobileCtaSubtext="Get your handyman website today"
+        mobileBgGradient="bg-gradient-to-r from-amber-600 to-yellow-600"
+      />
     </div>
   );
 }

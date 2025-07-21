@@ -8,6 +8,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'Construction Websites Built to Win Bids and Build Trust',
@@ -652,6 +653,17 @@ export default function ConstructionPage() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="construction"
+        formName="Construction Inquiry"
+        title="Let's Build Your Construction Website Right"
+        subtitle="Tell us about your construction business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        mobileCtaText="Ready to build more leads?"
+        mobileCtaSubtext="Get your construction website today"
+        mobileBgGradient="bg-gradient-to-r from-orange-600 to-amber-600"
+      />
     </div>
   );
 }

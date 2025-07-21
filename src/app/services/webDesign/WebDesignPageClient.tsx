@@ -7,6 +7,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { BackgroundImage } from '@/components/images/BackgroundImage';
 import LightButton from '@/components/LightButton';
 import DarkButton from '@/components/DarkButton';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 // Pricing Toggle Component
 interface PricingToggleProps {
@@ -798,6 +799,16 @@ export default function WebDesignPageClient() {
         </div>
       </section>
 
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="web-design"
+        formName="Web Design Inquiry"
+        title="Let's Build Your Custom Website Right"
+        subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure — just real help from a team that builds custom, high-performance websites."
+        mobileCtaText="Ready to get a custom website?"
+        mobileCtaSubtext="Get your web design quote today"
+        mobileBgGradient="bg-gradient-to-r from-blue-600 to-indigo-600"
+      />
     </div>
   );
 }

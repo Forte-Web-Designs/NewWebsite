@@ -8,6 +8,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'Painter Website Design | Websites That Turn Brush Strokes Into Booked Jobs',
@@ -559,6 +560,17 @@ export default function PaintersPage() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="painters"
+        formName="Painter Inquiry"
+        title="Let's Build Your Painter Website Right"
+        subtitle="Tell us about your painting business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        mobileCtaText="Ready to paint more leads?"
+        mobileCtaSubtext="Get your painter website today"
+        mobileBgGradient="bg-gradient-to-r from-purple-600 to-pink-600"
+      />
     </div>
   );
 }

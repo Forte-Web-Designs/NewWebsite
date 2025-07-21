@@ -7,6 +7,7 @@ import DarkButton from "@/components/DarkButton";
 import { Icon } from "@/components/images/Icon";
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 type FAQItem = {
   question: string;
@@ -711,6 +712,17 @@ export default function SeoDesignPage() {
             </SimpleScrollReveal>
           </div>
         </section>
+
+        {/* Industry-specific CTA functionality */}
+        <IndustryLeadCTA 
+          industry="seo"
+          formName="SEO Inquiry"
+          title="Let's Build Your SEO Strategy Right"
+          subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure — just real help from a team that builds winning SEO strategies."
+          mobileCtaText="Ready to rank higher?"
+          mobileCtaSubtext="Get your SEO strategy today"
+          mobileBgGradient="bg-gradient-to-r from-green-600 to-teal-600"
+        />
       </div>
     </div>
   );

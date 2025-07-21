@@ -135,20 +135,22 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
       mobileFriendly = seed > 0.15; // Consistent 85% pass rate
     }
     
-    // Realistic SEO scoring that finds actual issues
-    let seoScore = 3; // Start low - most sites have issues
+    // Realistic SEO scoring that finds actual issues - STRICTER CRITERIA
+    let seoScore = 2; // Start lower - most sites have significant issues
     
     // SSL bonus (crucial for SEO)
     if (ssl) seoScore += 1.5;
     
-    // Speed bonus/penalty (very important for SEO)
-    if (loadTime < 2) seoScore += 2;
-    else if (loadTime < 3) seoScore += 1;
-    else if (loadTime > 5) seoScore -= 1;
-    else if (loadTime > 7) seoScore -= 2;
+    // Speed bonus/penalty (MUCH MORE STRICT - speed is critical)
+    if (loadTime < 1.5) seoScore += 2.5; // Only very fast sites get good scores
+    else if (loadTime < 2.5) seoScore += 1.5; // Decent speed
+    else if (loadTime < 3.5) seoScore += 0.5; // Acceptable
+    else if (loadTime > 3.5) seoScore -= 0.5; // Starting to hurt SEO
+    else if (loadTime > 5) seoScore -= 1.5; // Major speed issues
+    else if (loadTime > 7) seoScore -= 2.5; // Critical speed problems
     
-    // Mobile friendly bonus
-    if (mobileFriendly) seoScore += 1;
+    // Mobile friendly bonus (but less generous)
+    if (mobileFriendly) seoScore += 0.8;
     
     // Platform-specific SEO challenges (realistic business problems)
     if (domain.includes('wordpress.com') || domain.includes('wix.com') || domain.includes('weebly.com')) {
@@ -298,14 +300,16 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
   }, [autoRunUrl, handleSubmit, autoRunTriggered, isLoading]);
 
   const getScoreColor = (score: number) => {
-    if (score >= 7) return 'text-green-600';
-    if (score >= 5) return 'text-yellow-600';
-    return 'text-red-600';
+    if (score >= 8) return 'text-green-600 dark:text-green-400';
+    if (score >= 6) return 'text-yellow-600 dark:text-yellow-400';
+    if (score >= 4) return 'text-orange-600 dark:text-orange-400';
+    return 'text-red-600 dark:text-red-400';
   };
 
   const getScoreIcon = (score: number) => {
-    if (score >= 7) return '🟢';
-    if (score >= 5) return '🟡';
+    if (score >= 8) return '🟢';
+    if (score >= 6) return '🟡';
+    if (score >= 4) return '🟠';
     return '🔴';
   };
 
@@ -468,7 +472,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                 <div className="flex items-center justify-between bg-gray-50 dark:bg-white/10 rounded-lg p-2 border border-gray-200 dark:border-white/20">
                   <span className="text-gray-700 dark:text-white/90 font-medium text-xs">⚡ Speed:</span>
                   <span className={results.loadTime < 3 ? 'text-green-600 dark:text-green-400 font-semibold text-xs' : results.loadTime < 5 ? 'text-yellow-600 dark:text-yellow-400 font-semibold text-xs' : 'text-red-600 dark:text-red-400 font-semibold text-xs'}>
-                    {results.loadTime}s
+                    {results.loadTime < 3 ? '✅' : results.loadTime < 5 ? '⚠️' : '❌'} {results.loadTime}s
                   </span>
                 </div>
                 

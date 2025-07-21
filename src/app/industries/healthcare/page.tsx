@@ -5,6 +5,7 @@ import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments',
@@ -667,6 +668,17 @@ export default function HealthcarePage() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="healthcare"
+        formName="Healthcare Inquiry"
+        title="Let's Build Your Healthcare Website Right"
+        subtitle="Tell us about your medical practice and we'll get back to you within 1 business day. No pressure — just HIPAA-compliant solutions from a team that understands healthcare."
+        mobileCtaText="Ready to increase appointments?"
+        mobileCtaSubtext="Get your healthcare website today"
+        mobileBgGradient="bg-gradient-to-r from-teal-600 to-blue-600"
+      />
     </div>
   );
 }

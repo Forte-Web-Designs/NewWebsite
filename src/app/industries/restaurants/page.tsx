@@ -6,6 +6,7 @@ import { getCompanyLogo } from '@/components/CompanyLogos';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'Restaurant Website Design | Websites That Fill Tables (and Order Carts)',
@@ -623,6 +624,17 @@ export default function RestaurantsPage() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="restaurants"
+        formName="Restaurant Inquiry"
+        title="Let's Build Your Restaurant Website Right"
+        subtitle="Tell us about your restaurant and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        mobileCtaText="Ready to fill more tables?"
+        mobileCtaSubtext="Get your restaurant website today"
+        mobileBgGradient="bg-gradient-to-r from-red-600 to-pink-600"
+      />
     </div>
   );
 }

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 import { useState } from 'react';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 const coreServices = [
   {
@@ -294,6 +295,16 @@ export default function ServicePage() {
             </div>
           </div>
         </section>
+
+        {/* Industry Lead CTA */}
+        <IndustryLeadCTA 
+          industry="services"
+          formName="Digital Marketing Services Inquiry"
+          mobileCtaText="Ready to grow your business?"
+          mobileBgGradient="bg-gradient-to-r from-blue-600 to-purple-600"
+          title="Let's Build Your Digital Marketing Strategy"
+          subtitle="Get a custom strategy designed to grow your business with our complete digital solutions."
+        />
       </div>
     </div>
   );

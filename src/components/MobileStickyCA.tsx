@@ -1,11 +1,13 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import GenericContactModal from '@/components/GenericContactModal';
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,6 +18,9 @@ export default function MobileStickyCTA() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  // Hide on all industry and service pages
+  if (pathname?.includes('/industries/') || pathname?.includes('/services/')) return null;
 
   if (!isVisible) return null;
 

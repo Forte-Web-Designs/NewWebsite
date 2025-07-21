@@ -9,6 +9,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'Electrician Website Design That Powers Up Lead Generation',
@@ -726,6 +727,17 @@ export default function ElectriciansPage() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="electricians"
+        formName="Electrician Inquiry"
+        title="Let's Build Your Electrician Website Right"
+        subtitle="Tell us about your electrical business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        mobileCtaText="Ready to power up your leads?"
+        mobileCtaSubtext="Get your electrician website today"
+        mobileBgGradient="bg-gradient-to-r from-yellow-500 to-orange-600"
+      />
     </div>
   );
 }

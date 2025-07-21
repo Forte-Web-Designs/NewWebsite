@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Icon } from "@/components/images/Icon";
 import LightButton from "@/components/LightButton";
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 type FAQItem = {
   question: string;
@@ -614,6 +615,17 @@ export default function SocialMediaPage() {
           </p>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="social-media"
+        formName="Social Media Inquiry"
+        title="Let's Build Your Social Media Strategy Right"
+        subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure — just real help from a team that builds engaging social media strategies."
+        mobileCtaText="Ready to grow on social?"
+        mobileCtaSubtext="Get your social media plan today"
+        mobileBgGradient="bg-gradient-to-r from-pink-600 to-purple-600"
+      />
     </>
   );
 }

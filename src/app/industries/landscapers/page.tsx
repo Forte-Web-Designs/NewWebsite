@@ -5,6 +5,7 @@ import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads',
@@ -648,6 +649,17 @@ export default function LandscapersPage() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="landscapers"
+        formName="Landscaping Inquiry"
+        title="Let's Build Your Landscaping Website Right"
+        subtitle="Tell us about your landscaping business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        mobileCtaText="Ready to grow more leads?"
+        mobileCtaSubtext="Get your landscaping website today"
+        mobileBgGradient="bg-gradient-to-r from-green-600 to-emerald-600"
+      />
     </div>
   );
 }

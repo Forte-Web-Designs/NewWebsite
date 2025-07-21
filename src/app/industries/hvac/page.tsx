@@ -9,6 +9,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'HVAC Websites That Bring the Heat (and Cool New Leads)',
@@ -794,6 +795,17 @@ export default function HVACPage() {
           </SimpleScrollReveal>
         </div>
       </section>
+
+      {/* Industry-specific CTA functionality */}
+      <IndustryLeadCTA 
+        industry="hvac"
+        formName="HVAC Inquiry"
+        title="Let's Build Your HVAC Website Right"
+        subtitle="Tell us about your heating and cooling business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        mobileCtaText="Ready to heat up your leads?"
+        mobileCtaSubtext="Get your HVAC website today"
+        mobileBgGradient="bg-gradient-to-r from-red-500 to-blue-500"
+      />
     </div>
   );
 }
