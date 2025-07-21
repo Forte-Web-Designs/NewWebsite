@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
-import { usePathname } from 'next/navigation';
 import { Icon } from '@/components/images/Icon';
 import GenericContactModal from '@/components/GenericContactModal';
 
@@ -10,7 +8,6 @@ export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
   const [isExpanded, setIsExpanded] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const pathname = usePathname();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -66,19 +63,13 @@ export default function MobileStickyCTA() {
                 </button>
               </div>
               
-              <div className="grid grid-cols-2 gap-1.5">
+              <div className="flex justify-center">
                 <button
                   onClick={() => setIsModalOpen(true)}
-                  className="bg-white text-blue-600 px-2 py-1.5 rounded-lg font-medium text-sm text-center hover:bg-gray-50 transition-colors"
+                  className="bg-white text-blue-600 px-6 py-2 rounded-lg font-medium text-sm hover:bg-gray-50 transition-colors"
                 >
                   Get Started
                 </button>
-                <Link
-                  href="/pricing"
-                  className="bg-white/20 backdrop-blur-sm text-white px-2 py-1.5 rounded-lg font-medium text-sm text-center hover:bg-white/30 transition-colors border border-white/30"
-                >
-                  View Pricing
-                </Link>
               </div>
               
               <div className="flex items-center justify-center gap-3 text-xs text-blue-100 pt-1">
