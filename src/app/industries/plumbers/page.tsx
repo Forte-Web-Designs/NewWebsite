@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
+import { getCompanyLogo } from '@/components/CompanyLogos';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
@@ -316,8 +317,9 @@ export default function PlumbersPage() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-5 gap-4 items-center">
               {clientCompanies.map((company, index) => (
-                <div key={index} className="text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm">
-                  <div className="text-2xl mb-2">🔧</div>
+                <div key={index} className="text-center p-4 bg-white dark:bg-gray-900 rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex justify-center mb-2">                        {getCompanyLogo(company.name, 'plumbing', "w-12 h-12")}
+                  </div>
                   <h4 className="font-semibold text-gray-900 dark:text-white text-sm">
                     {company.name}
                   </h4>

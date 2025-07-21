@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
+import { getCompanyLogo } from '@/components/CompanyLogos';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
@@ -251,8 +252,8 @@ export default function PaintersPage() {
             {clientCompanies.map((company, index) => (
               <SimpleAnimatedCard key={index}>
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6 text-center shadow-md hover:shadow-lg transition-shadow">
-                  <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/40 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <span className="text-2xl">🎨</span>
+                  <div className="flex justify-center mb-4">
+                    {getCompanyLogo(company.name, 'painter', "w-16 h-16")}
                   </div>
                   <h3 className="font-semibold text-gray-900 dark:text-white">{company.name}</h3>
                 </div>

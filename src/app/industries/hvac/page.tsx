@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
+import { getCompanyLogo } from '@/components/CompanyLogos';
 import { InlineSVG } from '@/components/images/InlineSVG';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
@@ -675,8 +676,8 @@ export default function HVACPage() {
               {clientCompanies.map((company, index) => (
                 <div key={index} className="text-center">
                   <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 mb-3">
-                    <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-xl">🌡️</span>
+                    <div className="flex justify-center mb-3">
+                      {getCompanyLogo(company.name, 'hvac', "w-12 h-12")}
                     </div>
                     <h3 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
                       {company.name}

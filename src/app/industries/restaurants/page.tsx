@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
+import { getCompanyLogo } from '@/components/CompanyLogos';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
@@ -336,7 +337,9 @@ export default function RestaurantsPage() {
             {clientCompanies.map((company, index) => (
               <SimpleAnimatedCard key={index}>
                 <div className="bg-orange-100 dark:bg-orange-900/40 rounded-xl p-6 text-center">
-                  <div className="text-3xl mb-3">🍽️</div>
+                  <div className="flex justify-center mb-3">
+                    {getCompanyLogo(company.name, 'restaurant', "w-12 h-12")}
+                  </div>
                   <h3 className="font-semibold text-gray-900 dark:text-white text-sm">
                     {company.name}
                   </h3>

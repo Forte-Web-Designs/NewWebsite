@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import CalendlyWidget from "@/components/CalendlyWidget";
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
@@ -341,6 +342,47 @@ export default function AboutUs() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <ContactForm />
+        </div>
+      </section>
+
+      {/* Calendly Booking Section */}
+      <section className="py-16 bg-gray-50 dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="max-w-4xl mx-auto">
+              <div className="text-center mb-8">
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                  Ready to Get Started?
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                  Book a free 30-minute strategy session to discuss your project goals and see how we can help your business grow.
+                </p>
+              </div>
+              
+              <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
+                <div className="mb-6">
+                  <h3 className="text-2xl font-semibold mb-3 text-gray-900 dark:text-white text-center">
+                    Schedule Your Free Strategy Call
+                  </h3>
+                  <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600 dark:text-gray-400 mb-4">
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span>No sales pressure</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span>Custom strategy session</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✓</span>
+                      <span>Work directly with Seth</span>
+                    </div>
+                  </div>
+                </div>
+                <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
+              </div>
+            </div>
+          </SimpleScrollReveal>
         </div>
       </section>
     </div>

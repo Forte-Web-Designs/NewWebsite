@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
+import { getCompanyLogo } from '@/components/CompanyLogos';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
@@ -545,8 +546,8 @@ export default function ConstructionPage() {
             {clientCompanies.map((company, index) => (
               <SimpleAnimatedCard key={index}>
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center hover:bg-slate-50 dark:hover:bg-slate-900/20 transition-colors">
-                  <div className="w-12 h-12 bg-slate-100 dark:bg-slate-900/50 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <Icon name="star" className="w-6 h-6 text-slate-600 dark:text-slate-400" />
+                  <div className="flex justify-center mb-3">
+                    {getCompanyLogo(company.name, 'construction', "w-12 h-12")}
                   </div>
                   <h3 className="font-semibold text-gray-900 dark:text-white text-sm">
                     {company.name}
