@@ -22,6 +22,15 @@ export default function Contact() {
         <input name="source" type="text" />
         <input name="timestamp" type="text" />
       </form>
+      <form name="Plumber Inquiry" data-netlify="true" style={{ display: 'none' }}>
+        <input name="firstName" type="text" />
+        <input name="businessName" type="text" />
+        <input name="email" type="email" />
+        <input name="phone" type="tel" />
+        <textarea name="message"></textarea>
+        <input name="trigger" type="text" />
+        <input name="industry" type="text" />
+      </form>
       
       <SectionBackgroundAnimation />
       
