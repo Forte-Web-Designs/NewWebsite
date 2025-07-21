@@ -9,6 +9,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Electrician Website Design That Powers Up Lead Generation',
@@ -22,6 +23,14 @@ export const metadata: Metadata = {
 };
 
 export default function ElectriciansPage() {
+  return (
+    <IndustryPageWrapper industry="electricians" businessType="electrical contractor">
+      <ElectriciansContent />
+    </IndustryPageWrapper>
+  );
+}
+
+function ElectriciansContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Precision Power Techs", location: "Austin" },
@@ -211,18 +220,18 @@ export default function ElectriciansPage() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Link 
-                    href="/contact?industry=electrician"
+                  <button 
+                    data-open-modal
                     className="bg-white text-sky-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
                   >
                     Get My Electrician Website
-                  </Link>
-                  <Link 
-                    href="/pricing"
+                  </button>
+                  <button 
+                    data-open-modal
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-sky-700 transition-colors text-center"
                   >
-                    View Pricing
-                  </Link>
+                    Schedule Free Consultation
+                  </button>
                 </div>
 
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-sm">
@@ -706,12 +715,12 @@ export default function ElectriciansPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link 
-                href="/contact?industry=electrician"
+              <button 
+                data-open-modal
                 className="bg-white text-sky-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg shadow-lg"
               >
                 Get My Electrician Website
-              </Link>
+              </button>
               <Link 
                 href="tel:8178736655"
                 className="border-2 border-white text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-sky-700 transition-colors text-lg"

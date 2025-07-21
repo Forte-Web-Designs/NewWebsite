@@ -6,6 +6,7 @@ import { getCompanyLogo } from '@/components/CompanyLogos';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Plumber Websites That Convert Emergency Calls Into Customers | Forte Web Designs',
@@ -19,6 +20,14 @@ export const metadata: Metadata = {
 };
 
 export default function PlumbersPage() {
+  return (
+    <IndustryPageWrapper industry="plumbers" businessType="plumbing">
+      <PlumbersContent />
+    </IndustryPageWrapper>
+  );
+}
+
+function PlumbersContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Elite Plumbing Solutions" },
@@ -208,18 +217,18 @@ export default function PlumbersPage() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                  <Link 
-                    href="/contact?industry=plumbing"
+                  <button 
+                    data-open-modal
                     className="bg-white text-cyan-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
                   >
                     Get My Plumber Website Quote
-                  </Link>
-                  <Link 
-                    href="/checkup?industry=plumbing"
+                  </button>
+                  <button 
+                    data-open-modal
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-700 transition-colors text-center"
                   >
-                    Free Plumbing Website Audit
-                  </Link>
+                    Schedule Free Consultation
+                  </button>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 text-sm text-blue-200">

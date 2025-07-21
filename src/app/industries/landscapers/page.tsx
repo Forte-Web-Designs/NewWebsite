@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads',
@@ -18,6 +18,14 @@ export const metadata: Metadata = {
 };
 
 export default function LandscapersPage() {
+  return (
+    <IndustryPageWrapper industry="landscapers" businessType="landscaping business">
+      <LandscapersContent />
+    </IndustryPageWrapper>
+  );
+}
+
+function LandscapersContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Sandia Landscaping Pros" },
@@ -216,12 +224,12 @@ export default function LandscapersPage() {
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
-                  <Link href="/contact?industry=landscaping" className="bg-white text-green-700 hover:text-green-700 font-semibold px-8 py-4 rounded-lg text-center transition-colors">
+                  <button data-open-modal className="bg-white text-green-700 hover:text-green-700 font-semibold px-8 py-4 rounded-lg text-center transition-colors cursor-pointer border-none">
                     Get My Landscaping Website Quote →
-                  </Link>
-                  <Link href="/pricing" className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors">
+                  </button>
+                  <button data-open-modal className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors cursor-pointer bg-transparent">
                     Free Website Audit for Landscapers →
-                  </Link>
+                  </button>
                 </div>
 
                 {/* Trust Indicators */}
@@ -470,9 +478,9 @@ export default function LandscapersPage() {
                 </div>
 
                 <div className="pt-6">
-                  <Link href="#" className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white border-2 font-semibold py-3 px-6 rounded-lg inline-block transition-colors">
+                  <button data-open-modal className="border-green-600 text-green-600 hover:bg-green-600 hover:text-white border-2 font-semibold py-3 px-6 rounded-lg inline-block transition-colors cursor-pointer bg-transparent">
                     📈 Read Full Case Study →
-                  </Link>
+                  </button>
                 </div>
               </div>
             </SimpleAnimatedCard>
@@ -584,13 +592,13 @@ export default function LandscapersPage() {
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 You know that beautiful landscapes require ongoing care – regular watering, pruning, and seasonal adjustments. Your website needs the same attention. Forte Care™ provides the "digital yard maintenance" – fresh content updates, security pruning, and seasonal optimization – keeping your online presence lush and attracting new clients year-round.
               </p>
-              <Link
-                href="/solutions/care"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              <button
+                data-open-modal
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors cursor-pointer border-none"
               >
                 <span>Maintain Your Digital Landscape</span>
                 <span className="text-sm">→</span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -635,12 +643,12 @@ export default function LandscapersPage() {
               Join landscapers who trust Forte to turn their work into a lead-generating machine. Let's build a site that showcases your talent and drives real results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact?industry=landscaping" className="bg-white text-green-600 hover:text-green-600 font-semibold px-8 py-4 rounded-lg text-center transition-colors">
+              <button data-open-modal className="bg-white text-green-600 hover:text-green-600 font-semibold px-8 py-4 rounded-lg text-center transition-colors cursor-pointer border-none">
                 Get My Landscaping Website Quote →
-              </Link>
-              <Link href="/pricing" className="border-white text-white hover:bg-white hover:text-green-600 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors">
+              </button>
+              <button data-open-modal className="border-white text-white hover:bg-white hover:text-green-600 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors cursor-pointer bg-transparent">
                 Free Site Audit for Landscapers →
-              </Link>
+              </button>
             </div>
             <p className="mt-6 text-green-200">
               📞 (817) 873-6655 • Same day response guaranteed

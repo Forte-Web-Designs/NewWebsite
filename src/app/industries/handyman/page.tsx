@@ -8,6 +8,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Handyman Website Design | Websites That Turn Searches Into Service Calls',
@@ -21,6 +22,14 @@ export const metadata: Metadata = {
 };
 
 export default function HandymanPage() {
+  return (
+    <IndustryPageWrapper industry="handyman" businessType="handyman">
+      <HandymanContent />
+    </IndustryPageWrapper>
+  );
+}
+
+function HandymanContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Red River Handyman" },
@@ -131,9 +140,9 @@ export default function HandymanPage() {
                 </p>
                 
                 <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
-                  <DarkButton href="/contact?industry=handyman" className="bg-amber-600 hover:bg-amber-700 w-full sm:w-auto">
+                  <button data-open-modal className="bg-amber-600 hover:bg-amber-700 w-full sm:w-auto text-white font-bold py-4 px-8 rounded-lg transition-colors">
                     Get My Handyman Website Quote
-                  </DarkButton>
+                  </button>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-amber-200">
@@ -538,17 +547,17 @@ export default function HandymanPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact?industry=handyman"
+                <button 
+                  data-open-modal
                   className="bg-white text-amber-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get My Handyman Website Quote
-                </Link>
+                </button>
                 <Link 
-                  href="/checkup?industry=handyman"
+                  href="tel:8178736655"
                   className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-amber-600 transition-colors text-lg"
                 >
-                  Free Website Audit for Handymen
+                  Call (817) 873-6655
                 </Link>
               </div>
               

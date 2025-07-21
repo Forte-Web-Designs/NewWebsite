@@ -1,13 +1,11 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { Icon } from '@/components/images/Icon';
 import { getCompanyLogo } from '@/components/CompanyLogos';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
-import DarkButton from '@/components/DarkButton';
-import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Restaurant Website Design | Websites That Fill Tables (and Order Carts)',
@@ -21,6 +19,14 @@ export const metadata: Metadata = {
 };
 
 export default function RestaurantsPage() {
+  return (
+    <IndustryPageWrapper industry="restaurants" businessType="restaurant">
+      <RestaurantsContent />
+    </IndustryPageWrapper>
+  );
+}
+
+function RestaurantsContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "Red Oak Smokehouse" },
@@ -164,9 +170,9 @@ export default function RestaurantsPage() {
                 </div>
 
                 <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
-                  <DarkButton href="/contact?industry=restaurant" className="bg-orange-600 hover:bg-orange-700 w-full sm:w-auto">
+                  <button data-open-modal className="bg-orange-600 hover:bg-orange-700 w-full sm:w-auto text-white font-bold py-3 px-8 rounded-lg transition-colors cursor-pointer border-none">
                     Get My Restaurant Website Quote
-                  </DarkButton>
+                  </button>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-orange-200">
@@ -308,12 +314,12 @@ export default function RestaurantsPage() {
                 </div>
               </div>
               
-              <Link 
-                href="/contact?industry=restaurant&case=redoak"
-                className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold"
+              <button 
+                data-open-modal
+                className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-semibold cursor-pointer bg-transparent border-none p-0 font-inherit"
               >
                 📈 Read Full Case Study →
-              </Link>
+              </button>
             </div>
           </SimpleScrollReveal>
         </div>
@@ -524,9 +530,9 @@ export default function RestaurantsPage() {
             </div>
 
             <div className="text-center mt-8">
-              <DarkButton href="/contact?industry=restaurant" className="bg-orange-600 hover:bg-orange-700">
+              <button data-open-modal className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 px-8 rounded-lg transition-colors cursor-pointer border-none">
                 Get My Restaurant Website
-              </DarkButton>
+              </button>
             </div>
           </div>
         </div>
@@ -548,13 +554,13 @@ export default function RestaurantsPage() {
               <p className="text-gray-700 dark:text-gray-300 mb-4">
                 You maintain a spotless kitchen because cleanliness affects everything – health ratings, customer trust, and reputation. Your website needs the same attention to cleanliness. Forte Care™ handles the "digital deep cleaning" – removing broken links, updating menus, optimizing speed – so your online presence stays pristine and continues attracting hungry customers.
               </p>
-              <Link
-                href="/solutions/care"
-                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
+              <button
+                data-open-modal
+                className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors cursor-pointer border-none"
               >
                 <span>Clean Up Your Digital Kitchen</span>
                 <span className="text-sm">→</span>
-              </Link>
+              </button>
             </div>
           </div>
         </div>
@@ -604,18 +610,18 @@ export default function RestaurantsPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact?industry=restaurant"
-                  className="bg-white text-orange-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
+                <button 
+                  data-open-modal
+                  className="bg-white text-orange-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg cursor-pointer border-none"
                 >
                   Get My Restaurant Website Quote
-                </Link>
-                <Link 
-                  href="/checkup?industry=restaurant"
-                  className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-600 transition-colors text-lg"
+                </button>
+                <button 
+                  data-open-modal
+                  className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-orange-600 transition-colors text-lg cursor-pointer bg-transparent"
                 >
                   Free Restaurant Site Audit
-                </Link>
+                </button>
               </div>
               
               <p className="text-sm text-orange-200 mt-4">

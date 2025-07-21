@@ -8,6 +8,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 import ScrollToTop from '@/components/ScrollToTop';
+import IndustryPageWrapper from '@/components/IndustryPageWrapper';
 
 export const metadata: Metadata = {
   title: 'Construction Websites Built to Win Bids and Build Trust',
@@ -21,6 +22,14 @@ export const metadata: Metadata = {
 };
 
 export default function ConstructionPage() {
+  return (
+    <IndustryPageWrapper industry="construction" businessType="construction">
+      <ConstructionContent />
+    </IndustryPageWrapper>
+  );
+}
+
+function ConstructionContent() {
   // Client companies for social proof
   const clientCompanies = [
     { name: "SouthCore Contracting", location: "Albuquerque" },
@@ -136,18 +145,18 @@ export default function ConstructionPage() {
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
-                  <Link 
-                    href="/contact?industry=construction"
+                  <button 
+                    data-open-modal
                     className="bg-white text-slate-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
                   >
                     Get My Construction Website Quote
-                  </Link>
-                  <Link 
-                    href="/checkup"
+                  </button>
+                  <button 
+                    data-open-modal
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-slate-700 transition-colors text-center"
                   >
-                    Free Website Audit for Contractors
-                  </Link>
+                    Schedule Free Consultation
+                  </button>
                 </div>
 
                 <div className="mb-8">
@@ -631,17 +640,17 @@ export default function ConstructionPage() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link 
-                  href="/contact?industry=construction"
+                <button 
+                  data-open-modal
                   className="bg-white text-slate-600 font-semibold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-lg"
                 >
                   Get My Construction Website Quote
-                </Link>
+                </button>
                 <Link 
-                  href="/checkup"
+                  href="tel:8178736655"
                   className="border-2 border-white text-white font-semibold py-4 px-8 rounded-lg hover:bg-white hover:text-slate-600 transition-colors text-lg"
                 >
-                  Free Contractor Website Audit
+                  Call (817) 873-6655
                 </Link>
               </div>
               
