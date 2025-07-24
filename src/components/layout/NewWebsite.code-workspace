@@ -2,7 +2,12 @@
 	"folders": [
 		{
 			"path": "../../.."
+		},
+		{
+			"path": "C:/Users/SethF/Downloads/hendrio-handyman-plumbing-html5-template-2025-01-27-05-54-42-utc (1)/Hendrio-Buyerfile/Hendrio/plumbing"
 		}
 	],
-	"settings": {}
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "plumbing"
+	}
 }

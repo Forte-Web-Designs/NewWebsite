@@ -38,39 +38,6 @@ const generatePlumberColorScheme = (businessName: string) => {
       buttonGradient: 'from-yellow-500 to-yellow-600',
       cardBg: 'slate-800/30',
       theme: 'professional'
-    },
-    {
-      name: 'Trustworthy Green & Blue',
-      primary: 'emerald-900',
-      secondary: 'cyan-500', 
-      accent: 'cyan-400',
-      background: 'emerald-800',
-      gradient: 'from-emerald-900 via-emerald-800 to-emerald-900',
-      buttonGradient: 'from-cyan-500 to-cyan-600',
-      cardBg: 'emerald-800/30',
-      theme: 'trustworthy'
-    },
-    {
-      name: 'Emergency Red & Gray',
-      primary: 'gray-900',
-      secondary: 'red-500',
-      accent: 'red-400', 
-      background: 'gray-800',
-      gradient: 'from-gray-900 via-gray-800 to-gray-900',
-      buttonGradient: 'from-red-500 to-red-600',
-      cardBg: 'gray-800/30',
-      theme: 'emergency'
-    },
-    {
-      name: 'Modern Teal & Orange',
-      primary: 'teal-900',
-      secondary: 'orange-500',
-      accent: 'orange-400',
-      background: 'teal-800', 
-      gradient: 'from-teal-900 via-teal-800 to-teal-900',
-      buttonGradient: 'from-orange-500 to-orange-600',
-      cardBg: 'teal-800/30',
-      theme: 'modern'
     }
   ];
 
@@ -332,175 +299,225 @@ export default function PlumbingLanding() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left Content */}
             <div>
-              {params.owner && (
-                <div className={`inline-block ${theme.emergencyBg} text-white px-4 py-2 rounded-full text-sm font-semibold mb-6`}>
-                  👋 Hey {params.owner.split(' ')[0]}! Love what you see?
-                </div>
-              )}
+              <div className={`inline-block ${theme.emergencyBg} text-white px-4 py-2 rounded-full text-sm font-semibold mb-6`}>
+                � 100% Satisfaction Guarantee
+              </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                <span className={theme.accentText}>THIS</span> Could Be{' '}
-                <span className="underline decoration-4 decoration-orange-400">
-                  Your Website
+                We're Top <span className={theme.accentText}>Expert</span>{' '}
+                <span className="block">
+                  in Plumbing
                 </span>
               </h1>
               
               <p className="text-xl lg:text-2xl mb-8 leading-relaxed opacity-90">
-                Impressed by this professional plumbing website? We designed it specifically for {params.business} in {params.location}. 
-                <strong className="text-white"> Your business deserves a website this powerful.</strong>
+                Competently repurpose go forward benefits without oriented conveniently target business opportunities done
               </p>
 
-              <div className="bg-white/20 backdrop-blur-sm rounded-xl p-6 mb-8 border border-white/30">
-                <h3 className="text-2xl font-bold mb-4 text-white">🚀 What You Get:</h3>
-                <ul className="space-y-3 text-lg">
-                  <li className="flex items-center space-x-3">
-                    <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    <span>Fully custom plumbing website - NO WordPress, Wix, or Squarespace templates</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    <span>Hand-coded by professional developers - NO AI-generated content</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    <span>Mobile-responsive design that looks perfect on all devices</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    <span>Lead generation forms to capture more plumbing customers</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    <span>SEO optimization to rank higher on Google for plumbing services</span>
-                  </li>
-                  <li className="flex items-center space-x-3">
-                    <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    <span>Fast loading speeds & professional hosting included</span>
-                  </li>
-                </ul>
-              </div>
-
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button 
-                  onClick={() => setShowPopup(true)}
+                <a 
+                  href="#contact"
                   className={`${theme.serviceButton} text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                   </svg>
-                  <span>Get MY Website Now</span>
-                </button>
-                <button 
-                  onClick={() => setShowPopup(true)}
-                  className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                >
-                  See Our Portfolio
-                </button>
-              </div>
-
-              {/* Trust Badges */}
-              <div className="flex flex-wrap items-center gap-6 text-sm">
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
-                  </svg>
-                  <span>Professional Web Design</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                  <span>5-Star Rated Company</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8z"/>
-                  </svg>
-                  <span>2-Week Delivery</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.94-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
-                  </svg>
-                  <span>Forte Web Designs</span>
-                </div>
+                  <span>Get An Estimate</span>
+                </a>
               </div>
             </div>
 
-            {/* Right Content - Website Quote Form */}
+            {/* Right Content - Emergency Contact */}
             <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 border border-white/20">
               <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold mb-2">Get YOUR Website</h3>
-                <p className="text-lg opacity-90">Professional design like this one!</p>
+                <h3 className="text-2xl font-bold mb-2">24/7 Emergency Service</h3>
+                <p className="text-lg opacity-90">Fast, Reliable Plumbing Solutions</p>
               </div>
               
-              <form name="website-inquiry" method="POST" data-netlify="true" className="space-y-4">
-                <input type="hidden" name="form-name" value="website-inquiry" />
-                <input 
-                  type="text" 
-                  name="business-name"
-                  placeholder="Business Name" 
-                  defaultValue={params.business !== 'Your Plumbing Business' ? params.business : ''}
-                  className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  required
-                />
-                <input 
-                  type="text" 
-                  name="name"
-                  placeholder="Your Name" 
-                  defaultValue={params.owner}
-                  className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  required
-                />
-                <input 
-                  type="email" 
-                  name="email"
-                  placeholder="Email Address" 
-                  className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  required
-                />
-                <input 
-                  type="tel" 
-                  name="phone"
-                  placeholder="Phone Number" 
-                  defaultValue={params.phone}
-                  className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
-                  required
-                />
-                <textarea 
-                  name="message"
-                  placeholder="Tell us about your business and what you need..." 
-                  rows={3}
-                  className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
-                  required
-                />
+              <div className="space-y-4">
+                <div className="text-center p-4 bg-white/20 rounded-lg">
+                  <h4 className="font-bold text-xl mb-2">📞 Emergency Hotline</h4>
+                  <a 
+                    href="tel:8178736655"
+                    className="text-2xl font-bold hover:underline"
+                  >
+                    (817) 873-6655
+                  </a>
+                  <p className="text-sm opacity-90 mt-1">Available 24/7</p>
+                </div>
+                
+                <div className="grid grid-cols-2 gap-4 text-center">
+                  <div className="p-3 bg-white/20 rounded-lg">
+                    <h5 className="font-bold">🚰 Drain Cleaning</h5>
+                    <p className="text-sm opacity-90">Same Day Service</p>
+                  </div>
+                  <div className="p-3 bg-white/20 rounded-lg">
+                    <h5 className="font-bold">🔧 Leak Repair</h5>
+                    <p className="text-sm opacity-90">Emergency Response</p>
+                  </div>
+                  <div className="p-3 bg-white/20 rounded-lg">
+                    <h5 className="font-bold">🚽 Toilet Repair</h5>
+                    <p className="text-sm opacity-90">Fast Fix</p>
+                  </div>
+                  <div className="p-3 bg-white/20 rounded-lg">
+                    <h5 className="font-bold">🏠 Water Heater</h5>
+                    <p className="text-sm opacity-90">Expert Service</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Work Process Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h4 className={`${theme.secondaryText} text-lg font-semibold mb-4`}>Work Process</h4>
+            <h2 className={`text-4xl font-bold ${theme.primaryText} mb-4`}>
+              We Follow the <span className={theme.accentText}>Process</span>
+            </h2>
+          </div>
+          
+          <div className="grid md:grid-cols-4 gap-8">
+            {/* Step 1 */}
+            <div className="text-center relative">
+              <div className={`w-20 h-20 ${theme.serviceIconBg} rounded-full flex items-center justify-center mx-auto mb-6 relative`}>
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 5v14c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2H5c-1.11 0-2 .9-2 2zm12 4c0 1.66-1.34 3-3 3s-3-1.34-3-3 1.34-3 3-3 3 1.34 3 3zm-9 8c0-2 4-3.1 6-3.1s6 1.1 6 3.1v1H6v-1z"/>
+                </svg>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <span className={`text-sm font-bold ${theme.primaryText}`}>01</span>
+                </div>
+              </div>
+              <h4 className={`text-xl font-bold ${theme.primaryText} mb-3`}>Booking Online</h4>
+              <p className="text-gray-600">Competently repurpose forward conveniently target fixed</p>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center relative">
+              <div className={`w-20 h-20 ${theme.serviceIconBg} rounded-full flex items-center justify-center mx-auto mb-6 relative`}>
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <span className={`text-sm font-bold ${theme.primaryText}`}>02</span>
+                </div>
+              </div>
+              <h4 className={`text-xl font-bold ${theme.primaryText} mb-3`}>Confirmation</h4>
+              <p className="text-gray-600">Competently repurpose forward conveniently target fixed</p>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center relative">
+              <div className={`w-20 h-20 ${theme.serviceIconBg} rounded-full flex items-center justify-center mx-auto mb-6 relative`}>
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 2 2h8c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 18c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/>
+                </svg>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <span className={`text-sm font-bold ${theme.primaryText}`}>03</span>
+                </div>
+              </div>
+              <h4 className={`text-xl font-bold ${theme.primaryText} mb-3`}>Estimate Details</h4>
+              <p className="text-gray-600">Competently repurpose forward conveniently target fixed</p>
+            </div>
+
+            {/* Step 4 */}
+            <div className="text-center relative">
+              <div className={`w-20 h-20 ${theme.serviceIconBg} rounded-full flex items-center justify-center mx-auto mb-6 relative`}>
+                <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
+                  <span className={`text-sm font-bold text-green-600`}>✓</span>
+                </div>
+              </div>
+              <h4 className={`text-xl font-bold ${theme.primaryText} mb-3`}>Complete Works</h4>
+              <p className="text-gray-600">Competently repurpose forward conveniently target fixed</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* About Section */}
+      <section id="about" className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Image */}
+            <div className="relative">
+              <div className="bg-gray-300 rounded-lg h-96 flex items-center justify-center relative overflow-hidden">
+                <div className="text-gray-500 text-center">
+                  <svg className="w-24 h-24 mx-auto mb-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M18.92 2.01C18.72 1.42 18.16 1 17.5 1h-11C5.84 1 5.28 1.42 5.08 2.01L3 8v13c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V8l-2.08-5.99z"/>
+                  </svg>
+                  <p className="text-lg font-semibold">Professional Plumber</p>
+                  <p>at Work</p>
+                </div>
+              </div>
+              {/* Stats Box */}
+              <div className={`absolute bottom-6 right-6 ${theme.emergencyBg} text-white p-6 rounded-lg text-center shadow-lg`}>
+                <div className="text-3xl font-bold">11K+</div>
+                <div className="text-sm">Project Done</div>
+              </div>
+            </div>
+
+            {/* Right - Content */}
+            <div>
+              <h4 className={`${theme.secondaryText} text-lg font-semibold mb-4`}>ABOUT US</h4>
+              <h2 className={`text-4xl font-bold ${theme.primaryText} mb-6`}>
+                Over 25+ Year of <span className={theme.accentText}>Experience</span> In Plumbing Service
+              </h2>
+              <p className="text-gray-600 mb-8 leading-relaxed">
+                Competently repurpose go forward benefits without goal-oriented ROI the main conveniently target business opportunities whereas proactive streamline sustai content via functional multidisciplinary platforms
+              </p>
+
+              <div className="grid md:grid-cols-2 gap-6 mb-8">
+                <div className="flex items-center space-x-3">
+                  <svg className={`w-6 h-6 ${theme.secondaryText}`} fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                  <span className="font-medium">Comfortable Pricing Plan</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <svg className={`w-6 h-6 ${theme.secondaryText}`} fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                  <span className="font-medium">Top Experts Mechanic</span>
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div className="mb-8">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium">Basin Repairing</span>
+                  <span className={`font-bold ${theme.secondaryText}`}>90%</span>
+                </div>
+                <div className="w-full bg-gray-200 rounded-full h-2">
+                  <div className={`${theme.emergencyBg} h-2 rounded-full`} style={{width: '90%'}}></div>
+                </div>
+              </div>
+
+              <div className="flex flex-col sm:flex-row gap-6 items-center">
                 <button 
-                  type="submit"
-                  className={`w-full ${theme.serviceButton} text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2`}
+                  onClick={() => setShowPopup(true)}
+                  className={`${theme.serviceButton} text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg flex items-center space-x-2`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                   </svg>
-                  <span>YES! Build My Website</span>
+                  <span>Get An Estimate</span>
                 </button>
-              </form>
-              
-              <div className="text-center text-sm mt-4 space-y-2">
-                <p className="opacity-75">
-                  ✅ 100% USA Based • ✅ 2-week delivery • ✅ 100% client satisfaction
-                </p>
+
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
+                    <span className="text-xs font-bold">DM</span>
+                  </div>
+                  <div>
+                    <h5 className={`font-bold ${theme.primaryText}`}>David M. Alexon</h5>
+                    <p className="text-sm text-gray-600">CEO & Founder</p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
