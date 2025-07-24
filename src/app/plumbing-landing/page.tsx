@@ -8,6 +8,7 @@ interface PlumbingLandingProps {
     owner?: string;
     location?: string;
     phone?: string;
+    theme?: string;
     utm_source?: string;
     utm_medium?: string;
     utm_campaign?: string;
@@ -15,11 +16,13 @@ interface PlumbingLandingProps {
 }
 
 export default function PlumbingLanding() {
+  const [currentTheme, setCurrentTheme] = useState('blue');
   const [params, setParams] = useState<{
     business: string;
     owner: string;
     location: string;
     phone: string;
+    theme: string;
     utm_source: string;
     utm_medium: string;
     utm_campaign: string;
@@ -28,6 +31,7 @@ export default function PlumbingLanding() {
     owner: '',
     location: 'your area',
     phone: '',
+    theme: 'blue',
     utm_source: 'email',
     utm_medium: 'landing-page',
     utm_campaign: 'plumbing-outreach'
@@ -36,6 +40,54 @@ export default function PlumbingLanding() {
   const [isLoaded, setIsLoaded] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
   const [hasScrolledHalfway, setHasScrolledHalfway] = useState(false);
+
+  // Color themes for plumbing businesses
+  const colorThemes = {
+    blue: {
+      primary: 'bg-blue-900',
+      primaryHover: 'hover:bg-blue-800',
+      primaryText: 'text-blue-900',
+      secondary: 'bg-orange-500',
+      secondaryHover: 'hover:bg-orange-600',
+      secondaryText: 'text-orange-500',
+      accent: 'text-orange-400',
+      gradient: 'from-blue-900 to-blue-800',
+      bgGradient: 'bg-gradient-to-br from-blue-50 to-white'
+    },
+    navy: {
+      primary: 'bg-slate-800',
+      primaryHover: 'hover:bg-slate-700',
+      primaryText: 'text-slate-800',
+      secondary: 'bg-amber-500',
+      secondaryHover: 'hover:bg-amber-600',
+      secondaryText: 'text-amber-500',
+      accent: 'text-amber-400',
+      gradient: 'from-slate-800 to-slate-700',
+      bgGradient: 'bg-gradient-to-br from-slate-50 to-white'
+    },
+    green: {
+      primary: 'bg-emerald-800',
+      primaryHover: 'hover:bg-emerald-700',
+      primaryText: 'text-emerald-800',
+      secondary: 'bg-orange-500',
+      secondaryHover: 'hover:bg-orange-600',
+      secondaryText: 'text-orange-500',
+      accent: 'text-orange-400',
+      gradient: 'from-emerald-800 to-emerald-700',
+      bgGradient: 'bg-gradient-to-br from-emerald-50 to-white'
+    },
+    red: {
+      primary: 'bg-red-800',
+      primaryHover: 'hover:bg-red-700',
+      primaryText: 'text-red-800',
+      secondary: 'bg-gray-700',
+      secondaryHover: 'hover:bg-gray-600',
+      secondaryText: 'text-gray-700',
+      accent: 'text-gray-600',
+      gradient: 'from-red-800 to-red-700',
+      bgGradient: 'bg-gradient-to-br from-red-50 to-white'
+    }
+  };
 
   useEffect(() => {
     // Client-side parameter extraction
@@ -46,12 +98,14 @@ export default function PlumbingLanding() {
       owner: urlParams.get('owner') || '',
       location: urlParams.get('location') || 'your area',
       phone: urlParams.get('phone') || '',
+      theme: urlParams.get('theme') || 'blue',
       utm_source: urlParams.get('utm_source') || 'email',
       utm_medium: urlParams.get('utm_medium') || 'landing-page',
       utm_campaign: urlParams.get('utm_campaign') || 'plumbing-outreach'
     };
     
     setParams(extractedParams);
+    setCurrentTheme(extractedParams.theme);
     setIsLoaded(true);
 
     // Scroll listener for popup trigger
@@ -71,11 +125,13 @@ export default function PlumbingLanding() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasScrolledHalfway, showPopup]);
 
+  const theme = colorThemes[currentTheme as keyof typeof colorThemes] || colorThemes.blue;
+
   if (!isLoaded) {
     return (
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-white flex items-center justify-center">
+      <div className={`min-h-screen ${theme.bgGradient} flex items-center justify-center`}>
         <div className="text-center">
-          <div className="animate-spin rounded-full h-32 w-32 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <div className={`animate-spin rounded-full h-32 w-32 border-b-2 ${theme.secondary.replace('bg-', 'border-')} mx-auto mb-4`}></div>
           <p className="text-gray-600">Loading your personalized experience...</p>
         </div>
       </div>
@@ -83,9 +139,32 @@ export default function PlumbingLanding() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className={`min-h-screen ${theme.bgGradient}`}>
+      {/* Color Theme Switcher */}
+      <div className="fixed top-4 right-4 z-50">
+        <div className="bg-white rounded-lg shadow-lg p-2 flex space-x-2">
+          {Object.keys(colorThemes).map((themeName) => (
+            <button
+              key={themeName}
+              onClick={() => setCurrentTheme(themeName)}
+              className={`w-8 h-8 rounded-full border-2 transition-all ${
+                currentTheme === themeName ? 'border-gray-800 scale-110' : 'border-gray-300'
+              }`}
+              style={{
+                backgroundColor: 
+                  themeName === 'blue' ? '#1e40af' :
+                  themeName === 'navy' ? '#1e293b' :
+                  themeName === 'green' ? '#065f46' :
+                  themeName === 'red' ? '#991b1b' : '#1e40af'
+              }}
+              title={`Switch to ${themeName} theme`}
+            />
+          ))}
+        </div>
+      </div>
+      
       {/* Top Bar - Website Sales Focus */}
-      <div className="bg-blue-900 text-white py-3 px-4">
+      <div className={`${theme.primary} text-white py-3 px-4`}>
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-8">
             <span className="flex items-center">
@@ -214,8 +293,8 @@ export default function PlumbingLanding() {
         </div>
       </header>
 
-      {/* Hero Section - Exact Hendrio Match */}
-      <section className="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-900 text-white relative overflow-hidden">
+      {/* Hero Section - With Plumbing Images */}
+      <section className={`bg-gradient-to-r ${theme.gradient} text-white relative overflow-hidden`}>
         {/* Background decorative elements */}
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-20">
@@ -225,21 +304,29 @@ export default function PlumbingLanding() {
             <div className="w-24 h-24 border-4 border-white/20 rounded-full"></div>
           </div>
           <div className="absolute top-1/2 right-10 transform -translate-y-1/2">
-            <svg className="w-64 h-64 text-orange-400/20" fill="currentColor" viewBox="0 0 24 24">
+            <svg className={`w-64 h-64 ${theme.accent}/20`} fill="currentColor" viewBox="0 0 24 24">
               <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
             </svg>
+          </div>
+          {/* Plumbing Background Image */}
+          <div className="absolute inset-0 opacity-5">
+            <img 
+              src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+              alt="Professional plumber working" 
+              className="w-full h-full object-cover"
+            />
           </div>
         </div>
         
         <div className="relative max-w-7xl mx-auto px-4 py-20">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <div className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block">
+              <div className={`${theme.secondary} text-white px-4 py-2 rounded-full text-sm font-semibold mb-6 inline-block`}>
                 This Website Could Be YOURS!
               </div>
               
               <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                We Build <span className="text-orange-400">Websites</span>
+                We Build <span className={`${theme.accent}`}>Websites</span>
                 <br />
                 That Get Results
               </h1>
@@ -251,7 +338,7 @@ export default function PlumbingLanding() {
               <div className="mb-8">
                 <button 
                   onClick={() => setShowPopup(true)}
-                  className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2"
+                  className={`${theme.secondary} ${theme.secondaryHover} text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2`}
                 >
                   <span>Get My Website Quote</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
@@ -290,7 +377,7 @@ export default function PlumbingLanding() {
                 <div className="mt-6 text-center">
                   <button 
                     onClick={() => setShowPopup(true)}
-                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-colors"
+                    className={`${theme.secondary} ${theme.secondaryHover} text-white font-bold py-3 px-6 rounded-lg transition-colors`}
                   >
                     Start My Website: (817) 873-6655
                   </button>
@@ -305,9 +392,9 @@ export default function PlumbingLanding() {
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16">
-            <h4 className="text-orange-500 text-lg font-semibold mb-4">How We Work</h4>
-            <h2 className="text-4xl font-bold text-blue-900 mb-4">
-              Your Website in <span className="text-orange-400">4 Simple Steps</span>
+            <h4 className={`${theme.secondaryText} text-lg font-semibold mb-4`}>How We Work</h4>
+            <h2 className={`text-4xl font-bold ${theme.primaryText} mb-4`}>
+              Your Website in <span className={`${theme.accent}`}>4 Simple Steps</span>
             </h2>
           </div>
           
