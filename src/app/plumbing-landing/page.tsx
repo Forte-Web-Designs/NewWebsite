@@ -794,8 +794,8 @@ export default function PlumbingLanding() {
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="text-3xl font-bold text-orange-300 mb-2">100%</div>
-                  <div className="text-sm font-medium">Satisfaction</div>
-                  <div className="text-xs opacity-80">Money-back guarantee</div>
+                  <div className="text-sm font-medium">Client Satisfaction</div>
+                  <div className="text-xs opacity-80">Guaranteed results</div>
                 </div>
               </div>
               
@@ -831,7 +831,7 @@ export default function PlumbingLanding() {
                       <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span><strong>Professional Photography</strong> - Showcase your work</span>
+                      <span><strong>Google My Business Integration</strong> - Dominate local search</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
@@ -845,11 +845,21 @@ export default function PlumbingLanding() {
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
                   <div className="text-center mb-6">
                     <div className="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full inline-block mb-4">
-                      🎯 LIMITED TIME OFFER
+                      ⚡ EXCLUSIVE ACCESS
                     </div>
                     <h3 className="text-2xl font-bold mb-2">Claim This Website for Your Business!</h3>
-                    <div className="text-3xl font-bold text-orange-300 mb-2">$2,997 $1,497</div>
-                    <p className="text-sm opacity-75">50% OFF - This week only!</p>
+                    <div className="flex items-center justify-center space-x-4 mb-2">
+                      <div className="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full">
+                        100% Custom
+                      </div>
+                      <div className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">
+                        USA Based
+                      </div>
+                      <div className="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">
+                        2-Week Launch
+                      </div>
+                    </div>
+                    <p className="text-sm opacity-75">Get the website that will dominate your local market!</p>
                   </div>
                   
                   <div className="space-y-4">
@@ -880,15 +890,15 @@ export default function PlumbingLanding() {
                       onClick={() => setShowPopup(true)}
                       className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg shadow-lg"
                     >
-                      � CLAIM MY WEBSITE NOW - $1,497
+                      � CLAIM MY CUSTOM WEBSITE
                     </button>
                   </div>
                   <div className="text-center mt-4 space-y-2">
                     <p className="text-xs opacity-80">
-                      ⚡ Secure payment • 🔒 100% money-back guarantee • 🚀 Live in 7 days
+                      ✅ 100% Custom Code • ✅ 2-Week Delivery • ✅ 100% Client Satisfaction
                     </p>
                     <p className="text-xs opacity-60">
-                      Payment plans available • Call to discuss: <span className="font-bold">(817) 873-6655</span>
+                      Custom quote based on your needs • Call: <span className="font-bold">(817) 873-6655</span>
                     </p>
                   </div>
                 </div>
@@ -1092,7 +1102,7 @@ export default function PlumbingLanding() {
                   </div>
                   <div className="text-center bg-orange-50 rounded-lg p-4">
                     <div className="text-2xl font-bold text-orange-600 mb-1">100%</div>
-                    <div className="text-xs font-medium text-gray-700">Satisfaction</div>
+                    <div className="text-xs font-medium text-gray-700">Client Satisfaction</div>
                   </div>
                 </div>
                 
@@ -1180,8 +1190,18 @@ export default function PlumbingLanding() {
                   </svg>
                 </div>
                 <h3 className="text-2xl font-bold mb-2">Claim Your Custom Website!</h3>
-                <div className="text-2xl font-bold text-orange-600 mb-2">$2,997 <span className="line-through text-gray-400">$1,497</span></div>
-                <p className="opacity-90">Limited time: 50% OFF for qualified plumbing contractors</p>
+                <div className="flex flex-wrap justify-center gap-2 mb-3">
+                  <span className="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full">
+                    100% Custom Code
+                  </span>
+                  <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">
+                    USA Based Team
+                  </span>
+                  <span className="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">
+                    2-Week Launch
+                  </span>
+                </div>
+                <p className="opacity-90">Get a website that will dominate your local plumbing market!</p>
               </div>
             </div>
             
@@ -1254,7 +1274,7 @@ export default function PlumbingLanding() {
                   type="submit"
                   className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg"
                 >
-                  � Get My Free Website Mockup
+                  � CLAIM MY CUSTOM WEBSITE
                 </button>
               </form>
               
