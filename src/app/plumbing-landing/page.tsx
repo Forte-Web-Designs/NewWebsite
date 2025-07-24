@@ -20,7 +20,7 @@ const generatePlumberColorScheme = (businessName: string) => {
     {
       name: 'Classic Blue & Orange',
       primary: 'blue-900',
-      secondary: 'orange-500',
+      secondary: 'orange-5                  � Call: (817) 873-66550',
       accent: 'orange-400',
       background: 'blue-800',
       gradient: 'from-blue-900 via-blue-800 to-blue-900',
@@ -106,6 +106,8 @@ export default function PlumbingLanding() {
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [colorScheme, setColorScheme] = useState(generatePlumberColorScheme('default'));
+  const [showPopup, setShowPopup] = useState(false);
+  const [hasScrolledHalfway, setHasScrolledHalfway] = useState(false);
 
   useEffect(() => {
     // Client-side parameter extraction
@@ -127,7 +129,23 @@ export default function PlumbingLanding() {
     setColorScheme(generatePlumberColorScheme(extractedParams.business));
     
     setIsLoaded(true);
-  }, []);
+
+    // Scroll listener for popup trigger
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      const windowHeight = window.innerHeight;
+      const documentHeight = document.documentElement.scrollHeight;
+      const scrollPercentage = scrollPosition / (documentHeight - windowHeight);
+      
+      if (scrollPercentage >= 0.5 && !hasScrolledHalfway && !showPopup) {
+        setHasScrolledHalfway(true);
+        setTimeout(() => setShowPopup(true), 1000); // Show popup 1 second after reaching halfway
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [hasScrolledHalfway, showPopup]);
 
   // Show loading state until parameters are loaded
   if (!isLoaded) {
@@ -375,13 +393,19 @@ export default function PlumbingLanding() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-8">
-                <button className={`${theme.serviceButton} text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2`}>
+                <button 
+                  onClick={() => setShowPopup(true)}
+                  className={`${theme.serviceButton} text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 flex items-center justify-center space-x-2`}
+                >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
                   </svg>
                   <span>Get MY Website Now</span>
                 </button>
-                <button className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
+                <button 
+                  onClick={() => setShowPopup(true)}
+                  className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
+                >
                   See Our Portfolio
                 </button>
               </div>
@@ -420,9 +444,6 @@ export default function PlumbingLanding() {
               <div className="text-center mb-6">
                 <h3 className="text-2xl font-bold mb-2">Get YOUR Website</h3>
                 <p className="text-lg opacity-90">Professional design like this one!</p>
-                <div className="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full inline-block mt-2">
-                  🔥 LIMITED TIME: 50% OFF
-                </div>
               </div>
               
               <form name="website-inquiry" method="POST" data-netlify="true" className="space-y-4">
@@ -480,9 +501,6 @@ export default function PlumbingLanding() {
                 <p className="opacity-75">
                   ✅ 100% USA Based • ✅ 2-week delivery • ✅ 100% client satisfaction
                 </p>
-                <div className="bg-yellow-500 text-black font-bold px-3 py-1 rounded-lg inline-block text-xs">
-                  💰 MONTHLY: $200-350/mo OR ONE-TIME: $2,500-4,300
-                </div>
               </div>
             </div>
           </div>
@@ -490,7 +508,7 @@ export default function PlumbingLanding() {
       </section>
 
       {/* Website Services Banner */}
-      <section className={`${theme.emergencyBg} text-white py-6`}>
+      <section className={`${theme.emergencyBg} text-white py-8`}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="flex flex-col lg:flex-row items-center justify-between text-center lg:text-left gap-6">
             <div className="flex items-center space-x-4">
@@ -561,7 +579,10 @@ export default function PlumbingLanding() {
                   <p className="text-gray-600 text-sm mb-1">Or pay once:</p>
                   <p className={`text-3xl font-bold ${theme.servicePriceText}`}>$2,500</p>
                 </div>
-                <button className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}>
+                <button 
+                  onClick={() => setShowPopup(true)}
+                  className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}
+                >
                   Choose Foundation
                 </button>
               </div>
@@ -601,7 +622,10 @@ export default function PlumbingLanding() {
                   <p className="text-gray-600 text-sm mb-1">Or pay once:</p>
                   <p className={`text-3xl font-bold ${theme.servicePriceText}`}>$4,300</p>
                 </div>
-                <button className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}>
+                <button 
+                  onClick={() => setShowPopup(true)}
+                  className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}
+                >
                   Choose Pro
                 </button>
               </div>
@@ -633,7 +657,10 @@ export default function PlumbingLanding() {
                   <p className="text-gray-600 text-sm mb-1">Starting at:</p>
                   <p className={`text-3xl font-bold ${theme.servicePriceText}`}>$5,000+</p>
                 </div>
-                <button className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}>
+                <button 
+                  onClick={() => setShowPopup(true)}
+                  className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}
+                >
                   Get Quote
                 </button>
               </div>
@@ -648,15 +675,18 @@ export default function PlumbingLanding() {
                 Let's discuss your business goals and find the perfect solution for you.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <button className={`${theme.serviceButton} text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg`}>
+                <button 
+                  onClick={() => setShowPopup(true)}
+                  className={`${theme.serviceButton} text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg`}
+                >
                   💬 Free Consultation
                 </button>
-                <a 
-                  href="tel:8133001816"
+                <button 
+                  onClick={() => setShowPopup(true)}
                   className="border-2 border-white bg-transparent text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
                 >
-                  📱 Call (813) 300-1816
-                </a>
+                  📱 Call (817) 873-6655
+                </button>
               </div>
             </div>
           </div>
@@ -776,26 +806,18 @@ export default function PlumbingLanding() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <form name="contact-form" method="POST" data-netlify="true" className="inline-block">
-                <input type="hidden" name="form-name" value="contact-form" />
-                <input type="hidden" name="business" value={params.business} />
-                <button 
-                  type="submit"
-                  className="bg-white text-gray-900 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
-                >
-                  🚀 Start My Website Today
-                </button>
-              </form>
-              <form name="consultation-form" method="POST" data-netlify="true" className="inline-block">
-                <input type="hidden" name="form-name" value="consultation-form" />
-                <input type="hidden" name="business" value={params.business} />
-                <button 
-                  type="submit"
-                  className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-                >
-                  💬 Free Strategy Call
-                </button>
-              </form>
+              <button 
+                onClick={() => setShowPopup(true)}
+                className="bg-white text-gray-900 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+              >
+                🚀 Start My Website Today
+              </button>
+              <button 
+                onClick={() => setShowPopup(true)}
+                className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
+              >
+                💬 Free Strategy Call
+              </button>
             </div>
             
             <p className="text-sm mt-4 opacity-75">
@@ -830,13 +852,13 @@ export default function PlumbingLanding() {
               
               <div className="mb-4">
                 <a 
-                  href="tel:8133001816"
+                  href="tel:8178736655"
                   className={`${theme.buttonBg} text-white font-bold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 inline-flex items-center space-x-2 mb-4`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                   </svg>
-                  <span>Call: (813) 300-1816</span>
+                  <span>Call: (817) 873-6655</span>
                 </a>
                 <div className="text-gray-300">
                   <p>📧 hello@fortewebdesigns.com</p>
@@ -887,6 +909,83 @@ export default function PlumbingLanding() {
           </div>
         </div>
       </footer>
+
+      {/* Popup Modal */}
+      {showPopup && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
+          <div className="bg-white rounded-2xl max-w-md w-full max-h-[90vh] overflow-y-auto relative">
+            <button 
+              onClick={() => setShowPopup(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700 text-2xl font-bold z-10"
+            >
+              ×
+            </button>
+            
+            <div className={`${theme.heroBg} text-white p-6 rounded-t-2xl`}>
+              <h3 className="text-2xl font-bold mb-2 text-center">Get Your Website Built!</h3>
+              <p className="text-center opacity-90">Professional plumbing website design</p>
+            </div>
+            
+            <div className="p-6">
+              <form name="popup-contact" method="POST" data-netlify="true" className="space-y-4">
+                <input type="hidden" name="form-name" value="popup-contact" />
+                <input type="hidden" name="source" value="popup" />
+                <input type="hidden" name="business" value={params.business} />
+                
+                <input 
+                  type="text" 
+                  name="business-name"
+                  placeholder="Business Name" 
+                  defaultValue={params.business !== 'Your Plumbing Business' ? params.business : ''}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <input 
+                  type="text" 
+                  name="name"
+                  placeholder="Your Name" 
+                  defaultValue={params.owner}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <input 
+                  type="email" 
+                  name="email"
+                  placeholder="Email Address" 
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <input 
+                  type="tel" 
+                  name="phone"
+                  placeholder="Phone Number" 
+                  defaultValue={params.phone}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  required
+                />
+                <textarea 
+                  name="message"
+                  placeholder="Tell us about your plumbing business and website needs..." 
+                  rows={3}
+                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+                  required
+                />
+                <button 
+                  type="submit"
+                  className={`w-full ${theme.serviceButton} text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105`}
+                >
+                  💬 Get My Free Quote
+                </button>
+              </form>
+              
+              <div className="text-center mt-4 text-sm text-gray-600">
+                <p>✅ 100% USA Based • ✅ 2-week delivery • ✅ 100% client satisfaction</p>
+                <p className="mt-2 font-semibold">📞 Or call: (817) 873-6655</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
