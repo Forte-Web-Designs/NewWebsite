@@ -289,6 +289,69 @@ export default function PlumbingLanding() {
         </div>
       </header>
 
+      {/* Demo Disclaimer Banner */}
+      {params.business !== 'Hendrio' && (
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center relative z-50">
+          <div className="container mx-auto">
+            <p className="text-sm md:text-base">
+              🎯 <strong>DEMO PREVIEW:</strong> This is a custom website mockup for <strong>{params.business}</strong>. 
+              Every section, image, and detail can be personalized for your business. 
+              <span className="hidden md:inline"> - This is just a preview of what's possible!</span>
+            </p>
+          </div>
+        </div>
+      )}
+
+      {/* Google Reviews Section */}
+      <section className="bg-white py-6 border-b border-gray-200">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8 text-center">
+            <div className="flex items-center space-x-2">
+              <img src="https://developers.google.com/static/identity/images/g-logo.png" alt="Google" className="w-6 h-6" />
+              <div className="flex text-yellow-400">
+                {[...Array(5)].map((_, i) => (
+                  <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                ))}
+              </div>
+              <span className="text-gray-700 font-medium">4.9/5</span>
+            </div>
+            
+            <div className="text-gray-600 text-sm">
+              <span className="font-medium">127+ Reviews</span> from customers in {params.location}
+            </div>
+            
+            <div className="flex items-center space-x-2 text-sm text-gray-600">
+              <svg className="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+              </svg>
+              <span>Licensed & Insured</span>
+            </div>
+            
+            <div className="flex items-center space-x-2 text-sm text-gray-600">
+              <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+              </svg>
+              <span>Same-Day Service</span>
+            </div>
+          </div>
+          
+          {/* Sample Review Quotes */}
+          <div className="mt-4 flex flex-col md:flex-row justify-center space-y-2 md:space-y-0 md:space-x-6 text-center">
+            <div className="text-xs text-gray-600 italic">
+              "Fast, professional, and fair pricing!" - Sarah M.
+            </div>
+            <div className="text-xs text-gray-600 italic">
+              "Fixed our emergency leak same day!" - Mike R.
+            </div>
+            <div className="text-xs text-gray-600 italic">
+              "Highly recommend for all plumbing needs" - Jennifer K.
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hero Section - Exact Hendrio Match */}
       <section className={`hero-section bg-gradient-to-r ${theme.gradient} text-white relative overflow-hidden min-h-screen flex items-center`}>
         {/* Background Image */}
@@ -721,9 +784,17 @@ export default function PlumbingLanding() {
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 Ready to Grow Your <span className="text-orange-400">Plumbing Business</span>?
               </h2>
-              <p className="text-xl mb-8 opacity-90">
+              <p className="text-xl mb-4 opacity-90">
                 Get a professional website that attracts more customers and grows your business in {params.location}.
               </p>
+              
+              {/* Customization Disclaimer */}
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white/20">
+                <p className="text-sm md:text-base opacity-95">
+                  💡 <strong>Everything you see can be customized!</strong> Business name, services, images, colors, content - 
+                  we'll create a completely unique website that represents your plumbing business perfectly.
+                </p>
+              </div>
               
               <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
                 <div className="text-left">
@@ -974,6 +1045,72 @@ export default function PlumbingLanding() {
           </div>
         </div>
       </section>
+
+      {/* Detailed Demo Disclaimer */}
+      {params.business !== 'Hendrio' && (
+        <section className="py-12 bg-gray-50 border-t border-gray-200">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-200">
+                <div className="flex items-center justify-center mb-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </div>
+                </div>
+                
+                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                  This is Your Custom Website Preview
+                </h3>
+                
+                <div className="grid md:grid-cols-2 gap-6 text-left">
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">✅ What We Can Customize:</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li>• Your business name and branding</li>
+                      <li>• Service descriptions and pricing</li>
+                      <li>• Photos of your team and work</li>
+                      <li>• Service areas and contact info</li>
+                      <li>• Colors, fonts, and layout</li>
+                      <li>• Content and messaging</li>
+                    </ul>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-gray-900 mb-3">🎯 What You Get:</h4>
+                    <ul className="space-y-2 text-sm text-gray-700">
+                      <li>• Professional custom design</li>
+                      <li>• Mobile-responsive website</li>
+                      <li>• Search engine optimization</li>
+                      <li>• Lead capture forms</li>
+                      <li>• Google integration</li>
+                      <li>• Ongoing support</li>
+                    </ul>
+                  </div>
+                </div>
+                
+                <div className="mt-6 p-4 bg-orange-50 rounded-lg border border-orange-200">
+                  <p className="text-sm text-orange-800">
+                    <strong>This demo shows sample content for "{params.business}"</strong> - 
+                    Your actual website will be completely customized with your real business information, 
+                    photos, services, and branding. Nothing is set in stone!
+                  </p>
+                </div>
+                
+                <div className="mt-6">
+                  <button 
+                    onClick={() => setShowPopup(true)}
+                    className="bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300"
+                  >
+                    💬 Let's Discuss Your Custom Website
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Popup Modal */}
       {showPopup && (
