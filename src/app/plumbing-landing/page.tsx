@@ -119,14 +119,14 @@ export default function PlumbingLanding() {
 
   return (
     <div className="min-h-screen">
-      {/* Color Theme Switcher - Better positioned for mobile/desktop */}
-      <div className="fixed top-20 right-4 z-40 lg:top-4 lg:left-4">
-        <div className="bg-white rounded-lg shadow-lg p-2 flex space-x-2">
+      {/* Color Theme Switcher - Mobile Optimized */}
+      <div className="fixed bottom-4 right-4 z-40 lg:top-4 lg:left-4 lg:bottom-auto lg:right-auto">
+        <div className="bg-white rounded-lg shadow-lg p-1.5 lg:p-2 flex space-x-1 lg:space-x-2">
           {Object.keys(colorThemes).map((themeName) => (
             <button
               key={themeName}
               onClick={() => setCurrentTheme(themeName)}
-              className={`w-8 h-8 rounded-full border-2 transition-all ${
+              className={`w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 transition-all ${
                 currentTheme === themeName ? 'border-gray-800 scale-110' : 'border-gray-300'
               }`}
               style={{
@@ -505,8 +505,8 @@ export default function PlumbingLanding() {
             <div className="text-center relative">
               <div className="relative mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                  alt="Schedule Appointment" 
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                  alt="Schedule Service" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
@@ -688,7 +688,7 @@ export default function PlumbingLanding() {
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-8">
               <div className="flex space-x-4">
-                {['Why Choose Us ?', 'hendrio Missions', 'Mission & Vision'].map((tab, index) => (
+                {['Why Choose Us?', 'Our Experience', 'Service Guarantee'].map((tab, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveTabIndex(index)}
@@ -716,17 +716,17 @@ export default function PlumbingLanding() {
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold mb-4">Why Choose Us</h4>
+                <h4 className="text-lg font-semibold mb-4">Why Choose {params.business !== 'Hendrio' ? params.business : 'Us'}</h4>
                 <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-                  Professional Plumbing <span className={`${theme.accent}`}>Services</span>
+                  Trusted Local Plumbers <span className={`${theme.accent}`}>You Can</span>
                 </h2>
                 <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-                  You Can Trust
+                  Count On 24/7
                 </h2>
                 <p className="mb-8 opacity-90">
                   {params.business !== 'Hendrio' 
-                    ? `${params.business} is committed to providing exceptional plumbing services with honest pricing, quality workmanship, and reliable customer support throughout ${params.location || 'the local area'}.`
-                    : 'Competently repurpose go forward benefits without goal-oriented ROI the conveniently target business opportunities whereas proactive'
+                    ? `When you need reliable plumbing services in ${params.location || 'your area'}, ${params.business} delivers. We're locally owned, fully licensed, and committed to fixing your plumbing problems right the first time. No hidden fees, no surprises - just honest, professional service you can trust.`
+                    : 'Professional plumbing services with honest pricing, quality workmanship, and reliable customer support.'
                   }
                 </p>
 
@@ -736,13 +736,13 @@ export default function PlumbingLanding() {
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Emergency Service Available</span>
+                      <span>24/7 Emergency Service</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Licensed & Insured Plumbers</span>
+                      <span>Licensed & Insured Experts</span>
                     </div>
                   </div>
                   <div>
@@ -750,25 +750,22 @@ export default function PlumbingLanding() {
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Satisfaction Guarantee</span>
+                      <span>100% Satisfaction Guarantee</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Upfront, Fair Pricing</span>
+                      <span>Upfront, Honest Pricing</span>
                     </div>
                   </div>
                 </div>
 
                 <button 
                   onClick={() => setShowPopup(true)}
-                  className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2"
+                  className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2 text-lg"
                 >
-                  <span>Get Free Estimate</span>
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
+                  <span>🔧 Get Emergency Service Now</span>
                 </button>
               </div>
             </div>
@@ -782,76 +779,87 @@ export default function PlumbingLanding() {
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-                Ready to Grow Your <span className="text-orange-400">Plumbing Business</span>?
+                Ready to <span className="text-orange-400">Dominate</span> Your Local Market?
               </h2>
               <p className="text-xl mb-4 opacity-90">
-                Get a professional website that attracts more customers and grows your business in {params.location}.
+                Stop losing customers to competitors! Get a custom website that brings in more calls and grows your business in {params.location}.
               </p>
               
-              {/* Customization Disclaimer */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 mb-8 border border-white/20">
-                <p className="text-sm md:text-base opacity-95">
-                  💡 <strong>Everything you see can be customized!</strong> Business name, services, images, colors, content - 
-                  we'll create a completely unique website that represents your plumbing business perfectly.
+              {/* Unique Value Proposition */}
+              <div className="bg-red-600/90 backdrop-blur-sm rounded-lg p-6 mb-8 border border-red-500">
+                <p className="text-lg font-bold mb-2">❌ NO Website Templates</p>
+                <p className="text-lg font-bold mb-2">❌ NO AI-Generated Content</p>
+                <p className="text-lg font-bold mb-4">❌ NO Wix/Squarespace/WordPress</p>
+                <p className="text-base opacity-95">
+                  <strong>✅ 100% CUSTOM-CODED</strong> websites built specifically for YOUR plumbing business. 
+                  Every pixel designed to convert visitors into paying customers.
                 </p>
               </div>
               
               <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
                 <div className="text-left">
-                  <h3 className="text-2xl font-bold mb-6">What You Get:</h3>
+                  <h3 className="text-2xl font-bold mb-6">Your Custom Website Includes:</h3>
                   <div className="space-y-4">
                     <div className="flex items-center space-x-3">
                       <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Professional Website Design</span>
+                      <span><strong>Custom Design</strong> - No templates, built from scratch</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Mobile-Responsive Design</span>
+                      <span><strong>Lead Generation System</strong> - Forms that actually convert</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Search Engine Optimization (SEO)</span>
+                      <span><strong>Local SEO Optimization</strong> - Rank #1 in your area</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Lead Capture Forms</span>
+                      <span><strong>Mobile-First Design</strong> - Perfect on all devices</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Online Booking System</span>
+                      <span><strong>Professional Photography</strong> - Showcase your work</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Customer Review Integration</span>
+                      <span><strong>Ongoing Support</strong> - We've got your back</span>
                     </div>
                   </div>
                 </div>
                 
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-                  <h3 className="text-2xl font-bold mb-6">Get Your Free Website Mockup</h3>
+                  <div className="text-center mb-6">
+                    <div className="bg-green-500 text-white text-sm font-bold px-4 py-2 rounded-full inline-block mb-4">
+                      🎯 LIMITED TIME OFFER
+                    </div>
+                    <h3 className="text-2xl font-bold mb-2">Claim This Website for Your Business!</h3>
+                    <div className="text-3xl font-bold text-orange-300 mb-2">$2,997 $1,497</div>
+                    <p className="text-sm opacity-75">50% OFF - This week only!</p>
+                  </div>
+                  
                   <div className="space-y-4">
                     <input 
                       type="text" 
                       placeholder="Business Name"
-                      defaultValue={params.business}
+                      defaultValue={params.business !== 'Hendrio' ? params.business : ''}
                       className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                     <input 
                       type="text" 
                       placeholder="Your Name"
-                      defaultValue={params.owner}
+                      defaultValue={params.owner !== 'Admin' ? params.owner : ''}
                       className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                     <input 
@@ -862,28 +870,33 @@ export default function PlumbingLanding() {
                     <input 
                       type="tel" 
                       placeholder="Phone Number"
-                      defaultValue={params.phone}
+                      defaultValue={params.phone !== '123-456-7890' ? params.phone : ''}
                       className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
                     />
                     <button 
                       onClick={() => setShowPopup(true)}
-                      className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg"
+                      className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg shadow-lg"
                     >
-                      🚀 Get My Free Website Mockup
+                      � CLAIM MY WEBSITE NOW - $1,497
                     </button>
                   </div>
-                  <p className="text-sm mt-4 opacity-80">
-                    No spam, no commitment. See your website design in 24 hours!
-                  </p>
+                  <div className="text-center mt-4 space-y-2">
+                    <p className="text-xs opacity-80">
+                      ⚡ Secure payment • 🔒 100% money-back guarantee • 🚀 Live in 7 days
+                    </p>
+                    <p className="text-xs opacity-60">
+                      Payment plans available • Call to discuss: <span className="font-bold">(817) 873-6655</span>
+                    </p>
+                  </div>
                 </div>
               </div>
               
               <div className="text-center">
                 <p className="text-lg mb-4">
-                  Questions? Call us directly: <a href="tel:+19723554001" className="text-orange-400 font-bold">(972) 355-4001</a>
+                  Questions? Call us directly: <a href="tel:+18178736655" className="text-orange-400 font-bold">(817) 873-6655</a>
                 </p>
                 <p className="text-sm opacity-75">
-                  Forte Web Designs - Professional websites for plumbing contractors
+                  Forte Web Designs - Custom websites for plumbing contractors (No templates, No AI, No page builders)
                 </p>
               </div>
             </div>
@@ -1125,13 +1138,14 @@ export default function PlumbingLanding() {
             
             <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-6 rounded-t-2xl">
               <div className="text-center">
-                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Get Your FREE Website Mockup!</h3>
-                <p className="opacity-90">See exactly how your professional plumbing website will look</p>
+                <h3 className="text-2xl font-bold mb-2">Claim Your Custom Website!</h3>
+                <div className="text-2xl font-bold text-orange-600 mb-2">$2,997 <span className="line-through text-gray-400">$1,497</span></div>
+                <p className="opacity-90">Limited time: 50% OFF for qualified plumbing contractors</p>
               </div>
             </div>
             
@@ -1213,7 +1227,7 @@ export default function PlumbingLanding() {
                   ✅ No spam, ever  •  ✅ 24-hour mockup delivery  •  ✅ No commitment required
                 </p>
                 <p className="text-sm font-semibold text-gray-700">
-                  📞 Questions? Call: <a href="tel:+19723554001" className="text-orange-500">(972) 355-4001</a>
+                  📞 Questions? Call: <a href="tel:+18178736655" className="text-orange-500">(817) 873-6655</a>
                 </p>
                 <p className="text-xs text-gray-500">
                   Forte Web Designs - Professional websites for plumbing contractors
