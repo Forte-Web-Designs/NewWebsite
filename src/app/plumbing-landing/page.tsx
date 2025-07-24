@@ -20,7 +20,7 @@ const generatePlumberColorScheme = (businessName: string) => {
     {
       name: 'Classic Blue & Orange',
       primary: 'blue-900',
-      secondary: 'orange-5                  � Call: (817) 873-66550',
+      secondary: 'orange-500',
       accent: 'orange-400',
       background: 'blue-800',
       gradient: 'from-blue-900 via-blue-800 to-blue-900',
@@ -805,23 +805,17 @@ export default function PlumbingLanding() {
               </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex justify-center">
               <button 
                 onClick={() => setShowPopup(true)}
-                className="bg-white text-gray-900 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                className="bg-white text-gray-900 font-bold py-6 px-12 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105 text-xl"
               >
                 🚀 Start My Website Today
-              </button>
-              <button 
-                onClick={() => setShowPopup(true)}
-                className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
-              >
-                💬 Free Strategy Call
               </button>
             </div>
             
             <p className="text-sm mt-4 opacity-75">
-              ⚡ Limited time: 50% off all packages • 100% USA based • 100% client satisfaction
+              ⚡ 100% USA based • 100% client satisfaction
             </p>
           </div>
         </div>
@@ -861,7 +855,7 @@ export default function PlumbingLanding() {
                   <span>Call: (817) 873-6655</span>
                 </a>
                 <div className="text-gray-300">
-                  <p>📧 hello@fortewebdesigns.com</p>
+                  <p>📧 seth@fortewebdesigns.com</p>
                   <p>🌐 www.fortewebdesigns.com</p>
                 </div>
               </div>
