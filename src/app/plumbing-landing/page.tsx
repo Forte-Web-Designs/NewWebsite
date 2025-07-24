@@ -477,7 +477,7 @@ export default function PlumbingLanding() {
                   ✅ No upfront payment • ✅ 2-week delivery • ✅ Money-back guarantee
                 </p>
                 <div className="bg-yellow-500 text-black font-bold px-3 py-1 rounded-lg inline-block text-xs">
-                  💰 REGULAR PRICE: $4,997 → YOUR PRICE: $2,497
+                  💰 MONTHLY: $200-350/mo OR ONE-TIME: $2,500-4,300
                 </div>
               </div>
             </div>
@@ -530,33 +530,38 @@ export default function PlumbingLanding() {
           </div>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Starter Package */}
+            {/* Foundation Package */}
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border-2 border-transparent">
               <div className={`w-16 h-16 ${theme.serviceIconBg} rounded-full flex items-center justify-center mx-auto mb-6`}>
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                 </svg>
               </div>
-              <h3 className={`text-xl font-bold ${theme.primaryText} mb-4 text-center`}>Starter Website</h3>
+              <h3 className={`text-xl font-bold ${theme.primaryText} mb-4 text-center`}>Forte Foundation™</h3>
               <ul className="text-gray-600 space-y-2 mb-6">
                 <li>• 5-page professional website</li>
                 <li>• Mobile-responsive design</li>
-                <li>• Contact forms & lead capture</li>
-                <li>• Basic SEO optimization</li>
-                <li>• 1 year free hosting</li>
-                <li>• Social media integration</li>
+                <li>• SEO-ready foundation</li>
+                <li>• Basic analytics</li>
+                <li>• Hosting + domain included</li>
+                <li>• Forte Care™ support</li>
               </ul>
               <div className="text-center">
-                <p className="text-lg text-gray-500 line-through mb-1">$2,997</p>
-                <p className={`text-3xl font-bold ${theme.servicePriceText} mb-2`}>$1,497</p>
-                <p className="text-sm text-gray-500 mb-4">Perfect for new businesses</p>
+                <div className="mb-4">
+                  <p className={`text-2xl font-bold ${theme.servicePriceText} mb-1`}>$200/month</p>
+                  <p className="text-sm text-gray-500">12-month minimum</p>
+                </div>
+                <div className="border-t pt-4 mb-4">
+                  <p className="text-gray-600 text-sm mb-1">Or pay once:</p>
+                  <p className={`text-3xl font-bold ${theme.servicePriceText}`}>$2,500</p>
+                </div>
                 <button className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}>
-                  Get Started
+                  Choose Foundation
                 </button>
               </div>
             </div>
 
-            {/* Professional Package - POPULAR */}
+            {/* Pro Package - POPULAR */}
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border-2 border-orange-400 relative">
               <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                 <span className="bg-orange-500 text-white px-4 py-2 rounded-full text-sm font-bold">
@@ -568,49 +573,59 @@ export default function PlumbingLanding() {
                   <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
                 </svg>
               </div>
-              <h3 className={`text-xl font-bold ${theme.primaryText} mb-4 text-center`}>Professional Website</h3>
+              <h3 className={`text-xl font-bold ${theme.primaryText} mb-4 text-center`}>Forte Pro™</h3>
               <ul className="text-gray-600 space-y-2 mb-6">
                 <li>• 10-page custom website</li>
-                <li>• Advanced lead generation</li>
-                <li>• Professional copywriting</li>
-                <li>• Advanced SEO package</li>
-                <li>• Google Business setup</li>
-                <li>• Analytics & reporting</li>
-                <li>• 2 years free hosting</li>
+                <li>• Mobile-responsive design</li>
+                <li>• SEO-ready foundation</li>
+                <li>• Advanced analytics</li>
+                <li>• Conversion tracking</li>
+                <li>• Priority support</li>
+                <li>• Forte Care™ included</li>
               </ul>
               <div className="text-center">
-                <p className="text-lg text-gray-500 line-through mb-1">$4,997</p>
-                <p className={`text-3xl font-bold ${theme.servicePriceText} mb-2`}>$2,497</p>
-                <p className="text-sm text-gray-500 mb-4">Best value for growing businesses</p>
+                <div className="mb-4">
+                  <p className={`text-2xl font-bold ${theme.servicePriceText} mb-1`}>$350/month</p>
+                  <p className="text-sm text-gray-500">12-month minimum</p>
+                </div>
+                <div className="border-t pt-4 mb-4">
+                  <p className="text-gray-600 text-sm mb-1">Or pay once:</p>
+                  <p className={`text-3xl font-bold ${theme.servicePriceText}`}>$4,300</p>
+                </div>
                 <button className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}>
-                  Choose This Package
+                  Choose Pro
                 </button>
               </div>
             </div>
 
-            {/* Enterprise Package */}
+            {/* Custom Package */}
             <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow border-2 border-transparent">
               <div className={`w-16 h-16 ${theme.serviceIconBg} rounded-full flex items-center justify-center mx-auto mb-6`}>
                 <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm3.5 6L12 10.5 8.5 8 12 5.5 15.5 8z"/>
                 </svg>
               </div>
-              <h3 className={`text-xl font-bold ${theme.primaryText} mb-4 text-center`}>Enterprise Website</h3>
+              <h3 className={`text-xl font-bold ${theme.primaryText} mb-4 text-center`}>Custom Solution</h3>
               <ul className="text-gray-600 space-y-2 mb-6">
-                <li>• Unlimited pages & features</li>
+                <li>• Unlimited pages</li>
                 <li>• E-commerce capabilities</li>
-                <li>• Custom web applications</li>
-                <li>• Advanced integrations</li>
-                <li>• Ongoing maintenance</li>
-                <li>• Priority support</li>
-                <li>• Marketing automation</li>
+                <li>• Custom integrations</li>
+                <li>• Advanced features</li>
+                <li>• Priority development</li>
+                <li>• Dedicated support</li>
+                <li>• Forte Care™ premium</li>
               </ul>
               <div className="text-center">
-                <p className="text-lg text-gray-500 line-through mb-1">$9,997</p>
-                <p className={`text-3xl font-bold ${theme.servicePriceText} mb-2`}>$4,997</p>
-                <p className="text-sm text-gray-500 mb-4">For established businesses</p>
+                <div className="mb-4">
+                  <p className={`text-2xl font-bold ${theme.servicePriceText} mb-1`}>Custom Quote</p>
+                  <p className="text-sm text-gray-500">Based on requirements</p>
+                </div>
+                <div className="border-t pt-4 mb-4">
+                  <p className="text-gray-600 text-sm mb-1">Starting at:</p>
+                  <p className={`text-3xl font-bold ${theme.servicePriceText}`}>$5,000+</p>
+                </div>
                 <button className={`${theme.serviceButton} text-white px-6 py-3 rounded-lg transition-colors font-medium w-full`}>
-                  Contact Us
+                  Get Quote
                 </button>
               </div>
             </div>
