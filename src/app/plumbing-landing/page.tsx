@@ -119,8 +119,8 @@ export default function PlumbingLanding() {
 
   return (
     <div className="min-h-screen">
-      {/* Color Theme Switcher */}
-      <div className="fixed top-4 right-4 z-50">
+      {/* Color Theme Switcher - Better positioned for mobile/desktop */}
+      <div className="fixed top-20 right-4 z-40 lg:top-4 lg:left-4">
         <div className="bg-white rounded-lg shadow-lg p-2 flex space-x-2">
           {Object.keys(colorThemes).map((themeName) => (
             <button
@@ -145,22 +145,27 @@ export default function PlumbingLanding() {
       {/* Top Header Section - Exact Hendrio Match */}
       <div className={`${theme.primary} text-white py-3`}>
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center text-sm">
-            <div className="flex items-center space-x-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center text-sm space-y-2 lg:space-y-0">
+            <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-8">
               <div className="flex items-center">
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                 </svg>
-                102/B New Market, Sandigo-USA
+                <span className="text-center lg:text-left">
+                  {params.business !== 'Hendrio' && params.location !== 'your area' 
+                    ? `Serving ${params.location} and surrounding areas`
+                    : '102/B New Market, Sandigo-USA'
+                  }
+                </span>
               </div>
               <div className="flex items-center">
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                example@gmail.com
+                info@{params.business.toLowerCase().replace(/\s+/g, '')}plumbing.com
               </div>
             </div>
-            <div className="flex items-center space-x-6">
+            <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-6">
               <div className="flex space-x-2">
                 <a href="#" className="w-8 h-8 bg-white/20 rounded flex items-center justify-center hover:bg-white/30 transition-colors">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -187,7 +192,9 @@ export default function PlumbingLanding() {
                 <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                 </svg>
-                <span className="font-semibold">Call Us : +980 234 4567</span>
+                <span className="font-semibold">
+                  Call Us : {params.phone || '+980 234 4567'}
+                </span>
               </div>
             </div>
           </div>
@@ -206,7 +213,10 @@ export default function PlumbingLanding() {
                 </svg>
               </div>
               <div>
-                <h1 className={`text-2xl font-bold ${theme.primaryText}`}>Hendrio</h1>
+                <h1 className={`text-2xl font-bold ${theme.primaryText}`}>
+                  {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
+                </h1>
+                <p className="text-sm text-gray-600">Professional Plumbing Services</p>
               </div>
             </div>
 
@@ -300,32 +310,100 @@ export default function PlumbingLanding() {
         </div>
         
         <div className="container mx-auto px-4 py-20 relative">
-          <div className="flex items-center">
-            <div className="w-1/2">
-              <div className="sero-content">
+          <div className="flex flex-col lg:flex-row items-center">
+            <div className="w-full lg:w-1/2 text-center lg:text-left mb-10 lg:mb-0">
+              <div className="hero-content">
                 <h4 className="text-lg font-semibold mb-4">100% Satisfaction Guarantee</h4>
-                <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  We're Top <span className={`${theme.accent}`}>Expert</span>
+                <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
+                  {params.business !== 'Hendrio' ? (
+                    <>
+                      <span className={`${theme.accent}`}>{params.business}</span><br />
+                      Expert Plumbing
+                    </>
+                  ) : (
+                    <>
+                      We're Top <span className={`${theme.accent}`}>Expert</span><br />
+                      in Plumbing
+                    </>
+                  )}
                 </h1>
-                <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  in Plumbing
-                </h1>
-                <p className="text-xl mb-8 leading-relaxed opacity-90">
-                  Competently repurpose go forward benefits without oriented conveniently target business opportunities done
+                {params.owner && (
+                  <h2 className="text-2xl lg:text-3xl font-semibold mb-4 opacity-90">
+                    Owned & Operated by {params.owner}
+                  </h2>
+                )}
+                {params.location !== 'your area' && (
+                  <h3 className="text-xl lg:text-2xl mb-6 opacity-80">
+                    Proudly Serving {params.location} & Surrounding Areas
+                  </h3>
+                )}
+                <p className="text-lg lg:text-xl mb-8 leading-relaxed opacity-90">
+                  {params.business !== 'Hendrio' 
+                    ? `Professional plumbing services you can trust. Licensed, insured, and committed to excellence in ${params.location || 'your area'}.`
+                    : 'Competently repurpose go forward benefits without oriented conveniently target business opportunities done'
+                  }
                 </p>
-                <div className="hero-button">
+                <div className="hero-button flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <button 
                     onClick={() => setShowPopup(true)}
-                    className={`${theme.secondary} ${theme.secondaryHover} text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2`}
+                    className={`${theme.secondary} ${theme.secondaryHover} text-white font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-lg`}
                   >
-                    <span>Get An Estimate</span>
+                    <span>Get Free Estimate</span>
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                     </svg>
                   </button>
+                  {params.phone && (
+                    <a 
+                      href={`tel:${params.phone.replace(/\D/g, '')}`}
+                      className="bg-white text-blue-900 font-bold py-4 px-8 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2 text-lg hover:bg-gray-100"
+                    >
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                      </svg>
+                      <span>Call Now</span>
+                    </a>
+                  )}
                 </div>
               </div>
             </div>
+            
+            {/* Add website mockup preview for business owners */}
+            {params.business !== 'Hendrio' && (
+              <div className="w-full lg:w-1/2 lg:pl-12">
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <h3 className="text-2xl font-bold mb-4 text-center">Your Website Preview</h3>
+                  <div className="bg-white rounded-lg p-4 text-gray-800 shadow-xl">
+                    <div className="text-center mb-4">
+                      <div className="w-12 h-12 bg-blue-900 rounded mx-auto mb-2 flex items-center justify-center">
+                        <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                          <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+                        </svg>
+                      </div>
+                      <h4 className="font-bold text-lg">{params.business}</h4>
+                      <p className="text-sm text-gray-600">Professional Plumbing Services</p>
+                    </div>
+                    <div className="text-center">
+                      <p className="text-sm mb-3">Serving {params.location}</p>
+                      <div className="bg-orange-500 text-white py-2 px-4 rounded text-sm font-bold">
+                        Call {params.phone}
+                      </div>
+                    </div>
+                  </div>
+                  <div className="text-center mt-4">
+                    <p className="text-sm opacity-90 mb-3">
+                      ✨ This could be your professional website!
+                    </p>
+                    <button 
+                      onClick={() => setShowPopup(true)}
+                      className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-6 rounded-lg transition-all duration-300"
+                    >
+                      Claim Your Website
+                    </button>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -334,43 +412,46 @@ export default function PlumbingLanding() {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h4 className={`${theme.secondaryText} text-lg font-semibold mb-4`}>Work Process</h4>
-            <h2 className={`text-4xl font-bold ${theme.primaryText} mb-4`}>
-              We Follow the <span className={`${theme.accent}`}>Process</span>
+            <h4 className={`${theme.secondaryText} text-lg font-semibold mb-4`}>How We Work</h4>
+            <h2 className={`text-3xl lg:text-4xl font-bold ${theme.primaryText} mb-4`}>
+              Our Simple <span className={`${theme.accent}`}>4-Step Process</span>
             </h2>
+            <p className="text-gray-600 max-w-2xl mx-auto">
+              Getting quality plumbing service has never been easier. Here's how we make it happen:
+            </p>
           </div>
           
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Step 1 */}
             <div className="text-center relative">
               <div className="relative mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1609205264738-0d997a6e81af?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                  alt="Booking Online" 
+                  src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                  alt="Contact Us Online" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-sm font-bold text-blue-900">01</span>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-blue-900 mb-3">Booking Online</h4>
-              <p className="text-gray-600">Competently repurpose forward conveniently target fixed</p>
+              <h4 className="text-xl font-bold text-blue-900 mb-3">Contact Us</h4>
+              <p className="text-gray-600">Call, text, or fill out our online form to describe your plumbing issue</p>
             </div>
 
             {/* Step 2 */}
             <div className="text-center relative">
               <div className="relative mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1553484771-047a44eee27c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                  alt="Confirmation" 
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                  alt="Schedule Appointment" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-sm font-bold text-blue-900">02</span>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-blue-900 mb-3">Confirmation</h4>
-              <p className="text-gray-600">Competently repurpose forward conveniently target fixed</p>
+              <h4 className="text-xl font-bold text-blue-900 mb-3">Schedule Service</h4>
+              <p className="text-gray-600">We'll confirm your appointment and send a licensed plumber to your location</p>
             </div>
 
             {/* Step 3 */}
@@ -378,15 +459,15 @@ export default function PlumbingLanding() {
               <div className="relative mb-6">
                 <img 
                   src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                  alt="Estimate Details" 
+                  alt="Free Estimate" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-sm font-bold text-blue-900">03</span>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-blue-900 mb-3">Estimate Details</h4>
-              <p className="text-gray-600">Competently repurpose forward conveniently target fixed</p>
+              <h4 className="text-xl font-bold text-blue-900 mb-3">Get Estimate</h4>
+              <p className="text-gray-600">Receive a detailed, upfront estimate with no hidden fees or surprises</p>
             </div>
 
             {/* Step 4 */}
@@ -394,50 +475,61 @@ export default function PlumbingLanding() {
               <div className="relative mb-6">
                 <img 
                   src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
-                  alt="Complete Works" 
+                  alt="Quality Work Completed" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
                 <div className="absolute -bottom-2 -right-2 w-8 h-8 bg-white rounded-full flex items-center justify-center shadow-lg">
                   <span className="text-sm font-bold text-green-600">✓</span>
                 </div>
               </div>
-              <h4 className="text-xl font-bold text-blue-900 mb-3">Complete Works</h4>
-              <p className="text-gray-600">Competently repurpose forward conveniently target fixed</p>
+              <h4 className="text-xl font-bold text-blue-900 mb-3">Problem Solved</h4>
+              <p className="text-gray-600">Professional work completed right the first time with a satisfaction guarantee</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* About Section - Exact Hendrio Match */}
+      {/* About Section - Customized with business info */}
       <section id="about" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Image */}
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1581578017048-4d39d0651281?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Professional plumber at work" 
                 className="rounded-lg w-full h-96 object-cover"
               />
               {/* Stats Box */}
               <div className="absolute bottom-6 right-6 bg-orange-500 text-white p-6 rounded-lg text-center shadow-lg">
-                <div className="text-3xl font-bold">11</div>
-                <div className="text-lg font-bold">K+</div>
-                <div className="text-sm">Project<br />Done</div>
+                <div className="text-3xl font-bold">500+</div>
+                <div className="text-lg font-bold">Happy</div>
+                <div className="text-sm">Customers</div>
               </div>
             </div>
 
             {/* Right - Content */}
             <div>
-              <h4 className="text-orange-500 text-lg font-semibold mb-4">ABOUT US</h4>
-              <h2 className="text-4xl font-bold text-blue-900 mb-6">
-                Over 25+ Year of <span className="text-orange-400">Experience</span>
-              </h2>
-              <h2 className="text-4xl font-bold text-blue-900 mb-6">
-                In Plumbing Service
+              <h4 className="text-orange-500 text-lg font-semibold mb-4">ABOUT {params.business.toUpperCase()}</h4>
+              <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-6">
+                {params.business !== 'Hendrio' ? (
+                  <>
+                    Your Trusted <span className="text-orange-400">Local</span><br />
+                    Plumbing Experts in {params.location || 'Your Area'}
+                  </>
+                ) : (
+                  <>
+                    Over 25+ Year of <span className="text-orange-400">Experience</span><br />
+                    In Plumbing Service
+                  </>
+                )}
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                Competently repurpose go forward benefits without goal-oriented ROI the main conveniently target business opportunities whereas proactive streamline sustai content via functional multidisciplinary platforms
+                {params.business !== 'Hendrio' ? (
+                  `At ${params.business}, we're committed to providing reliable, professional plumbing services to homeowners and businesses in ${params.location || 'the local area'}. ${params.owner ? `Under the expert leadership of ${params.owner}, ` : ''}our team delivers quality workmanship and exceptional customer service on every job.`
+                ) : (
+                  'Competently repurpose go forward benefits without goal-oriented ROI the main conveniently target business opportunities whereas proactive streamline sustai content via functional multidisciplinary platforms'
+                )}
               </p>
 
               <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -445,47 +537,61 @@ export default function PlumbingLanding() {
                   <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
-                  <span className="font-medium">Comfortable Pricing Plan</span>
+                  <span className="font-medium">Licensed & Insured</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
-                  <span className="font-medium">Top Experts Mechanic</span>
+                  <span className="font-medium">24/7 Emergency Service</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                  <span className="font-medium">Upfront Pricing</span>
+                </div>
+                <div className="flex items-center space-x-3">
+                  <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                  </svg>
+                  <span className="font-medium">Satisfaction Guarantee</span>
                 </div>
               </div>
 
               {/* Progress Bar */}
               <div className="mb-8">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="font-medium">Basin Repairing</span>
-                  <span className="font-bold text-orange-500">90%</span>
+                  <span className="font-medium">Customer Satisfaction</span>
+                  <span className="font-bold text-orange-500">98%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
-                  <div className="bg-orange-500 h-2 rounded-full" style={{width: '90%'}}></div>
+                  <div className="bg-orange-500 h-2 rounded-full" style={{width: '98%'}}></div>
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 items-center">
+              <div className="flex flex-col sm:flex-row gap-6 items-start sm:items-center">
                 <button 
                   onClick={() => setShowPopup(true)}
                   className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg flex items-center space-x-2"
                 >
-                  <span>Get An Estimate</span>
+                  <span>Get Free Estimate</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
                 </button>
 
-                <div className="flex items-center space-x-4">
-                  <div className="w-12 h-12 bg-gray-300 rounded-full flex items-center justify-center">
-                    <span className="text-xs font-bold">DM</span>
+                {params.owner && (
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center text-white font-bold">
+                      {params.owner.split(' ').map(n => n[0]).join('')}
+                    </div>
+                    <div>
+                      <h5 className="font-bold text-blue-900">{params.owner}</h5>
+                      <p className="text-sm text-gray-600">Owner & Licensed Plumber</p>
+                    </div>
                   </div>
-                  <div>
-                    <h5 className="font-bold text-blue-900">David M. Alexon</h5>
-                    <p className="text-sm text-gray-600">CEO & Founder</p>
-                  </div>
-                </div>
+                )}
               </div>
             </div>
           </div>
@@ -497,11 +603,11 @@ export default function PlumbingLanding() {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h4 className="text-lg font-semibold mb-4">Why Choose Us</h4>
-            <h2 className="text-4xl font-bold mb-4">
-              Some Reason for Choose <span className={`${theme.accent}`}>hendrio</span>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+              Why Choose <span className={`${theme.accent}`}>{params.business !== 'Hendrio' ? params.business : 'hendrio'}</span>
             </h2>
-            <h2 className="text-4xl font-bold mb-8">
-              Plumbing Servicing
+            <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+              For Your Plumbing Needs?
             </h2>
             
             {/* Video Play Button */}
@@ -548,14 +654,17 @@ export default function PlumbingLanding() {
 
               <div>
                 <h4 className="text-lg font-semibold mb-4">Why Choose Us</h4>
-                <h2 className="text-3xl font-bold mb-6">
-                  Hire Best Plumbing <span className={`${theme.accent}`}>Service</span>
+                <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                  Professional Plumbing <span className={`${theme.accent}`}>Services</span>
                 </h2>
-                <h2 className="text-3xl font-bold mb-6">
-                  For Great Work
+                <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                  You Can Trust
                 </h2>
                 <p className="mb-8 opacity-90">
-                  Competently repurpose go forward benefits without goal-oriented ROI the conveniently target business opportunities whereas proactive
+                  {params.business !== 'Hendrio' 
+                    ? `${params.business} is committed to providing exceptional plumbing services with honest pricing, quality workmanship, and reliable customer support throughout ${params.location || 'the local area'}.`
+                    : 'Competently repurpose go forward benefits without goal-oriented ROI the conveniently target business opportunities whereas proactive'
+                  }
                 </p>
 
                 <div className="grid md:grid-cols-2 gap-6 mb-8">
@@ -564,13 +673,13 @@ export default function PlumbingLanding() {
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Repairing Roofing and Door</span>
+                      <span>Emergency Service Available</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Floor & Window Repair</span>
+                      <span>Licensed & Insured Plumbers</span>
                     </div>
                   </div>
                   <div>
@@ -578,13 +687,13 @@ export default function PlumbingLanding() {
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Satisfactions Guarantee</span>
+                      <span>Satisfaction Guarantee</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>24/7 Daily Live Support</span>
+                      <span>Upfront, Fair Pricing</span>
                     </div>
                   </div>
                 </div>
@@ -593,7 +702,7 @@ export default function PlumbingLanding() {
                   onClick={() => setShowPopup(true)}
                   className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 flex items-center space-x-2"
                 >
-                  <span>Get An Estimate</span>
+                  <span>Get Free Estimate</span>
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
@@ -604,7 +713,114 @@ export default function PlumbingLanding() {
         </div>
       </section>
 
-      {/* Services Section - Exact Hendrio Match */}
+      {/* Claim Your Website Section - Only show for business owners */}
+      {params.business !== 'Hendrio' && (
+        <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white" id="contact">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <h2 className="text-3xl lg:text-4xl font-bold mb-6">
+                Ready to Grow Your <span className="text-orange-400">Plumbing Business</span>?
+              </h2>
+              <p className="text-xl mb-8 opacity-90">
+                Get a professional website that attracts more customers and grows your business in {params.location}.
+              </p>
+              
+              <div className="grid lg:grid-cols-2 gap-12 items-center mb-12">
+                <div className="text-left">
+                  <h3 className="text-2xl font-bold mb-6">What You Get:</h3>
+                  <div className="space-y-4">
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      <span>Professional Website Design</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      <span>Mobile-Responsive Design</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      <span>Search Engine Optimization (SEO)</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      <span>Lead Capture Forms</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      <span>Online Booking System</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <svg className="w-6 h-6 text-green-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                      </svg>
+                      <span>Customer Review Integration</span>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+                  <h3 className="text-2xl font-bold mb-6">Get Your Free Website Mockup</h3>
+                  <div className="space-y-4">
+                    <input 
+                      type="text" 
+                      placeholder="Business Name"
+                      defaultValue={params.business}
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                    <input 
+                      type="text" 
+                      placeholder="Your Name"
+                      defaultValue={params.owner}
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                    <input 
+                      type="email" 
+                      placeholder="Email Address"
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                    <input 
+                      type="tel" 
+                      placeholder="Phone Number"
+                      defaultValue={params.phone}
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    />
+                    <button 
+                      onClick={() => setShowPopup(true)}
+                      className="w-full bg-orange-500 hover:bg-orange-400 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg"
+                    >
+                      🚀 Get My Free Website Mockup
+                    </button>
+                  </div>
+                  <p className="text-sm mt-4 opacity-80">
+                    No spam, no commitment. See your website design in 24 hours!
+                  </p>
+                </div>
+              </div>
+              
+              <div className="text-center">
+                <p className="text-lg mb-4">
+                  Questions? Call us directly: <a href="tel:+19723554001" className="text-orange-400 font-bold">(972) 355-4001</a>
+                </p>
+                <p className="text-sm opacity-75">
+                  Forte Web Designs - Professional websites for plumbing contractors
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Services Section - Updated titles */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
@@ -623,7 +839,7 @@ export default function PlumbingLanding() {
               <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Kitchen Plumbing" 
+                  alt="Kitchen Plumbing Services" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
@@ -646,19 +862,19 @@ export default function PlumbingLanding() {
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    House Floor Cleaning
+                    Sink & Faucet Repair
                   </li>
                   <li className="flex items-center">
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    Roof Clean & Wash
+                    Garbage Disposal Service
                   </li>
                   <li className="flex items-center">
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    Washroom Clean
+                    Dishwasher Installation
                   </li>
                 </ul>
               </div>
@@ -668,59 +884,13 @@ export default function PlumbingLanding() {
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Basement Plumbing" 
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Bathroom Plumbing Services" 
                   className="w-full h-48 object-cover"
                 />
                 <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-blue-900">Basement Plumbing</h3>
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                  </div>
-                </div>
-                <ul className="text-gray-600 space-y-2">
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    House Floor Cleaning
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Roof Clean & Wash
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Washroom Clean
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Service 3 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Bathroom Plumbing" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                   </svg>
                 </div>
               </div>
@@ -738,19 +908,65 @@ export default function PlumbingLanding() {
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    House Floor Cleaning
+                    Toilet Repair & Installation
                   </li>
                   <li className="flex items-center">
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    Roof Clean & Wash
+                    Shower & Tub Service
                   </li>
                   <li className="flex items-center">
                     <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    Washroom Clean
+                    Leak Detection & Repair
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Emergency Plumbing Services" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l1.09 2.26L16 5.18l-1.64 1.63L15 10l-3-1.5L9 10l.64-3.19L8 5.18l2.91-.92L12 2z"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-bold text-blue-900">Emergency Service</h3>
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                    </svg>
+                  </div>
+                </div>
+                <ul className="text-gray-600 space-y-2">
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    24/7 Emergency Response
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Burst Pipe Repair
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Water Heater Service
                   </li>
                 </ul>
               </div>
@@ -770,66 +986,101 @@ export default function PlumbingLanding() {
               ×
             </button>
             
-            <div className="bg-gradient-to-r from-blue-900 to-blue-800 text-white p-6 rounded-t-2xl">
-              <h3 className="text-2xl font-bold mb-2 text-center">Get Your Free Quote!</h3>
-              <p className="text-center opacity-90">Professional plumbing services by {params.business}</p>
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-6 rounded-t-2xl">
+              <div className="text-center">
+                <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                  </svg>
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Get Your FREE Website Mockup!</h3>
+                <p className="opacity-90">See exactly how your professional plumbing website will look</p>
+              </div>
             </div>
             
             <div className="p-6">
-              <form name="popup-contact" method="POST" data-netlify="true" className="space-y-4">
-                <input type="hidden" name="form-name" value="popup-contact" />
-                <input type="hidden" name="source" value="popup" />
-                <input type="hidden" name="business" value={params.business} />
+              <form name="website-mockup" method="POST" data-netlify="true" className="space-y-4">
+                <input type="hidden" name="form-name" value="website-mockup" />
+                <input type="hidden" name="source" value="popup-mockup-request" />
+                <input type="hidden" name="campaign" value="plumber-email-campaign" />
                 
-                <input 
-                  type="text" 
-                  name="business-name"
-                  placeholder="Business Name" 
-                  defaultValue={params.business !== 'Hendrio' ? params.business : ''}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <input 
-                  type="text" 
-                  name="name"
-                  placeholder="Your Name" 
-                  defaultValue={params.owner}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <input 
-                  type="email" 
-                  name="email"
-                  placeholder="Email Address" 
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <input 
-                  type="tel" 
-                  name="phone"
-                  placeholder="Phone Number" 
-                  defaultValue={params.phone}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  required
-                />
-                <textarea 
-                  name="message"
-                  placeholder="Tell us about your plumbing needs..." 
-                  rows={3}
-                  className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
-                  required
-                />
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Business Name</label>
+                  <input 
+                    type="text" 
+                    name="business-name"
+                    placeholder="e.g., Smith Plumbing Services" 
+                    defaultValue={params.business !== 'Hendrio' ? params.business : ''}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                  <input 
+                    type="text" 
+                    name="name"
+                    placeholder="Your full name" 
+                    defaultValue={params.owner !== 'Admin' ? params.owner : ''}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <input 
+                    type="email" 
+                    name="email"
+                    placeholder="your@email.com" 
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                  <input 
+                    type="tel" 
+                    name="phone"
+                    placeholder="(555) 123-4567" 
+                    defaultValue={params.phone !== '123-456-7890' ? params.phone : ''}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    required
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-gray-700 mb-1">City/Area You Serve</label>
+                  <input 
+                    type="text" 
+                    name="location"
+                    placeholder="Dallas, TX" 
+                    defaultValue={params.location !== 'Your City' ? params.location : ''}
+                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    required
+                  />
+                </div>
+                
                 <button 
                   type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300"
+                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg"
                 >
-                  💬 Get My Free Quote
+                  � Get My Free Website Mockup
                 </button>
               </form>
               
-              <div className="text-center mt-4 text-sm text-gray-600">
-                <p>✅ Licensed & Insured • ✅ 24/7 Emergency Service • ✅ Free Estimates</p>
-                <p className="mt-2 font-semibold">📞 Or call: +980 234 4567</p>
+              <div className="text-center mt-4 space-y-2">
+                <p className="text-xs text-gray-600">
+                  ✅ No spam, ever  •  ✅ 24-hour mockup delivery  •  ✅ No commitment required
+                </p>
+                <p className="text-sm font-semibold text-gray-700">
+                  📞 Questions? Call: <a href="tel:+19723554001" className="text-orange-500">(972) 355-4001</a>
+                </p>
+                <p className="text-xs text-gray-500">
+                  Forte Web Designs - Professional websites for plumbing contractors
+                </p>
               </div>
             </div>
           </div>
