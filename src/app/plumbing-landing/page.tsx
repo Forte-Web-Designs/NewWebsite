@@ -246,11 +246,13 @@ export default function PlumbingLanding() {
         <div className="max-w-7xl mx-auto flex justify-between items-center text-sm">
           <div className="flex items-center space-x-6">
             <span>📧 {params.business.toLowerCase().replace(/\s+/g, '')}@plumbing.com</span>
-            <span>🕒 24/7 Emergency Service</span>
+            <span>� Licensed & Insured</span>
+            <span>🛡️ Bonded & Certified</span>
           </div>
           <div className="flex items-center space-x-4">
             <span>⭐⭐⭐⭐⭐ 5.0 Rating</span>
             <span>📍 Serving {params.location}</span>
+            <span>🏆 BBB A+ Rated</span>
           </div>
         </div>
       </div>
@@ -337,7 +339,13 @@ export default function PlumbingLanding() {
                     <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    <span>Professional website like this one - fully customized for YOUR business</span>
+                    <span>Fully custom plumbing website - NO WordPress, Wix, or Squarespace templates</span>
+                  </li>
+                  <li className="flex items-center space-x-3">
+                    <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    <span>Hand-coded by professional developers - NO AI-generated content</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
@@ -349,19 +357,19 @@ export default function PlumbingLanding() {
                     <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    <span>Lead generation forms to capture more customers</span>
+                    <span>Lead generation forms to capture more plumbing customers</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    <span>SEO optimization to rank higher on Google</span>
+                    <span>SEO optimization to rank higher on Google for plumbing services</span>
                   </li>
                   <li className="flex items-center space-x-3">
                     <svg className="w-6 h-6 text-green-300 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
-                    <span>Fast loading speeds & professional hosting</span>
+                    <span>Fast loading speeds & professional hosting included</span>
                   </li>
                 </ul>
               </div>
@@ -390,7 +398,7 @@ export default function PlumbingLanding() {
                   <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
-                  <span>5-Star Rated Agency</span>
+                  <span>5-Star Rated Company</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <svg className="w-5 h-5 text-green-300" fill="currentColor" viewBox="0 0 24 24">
@@ -417,49 +425,45 @@ export default function PlumbingLanding() {
                 </div>
               </div>
               
-              <form className="space-y-4">
+              <form name="website-inquiry" method="POST" data-netlify="true" className="space-y-4">
+                <input type="hidden" name="form-name" value="website-inquiry" />
                 <input 
                   type="text" 
+                  name="business-name"
                   placeholder="Business Name" 
                   defaultValue={params.business !== 'Your Plumbing Business' ? params.business : ''}
                   className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  required
                 />
                 <input 
                   type="text" 
+                  name="name"
                   placeholder="Your Name" 
                   defaultValue={params.owner}
                   className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  required
                 />
                 <input 
                   type="email" 
+                  name="email"
                   placeholder="Email Address" 
                   className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
                   required
                 />
                 <input 
                   type="tel" 
+                  name="phone"
                   placeholder="Phone Number" 
                   defaultValue={params.phone}
                   className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  required
                 />
-                <select className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white focus:outline-none focus:ring-2 focus:ring-white/50">
-                  <option value="">Business Type</option>
-                  <option value="plumbing">Plumbing Services</option>
-                  <option value="hvac">HVAC Services</option>
-                  <option value="electrical">Electrical Services</option>
-                  <option value="construction">Construction</option>
-                  <option value="landscaping">Landscaping</option>
-                  <option value="cleaning">Cleaning Services</option>
-                  <option value="automotive">Automotive</option>
-                  <option value="restaurant">Restaurant/Food</option>
-                  <option value="retail">Retail</option>
-                  <option value="professional">Professional Services</option>
-                  <option value="other">Other</option>
-                </select>
                 <textarea 
+                  name="message"
                   placeholder="Tell us about your business and what you need..." 
                   rows={3}
                   className="w-full p-4 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-white/50 resize-none"
+                  required
                 />
                 <button 
                   type="submit"
@@ -474,7 +478,7 @@ export default function PlumbingLanding() {
               
               <div className="text-center text-sm mt-4 space-y-2">
                 <p className="opacity-75">
-                  ✅ No upfront payment • ✅ 2-week delivery • ✅ Money-back guarantee
+                  ✅ 100% USA Based • ✅ 2-week delivery • ✅ 100% client satisfaction
                 </p>
                 <div className="bg-yellow-500 text-black font-bold px-3 py-1 rounded-lg inline-block text-xs">
                   💰 MONTHLY: $200-350/mo OR ONE-TIME: $2,500-4,300
@@ -500,17 +504,17 @@ export default function PlumbingLanding() {
             <div className="flex flex-col sm:flex-row items-center gap-6">
               <div className="text-center">
                 <p className="font-bold text-lg">What {params.business} Could Earn:</p>
-                <p className="text-2xl font-bold">+$50K+ annually</p>
+                <p className="text-2xl font-bold">+$15K-25K annually</p>
                 <p className="text-sm opacity-90">with a professional website</p>
               </div>
               
               <div className="flex flex-col sm:flex-row gap-3">
-                <button className="bg-white text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors">
-                  📞 Call: (555) 123-FORTE
-                </button>
-                <button className="border-2 border-white bg-transparent text-white font-bold py-3 px-6 rounded-lg hover:bg-white hover:text-gray-900 transition-colors">
-                  💬 Live Chat Now
-                </button>
+                <a 
+                  href="tel:8133001816"
+                  className="bg-white text-gray-900 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transition-colors"
+                >
+                  � Call: (813) 300-1816
+                </a>
               </div>
             </div>
           </div>
@@ -543,6 +547,8 @@ export default function PlumbingLanding() {
                 <li>• Mobile-responsive design</li>
                 <li>• SEO-ready foundation</li>
                 <li>• Basic analytics</li>
+                <li>• Contact forms & scheduling</li>
+                <li>• Service area mapping</li>
                 <li>• Hosting + domain included</li>
                 <li>• Forte Care™ support</li>
               </ul>
@@ -579,6 +585,9 @@ export default function PlumbingLanding() {
                 <li>• Mobile-responsive design</li>
                 <li>• SEO-ready foundation</li>
                 <li>• Advanced analytics</li>
+                <li>• Online booking system</li>
+                <li>• Customer testimonials page</li>
+                <li>• Emergency service features</li>
                 <li>• Conversion tracking</li>
                 <li>• Priority support</li>
                 <li>• Forte Care™ included</li>
@@ -642,9 +651,12 @@ export default function PlumbingLanding() {
                 <button className={`${theme.serviceButton} text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 hover:shadow-lg`}>
                   💬 Free Consultation
                 </button>
-                <button className="border-2 border-white bg-transparent text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
-                  📱 Call (555) 123-FORTE
-                </button>
+                <a 
+                  href="tel:8133001816"
+                  className="border-2 border-white bg-transparent text-white font-bold py-3 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
+                >
+                  📱 Call (813) 300-1816
+                </a>
               </div>
             </div>
           </div>
@@ -672,20 +684,18 @@ export default function PlumbingLanding() {
                 </div>
               </div>
               <div className="mb-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face" 
-                  alt="Client" 
-                  className="w-16 h-16 rounded-full mx-auto mb-4"
-                />
+                <div className="w-16 h-16 bg-blue-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">MH</span>
+                </div>
                 <h4 className="font-bold text-lg text-center">Mike's HVAC Service</h4>
                 <p className="text-gray-600 text-center">Phoenix, AZ</p>
               </div>
               <blockquote className="text-gray-700 italic mb-4">
-                "After Forte Web Designs built our website, we went from 2-3 calls per week to 15-20! 
-                The professional design and lead capture forms have completely transformed our business."
+                "After Forte Web Designs built our website, we went from 2-3 calls per week to 8-12! 
+                The professional design and lead capture forms have really helped our business grow."
               </blockquote>
               <div className="text-center">
-                <p className={`text-2xl font-bold ${theme.servicePriceText}`}>+400% More Leads</p>
+                <p className={`text-2xl font-bold ${theme.servicePriceText}`}>+250% More Leads</p>
                 <p className="text-sm text-gray-500">in first 3 months</p>
               </div>
             </div>
@@ -698,20 +708,18 @@ export default function PlumbingLanding() {
                 </div>
               </div>
               <div className="mb-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b5bb?w=60&h=60&fit=crop&crop=face" 
-                  alt="Client" 
-                  className="w-16 h-16 rounded-full mx-auto mb-4"
-                />
+                <div className="w-16 h-16 bg-green-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">EP</span>
+                </div>
                 <h4 className="font-bold text-lg text-center">Elite Plumbing Co.</h4>
                 <p className="text-gray-600 text-center">Denver, CO</p>
               </div>
               <blockquote className="text-gray-700 italic mb-4">
-                "I was skeptical about spending money on a website, but it paid for itself in the first month! 
+                "I was skeptical about spending money on a website, but it paid for itself in 6 weeks! 
                 Now customers find us online instead of going to our competitors."
               </blockquote>
               <div className="text-center">
-                <p className={`text-2xl font-bold ${theme.servicePriceText}`}>ROI: 800%</p>
+                <p className={`text-2xl font-bold ${theme.servicePriceText}`}>ROI: 400%</p>
                 <p className="text-sm text-gray-500">in first 6 months</p>
               </div>
             </div>
@@ -724,20 +732,18 @@ export default function PlumbingLanding() {
                 </div>
               </div>
               <div className="mb-6">
-                <img 
-                  src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" 
-                  alt="Client" 
-                  className="w-16 h-16 rounded-full mx-auto mb-4"
-                />
+                <div className="w-16 h-16 bg-orange-600 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-white font-bold text-xl">PS</span>
+                </div>
                 <h4 className="font-bold text-lg text-center">Pro Electric Solutions</h4>
                 <p className="text-gray-600 text-center">Austin, TX</p>
               </div>
               <blockquote className="text-gray-700 italic mb-4">
                 "The website looks so professional that customers automatically trust us more. 
-                We've been able to raise our prices and customers still choose us over the competition."
+                We've been able to increase our average job value significantly."
               </blockquote>
               <div className="text-center">
-                <p className={`text-2xl font-bold ${theme.servicePriceText}`}>+$75K Revenue</p>
+                <p className={`text-2xl font-bold ${theme.servicePriceText}`}>+$18K Revenue</p>
                 <p className="text-sm text-gray-500">additional per year</p>
               </div>
             </div>
@@ -755,31 +761,45 @@ export default function PlumbingLanding() {
             <div className="bg-white/20 backdrop-blur-sm rounded-2xl p-6 max-w-2xl mx-auto mb-8">
               <div className="grid grid-cols-3 gap-6 text-center">
                 <div>
-                  <div className="text-3xl font-bold mb-1">500+</div>
+                  <div className="text-3xl font-bold mb-1">25+</div>
                   <div className="text-sm opacity-80">Websites Built</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold mb-1">98%</div>
+                  <div className="text-3xl font-bold mb-1">100%</div>
                   <div className="text-sm opacity-80">Client Satisfaction</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-bold mb-1">24/7</div>
-                  <div className="text-sm opacity-80">Support</div>
+                  <div className="text-3xl font-bold mb-1">USA</div>
+                  <div className="text-sm opacity-80">Based</div>
                 </div>
               </div>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-gray-900 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105">
-                🚀 Start My Website Today
-              </button>
-              <button className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300">
-                💬 Free Strategy Call
-              </button>
+              <form name="contact-form" method="POST" data-netlify="true" className="inline-block">
+                <input type="hidden" name="form-name" value="contact-form" />
+                <input type="hidden" name="business" value={params.business} />
+                <button 
+                  type="submit"
+                  className="bg-white text-gray-900 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
+                >
+                  🚀 Start My Website Today
+                </button>
+              </form>
+              <form name="consultation-form" method="POST" data-netlify="true" className="inline-block">
+                <input type="hidden" name="form-name" value="consultation-form" />
+                <input type="hidden" name="business" value={params.business} />
+                <button 
+                  type="submit"
+                  className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-gray-900 transition-all duration-300"
+                >
+                  💬 Free Strategy Call
+                </button>
+              </form>
             </div>
             
             <p className="text-sm mt-4 opacity-75">
-              ⚡ Limited time: 50% off all packages • No setup fees • Money-back guarantee
+              ⚡ Limited time: 50% off all packages • 100% USA based • 100% client satisfaction
             </p>
           </div>
         </div>
@@ -810,13 +830,13 @@ export default function PlumbingLanding() {
               
               <div className="mb-4">
                 <a 
-                  href="tel:555-123-FORTE"
+                  href="tel:8133001816"
                   className={`${theme.buttonBg} text-white font-bold py-3 px-6 rounded-lg hover:shadow-lg transition-all duration-300 inline-flex items-center space-x-2 mb-4`}
                 >
                   <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                   </svg>
-                  <span>Call: (555) 123-FORTE</span>
+                  <span>Call: (813) 300-1816</span>
                 </a>
                 <div className="text-gray-300">
                   <p>📧 hello@fortewebdesigns.com</p>
