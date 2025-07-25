@@ -1553,30 +1553,30 @@ export default function PlumbingLanding() {
               ×
             </button>
             
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-5 lg:p-8 rounded-t-xl lg:rounded-t-2xl">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-3 lg:p-5 rounded-t-xl lg:rounded-t-2xl">
               <div className="text-center">
-                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <svg className="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <svg className="w-4 h-4 lg:w-5 lg:h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <h3 className="text-xl lg:text-3xl font-bold mb-4">Claim Your Custom Website!</h3>
-                <div className="flex flex-wrap justify-center gap-2 lg:gap-3 mb-4">
-                  <span className="bg-green-100 text-green-800 text-xs lg:text-sm font-bold px-2 py-1 lg:px-3 lg:py-1.5 rounded-full">
+                <h3 className="text-lg lg:text-2xl font-bold mb-2">Claim Your Custom Website!</h3>
+                <div className="flex flex-wrap justify-center gap-1.5 lg:gap-2 mb-2">
+                  <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-0.5 lg:px-2.5 lg:py-1 rounded-full">
                     100% Custom Code
                   </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs lg:text-sm font-bold px-2 py-1 lg:px-3 lg:py-1.5 rounded-full">
+                  <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 lg:px-2.5 lg:py-1 rounded-full">
                     USA Based Team
                   </span>
-                  <span className="bg-orange-100 text-orange-800 text-xs lg:text-sm font-bold px-2 py-1 lg:px-3 lg:py-1.5 rounded-full">
+                  <span className="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-0.5 lg:px-2.5 lg:py-1 rounded-full">
                     2-Week Launch
                   </span>
                 </div>
-                <p className="opacity-90 text-base lg:text-lg">Get a website that will dominate your local plumbing market!</p>
+                <p className="opacity-90 text-sm lg:text-base">Get a website that will dominate your local plumbing market!</p>
               </div>
             </div>
             
-            <div className="p-5 lg:p-8 overflow-y-auto max-h-[calc(90vh-200px)] lg:max-h-[calc(90vh-200px)]">
+            <div className="p-5 lg:p-8 overflow-y-auto max-h-[calc(90vh-140px)] lg:max-h-[calc(90vh-160px)]">
               
               {/* Success Message in Popup */}
               {showClaimSuccess && (
