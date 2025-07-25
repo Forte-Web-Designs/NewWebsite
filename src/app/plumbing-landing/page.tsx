@@ -120,57 +120,108 @@ export default function PlumbingLanding() {
 
   return (
     <div className="min-h-screen pb-16 lg:pb-0">{/* Reduced bottom padding for mobile sticky CTA */}
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Overlay - Full Screen */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden">
-          <div className="fixed inset-y-0 left-0 w-80 bg-white shadow-xl">
-            <div className="p-6">
-              {/* Mobile Menu Header */}
-              <div className="flex items-center justify-between mb-8">
-                <div className="flex items-center">
-                  <div className={`w-10 h-10 ${theme.primary} rounded flex items-center justify-center mr-3`}>
-                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-                    </svg>
-                  </div>
-                  <h2 className={`text-lg font-bold ${theme.primaryText}`}>
-                    {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
-                  </h2>
-                </div>
-                <button 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-                >
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+        <div className="fixed inset-0 bg-white z-50 lg:hidden">
+          <div className="h-full flex flex-col">
+            {/* Mobile Menu Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200">
+              <div className="flex items-center">
+                <div className={`w-10 h-10 ${theme.primary} rounded flex items-center justify-center mr-3`}>
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
                   </svg>
-                </button>
+                </div>
+                <h2 className={`text-lg font-bold ${theme.primaryText}`}>
+                  {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
+                </h2>
+              </div>
+              <button 
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-6">
+              {/* Color Theme Switcher - Mobile */}
+              <div className="mb-8">
+                <h3 className="text-sm font-semibold text-gray-600 mb-4">🎨 Demo Color Themes</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {Object.keys(colorThemes).map((themeName) => (
+                    <button
+                      key={themeName}
+                      onClick={() => setCurrentTheme(themeName)}
+                      className={`flex items-center p-4 rounded-lg border-2 transition-all hover:shadow-md ${
+                        currentTheme === themeName 
+                          ? 'border-gray-800 bg-gray-50' 
+                          : 'border-gray-200 hover:border-gray-400'
+                      }`}
+                      title={`Switch to ${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
+                    >
+                      <div 
+                        className="w-8 h-8 rounded-full mr-3 border border-gray-300"
+                        style={{
+                          backgroundColor: 
+                            themeName === 'blue' ? '#1e40af' :
+                            themeName === 'navy' ? '#1e293b' :
+                            themeName === 'green' ? '#065f46' :
+                            themeName === 'red' ? '#991b1b' : '#1e40af'
+                        }}
+                      ></div>
+                      <span className="text-sm font-medium capitalize">{themeName}</span>
+                    </button>
+                  ))}
+                </div>
               </div>
 
               {/* Mobile Navigation Menu */}
               <nav className="space-y-2">
-                <a href="#" className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium">
+                <a 
+                  href="#" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-4 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-lg"
+                >
                   Home
                 </a>
-                <a href="#about" className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium">
+                <a 
+                  href="#about" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-4 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-lg"
+                >
                   About
                 </a>
-                <a href="#services" className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium">
+                <a 
+                  href="#services" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-4 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-lg"
+                >
                   Services
                 </a>
-                <a href="#contact" className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium">
+                <a 
+                  href="#contact" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-4 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-lg"
+                >
                   Contact
                 </a>
-                <button 
-                  onClick={() => {
-                    setShowPopup(true);
-                    setMobileMenuOpen(false);
-                  }}
-                  className={`w-full text-left py-3 px-4 ${theme.secondary} ${theme.secondaryHover} text-white rounded-lg transition-colors font-medium mt-4`}
-                >
-                  Get a Free Quote
-                </button>
               </nav>
+            </div>
+
+            {/* Bottom CTA Button */}
+            <div className="p-6 border-t border-gray-200">
+              <button 
+                onClick={() => {
+                  setShowPopup(true);
+                  setMobileMenuOpen(false);
+                }}
+                className={`w-full py-4 px-6 ${theme.secondary} ${theme.secondaryHover} text-white rounded-lg transition-colors font-medium text-lg`}
+              >
+                Get a Free Quote
+              </button>
             </div>
           </div>
         </div>
@@ -291,30 +342,6 @@ export default function PlumbingLanding() {
                   <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                 </svg>
               </button>
-              
-              {/* Color Theme Switcher - Compact Demo Feature */}
-              <div className="hidden sm:flex items-center space-x-1 bg-gray-50 p-1 rounded-lg border">
-                <span className="text-xs text-gray-600 px-2 py-1 font-medium">DEMO:</span>
-                {Object.keys(colorThemes).map((themeName) => (
-                  <button
-                    key={themeName}
-                    onClick={() => setCurrentTheme(themeName)}
-                    className={`w-6 h-6 rounded-full border-2 transition-all hover:scale-110 ${
-                      currentTheme === themeName 
-                        ? 'border-gray-800 shadow-md' 
-                        : 'border-gray-300 hover:border-gray-500'
-                    }`}
-                    style={{
-                      backgroundColor: 
-                        themeName === 'blue' ? '#1e40af' :
-                        themeName === 'navy' ? '#1e293b' :
-                        themeName === 'green' ? '#065f46' :
-                        themeName === 'red' ? '#991b1b' : '#1e40af'
-                    }}
-                    title={`Switch to ${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
-                  />
-                ))}
-              </div>
               
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
