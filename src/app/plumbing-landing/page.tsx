@@ -155,9 +155,62 @@ export default function PlumbingLanding() {
       });
 
       if (response.ok) {
-        // Success - show success message instead of opening popup
+        // Success - show success message within popup instead of opening popup
         setShowClaimSuccess(true);
         setShowClaimForm(false);
+        
+        // Reset form to initial state (keep pre-filled data for re-use)
+        form.reset();
+        // Re-populate with default values from URL params
+        const businessInput = form.querySelector('input[name="business-name"]') as HTMLInputElement;
+        const nameInput = form.querySelector('input[name="name"]') as HTMLInputElement;
+        const phoneInput = form.querySelector('input[name="phone"]') as HTMLInputElement;
+        const locationInput = form.querySelector('input[name="location"]') as HTMLInputElement;
+        
+        if (businessInput && params.business !== 'Hendrio') businessInput.value = params.business;
+        if (nameInput && params.owner !== 'Admin') nameInput.value = params.owner;
+        if (phoneInput && params.phone !== '123-456-7890') phoneInput.value = params.phone;
+        if (locationInput && params.location !== 'Your City') locationInput.value = params.location;
+        
+        // Auto-hide success message after 8 seconds
+        setTimeout(() => setShowClaimSuccess(false), 8000);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setClaimFormError("Sorry, there was an error sending your information. Please try again or call us directly at (817) 873-6655");
+    } finally {
+      setIsSubmittingClaim(false);
+    }
+  };
+
+  // Form submission handler for popup form
+  const handlePopupFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmittingClaim(true);
+    setClaimFormError(null);
+    
+    try {
+      // Get form data directly from the form element
+      const form = e.target as HTMLFormElement;
+      const formDataToSend = new FormData(form);
+      
+      // Add form name for Netlify
+      formDataToSend.append('form-name', 'website-mockup');
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        },
+        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
+      });
+
+      if (response.ok) {
+        // Success - show success message within popup
+        setShowClaimSuccess(true);
         
         // Reset form to initial state (keep pre-filled data for re-use)
         form.reset();
@@ -774,32 +827,32 @@ export default function PlumbingLanding() {
                   <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
-                  <span className="font-medium">Licensed & Insured</span>
+                  <span className="font-medium text-gray-900 dark:text-white">Licensed & Insured</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
-                  <span className="font-medium">24/7 Emergency Service</span>
+                  <span className="font-medium text-gray-900 dark:text-white">24/7 Emergency Service</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
-                  <span className="font-medium">Upfront Pricing</span>
+                  <span className="font-medium text-gray-900 dark:text-white">Upfront Pricing</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <svg className="w-6 h-6 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                   </svg>
-                  <span className="font-medium">Satisfaction Guarantee</span>
+                  <span className="font-medium text-gray-900 dark:text-white">Satisfaction Guarantee</span>
                 </div>
               </div>
 
               {/* Progress Bar */}
               <div className="mb-8">
                 <div className="flex justify-between items-center mb-2">
-                  <span className="font-medium">Customer Satisfaction</span>
+                  <span className="font-medium text-gray-900 dark:text-white">Customer Satisfaction</span>
                   <span className="font-bold text-orange-500">98%</span>
                 </div>
                 <div className="w-full bg-gray-200 rounded-full h-2">
@@ -974,17 +1027,17 @@ export default function PlumbingLanding() {
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="text-3xl font-bold text-orange-300 mb-2">100%</div>
-                  <div className="text-sm font-medium">Custom Coded</div>
+                  <div className="text-sm font-medium text-white dark:text-gray-200">Custom Coded</div>
                   <div className="text-xs opacity-80">No templates or AI</div>
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="text-3xl font-bold text-orange-300 mb-2">100%</div>
-                  <div className="text-sm font-medium">USA Based</div>
+                  <div className="text-sm font-medium text-white dark:text-gray-200">USA Based</div>
                   <div className="text-xs opacity-80">Local support team</div>
                 </div>
                 <div className="text-center bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20">
                   <div className="text-3xl font-bold text-orange-300 mb-2">100%</div>
-                  <div className="text-sm font-medium">Client Satisfaction</div>
+                  <div className="text-sm font-medium text-white dark:text-gray-200">Client Satisfaction</div>
                   <div className="text-xs opacity-80">Guaranteed results</div>
                 </div>
               </div>
@@ -1481,10 +1534,16 @@ export default function PlumbingLanding() {
       {/* Popup Modal - Mobile & Desktop Optimized */}
       {showPopup && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-3 lg:p-4">
-          <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-sm lg:max-w-md w-full max-h-[65vh] lg:max-h-[70vh] overflow-y-auto relative shadow-2xl">
+          <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-sm lg:max-w-md w-full max-h-[65vh] lg:max-h-[70vh] overflow-hidden relative shadow-2xl">
+            
+            {/* Sticky Close Button */}
             <button 
-              onClick={() => setShowPopup(false)}
-              className="absolute top-1.5 right-1.5 lg:top-2 lg:right-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100 w-6 h-6 lg:w-7 lg:h-7 rounded-full flex items-center justify-center text-base lg:text-lg font-bold z-10 transition-colors"
+              onClick={() => {
+                setShowPopup(false);
+                setShowClaimSuccess(false);
+                setClaimFormError(null);
+              }}
+              className="absolute top-1.5 right-1.5 lg:top-2 lg:right-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100 w-6 h-6 lg:w-7 lg:h-7 rounded-full flex items-center justify-center text-base lg:text-lg font-bold z-20 transition-colors sticky top-1.5 lg:top-2"
               aria-label="Close"
             >
               ×
@@ -1513,78 +1572,106 @@ export default function PlumbingLanding() {
               </div>
             </div>
             
-            <div className="p-4 lg:p-6">
-              <form name="website-mockup" method="POST" data-netlify="true" className="space-y-4" onSubmit={handleClaimFormSubmit}>
-                <input type="hidden" name="form-name" value="website-mockup" />
-                <input type="hidden" name="source" value="popup-mockup-request" />
-                <input type="hidden" name="campaign" value="plumber-email-campaign" />
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Business Name</label>
-                  <input 
-                    type="text" 
-                    name="business-name"
-                    placeholder="e.g., Smith Plumbing Services" 
-                    defaultValue={params.business !== 'Hendrio' ? params.business : ''}
-                    className="w-full p-2.5 lg:p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-sm lg:text-base"
-                    required
-                  />
+            <div className="p-4 lg:p-6 overflow-y-auto max-h-[calc(65vh-120px)] lg:max-h-[calc(70vh-140px)]">
+              
+              {/* Success Message in Popup */}
+              {showClaimSuccess && (
+                <div className="mb-4 p-4 bg-green-100 border border-green-300 rounded-lg">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-green-800 font-medium">🎉 Success! Your request has been submitted. We'll contact you within 24 hours!</span>
+                  </div>
                 </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
-                  <input 
-                    type="text" 
-                    name="name"
-                    placeholder="Your full name" 
-                    defaultValue={params.owner !== 'Admin' ? params.owner : ''}
-                    className="w-full p-2.5 lg:p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-sm lg:text-base"
-                    required
-                  />
+              )}
+
+              {/* Error Message in Popup */}
+              {claimFormError && (
+                <div className="mb-4 p-4 bg-red-100 border border-red-300 rounded-lg">
+                  <div className="flex items-center">
+                    <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                      <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                    </svg>
+                    <span className="text-red-800 font-medium">{claimFormError}</span>
+                  </div>
                 </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
-                  <input 
-                    type="email" 
-                    name="email"
-                    placeholder="your@email.com" 
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    name="phone"
-                    placeholder="(555) 123-4567" 
-                    defaultValue={params.phone !== '123-456-7890' ? params.phone : ''}
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
-                    required
-                  />
-                </div>
-                
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">City/Area You Serve</label>
-                  <input 
-                    type="text" 
-                    name="location"
-                    placeholder="Dallas, TX" 
-                    defaultValue={params.location !== 'Your City' ? params.location : ''}
-                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
-                    required
-                  />
-                </div>
-                
-                <button 
-                  type="submit"
-                  className="w-full bg-orange-500 hover:bg-orange-600 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg"
-                >
-                  � CLAIM MY CUSTOM WEBSITE
-                </button>
-              </form>
+              )}
+
+              {!showClaimSuccess && (
+                <form name="website-mockup" method="POST" data-netlify="true" className="space-y-4" onSubmit={handlePopupFormSubmit}>
+                  <input type="hidden" name="form-name" value="website-mockup" />
+                  <input type="hidden" name="source" value="popup-mockup-request" />
+                  <input type="hidden" name="campaign" value="plumber-email-campaign" />
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Business Name</label>
+                    <input 
+                      type="text" 
+                      name="business-name"
+                      placeholder="e.g., Smith Plumbing Services" 
+                      defaultValue={params.business !== 'Hendrio' ? params.business : ''}
+                      className="w-full p-2.5 lg:p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-sm lg:text-base"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
+                    <input 
+                      type="text" 
+                      name="name"
+                      placeholder="Your full name" 
+                      defaultValue={params.owner !== 'Admin' ? params.owner : ''}
+                      className="w-full p-2.5 lg:p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-sm lg:text-base"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
+                    <input 
+                      type="email" 
+                      name="email"
+                      placeholder="your@email.com" 
+                      className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
+                    <input 
+                      type="tel" 
+                      name="phone"
+                      placeholder="(555) 123-4567" 
+                      defaultValue={params.phone !== '123-456-7890' ? params.phone : ''}
+                      className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
+                      required
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">City/Area You Serve</label>
+                    <input 
+                      type="text" 
+                      name="location"
+                      placeholder="Dallas, TX" 
+                      defaultValue={params.location !== 'Your City' ? params.location : ''}
+                      className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
+                      required
+                    />
+                  </div>
+                  
+                  <button 
+                    type="submit"
+                    disabled={isSubmittingClaim}
+                    className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg"
+                  >
+                    {isSubmittingClaim ? '⏳ Submitting...' : '🚀 CLAIM MY CUSTOM WEBSITE'}
+                  </button>
+                </form>
+              )}
               
               <div className="text-center mt-4 space-y-2">
                 <p className="text-xs text-gray-600 dark:text-gray-400">
