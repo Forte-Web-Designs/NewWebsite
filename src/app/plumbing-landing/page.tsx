@@ -19,6 +19,7 @@ export default function PlumbingLanding() {
   const [showPopup, setShowPopup] = useState(false);
   const [hasScrolledHalfway, setHasScrolledHalfway] = useState(false);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   // Color themes for plumbing businesses
   const colorThemes = {
@@ -119,16 +120,16 @@ export default function PlumbingLanding() {
 
   return (
     <div className="min-h-screen pb-16 lg:pb-0">{/* Reduced bottom padding for mobile sticky CTA */}
-      {/* Color Theme Switcher - Better Mobile Position */}
-      <div className="fixed top-4 left-4 lg:top-4 lg:left-4 z-40">
-        <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-2 flex flex-col lg:flex-row space-y-1 lg:space-y-0 lg:space-x-2">
-          <div className="text-xs text-gray-600 font-medium mb-1 lg:mb-0 lg:mr-2 block lg:block">Themes:</div>
-          <div className="flex space-x-1 lg:space-x-2">
+      {/* Desktop Color Theme Switcher - Hidden on Mobile */}
+      <div className="hidden lg:block fixed top-4 left-4 z-40">
+        <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-2 flex space-x-2">
+          <div className="text-xs text-gray-600 font-medium mr-2">Themes:</div>
+          <div className="flex space-x-2">
             {Object.keys(colorThemes).map((themeName) => (
               <button
                 key={themeName}
                 onClick={() => setCurrentTheme(themeName)}
-                className={`w-7 h-7 lg:w-8 lg:h-8 rounded-full border-2 transition-all hover:scale-110 ${
+                className={`w-8 h-8 rounded-full border-2 transition-all hover:scale-110 ${
                   currentTheme === themeName ? 'border-gray-800 scale-110 shadow-md' : 'border-gray-300 hover:border-gray-500'
                 }`}
                 style={{
@@ -142,9 +143,95 @@ export default function PlumbingLanding() {
               />
             ))}
           </div>
-          <div className="text-xs text-gray-500 text-center lg:hidden mt-1">Color Themes</div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden">
+          <div className="fixed inset-y-0 left-0 w-80 bg-white shadow-xl">
+            <div className="p-6">
+              {/* Mobile Menu Header */}
+              <div className="flex items-center justify-between mb-8">
+                <div className="flex items-center">
+                  <div className={`w-10 h-10 ${theme.primary} rounded flex items-center justify-center mr-3`}>
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+                    </svg>
+                  </div>
+                  <h2 className={`text-lg font-bold ${theme.primaryText}`}>
+                    {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
+                  </h2>
+                </div>
+                <button 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+
+              {/* Color Theme Switcher in Mobile Menu */}
+              <div className="mb-8">
+                <h3 className="text-sm font-semibold text-gray-600 mb-3">Color Themes</h3>
+                <div className="grid grid-cols-2 gap-3">
+                  {Object.keys(colorThemes).map((themeName) => (
+                    <button
+                      key={themeName}
+                      onClick={() => setCurrentTheme(themeName)}
+                      className={`flex items-center p-3 rounded-lg border-2 transition-all hover:shadow-md ${
+                        currentTheme === themeName 
+                          ? 'border-gray-800 bg-gray-50' 
+                          : 'border-gray-200 hover:border-gray-400'
+                      }`}
+                      title={`${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
+                    >
+                      <div 
+                        className="w-6 h-6 rounded-full mr-3"
+                        style={{
+                          backgroundColor: 
+                            themeName === 'blue' ? '#1e40af' :
+                            themeName === 'navy' ? '#1e293b' :
+                            themeName === 'green' ? '#065f46' :
+                            themeName === 'red' ? '#991b1b' : '#1e40af'
+                        }}
+                      ></div>
+                      <span className="text-sm font-medium capitalize">{themeName}</span>
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Mobile Navigation Menu */}
+              <nav className="space-y-2">
+                <a href="#" className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium">
+                  Home
+                </a>
+                <a href="#about" className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium">
+                  About
+                </a>
+                <a href="#services" className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium">
+                  Services
+                </a>
+                <a href="#contact" className="block py-3 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium">
+                  Contact
+                </a>
+                <button 
+                  onClick={() => {
+                    setShowPopup(true);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`w-full text-left py-3 px-4 ${theme.secondary} ${theme.secondaryHover} text-white rounded-lg transition-colors font-medium mt-4`}
+                >
+                  Get a Free Quote
+                </button>
+              </nav>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Top Header Section - Exact Hendrio Match */}
       <div className={`${theme.primary} text-white py-3`}>
@@ -261,10 +348,19 @@ export default function PlumbingLanding() {
                   <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                 </svg>
               </button>
-              <button className="p-2 hover:bg-gray-100 rounded transition-colors lg:hidden">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-                </svg>
+              <button 
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                className="p-2 hover:bg-gray-100 rounded transition-colors lg:hidden"
+              >
+                {mobileMenuOpen ? (
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                ) : (
+                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                  </svg>
+                )}
               </button>
               <button 
                 onClick={() => setShowPopup(true)}
