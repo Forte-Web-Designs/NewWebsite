@@ -87,7 +87,7 @@ export default function Contact() {
         </div>
       </section>
 
-      <section className="py-12 sm:py-16 md:py-20 relative z-10 px-4 sm:px-6 lg:px-8">
+      <section className="py-12 sm:py-16 md:py-20 pb-24 sm:pb-32 relative z-10 px-4 sm:px-6 lg:px-8">
         {/* Hero Section - Mobile Optimized */}
         <div className="text-center mb-8 sm:mb-12">
           <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">

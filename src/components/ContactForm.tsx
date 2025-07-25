@@ -272,7 +272,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
           <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-0" />
 
           {/* Content */}
-          <div className="relative z-10 p-8 md:p-12">
+          <div className="relative z-10 p-8 md:p-12 pb-16 md:pb-20">
             <div className="max-w-2xl mx-auto">
               {/* Header */}
               <SimpleScrollReveal direction="up" delay={200}>
@@ -289,13 +289,13 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
 
               {/* Form */}
               <SimpleScrollReveal direction="up" delay={400}>
-                <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 border border-white/20 shadow-2xl">
+                <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 mb-8 border border-white/20 shadow-2xl">
                   
-                  {/* Success Message - Positioned at bottom on mobile */}
+                  {/* Success Message - Better positioning for contact page */}
                   {showSuccess && (
                     <div 
                       data-success-message
-                      className="fixed sm:relative bottom-4 sm:bottom-auto left-4 right-4 sm:left-auto sm:right-auto sm:mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg backdrop-blur-sm z-50 shadow-xl sm:shadow-none">
+                      className="mb-6 p-4 bg-green-500/20 border border-green-500/50 rounded-lg backdrop-blur-sm">
                       <div className="flex items-center gap-3">
                         <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0">
                           <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
