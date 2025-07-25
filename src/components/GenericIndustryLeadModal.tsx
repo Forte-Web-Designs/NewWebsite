@@ -220,7 +220,7 @@ export default function GenericIndustryLeadModal({
             <h2 className="text-sm md:text-base font-bold text-gray-900 dark:text-white">
               {title}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-1 text-xs leading-snug">
+            <p className="text-gray-700 dark:text-gray-300 mt-1 text-xs leading-snug font-medium">
               {subtitle}
             </p>
           </div>
@@ -234,7 +234,7 @@ export default function GenericIndustryLeadModal({
               <h3 className="text-base font-semibold text-green-600 dark:text-green-400">
                 Thanks, we got it!
               </h3>
-              <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm leading-relaxed px-1">
+              <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed px-1 font-medium">
                 A member of the Forte team will follow up within 1 business day. We've helped businesses like yours bring in more leads and grow online — now let's do the same for your business.
               </p>
               <button
@@ -273,10 +273,14 @@ export default function GenericIndustryLeadModal({
               {/* Name and Business Name - Single column on mobile */}
               <div className="grid grid-cols-1 gap-2.5">
                 <div>
+                  <label htmlFor="firstName" className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    First Name *
+                  </label>
                   <input
+                    id="firstName"
                     type="text"
                     name="firstName"
-                    placeholder="First Name"
+                    placeholder="Enter your first name"
                     value={formData.firstName}
                     onChange={handleInputChange}
                     required
@@ -287,15 +291,19 @@ export default function GenericIndustryLeadModal({
                     } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
                   />
                   {fieldErrors.firstName && (
-                    <p className="mt-1 text-xs text-red-500">{fieldErrors.firstName}</p>
+                    <p className="mt-1 text-xs text-red-500 font-medium">{fieldErrors.firstName}</p>
                   )}
                 </div>
 
                 <div>
+                  <label htmlFor="businessName" className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Business Name
+                  </label>
                   <input
+                    id="businessName"
                     type="text"
                     name="businessName"
-                    placeholder="Business Name"
+                    placeholder="Your business name"
                     value={formData.businessName}
                     onChange={handleInputChange}
                     className="w-full px-3 py-2 md:px-3 md:py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm"
@@ -306,10 +314,14 @@ export default function GenericIndustryLeadModal({
               {/* Email and Phone - Single column on mobile */}
               <div className="grid grid-cols-1 gap-2.5">
                 <div>
+                  <label htmlFor="email" className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Email Address *
+                  </label>
                   <input
+                    id="email"
                     type="email"
                     name="email"
-                    placeholder="Email Address"
+                    placeholder="your@email.com"
                     value={formData.email}
                     onChange={handleInputChange}
                     required
@@ -320,15 +332,19 @@ export default function GenericIndustryLeadModal({
                     } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
                   />
                   {fieldErrors.email && (
-                    <p className="mt-1 text-xs text-red-500">{fieldErrors.email}</p>
+                    <p className="mt-1 text-xs text-red-500 font-medium">{fieldErrors.email}</p>
                   )}
                 </div>
 
                 <div>
+                  <label htmlFor="phone" className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
+                    Phone Number
+                  </label>
                   <input
+                    id="phone"
                     type="tel"
                     name="phone"
-                    placeholder="Phone Number"
+                    placeholder="(555) 123-4567"
                     value={formData.phone}
                     onChange={handleInputChange}
                     className={`w-full px-3 py-2 md:px-3 md:py-2.5 border-2 rounded-lg transition-colors focus:outline-none focus:ring-2 text-sm ${
@@ -338,16 +354,20 @@ export default function GenericIndustryLeadModal({
                     } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
                   />
                   {fieldErrors.phone && (
-                    <p className="mt-1 text-xs text-red-500">{fieldErrors.phone}</p>
+                    <p className="mt-1 text-xs text-red-500 font-medium">{fieldErrors.phone}</p>
                   )}
                 </div>
               </div>
 
               {/* Message */}
               <div>
+                <label htmlFor="message" className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
+                  How can we help you?
+                </label>
                 <textarea
+                  id="message"
                   name="message"
-                  placeholder="How can we help you?"
+                  placeholder="Tell us about your project..."
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={2}
