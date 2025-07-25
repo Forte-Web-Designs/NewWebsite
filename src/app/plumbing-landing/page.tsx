@@ -308,8 +308,10 @@ export default function PlumbingLanding() {
         </div>
       </div>
 
-      {/* Main Navigation - Compact Design */}
-      <header className="bg-white shadow-sm sticky top-0 z-50">
+      {/* Main Navigation - Compact Design - Hidden when mobile menu is open */}
+      <header className={`bg-white shadow-sm sticky top-0 z-50 transition-transform duration-300 ${
+        mobileMenuOpen ? 'lg:translate-y-0 -translate-y-full' : 'translate-y-0'
+      }`}>
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-2">
             {/* Logo - Smaller */}
