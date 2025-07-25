@@ -1310,35 +1310,35 @@ export default function PlumbingLanding() {
       {/* Popup Modal - Mobile & Desktop Optimized */}
       {showPopup && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-3 lg:p-4">
-          <div className="bg-white rounded-xl lg:rounded-2xl max-w-sm lg:max-w-md w-full max-h-[75vh] lg:max-h-[90vh] overflow-y-auto relative shadow-2xl">
+          <div className="bg-white rounded-xl lg:rounded-2xl max-w-sm lg:max-w-md w-full max-h-[65vh] lg:max-h-[70vh] overflow-y-auto relative shadow-2xl">
             <button 
               onClick={() => setShowPopup(false)}
-              className="absolute top-2 right-2 lg:top-3 lg:right-3 bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 w-7 h-7 lg:w-8 lg:h-8 rounded-full flex items-center justify-center text-lg lg:text-xl font-bold z-10 transition-colors"
+              className="absolute top-1.5 right-1.5 lg:top-2 lg:right-2 bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 w-6 h-6 lg:w-7 lg:h-7 rounded-full flex items-center justify-center text-base lg:text-lg font-bold z-10 transition-colors"
               aria-label="Close"
             >
               ×
             </button>
             
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-4 lg:p-6 rounded-t-xl lg:rounded-t-2xl">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-3 lg:p-4 rounded-t-xl lg:rounded-t-2xl">
               <div className="text-center">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-2 lg:mb-3">
-                  <svg className="w-5 h-5 lg:w-6 lg:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-2">
+                  <svg className="w-4 h-4 lg:w-5 lg:h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold mb-2">Claim Your Custom Website!</h3>
-                <div className="flex flex-wrap justify-center gap-1 lg:gap-2 mb-2 lg:mb-3">
-                  <span className="bg-green-100 text-green-800 text-xs font-bold px-2 lg:px-3 py-1 rounded-full">
+                <h3 className="text-lg lg:text-xl font-bold mb-2">Claim Your Custom Website!</h3>
+                <div className="flex flex-wrap justify-center gap-1 mb-2">
+                  <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-0.5 rounded-full">
                     100% Custom Code
                   </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 lg:px-3 py-1 rounded-full">
+                  <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-0.5 rounded-full">
                     USA Based Team
                   </span>
-                  <span className="bg-orange-100 text-orange-800 text-xs font-bold px-2 lg:px-3 py-1 rounded-full">
+                  <span className="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-0.5 rounded-full">
                     2-Week Launch
                   </span>
                 </div>
-                <p className="opacity-90 text-sm lg:text-base">Get a website that will dominate your local plumbing market!</p>
+                <p className="opacity-90 text-sm">Get a website that will dominate your local plumbing market!</p>
               </div>
             </div>
             
