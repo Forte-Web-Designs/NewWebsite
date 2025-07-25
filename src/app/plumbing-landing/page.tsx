@@ -1013,14 +1013,26 @@ export default function PlumbingLanding() {
               </p>
               
               {/* Unique Value Proposition */}
-              <div className="bg-red-600/90 backdrop-blur-sm rounded-lg p-6 mb-8 border border-red-500">
-                <p className="text-lg font-bold mb-2">❌ NO Website Templates</p>
-                <p className="text-lg font-bold mb-2">❌ NO AI-Generated Content</p>
-                <p className="text-lg font-bold mb-4">❌ NO Wix/Squarespace/WordPress</p>
-                <p className="text-base opacity-95">
-                  <strong>✅ 100% CUSTOM-CODED</strong> websites built specifically for YOUR plumbing business. 
-                  Every pixel designed to convert visitors into paying customers.
-                </p>
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 backdrop-blur-sm rounded-lg p-6 mb-8 border border-gray-600">
+                <div className="flex items-center mb-2">
+                  <span className="text-red-400 text-xl mr-2">❌</span>
+                  <p className="text-lg font-bold text-white">NO Website Templates</p>
+                </div>
+                <div className="flex items-center mb-2">
+                  <span className="text-red-400 text-xl mr-2">❌</span>
+                  <p className="text-lg font-bold text-white">NO AI-Generated Content</p>
+                </div>
+                <div className="flex items-center mb-4">
+                  <span className="text-red-400 text-xl mr-2">❌</span>
+                  <p className="text-lg font-bold text-white">NO Wix/Squarespace/WordPress</p>
+                </div>
+                <div className="flex items-start mt-6 pt-4 border-t border-gray-600">
+                  <span className="text-green-400 text-xl mr-2 mt-0.5">✅</span>
+                  <p className="text-base opacity-95 text-white">
+                    <strong className="text-green-400">100% CUSTOM-CODED</strong> websites built specifically for YOUR plumbing business. 
+                    Every pixel designed to convert visitors into paying customers.
+                  </p>
+                </div>
               </div>
               
               {/* Trust Stats */}

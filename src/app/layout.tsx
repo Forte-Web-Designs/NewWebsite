@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from "next";
 import { Roboto, Inter } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/layout/Header";
+import ConditionalHeader from "@/components/layout/ConditionalHeader";
 import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
 import AIChat from "@/components/AIChat";
@@ -199,7 +199,7 @@ export default function RootLayout({
         
         <ThemeProvider>
           <div className="dark:bg-[url(/images/navbar/navbar-bg.png)] bg-[url(/images/navbar/navbar-bg-light.png)] bg-no-repeat">
-            <Header />
+            <ConditionalHeader />
             <main className="flex-grow">
               {children}
             </main>
