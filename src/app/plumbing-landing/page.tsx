@@ -497,7 +497,7 @@ export default function PlumbingLanding() {
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 text-center relative z-40">
           <div className="container mx-auto">
             <p className="text-xs md:text-sm">
-              🎯 <strong>DEMO:</strong> Custom mockup for <strong>{params.business}</strong>. 
+              🎯 <strong>DEMO:</strong> Custom mockup for <strong>{params.business}</strong>.  
               <span className="hidden md:inline">Every detail can be personalized!</span>
             </p>
           </div>
@@ -1013,16 +1013,16 @@ export default function PlumbingLanding() {
               </p>
               
               {/* Unique Value Proposition */}
-              <div className="bg-gradient-to-br from-gray-800 to-gray-900 backdrop-blur-sm rounded-lg p-6 mb-8 border border-gray-600">
-                <div className="flex items-center mb-2">
+              <div className="bg-gradient-to-br from-gray-800 to-gray-900 backdrop-blur-sm rounded-lg p-6 mb-8 border border-gray-600 text-center">
+                <div className="flex items-center justify-center mb-2">
                   <span className="text-red-400 text-xl mr-2">❌</span>
                   <p className="text-lg font-bold text-white">NO Website Templates</p>
                 </div>
-                <div className="flex items-center mb-2">
+                <div className="flex items-center justify-center mb-2">
                   <span className="text-red-400 text-xl mr-2">❌</span>
                   <p className="text-lg font-bold text-white">NO AI-Generated Content</p>
                 </div>
-                <div className="flex items-center mb-4">
+                <div className="flex items-center justify-center mb-4">
                   <span className="text-red-400 text-xl mr-2">❌</span>
                   <p className="text-lg font-bold text-white">NO Wix/Squarespace/WordPress</p>
                 </div>
@@ -1469,7 +1469,7 @@ export default function PlumbingLanding() {
                   </div>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6 text-left">
+                <div className="grid md:grid-cols-2 gap-6 text-center">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">✅ What We Can Customize:</h4>
                     <ul className="space-y-2 text-sm text-gray-700">
