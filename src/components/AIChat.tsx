@@ -465,7 +465,7 @@ const AIChat = () => {
 
       {/* Chat Button - Positioned above mobile sticky CTA */}
       {!isOpen && (
-        <div className="fixed bottom-20 right-4 lg:bottom-20 lg:right-20 z-45">
+        <div className="fixed bottom-20 right-4 lg:bottom-4 lg:right-20 z-45">
           <button
             onClick={toggleChat}
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-full p-3 lg:p-4 shadow-2xl transition-all duration-300 hover:scale-105 group"
@@ -483,7 +483,7 @@ const AIChat = () => {
 
       {/* Minimized Chat - Positioned above mobile sticky CTA */}
       {isOpen && isMinimized && (
-        <div className="fixed bottom-20 right-4 lg:bottom-20 lg:right-20 z-45">
+        <div className="fixed bottom-20 right-4 lg:bottom-4 lg:right-20 z-45">
           <button
             onClick={() => setIsMinimized(false)}
             className="bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white rounded-lg px-3 py-2 lg:px-4 lg:py-3 shadow-2xl transition-all duration-300 hover:scale-105 flex items-center gap-2"
