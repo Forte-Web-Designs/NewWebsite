@@ -20,6 +20,10 @@ export default function PlumbingLanding() {
   const [hasScrolledHalfway, setHasScrolledHalfway] = useState(false);
   const [activeTabIndex, setActiveTabIndex] = useState(0);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [showClaimForm, setShowClaimForm] = useState(false);
+  const [isSubmittingClaim, setIsSubmittingClaim] = useState(false);
+  const [showClaimSuccess, setShowClaimSuccess] = useState(false);
+  const [claimFormError, setClaimFormError] = useState<string | null>(null);
 
   // Color themes for plumbing businesses
   const colorThemes = {
@@ -126,6 +130,60 @@ export default function PlumbingLanding() {
       document.body.style.overflow = 'unset';
     };
   }, [mobileMenuOpen]);
+
+  // Form submission handler for CLAIM MY CUSTOM WEBSITE
+  const handleClaimFormSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmittingClaim(true);
+    setClaimFormError(null);
+    
+    try {
+      // Get form data directly from the form element (same pattern as ContactForm)
+      const form = e.target as HTMLFormElement;
+      const formDataToSend = new FormData(form);
+      
+      // Add form name for Netlify
+      formDataToSend.append('form-name', 'website-mockup');
+      
+      const response = await fetch("/", {
+        method: "POST",
+        headers: { 
+          "Content-Type": "application/x-www-form-urlencoded",
+          "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
+        },
+        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
+      });
+
+      if (response.ok) {
+        // Success - show success message instead of opening popup
+        setShowClaimSuccess(true);
+        setShowClaimForm(false);
+        
+        // Reset form to initial state (keep pre-filled data for re-use)
+        form.reset();
+        // Re-populate with default values from URL params
+        const businessInput = form.querySelector('input[name="business-name"]') as HTMLInputElement;
+        const nameInput = form.querySelector('input[name="name"]') as HTMLInputElement;
+        const phoneInput = form.querySelector('input[name="phone"]') as HTMLInputElement;
+        const locationInput = form.querySelector('input[name="location"]') as HTMLInputElement;
+        
+        if (businessInput && params.business !== 'Hendrio') businessInput.value = params.business;
+        if (nameInput && params.owner !== 'Admin') nameInput.value = params.owner;
+        if (phoneInput && params.phone !== '123-456-7890') phoneInput.value = params.phone;
+        if (locationInput && params.location !== 'Your City') locationInput.value = params.location;
+        
+        // Auto-hide success message after 8 seconds
+        setTimeout(() => setShowClaimSuccess(false), 8000);
+      } else {
+        throw new Error("Form submission failed");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setClaimFormError("Sorry, there was an error sending your information. Please try again or call us directly at (817) 873-6655");
+    } finally {
+      setIsSubmittingClaim(false);
+    }
+  };
 
   const theme = colorThemes[currentTheme as keyof typeof colorThemes] || colorThemes.blue;
 
@@ -522,6 +580,31 @@ export default function PlumbingLanding() {
                     Proudly Serving {params.location} & Surrounding Areas
                   </h3>
                 )}
+                
+                {/* Success Message in Hero */}
+                {showClaimSuccess && (
+                  <div className="mb-6 p-4 bg-green-100/90 border border-green-300 rounded-lg backdrop-blur-sm">
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-green-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-green-800 font-medium">🎉 Success! Your request has been submitted. We'll contact you within 24 hours!</span>
+                    </div>
+                  </div>
+                )}
+
+                {/* Error Message in Hero */}
+                {claimFormError && (
+                  <div className="mb-6 p-4 bg-red-100/90 border border-red-300 rounded-lg backdrop-blur-sm">
+                    <div className="flex items-center">
+                      <svg className="w-5 h-5 text-red-600 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                      </svg>
+                      <span className="text-red-800 font-medium">{claimFormError}</span>
+                    </div>
+                  </div>
+                )}
+                
                 <p className="text-lg lg:text-xl mb-8 leading-relaxed opacity-90">
                   {params.business !== 'Hendrio' 
                     ? `Professional plumbing services you can trust. Licensed, insured, and committed to excellence in ${params.location || 'your area'}.`
@@ -1000,37 +1083,145 @@ export default function PlumbingLanding() {
                     <p className="text-sm opacity-75">Get the website that will dominate your local market!</p>
                   </div>
                   
-                  <div className="space-y-4">
+                  {/* Success Message */}
+                  {showClaimSuccess && (
+                    <div className="mb-4 p-4 bg-green-100 border border-green-300 rounded-lg">
+                      <div className="flex items-center">
+                        <svg className="w-5 h-5 text-green-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-green-800 font-medium">Success! Your request has been submitted. We'll contact you within 24 hours!</span>
+                      </div>
+                    </div>
+                  )}
+
+                  {/* Error Message */}
+                  {claimFormError && (
+                    <div className="mb-4 p-4 bg-red-100 border border-red-300 rounded-lg">
+                      <div className="flex items-center">
+                        <svg className="w-5 h-5 text-red-500 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                        </svg>
+                        <span className="text-red-800 font-medium">{claimFormError}</span>
+                      </div>
+                    </div>
+                  )}
+
+                  <form 
+                    name="website-mockup" 
+                    method="POST" 
+                    data-netlify="true" 
+                    className="space-y-4" 
+                    onSubmit={handleClaimFormSubmit}
+                  >
+                    <input type="hidden" name="form-name" value="website-mockup" />
+                    <input type="hidden" name="source" value="hero-section" />
+                    <input type="hidden" name="campaign" value="plumber-email-campaign" />
+                    
                     <input 
                       type="text" 
+                      name="business-name"
                       placeholder="Business Name"
                       defaultValue={params.business !== 'Hendrio' ? params.business : ''}
-                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      autoComplete="organization"
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500 font-medium"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          const form = e.currentTarget.form;
+                          const inputs = Array.from(form?.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]') || []);
+                          const currentIndex = inputs.indexOf(e.currentTarget);
+                          const nextInput = inputs[currentIndex + 1] as HTMLInputElement;
+                          if (nextInput) nextInput.focus();
+                        }
+                      }}
+                      required
                     />
                     <input 
                       type="text" 
+                      name="name"
                       placeholder="Your Name"
                       defaultValue={params.owner !== 'Admin' ? params.owner : ''}
-                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      autoComplete="name"
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500 font-medium"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          const form = e.currentTarget.form;
+                          const inputs = Array.from(form?.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]') || []);
+                          const currentIndex = inputs.indexOf(e.currentTarget);
+                          const nextInput = inputs[currentIndex + 1] as HTMLInputElement;
+                          if (nextInput) nextInput.focus();
+                        }
+                      }}
+                      required
                     />
                     <input 
                       type="email" 
+                      name="email"
                       placeholder="Email Address"
-                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      autoComplete="email"
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500 font-medium"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          const form = e.currentTarget.form;
+                          const inputs = Array.from(form?.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]') || []);
+                          const currentIndex = inputs.indexOf(e.currentTarget);
+                          const nextInput = inputs[currentIndex + 1] as HTMLInputElement;
+                          if (nextInput) nextInput.focus();
+                        }
+                      }}
+                      required
                     />
                     <input 
                       type="tel" 
+                      name="phone"
                       placeholder="Phone Number"
                       defaultValue={params.phone !== '123-456-7890' ? params.phone : ''}
-                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500"
+                      autoComplete="tel"
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500 font-medium"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          const form = e.currentTarget.form;
+                          const inputs = Array.from(form?.querySelectorAll('input[type="text"], input[type="email"], input[type="tel"]') || []);
+                          const currentIndex = inputs.indexOf(e.currentTarget);
+                          const nextInput = inputs[currentIndex + 1] as HTMLInputElement;
+                          if (nextInput) nextInput.focus();
+                          else {
+                            const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+                            if (submitButton) submitButton.focus();
+                          }
+                        }
+                      }}
+                      required
+                    />
+                    <input 
+                      type="text" 
+                      name="location"
+                      placeholder="City/Area You Serve"
+                      defaultValue={params.location !== 'Your City' ? params.location : ''}
+                      autoComplete="address-level2"
+                      className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500 font-medium"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter') {
+                          e.preventDefault();
+                          const form = e.currentTarget.form;
+                          const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+                          if (submitButton) submitButton.click();
+                        }
+                      }}
+                      required
                     />
                     <button 
-                      onClick={() => setShowPopup(true)}
-                      className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg shadow-lg"
+                      type="submit"
+                      disabled={isSubmittingClaim}
+                      className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 disabled:from-gray-400 disabled:to-gray-500 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg shadow-lg"
                     >
-                      � CLAIM MY CUSTOM WEBSITE
+                      {isSubmittingClaim ? '⏳ Submitting...' : '🚀 CLAIM MY CUSTOM WEBSITE'}
                     </button>
-                  </div>
+                  </form>
                   <div className="text-center mt-4 space-y-2">
                     <p className="text-xs opacity-80">
                       ✅ 100% Custom Code • ✅ 2-Week Delivery • ✅ 100% Client Satisfaction
@@ -1192,7 +1383,7 @@ export default function PlumbingLanding() {
                     24/7 Emergency Response
                   </li>
                   <li className="flex items-center">
-                                       <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                     Burst Pipe Repair
@@ -1299,7 +1490,18 @@ export default function PlumbingLanding() {
             <p className="text-xs font-medium leading-tight">Ready to claim your website?</p>
           </div>
           <button 
-            onClick={() => setShowPopup(true)}
+            onClick={() => {
+              // Scroll to the claim form section
+              const claimSection = document.querySelector('#contact');
+              if (claimSection) {
+                claimSection.scrollIntoView({ behavior: 'smooth' });
+                // Focus on the first input field after scrolling
+                setTimeout(() => {
+                  const firstInput = claimSection.querySelector('input[name="business-name"]') as HTMLInputElement;
+                  if (firstInput) firstInput.focus();
+                }, 500);
+              }
+            }}
             className="bg-white text-orange-600 font-bold py-1 px-2 rounded text-xs whitespace-nowrap ml-2"
           >
             💰 Claim
@@ -1310,10 +1512,10 @@ export default function PlumbingLanding() {
       {/* Popup Modal - Mobile & Desktop Optimized */}
       {showPopup && (
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-3 lg:p-4">
-          <div className="bg-white rounded-xl lg:rounded-2xl max-w-sm lg:max-w-md w-full max-h-[65vh] lg:max-h-[70vh] overflow-y-auto relative shadow-2xl">
+          <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-sm lg:max-w-md w-full max-h-[65vh] lg:max-h-[70vh] overflow-y-auto relative shadow-2xl">
             <button 
               onClick={() => setShowPopup(false)}
-              className="absolute top-1.5 right-1.5 lg:top-2 lg:right-2 bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 w-6 h-6 lg:w-7 lg:h-7 rounded-full flex items-center justify-center text-base lg:text-lg font-bold z-10 transition-colors"
+              className="absolute top-1.5 right-1.5 lg:top-2 lg:right-2 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100 w-6 h-6 lg:w-7 lg:h-7 rounded-full flex items-center justify-center text-base lg:text-lg font-bold z-10 transition-colors"
               aria-label="Close"
             >
               ×
@@ -1343,66 +1545,66 @@ export default function PlumbingLanding() {
             </div>
             
             <div className="p-4 lg:p-6">
-              <form name="website-mockup" method="POST" data-netlify="true" className="space-y-4">
+              <form name="website-mockup" method="POST" data-netlify="true" className="space-y-4" onSubmit={handleClaimFormSubmit}>
                 <input type="hidden" name="form-name" value="website-mockup" />
                 <input type="hidden" name="source" value="popup-mockup-request" />
                 <input type="hidden" name="campaign" value="plumber-email-campaign" />
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Business Name</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Business Name</label>
                   <input 
                     type="text" 
                     name="business-name"
                     placeholder="e.g., Smith Plumbing Services" 
                     defaultValue={params.business !== 'Hendrio' ? params.business : ''}
-                    className="w-full p-2.5 lg:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm lg:text-base"
+                    className="w-full p-2.5 lg:p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-sm lg:text-base"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Your Name</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
                   <input 
                     type="text" 
                     name="name"
                     placeholder="Your full name" 
                     defaultValue={params.owner !== 'Admin' ? params.owner : ''}
-                    className="w-full p-2.5 lg:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm lg:text-base"
+                    className="w-full p-2.5 lg:p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-sm lg:text-base"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Email Address</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
                   <input 
                     type="email" 
                     name="email"
                     placeholder="your@email.com" 
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
                   <input 
                     type="tel" 
                     name="phone"
                     placeholder="(555) 123-4567" 
                     defaultValue={params.phone !== '123-456-7890' ? params.phone : ''}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
                     required
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">City/Area You Serve</label>
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">City/Area You Serve</label>
                   <input 
                     type="text" 
                     name="location"
                     placeholder="Dallas, TX" 
                     defaultValue={params.location !== 'Your City' ? params.location : ''}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
                     required
                   />
                 </div>
@@ -1416,13 +1618,13 @@ export default function PlumbingLanding() {
               </form>
               
               <div className="text-center mt-4 space-y-2">
-                <p className="text-xs text-gray-600">
+                <p className="text-xs text-gray-600 dark:text-gray-400">
                   ✅ 100% Custom Code • ✅ 2-Week Delivery • ✅ 100% USA Based
                 </p>
-                <p className="text-sm font-semibold text-gray-700">
-                  📞 Questions? Call: <a href="tel:+18178736655" className="text-orange-500">(817) 873-6655</a>
+                <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  📞 Questions? Call: <a href="tel:+18178736655" className="text-orange-500 dark:text-orange-400">(817) 873-6655</a>
                 </p>
-                <p className="text-xs text-gray-500">
+                <p className="text-xs text-gray-500 dark:text-gray-400">
                   Forte Web Designs - Professional websites for plumbing contractors
                 </p>
               </div>

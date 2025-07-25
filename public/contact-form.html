@@ -76,5 +76,36 @@
     <input type="text" name="trigger" />
     <input type="text" name="industry" />
   </form>
+
+  <!-- Website Mockup form for Netlify form detection -->
+  <form name="website-mockup" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    <input type="text" name="business-name" />
+    <input type="text" name="name" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="text" name="location" />
+    <input type="text" name="source" />
+    <input type="text" name="campaign" />
+  </form>
+
+  <!-- Email Capture form for Netlify form detection -->
+  <form name="email-capture" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    <input type="email" name="email" />
+    <input type="text" name="source" />
+  </form>
+
+  <!-- Industry Contact form for Netlify form detection -->
+  <form name="industry-contact" netlify netlify-honeypot="bot-field" hidden>
+    <input name="bot-field" />
+    <input type="text" name="firstName" />
+    <input type="text" name="businessName" />
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <textarea name="message"></textarea>
+    <input type="text" name="source" />
+    <input type="text" name="industry" />
+  </form>
 </body>
 </html>

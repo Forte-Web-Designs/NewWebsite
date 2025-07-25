@@ -227,7 +227,7 @@ export default function IndustryContactModal({
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
-      <div className="bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+      <div className="bg-white dark:bg-gray-900 rounded-lg shadow-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
         {/* Header */}
         <div className={`${colors.bg} p-6 border-b`}>
           <div className="flex justify-between items-start">
@@ -236,8 +236,8 @@ export default function IndustryContactModal({
                 {config.icon}
               </div>
               <div>
-                <h2 className="text-2xl font-bold text-gray-900">{config.title}</h2>
-                <p className="text-gray-600">{config.subtitle}</p>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{config.title}</h2>
+                <p className="text-gray-600 dark:text-gray-300">{config.subtitle}</p>
               </div>
             </div>
             <button
@@ -277,7 +277,7 @@ export default function IndustryContactModal({
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Full Name *
                   </label>
                   <input
@@ -291,7 +291,7 @@ export default function IndustryContactModal({
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Email *
                   </label>
                   <input
@@ -305,7 +305,7 @@ export default function IndustryContactModal({
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Phone Number *
                   </label>
                   <input
@@ -319,7 +319,7 @@ export default function IndustryContactModal({
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Company/Business
                   </label>
                   <input
@@ -332,7 +332,7 @@ export default function IndustryContactModal({
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Service Needed
                   </label>
                   <select
@@ -349,7 +349,7 @@ export default function IndustryContactModal({
                 </div>
                 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                     Timeline
                   </label>
                   <select
@@ -369,7 +369,7 @@ export default function IndustryContactModal({
               </div>
               
               <div className="mt-4">
-                <label className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">
                   Project Details
                 </label>
                 <textarea
