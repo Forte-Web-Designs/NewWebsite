@@ -201,7 +201,7 @@ export default function GenericIndustryLeadModal({
   if (!isOpen) return null;
 
   return (
-    <div className="modal-overlay fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+    <div className="modal-overlay fixed inset-0 bg-black/60 backdrop-blur-sm z-[60] flex items-center justify-center p-4">
       <div className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-xs md:max-w-sm lg:max-w-lg max-h-[75vh] md:max-h-[80vh] overflow-y-auto shadow-2xl">
         {/* Header */}
         <div className="relative p-3 md:p-4 pb-2 md:pb-3 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">

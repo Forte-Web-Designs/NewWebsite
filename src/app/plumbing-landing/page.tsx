@@ -1309,7 +1309,7 @@ export default function PlumbingLanding() {
 
       {/* Popup Modal - Mobile & Desktop Optimized */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-3 lg:p-4">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-3 lg:p-4">
           <div className="bg-white rounded-xl lg:rounded-2xl max-w-sm lg:max-w-md w-full max-h-[75vh] lg:max-h-[90vh] overflow-y-auto relative shadow-2xl">
             <button 
               onClick={() => setShowPopup(false)}
