@@ -1523,7 +1523,7 @@ export default function PlumbingLanding() {
           <div className="flex-1">
             <p className="text-xs font-medium leading-tight">Ready to claim your website?</p>
           </div>
-          <div className="flex items-center gap-1">
+          <div className="flex items-center">
             <button 
               onClick={() => setShowPopup(true)}
               className="bg-white text-orange-600 font-bold py-1 px-2 rounded text-xs whitespace-nowrap"
@@ -1531,32 +1531,14 @@ export default function PlumbingLanding() {
             >
               💰 Claim
             </button>
-            <button 
-              onClick={() => {
-                // Scroll to the claim form section
-                const claimSection = document.querySelector('#contact');
-                if (claimSection) {
-                  claimSection.scrollIntoView({ behavior: 'smooth' });
-                  // Focus on the first input field after scrolling
-                  setTimeout(() => {
-                    const firstInput = claimSection.querySelector('input[name="business-name"]') as HTMLInputElement;
-                    if (firstInput) firstInput.focus();
-                  }, 500);
-                }
-              }}
-              className="bg-white/20 backdrop-blur-sm text-white font-medium py-1 px-1.5 rounded text-xs border border-white/30 hover:bg-white/30 transition-colors"
-              aria-label="Scroll to contact form"
-            >
-              ↓
-            </button>
           </div>
         </div>
       </div>
 
       {/* Popup Modal - Mobile & Desktop Optimized */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-3 lg:p-6">
-          <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-sm sm:max-w-md lg:max-w-lg xl:max-w-xl w-full max-h-[80vh] lg:max-h-[85vh] overflow-hidden relative shadow-2xl">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-4 lg:p-8">
+          <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-md sm:max-w-lg lg:max-w-2xl xl:max-w-3xl w-full max-h-[90vh] lg:max-h-[90vh] overflow-hidden relative shadow-2xl">
             
             {/* Sticky Close Button */}
             <button 
@@ -1571,30 +1553,30 @@ export default function PlumbingLanding() {
               ×
             </button>
             
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-4 lg:p-6 rounded-t-xl lg:rounded-t-2xl">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-5 lg:p-8 rounded-t-xl lg:rounded-t-2xl">
               <div className="text-center">
-                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-5 h-5 lg:w-6 lg:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-12 h-12 lg:w-14 lg:h-14 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-6 h-6 lg:w-7 lg:h-7 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <h3 className="text-xl lg:text-2xl font-bold mb-3">Claim Your Custom Website!</h3>
-                <div className="flex flex-wrap justify-center gap-2 mb-3">
-                  <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-1 rounded-full">
+                <h3 className="text-xl lg:text-3xl font-bold mb-4">Claim Your Custom Website!</h3>
+                <div className="flex flex-wrap justify-center gap-2 lg:gap-3 mb-4">
+                  <span className="bg-green-100 text-green-800 text-xs lg:text-sm font-bold px-2 py-1 lg:px-3 lg:py-1.5 rounded-full">
                     100% Custom Code
                   </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 py-1 rounded-full">
+                  <span className="bg-blue-100 text-blue-800 text-xs lg:text-sm font-bold px-2 py-1 lg:px-3 lg:py-1.5 rounded-full">
                     USA Based Team
                   </span>
-                  <span className="bg-orange-100 text-orange-800 text-xs font-bold px-2 py-1 rounded-full">
+                  <span className="bg-orange-100 text-orange-800 text-xs lg:text-sm font-bold px-2 py-1 lg:px-3 lg:py-1.5 rounded-full">
                     2-Week Launch
                   </span>
                 </div>
-                <p className="opacity-90 text-sm lg:text-base">Get a website that will dominate your local plumbing market!</p>
+                <p className="opacity-90 text-base lg:text-lg">Get a website that will dominate your local plumbing market!</p>
               </div>
             </div>
             
-            <div className="p-4 lg:p-6 overflow-y-auto max-h-[calc(80vh-160px)] lg:max-h-[calc(85vh-180px)]">
+            <div className="p-5 lg:p-8 overflow-y-auto max-h-[calc(90vh-200px)] lg:max-h-[calc(90vh-200px)]">
               
               {/* Success Message in Popup */}
               {showClaimSuccess && (
@@ -1621,66 +1603,69 @@ export default function PlumbingLanding() {
               )}
 
               {!showClaimSuccess && (
-                <form name="website-mockup" method="POST" data-netlify="true" className="space-y-4" onSubmit={handlePopupFormSubmit}>
+                <form name="website-mockup" method="POST" data-netlify="true" className="space-y-5 lg:space-y-6" onSubmit={handlePopupFormSubmit}>
                   <input type="hidden" name="form-name" value="website-mockup" />
                   <input type="hidden" name="source" value="popup-mockup-request" />
                   <input type="hidden" name="campaign" value="plumber-email-campaign" />
                   
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Business Name</label>
-                    <input 
-                      type="text" 
-                      name="business-name"
-                      placeholder="e.g., Smith Plumbing Services" 
-                      defaultValue={params.business !== 'Hendrio' ? params.business : ''}
-                      className="w-full p-2.5 lg:p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-sm lg:text-base"
-                      required
-                    />
+                  {/* Responsive layout: single column on mobile, two columns on desktop */}
+                  <div className="space-y-5 lg:space-y-0 lg:grid lg:grid-cols-2 lg:gap-6">
+                    <div>
+                      <label className="block text-sm lg:text-base font-medium text-gray-700 dark:text-gray-300 mb-2">Business Name</label>
+                      <input 
+                        type="text" 
+                        name="business-name"
+                        placeholder="e.g., Smith Plumbing Services" 
+                        defaultValue={params.business !== 'Hendrio' ? params.business : ''}
+                        className="w-full p-4 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-base"
+                        required
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm lg:text-base font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label>
+                      <input 
+                        type="text" 
+                        name="name"
+                        placeholder="Your full name" 
+                        defaultValue={params.owner !== 'Admin' ? params.owner : ''}
+                        className="w-full p-4 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-base"
+                        required
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm lg:text-base font-medium text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                      <input 
+                        type="email" 
+                        name="email"
+                        placeholder="your@email.com" 
+                        className="w-full p-4 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-base"
+                        required
+                      />
+                    </div>
+                    
+                    <div>
+                      <label className="block text-sm lg:text-base font-medium text-gray-700 dark:text-gray-300 mb-2">Phone Number</label>
+                      <input 
+                        type="tel" 
+                        name="phone"
+                        placeholder="(555) 123-4567" 
+                        defaultValue={params.phone !== '123-456-7890' ? params.phone : ''}
+                        className="w-full p-4 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-base"
+                        required
+                      />
+                    </div>
                   </div>
                   
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Your Name</label>
-                    <input 
-                      type="text" 
-                      name="name"
-                      placeholder="Your full name" 
-                      defaultValue={params.owner !== 'Admin' ? params.owner : ''}
-                      className="w-full p-2.5 lg:p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-sm lg:text-base"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Email Address</label>
-                    <input 
-                      type="email" 
-                      name="email"
-                      placeholder="your@email.com" 
-                      className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">Phone Number</label>
-                    <input 
-                      type="tel" 
-                      name="phone"
-                      placeholder="(555) 123-4567" 
-                      defaultValue={params.phone !== '123-456-7890' ? params.phone : ''}
-                      className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
-                      required
-                    />
-                  </div>
-                  
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1">City/Area You Serve</label>
+                    <label className="block text-sm lg:text-base font-medium text-gray-700 dark:text-gray-300 mb-2">City/Area You Serve</label>
                     <input 
                       type="text" 
                       name="location"
                       placeholder="Dallas, TX" 
                       defaultValue={params.location !== 'Your City' ? params.location : ''}
-                      className="w-full p-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium"
+                      className="w-full p-4 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-base"
                       required
                     />
                   </div>
@@ -1688,21 +1673,21 @@ export default function PlumbingLanding() {
                   <button 
                     type="submit"
                     disabled={isSubmittingClaim}
-                    className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 text-lg"
+                    className="w-full bg-orange-500 hover:bg-orange-600 disabled:bg-gray-400 disabled:cursor-not-allowed text-white font-bold py-4 lg:py-5 px-6 rounded-lg transition-all duration-300 text-lg lg:text-xl"
                   >
                     {isSubmittingClaim ? '⏳ Submitting...' : '🚀 CLAIM MY CUSTOM WEBSITE'}
                   </button>
                 </form>
               )}
               
-              <div className="text-center mt-4 space-y-2">
-                <p className="text-xs text-gray-600 dark:text-gray-400">
+              <div className="text-center mt-6 lg:mt-8 space-y-3">
+                <p className="text-xs lg:text-sm text-gray-600 dark:text-gray-400">
                   ✅ 100% Custom Code • ✅ 2-Week Delivery • ✅ 100% USA Based
                 </p>
-                <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                <p className="text-sm lg:text-base font-semibold text-gray-700 dark:text-gray-300">
                   📞 Questions? Call: <a href="tel:+18178736655" className="text-orange-500 dark:text-orange-400">(817) 873-6655</a>
                 </p>
-                <p className="text-xs text-gray-500 dark:text-gray-400">
+                <p className="text-xs lg:text-sm text-gray-500 dark:text-gray-400">
                   Forte Web Designs - Professional websites for plumbing contractors
                 </p>
               </div>
