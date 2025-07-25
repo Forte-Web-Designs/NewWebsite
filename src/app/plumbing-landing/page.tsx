@@ -120,32 +120,6 @@ export default function PlumbingLanding() {
 
   return (
     <div className="min-h-screen pb-16 lg:pb-0">{/* Reduced bottom padding for mobile sticky CTA */}
-      {/* Desktop Color Theme Switcher - Hidden on Mobile */}
-      <div className="hidden lg:block fixed top-4 left-4 z-40">
-        <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-2 flex space-x-2">
-          <div className="text-xs text-gray-600 font-medium mr-2">Themes:</div>
-          <div className="flex space-x-2">
-            {Object.keys(colorThemes).map((themeName) => (
-              <button
-                key={themeName}
-                onClick={() => setCurrentTheme(themeName)}
-                className={`w-8 h-8 rounded-full border-2 transition-all hover:scale-110 ${
-                  currentTheme === themeName ? 'border-gray-800 scale-110 shadow-md' : 'border-gray-300 hover:border-gray-500'
-                }`}
-                style={{
-                  backgroundColor: 
-                    themeName === 'blue' ? '#1e40af' :
-                    themeName === 'navy' ? '#1e293b' :
-                    themeName === 'green' ? '#065f46' :
-                    themeName === 'red' ? '#991b1b' : '#1e40af'
-                }}
-                title={`Switch to ${themeName} theme`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
       {/* Mobile Menu Overlay */}
       {mobileMenuOpen && (
         <div className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 lg:hidden">
@@ -171,37 +145,6 @@ export default function PlumbingLanding() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
-              </div>
-
-              {/* Color Theme Switcher in Mobile Menu */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-600 mb-3">Color Themes</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {Object.keys(colorThemes).map((themeName) => (
-                    <button
-                      key={themeName}
-                      onClick={() => setCurrentTheme(themeName)}
-                      className={`flex items-center p-3 rounded-lg border-2 transition-all hover:shadow-md ${
-                        currentTheme === themeName 
-                          ? 'border-gray-800 bg-gray-50' 
-                          : 'border-gray-200 hover:border-gray-400'
-                      }`}
-                      title={`${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
-                    >
-                      <div 
-                        className="w-6 h-6 rounded-full mr-3"
-                        style={{
-                          backgroundColor: 
-                            themeName === 'blue' ? '#1e40af' :
-                            themeName === 'navy' ? '#1e293b' :
-                            themeName === 'green' ? '#065f46' :
-                            themeName === 'red' ? '#991b1b' : '#1e40af'
-                        }}
-                      ></div>
-                      <span className="text-sm font-medium capitalize">{themeName}</span>
-                    </button>
-                  ))}
-                </div>
               </div>
 
               {/* Mobile Navigation Menu */}
@@ -348,6 +291,31 @@ export default function PlumbingLanding() {
                   <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                 </svg>
               </button>
+              
+              {/* Color Theme Switcher - Compact Demo Feature */}
+              <div className="hidden sm:flex items-center space-x-1 bg-gray-50 p-1 rounded-lg border">
+                <span className="text-xs text-gray-600 px-2 py-1 font-medium">DEMO:</span>
+                {Object.keys(colorThemes).map((themeName) => (
+                  <button
+                    key={themeName}
+                    onClick={() => setCurrentTheme(themeName)}
+                    className={`w-6 h-6 rounded-full border-2 transition-all hover:scale-110 ${
+                      currentTheme === themeName 
+                        ? 'border-gray-800 shadow-md' 
+                        : 'border-gray-300 hover:border-gray-500'
+                    }`}
+                    style={{
+                      backgroundColor: 
+                        themeName === 'blue' ? '#1e40af' :
+                        themeName === 'navy' ? '#1e293b' :
+                        themeName === 'green' ? '#065f46' :
+                        themeName === 'red' ? '#991b1b' : '#1e40af'
+                    }}
+                    title={`Switch to ${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
+                  />
+                ))}
+              </div>
+              
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-2 hover:bg-gray-100 rounded transition-colors lg:hidden"
