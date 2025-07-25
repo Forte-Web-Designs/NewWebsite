@@ -13,6 +13,18 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'clarity-is-kindness-life-online',
+    title: 'Clarity Is Kindness (In Life and Online)',
+    excerpt: 'Clear communication isn\'t just good business—it\'s an act of kindness. Whether you\'re writing an email, designing a website, or having a conversation, clarity helps people understand, decide, and move forward without confusion.',
+    author: 'Seth Forte',
+    date: '2025-07-25',
+    readTime: '7 min read',
+    category: 'Business',
+    image: '/images/blog/clarity-is-kindness.webp',
+    tags: ['Communication', 'Business', 'Web Design', 'Writing'],
+    featured: true
+  },
+  {
     id: 'local-web-designer-near-me-guide',
     title: 'How to Find the Best Web Designer Near Me: A Local Business Guide',
     excerpt: 'Searching for "web designer near me"? Here\'s everything you need to know to find the perfect local web designer for your business in 2025.',
