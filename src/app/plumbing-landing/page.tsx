@@ -118,11 +118,11 @@ export default function PlumbingLanding() {
   }
 
   return (
-    <div className="min-h-screen pb-20 lg:pb-0">{/* Bottom padding for mobile sticky CTA */}
-      {/* Color Theme Switcher - Mobile Optimized */}
-      <div className="fixed top-4 right-4 z-40 lg:top-4 lg:left-4">
-        <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 flex flex-col lg:flex-row space-y-1 lg:space-y-0 lg:space-x-2">
-          <div className="text-xs text-gray-600 font-medium mb-1 lg:mb-0 lg:mr-2 hidden lg:block">Themes:</div>
+    <div className="min-h-screen pb-16 lg:pb-0">{/* Reduced bottom padding for mobile sticky CTA */}
+      {/* Color Theme Switcher - Better Mobile Position */}
+      <div className="fixed top-4 left-4 lg:top-4 lg:left-4 z-40">
+        <div className="bg-white/95 backdrop-blur-sm rounded-lg shadow-lg p-2 flex flex-col lg:flex-row space-y-1 lg:space-y-0 lg:space-x-2">
+          <div className="text-xs text-gray-600 font-medium mb-1 lg:mb-0 lg:mr-2 block lg:block">Themes:</div>
           <div className="flex space-x-1 lg:space-x-2">
             {Object.keys(colorThemes).map((themeName) => (
               <button
@@ -1158,16 +1158,16 @@ export default function PlumbingLanding() {
         </section>
       )}
 
-      {/* Mobile Sticky CTA - Bottom of Page */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-orange-500 text-white p-4 shadow-lg z-50 lg:hidden">
+      {/* Mobile Sticky CTA - Bottom of Page - Optimized Height */}
+      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-orange-500 text-white p-3 shadow-lg z-50 lg:hidden">
         <div className="flex items-center justify-between">
           <div className="flex-1">
-            <p className="text-sm font-medium">Ready to claim your website?</p>
-            <p className="text-xs opacity-90">Custom design • No templates • USA-based</p>
+            <p className="text-sm font-medium leading-tight">Ready to claim your website?</p>
+            <p className="text-xs opacity-90 leading-tight">Custom design • No templates • USA-based</p>
           </div>
           <button 
             onClick={() => setShowPopup(true)}
-            className="bg-white text-orange-600 font-bold py-2 px-4 rounded-lg text-sm whitespace-nowrap ml-3"
+            className="bg-white text-orange-600 font-bold py-2 px-3 rounded-lg text-sm whitespace-nowrap ml-2"
           >
             💰 Claim Now
           </button>
