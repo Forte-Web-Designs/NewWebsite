@@ -202,16 +202,16 @@ export default function GenericIndustryLeadModal({
 
   return (
     <div className="modal-overlay fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
-      <div className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-xs md:max-w-sm max-h-[85vh] overflow-y-auto shadow-2xl">
+      <div className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-xs md:max-w-sm lg:max-w-lg max-h-[75vh] md:max-h-[80vh] overflow-y-auto shadow-2xl">
         {/* Header */}
-        <div className="relative p-3 md:p-4 pb-2 md:pb-3 border-b border-gray-200 dark:border-gray-700">
+        <div className="relative p-3 md:p-4 pb-2 md:pb-3 border-b border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900">
           <button
             onClick={onClose}
-            className="absolute top-2 right-2 md:top-3 md:right-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-full p-1.5 z-10"
+            className="absolute top-2 right-2 md:top-3 md:right-3 text-red-600 hover:text-red-700 dark:text-red-400 dark:hover:text-red-300 transition-colors bg-red-50 hover:bg-red-100 dark:bg-red-900/20 dark:hover:bg-red-900/40 rounded-full p-2 z-10 border border-red-200 dark:border-red-800"
             aria-label="Close modal"
           >
-            <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M6 18L18 6M6 6l12 12" />
+            <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" strokeWidth={3} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
           

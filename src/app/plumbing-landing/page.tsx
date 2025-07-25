@@ -142,108 +142,106 @@ export default function PlumbingLanding() {
 
   return (
     <div className="min-h-screen pb-10 lg:pb-0">{/* Reduced bottom padding for compact mobile sticky CTA */}
-      {/* Mobile Menu Overlay - Higher Z-Index to Override Main Site Header */}
-      {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[9999999] lg:hidden">
-          {/* Backdrop - Click to close */}
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setMobileMenuOpen(false)}
-          ></div>
-          
-          {/* Menu Panel */}
-          <div className="relative h-full bg-white max-w-sm ml-auto shadow-2xl">
-            <div className="h-full flex flex-col">
-              {/* Mobile Menu Header - Close Button on Far Right */}
-              <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50">
-                <div className="flex items-center flex-1">
-                  <div className={`w-8 h-8 ${theme.primary} rounded flex items-center justify-center mr-2`}>
-                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-                    </svg>
-                  </div>
-                  <h2 className={`text-base font-bold ${theme.primaryText}`}>
-                    {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
-                  </h2>
+      {/* Mobile Navigation - Sticky under main Forte nav */}
+      <div className="lg:hidden sticky top-0 z-40 bg-white border-b shadow-md">
+        <div className="container mx-auto px-4">
+          {/* Header */}
+          <div className="flex items-center justify-between py-3 border-b border-gray-200">
+            <div className="flex items-center">
+              <div className={`w-6 h-6 ${theme.primary} rounded flex items-center justify-center mr-2`}>
+                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+                </svg>
+              </div>
+              <h2 className={`text-base font-bold ${theme.primaryText}`}>
+                {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
+              </h2>
+            </div>
+            <button 
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
+              aria-label="Toggle mobile menu"
+            >
+              {mobileMenuOpen ? (
+                <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-5 h-5 text-gray-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                </svg>
+              )}
+            </button>
+          </div>
+
+          {/* Expandable Content - Only shows when mobileMenuOpen is true */}
+          {mobileMenuOpen && (
+            <div className="py-4">
+              {/* Color Theme Picker */}
+              <div className="mb-4">
+                <h3 className="text-sm font-semibold text-gray-700 mb-3">🎨 Color Themes</h3>
+                <div className="grid grid-cols-4 gap-2">
+                  {Object.keys(colorThemes).map((themeName) => (
+                    <button
+                      key={themeName}
+                      onClick={() => setCurrentTheme(themeName)}
+                      className={`flex flex-col items-center p-2 rounded-lg border-2 transition-all hover:shadow-sm ${
+                        currentTheme === themeName 
+                          ? 'border-gray-800 bg-gray-50' 
+                          : 'border-gray-200 hover:border-gray-400'
+                      }`}
+                      title={`Switch to ${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
+                    >
+                      <div 
+                        className="w-6 h-6 rounded-full mb-1 border border-gray-300"
+                        style={{
+                          backgroundColor: 
+                            themeName === 'blue' ? '#1e40af' :
+                            themeName === 'navy' ? '#1e293b' :
+                            themeName === 'green' ? '#065f46' :
+                            themeName === 'red' ? '#991b1b' : '#1e40af'
+                        }}
+                      ></div>
+                      <span className="text-xs font-medium capitalize">{themeName}</span>
+                    </button>
+                  ))}
                 </div>
-                <button 
+              </div>
+
+              {/* Mobile Navigation Menu */}
+              <nav className="grid grid-cols-2 gap-2">
+                <a 
+                  href="#" 
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 hover:bg-gray-200 rounded-lg transition-colors bg-white shadow-sm ml-4 flex-shrink-0"
-                  aria-label="Close menu"
+                  className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-center"
                 >
-                  <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                  </svg>
-                </button>
-              </div>
-
-              <div className="flex-1 overflow-y-auto p-4">
-                {/* Color Theme Switcher - Mobile */}
-                <div className="mb-6">
-                  <h3 className="text-sm font-semibold text-gray-600 mb-3">🎨 Demo Color Themes</h3>
-                  <div className="grid grid-cols-2 gap-2">
-                    {Object.keys(colorThemes).map((themeName) => (
-                      <button
-                        key={themeName}
-                        onClick={() => setCurrentTheme(themeName)}
-                        className={`flex items-center p-3 rounded-lg border-2 transition-all hover:shadow-md ${
-                          currentTheme === themeName 
-                            ? 'border-gray-800 bg-gray-50' 
-                            : 'border-gray-200 hover:border-gray-400'
-                        }`}
-                        title={`Switch to ${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
-                      >
-                        <div 
-                          className="w-6 h-6 rounded-full mr-2 border border-gray-300"
-                          style={{
-                            backgroundColor: 
-                              themeName === 'blue' ? '#1e40af' :
-                              themeName === 'navy' ? '#1e293b' :
-                              themeName === 'green' ? '#065f46' :
-                              themeName === 'red' ? '#991b1b' : '#1e40af'
-                          }}
-                        ></div>
-                        <span className="text-xs font-medium capitalize">{themeName}</span>
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                {/* Mobile Navigation Menu */}
-                <nav className="space-y-1">
-                  <a 
-                    href="#" 
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-base"
-                  >
-                    Home
-                  </a>
-                  <a 
-                    href="#about" 
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-base"
-                  >
-                    About
-                  </a>
-                  <a 
-                    href="#services" 
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-base"
-                  >
-                    Services
-                  </a>
-                  <a 
-                    href="#contact" 
-                    onClick={() => setMobileMenuOpen(false)}
-                    className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-base"
-                  >
-                    Contact
-                  </a>
-                </nav>
-              </div>
+                  Home
+                </a>
+                <a 
+                  href="#about" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-center"
+                >
+                  About
+                </a>
+                <a 
+                  href="#services" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-center"
+                >
+                  Services
+                </a>
+                <a 
+                  href="#contact" 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-center"
+                >
+                  Contact
+                </a>
+              </nav>
 
               {/* Bottom CTA Button */}
-              <div className="p-4 border-t border-gray-200 bg-gray-50">
+              <div className="mt-4">
                 <button 
                   onClick={() => {
                     setShowPopup(true);
@@ -255,9 +253,9 @@ export default function PlumbingLanding() {
                 </button>
               </div>
             </div>
-          </div>
+          )}
         </div>
-      )}
+      </div>
 
       {/* Top Header Section - Compact */}
       <div className={`${theme.primary} text-white py-2`}>
@@ -308,10 +306,8 @@ export default function PlumbingLanding() {
         </div>
       </div>
 
-      {/* Main Navigation - Compact Design - Hidden when mobile menu is open */}
-      <header className={`bg-white shadow-sm sticky top-0 z-50 transition-transform duration-300 ${
-        mobileMenuOpen ? 'lg:translate-y-0 -translate-y-full' : 'translate-y-0'
-      }`}>
+      {/* Main Navigation - Compact Design - Always sticky and visible */}
+      <header className="bg-white shadow-sm sticky top-0 z-50 transition-all duration-300">
         <div className="container mx-auto px-4">
           <div className="flex justify-between items-center py-2">
             {/* Logo - Smaller */}
@@ -366,6 +362,30 @@ export default function PlumbingLanding() {
                   <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                 </svg>
               </button>
+
+              {/* Desktop Color Theme Switcher - Compact */}
+              <div className="hidden sm:flex items-center space-x-1 bg-gray-50 p-1 rounded-lg border">
+                <span className="text-xs text-gray-600 px-2 py-1 font-medium">DEMO:</span>
+                {Object.keys(colorThemes).map((themeName) => (
+                  <button
+                    key={themeName}
+                    onClick={() => setCurrentTheme(themeName)}
+                    className={`w-6 h-6 rounded-full border-2 transition-all hover:scale-110 ${
+                      currentTheme === themeName 
+                        ? 'border-gray-800 shadow-md' 
+                        : 'border-gray-300 hover:border-gray-500'
+                    }`}
+                    style={{
+                      backgroundColor: 
+                        themeName === 'blue' ? '#1e40af' :
+                        themeName === 'navy' ? '#1e293b' :
+                        themeName === 'green' ? '#065f46' :
+                        themeName === 'red' ? '#991b1b' : '#1e40af'
+                    }}
+                    title={`Switch to ${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
+                  />
+                ))}
+              </div>
               
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -838,13 +858,13 @@ export default function PlumbingLanding() {
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>24/7 Emergency Service</span>
+                      <span className="text-white font-medium">24/7 Emergency Service</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Licensed & Insured Experts</span>
+                      <span className="text-white font-medium">Licensed & Insured Experts</span>
                     </div>
                   </div>
                   <div>
@@ -852,13 +872,13 @@ export default function PlumbingLanding() {
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>100% Satisfaction Guarantee</span>
+                      <span className="text-white font-medium">100% Satisfaction Guarantee</span>
                     </div>
                     <div className="flex items-center space-x-3">
                       <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                       </svg>
-                      <span>Upfront, Honest Pricing</span>
+                      <span className="text-white font-medium">Upfront, Honest Pricing</span>
                     </div>
                   </div>
                 </div>
@@ -1068,7 +1088,7 @@ export default function PlumbingLanding() {
                   <h3 className="text-xl font-bold text-blue-900">Kitchen Plumbing</h3>
                   <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
                     <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                      <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
                     </svg>
                   </div>
                 </div>
@@ -1172,7 +1192,7 @@ export default function PlumbingLanding() {
                     24/7 Emergency Response
                   </li>
                   <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                                       <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                     </svg>
                     Burst Pipe Repair
