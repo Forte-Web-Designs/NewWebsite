@@ -142,9 +142,9 @@ export default function PlumbingLanding() {
 
   return (
     <div className="min-h-screen pb-10 lg:pb-0">{/* Reduced bottom padding for compact mobile sticky CTA */}
-      {/* Mobile Menu Overlay - Proper Z-Index and Close Functionality */}
+      {/* Mobile Menu Overlay - Higher Z-Index to Override Main Site Header */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 z-[55] lg:hidden">
+        <div className="fixed inset-0 z-[9999999] lg:hidden">
           {/* Backdrop - Click to close */}
           <div 
             className="absolute inset-0 bg-black/50 backdrop-blur-sm"
@@ -154,9 +154,9 @@ export default function PlumbingLanding() {
           {/* Menu Panel */}
           <div className="relative h-full bg-white max-w-sm ml-auto shadow-2xl">
             <div className="h-full flex flex-col">
-              {/* Mobile Menu Header */}
+              {/* Mobile Menu Header - Close Button on Far Right */}
               <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50">
-                <div className="flex items-center">
+                <div className="flex items-center flex-1">
                   <div className={`w-8 h-8 ${theme.primary} rounded flex items-center justify-center mr-2`}>
                     <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
@@ -168,7 +168,7 @@ export default function PlumbingLanding() {
                 </div>
                 <button 
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 hover:bg-gray-200 rounded-lg transition-colors bg-white shadow-sm"
+                  className="p-2 hover:bg-gray-200 rounded-lg transition-colors bg-white shadow-sm ml-4 flex-shrink-0"
                   aria-label="Close menu"
                 >
                   <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
