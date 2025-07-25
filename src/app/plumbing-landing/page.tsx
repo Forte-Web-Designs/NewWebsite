@@ -119,10 +119,10 @@ export default function PlumbingLanding() {
   }
 
   return (
-    <div className="min-h-screen pb-16 lg:pb-0">{/* Reduced bottom padding for mobile sticky CTA */}
+    <div className="min-h-screen pb-10 lg:pb-0">{/* Reduced bottom padding for compact mobile sticky CTA */}
       {/* Mobile Menu Overlay - Full Screen */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 lg:hidden">
+        <div className="fixed inset-0 bg-white z-[60] lg:hidden">
           <div className="h-full flex flex-col">
             {/* Mobile Menu Header */}
             <div className="flex items-center justify-between p-6 border-b border-gray-200">
@@ -227,58 +227,48 @@ export default function PlumbingLanding() {
         </div>
       )}
 
-      {/* Top Header Section - Exact Hendrio Match */}
-      <div className={`${theme.primary} text-white py-3`}>
+      {/* Top Header Section - Compact */}
+      <div className={`${theme.primary} text-white py-2`}>
         <div className="container mx-auto px-4">
-          <div className="flex flex-col lg:flex-row justify-between items-center text-sm space-y-2 lg:space-y-0">
-            <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-8">
+          <div className="flex flex-col lg:flex-row justify-between items-center text-xs space-y-1 lg:space-y-0">
+            <div className="flex flex-col lg:flex-row items-center space-y-1 lg:space-y-0 lg:space-x-6">
               <div className="flex items-center">
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                 </svg>
                 <span className="text-center lg:text-left">
                   {params.business !== 'Hendrio' && params.location !== 'your area' 
-                    ? `Serving ${params.location} and surrounding areas`
-                    : '102/B New Market, Sandigo-USA'
+                    ? `Serving ${params.location}`
+                    : 'Sandigo-USA'
                   }
                 </span>
               </div>
               <div className="flex items-center">
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
                 info@{params.business.toLowerCase().replace(/\s+/g, '')}plumbing.com
               </div>
             </div>
-            <div className="flex flex-col lg:flex-row items-center space-y-2 lg:space-y-0 lg:space-x-6">
-              <div className="flex space-x-2">
-                <a href="#" className="w-8 h-8 bg-white/20 rounded flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+            <div className="flex flex-col lg:flex-row items-center space-y-1 lg:space-y-0 lg:space-x-4">
+              <div className="flex space-x-1">
+                <a href="#" className="w-6 h-6 bg-white/20 rounded flex items-center justify-center hover:bg-white/30 transition-colors">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/>
                   </svg>
                 </a>
-                <a href="#" className="w-8 h-8 bg-white/20 rounded flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                <a href="#" className="w-6 h-6 bg-white/20 rounded flex items-center justify-center hover:bg-white/30 transition-colors">
+                  <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                  </svg>
-                </a>
-                <a href="#" className="w-8 h-8 bg-white/20 rounded flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M22.23 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.46c.98 0 1.77-.77 1.77-1.72V1.72C24 .77 23.2 0 22.23 0zM7.27 20.1H3.65V9.24h3.62V20.1zM5.47 7.76h-.03c-1.22 0-2-.83-2-1.87 0-1.06.8-1.87 2.05-1.87 1.24 0 2 .8 2.02 1.87 0 1.04-.78 1.87-2.05 1.87zM20.34 20.1h-3.63v-5.8c0-1.45-.52-2.45-1.83-2.45-1 0-1.6.67-1.87 1.32-.1.23-.11.55-.11.88v6.05H9.28s.05-9.82 0-10.84h3.63v1.54a3.6 3.6 0 0 1 3.26-1.8c2.37 0 4.15 1.55 4.15 4.86v6.24h.02z"/>
-                  </svg>
-                </a>
-                <a href="#" className="w-8 h-8 bg-white/20 rounded flex items-center justify-center hover:bg-white/30 transition-colors">
-                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.746.099.12.112.225.085.347-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001 12.017.001z"/>
                   </svg>
                 </a>
               </div>
               <div className="flex items-center">
-                <svg className="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
                 </svg>
-                <span className="font-semibold">
-                  Call Us : {params.phone || '+980 234 4567'}
+                <span className="font-semibold text-xs">
+                  {params.phone || '+980 234 4567'}
                 </span>
               </div>
             </div>
@@ -286,22 +276,22 @@ export default function PlumbingLanding() {
         </div>
       </div>
 
-      {/* Main Navigation - Exact Hendrio Match */}
-      <header className="bg-white shadow-sm sticky top-0 z-40">
+      {/* Main Navigation - Compact Design */}
+      <header className="bg-white shadow-sm sticky top-0 z-50">
         <div className="container mx-auto px-4">
-          <div className="flex justify-between items-center py-4">
-            {/* Logo */}
+          <div className="flex justify-between items-center py-2">
+            {/* Logo - Smaller */}
             <div className="flex items-center">
-              <div className={`w-12 h-12 ${theme.primary} rounded flex items-center justify-center mr-3`}>
-                <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+              <div className={`w-8 h-8 ${theme.primary} rounded flex items-center justify-center mr-2`}>
+                <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
                 </svg>
               </div>
               <div>
-                <h1 className={`text-2xl font-bold ${theme.primaryText}`}>
+                <h1 className={`text-lg font-bold ${theme.primaryText}`}>
                   {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
                 </h1>
-                <p className="text-sm text-gray-600">Professional Plumbing Services</p>
+                <p className="text-xs text-gray-600">Professional Plumbing Services</p>
               </div>
             </div>
 
@@ -335,33 +325,33 @@ export default function PlumbingLanding() {
               <a href="#contact" className="text-gray-700 hover:text-blue-600 font-medium transition-colors">Contact</a>
             </nav>
 
-            {/* Right side buttons */}
-            <div className="flex items-center space-x-4">
-              <button className="p-2 hover:bg-gray-100 rounded transition-colors">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+            {/* Right side buttons - Compact */}
+            <div className="flex items-center space-x-2">
+              <button className="p-1.5 hover:bg-gray-100 rounded transition-colors">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
                 </svg>
               </button>
               
               <button 
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="p-2 hover:bg-gray-100 rounded transition-colors lg:hidden"
+                className="p-1.5 hover:bg-gray-100 rounded transition-colors lg:hidden"
               >
                 {mobileMenuOpen ? (
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 ) : (
-                  <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
                   </svg>
                 )}
               </button>
               <button 
                 onClick={() => setShowPopup(true)}
-                className={`${theme.secondary} ${theme.secondaryHover} text-white px-6 py-3 rounded-md font-medium transition-colors`}
+                className={`${theme.secondary} ${theme.secondaryHover} text-white px-3 py-1.5 rounded-md font-medium transition-colors text-sm`}
               >
-                Get a Free Quote
+                Get Quote
               </button>
             </div>
           </div>
@@ -370,12 +360,11 @@ export default function PlumbingLanding() {
 
       {/* Demo Disclaimer Banner */}
       {params.business !== 'Hendrio' && (
-        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-3 px-4 text-center relative z-50">
+        <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 text-center relative z-40">
           <div className="container mx-auto">
-            <p className="text-sm md:text-base">
-              🎯 <strong>DEMO PREVIEW:</strong> This is a custom website mockup for <strong>{params.business}</strong>. 
-              Every section, image, and detail can be personalized for your business. 
-              <span className="hidden md:inline"> - This is just a preview of what's possible!</span>
+            <p className="text-xs md:text-sm">
+              🎯 <strong>DEMO:</strong> Custom mockup for <strong>{params.business}</strong>. 
+              <span className="hidden md:inline">Every detail can be personalized!</span>
             </p>
           </div>
         </div>
@@ -1249,18 +1238,17 @@ export default function PlumbingLanding() {
         </section>
       )}
 
-      {/* Mobile Sticky CTA - Bottom of Page - Optimized Height */}
-      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-orange-500 text-white p-3 shadow-lg z-50 lg:hidden">
+      {/* Mobile Sticky CTA - Compact */}
+      <div className="fixed bottom-0 left-0 right-0 bg-gradient-to-r from-orange-600 to-orange-500 text-white p-2 shadow-lg z-30 lg:hidden">
         <div className="flex items-center justify-between">
           <div className="flex-1">
-            <p className="text-sm font-medium leading-tight">Ready to claim your website?</p>
-            <p className="text-xs opacity-90 leading-tight">Custom design • No templates • USA-based</p>
+            <p className="text-xs font-medium leading-tight">Ready to claim your website?</p>
           </div>
           <button 
             onClick={() => setShowPopup(true)}
-            className="bg-white text-orange-600 font-bold py-2 px-3 rounded-lg text-sm whitespace-nowrap ml-2"
+            className="bg-white text-orange-600 font-bold py-1 px-2 rounded text-xs whitespace-nowrap ml-2"
           >
-            💰 Claim Now
+            💰 Claim
           </button>
         </div>
       </div>
