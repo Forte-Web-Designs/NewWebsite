@@ -120,25 +120,29 @@ export default function PlumbingLanding() {
   return (
     <div className="min-h-screen pb-20 lg:pb-0">{/* Bottom padding for mobile sticky CTA */}
       {/* Color Theme Switcher - Mobile Optimized */}
-      <div className="fixed bottom-4 right-4 z-40 lg:top-4 lg:left-4 lg:bottom-auto lg:right-auto">
-        <div className="bg-white rounded-lg shadow-lg p-1.5 lg:p-2 flex space-x-1 lg:space-x-2">
-          {Object.keys(colorThemes).map((themeName) => (
-            <button
-              key={themeName}
-              onClick={() => setCurrentTheme(themeName)}
-              className={`w-6 h-6 lg:w-8 lg:h-8 rounded-full border-2 transition-all ${
-                currentTheme === themeName ? 'border-gray-800 scale-110' : 'border-gray-300'
-              }`}
-              style={{
-                backgroundColor: 
-                  themeName === 'blue' ? '#1e40af' :
-                  themeName === 'navy' ? '#1e293b' :
-                  themeName === 'green' ? '#065f46' :
-                  themeName === 'red' ? '#991b1b' : '#1e40af'
-              }}
-              title={`Switch to ${themeName} theme`}
-            />
-          ))}
+      <div className="fixed top-4 right-4 z-40 lg:top-4 lg:left-4">
+        <div className="bg-white/90 backdrop-blur-sm rounded-lg shadow-lg p-2 flex flex-col lg:flex-row space-y-1 lg:space-y-0 lg:space-x-2">
+          <div className="text-xs text-gray-600 font-medium mb-1 lg:mb-0 lg:mr-2 hidden lg:block">Themes:</div>
+          <div className="flex space-x-1 lg:space-x-2">
+            {Object.keys(colorThemes).map((themeName) => (
+              <button
+                key={themeName}
+                onClick={() => setCurrentTheme(themeName)}
+                className={`w-7 h-7 lg:w-8 lg:h-8 rounded-full border-2 transition-all hover:scale-110 ${
+                  currentTheme === themeName ? 'border-gray-800 scale-110 shadow-md' : 'border-gray-300 hover:border-gray-500'
+                }`}
+                style={{
+                  backgroundColor: 
+                    themeName === 'blue' ? '#1e40af' :
+                    themeName === 'navy' ? '#1e293b' :
+                    themeName === 'green' ? '#065f46' :
+                    themeName === 'red' ? '#991b1b' : '#1e40af'
+                }}
+                title={`Switch to ${themeName} theme`}
+              />
+            ))}
+          </div>
+          <div className="text-xs text-gray-500 text-center lg:hidden mt-1">Color Themes</div>
         </div>
       </div>
 
@@ -1172,40 +1176,40 @@ export default function PlumbingLanding() {
 
       {/* Popup Modal - Mobile & Desktop Optimized */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-4">
-          <div className="bg-white rounded-2xl max-w-md w-full max-h-[85vh] lg:max-h-[90vh] overflow-y-auto relative shadow-2xl">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-50 p-3 lg:p-4">
+          <div className="bg-white rounded-xl lg:rounded-2xl max-w-sm lg:max-w-md w-full max-h-[75vh] lg:max-h-[90vh] overflow-y-auto relative shadow-2xl">
             <button 
               onClick={() => setShowPopup(false)}
-              className="absolute top-3 right-3 bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 w-8 h-8 rounded-full flex items-center justify-center text-xl font-bold z-10 transition-colors"
+              className="absolute top-2 right-2 lg:top-3 lg:right-3 bg-gray-100 hover:bg-gray-200 text-gray-600 hover:text-gray-800 w-7 h-7 lg:w-8 lg:h-8 rounded-full flex items-center justify-center text-lg lg:text-xl font-bold z-10 transition-colors"
               aria-label="Close"
             >
               ×
             </button>
             
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-6 rounded-t-2xl">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-4 lg:p-6 rounded-t-xl lg:rounded-t-2xl">
               <div className="text-center">
-                <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-10 h-10 lg:w-12 lg:h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-2 lg:mb-3">
+                  <svg className="w-5 h-5 lg:w-6 lg:h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <h3 className="text-2xl font-bold mb-2">Claim Your Custom Website!</h3>
-                <div className="flex flex-wrap justify-center gap-2 mb-3">
-                  <span className="bg-green-100 text-green-800 text-xs font-bold px-3 py-1 rounded-full">
+                <h3 className="text-xl lg:text-2xl font-bold mb-2">Claim Your Custom Website!</h3>
+                <div className="flex flex-wrap justify-center gap-1 lg:gap-2 mb-2 lg:mb-3">
+                  <span className="bg-green-100 text-green-800 text-xs font-bold px-2 lg:px-3 py-1 rounded-full">
                     100% Custom Code
                   </span>
-                  <span className="bg-blue-100 text-blue-800 text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-blue-100 text-blue-800 text-xs font-bold px-2 lg:px-3 py-1 rounded-full">
                     USA Based Team
                   </span>
-                  <span className="bg-orange-100 text-orange-800 text-xs font-bold px-3 py-1 rounded-full">
+                  <span className="bg-orange-100 text-orange-800 text-xs font-bold px-2 lg:px-3 py-1 rounded-full">
                     2-Week Launch
                   </span>
                 </div>
-                <p className="opacity-90">Get a website that will dominate your local plumbing market!</p>
+                <p className="opacity-90 text-sm lg:text-base">Get a website that will dominate your local plumbing market!</p>
               </div>
             </div>
             
-            <div className="p-6">
+            <div className="p-4 lg:p-6">
               <form name="website-mockup" method="POST" data-netlify="true" className="space-y-4">
                 <input type="hidden" name="form-name" value="website-mockup" />
                 <input type="hidden" name="source" value="popup-mockup-request" />
@@ -1218,7 +1222,7 @@ export default function PlumbingLanding() {
                     name="business-name"
                     placeholder="e.g., Smith Plumbing Services" 
                     defaultValue={params.business !== 'Hendrio' ? params.business : ''}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full p-2.5 lg:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm lg:text-base"
                     required
                   />
                 </div>
@@ -1230,7 +1234,7 @@ export default function PlumbingLanding() {
                     name="name"
                     placeholder="Your full name" 
                     defaultValue={params.owner !== 'Admin' ? params.owner : ''}
-                    className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500"
+                    className="w-full p-2.5 lg:p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm lg:text-base"
                     required
                   />
                 </div>

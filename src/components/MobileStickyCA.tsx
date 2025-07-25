@@ -19,8 +19,11 @@ export default function MobileStickyCTA() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Hide on all industry and service pages
-  if (pathname?.includes('/industries/') || pathname?.includes('/services/')) return null;
+  // Hide on all industry and service pages, and landing pages
+  if (pathname?.includes('/industries/') || 
+      pathname?.includes('/services/') || 
+      pathname?.includes('/plumbing-landing') ||
+      pathname?.includes('-landing')) return null;
 
   if (!isVisible) return null;
 
