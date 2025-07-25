@@ -137,6 +137,8 @@ export default function GenericIndustryLeadModal({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    e.stopPropagation();
+    
     setIsSubmitting(true);
     setSubmitError(null);
     
@@ -162,19 +164,21 @@ export default function GenericIndustryLeadModal({
     }
     
     try {
-      // Create form data for Netlify submission
-      const form = e.target as HTMLFormElement;
-      const formDataToSend = new FormData(form);
-      
-      // Add form name and trigger source for Netlify
-      formDataToSend.append('form-name', formName);
-      formDataToSend.append('trigger', trigger);
-      formDataToSend.append('industry', industry);
+      // Prepare form data for submission
+      const submitData = new URLSearchParams();
+      submitData.append('form-name', formName);
+      submitData.append('firstName', formData.firstName);
+      submitData.append('businessName', formData.businessName);
+      submitData.append('email', formData.email);
+      submitData.append('phone', formData.phone);
+      submitData.append('message', formData.message);
+      submitData.append('trigger', trigger);
+      submitData.append('industry', industry);
       
       const response = await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formDataToSend as unknown as Record<string, string>).toString(),
+        body: submitData.toString(),
       });
 
       if (response.ok) {
@@ -188,7 +192,7 @@ export default function GenericIndustryLeadModal({
         });
         setFieldErrors({});
       } else {
-        throw new Error("Form submission failed");
+        throw new Error(`Form submission failed: ${response.status}`);
       }
     } catch (error) {
       console.error("Form submission error:", error);
@@ -288,7 +292,7 @@ export default function GenericIndustryLeadModal({
                       fieldErrors.firstName 
                         ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
                         : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                    } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
+                    } bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium`}
                   />
                   {fieldErrors.firstName && (
                     <p className="mt-1 text-xs text-red-500 font-medium">{fieldErrors.firstName}</p>
@@ -306,7 +310,7 @@ export default function GenericIndustryLeadModal({
                     placeholder="Your business name"
                     value={formData.businessName}
                     onChange={handleInputChange}
-                    className="w-full px-3 py-2 md:px-3 md:py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm"
+                    className="w-full px-3 py-2 md:px-3 md:py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 text-sm font-medium"
                   />
                 </div>
               </div>
@@ -329,7 +333,7 @@ export default function GenericIndustryLeadModal({
                       fieldErrors.email 
                         ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
                         : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                    } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
+                    } bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium`}
                   />
                   {fieldErrors.email && (
                     <p className="mt-1 text-xs text-red-500 font-medium">{fieldErrors.email}</p>
@@ -351,7 +355,7 @@ export default function GenericIndustryLeadModal({
                       fieldErrors.phone 
                         ? 'border-red-400 focus:border-red-400 focus:ring-red-400/50' 
                         : 'border-gray-300 dark:border-gray-600 focus:border-cyan-400 focus:ring-cyan-400/50'
-                    } bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400`}
+                    } bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium`}
                   />
                   {fieldErrors.phone && (
                     <p className="mt-1 text-xs text-red-500 font-medium">{fieldErrors.phone}</p>
@@ -371,7 +375,7 @@ export default function GenericIndustryLeadModal({
                   value={formData.message}
                   onChange={handleInputChange}
                   rows={2}
-                  className="w-full px-3 py-2 md:px-3 md:py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none text-sm"
+                  className="w-full px-3 py-2 md:px-3 md:py-2.5 border-2 border-gray-300 dark:border-gray-600 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:border-cyan-400 focus:ring-cyan-400/50 bg-white dark:bg-gray-800 text-black dark:text-white placeholder-gray-500 dark:placeholder-gray-400 resize-none text-sm font-medium"
                 />
               </div>
 
