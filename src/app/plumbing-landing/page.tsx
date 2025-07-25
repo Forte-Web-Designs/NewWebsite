@@ -105,6 +105,28 @@ export default function PlumbingLanding() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasScrolledHalfway, showPopup]);
 
+  // Mobile menu escape key handler
+  useEffect(() => {
+    const handleEscapeKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape' && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+
+    if (mobileMenuOpen) {
+      document.addEventListener('keydown', handleEscapeKey);
+      // Prevent body scroll when menu is open
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    return () => {
+      document.removeEventListener('keydown', handleEscapeKey);
+      document.body.style.overflow = 'unset';
+    };
+  }, [mobileMenuOpen]);
+
   const theme = colorThemes[currentTheme as keyof typeof colorThemes] || colorThemes.blue;
 
   if (!isLoaded) {
@@ -120,108 +142,118 @@ export default function PlumbingLanding() {
 
   return (
     <div className="min-h-screen pb-10 lg:pb-0">{/* Reduced bottom padding for compact mobile sticky CTA */}
-      {/* Mobile Menu Overlay - Full Screen */}
+      {/* Mobile Menu Overlay - Proper Z-Index and Close Functionality */}
       {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-white z-[60] lg:hidden">
-          <div className="h-full flex flex-col">
-            {/* Mobile Menu Header */}
-            <div className="flex items-center justify-between p-6 border-b border-gray-200">
-              <div className="flex items-center">
-                <div className={`w-10 h-10 ${theme.primary} rounded flex items-center justify-center mr-3`}>
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+        <div className="fixed inset-0 z-[55] lg:hidden">
+          {/* Backdrop - Click to close */}
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setMobileMenuOpen(false)}
+          ></div>
+          
+          {/* Menu Panel */}
+          <div className="relative h-full bg-white max-w-sm ml-auto shadow-2xl">
+            <div className="h-full flex flex-col">
+              {/* Mobile Menu Header */}
+              <div className="flex items-center justify-between p-4 border-b border-gray-200 bg-gray-50">
+                <div className="flex items-center">
+                  <div className={`w-8 h-8 ${theme.primary} rounded flex items-center justify-center mr-2`}>
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+                    </svg>
+                  </div>
+                  <h2 className={`text-base font-bold ${theme.primaryText}`}>
+                    {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
+                  </h2>
+                </div>
+                <button 
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="p-2 hover:bg-gray-200 rounded-lg transition-colors bg-white shadow-sm"
+                  aria-label="Close menu"
+                >
+                  <svg className="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
-                </div>
-                <h2 className={`text-lg font-bold ${theme.primaryText}`}>
-                  {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
-                </h2>
-              </div>
-              <button 
-                onClick={() => setMobileMenuOpen(false)}
-                className="p-2 hover:bg-gray-100 rounded-lg transition-colors"
-              >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <div className="flex-1 overflow-y-auto p-6">
-              {/* Color Theme Switcher - Mobile */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-600 mb-4">🎨 Demo Color Themes</h3>
-                <div className="grid grid-cols-2 gap-3">
-                  {Object.keys(colorThemes).map((themeName) => (
-                    <button
-                      key={themeName}
-                      onClick={() => setCurrentTheme(themeName)}
-                      className={`flex items-center p-4 rounded-lg border-2 transition-all hover:shadow-md ${
-                        currentTheme === themeName 
-                          ? 'border-gray-800 bg-gray-50' 
-                          : 'border-gray-200 hover:border-gray-400'
-                      }`}
-                      title={`Switch to ${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
-                    >
-                      <div 
-                        className="w-8 h-8 rounded-full mr-3 border border-gray-300"
-                        style={{
-                          backgroundColor: 
-                            themeName === 'blue' ? '#1e40af' :
-                            themeName === 'navy' ? '#1e293b' :
-                            themeName === 'green' ? '#065f46' :
-                            themeName === 'red' ? '#991b1b' : '#1e40af'
-                        }}
-                      ></div>
-                      <span className="text-sm font-medium capitalize">{themeName}</span>
-                    </button>
-                  ))}
-                </div>
+                </button>
               </div>
 
-              {/* Mobile Navigation Menu */}
-              <nav className="space-y-2">
-                <a 
-                  href="#" 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-4 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-lg"
-                >
-                  Home
-                </a>
-                <a 
-                  href="#about" 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-4 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-lg"
-                >
-                  About
-                </a>
-                <a 
-                  href="#services" 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-4 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-lg"
-                >
-                  Services
-                </a>
-                <a 
-                  href="#contact" 
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="block py-4 px-4 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-lg"
-                >
-                  Contact
-                </a>
-              </nav>
-            </div>
+              <div className="flex-1 overflow-y-auto p-4">
+                {/* Color Theme Switcher - Mobile */}
+                <div className="mb-6">
+                  <h3 className="text-sm font-semibold text-gray-600 mb-3">🎨 Demo Color Themes</h3>
+                  <div className="grid grid-cols-2 gap-2">
+                    {Object.keys(colorThemes).map((themeName) => (
+                      <button
+                        key={themeName}
+                        onClick={() => setCurrentTheme(themeName)}
+                        className={`flex items-center p-3 rounded-lg border-2 transition-all hover:shadow-md ${
+                          currentTheme === themeName 
+                            ? 'border-gray-800 bg-gray-50' 
+                            : 'border-gray-200 hover:border-gray-400'
+                        }`}
+                        title={`Switch to ${themeName.charAt(0).toUpperCase() + themeName.slice(1)} theme`}
+                      >
+                        <div 
+                          className="w-6 h-6 rounded-full mr-2 border border-gray-300"
+                          style={{
+                            backgroundColor: 
+                              themeName === 'blue' ? '#1e40af' :
+                              themeName === 'navy' ? '#1e293b' :
+                              themeName === 'green' ? '#065f46' :
+                              themeName === 'red' ? '#991b1b' : '#1e40af'
+                          }}
+                        ></div>
+                        <span className="text-xs font-medium capitalize">{themeName}</span>
+                      </button>
+                    ))}
+                  </div>
+                </div>
 
-            {/* Bottom CTA Button */}
-            <div className="p-6 border-t border-gray-200">
-              <button 
-                onClick={() => {
-                  setShowPopup(true);
-                  setMobileMenuOpen(false);
-                }}
-                className={`w-full py-4 px-6 ${theme.secondary} ${theme.secondaryHover} text-white rounded-lg transition-colors font-medium text-lg`}
-              >
-                Get a Free Quote
-              </button>
+                {/* Mobile Navigation Menu */}
+                <nav className="space-y-1">
+                  <a 
+                    href="#" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-base"
+                  >
+                    Home
+                  </a>
+                  <a 
+                    href="#about" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-base"
+                  >
+                    About
+                  </a>
+                  <a 
+                    href="#services" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-base"
+                  >
+                    Services
+                  </a>
+                  <a 
+                    href="#contact" 
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-3 px-3 text-gray-700 hover:bg-gray-100 rounded-lg transition-colors font-medium text-base"
+                  >
+                    Contact
+                  </a>
+                </nav>
+              </div>
+
+              {/* Bottom CTA Button */}
+              <div className="p-4 border-t border-gray-200 bg-gray-50">
+                <button 
+                  onClick={() => {
+                    setShowPopup(true);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`w-full py-3 px-4 ${theme.secondary} ${theme.secondaryHover} text-white rounded-lg transition-colors font-medium text-base`}
+                >
+                  Get a Free Quote
+                </button>
+              </div>
             </div>
           </div>
         </div>
