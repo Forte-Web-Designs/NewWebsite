@@ -165,7 +165,7 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden pt-8 pb-12 sm:pt-16 sm:pb-20 md:pt-24 md:pb-28 lg:pt-32 lg:pb-36">
+      <section className="relative overflow-hidden pt-6 pb-8 sm:pt-12 sm:pb-16 md:pt-16 md:pb-20 lg:pt-20 lg:pb-24">
         {/* Modern animated background elements */}
         <HeroBackgroundAnimation className="opacity-60" />
         
@@ -175,9 +175,9 @@ export default function Home() {
           {/* Mobile Hero Content - Streamlined Layout */}
           <div className="lg:hidden">
             {/* Mobile Hero Text Section */}
-            <div className="mb-8">
+            <div className="mb-6">
               <SimpleScrollReveal direction="up" delay={50}>
-                <div className="text-center space-y-6">
+                <div className="text-center space-y-4">
                   <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
                     <p className="font-sans font-normal text-[12px] leading-[14px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
                       25+ Businesses Growing with Forte
@@ -188,8 +188,8 @@ export default function Home() {
                     <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> That Drive Results
                   </h1>
                   
-                  <div className="px-4 max-w-2xl mx-auto">
-                    <div className="space-y-3">
+                  <div className="px-4 max-w-4xl mx-auto">
+                    <div className="space-y-2">
                       <div className="flex items-center gap-3">
                         <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center flex-shrink-0">
                           <span className="text-sm">⚡</span>
@@ -342,8 +342,8 @@ export default function Home() {
                 
                 {/* Left Column - Content */}
                 <SimpleScrollReveal direction="left" delay={50}>
-                  <div className="space-y-8">
-                    <div className="space-y-6">
+                  <div className="space-y-6">
+                    <div className="space-y-4">
                       <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(90,115,255,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(124,142,255,0.4)_0%,rgba(255,255,255,0)_100%)]">
                         <p className="font-sans font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#1C3AF6] to-[#8495FF] dark:from-[#F59E0B] dark:to-[#FBBF24]">
                           25+ Businesses Growing with Forte
@@ -357,7 +357,7 @@ export default function Home() {
                       </SimpleScrollReveal>
                       
                       <SimpleScrollReveal direction="up" delay={150}>
-                        <div className="space-y-4 max-w-lg">
+                        <div className="space-y-3 max-w-2xl">
                           <div className="flex items-center gap-3">
                             <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center flex-shrink-0">
                               <span className="text-lg">⚡</span>

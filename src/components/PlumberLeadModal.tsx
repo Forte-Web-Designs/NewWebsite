@@ -192,10 +192,10 @@ export default function PlumberLeadModal({ isOpen, onClose, trigger = 'button' }
     <div className="modal-overlay fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-xs md:max-w-sm max-h-[85vh] overflow-y-auto shadow-2xl">
         {/* Header */}
-        <div className="relative p-3 md:p-4 pb-2 md:pb-3 border-b border-gray-200 dark:border-gray-700">
+        <div className="relative p-2.5 md:p-3 pb-1.5 md:pb-2 border-b border-gray-200 dark:border-gray-700">
           <button
             onClick={onClose}
-            className="absolute top-2 right-2 md:top-3 md:right-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-full p-1.5 z-10"
+            className="absolute top-1.5 right-1.5 md:top-2 md:right-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-full p-1.5 z-10"
             aria-label="Close modal"
           >
             <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -203,19 +203,19 @@ export default function PlumberLeadModal({ isOpen, onClose, trigger = 'button' }
             </svg>
           </button>
           
-          <div className="text-center pr-6">
-            <div className="text-xl md:text-2xl mb-1.5">🛠️</div>
-            <h2 className="text-base md:text-lg font-bold text-gray-900 dark:text-white">
+          <div className="text-center pr-5">
+            <div className="text-lg md:text-xl mb-1">🛠️</div>
+            <h2 className="text-sm md:text-base font-bold text-gray-900 dark:text-white">
               Let's Build Your Plumbing Website Right
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-1.5 text-xs md:text-sm leading-snug">
+            <p className="text-gray-600 dark:text-gray-400 mt-1 text-xs leading-snug">
               Tell us what you need, and we'll get back to you within 1 business day. No pressure — just real help from a team that gets your industry.
             </p>
           </div>
         </div>
 
         {/* Content */}
-        <div className="p-3 md:p-4">
+        <div className="p-2.5 md:p-3">
           {showSuccess ? (
             <div className="text-center space-y-2.5 md:space-y-3">
               <div className="text-2xl md:text-3xl">✅</div>

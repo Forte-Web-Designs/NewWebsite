@@ -208,10 +208,10 @@ export default function GenericContactModal({
     <div className="modal-overlay fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4">
       <div className="bg-white dark:bg-gray-900 rounded-2xl w-full max-w-xs md:max-w-sm max-h-[85vh] overflow-y-auto shadow-2xl">
         {/* Header */}
-        <div className="relative p-3 md:p-4 pb-2 md:pb-3 border-b border-gray-200 dark:border-gray-700">
+        <div className="relative p-2.5 md:p-3 pb-1.5 md:pb-2 border-b border-gray-200 dark:border-gray-700">
           <button
             onClick={onClose}
-            className="absolute top-2 right-2 md:top-3 md:right-3 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-full p-1.5 z-10"
+            className="absolute top-1.5 right-1.5 md:top-2 md:right-2 text-gray-400 hover:text-gray-600 dark:hover:text-gray-300 transition-colors bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-full p-1.5 z-10"
             aria-label="Close modal"
           >
             <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -219,16 +219,16 @@ export default function GenericContactModal({
             </svg>
           </button>
           
-          <h2 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white pr-8">
+          <h2 className="text-sm md:text-base font-bold text-gray-900 dark:text-white pr-6">
             {title}
           </h2>
-          <p className="text-xs md:text-sm text-gray-600 dark:text-gray-300 mt-1">
+          <p className="text-xs text-gray-600 dark:text-gray-300 mt-1">
             {subtitle}
           </p>
         </div>
 
         {/* Content */}
-        <div className="p-3 md:p-4">
+        <div className="p-2.5 md:p-3">
           {!showSuccess ? (
             <form onSubmit={handleSubmit} className="space-y-2.5 md:space-y-3">
               {/* Hidden form name for Netlify */}

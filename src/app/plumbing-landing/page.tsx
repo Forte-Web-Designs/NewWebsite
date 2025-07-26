@@ -274,7 +274,7 @@ export default function PlumbingLanding() {
                 <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                info@{params.business.toLowerCase().replace(/\s+/g, '')}plumbing.com
+                info@{params.business.toLowerCase().replace(/\s+/g, '').replace(/plumbing$/, '')}plumbing.com
               </div>
             </div>
             <div className="flex flex-col lg:flex-row items-center space-y-1 lg:space-y-0 lg:space-x-4">
@@ -1550,28 +1550,30 @@ export default function PlumbingLanding() {
         <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-4 lg:p-8">
           <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-md sm:max-w-lg lg:max-w-2xl xl:max-w-3xl w-full max-h-[90vh] lg:max-h-[90vh] overflow-hidden relative shadow-2xl">
             
-            {/* Sticky Close Button */}
-            <button 
-              onClick={() => {
-                setShowPopup(false);
-                setShowClaimSuccess(false);
-                setClaimFormError(null);
-              }}
-              className="absolute top-2 right-2 lg:top-3 lg:right-3 bg-gray-100 hover:bg-gray-200 dark:bg-gray-700 dark:hover:bg-gray-600 text-gray-600 hover:text-gray-800 dark:text-gray-300 dark:hover:text-gray-100 w-7 h-7 lg:w-8 lg:h-8 rounded-full flex items-center justify-center text-lg lg:text-xl font-bold z-20 transition-colors sticky top-2 lg:top-3"
-              aria-label="Close"
-            >
-              ×
-            </button>
-            
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white p-3 lg:p-5 rounded-t-xl lg:rounded-t-2xl">
-              <div className="text-center">
-                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-2">
+            {/* Orange Header Section - Extended to Top */}
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white relative rounded-t-xl lg:rounded-t-2xl">
+              {/* Sticky Close Button - Now on Orange Background */}
+              <button 
+                onClick={() => {
+                  setShowPopup(false);
+                  setShowClaimSuccess(false);
+                  setClaimFormError(null);
+                }}
+                className="absolute top-3 right-3 lg:top-4 lg:right-4 bg-white/20 hover:bg-white/30 text-white hover:text-white w-7 h-7 lg:w-8 lg:h-8 rounded-full flex items-center justify-center text-lg lg:text-xl font-bold z-20 transition-colors"
+                aria-label="Close"
+              >
+                ×
+              </button>
+              
+              {/* Header Content */}
+              <div className="text-center p-4 lg:p-6 pt-6 lg:pt-8">
+                <div className="w-8 h-8 lg:w-10 lg:h-10 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
                   <svg className="w-4 h-4 lg:w-5 lg:h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
                   </svg>
                 </div>
-                <h3 className="text-lg lg:text-2xl font-bold mb-2">Claim Your Custom Website!</h3>
-                <div className="flex flex-wrap justify-center gap-1.5 lg:gap-2 mb-2">
+                <h3 className="text-lg lg:text-2xl font-bold mb-3">Claim Your Custom Website!</h3>
+                <div className="flex flex-wrap justify-center gap-1.5 lg:gap-2 mb-3">
                   <span className="bg-green-100 text-green-800 text-xs font-bold px-2 py-0.5 lg:px-2.5 lg:py-1 rounded-full">
                     100% Custom Code
                   </span>
