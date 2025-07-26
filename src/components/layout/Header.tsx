@@ -121,6 +121,7 @@ export default function Header() {
     { label: 'SEO Services', href: '/services/seo' },
     { label: 'PPC Advertising', href: '/services/ads' },
     { label: 'Social Media Management', href: '/services/socialMedia' },
+    { label: 'White Label Partnerships', href: '/services/white-label' },
     { label: 'Free Website Audit', href: '/checkup' },
     { label: 'View All Services', href: '/services' }
   ];

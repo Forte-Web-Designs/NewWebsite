@@ -85,6 +85,25 @@ const coreServices = [
     }
   },
   {
+    id: "white-label",
+    title: "White Label Partnerships",
+    desc: "Power Your Agency with Custom, Blazing-Fast Websites—Built by Forte. We partner with marketing and SEO agencies to deliver high-performance websites under your brand. Custom-coded, lightning-fast, 100% U.S.-based.",
+    features: [
+      "Custom-coded websites under your brand",
+      "100% U.S.-based development team",
+      "Flexible workflow and communication",
+      "Optional Forte Care™ support included"
+    ],
+    pricing: "Partner Pricing Available",
+    linkText: "Learn More",
+    href: "/services/white-label",
+    caseStudy: {
+      client: "Blueprint Creative Co.",
+      result: "Seamless white-label partnership",
+      icon: "🤝"
+    }
+  },
+  {
     id: "audit",
     title: "Free Website Audit",
     desc: "Discover exactly what's costing you customers with our comprehensive website analysis. Get a detailed report showing every issue holding your site back from peak performance.",
