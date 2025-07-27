@@ -112,7 +112,7 @@ export default function PlumbingLanding() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasScrolledHalfway, showPopup]);
 
-  // Mobile menu and video modal escape key handlers
+  // Mobile menu, video modal, and popup escape key handlers + body scroll prevention
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
@@ -123,12 +123,17 @@ export default function PlumbingLanding() {
           setShowVideo(false);
           setVideoPlaying(false);
         }
+        if (showPopup) {
+          setShowPopup(false);
+          setShowClaimSuccess(false);
+          setClaimFormError(null);
+        }
       }
     };
 
-    if (mobileMenuOpen || showVideo) {
+    if (mobileMenuOpen || showVideo || showPopup) {
       document.addEventListener('keydown', handleEscapeKey);
-      // Prevent body scroll when menu or video is open
+      // Prevent body scroll when menu, video, or popup is open
       document.body.style.overflow = 'hidden';
       
       // Auto-play video when modal opens
@@ -143,7 +148,7 @@ export default function PlumbingLanding() {
       document.removeEventListener('keydown', handleEscapeKey);
       document.body.style.overflow = 'unset';
     };
-  }, [mobileMenuOpen, showVideo]);
+  }, [mobileMenuOpen, showVideo, showPopup]);
 
   // Auto-play video when section comes into view
   useEffect(() => {
@@ -2082,11 +2087,26 @@ export default function PlumbingLanding() {
 
       {/* Popup Modal - Mobile & Desktop Optimized */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-4 lg:p-8 overflow-y-auto">
-          <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-md sm:max-w-lg lg:max-w-2xl xl:max-w-3xl w-full my-8 shadow-2xl">
+        <div 
+          className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-4 lg:p-8"
+          onClick={(e) => {
+            // Only close if clicking the backdrop itself, not the modal content
+            if (e.target === e.currentTarget) {
+              setShowPopup(false);
+              setShowClaimSuccess(false);
+              setClaimFormError(null);
+            }
+          }}
+          onWheel={(e) => e.stopPropagation()}
+          onTouchMove={(e) => e.stopPropagation()}
+        >
+          <div 
+            className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-md sm:max-w-lg lg:max-w-2xl xl:max-w-3xl w-full max-h-[90vh] shadow-2xl flex flex-col overflow-hidden"
+            onClick={(e) => e.stopPropagation()}
+          >
             
             {/* Orange Header Section - Extended to Top */}
-            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white relative rounded-t-xl lg:rounded-t-2xl">
+            <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white relative rounded-t-xl lg:rounded-t-2xl flex-shrink-0">
               {/* Sticky Close Button - Now on Orange Background */}
               <button 
                 onClick={() => {
@@ -2123,7 +2143,11 @@ export default function PlumbingLanding() {
               </div>
             </div>
             
-            <div className="p-5 lg:p-8 max-h-[60vh] lg:max-h-[50vh] overflow-y-auto">
+            <div 
+              className="p-5 lg:p-8 flex-1 overflow-y-auto"
+              onWheel={(e) => e.stopPropagation()}
+              onTouchMove={(e) => e.stopPropagation()}
+            >
               
               {/* Success Message in Popup */}
               {showClaimSuccess && (
