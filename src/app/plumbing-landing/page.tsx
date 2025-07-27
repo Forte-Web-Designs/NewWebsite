@@ -24,7 +24,9 @@ export default function PlumbingLanding() {
   const [isSubmittingClaim, setIsSubmittingClaim] = useState(false);
   const [showClaimSuccess, setShowClaimSuccess] = useState(false);
   const [claimFormError, setClaimFormError] = useState<string | null>(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(true);
   const videoSectionRef = useRef<HTMLDivElement>(null);
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   // Color themes for plumbing businesses
   const colorThemes = {
@@ -921,12 +923,15 @@ export default function PlumbingLanding() {
             {/* Simple Auto-Playing Video Section */}
             <div ref={videoSectionRef} className="relative max-w-2xl mx-auto mb-6 lg:mb-8">
               <video
+                ref={videoRef}
                 className="w-full h-64 object-cover rounded-xl shadow-2xl"
                 autoPlay
                 muted
                 loop
                 playsInline
                 poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                onPlay={() => setIsVideoPlaying(true)}
+                onPause={() => setIsVideoPlaying(false)}
               >
                 {/* Multiple video sources for compatibility */}
                 <source 
@@ -950,6 +955,47 @@ export default function PlumbingLanding() {
                   </div>
                 </div>
               </video>
+
+              {/* Simple Video Controls */}
+              <div className="absolute bottom-4 left-4 flex gap-2">
+                <button
+                  onClick={() => {
+                    if (videoRef.current) {
+                      if (isVideoPlaying) {
+                        videoRef.current.pause();
+                      } else {
+                        videoRef.current.play();
+                      }
+                    }
+                  }}
+                  className="w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center transition-all duration-200 backdrop-blur-sm border border-white/20"
+                  title={isVideoPlaying ? "Pause" : "Play"}
+                >
+                  {isVideoPlaying ? (
+                    <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
+                    </svg>
+                  ) : (
+                    <svg className="w-5 h-5 text-white ml-0.5" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  )}
+                </button>
+
+                <button
+                  onClick={() => {
+                    if (videoRef.current) {
+                      videoRef.current.currentTime = 0;
+                    }
+                  }}
+                  className="w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center transition-all duration-200 backdrop-blur-sm border border-white/20"
+                  title="Restart"
+                >
+                  <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                  </svg>
+                </button>
+              </div>
             </div>
           </div>
 
