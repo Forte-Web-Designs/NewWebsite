@@ -258,7 +258,7 @@ export default function PlumbingLanding() {
   }
 
   return (
-    <div className="min-h-screen pb-10 lg:pb-0">{/* Reduced bottom padding for compact mobile sticky CTA */}
+    <div className="min-h-screen flex flex-col relative">
 
       {/* Top Header Section - Compact */}
       <div className={`${theme.primary} text-white py-2`}>
@@ -944,7 +944,7 @@ export default function PlumbingLanding() {
                     See {params.business !== 'Hendrio' ? params.business : 'Our Team'} in Action
                   </h3>
                   <p className="text-white/90 text-sm">
-                    Professional plumbing services & emergency response • 2:30
+                    Professional plumbing demonstration video • 1:45
                   </p>
                   <div className="flex items-center gap-2 mt-2">
                     <div className="flex items-center">
@@ -973,15 +973,59 @@ export default function PlumbingLanding() {
                       </svg>
                     </button>
                     
-                    {/* Video iframe - Professional plumbing services demo */}
-                    <div className="relative aspect-video">
-                      <iframe
-                        src="https://www.youtube.com/embed/JBw-BqJKQFw?autoplay=1&modestbranding=1&rel=0&controls=1"
-                        title={`${params.business !== 'Hendrio' ? params.business : 'Professional'} Plumbing Services Demo`}
-                        className="w-full h-full"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowFullScreen
-                      ></iframe>
+                    {/* Video player - Professional plumbing services demo */}
+                    <div className="relative aspect-video bg-black">
+                      <video
+                        className="w-full h-full object-cover"
+                        controls
+                        autoPlay
+                        muted
+                        playsInline
+                        poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                      >
+                        {/* Multiple video sources for better compatibility */}
+                        <source 
+                          src="https://cdn.pixabay.com/video/2023/04/12/157942-818354052_large.mp4" 
+                          type="video/mp4" 
+                        />
+                        <source 
+                          src="https://cdn.pixabay.com/video/2022/08/31/128947-740894059_large.mp4" 
+                          type="video/mp4" 
+                        />
+                        <source 
+                          src="https://cdn.pixabay.com/video/2021/08/13/84889-584717748_large.mp4" 
+                          type="video/mp4" 
+                        />
+                        <source 
+                          src="https://cdn.pixabay.com/video/2019/07/15/25086-346944087_large.mp4" 
+                          type="video/mp4" 
+                        />
+                        {/* Fallback message for browsers that don't support video */}
+                        <div className="flex items-center justify-center h-full">
+                          <div className="text-center text-white p-8">
+                            <div className="text-4xl mb-4">🔧</div>
+                            <h3 className="text-xl font-semibold mb-2">
+                              {params.business !== 'Hendrio' ? `${params.business} Professional Services` : 'Professional Plumbing Services'}
+                            </h3>
+                            <p className="text-white/80">
+                              Expert drain cleaning, pipe repair & emergency services
+                            </p>
+                            <p className="text-sm text-white/60 mt-4">
+                              Your browser doesn't support video playback. Please contact us for a demonstration.
+                            </p>
+                          </div>
+                        </div>
+                      </video>
+                      
+                      {/* Video overlay title - only show when video is playing */}
+                      <div className="absolute bottom-4 left-4 right-4 bg-black/60 rounded-lg p-3 video-overlay">
+                        <h3 className="text-white font-semibold text-sm">
+                          {params.business !== 'Hendrio' ? `${params.business} Professional Services` : 'Professional Plumbing Services'}
+                        </h3>
+                        <p className="text-white/80 text-xs">
+                          Expert drain cleaning, pipe repair & emergency services
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -1013,58 +1057,176 @@ export default function PlumbingLanding() {
             {/* Tab Content */}
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
+                {/* Dynamic image based on active tab */}
                 <img 
-                  src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" 
-                  alt="Professional plumbing service" 
+                  src={
+                    activeTabIndex === 0 
+                      ? "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                      : activeTabIndex === 1
+                      ? "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                      : "https://images.unsplash.com/photo-1604709177225-055f99402ea3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                  }
+                  alt={
+                    activeTabIndex === 0 
+                      ? "Professional plumbing service"
+                      : activeTabIndex === 1
+                      ? "Experienced plumbing team"
+                      : "Plumbing service guarantee"
+                  }
                   className="rounded-lg w-full h-80 object-cover"
                 />
               </div>
 
               <div>
-                <h4 className="text-lg font-semibold mb-4">Why Choose {params.business !== 'Hendrio' ? params.business : 'Us'}</h4>
-                <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-                  Trusted Local Plumbers <span className={`${theme.accent}`}>You Can</span>
-                </h2>
-                <h2 className="text-2xl lg:text-3xl font-bold mb-6">
-                  Count On 24/7
-                </h2>
-                <p className="mb-8 opacity-90">
-                  {params.business !== 'Hendrio' 
-                    ? `When you need reliable plumbing services in ${params.location || 'your area'}, ${params.business} delivers. We're locally owned, fully licensed, and committed to fixing your plumbing problems right the first time. No hidden fees, no surprises - just honest, professional service you can trust.`
-                    : 'Professional plumbing services with honest pricing, quality workmanship, and reliable customer support.'
-                  }
-                </p>
+                {/* Tab 1: Why Choose Us? */}
+                {activeTabIndex === 0 && (
+                  <>
+                    <h4 className="text-lg font-semibold mb-4">Why Choose Us</h4>
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                      Trusted Local Plumbers <span className={`${theme.accent}`}>You Can</span>
+                    </h2>
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                      Count On 24/7
+                    </h2>
+                    <p className="mb-8 opacity-90">
+                      {params.business !== 'Hendrio' 
+                        ? `When you need reliable plumbing services in ${params.location || 'your area'}, ${params.business} delivers. We're locally owned, fully licensed, and committed to fixing your plumbing problems right the first time. No hidden fees, no surprises - just honest, professional service you can trust.`
+                        : 'Professional plumbing services with honest pricing, quality workmanship, and reliable customer support.'
+                      }
+                    </p>
 
-                <div className="grid md:grid-cols-2 gap-6 mb-8">
-                  <div>
-                    <div className="flex items-center space-x-3 mb-2">
-                      <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                      </svg>
-                      <span className="text-white font-medium">24/7 Emergency Service</span>
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      <div>
+                        <div className="flex items-center space-x-3 mb-2">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">24/7 Emergency Service</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">Licensed & Insured Experts</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex items-center space-x-3 mb-2">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">100% Satisfaction Guarantee</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">Upfront, Honest Pricing</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                      </svg>
-                      <span className="text-white font-medium">Licensed & Insured Experts</span>
+                  </>
+                )}
+
+                {/* Tab 2: Our Experience */}
+                {activeTabIndex === 1 && (
+                  <>
+                    <h4 className="text-lg font-semibold mb-4">Our Experience</h4>
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                      <span className={`${theme.accent}`}>15+ Years</span> of Professional
+                    </h2>
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                      Plumbing Excellence
+                    </h2>
+                    <p className="mb-8 opacity-90">
+                      {params.business !== 'Hendrio'
+                        ? `${params.business} has been serving ${params.location || 'the local community'} for over 15 years. Our experienced team has handled thousands of plumbing emergencies, installations, and repairs. From simple drain clogs to complex pipe replacements, we've seen it all and fixed it all.`
+                        : 'With over 15 years in the plumbing industry, our experienced team has handled thousands of residential and commercial plumbing projects.'
+                      }
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      <div>
+                        <div className="flex items-center space-x-3 mb-2">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">5,000+ Jobs Completed</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">Master Plumber Certified</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex items-center space-x-3 mb-2">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">Commercial & Residential</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">Latest Tools & Techniques</span>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div>
-                    <div className="flex items-center space-x-3 mb-2">
-                      <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                      </svg>
-                      <span className="text-white font-medium">100% Satisfaction Guarantee</span>
+                  </>
+                )}
+
+                {/* Tab 3: Service Guarantee */}
+                {activeTabIndex === 2 && (
+                  <>
+                    <h4 className="text-lg font-semibold mb-4">Service Guarantee</h4>
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                      <span className={`${theme.accent}`}>100% Satisfaction</span> Guaranteed
+                    </h2>
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                      Or Your Money Back
+                    </h2>
+                    <p className="mb-8 opacity-90">
+                      {params.business !== 'Hendrio'
+                        ? `At ${params.business}, we stand behind our work. If you're not completely satisfied with our plumbing service, we'll make it right or refund your money. We also guarantee all our work with comprehensive warranties and 24/7 emergency support.`
+                        : 'We guarantee 100% satisfaction on all plumbing services. Your satisfaction is our priority, and we stand behind every job we complete.'
+                      }
+                    </p>
+
+                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                      <div>
+                        <div className="flex items-center space-x-3 mb-2">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">Money-Back Guarantee</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">2-Year Parts Warranty</span>
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex items-center space-x-3 mb-2">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">1-Year Labor Warranty</span>
+                        </div>
+                        <div className="flex items-center space-x-3">
+                          <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                          </svg>
+                          <span className="text-white font-medium">24/7 Emergency Support</span>
+                        </div>
+                      </div>
                     </div>
-                    <div className="flex items-center space-x-3">
-                      <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                      </svg>
-                      <span className="text-white font-medium">Upfront, Honest Pricing</span>
-                    </div>
-                  </div>
-                </div>
+                  </>
+                )}
 
                 <button 
                   onClick={() => setShowPopup(true)}
@@ -1382,7 +1544,7 @@ export default function PlumbingLanding() {
                 />
                 <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
                   <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                    <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
                   </svg>
                 </div>
               </div>
@@ -1523,7 +1685,7 @@ export default function PlumbingLanding() {
                   <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
                     <svg className="w-6 h-6 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                    </svg>
+                  </svg>
                   </div>
                 </div>
                 
