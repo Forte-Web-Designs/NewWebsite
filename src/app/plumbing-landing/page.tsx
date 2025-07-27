@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export default function PlumbingLanding() {
   const [currentTheme, setCurrentTheme] = useState('blue');
@@ -25,6 +25,8 @@ export default function PlumbingLanding() {
   const [showClaimSuccess, setShowClaimSuccess] = useState(false);
   const [claimFormError, setClaimFormError] = useState<string | null>(null);
   const [showVideo, setShowVideo] = useState(false);
+  const [videoPlaying, setVideoPlaying] = useState(false);
+  const videoSectionRef = useRef<HTMLDivElement>(null);
 
   // Color themes for plumbing businesses
   const colorThemes = {
@@ -119,6 +121,7 @@ export default function PlumbingLanding() {
         }
         if (showVideo) {
           setShowVideo(false);
+          setVideoPlaying(false);
         }
       }
     };
@@ -127,6 +130,11 @@ export default function PlumbingLanding() {
       document.addEventListener('keydown', handleEscapeKey);
       // Prevent body scroll when menu or video is open
       document.body.style.overflow = 'hidden';
+      
+      // Auto-play video when modal opens
+      if (showVideo) {
+        setVideoPlaying(true);
+      }
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -136,6 +144,36 @@ export default function PlumbingLanding() {
       document.body.style.overflow = 'unset';
     };
   }, [mobileMenuOpen, showVideo]);
+
+  // Auto-play video when section comes into view
+  useEffect(() => {
+    const videoSection = videoSectionRef.current;
+    if (!videoSection) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !showVideo) {
+            // Auto-play video when section is 60% visible
+            if (entry.intersectionRatio >= 0.6) {
+              setShowVideo(true);
+              setVideoPlaying(true);
+            }
+          }
+        });
+      },
+      {
+        threshold: [0.6], // Trigger when 60% of the section is visible
+        rootMargin: '0px 0px -100px 0px' // Offset to ensure good visibility
+      }
+    );
+
+    observer.observe(videoSection);
+
+    return () => {
+      observer.unobserve(videoSection);
+    };
+  }, [showVideo]);
 
   // Form submission handler for CLAIM MY CUSTOM WEBSITE
   const handleClaimFormSubmit = async (e: React.FormEvent) => {
@@ -917,7 +955,7 @@ export default function PlumbingLanding() {
             </h2>
             
             {/* Video Section */}
-            <div className="relative max-w-2xl mx-auto mb-6 lg:mb-8">
+            <div ref={videoSectionRef} className="relative max-w-2xl mx-auto mb-6 lg:mb-8">
               {/* Video Thumbnail with Play Button */}
               <div className="relative rounded-xl overflow-hidden shadow-2xl group cursor-pointer"
                    onClick={() => setShowVideo(!showVideo)}>
@@ -926,11 +964,11 @@ export default function PlumbingLanding() {
                   alt="Professional plumbing services video"
                   className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
                 />
-                {/* Dark overlay */}
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors"></div>
+                {/* Dark overlay - Hide when video is playing */}
+                <div className={`absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}></div>
                 
-                {/* Play button */}
-                <div className="absolute inset-0 flex items-center justify-center">
+                {/* Play button - Hide when video is playing */}
+                <div className={`absolute inset-0 flex items-center justify-center transition-opacity ${videoPlaying ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                   <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition-colors shadow-xl">
                     <svg className="w-8 h-8 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M8 5v14l11-7z"/>
@@ -938,8 +976,8 @@ export default function PlumbingLanding() {
                   </div>
                 </div>
                 
-                {/* Video info overlay */}
-                <div className="absolute bottom-4 left-4 right-4">
+                {/* Video info overlay - Hide when video is playing */}
+                <div className={`absolute bottom-4 left-4 right-4 transition-opacity ${videoPlaying ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
                   <h3 className="text-white text-lg font-bold mb-1">
                     See {params.business !== 'Hendrio' ? params.business : 'Our Team'} in Action
                   </h3>
@@ -961,28 +999,100 @@ export default function PlumbingLanding() {
               {showVideo && (
                 <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
                      onClick={() => setShowVideo(false)}>
-                  <div className="relative w-full max-w-4xl bg-black rounded-lg overflow-hidden"
+                  <div className="relative w-full max-w-5xl bg-black rounded-lg overflow-hidden"
                        onClick={(e) => e.stopPropagation()}>
-                    {/* Close button */}
+                    {/* Enhanced Close button */}
                     <button 
                       onClick={() => setShowVideo(false)}
-                      className="absolute top-4 right-4 z-10 w-10 h-10 bg-white/20 hover:bg-white/30 rounded-full flex items-center justify-center transition-colors"
+                      className="absolute top-4 right-4 z-20 w-12 h-12 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center transition-all duration-200 backdrop-blur-sm border border-white/20"
+                      title="Close video (ESC)"
                     >
                       <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                       </svg>
                     </button>
+
+                    {/* Keyboard shortcuts info */}
+                    <div className="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20">
+                      <p className="text-white text-xs font-medium">
+                        Press <span className="bg-white/20 px-1 rounded">ESC</span> to close • 
+                        <span className="bg-white/20 px-1 rounded ml-1">SPACE</span> to play/pause
+                      </p>
+                    </div>
                     
-                    {/* Video player - Simple 10-second plumbing demo */}
+                    {/* Enhanced Video player */}
                     <div className="relative aspect-video bg-black">
                       <video
-                        className="w-full h-full object-cover"
+                        ref={(video) => {
+                          if (video) {
+                            // Enhanced keyboard controls
+                            video.onkeydown = (e) => {
+                              switch(e.key) {
+                                case ' ':
+                                case 'k':
+                                  e.preventDefault();
+                                  video.paused ? video.play() : video.pause();
+                                  break;
+                                case 'ArrowLeft':
+                                  e.preventDefault();
+                                  video.currentTime = Math.max(0, video.currentTime - 10);
+                                  break;
+                                case 'ArrowRight':
+                                  e.preventDefault();
+                                  video.currentTime = Math.min(video.duration, video.currentTime + 10);
+                                  break;
+                                case 'ArrowUp':
+                                  e.preventDefault();
+                                  video.volume = Math.min(1, video.volume + 0.1);
+                                  break;
+                                case 'ArrowDown':
+                                  e.preventDefault();
+                                  video.volume = Math.max(0, video.volume - 0.1);
+                                  break;
+                                case 'm':
+                                  e.preventDefault();
+                                  video.muted = !video.muted;
+                                  break;
+                                case 'f':
+                                  e.preventDefault();
+                                  if (video.requestFullscreen) {
+                                    video.requestFullscreen();
+                                  }
+                                  break;
+                                case 'Escape':
+                                  e.preventDefault();
+                                  setShowVideo(false);
+                                  setVideoPlaying(false);
+                                  break;
+                              }
+                            };
+                            
+                            // Add play/pause event listeners to track video state
+                            video.onplay = () => setVideoPlaying(true);
+                            video.onpause = () => setVideoPlaying(false);
+                            video.onended = () => setVideoPlaying(false);
+                            
+                            // Auto-focus for keyboard controls
+                            video.focus();
+                            video.tabIndex = 0;
+                          }
+                        }}
+                        className="w-full h-full object-cover cursor-pointer"
                         controls
+                        controlsList="nodownload"
                         autoPlay
                         muted
                         loop
                         playsInline
                         poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                        style={{
+                          outline: 'none'
+                        }}
+                        onClick={(e) => {
+                          // Click to play/pause (desktop enhancement)
+                          const video = e.target as HTMLVideoElement;
+                          video.paused ? video.play() : video.pause();
+                        }}
                       >
                         {/* 10-second plumbing video - multiple sources for compatibility */}
                         <source 
@@ -1020,15 +1130,44 @@ export default function PlumbingLanding() {
                         </div>
                       </video>
                       
-                      {/* Video overlay title - only show when video is playing */}
-                      <div className="absolute bottom-4 left-4 right-4 bg-black/60 rounded-lg p-3 video-overlay">
-                        <h3 className="text-white font-semibold text-sm">
-                          {params.business !== 'Hendrio' ? `${params.business} Professional Services` : 'Professional Plumbing Services'}
-                        </h3>
-                        <p className="text-white/80 text-xs">
-                          Expert drain cleaning, pipe repair & emergency services
-                        </p>
+                      {/* Enhanced Video overlay with controls info */}
+                      <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg p-3 border border-white/20">
+                        <div className="flex justify-between items-center">
+                          <div>
+                            <h3 className="text-white font-semibold text-sm">
+                              {params.business !== 'Hendrio' ? `${params.business} Professional Services` : 'Professional Plumbing Services'}
+                            </h3>
+                            <p className="text-white/80 text-xs">
+                              Expert drain cleaning, pipe repair & emergency services
+                            </p>
+                          </div>
+                          <div className="text-right">
+                            <p className="text-white/70 text-xs">
+                              Click video to play/pause
+                            </p>
+                            <p className="text-white/70 text-xs">
+                              ← → Skip 10s • ↑ ↓ Volume
+                            </p>
+                          </div>
+                        </div>
                       </div>
+
+                      {/* Fullscreen button */}
+                      <button 
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          const video = e.currentTarget.parentElement?.querySelector('video');
+                          if (video?.requestFullscreen) {
+                            video.requestFullscreen();
+                          }
+                        }}
+                        className="absolute bottom-4 right-20 z-10 w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center transition-all duration-200 backdrop-blur-sm border border-white/20"
+                        title="Fullscreen (F)"
+                      >
+                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
+                        </svg>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -1039,19 +1178,19 @@ export default function PlumbingLanding() {
           {/* Tabs Section */}
           <div className="max-w-4xl mx-auto">
             <div className="flex justify-center mb-6 lg:mb-8">
-              <div className="flex space-x-4">
+              <div className="flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2 lg:space-x-4 w-full sm:w-auto">
                 {['Why Choose Us?', 'Our Experience', 'Service Guarantee'].map((tab, index) => (
                   <button
                     key={index}
                     onClick={() => setActiveTabIndex(index)}
-                    className={`px-6 py-3 rounded-lg font-medium transition-colors ${
+                    className={`px-3 sm:px-4 lg:px-6 py-2.5 sm:py-3 rounded-lg font-medium transition-colors text-sm sm:text-base flex-1 sm:flex-none ${
                       activeTabIndex === index 
                         ? 'bg-white text-blue-900' 
                         : 'bg-white/20 text-white hover:bg-white/30'
                     }`}
                   >
-                    <span className="mr-2">0{index + 1}.</span>
-                    {tab}
+                    <span className="mr-1 sm:mr-2">0{index + 1}.</span>
+                    <span className="whitespace-nowrap">{tab}</span>
                   </button>
                 ))}
               </div>
@@ -1243,119 +1382,6 @@ export default function PlumbingLanding() {
         </div>
       </section>
 
-      {/* Professional Plumbing Footer */}
-      {params.business !== 'Hendrio' && (
-        <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
-          <div className="container mx-auto px-4">
-            <div className="max-w-6xl mx-auto">
-              <div className="grid md:grid-cols-4 gap-8 mb-8">
-                {/* Company Info */}
-                <div className="md:col-span-1">
-                  <h3 className="text-xl font-bold text-orange-400 mb-4">{params.business}</h3>
-                  <p className="text-sm opacity-80 mb-4">
-                    Your trusted local plumbing experts serving {params.location} and surrounding areas. 
-                    Professional, reliable, and available 24/7 for emergency repairs.
-                  </p>
-                  <div className="flex space-x-3">
-                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                      </svg>
-                    </a>
-                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                      </svg>
-                    </a>
-                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
-                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                      </svg>
-                    </a>
-                  </div>
-                </div>
-
-                {/* Our Services */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
-                  <ul className="space-y-2 text-sm opacity-80">
-                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Emergency Plumbing</a></li>
-                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Drain Cleaning</a></li>
-                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Water Heater Repair</a></li>
-                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Pipe Installation</a></li>
-                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Bathroom Plumbing</a></li>
-                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Kitchen Plumbing</a></li>
-                  </ul>
-                </div>
-
-                {/* Contact Info */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
-                  <div className="space-y-3 text-sm opacity-80">
-                    <div className="flex items-center space-x-2">
-                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                      </svg>
-                      <a href={`tel:${params.phone}`} className="hover:text-orange-400 transition-colors">{params.phone}</a>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                      </svg>
-                      <span>info@{params.business.toLowerCase().replace(/\s+/g, '')}.com</span>
-                    </div>
-                    <div className="flex items-center space-x-2">
-                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                      </svg>
-                      <span>Serving {params.location} & Surrounding Areas</span>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Business Hours */}
-                <div>
-                  <h4 className="text-lg font-semibold text-white mb-4">Business Hours</h4>
-                  <div className="space-y-2 text-sm opacity-80">
-                    <div className="flex justify-between">
-                      <span>Monday - Friday:</span>
-                      <span>7:00 AM - 6:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Saturday:</span>
-                      <span>8:00 AM - 4:00 PM</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span>Sunday:</span>
-                      <span>Emergency Only</span>
-                    </div>
-                    <div className="mt-3 p-2 bg-red-500/20 rounded border border-red-500/30">
-                      <div className="text-red-300 font-semibold text-xs">
-                        🚨 24/7 Emergency Service Available
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Bottom Footer */}
-              <div className="pt-6 border-t border-white/10 text-center">
-                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                  <div className="text-sm opacity-60">
-                    © 2024 {params.business}. All rights reserved. Licensed & Insured Plumbing Contractor.
-                  </div>
-                  <div className="flex space-x-6 text-sm opacity-60">
-                    <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
-                    <a href="#" className="hover:text-orange-400 transition-colors">Terms of Service</a>
-                    <a href="#" className="hover:text-orange-400 transition-colors">License #PLB123456</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
-
       {/* Services Section - Updated titles */}
       <section id="services" className="py-20 bg-white">
         <div className="container mx-auto px-4">
@@ -1510,6 +1536,119 @@ export default function PlumbingLanding() {
           </div>
         </div>
       </section>
+
+      {/* Professional Plumbing Footer */}
+      {params.business !== 'Hendrio' && (
+        <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-4 gap-8 mb-8">
+                {/* Company Info */}
+                <div className="md:col-span-1">
+                  <h3 className="text-xl font-bold text-orange-400 mb-4">{params.business}</h3>
+                  <p className="text-sm opacity-80 mb-4">
+                    Your trusted local plumbing experts serving {params.location} and surrounding areas. 
+                    Professional, reliable, and available 24/7 for emergency repairs.
+                  </p>
+                  <div className="flex space-x-3">
+                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                      </svg>
+                    </a>
+                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                      </svg>
+                    </a>
+                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Our Services */}
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
+                  <ul className="space-y-2 text-sm opacity-80">
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Emergency Plumbing</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Drain Cleaning</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Water Heater Repair</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Pipe Installation</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Bathroom Plumbing</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Kitchen Plumbing</a></li>
+                  </ul>
+                </div>
+
+                {/* Contact Info */}
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                  <div className="space-y-3 text-sm opacity-80">
+                    <div className="flex items-center space-x-2">
+                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                      </svg>
+                      <a href={`tel:${params.phone}`} className="hover:text-orange-400 transition-colors">{params.phone}</a>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                      </svg>
+                      <span>info@{params.business.toLowerCase().replace(/\s+/g, '')}.com</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                      <span>Serving {params.location} & Surrounding Areas</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Business Hours */}
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Business Hours</h4>
+                  <div className="space-y-2 text-sm opacity-80">
+                    <div className="flex justify-between">
+                      <span>Monday - Friday:</span>
+                      <span>7:00 AM - 6:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Saturday:</span>
+                      <span>8:00 AM - 4:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Sunday:</span>
+                      <span>Emergency Only</span>
+                    </div>
+                    <div className="mt-3 p-2 bg-red-500/20 rounded border border-red-500/30">
+                      <div className="text-red-300 font-semibold text-xs">
+                        🚨 24/7 Emergency Service Available
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Footer */}
+              <div className="pt-6 border-t border-white/10 text-center">
+                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                  <div className="text-sm opacity-60">
+                    © 2024 {params.business}. All rights reserved. Licensed & Insured Plumbing Contractor.
+                  </div>
+                  <div className="flex space-x-6 text-sm opacity-60">
+                    <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
+                    <a href="#" className="hover:text-orange-400 transition-colors">Terms of Service</a>
+                    <a href="#" className="hover:text-orange-400 transition-colors">License #PLB123456</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Claim Your Website Section - Only show for business owners */}
       {params.business !== 'Hendrio' && (
