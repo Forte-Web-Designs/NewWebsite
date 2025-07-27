@@ -24,8 +24,6 @@ export default function PlumbingLanding() {
   const [isSubmittingClaim, setIsSubmittingClaim] = useState(false);
   const [showClaimSuccess, setShowClaimSuccess] = useState(false);
   const [claimFormError, setClaimFormError] = useState<string | null>(null);
-  const [showVideo, setShowVideo] = useState(false);
-  const [videoPlaying, setVideoPlaying] = useState(false);
   const videoSectionRef = useRef<HTMLDivElement>(null);
 
   // Color themes for plumbing businesses
@@ -112,16 +110,12 @@ export default function PlumbingLanding() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, [hasScrolledHalfway, showPopup]);
 
-  // Mobile menu, video modal, and popup escape key handlers + body scroll prevention
+  // Mobile menu and popup escape key handlers + body scroll prevention
   useEffect(() => {
     const handleEscapeKey = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         if (mobileMenuOpen) {
           setMobileMenuOpen(false);
-        }
-        if (showVideo) {
-          setShowVideo(false);
-          setVideoPlaying(false);
         }
         if (showPopup) {
           setShowPopup(false);
@@ -131,15 +125,10 @@ export default function PlumbingLanding() {
       }
     };
 
-    if (mobileMenuOpen || showVideo || showPopup) {
+    if (mobileMenuOpen || showPopup) {
       document.addEventListener('keydown', handleEscapeKey);
-      // Prevent body scroll when menu, video, or popup is open
+      // Prevent body scroll when menu or popup is open
       document.body.style.overflow = 'hidden';
-      
-      // Auto-play video when modal opens
-      if (showVideo) {
-        setVideoPlaying(true);
-      }
     } else {
       document.body.style.overflow = 'unset';
     }
@@ -148,37 +137,7 @@ export default function PlumbingLanding() {
       document.removeEventListener('keydown', handleEscapeKey);
       document.body.style.overflow = 'unset';
     };
-  }, [mobileMenuOpen, showVideo, showPopup]);
-
-  // Auto-play video when section comes into view
-  useEffect(() => {
-    const videoSection = videoSectionRef.current;
-    if (!videoSection) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && !showVideo) {
-            // Auto-play video when section is 60% visible
-            if (entry.intersectionRatio >= 0.6) {
-              setShowVideo(true);
-              setVideoPlaying(true);
-            }
-          }
-        });
-      },
-      {
-        threshold: [0.6], // Trigger when 60% of the section is visible
-        rootMargin: '0px 0px -100px 0px' // Offset to ensure good visibility
-      }
-    );
-
-    observer.observe(videoSection);
-
-    return () => {
-      observer.unobserve(videoSection);
-    };
-  }, [showVideo]);
+  }, [mobileMenuOpen, showPopup]);
 
   // Form submission handler for CLAIM MY CUSTOM WEBSITE
   const handleClaimFormSubmit = async (e: React.FormEvent) => {
@@ -962,16 +921,7 @@ export default function PlumbingLanding() {
             {/* Simple Auto-Playing Video Section */}
             <div ref={videoSectionRef} className="relative max-w-2xl mx-auto mb-6 lg:mb-8">
               <video
-                ref={(video) => {
-                  if (video) {
-                    // Add play/pause event listeners to track video state
-                    video.onplay = () => setVideoPlaying(true);
-                    video.onpause = () => setVideoPlaying(false);
-                    video.onended = () => setVideoPlaying(false);
-                  }
-                }}
                 className="w-full h-64 object-cover rounded-xl shadow-2xl"
-                controls
                 autoPlay
                 muted
                 loop
@@ -1000,185 +950,6 @@ export default function PlumbingLanding() {
                   </div>
                 </div>
               </video>
-            </div>
-              
-              {/* Video Player Modal */}
-              {showVideo && (
-                <div className="fixed inset-0 bg-black/80 z-50 flex items-center justify-center p-4"
-                     onClick={() => setShowVideo(false)}>
-                  <div className="relative w-full max-w-5xl bg-black rounded-lg overflow-hidden"
-                       onClick={(e) => e.stopPropagation()}>
-                    {/* Enhanced Close button */}
-                    <button 
-                      onClick={() => setShowVideo(false)}
-                      className="absolute top-4 right-4 z-20 w-12 h-12 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center transition-all duration-200 backdrop-blur-sm border border-white/20"
-                      title="Close video (ESC)"
-                    >
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                      </svg>
-                    </button>
-
-                    {/* Keyboard shortcuts info */}
-                    <div className="absolute top-4 left-4 z-20 bg-black/60 backdrop-blur-sm rounded-lg px-3 py-2 border border-white/20">
-                      <p className="text-white text-xs font-medium">
-                        Press <span className="bg-white/20 px-1 rounded">ESC</span> to close • 
-                        <span className="bg-white/20 px-1 rounded ml-1">SPACE</span> to play/pause
-                      </p>
-                    </div>
-                    
-                    {/* Enhanced Video player */}
-                    <div className="relative aspect-video bg-black">
-                      <video
-                        ref={(video) => {
-                          if (video) {
-                            // Enhanced keyboard controls
-                            video.onkeydown = (e) => {
-                              switch(e.key) {
-                                case ' ':
-                                case 'k':
-                                  e.preventDefault();
-                                  video.paused ? video.play() : video.pause();
-                                  break;
-                                case 'ArrowLeft':
-                                  e.preventDefault();
-                                  video.currentTime = Math.max(0, video.currentTime - 10);
-                                  break;
-                                case 'ArrowRight':
-                                  e.preventDefault();
-                                  video.currentTime = Math.min(video.duration, video.currentTime + 10);
-                                  break;
-                                case 'ArrowUp':
-                                  e.preventDefault();
-                                  video.volume = Math.min(1, video.volume + 0.1);
-                                  break;
-                                case 'ArrowDown':
-                                  e.preventDefault();
-                                  video.volume = Math.max(0, video.volume - 0.1);
-                                  break;
-                                case 'm':
-                                  e.preventDefault();
-                                  video.muted = !video.muted;
-                                  break;
-                                case 'f':
-                                  e.preventDefault();
-                                  if (video.requestFullscreen) {
-                                    video.requestFullscreen();
-                                  }
-                                  break;
-                                case 'Escape':
-                                  e.preventDefault();
-                                  setShowVideo(false);
-                                  setVideoPlaying(false);
-                                  break;
-                              }
-                            };
-                            
-                            // Add play/pause event listeners to track video state
-                            video.onplay = () => setVideoPlaying(true);
-                            video.onpause = () => setVideoPlaying(false);
-                            video.onended = () => setVideoPlaying(false);
-                            
-                            // Auto-focus for keyboard controls
-                            video.focus();
-                            video.tabIndex = 0;
-                          }
-                        }}
-                        className="w-full h-full object-cover cursor-pointer"
-                        controls
-                        controlsList="nodownload"
-                        autoPlay
-                        muted
-                        loop
-                        playsInline
-                        poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                        style={{
-                          outline: 'none'
-                        }}
-                        onClick={(e) => {
-                          // Click to play/pause (desktop enhancement)
-                          const video = e.target as HTMLVideoElement;
-                          video.paused ? video.play() : video.pause();
-                        }}
-                      >
-                        {/* 10-second plumbing video - multiple sources for compatibility */}
-                        <source 
-                          src="https://videos.pexels.com/video-files/6195149/6195149-hd_1920_1080_25fps.mp4" 
-                          type="video/mp4" 
-                        />
-                        <source 
-                          src="https://videos.pexels.com/video-files/5473766/5473766-hd_1920_1080_30fps.mp4" 
-                          type="video/mp4" 
-                        />
-                        <source 
-                          src="https://videos.pexels.com/video-files/4792101/4792101-hd_1920_1080_25fps.mp4" 
-                          type="video/mp4" 
-                        />
-                        {/* Fallback content if video doesn't load */}
-                        <div className="flex items-center justify-center h-full bg-gradient-to-br from-blue-600 to-blue-800">
-                          <div className="text-center text-white p-8 max-w-md">
-                            <div className="text-6xl mb-6 animate-bounce">🔧</div>
-                            <h3 className="text-2xl font-bold mb-4">
-                              {params.business !== 'Hendrio' ? `${params.business}` : 'Professional Plumbing Services'}
-                            </h3>
-                            <div className="space-y-3 text-lg">
-                              <div className="animate-pulse">🚰 Emergency Repairs</div>
-                              <div className="animate-pulse delay-300">🔧 Drain Cleaning</div>
-                              <div className="animate-pulse delay-500">⚡ Water Heater Service</div>
-                              <div className="animate-pulse delay-700">🏠 Residential & Commercial</div>
-                            </div>
-                            <p className="text-blue-200 text-sm mt-6">
-                              24/7 Emergency Service • Licensed & Insured
-                            </p>
-                            <div className="mt-4 text-yellow-300">
-                              ⭐⭐⭐⭐⭐ 4.9/5 Customer Rating
-                            </div>
-                          </div>
-                        </div>
-                      </video>
-                      
-                      {/* Enhanced Video overlay with controls info */}
-                      <div className="absolute bottom-4 left-4 right-4 bg-black/70 backdrop-blur-sm rounded-lg p-3 border border-white/20">
-                        <div className="flex justify-between items-center">
-                          <div>
-                            <h3 className="text-white font-semibold text-sm">
-                              {params.business !== 'Hendrio' ? `${params.business} Professional Services` : 'Professional Plumbing Services'}
-                            </h3>
-                            <p className="text-white/80 text-xs">
-                              Expert drain cleaning, pipe repair & emergency services
-                            </p>
-                          </div>
-                          <div className="text-right">
-                            <p className="text-white/70 text-xs">
-                              Click video to play/pause
-                            </p>
-                            <p className="text-white/70 text-xs">
-                              ← → Skip 10s • ↑ ↓ Volume
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-
-                      {/* Fullscreen button */}
-                      <button 
-                        onClick={(e) => {
-                          e.stopPropagation();
-                          const video = e.currentTarget.parentElement?.querySelector('video');
-                          if (video?.requestFullscreen) {
-                            video.requestFullscreen();
-                          }
-                        }}
-                        className="absolute bottom-4 right-20 z-10 w-10 h-10 bg-black/60 hover:bg-black/80 rounded-full flex items-center justify-center transition-all duration-200 backdrop-blur-sm border border-white/20"
-                        title="Fullscreen (F)"
-                      >
-                        <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
-                        </svg>
-                      </button>
-                    </div>
-                  </div>
-                </div>
-              )}
             </div>
           </div>
 
