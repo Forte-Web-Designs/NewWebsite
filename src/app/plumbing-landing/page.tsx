@@ -973,31 +973,36 @@ export default function PlumbingLanding() {
                       </svg>
                     </button>
                     
-                    {/* Video player - Professional plumbing services demo */}
+                    {/* Video player - Simple 10-second plumbing demo */}
                     <div className="relative aspect-video bg-black">
                       <video
                         className="w-full h-full object-cover"
                         controls
                         autoPlay
                         muted
+                        loop
                         playsInline
                         poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                       >
-                        {/* Sample video for demonstration - replace with actual plumbing content */}
+                        {/* 10-second plumbing video - multiple sources for compatibility */}
                         <source 
-                          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" 
+                          src="https://videos.pexels.com/video-files/6195149/6195149-hd_1920_1080_25fps.mp4" 
                           type="video/mp4" 
                         />
                         <source 
-                          src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4" 
+                          src="https://videos.pexels.com/video-files/5473766/5473766-hd_1920_1080_30fps.mp4" 
                           type="video/mp4" 
                         />
-                        {/* Animated slideshow fallback showcasing plumbing work */}
+                        <source 
+                          src="https://videos.pexels.com/video-files/4792101/4792101-hd_1920_1080_25fps.mp4" 
+                          type="video/mp4" 
+                        />
+                        {/* Fallback content if video doesn't load */}
                         <div className="flex items-center justify-center h-full bg-gradient-to-br from-blue-600 to-blue-800">
                           <div className="text-center text-white p-8 max-w-md">
                             <div className="text-6xl mb-6 animate-bounce">🔧</div>
                             <h3 className="text-2xl font-bold mb-4">
-                              {params.business !== 'Hendrio' ? `${params.business}` : 'Your Plumbing Business'}
+                              {params.business !== 'Hendrio' ? `${params.business}` : 'Professional Plumbing Services'}
                             </h3>
                             <div className="space-y-3 text-lg">
                               <div className="animate-pulse">🚰 Emergency Repairs</div>

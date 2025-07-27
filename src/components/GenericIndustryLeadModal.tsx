@@ -250,6 +250,16 @@ export default function GenericIndustryLeadModal({
               >
                 Close
               </button>
+
+              {/* Company Footer in Success State */}
+              <div className="text-center mt-4 pt-3 border-t border-gray-200 dark:border-gray-700">
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  <span className="font-semibold">Forte Web Designs</span> - Professional websites for your industry
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                  Questions? Call us: <a href="tel:+18178736655" className="text-cyan-600 dark:text-cyan-400 font-medium">(817) 873-6655</a>
+                </p>
+              </div>
             </div>
           ) : (
             <form
@@ -399,6 +409,16 @@ export default function GenericIndustryLeadModal({
                   "→ Send My Info"
                 )}
               </button>
+
+              {/* Company Footer */}
+              <div className="text-center mt-3 pt-3 border-t border-gray-200 dark:border-gray-700">
+                <p className="text-xs text-gray-600 dark:text-gray-400">
+                  <span className="font-semibold">Forte Web Designs</span> - Professional websites for your industry
+                </p>
+                <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
+                  Custom-coded • No templates • 100% satisfaction guaranteed
+                </p>
+              </div>
             </form>
           )}
         </div>
