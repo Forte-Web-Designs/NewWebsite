@@ -959,46 +959,48 @@ export default function PlumbingLanding() {
               For Your Plumbing Needs?
             </h2>
             
-            {/* Video Section */}
+            {/* Simple Auto-Playing Video Section */}
             <div ref={videoSectionRef} className="relative max-w-2xl mx-auto mb-6 lg:mb-8">
-              {/* Video Thumbnail with Play Button */}
-              <div className="relative rounded-xl overflow-hidden shadow-2xl group cursor-pointer"
-                   onClick={() => setShowVideo(!showVideo)}>
-                <img 
-                  src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
-                  alt="Professional plumbing services video"
-                  className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-105"
+              <video
+                ref={(video) => {
+                  if (video) {
+                    // Add play/pause event listeners to track video state
+                    video.onplay = () => setVideoPlaying(true);
+                    video.onpause = () => setVideoPlaying(false);
+                    video.onended = () => setVideoPlaying(false);
+                  }
+                }}
+                className="w-full h-64 object-cover rounded-xl shadow-2xl"
+                controls
+                autoPlay
+                muted
+                loop
+                playsInline
+                poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+              >
+                {/* Multiple video sources for compatibility */}
+                <source 
+                  src="https://videos.pexels.com/video-files/6195149/6195149-hd_1920_1080_25fps.mp4" 
+                  type="video/mp4" 
                 />
-                {/* Dark overlay - Hide when video is playing */}
-                <div className={`absolute inset-0 bg-black/40 group-hover:bg-black/30 transition-colors ${videoPlaying ? 'opacity-0' : 'opacity-100'}`}></div>
-                
-                {/* Play button - Hide when video is playing */}
-                <div className={`absolute inset-0 flex items-center justify-center transition-opacity ${videoPlaying ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                  <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center group-hover:bg-white transition-colors shadow-xl">
-                    <svg className="w-8 h-8 text-blue-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
+                <source 
+                  src="https://videos.pexels.com/video-files/5473766/5473766-hd_1920_1080_30fps.mp4" 
+                  type="video/mp4" 
+                />
+                <source 
+                  src="https://videos.pexels.com/video-files/4792101/4792101-hd_1920_1080_25fps.mp4" 
+                  type="video/mp4" 
+                />
+                {/* Fallback content if video doesn't load */}
+                <div className="flex items-center justify-center h-64 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl">
+                  <div className="text-center text-white p-8">
+                    <div className="text-4xl mb-4">🔧</div>
+                    <h3 className="text-xl font-bold mb-2">Professional Plumbing Services</h3>
+                    <p className="text-blue-200 text-sm">Your browser doesn't support video playback</p>
                   </div>
                 </div>
-                
-                {/* Video info overlay - Hide when video is playing */}
-                <div className={`absolute bottom-4 left-4 right-4 transition-opacity ${videoPlaying ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}>
-                  <h3 className="text-white text-lg font-bold mb-1">
-                    See {params.business !== 'Hendrio' ? params.business : 'Our Team'} in Action
-                  </h3>
-                  <p className="text-white/90 text-sm">
-                    Professional plumbing demonstration video • 1:45
-                  </p>
-                  <div className="flex items-center gap-2 mt-2">
-                    <div className="flex items-center">
-                      <svg className="w-4 h-4 text-yellow-400 mr-1" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/>
-                      </svg>
-                      <span className="text-white/90 text-xs">4.9/5 Customer Rating</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              </video>
+            </div>
               
               {/* Video Player Modal */}
               {showVideo && (
