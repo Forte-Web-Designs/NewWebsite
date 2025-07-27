@@ -9,7 +9,7 @@ This guide shows you how to integrate your dynamic landing pages with popular em
 
 **URL Template:**
 ```
-https://www.fortewebdesigns.com/plumbing-landing/?business=*|COMPANY|*&owner=*|FNAME|*%20*|LNAME|*&location=*|CITY|*&phone=*|PHONE|*&utm_source=mailchimp&utm_medium=email&utm_campaign=plumbing_outreach
+https://www.fortewebdesigns.com/plumbing-landing/?business=*|COMPANY|*&owner=*|FNAME|*%20*|LNAME|*&location=*|CITY|*&phone=*|PHONE|*&email=*|EMAIL|*&utm_source=mailchimp&utm_medium=email&utm_campaign=plumbing_outreach
 ```
 
 **Merge Tags:**
@@ -18,12 +18,13 @@ https://www.fortewebdesigns.com/plumbing-landing/?business=*|COMPANY|*&owner=*|F
 - `*|LNAME|*` - Last name
 - `*|CITY|*` - City
 - `*|PHONE|*` - Phone number
+- `*|EMAIL|*` - Email address
 
 **Example Email Content:**
 ```html
 <h2>Hi *|FNAME|*, Ready to Get *|COMPANY|* More Customers?</h2>
 <p>We help plumbing businesses in *|CITY|* get found online and book more jobs.</p>
-<a href="https://www.fortewebdesigns.com/plumbing-landing/?business=*|COMPANY|*&owner=*|FNAME|*%20*|LNAME|*&location=*|CITY|*&utm_source=mailchimp&utm_medium=email&utm_campaign=plumbing_outreach">
+<a href="https://www.fortewebdesigns.com/plumbing-landing/?business=*|COMPANY|*&owner=*|FNAME|*%20*|LNAME|*&location=*|CITY|*&phone=*|PHONE|*&email=*|EMAIL|*&utm_source=mailchimp&utm_medium=email&utm_campaign=plumbing_outreach">
   See Your Custom Website Demo
 </a>
 ```
@@ -32,7 +33,7 @@ https://www.fortewebdesigns.com/plumbing-landing/?business=*|COMPANY|*&owner=*|F
 
 **URL Template:**
 ```
-https://www.fortewebdesigns.com/plumbing-landing/?business={{subscriber.company}}&owner={{subscriber.first_name}}&location={{subscriber.city}}&phone={{subscriber.phone}}&utm_source=convertkit&utm_medium=email&utm_campaign=plumbing_outreach
+https://www.fortewebdesigns.com/plumbing-landing/?business={{subscriber.company}}&owner={{subscriber.first_name}}&location={{subscriber.city}}&phone={{subscriber.phone}}&email={{subscriber.email}}&utm_source=convertkit&utm_medium=email&utm_campaign=plumbing_outreach
 ```
 
 **Liquid Tags:**
@@ -40,12 +41,13 @@ https://www.fortewebdesigns.com/plumbing-landing/?business={{subscriber.company}
 - `{{subscriber.first_name}}` - First name
 - `{{subscriber.city}}` - City
 - `{{subscriber.phone}}` - Phone number
+- `{{subscriber.email}}` - Email address
 
 ### 3. ActiveCampaign Integration
 
 **URL Template:**
 ```
-https://www.fortewebdesigns.com/plumbing-landing/?business=%ORGNAME%&owner=%FIRSTNAME%&location=%CITY%&phone=%PHONE%&utm_source=activecampaign&utm_medium=email&utm_campaign=plumbing_outreach
+https://www.fortewebdesigns.com/plumbing-landing/?business=%ORGNAME%&owner=%FIRSTNAME%&location=%CITY%&phone=%PHONE%&email=%EMAIL%&utm_source=activecampaign&utm_medium=email&utm_campaign=plumbing_outreach
 ```
 
 **Personalization Tags:**
@@ -53,12 +55,13 @@ https://www.fortewebdesigns.com/plumbing-landing/?business=%ORGNAME%&owner=%FIRS
 - `%FIRSTNAME%` - First name
 - `%CITY%` - City
 - `%PHONE%` - Phone number
+- `%EMAIL%` - Email address
 
 ### 4. Constant Contact Integration
 
 **URL Template:**
 ```
-https://www.fortewebdesigns.com/plumbing-landing/?business=${organizationname}&owner=${firstname}&location=${city}&phone=${phone}&utm_source=constantcontact&utm_medium=email&utm_campaign=plumbing_outreach
+https://www.fortewebdesigns.com/plumbing-landing/?business=${organizationname}&owner=${firstname}&location=${city}&phone=${phone}&email=${email}&utm_source=constantcontact&utm_medium=email&utm_campaign=plumbing_outreach
 ```
 
 **Merge Fields:**
@@ -66,6 +69,7 @@ https://www.fortewebdesigns.com/plumbing-landing/?business=${organizationname}&o
 - `${firstname}` - First name
 - `${city}` - City
 - `${phone}` - Phone number
+- `${email}` - Email address
 
 ## 📊 Email Campaign Examples
 

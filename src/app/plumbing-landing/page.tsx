@@ -5,15 +5,54 @@ import { useState, useEffect, useRef } from 'react';
 export default function PlumbingLanding() {
   const [currentTheme, setCurrentTheme] = useState('blue');
   const [params, setParams] = useState({
-    business: 'Hendrio',
+    business: 'Professional Plumbing',
     owner: '',
     location: 'your area',
     phone: '',
+    email: '',
     theme: 'blue',
     utm_source: 'email',
     utm_medium: 'landing-page',
     utm_campaign: 'plumbing-outreach'
   });
+
+  // Utility function to properly capitalize business names
+  const formatBusinessName = (name: string) => {
+    if (!name) return 'Professional Plumbing';
+    
+    // Split by spaces and capitalize each word
+    return name
+      .split(' ')
+      .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+      .join(' ');
+  };
+
+  // Utility function to generate clean email addresses
+  const generateEmail = (businessName: string) => {
+    if (!businessName || businessName === 'Professional Plumbing') {
+      return 'info@professionalplumbing.com';
+    }
+    
+    // Clean the business name: remove spaces, convert to lowercase
+    let cleanName = businessName.toLowerCase().replace(/\s+/g, '');
+    
+    // Remove common plumbing-related words to avoid duplication
+    cleanName = cleanName
+      .replace(/plumbing/g, '')
+      .replace(/services?/g, '')
+      .replace(/solutions?/g, '')
+      .replace(/company?/g, '')
+      .replace(/co$/g, '')
+      .replace(/inc$/g, '')
+      .replace(/llc$/g, '');
+    
+    // If nothing is left after cleaning, use a fallback
+    if (cleanName.length < 2) {
+      cleanName = 'plumbingpro';
+    }
+    
+    return `info@${cleanName}plumbing.com`;
+  };
 
   const [isLoaded, setIsLoaded] = useState(false);
   const [showPopup, setShowPopup] = useState(false);
@@ -81,10 +120,11 @@ export default function PlumbingLanding() {
     const urlParams = new URLSearchParams(window.location.search);
     
     const extractedParams = {
-      business: urlParams.get('business') || 'Hendrio',
+      business: formatBusinessName(urlParams.get('business') || '') || 'Professional Plumbing',
       owner: urlParams.get('owner') || '',
       location: urlParams.get('location') || 'your area',
       phone: urlParams.get('phone') || '',
+      email: urlParams.get('email') || '',
       theme: urlParams.get('theme') || 'blue',
       utm_source: urlParams.get('utm_source') || 'email',
       utm_medium: urlParams.get('utm_medium') || 'landing-page',
@@ -174,11 +214,13 @@ export default function PlumbingLanding() {
         // Re-populate with default values from URL params
         const businessInput = form.querySelector('input[name="business-name"]') as HTMLInputElement;
         const nameInput = form.querySelector('input[name="name"]') as HTMLInputElement;
+        const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement;
         const phoneInput = form.querySelector('input[name="phone"]') as HTMLInputElement;
         const locationInput = form.querySelector('input[name="location"]') as HTMLInputElement;
         
-        if (businessInput && params.business !== 'Hendrio') businessInput.value = params.business;
+        if (businessInput && params.business !== 'Professional Plumbing') businessInput.value = params.business;
         if (nameInput && params.owner !== 'Admin') nameInput.value = params.owner;
+        if (emailInput && params.email) emailInput.value = params.email;
         if (phoneInput && params.phone !== '123-456-7890') phoneInput.value = params.phone;
         if (locationInput && params.location !== 'Your City') locationInput.value = params.location;
         
@@ -227,11 +269,13 @@ export default function PlumbingLanding() {
         // Re-populate with default values from URL params
         const businessInput = form.querySelector('input[name="business-name"]') as HTMLInputElement;
         const nameInput = form.querySelector('input[name="name"]') as HTMLInputElement;
+        const emailInput = form.querySelector('input[name="email"]') as HTMLInputElement;
         const phoneInput = form.querySelector('input[name="phone"]') as HTMLInputElement;
         const locationInput = form.querySelector('input[name="location"]') as HTMLInputElement;
         
-        if (businessInput && params.business !== 'Hendrio') businessInput.value = params.business;
+        if (businessInput && params.business !== 'Professional Plumbing') businessInput.value = params.business;
         if (nameInput && params.owner !== 'Admin') nameInput.value = params.owner;
+        if (emailInput && params.email) emailInput.value = params.email;
         if (phoneInput && params.phone !== '123-456-7890') phoneInput.value = params.phone;
         if (locationInput && params.location !== 'Your City') locationInput.value = params.location;
         
@@ -274,7 +318,7 @@ export default function PlumbingLanding() {
                   <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
                 </svg>
                 <span className="text-center lg:text-left">
-                  {params.business !== 'Hendrio' && params.location !== 'your area' 
+                  {params.business !== 'Professional Plumbing' && params.location !== 'your area' 
                     ? `Serving ${params.location}`
                     : 'Sandigo-USA'
                   }
@@ -284,7 +328,7 @@ export default function PlumbingLanding() {
                 <svg className="w-3 h-3 mr-1" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                 </svg>
-                info@{params.business.toLowerCase().replace(/\s+/g, '').replace(/plumbing$/, '')}plumbing.com
+                {generateEmail(params.business)}
               </div>
             </div>
             <div className="flex flex-col lg:flex-row items-center space-y-1 lg:space-y-0 lg:space-x-4">
@@ -336,7 +380,7 @@ export default function PlumbingLanding() {
               </div>
               <div>
                 <h1 className={`text-lg font-bold ${theme.primaryText}`}>
-                  {params.business !== 'Hendrio' ? params.business : 'Hendrio'}
+                  {params.business !== 'Professional Plumbing' ? params.business : 'Professional Plumbing'}
                 </h1>
                 <p className="text-xs text-gray-600">Professional Plumbing Services</p>
               </div>
@@ -513,7 +557,7 @@ export default function PlumbingLanding() {
       </header>
 
       {/* Demo Disclaimer Banner */}
-      {params.business !== 'Hendrio' && (
+      {params.business !== 'Professional Plumbing' && (
         <div className="bg-gradient-to-r from-blue-600 to-purple-600 text-white py-2 px-4 text-center relative z-40">
           <div className="container mx-auto">
             <p className="text-xs md:text-sm">
@@ -600,7 +644,7 @@ export default function PlumbingLanding() {
               <div className="hero-content">
                 <h4 className="text-lg font-semibold mb-4">100% Satisfaction Guarantee</h4>
                 <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6 leading-tight">
-                  {params.business !== 'Hendrio' ? (
+                  {params.business !== 'Professional Plumbing' ? (
                     <>
                       <span className={`${theme.accent}`}>{params.business}</span><br />
                       Expert Plumbing
@@ -648,7 +692,7 @@ export default function PlumbingLanding() {
                 )}
                 
                 <p className="text-lg lg:text-xl mb-8 leading-relaxed opacity-90">
-                  {params.business !== 'Hendrio' 
+                  {params.business !== 'Professional Plumbing' 
                     ? `Professional plumbing services you can trust. Licensed, insured, and committed to excellence in ${params.location || 'your area'}.`
                     : 'Competently repurpose go forward benefits without oriented conveniently target business opportunities done'
                   }
@@ -679,7 +723,7 @@ export default function PlumbingLanding() {
             </div>
             
             {/* Add website mockup preview for business owners */}
-            {params.business !== 'Hendrio' && (
+            {params.business !== 'Professional Plumbing' && (
               <div className="w-full lg:w-1/2 lg:pl-12">
                 <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
                   <h3 className="text-2xl font-bold mb-4 text-center">Your Website Preview</h3>
@@ -822,7 +866,7 @@ export default function PlumbingLanding() {
             <div>
               <h4 className="text-orange-500 text-lg font-semibold mb-4">ABOUT {params.business.toUpperCase()}</h4>
               <h2 className="text-3xl lg:text-4xl font-bold text-blue-900 mb-6">
-                {params.business !== 'Hendrio' ? (
+                {params.business !== 'Professional Plumbing' ? (
                   <>
                     Your Trusted <span className="text-orange-400">Local</span><br />
                     Plumbing Experts in {params.location || 'Your Area'}
@@ -835,7 +879,7 @@ export default function PlumbingLanding() {
                 )}
               </h2>
               <p className="text-gray-600 mb-8 leading-relaxed">
-                {params.business !== 'Hendrio' ? (
+                {params.business !== 'Professional Plumbing' ? (
                   `At ${params.business}, we're committed to providing reliable, professional plumbing services to homeowners and businesses in ${params.location || 'the local area'}. ${params.owner ? `Under the expert leadership of ${params.owner}, ` : ''}our team delivers quality workmanship and exceptional customer service on every job.`
                 ) : (
                   'Competently repurpose go forward benefits without goal-oriented ROI the main conveniently target business opportunities whereas proactive streamline sustai content via functional multidisciplinary platforms'
@@ -914,7 +958,7 @@ export default function PlumbingLanding() {
           <div className="text-center mb-12 lg:mb-16">
             <h4 className="text-lg font-semibold mb-4">Why Choose Us</h4>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Why Choose <span className={`${theme.accent}`}>{params.business !== 'Hendrio' ? params.business : 'hendrio'}</span>
+              Why Choose <span className={`${theme.accent}`}>{params.business !== 'Professional Plumbing' ? params.business : 'Professional Plumbing'}</span>
             </h2>
             <h2 className="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">
               For Your Plumbing Needs?
@@ -1055,7 +1099,7 @@ export default function PlumbingLanding() {
                       Count On 24/7
                     </h2>
                     <p className="mb-6 lg:mb-8 opacity-90">
-                      {params.business !== 'Hendrio' 
+                      {params.business !== 'Professional Plumbing' 
                         ? `When you need reliable plumbing services in ${params.location || 'your area'}, ${params.business} delivers. We're locally owned, fully licensed, and committed to fixing your plumbing problems right the first time. No hidden fees, no surprises - just honest, professional service you can trust.`
                         : 'Professional plumbing services with honest pricing, quality workmanship, and reliable customer support.'
                       }
@@ -1105,7 +1149,7 @@ export default function PlumbingLanding() {
                       Plumbing Excellence
                     </h2>
                     <p className="mb-6 lg:mb-8 opacity-90">
-                      {params.business !== 'Hendrio'
+                      {params.business !== 'Professional Plumbing'
                         ? `${params.business} has been serving ${params.location || 'the local community'} for over 15 years. Our experienced team has handled thousands of plumbing emergencies, installations, and repairs. From simple drain clogs to complex pipe replacements, we've seen it all and fixed it all.`
                         : 'With over 15 years in the plumbing industry, our experienced team has handled thousands of residential and commercial plumbing projects.'
                       }
@@ -1155,7 +1199,7 @@ export default function PlumbingLanding() {
                       Or Your Money Back
                     </h2>
                     <p className="mb-6 lg:mb-8 opacity-90">
-                      {params.business !== 'Hendrio'
+                      {params.business !== 'Professional Plumbing'
                         ? `At ${params.business}, we stand behind our work. If you're not completely satisfied with our plumbing service, we'll make it right or refund your money. We also guarantee all our work with comprehensive warranties and 24/7 emergency support.`
                         : 'We guarantee 100% satisfaction on all plumbing services. Your satisfaction is our priority, and we stand behind every job we complete.'
                       }
@@ -1362,7 +1406,7 @@ export default function PlumbingLanding() {
       </section>
 
       {/* Professional Plumbing Footer */}
-      {params.business !== 'Hendrio' && (
+      {params.business !== 'Professional Plumbing' && (
         <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto">
@@ -1429,7 +1473,7 @@ export default function PlumbingLanding() {
                       <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
                       </svg>
-                      <span>info@{params.business.toLowerCase().replace(/\s+/g, '')}.com</span>
+                      <span>{generateEmail(params.business)}</span>
                     </div>
                     <div className="flex items-center space-x-2">
                       <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
@@ -1484,7 +1528,7 @@ export default function PlumbingLanding() {
       )}
 
       {/* Clear Break Between Mockup and Sales Content */}
-      {params.business !== 'Hendrio' && (
+      {params.business !== 'Professional Plumbing' && (
         <div className="relative">
           {/* Dramatic Visual Break */}
           <div className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 py-8">
@@ -1530,7 +1574,7 @@ export default function PlumbingLanding() {
       )}
 
       {/* Claim Your Website Section - Only show for business owners */}
-      {params.business !== 'Hendrio' && (
+      {params.business !== 'Professional Plumbing' && (
         <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white" id="contact">
           <div className="container mx-auto px-4">
             <div className="max-w-6xl mx-auto text-center">
@@ -1685,7 +1729,7 @@ export default function PlumbingLanding() {
                       type="text" 
                       name="business-name"
                       placeholder="Business Name"
-                      defaultValue={params.business !== 'Hendrio' ? params.business : ''}
+                      defaultValue={params.business !== 'Professional Plumbing' ? params.business : ''}
                       autoComplete="organization"
                       className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500 font-medium"
                       onKeyDown={(e) => {
@@ -1723,6 +1767,7 @@ export default function PlumbingLanding() {
                       type="email" 
                       name="email"
                       placeholder="Email Address"
+                      defaultValue={params.email}
                       autoComplete="email"
                       className="w-full p-3 rounded-lg bg-white/20 border border-white/30 text-white placeholder-white/70 focus:outline-none focus:ring-2 focus:ring-orange-500 font-medium"
                       onKeyDown={(e) => {
@@ -1814,7 +1859,7 @@ export default function PlumbingLanding() {
 
 
       {/* Detailed Demo Disclaimer */}
-      {params.business !== 'Hendrio' && (
+      {params.business !== 'Professional Plumbing' && (
         <section className="py-12 bg-gray-50 border-t border-gray-200">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto text-center">
@@ -2015,7 +2060,7 @@ export default function PlumbingLanding() {
                         type="text" 
                         name="business-name"
                         placeholder="e.g., Smith Plumbing Services" 
-                        defaultValue={params.business !== 'Hendrio' ? params.business : ''}
+                        defaultValue={params.business !== 'Professional Plumbing' ? params.business : ''}
                         className="w-full p-4 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-base"
                         required
                       />
@@ -2039,6 +2084,7 @@ export default function PlumbingLanding() {
                         type="email" 
                         name="email"
                         placeholder="your@email.com" 
+                        defaultValue={params.email}
                         className="w-full p-4 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-base"
                         required
                       />
