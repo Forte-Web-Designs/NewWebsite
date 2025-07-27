@@ -905,19 +905,19 @@ export default function PlumbingLanding() {
       </section>
 
       {/* Why Choose Section - Exact Hendrio Match */}
-      <section className={`py-20 bg-gradient-to-r ${theme.gradient} text-white`}>
+      <section className={`py-16 lg:py-20 bg-gradient-to-r ${theme.gradient} text-white`}>
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 lg:mb-16">
             <h4 className="text-lg font-semibold mb-4">Why Choose Us</h4>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Why Choose <span className={`${theme.accent}`}>{params.business !== 'Hendrio' ? params.business : 'hendrio'}</span>
             </h2>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-8">
+            <h2 className="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">
               For Your Plumbing Needs?
             </h2>
             
             {/* Video Section */}
-            <div className="relative max-w-2xl mx-auto mb-8">
+            <div className="relative max-w-2xl mx-auto mb-6 lg:mb-8">
               {/* Video Thumbnail with Play Button */}
               <div className="relative rounded-xl overflow-hidden shadow-2xl group cursor-pointer"
                    onClick={() => setShowVideo(!showVideo)}>
@@ -1033,7 +1033,7 @@ export default function PlumbingLanding() {
 
           {/* Tabs Section */}
           <div className="max-w-4xl mx-auto">
-            <div className="flex justify-center mb-8">
+            <div className="flex justify-center mb-6 lg:mb-8">
               <div className="flex space-x-4">
                 {['Why Choose Us?', 'Our Experience', 'Service Guarantee'].map((tab, index) => (
                   <button
@@ -1053,7 +1053,7 @@ export default function PlumbingLanding() {
             </div>
 
             {/* Tab Content */}
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
               <div>
                 {/* Dynamic image based on active tab */}
                 <img 
@@ -1080,20 +1080,20 @@ export default function PlumbingLanding() {
                 {activeTabIndex === 0 && (
                   <>
                     <h4 className="text-lg font-semibold mb-4">Why Choose Us</h4>
-                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">
                       Trusted Local Plumbers <span className={`${theme.accent}`}>You Can</span>
                     </h2>
-                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">
                       Count On 24/7
                     </h2>
-                    <p className="mb-8 opacity-90">
+                    <p className="mb-6 lg:mb-8 opacity-90">
                       {params.business !== 'Hendrio' 
                         ? `When you need reliable plumbing services in ${params.location || 'your area'}, ${params.business} delivers. We're locally owned, fully licensed, and committed to fixing your plumbing problems right the first time. No hidden fees, no surprises - just honest, professional service you can trust.`
                         : 'Professional plumbing services with honest pricing, quality workmanship, and reliable customer support.'
                       }
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <div className="grid md:grid-cols-2 gap-4 lg:gap-6 mb-6 lg:mb-8">
                       <div>
                         <div className="flex items-center space-x-3 mb-2">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
@@ -1130,20 +1130,20 @@ export default function PlumbingLanding() {
                 {activeTabIndex === 1 && (
                   <>
                     <h4 className="text-lg font-semibold mb-4">Our Experience</h4>
-                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">
                       <span className={`${theme.accent}`}>15+ Years</span> of Professional
                     </h2>
-                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">
                       Plumbing Excellence
                     </h2>
-                    <p className="mb-8 opacity-90">
+                    <p className="mb-6 lg:mb-8 opacity-90">
                       {params.business !== 'Hendrio'
                         ? `${params.business} has been serving ${params.location || 'the local community'} for over 15 years. Our experienced team has handled thousands of plumbing emergencies, installations, and repairs. From simple drain clogs to complex pipe replacements, we've seen it all and fixed it all.`
                         : 'With over 15 years in the plumbing industry, our experienced team has handled thousands of residential and commercial plumbing projects.'
                       }
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <div className="grid md:grid-cols-2 gap-4 lg:gap-6 mb-6 lg:mb-8">
                       <div>
                         <div className="flex items-center space-x-3 mb-2">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
@@ -1180,20 +1180,20 @@ export default function PlumbingLanding() {
                 {activeTabIndex === 2 && (
                   <>
                     <h4 className="text-lg font-semibold mb-4">Service Guarantee</h4>
-                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">
                       <span className={`${theme.accent}`}>100% Satisfaction</span> Guaranteed
                     </h2>
-                    <h2 className="text-2xl lg:text-3xl font-bold mb-6">
+                    <h2 className="text-2xl lg:text-3xl font-bold mb-4 lg:mb-6">
                       Or Your Money Back
                     </h2>
-                    <p className="mb-8 opacity-90">
+                    <p className="mb-6 lg:mb-8 opacity-90">
                       {params.business !== 'Hendrio'
                         ? `At ${params.business}, we stand behind our work. If you're not completely satisfied with our plumbing service, we'll make it right or refund your money. We also guarantee all our work with comprehensive warranties and 24/7 emergency support.`
                         : 'We guarantee 100% satisfaction on all plumbing services. Your satisfaction is our priority, and we stand behind every job we complete.'
                       }
                     </p>
 
-                    <div className="grid md:grid-cols-2 gap-6 mb-8">
+                    <div className="grid md:grid-cols-2 gap-4 lg:gap-6 mb-6 lg:mb-8">
                       <div>
                         <div className="flex items-center space-x-3 mb-2">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
