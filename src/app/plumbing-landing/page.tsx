@@ -983,36 +983,34 @@ export default function PlumbingLanding() {
                         playsInline
                         poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                       >
-                        {/* Multiple video sources for better compatibility */}
+                        {/* Sample video for demonstration - replace with actual plumbing content */}
                         <source 
-                          src="https://cdn.pixabay.com/video/2023/04/12/157942-818354052_large.mp4" 
+                          src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4" 
                           type="video/mp4" 
                         />
                         <source 
-                          src="https://cdn.pixabay.com/video/2022/08/31/128947-740894059_large.mp4" 
+                          src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_5mb.mp4" 
                           type="video/mp4" 
                         />
-                        <source 
-                          src="https://cdn.pixabay.com/video/2021/08/13/84889-584717748_large.mp4" 
-                          type="video/mp4" 
-                        />
-                        <source 
-                          src="https://cdn.pixabay.com/video/2019/07/15/25086-346944087_large.mp4" 
-                          type="video/mp4" 
-                        />
-                        {/* Fallback message for browsers that don't support video */}
-                        <div className="flex items-center justify-center h-full">
-                          <div className="text-center text-white p-8">
-                            <div className="text-4xl mb-4">🔧</div>
-                            <h3 className="text-xl font-semibold mb-2">
-                              {params.business !== 'Hendrio' ? `${params.business} Professional Services` : 'Professional Plumbing Services'}
+                        {/* Animated slideshow fallback showcasing plumbing work */}
+                        <div className="flex items-center justify-center h-full bg-gradient-to-br from-blue-600 to-blue-800">
+                          <div className="text-center text-white p-8 max-w-md">
+                            <div className="text-6xl mb-6 animate-bounce">🔧</div>
+                            <h3 className="text-2xl font-bold mb-4">
+                              {params.business !== 'Hendrio' ? `${params.business}` : 'Your Plumbing Business'}
                             </h3>
-                            <p className="text-white/80">
-                              Expert drain cleaning, pipe repair & emergency services
+                            <div className="space-y-3 text-lg">
+                              <div className="animate-pulse">🚰 Emergency Repairs</div>
+                              <div className="animate-pulse delay-300">🔧 Drain Cleaning</div>
+                              <div className="animate-pulse delay-500">⚡ Water Heater Service</div>
+                              <div className="animate-pulse delay-700">🏠 Residential & Commercial</div>
+                            </div>
+                            <p className="text-blue-200 text-sm mt-6">
+                              24/7 Emergency Service • Licensed & Insured
                             </p>
-                            <p className="text-sm text-white/60 mt-4">
-                              Your browser doesn't support video playback. Please contact us for a demonstration.
-                            </p>
+                            <div className="mt-4 text-yellow-300">
+                              ⭐⭐⭐⭐⭐ 4.9/5 Customer Rating
+                            </div>
                           </div>
                         </div>
                       </video>
@@ -1234,6 +1232,274 @@ export default function PlumbingLanding() {
                 >
                   <span>🔧 Get Emergency Service Now</span>
                 </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Professional Plumbing Footer */}
+      {params.business !== 'Hendrio' && (
+        <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white">
+          <div className="container mx-auto px-4">
+            <div className="max-w-6xl mx-auto">
+              <div className="grid md:grid-cols-4 gap-8 mb-8">
+                {/* Company Info */}
+                <div className="md:col-span-1">
+                  <h3 className="text-xl font-bold text-orange-400 mb-4">{params.business}</h3>
+                  <p className="text-sm opacity-80 mb-4">
+                    Your trusted local plumbing experts serving {params.location} and surrounding areas. 
+                    Professional, reliable, and available 24/7 for emergency repairs.
+                  </p>
+                  <div className="flex space-x-3">
+                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                      </svg>
+                    </a>
+                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
+                      </svg>
+                    </a>
+                    <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
+                      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                {/* Our Services */}
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
+                  <ul className="space-y-2 text-sm opacity-80">
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Emergency Plumbing</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Drain Cleaning</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Water Heater Repair</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Pipe Installation</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Bathroom Plumbing</a></li>
+                    <li><a href="#services" className="hover:text-orange-400 transition-colors">Kitchen Plumbing</a></li>
+                  </ul>
+                </div>
+
+                {/* Contact Info */}
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                  <div className="space-y-3 text-sm opacity-80">
+                    <div className="flex items-center space-x-2">
+                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                      </svg>
+                      <a href={`tel:${params.phone}`} className="hover:text-orange-400 transition-colors">{params.phone}</a>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                      </svg>
+                      <span>info@{params.business.toLowerCase().replace(/\s+/g, '')}.com</span>
+                    </div>
+                    <div className="flex items-center space-x-2">
+                      <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                      </svg>
+                      <span>Serving {params.location} & Surrounding Areas</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Business Hours */}
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Business Hours</h4>
+                  <div className="space-y-2 text-sm opacity-80">
+                    <div className="flex justify-between">
+                      <span>Monday - Friday:</span>
+                      <span>7:00 AM - 6:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Saturday:</span>
+                      <span>8:00 AM - 4:00 PM</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span>Sunday:</span>
+                      <span>Emergency Only</span>
+                    </div>
+                    <div className="mt-3 p-2 bg-red-500/20 rounded border border-red-500/30">
+                      <div className="text-red-300 font-semibold text-xs">
+                        🚨 24/7 Emergency Service Available
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Footer */}
+              <div className="pt-6 border-t border-white/10 text-center">
+                <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                  <div className="text-sm opacity-60">
+                    © 2024 {params.business}. All rights reserved. Licensed & Insured Plumbing Contractor.
+                  </div>
+                  <div className="flex space-x-6 text-sm opacity-60">
+                    <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
+                    <a href="#" className="hover:text-orange-400 transition-colors">Terms of Service</a>
+                    <a href="#" className="hover:text-orange-400 transition-colors">License #PLB123456</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Services Section - Updated titles */}
+      <section id="services" className="py-20 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h4 className="text-orange-500 text-lg font-semibold mb-4">OUR SERVICES</h4>
+            <h2 className="text-4xl font-bold text-blue-900 mb-4">
+              We Provide Best <span className="text-orange-400">Services</span>
+            </h2>
+            <h2 className="text-4xl font-bold text-blue-900 mb-8">
+              For any Plumbing
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            {/* Service 1 */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Kitchen Plumbing Services" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-bold text-blue-900">Kitchen Plumbing</h3>
+                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+                    </svg>
+                  </div>
+                </div>
+                <ul className="text-gray-600 space-y-2">
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Sink & Faucet Repair
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Garbage Disposal Service
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Dishwasher Installation
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Service 2 */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Bathroom Plumbing Services" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-bold text-blue-900">Bathroom Plumbing</h3>
+                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  </div>
+                </div>
+                <ul className="text-gray-600 space-y-2">
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Toilet Repair & Installation
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Shower & Tub Service
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Leak Detection & Repair
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  alt="Emergency Plumbing Services" 
+                  className="w-full h-48 object-cover"
+                />
+                <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
+                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l1.09 2.26L16 5.18l-1.64 1.63L15 10l-3-1.5L9 10l.64-3.19L8 5.18l2.91-.92L12 2z"/>
+                  </svg>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex items-center justify-between mb-4">
+                  <h3 className="text-xl font-bold text-blue-900">Emergency Service</h3>
+                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
+                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+                    </svg>
+                  </div>
+                </div>
+                <ul className="text-gray-600 space-y-2">
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    24/7 Emergency Response
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Burst Pipe Repair
+                  </li>
+                  <li className="flex items-center">
+                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                    </svg>
+                    Water Heater Service
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
@@ -1516,271 +1782,13 @@ export default function PlumbingLanding() {
                 </p>
               </div>
 
-              {/* Professional Plumbing Footer */}
-              <div className="mt-20 pt-16 border-t border-white/20">
-                <div className="grid md:grid-cols-4 gap-8 mb-8">
-                  {/* Company Info */}
-                  <div className="md:col-span-1">
-                    <h3 className="text-xl font-bold text-orange-400 mb-4">{params.business}</h3>
-                    <p className="text-sm opacity-80 mb-4">
-                      Your trusted local plumbing experts serving {params.location} and surrounding areas. 
-                      Professional, reliable, and available 24/7 for emergency repairs.
-                    </p>
-                    <div className="flex space-x-3">
-                      <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-                        </svg>
-                      </a>
-                      <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z"/>
-                        </svg>
-                      </a>
-                      <a href="#" className="text-orange-400 hover:text-orange-300 transition-colors">
-                        <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                      </a>
-                    </div>
-                  </div>
 
-                  {/* Our Services */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-4">Our Services</h4>
-                    <ul className="space-y-2 text-sm opacity-80">
-                      <li><a href="#services" className="hover:text-orange-400 transition-colors">Emergency Plumbing</a></li>
-                      <li><a href="#services" className="hover:text-orange-400 transition-colors">Drain Cleaning</a></li>
-                      <li><a href="#services" className="hover:text-orange-400 transition-colors">Water Heater Repair</a></li>
-                      <li><a href="#services" className="hover:text-orange-400 transition-colors">Pipe Installation</a></li>
-                      <li><a href="#services" className="hover:text-orange-400 transition-colors">Bathroom Plumbing</a></li>
-                      <li><a href="#services" className="hover:text-orange-400 transition-colors">Kitchen Plumbing</a></li>
-                    </ul>
-                  </div>
-
-                  {/* Contact Info */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
-                    <div className="space-y-3 text-sm opacity-80">
-                      <div className="flex items-center space-x-2">
-                        <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-                        </svg>
-                        <a href={`tel:${params.phone}`} className="hover:text-orange-400 transition-colors">{params.phone}</a>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-                        </svg>
-                        <span>info@{params.business.toLowerCase().replace(/\s+/g, '')}.com</span>
-                      </div>
-                      <div className="flex items-center space-x-2">
-                        <svg className="w-4 h-4 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                        </svg>
-                        <span>Serving {params.location} & Surrounding Areas</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Business Hours */}
-                  <div>
-                    <h4 className="text-lg font-semibold text-white mb-4">Business Hours</h4>
-                    <div className="space-y-2 text-sm opacity-80">
-                      <div className="flex justify-between">
-                        <span>Monday - Friday:</span>
-                        <span>7:00 AM - 6:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Saturday:</span>
-                        <span>8:00 AM - 4:00 PM</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span>Sunday:</span>
-                        <span>Emergency Only</span>
-                      </div>
-                      <div className="mt-3 p-2 bg-red-500/20 rounded border border-red-500/30">
-                        <div className="text-red-300 font-semibold text-xs">
-                          🚨 24/7 Emergency Service Available
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-
-                {/* Bottom Footer */}
-                <div className="pt-6 border-t border-white/10 text-center">
-                  <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-                    <div className="text-sm opacity-60">
-                      © 2024 {params.business}. All rights reserved. Licensed & Insured Plumbing Contractor.
-                    </div>
-                    <div className="flex space-x-6 text-sm opacity-60">
-                      <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
-                      <a href="#" className="hover:text-orange-400 transition-colors">Terms of Service</a>
-                      <a href="#" className="hover:text-orange-400 transition-colors">License #PLB123456</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </div>
           </div>
         </section>
       )}
 
-      {/* Services Section - Updated titles */}
-      <section id="services" className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h4 className="text-orange-500 text-lg font-semibold mb-4">OUR SERVICES</h4>
-            <h2 className="text-4xl font-bold text-blue-900 mb-4">
-              We Provide Best <span className="text-orange-400">Services</span>
-            </h2>
-            <h2 className="text-4xl font-bold text-blue-900 mb-8">
-              For any Plumbing
-            </h2>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* Service 1 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1585704032915-c3400ca199e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Kitchen Plumbing Services" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M9 11H7v2h2v-2zm4 0h-2v2h2v-2zm4 0h-2v2h2v-2zm2-7h-1V2h-2v2H8V2H6v2H5c-1.1 0-1.99.9-1.99 2L3 20c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 16H5V9h14v11z"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-blue-900">Kitchen Plumbing</h3>
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-                    </svg>
-                  </div>
-                </div>
-                <ul className="text-gray-600 space-y-2">
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Sink & Faucet Repair
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Garbage Disposal Service
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Dishwasher Installation
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Service 2 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Bathroom Plumbing Services" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-blue-900">Bathroom Plumbing</h3>
-                  <div className="w-8 h-8 bg-orange-500 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                    </svg>
-                  </div>
-                </div>
-                <ul className="text-gray-600 space-y-2">
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Toilet Repair & Installation
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Shower & Tub Service
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Leak Detection & Repair
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Service 3 */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
-                  alt="Emergency Plumbing Services" 
-                  className="w-full h-48 object-cover"
-                />
-                <div className="absolute top-4 right-4 w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center">
-                  <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l1.09 2.26L16 5.18l-1.64 1.63L15 10l-3-1.5L9 10l.64-3.19L8 5.18l2.91-.92L12 2z"/>
-                  </svg>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex items-center justify-between mb-4">
-                  <h3 className="text-xl font-bold text-blue-900">Emergency Service</h3>
-                  <div className="w-8 h-8 bg-red-500 rounded-full flex items-center justify-center">
-                    <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
-                    </svg>
-                  </div>
-                </div>
-                <ul className="text-gray-600 space-y-2">
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    24/7 Emergency Response
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Burst Pipe Repair
-                  </li>
-                  <li className="flex items-center">
-                    <svg className="w-4 h-4 text-green-500 mr-2" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
-                    </svg>
-                    Water Heater Service
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* Detailed Demo Disclaimer */}
       {params.business !== 'Hendrio' && (
@@ -1816,7 +1824,7 @@ export default function PlumbingLanding() {
                   </div>
                 </div>
                 
-                <div className="grid md:grid-cols-2 gap-6 text-center">
+                <div className="grid md:grid-cols-2 gap-6 text-left">
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-3">✅ What We Can Customize:</h4>
                     <ul className="space-y-2 text-sm text-gray-700">
@@ -1884,8 +1892,8 @@ export default function PlumbingLanding() {
 
       {/* Popup Modal - Mobile & Desktop Optimized */}
       {showPopup && (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-4 lg:p-8">
-          <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-md sm:max-w-lg lg:max-w-2xl xl:max-w-3xl w-full max-h-[90vh] lg:max-h-[90vh] overflow-hidden relative shadow-2xl">
+        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex items-center justify-center z-[60] p-4 lg:p-8 overflow-y-auto">
+          <div className="bg-white dark:bg-gray-900 rounded-xl lg:rounded-2xl max-w-md sm:max-w-lg lg:max-w-2xl xl:max-w-3xl w-full my-8 shadow-2xl">
             
             {/* Orange Header Section - Extended to Top */}
             <div className="bg-gradient-to-r from-orange-600 to-orange-500 text-white relative rounded-t-xl lg:rounded-t-2xl">
@@ -1925,7 +1933,7 @@ export default function PlumbingLanding() {
               </div>
             </div>
             
-            <div className="p-5 lg:p-8 overflow-y-auto max-h-[calc(90vh-140px)] lg:max-h-[calc(90vh-160px)]">
+            <div className="p-5 lg:p-8 max-h-[60vh] lg:max-h-[50vh] overflow-y-auto">
               
               {/* Success Message in Popup */}
               {showClaimSuccess && (
