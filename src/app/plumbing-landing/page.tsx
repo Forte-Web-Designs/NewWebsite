@@ -1650,6 +1650,58 @@ export default function PlumbingLanding() {
         </section>
       )}
 
+      {/* Clear Break Between Mockup and Sales Content */}
+      {params.business !== 'Hendrio' && (
+        <div className="relative">
+          {/* Dramatic Visual Break */}
+          <div className="bg-gradient-to-r from-red-600 via-orange-500 to-yellow-500 py-8">
+            <div className="container mx-auto px-4">
+              <div className="text-center">
+                {/* Animated Divider */}
+                <div className="flex items-center justify-center mb-4">
+                  <div className="flex-1 h-1 bg-white/20"></div>
+                  <div className="px-6">
+                    <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center animate-pulse">
+                      <svg className="w-8 h-8 text-orange-500" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="flex-1 h-1 bg-white/20"></div>
+                </div>
+                
+                {/* Clear Transition Message */}
+                <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 max-w-4xl mx-auto border border-white/20">
+                  <h3 className="text-2xl font-bold text-white mb-3">
+                    ⬆️ END OF WEBSITE MOCKUP ⬆️
+                  </h3>
+                  <p className="text-white/90 text-lg mb-4">
+                    Everything above shows what YOUR custom plumbing website could look like
+                  </p>
+                  <div className="bg-white/20 rounded-lg p-4 mb-4">
+                    <p className="text-white font-semibold text-sm">
+                      🎯 <strong>DEMO NOTICE:</strong> The website above is a sample mockup for "{params.business}" 
+                      - Your actual website will be 100% customized with your real business information, photos, and branding.
+                    </p>
+                  </div>
+                  <h3 className="text-2xl font-bold text-white mb-2">
+                    ⬇️ FORTE WEB DESIGNS SALES INFORMATION ⬇️
+                  </h3>
+                  <p className="text-white/90 text-base">
+                    Ready to get your own custom website? Here's how we can help your business...
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          {/* Decorative Arrow Pointing Down */}
+          <div className="absolute -bottom-4 left-1/2 transform -translate-x-1/2 z-10">
+            <div className="w-8 h-8 bg-orange-500 rotate-45 border-4 border-white shadow-lg"></div>
+          </div>
+        </div>
+      )}
+
       {/* Claim Your Website Section - Only show for business owners */}
       {params.business !== 'Hendrio' && (
         <section className="py-20 bg-gradient-to-r from-gray-900 to-gray-800 text-white" id="contact">
