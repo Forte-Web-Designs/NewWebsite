@@ -109,7 +109,12 @@ export default function SEOAuditTool({
 
     try {
       // Using PageSpeed Insights API
-      const apiKey = process.env.NEXT_PUBLIC_PAGESPEED_API_KEY || 'AIzaSyBd6mtWxDHRXo99dwG79FC2HINvGUzDPf0';
+      const apiKey = process.env.NEXT_PUBLIC_PAGESPEED_API_KEY;
+      
+      if (!apiKey) {
+        throw new Error('PageSpeed Insights API key is not configured');
+      }
+      
       const categories = ['performance', 'accessibility', 'best-practices', 'seo'];
 
       const getEndpoint = (strategy: string) => {
