@@ -780,7 +780,7 @@ export default function PlumbingLanding() {
             <div className="text-center relative">
               <div className="relative mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1512428559087-560fa5ceab42?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                  src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
                   alt="Contact Us Online" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
@@ -796,7 +796,7 @@ export default function PlumbingLanding() {
             <div className="text-center relative">
               <div className="relative mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                  src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
                   alt="Schedule Service" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
@@ -812,7 +812,7 @@ export default function PlumbingLanding() {
             <div className="text-center relative">
               <div className="relative mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                  src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
                   alt="Free Estimate" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
@@ -828,7 +828,7 @@ export default function PlumbingLanding() {
             <div className="text-center relative">
               <div className="relative mb-6">
                 <img 
-                  src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                  src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
                   alt="Quality Work Completed" 
                   className="w-20 h-20 rounded-full mx-auto object-cover"
                 />
@@ -850,7 +850,7 @@ export default function PlumbingLanding() {
             {/* Left - Image */}
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
                 alt="Professional plumber at work" 
                 className="rounded-lg w-full h-96 object-cover"
               />
@@ -973,7 +973,7 @@ export default function PlumbingLanding() {
                 muted
                 loop
                 playsInline
-                poster="https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                poster="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
                 onPlay={() => setIsVideoPlaying(true)}
                 onPause={() => setIsVideoPlaying(false)}
               >
@@ -1071,9 +1071,9 @@ export default function PlumbingLanding() {
                 <img 
                   src={
                     activeTabIndex === 0 
-                      ? "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                      ? "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                       : activeTabIndex === 1
-                      ? "https://images.unsplash.com/photo-1621905251189-08b45d6a269e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+                      ? "https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                       : "https://images.unsplash.com/photo-1604709177225-055f99402ea3?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
                   }
                   alt={
@@ -1111,13 +1111,13 @@ export default function PlumbingLanding() {
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">24/7 Emergency Service</span>
+                          <span className="text-white font-semibold">24/7 Emergency Service</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">Licensed & Insured Experts</span>
+                          <span className="text-white font-semibold">Licensed & Insured Experts</span>
                         </div>
                       </div>
                       <div>
@@ -1125,13 +1125,13 @@ export default function PlumbingLanding() {
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">100% Satisfaction Guarantee</span>
+                          <span className="text-white font-semibold">100% Satisfaction Guarantee</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">Upfront, Honest Pricing</span>
+                          <span className="text-white font-semibold">Upfront, Honest Pricing</span>
                         </div>
                       </div>
                     </div>
@@ -1161,13 +1161,13 @@ export default function PlumbingLanding() {
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">5,000+ Jobs Completed</span>
+                          <span className="text-white font-semibold">5,000+ Jobs Completed</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">Master Plumber Certified</span>
+                          <span className="text-white font-semibold">Master Plumber Certified</span>
                         </div>
                       </div>
                       <div>
@@ -1175,13 +1175,13 @@ export default function PlumbingLanding() {
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">Commercial & Residential</span>
+                          <span className="text-white font-semibold">Commercial & Residential</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">Latest Tools & Techniques</span>
+                          <span className="text-white font-semibold">Latest Tools & Techniques</span>
                         </div>
                       </div>
                     </div>
@@ -1211,13 +1211,13 @@ export default function PlumbingLanding() {
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">Money-Back Guarantee</span>
+                          <span className="text-white font-semibold">Money-Back Guarantee</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">2-Year Parts Warranty</span>
+                          <span className="text-white font-semibold">2-Year Parts Warranty</span>
                         </div>
                       </div>
                       <div>
@@ -1225,13 +1225,13 @@ export default function PlumbingLanding() {
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">1-Year Labor Warranty</span>
+                          <span className="text-white font-semibold">1-Year Labor Warranty</span>
                         </div>
                         <div className="flex items-center space-x-3">
                           <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 24 24">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
                           </svg>
-                          <span className="text-white font-medium">24/7 Emergency Support</span>
+                          <span className="text-white font-semibold">24/7 Emergency Support</span>
                         </div>
                       </div>
                     </div>
@@ -1314,7 +1314,7 @@ export default function PlumbingLanding() {
             <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow border overflow-hidden">
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                  src="https://images.unsplash.com/photo-1620626011761-996317b8d101?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
                   alt="Bathroom Plumbing Services" 
                   className="w-full h-48 object-cover"
                 />
