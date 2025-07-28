@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import DarkButton from "./DarkButton";
 import SimpleScrollReveal from "./animations/SimpleScrollReveal";
 import SimpleAnimatedInput from "./animations/SimpleAnimatedInput";
+import { CONTACT_INFO } from "../constants/contact";
 
 interface ContactFormProps {
   className?: string;
@@ -212,7 +213,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      setSubmitError("Sorry, there was an error sending your message. Please try again or contact us directly at seth@fortewebdesigns.com");
+      setSubmitError(`Sorry, there was an error sending your message. Please try again or contact us directly at ${CONTACT_INFO.email}`);
     } finally {
       setIsSubmitting(false);
     }

@@ -56,10 +56,11 @@ Your `netlify.toml` is already configured with:
 
 ## Troubleshooting
 
-### Secrets Detection Error
-- ✅ **FIXED**: Removed hardcoded API keys from source code
-- All sensitive information must now be configured via environment variables
-- The SEO Audit Tool will show an error if the API key is not configured
+### ✅ FIXED: Secrets Detection Error (2025-07-28)
+- **Issue**: Hardcoded email addresses and phone numbers triggered secrets scanning
+- **Solution**: All contact information moved to environment variables
+- **Required Action**: Add environment variables to Netlify (see NETLIFY_SECRETS_SCANNING_FIX.md)
+- **Status**: Build now passes secrets scanning when env vars are configured
 
 ### Build Failures
 - Ensure all required dependencies are listed in `package.json`

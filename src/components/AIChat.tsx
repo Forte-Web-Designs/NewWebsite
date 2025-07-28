@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
+import { CONTACT_INFO } from '../constants/contact';
 
 interface Message {
   id: string;
@@ -426,7 +427,7 @@ const AIChat = () => {
       const errorMessage: Message = {
         id: Date.now().toString(),
         type: 'bot',
-        content: "❌ Sorry, there was an issue sending your message. Please call (817) 873-6655 or email seth@fortewebdesigns.com and I'll get back to you right away!",
+        content: `❌ Sorry, there was an issue sending your message. Please call ${CONTACT_INFO.phone} or email ${CONTACT_INFO.email} and I'll get back to you right away!`,
         timestamp: new Date()
       };
 
@@ -434,7 +435,7 @@ const AIChat = () => {
       setNetlifyForm({ 
         isSubmitting: false, 
         showSuccess: false, 
-        submitError: "Sorry, there was an error sending your message. Please try again or contact us directly at seth@fortewebdesigns.com" 
+        submitError: `Sorry, there was an error sending your message. Please try again or contact us directly at ${CONTACT_INFO.email}` 
       });
     }
   };

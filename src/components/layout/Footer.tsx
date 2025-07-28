@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Icon } from '../images/Icon';
 import { useTheme } from '../../app/providers/ThemeProvider';
 import { useState, useEffect } from 'react';
+import { CONTACT_INFO } from '../../constants/contact';
 
 export default function Footer() {
   const { theme, mounted } = useTheme();
@@ -110,7 +111,7 @@ export default function Footer() {
             </div>
             <div className="flex gap-2 mt-5 flex-wrap">
               <Icon name="mail.svg" alt="email" size={20} folder="footer" />
-              <a className="text-sm font-normal dark:text-white text-gray-800" href="mailto:seth@fortewebdesigns.com">seth@fortewebdesigns.com</a>
+              <a className="text-sm font-normal dark:text-white text-gray-800" href={CONTACT_INFO.emailHref}>{CONTACT_INFO.email}</a>
             </div>
           </div>
 

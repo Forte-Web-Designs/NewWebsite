@@ -4,6 +4,7 @@ import { Icon } from "@/components/images/Icon";
 import LightButton from "@/components/LightButton";
 import DarkButton from "@/components/DarkButton";
 import FAQSection from "@/components/FAQSection";
+import { CONTACT_INFO } from "@/constants/contact";
 
 type FAQItem = {
   question: string;
@@ -677,10 +678,10 @@ export default function ForteEcosystemPage() {
           </div>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-lg">
-            <span>📞 (817) 873-6655</span>
+            <span>📞 {CONTACT_INFO.phone}</span>
             <span className="hidden sm:block">•</span>
-            <a href="mailto:seth@fortewebdesigns.com" className="hover:underline">
-              📧 seth@fortewebdesigns.com
+            <a href={CONTACT_INFO.emailHref} className="hover:underline">
+              📧 {CONTACT_INFO.email}
             </a>
           </div>
         </div>

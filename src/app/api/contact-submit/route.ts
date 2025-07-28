@@ -73,7 +73,7 @@ async function sendEmailWithSendGrid(data: ContactSubmission) {
   sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
   const msg = {
-    to: 'seth@fortewebdesigns.com', // Your email
+    to: process.env.NEXT_PUBLIC_BUSINESS_EMAIL || 'seth@fortewebdesigns.com', // Your email
     from: 'noreply@fortewebdesigns.com', // Verified sender
     subject: `New Lead from ${data.landingPageBusiness || data.business || 'Landing Page'}`,
     html: `

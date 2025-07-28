@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SimpleAnimatedInput from '@/components/animations/SimpleAnimatedInput';
 import DarkButton from '@/components/DarkButton';
+import { CONTACT_INFO } from '@/constants/contact';
 
 interface GenericIndustryLeadModalProps {
   isOpen: boolean;
@@ -199,7 +200,7 @@ export default function GenericIndustryLeadModal({
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      setSubmitError("Sorry, there was an error sending your message. Please try again or contact us directly at seth@fortewebdesigns.com");
+      setSubmitError(`Sorry, there was an error sending your message. Please try again or contact us directly at ${CONTACT_INFO.email}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -257,7 +258,7 @@ export default function GenericIndustryLeadModal({
                   <span className="font-semibold">Forte Web Designs</span> - Professional websites for your industry
                 </p>
                 <p className="text-xs text-gray-500 dark:text-gray-500 mt-1">
-                  Questions? Call us: <a href="tel:+18178736655" className="text-cyan-600 dark:text-cyan-400 font-medium">(817) 873-6655</a>
+                  Questions? Call us: <a href={CONTACT_INFO.phoneHrefPlus} className="text-cyan-600 dark:text-cyan-400 font-medium">{CONTACT_INFO.phone}</a>
                 </p>
               </div>
             </div>

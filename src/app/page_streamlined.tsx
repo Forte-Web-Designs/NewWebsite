@@ -6,6 +6,7 @@ import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { Icon } from "@/components/images/Icon";
 import Slider from "react-slick";
 import LightButton from "@/components/LightButton";
+import { CONTACT_INFO } from "@/constants/contact";
 
 // Import simple animations
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
@@ -509,9 +510,9 @@ export default function Home() {
                 <LightButton href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
                   Get Started Today
                 </LightButton>
-                <Link href="tel:8178736655" className="inline-flex items-center gap-2 text-white hover:text-blue-200 transition-colors duration-200 font-semibold text-lg px-6 py-3 border border-white/30 rounded-lg hover:border-white/50">
+                <Link href={CONTACT_INFO.phoneHref} className="inline-flex items-center gap-2 text-white hover:text-blue-200 transition-colors duration-200 font-semibold text-lg px-6 py-3 border border-white/30 rounded-lg hover:border-white/50">
                   <span>📞</span>
-                  (817) 873-6655
+                  {CONTACT_INFO.phone}
                 </Link>
               </div>
             </SimpleScrollReveal>
@@ -569,8 +570,8 @@ export default function Home() {
                 <div className="space-y-3">
                   <div className="flex items-center justify-center gap-2">
                     <span>📞</span>
-                    <a href="tel:8178736655" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
-                      (817) 873-6655
+                    <a href={CONTACT_INFO.phoneHref} className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
+                      {CONTACT_INFO.phone}
                     </a>
                   </div>
                   <div className="flex items-center justify-center gap-2">

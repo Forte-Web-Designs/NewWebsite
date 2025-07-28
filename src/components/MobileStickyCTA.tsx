@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { CONTACT_INFO } from '../constants/contact';
 
 export default function MobileStickyCTA() {
   const [isVisible, setIsVisible] = useState(false);
@@ -77,9 +78,9 @@ export default function MobileStickyCTA() {
               </div>
               
               <div className="flex items-center justify-center gap-3 text-xs text-blue-100 pt-1">
-                <a href="tel:8178736655" className="flex items-center gap-1 hover:text-white transition-colors">
+                <a href={CONTACT_INFO.phoneHref} className="flex items-center gap-1 hover:text-white transition-colors">
                   <span>📞</span>
-                  <span>(817) 873-6655</span>
+                  <span>{CONTACT_INFO.phone}</span>
                 </a>
                 <div className="flex items-center gap-1">
                   <span>⚡</span>
