@@ -30,6 +30,8 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
   const [userEmail, setUserEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [emailError, setEmailError] = useState('');
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [submittedEmail, setSubmittedEmail] = useState('');
   
   if (!results) return null;
 
@@ -251,6 +253,11 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
   };
 
   const handleDownloadClick = () => {
+    // If already successful, just download again without asking for email
+    if (showSuccessMessage) {
+      downloadPDF();
+      return;
+    }
     setShowEmailForm(true);
   };
 
@@ -325,8 +332,14 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
 
       // Proceed with PDF download
       downloadPDF();
+      
+      // Show success message
+      setSubmittedEmail(userEmail);
+      setShowSuccessMessage(true);
       setShowEmailForm(false);
       setUserEmail('');
+      
+      // Remove auto-hide timer - user must manually dismiss
     } catch (error) {
       console.error('Email submission error:', error);
       // Still allow download even if email fails
@@ -579,13 +592,25 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            Download Full Report
+            {showSuccessMessage ? 'Download Again' : 'Download Full Report'}
           </button>
 
           {/* Email Form Modal */}
           {showEmailForm && (
             <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4">
-              <form onSubmit={handleEmailSubmit} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md">
+              <form onSubmit={handleEmailSubmit} className="bg-white dark:bg-gray-800 rounded-lg p-6 w-full max-w-md relative">
+                {/* Close Button */}
+                <button
+                  type="button"
+                  onClick={() => setShowEmailForm(false)}
+                  className="absolute top-4 right-4 text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 transition-colors"
+                  disabled={isSubmitting}
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+                
                 <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-4">
                   Get Your Detailed Report
                 </h3>
@@ -639,6 +664,39 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
           )}
         </div>
       </div>
+
+      {/* Success Message */}
+      {showSuccessMessage && (
+        <div className="mb-6">
+          <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 rounded-lg p-6 border-2 border-green-200 dark:border-green-800 shadow-lg">
+            <div className="text-center">
+              <div className="text-4xl mb-3">✅</div>
+              <h3 className="text-xl font-bold text-green-800 dark:text-green-200 mb-3">
+                Success! Your Download Should Start Soon
+              </h3>
+              <p className="text-green-700 dark:text-green-300 mb-4 leading-relaxed">
+                Thank you! Your detailed SEO audit report download should begin automatically. 
+                If it doesn't start, you can click the "Download Again" button below.
+              </p>
+              <div className="text-green-600 dark:text-green-400 text-sm mb-4">
+                <span className="font-semibold">What's next?</span> Review your report and feel free to reach out if you have any questions about improving your website's performance.
+              </div>
+              <button
+                onClick={() => {
+                  setShowSuccessMessage(false);
+                  setSubmittedEmail('');
+                }}
+                className="inline-flex items-center gap-2 text-green-500 dark:text-green-400 text-sm hover:text-green-600 dark:hover:text-green-300 underline"
+              >
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+                Dismiss
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* Combined Overall Score */}
       <div className="text-center mb-6">
