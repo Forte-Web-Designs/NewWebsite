@@ -173,7 +173,7 @@ export default function Home() {
                       </p>
                     </div>
                     <h1 className="font-display font-medium text-[38px] sm:text-[70px] leading-[40px] sm:leading-[74px] tracking-[-0.04em] align-middle text-black">
-                      Websites That Grow With You —<br /><span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Start Fast. Scale Strong.</span>
+                      Websites That Grow With You -<br /><span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Start Fast. Scale Strong.</span>
                     </h1>
                     <p className="font-display font-medium text-[14px] sm:text-[20px] leading-[100%] tracking-[0%] align-middle text-[#626262]">
                       Whether you're launching a new business or ready to level up, Forte Web Designs offers one powerful path: fully custom-coded websites built for speed, security, and long-term growth.

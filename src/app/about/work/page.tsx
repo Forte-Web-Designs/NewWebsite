@@ -145,7 +145,7 @@ export default function SolutionsPage() {
           <p className="md:text-[18px] text-[14px] max-[767px]:leading-4 font-normal font-inter text-gray-700 dark:text-gray-300 mt-5">
             We don’t believe in one-size-fits-all websites. Every site we build
             is hand-coded for speed, strategy, and long-term success. Your
-            business deserves a web presence that’s not just beautiful—but built
+            business deserves a web presence that’s not just beautiful-but built
             to perform.
           </p>
           <div className="mt-5">

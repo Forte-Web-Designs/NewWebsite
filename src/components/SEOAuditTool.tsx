@@ -50,7 +50,7 @@ export default function SEOAuditTool({
     { stage: "Accessibility Check", message: "Checking if your site is easy for everyone to use...", progress: 80 },
     { stage: "Final Review", message: "Comparing desktop vs mobile user experience...", progress: 90 },
     { stage: "Optimization Tips", message: "Looking for ways to help you get more leads and customers...", progress: 95 },
-    { stage: "Complete", message: "Almost done—preparing your personalized desktop & mobile results!", progress: 100 }
+    { stage: "Complete", message: "Almost done - preparing your personalized desktop & mobile results!", progress: 100 }
   ];
 
   const validateUrl = (url: string): string | null => {
@@ -88,7 +88,7 @@ export default function SEOAuditTool({
     
     const validatedUrl = validateUrl(websiteUrl);
     if (!validatedUrl) {
-      alert('Please enter a valid website URL (e.g., example.com or https://example.com)');
+      alert('Please enter a valid website URL (ex: example.com or https://example.com)');
       return;
     }
 
@@ -382,7 +382,7 @@ export default function SEOAuditTool({
           <div className="flex-1">
             <input
               type="url"
-              placeholder="Enter your website's URL (e.g., example.com)"
+              placeholder="Enter your website's URL (ex: example.com)"
               value={websiteUrl}
               onChange={(e) => setWebsiteUrl(e.target.value)}
               className="w-full px-4 py-3 bg-white/10 text-white placeholder-white/70 focus:outline-none focus:bg-white/20 text-sm sm:text-base rounded-lg border border-white/20 focus:border-white/50 transition-all"

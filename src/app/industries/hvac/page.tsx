@@ -82,7 +82,7 @@ export default function HVACPage() {
     },
     {
       question: "Will it be mobile-optimized?",
-      answer: "Yes—73% of HVAC customers search on mobile. Your site will be built for fast loading, easy calling, and instant booking from their phone."
+      answer: "Yes-73% of HVAC customers search on mobile. Your site will be built for fast loading, easy calling, and instant booking from their phone."
     }
   ];
 
@@ -185,7 +185,7 @@ export default function HVACPage() {
                   HVAC Websites That <span className="text-blue-300">Bring the Heat</span> (and <span className="text-red-300">Cool New Leads</span>)
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  Your customers search for fast, reliable HVAC service when they need it most. We design HVAC websites that make you the obvious choice—optimized for local SEO, mobile bookings, and 24/7 emergency calls.
+                  Your customers search for fast, reliable HVAC service when they need it most. We design HVAC websites that make you the obvious choice-optimized for local SEO, mobile bookings, and 24/7 emergency calls.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -443,7 +443,7 @@ export default function HVACPage() {
                     <p className="text-sm text-gray-600 dark:text-gray-400">Shopping for best service</p>
                   </div>
                 </div>
-                <p>That means your site needs to load fast, show instant trust signals, and be easy to call or book—on the spot.</p>
+                <p>That means your site needs to load fast, show instant trust signals, and be easy to call or book-on the spot.</p>
               </div>
             </div>
           </SimpleScrollReveal>
@@ -647,7 +647,7 @@ export default function HVACPage() {
                         "Our new website completely transformed our business. We went from struggling with seasonal dips to staying busy year-round. Emergency calls tripled and we're booked solid for maintenance."
                       </blockquote>
                       <cite className="text-green-600 dark:text-green-400 text-xs block mt-2">
-                        — Mike Rodriguez, Owner
+                        - Mike Rodriguez, Owner
                       </cite>
                     </div>
                   </div>
@@ -801,7 +801,7 @@ export default function HVACPage() {
         industry="hvac"
         formName="HVAC Inquiry"
         title="Let's Build Your HVAC Website Right"
-        subtitle="Tell us about your heating and cooling business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        subtitle="Tell us about your heating and cooling business and we'll get back to you within 1 business day. No pressure - just real help from a team that understands your industry."
         mobileCtaText="Ready to heat up your leads?"
         mobileCtaSubtext="Get your HVAC website today"
         mobileBgGradient="bg-gradient-to-r from-red-500 to-blue-500"

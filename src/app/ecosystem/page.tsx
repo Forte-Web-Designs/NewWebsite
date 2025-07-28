@@ -71,7 +71,7 @@ export default function ForteEcosystemPage() {
           </h1>
           
           <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed">
-            One expert team. One powerful system. Everything you need to build, grow, and scale online — without juggling vendors or chasing down results.
+            One expert team. One powerful system. Everything you need to build, grow, and scale online - without juggling vendors or chasing down results.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -130,7 +130,7 @@ export default function ForteEcosystemPage() {
               How the Ecosystem Works
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Start small, grow smart. Add services as your business scales — everything integrates perfectly.
+              Start small, grow smart. Add services as your business scales - everything integrates perfectly.
             </p>
           </div>
           
@@ -665,7 +665,7 @@ export default function ForteEcosystemPage() {
             Skip the Juggling Act. Get One Team That Does It All.
           </h2>
           <p className="text-xl mb-8 opacity-90 leading-relaxed max-w-3xl mx-auto">
-            Stop wasting time with scattered services and unclear results. With Forte Web Designs, everything works together — beautifully.
+            Stop wasting time with scattered services and unclear results. With Forte Web Designs, everything works together - beautifully.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">

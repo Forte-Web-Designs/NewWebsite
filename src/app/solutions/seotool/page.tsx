@@ -595,10 +595,10 @@ function SiteCheckUpContent() {
                 <span className="text-yellow-400 text-xl">⭐️</span>
               </div>
               <blockquote className="text-gray-700 dark:text-gray-300 italic text-lg max-w-3xl mx-auto mb-4">
-                "I had no idea how slow and outdated my old site was. Forte's audit showed me everything I was missing—and then they fixed it better than I expected."
+                "I had no idea how slow and outdated my old site was. Forte's audit showed me everything I was missing-and then they fixed it better than I expected."
               </blockquote>
               <cite className="text-gray-500 dark:text-gray-400 font-medium">
-                — Mike R., ProHome HVAC
+                - Mike R., ProHome HVAC
               </cite>
             </div>
 
@@ -613,7 +613,7 @@ function SiteCheckUpContent() {
                   Keep Your Website Tuned Like a High-Performance Engine
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 text-lg max-w-3xl mx-auto">
-                  Even a great site needs regular tune-ups. Search engines update, competitors improve, and customer expectations shift. That's why we created <strong>Forte Care™</strong>—our ongoing support and optimization service to keep your site running like a well-oiled machine.
+                  Even a great site needs regular tune-ups. Search engines update, competitors improve, and customer expectations shift. That's why we created <strong>Forte Care™</strong>-our ongoing support and optimization service to keep your site running like a well-oiled machine.
                 </p>
               </div>
 
@@ -628,63 +628,63 @@ function SiteCheckUpContent() {
                     <span className="text-lg flex-shrink-0">🧰</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Plumbers:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like regular pipe maintenance—preventing slow leaks that cost you money.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like regular pipe maintenance-preventing slow leaks that cost you money.</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <span className="text-lg flex-shrink-0">⚡</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Electricians:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like inspecting your panel—ensuring no circuits are overloaded or burning out.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like inspecting your panel-ensuring no circuits are overloaded or burning out.</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <span className="text-lg flex-shrink-0">❄️</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">HVAC:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like tuning your AC before summer—don't wait until your system fails.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like tuning your AC before summer-don't wait until your system fails.</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <span className="text-lg flex-shrink-0">🏥</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Healthcare:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like a monthly checkup—prevention is always cheaper than treatment.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like a monthly checkup-prevention is always cheaper than treatment.</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <span className="text-lg flex-shrink-0">🧱</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Construction:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like inspecting your foundation—issues unnoticed now become costly later.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like inspecting your foundation-issues unnoticed now become costly later.</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <span className="text-lg flex-shrink-0">🍽️</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Restaurants:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like daily kitchen cleanings—consistency and safety matter.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like daily kitchen cleanings-consistency and safety matter.</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <span className="text-lg flex-shrink-0">🖌️</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Painters:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like doing touch-ups before clients notice peeling—keep your brand sharp.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like doing touch-ups before clients notice peeling-keep your brand sharp.</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <span className="text-lg flex-shrink-0">🌳</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Landscapers:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like mowing, trimming, and mulching regularly—curb appeal is everything.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like mowing, trimming, and mulching regularly-curb appeal is everything.</span>
                     </div>
                   </div>
                   <div className="flex items-start gap-3 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <span className="text-lg flex-shrink-0">🧰</span>
                     <div>
                       <span className="font-semibold text-gray-900 dark:text-white">Handyman Services:</span>
-                      <span className="text-gray-600 dark:text-gray-300"> Like checking your toolbox—make sure every tool works when you need it.</span>
+                      <span className="text-gray-600 dark:text-gray-300"> Like checking your toolbox-make sure every tool works when you need it.</span>
                     </div>
                   </div>
                 </div>

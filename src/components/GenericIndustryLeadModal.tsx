@@ -28,7 +28,7 @@ export default function GenericIndustryLeadModal({
   industry = 'general',
   formName = 'Industry Inquiry',
   title = "Let's Build Your Website Right",
-  subtitle = "Tell us what you need, and we'll get back to you within 1 business day. No pressure — just real help from a team that gets your industry."
+  subtitle = "Tell us what you need, and we'll get back to you within 1 business day. No pressure - just real help from a team that gets your industry."
 }: GenericIndustryLeadModalProps) {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
@@ -243,7 +243,7 @@ export default function GenericIndustryLeadModal({
                 Thanks, we got it!
               </h3>
               <p className="text-gray-700 dark:text-gray-300 text-xs md:text-sm leading-relaxed px-1 font-medium">
-                A member of the Forte team will follow up within 1 business day. We've helped businesses like yours bring in more leads and grow online — now let's do the same for your business.
+                A member of the Forte team will follow up within 1 business day. We've helped businesses like yours bring in more leads and grow online - now let's do the same for your business.
               </p>
               <button
                 onClick={onClose}

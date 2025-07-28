@@ -25,7 +25,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Do you work with non-Forte websites?",
-    answer: "Occasionally, yes — but we recommend rebuilding with Forte if your current site isn't SEO-ready. Our websites are built with clean code and proper technical foundations that make SEO much more effective.",
+    answer: "Occasionally, yes - but we recommend rebuilding with Forte if your current site isn't SEO-ready. Our websites are built with clean code and proper technical foundations that make SEO much more effective.",
   },
   {
     question: "What industries do you work with?",
@@ -82,7 +82,7 @@ export default function SeoDesignPage() {
               </h1>
               
               <p className="text-xl sm:text-2xl font-normal text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
-                Stop being invisible on Google. Our SEO doesn't just boost rankings — it brings in real, qualified leads so you can focus on serving customers, not chasing them.
+                Stop being invisible on Google. Our SEO doesn't just boost rankings - it brings in real, qualified leads so you can focus on serving customers, not chasing them.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -220,7 +220,7 @@ export default function SeoDesignPage() {
             <SimpleScrollReveal direction="up" delay={500}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Already Have a Forte Website? Great — You've Got a Head Start.
+                  Already Have a Forte Website? Great - You've Got a Head Start.
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
                   But to actually rank, you need more than a good foundation.
@@ -378,7 +378,7 @@ export default function SeoDesignPage() {
                     <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Local SEO That Gets You Ranked "Near Me"</h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 text-center">
-                    Google Business Profile, local citations, map rankings — we handle it all.
+                    Google Business Profile, local citations, map rankings - we handle it all.
                   </p>
                 </div>
 
@@ -459,7 +459,7 @@ export default function SeoDesignPage() {
                           Problem
                         </h4>
                         <p className="text-red-700 dark:text-red-300 text-sm">
-                          Not ranking for "physical therapy + city" — competitors getting all the traffic
+                          Not ranking for "physical therapy + city" - competitors getting all the traffic
                         </p>
                       </div>
 
@@ -519,7 +519,7 @@ export default function SeoDesignPage() {
                       <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300 text-center">
                         "We went from struggling to booked out with a waitlist. The ROI was incredible."
                         <footer className="text-sm mt-2 not-italic font-semibold">
-                          — Dr. Sarah Chen, Alpine Physical Therapy
+                          - Dr. Sarah Chen, Alpine Physical Therapy
                         </footer>
                       </blockquote>
                     </div>
@@ -718,7 +718,7 @@ export default function SeoDesignPage() {
           industry="seo"
           formName="SEO Inquiry"
           title="Let's Build Your SEO Strategy Right"
-          subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure — just real help from a team that builds winning SEO strategies."
+          subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from a team that builds winning SEO strategies."
           mobileCtaText="Ready to rank higher?"
           mobileCtaSubtext="Get your SEO strategy today"
           mobileBgGradient="bg-gradient-to-r from-green-600 to-teal-600"

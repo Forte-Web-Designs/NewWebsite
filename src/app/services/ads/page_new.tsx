@@ -19,7 +19,7 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Do I need a Forte website to use PPC?",
-    answer: "Yes — landing pages matter. All campaigns are built on your Forte Foundation™ or Pro™ website design package. We need conversion-focused pages to maximize your ad spend.",
+    answer: "Yes - landing pages matter. All campaigns are built on your Forte Foundation™ or Pro™ website design package. We need conversion-focused pages to maximize your ad spend.",
   },
   {
     question: "Can I cancel after a few months?",
@@ -80,7 +80,7 @@ export default function GooglePPCAdsPage() {
               </h1>
               
               <p className="text-xl sm:text-2xl font-normal text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
-                Tired of paying for clicks that don't convert? Our Google Ads are built to deliver ROI — not vanity metrics. We help you turn ad spend into paying customers, fast.
+                Tired of paying for clicks that don't convert? Our Google Ads are built to deliver ROI - not vanity metrics. We help you turn ad spend into paying customers, fast.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
@@ -145,7 +145,7 @@ export default function GooglePPCAdsPage() {
                   Smart Ads That Deliver Results
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
-                  We build your campaigns from the ground up — using smart targeting, custom landing pages, and constant optimization to stretch every dollar.
+                  We build your campaigns from the ground up - using smart targeting, custom landing pages, and constant optimization to stretch every dollar.
                 </p>
               </div>
 
@@ -292,7 +292,7 @@ export default function GooglePPCAdsPage() {
                       <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300 text-center">
                         "Night and day difference. We went from barely getting leads to having more qualified prospects than we can handle."
                         <footer className="text-sm mt-2 not-italic font-semibold">
-                          — Mike Torres, Summit Roofing
+                          - Mike Torres, Summit Roofing
                         </footer>
                       </blockquote>
                     </div>
@@ -323,7 +323,7 @@ export default function GooglePPCAdsPage() {
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">1. We Learn Your Business</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    We start with strategy — understanding your goals, budget, and who you want to reach.
+                    We start with strategy - understanding your goals, budget, and who you want to reach.
                   </p>
                 </div>
 

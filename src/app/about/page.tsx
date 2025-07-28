@@ -30,7 +30,7 @@ export default function AboutUs() {
     {
       icon: "⚡",
       title: "Built for Speed",
-      description: "Faster sites don't just load better—they rank better, convert more, and reduce ad costs."
+      description: "Faster sites don't just load better - they rank better, convert more, and reduce ad costs."
     },
     {
       icon: "🔐", 
@@ -40,12 +40,12 @@ export default function AboutUs() {
     {
       icon: "🧭",
       title: "Designed for Your Industry", 
-      description: "Whether you're a plumber or a pediatrician, we build with your audience in mind—not a generic playbook."
+      description: "Whether you're a plumber or a pediatrician, we build with your audience in mind - not a generic playbook."
     },
     {
       icon: "🎯",
       title: "Focused on Outcomes",
-      description: "Every site is mapped to real goals—calls, bookings, sales. Not just clicks and traffic."
+      description: "Every site is mapped to real goals - calls, bookings, sales. Not just clicks and traffic."
     }
   ];
 
@@ -71,7 +71,7 @@ export default function AboutUs() {
     {
       step: "4",
       title: "Tailor",
-      description: "We hand-code every page and feature—optimized for mobile, speed, and smooth user experience.",
+      description: "We hand-code every page and feature - optimized for mobile, speed, and smooth user experience.",
       example: "Sunrise Vet went live with a fully mobile-optimized site and built-in booking."
     },
     {
@@ -118,7 +118,7 @@ export default function AboutUs() {
                 Websites That Actually <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Fit Your Business</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                We don't build generic sites for "everyone." Forte Web Designs specializes in crafting websites with purpose—tailored to your specific industry, your customers, and your growth goals.
+                We don't build generic sites for "everyone." Forte Web Designs specializes in crafting websites with purpose - tailored to your specific industry, your customers, and your growth goals.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -135,7 +135,7 @@ export default function AboutUs() {
                   About Forte Web Designs
                 </h2>
                 <h3 className="text-xl text-gray-600 dark:text-gray-300 font-medium">
-                  Hi, I'm Seth — founder of Forte Web Designs.
+                  Hi, I'm Seth - founder of Forte Web Designs.
                 </h3>
               </div>
             </SimpleScrollReveal>
@@ -144,7 +144,7 @@ export default function AboutUs() {
               <SimpleScrollReveal direction="left" delay={300}>
                 <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
-                    I started this company because I kept seeing hardworking business owners get stuck with websites that didn't reflect who they are or what they do. They'd hire someone, get something that looked fine at first—but underneath, it didn't support their business, didn't attract the right customers, and wasn't built to last.
+                    I started this company because I kept seeing hardworking business owners get stuck with websites that didn't reflect who they are or what they do. They'd hire someone, get something that looked fine at first - but underneath, it didn't support their business, didn't attract the right customers, and wasn't built to last.
                   </p>
                   <p className="font-semibold text-gray-900 dark:text-white">
                     That's not good enough.
@@ -153,7 +153,7 @@ export default function AboutUs() {
                     Your business is unique. Your website should be, too.
                   </p>
                   <p>
-                    Forte Web Designs designs with intention. We take time to understand your market, your audience, and how people actually buy from businesses like yours. Then we hand-build a site that's fast, secure, easy to update, and built to perform—not just at launch, but for years to come.
+                    Forte Web Designs designs with intention. We take time to understand your market, your audience, and how people actually buy from businesses like yours. Then we hand-build a site that's fast, secure, easy to update, and built to perform - not just at launch, but for years to come.
                   </p>
                   <p>
                     You'll never be left guessing. You'll never feel like a number. And you'll always know your website was built with your success in mind.
@@ -324,7 +324,7 @@ export default function AboutUs() {
                 Let's Build You a Website That Works Like It Should
               </h2>
               <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                We'll audit your current site or map out what's possible from scratch—no pressure, just honest advice.
+                We'll audit your current site or map out what's possible from scratch - no pressure, just honest advice.
               </p>
               <Link
                 href="/contact"

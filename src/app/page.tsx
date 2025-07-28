@@ -66,7 +66,7 @@ export default function Home() {
     {
       title: "🔍 1. Foundations",
       description:
-        "Clarity → Faster Results\nWe start with a deep discovery session to align your brand, audience, and goals. No fluff—just clarity that drives focused execution.",
+        "Clarity - Faster Results\nWe start with a deep discovery session to align your brand, audience, and goals. No fluff - just clarity that drives focused execution.",
       icon: "/images/home/foundation.svg",
       tagline: "Clarity → Faster Results"
     },
@@ -94,7 +94,7 @@ export default function Home() {
     {
       title: "🔧 5. Grow",
       description:
-        "Ongoing Support → Compounding ROI\nWith Forte Care™, your site stays updated, secure, and optimized. And when you're ready to scale with SEO, ads, or social—we've already laid the groundwork for it to work.",
+        "Ongoing Support - Compounding ROI\nWith Forte Care™, your site stays updated, secure, and optimized. And when you're ready to scale with SEO, ads, or social - we've already laid the groundwork for it to work.",
       icon: "/images/home/elevate.svg",
       tagline: "Ongoing Support → Compounding ROI"
     },

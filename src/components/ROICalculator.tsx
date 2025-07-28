@@ -161,7 +161,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                             }
                           }
                         }}
-                        placeholder="e.g., 150 or 0"
+                        placeholder="ex: 150 or 0"
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                       <p className="text-xs text-gray-500 mt-1">If you paid a one-time fee, enter 0</p>
@@ -184,7 +184,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                             }
                           }
                         }}
-                        placeholder="e.g., 800"
+                        placeholder="ex: 800"
                         className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                       />
                     </div>
@@ -209,7 +209,7 @@ export default function ROICalculator({ className = "" }: { className?: string }
                           }
                         }
                       }}
-                      placeholder="e.g., 25000"
+                      placeholder="ex: 25000"
                       className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-700 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>

@@ -2059,7 +2059,7 @@ export default function PlumbingLanding() {
                       <input 
                         type="text" 
                         name="business-name"
-                        placeholder="e.g., Smith Plumbing Services" 
+                        placeholder="ex: Smith Plumbing Services" 
                         defaultValue={params.business !== 'Professional Plumbing' ? params.business : ''}
                         className="w-full p-4 lg:p-4 border border-gray-300 dark:border-gray-600 rounded-lg focus:outline-none focus:ring-2 focus:ring-orange-500 bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 font-medium text-base"
                         required

@@ -473,7 +473,7 @@ export default function PlumberPageClient() {
             <SimpleScrollReveal direction="left" delay={100}>
               <div>
                 <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/20 text-green-800 dark:text-green-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                  📈 High Desert Plumbing — Albuquerque
+                  📈 High Desert Plumbing - Albuquerque
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
                   67% More Calls in 90 Days
@@ -516,7 +516,7 @@ export default function PlumberPageClient() {
                     "I didn't realize how many calls we were missing until we launched the new site. It paid for itself in the first month."
                   </p>
                   <p className="text-gray-600 dark:text-gray-400 text-sm mt-2">
-                    — Owner, High Desert Plumbing Co.
+                    - Owner, High Desert Plumbing Co.
                   </p>
                 </div>
                 <Link href="/case-studies" className="inline-flex items-center gap-2 text-cyan-600 hover:text-cyan-700 font-semibold">
@@ -632,7 +632,7 @@ export default function PlumberPageClient() {
               Ready to Dominate Local Plumbing Search?
             </h2>
             <p className="text-xl text-cyan-100 mb-8 max-w-2xl mx-auto">
-              Join dozens of plumbers who've doubled their emergency call volume with a website tailored for your industry — not some generic template.
+              Join dozens of plumbers who've doubled their emergency call volume with a website tailored for your industry - not some generic template.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
@@ -684,7 +684,7 @@ export default function PlumberPageClient() {
         industry="plumbers"
         formName="Plumber Inquiry"
         title="Let's Build Your Plumber Website Right"
-        subtitle="Tell us about your plumbing business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        subtitle="Tell us about your plumbing business and we'll get back to you within 1 business day. No pressure - just real help from a team that understands your industry."
         mobileCtaText="Ready to fix more leads?"
         mobileCtaSubtext="Get your plumber website today"
         mobileBgGradient="bg-gradient-to-r from-blue-600 to-teal-600"

@@ -78,7 +78,7 @@ export default function About() {
                 Forte Web Designs
               </h1>
               <p className="mt-4 sm:mt-6 text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 text-center max-w-3xl mx-auto px-4">
-                Hey, I'm Seth — the founder of Forte Web Designs. I started this company in 2024 because I saw a major gap in the web design world.
+                Hey, I'm Seth - the founder of Forte Web Designs. I started this company in 2024 because I saw a major gap in the web design world.
               </p>
             </div>
           </div>
@@ -96,7 +96,7 @@ export default function About() {
             <div className="divider w-[2px] h-[60px] sm:h-[80px] md:h-[100px] bg-[linear-gradient(180deg,#FFFFFF_0%,#132696_100%)] mx-auto mb-8 sm:mb-12"></div>
             
             <p className="text-sm sm:text-base md:text-lg lg:text-xl leading-relaxed max-w-5xl mx-auto font-medium bg-[linear-gradient(163.76deg,#FFFFFF_26.61%,#B1BCFF_83.14%)] dark:text-transparent text-gray-600 bg-clip-text text-justify px-4">
-              You know what really got to me? Seeing so many amazing business owners getting stuck with websites that just... didn't work for them. Sure, they looked pretty in the demo, but then reality hit—slow loading times, constant updates breaking things, and when something went wrong? Good luck getting help! I started Forte Web Designs because I believe you deserve better. Way better. We build websites the old-school way—by hand, line by line—so they're lightning fast, rock solid, and actually grow your business. No bloated plugins, no surprise crashes, no "sorry, that'll be an extra $200" fees. Whether you go with our Forte Essential™ to get started, our all-in-one Forte Growth™ plan, or create something completely custom with Forte Pro™, you're getting a partner who genuinely cares about your success. Because here's the thing—your website should be working FOR you 24/7, not keeping you up at night wondering if it's still running.
+              You know what really got to me? Seeing so many amazing business owners getting stuck with websites that just... didn't work for them. Sure, they looked pretty in the demo, but then reality hit-slow loading times, constant updates breaking things, and when something went wrong? Good luck getting help! I started Forte Web Designs because I believe you deserve better. Way better. We build websites the old-school way-by hand, line by line-so they're lightning fast, rock solid, and actually grow your business. No bloated plugins, no surprise crashes, no "sorry, that'll be an extra $200" fees. Whether you go with our Forte Essential™ to get started, our all-in-one Forte Growth™ plan, or create something completely custom with Forte Pro™, you're getting a partner who genuinely cares about your success. Because here's the thing-your website should be working FOR you 24/7, not keeping you up at night wondering if it's still running.
             </p>
           </div>
 
@@ -163,7 +163,7 @@ export default function About() {
                   className="w-6 h-6 sm:w-7 sm:h-7"
                 />
                 <p className="text-xs sm:text-sm dark:text-white text-gray-600">
-                  Local Businesses (Contractors, Dentists, Cafes—you name it)
+                  Local Businesses (Contractors, Dentists, Cafes-you name it)
                 </p>
               </div>
 

@@ -311,7 +311,7 @@ const blogPosts = [
     title: 'How Website Speed Impacts Your Conversion Rates (And Revenue)',
     excerpt: 'A 1-second delay can cost you 7% of conversions. Learn how to optimize your website speed and turn more visitors into customers.',
     content: `
-      <p>Your website speed isn't just a technical detail—it's a revenue driver. Studies show that a 1-second delay in page load time can reduce conversions by 7%. For a business making $100,000 per year online, that's $7,000 lost annually from just one extra second of load time.</p>
+      <p>Your website speed isn't just a technical detail-it's a revenue driver. Studies show that a 1-second delay in page load time can reduce conversions by 7%. For a business making $100,000 per year online, that's $7,000 lost annually from just one extra second of load time.</p>
 
       <h2>💰 The Real Cost of Slow Websites</h2>
       <p>Let's talk numbers that matter to your bottom line:</p>
@@ -329,7 +329,7 @@ const blogPosts = [
       <p>Over 60% of web traffic comes from mobile devices, and mobile users are even less patient than desktop users. Mobile users expect pages to load in under 3 seconds, yet the average mobile page takes 15 seconds to load.</p>
 
       <h3>2. Google's Page Experience Update</h3>
-      <p>Google now uses Core Web Vitals as a ranking factor. Slow websites don't just lose customers—they lose search visibility too.</p>
+      <p>Google now uses Core Web Vitals as a ranking factor. Slow websites don't just lose customers-they lose search visibility too.</p>
 
       <h3>3. Increased Competition</h3>
       <p>With more businesses online than ever, users have countless alternatives. If your site is slow, they'll simply go to a competitor.</p>
@@ -489,7 +489,7 @@ const blogPosts = [
         <li>You want to focus on running your business instead of technical details</li>
       </ul>
 
-      <p><strong>Remember:</strong> every second counts. A fast website isn't just a nice-to-have—it's essential for business success in 2025.</p>
+      <p><strong>Remember:</strong> every second counts. A fast website isn't just a nice-to-have-it's essential for business success in 2025.</p>
     `,
     author: 'Seth Forte',
     date: '2025-01-12',

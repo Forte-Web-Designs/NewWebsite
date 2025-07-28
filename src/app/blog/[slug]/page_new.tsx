@@ -107,7 +107,7 @@ const blogPosts = [
 
       <p>Get your domain name. Set up your Google My Business profile. Make sure your business information is consistent across all platforms.</p>
 
-      <p>This isn't glamorous work, but it's essential. It's like putting up a sign for your business—people need to know where to find you.</p>
+      <p>This isn't glamorous work, but it's essential. It's like putting up a sign for your business-people need to know where to find you.</p>
 
       <h3>Step 3: Build a Website That Works</h3>
 

@@ -892,7 +892,7 @@ export function PricingPage() {
                 💰 Money-Saving Bundle Packages
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Combine services and save big! Each bundle is designed to meet you where you're at — whether you're launching, scaling, or dominating your local market.
+                Combine services and save big! Each bundle is designed to meet you where you're at - whether you're launching, scaling, or dominating your local market.
               </p>
             </div>
             

@@ -87,7 +87,7 @@ const coreServices = [
   {
     id: "white-label",
     title: "White Label Partnerships",
-    desc: "Power Your Agency with Custom, Blazing-Fast Websites—Built by Forte. We partner with marketing and SEO agencies to deliver high-performance websites under your brand. Custom-coded, lightning-fast, 100% U.S.-based.",
+    desc: "Power Your Agency with Custom, Blazing-Fast Websites - Built by Forte. We partner with marketing and SEO agencies to deliver high-performance websites under your brand. Custom-coded, lightning-fast, 100% U.S.-based.",
     features: [
       "Custom-coded websites under your brand",
       "100% U.S.-based development team",
