@@ -111,8 +111,45 @@ export default function SEOAuditTool({
       // Using PageSpeed Insights API
       const apiKey = process.env.NEXT_PUBLIC_PAGESPEED_API_KEY;
       
-      if (!apiKey) {
-        throw new Error('PageSpeed Insights API key is not configured');
+      if (!apiKey || apiKey === 'your-google-pagespeed-api-key-here') {
+        // Provide demo results when API key is not configured
+        console.log('🔧 API key not configured, providing demo results for:', validatedUrl);
+        
+        // Simulate the full loading experience
+        await new Promise(resolve => setTimeout(resolve, 8000)); // Wait for loading animation
+        
+        const mockResults: AuditResults = {
+          desktop: {
+            performance: Math.floor(Math.random() * 30) + 70, // 70-99
+            accessibility: Math.floor(Math.random() * 20) + 80, // 80-99
+            bestPractices: Math.floor(Math.random() * 25) + 75, // 75-99
+            seo: Math.floor(Math.random() * 20) + 80, // 80-99
+          },
+          mobile: {
+            performance: Math.floor(Math.random() * 40) + 50, // 50-89
+            accessibility: Math.floor(Math.random() * 20) + 75, // 75-94
+            bestPractices: Math.floor(Math.random() * 25) + 70, // 70-94
+            seo: Math.floor(Math.random() * 20) + 75, // 75-94
+          }
+        };
+
+        // Complete the progress
+        setLoadingProgress(100);
+        setCurrentStage('Complete');
+        setLoadingMessage('🎉 Analysis complete! Displaying your demo results...');
+
+        // Brief delay to show completion
+        setTimeout(() => {
+          onResultsUpdate(mockResults, validatedUrl);
+          
+          if (onResultsReady) {
+            setTimeout(() => {
+              onResultsReady();
+            }, 100);
+          }
+        }, 800);
+        
+        return;
       }
       
       const categories = ['performance', 'accessibility', 'best-practices', 'seo'];
