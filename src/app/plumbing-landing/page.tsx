@@ -647,7 +647,7 @@ export default function PlumbingLanding() {
                   {params.business !== 'Professional Plumbing' ? (
                     <>
                       <span className={`${theme.accent}`}>{params.business}</span><br />
-                      Expert Plumbing
+                      {params.business.toLowerCase().includes('plumbing') ? 'Services' : 'Expert Plumbing'}
                     </>
                   ) : (
                     <>
