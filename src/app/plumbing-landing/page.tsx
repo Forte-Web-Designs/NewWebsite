@@ -1513,7 +1513,7 @@ export default function PlumbingLanding() {
               <div className="pt-6 border-t border-white/10 text-center">
                 <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
                   <div className="text-sm opacity-60">
-                    © 2024 {params.business}. All rights reserved. Licensed & Insured Plumbing Contractor.
+                    © 2025 {params.business}. All rights reserved. Licensed & Insured Plumbing Contractor.
                   </div>
                   <div className="flex space-x-6 text-sm opacity-60">
                     <a href="#" className="hover:text-orange-400 transition-colors">Privacy Policy</a>
