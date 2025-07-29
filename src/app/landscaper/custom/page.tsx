@@ -400,13 +400,28 @@ function CustomLandscapingPageContent() {
     <script src="/landscaping-template/javascript/jquery.min.js"></script>
     <script src="/landscaping-template/javascript/bootstrap.min.js"></script>
     <script src="/landscaping-template/javascript/jquery.easing.js"></script>
-    <script src="/landscaping-template/javascript/imagesloaded.pkgd.min.js"></script>
-    <script src="/landscaping-template/javascript/jquery.isotope.min.js"></script>
-    <script src="/landscaping-template/javascript/owl.carousel.min.js"></script>
+    <script src="/landscaping-template/javascript/owl.carousel.js"></script>
     <script src="/landscaping-template/javascript/jquery-waypoints.js"></script>
-    <script src="/landscaping-template/javascript/jquery.counterup.min.js"></script>
-    <script src="/landscaping-template/javascript/shortcodes.js"></script>
+    <script src="/landscaping-template/javascript/countto.js"></script>
     <script src="/landscaping-template/javascript/main.js"></script>
+    <script src="/landscaping-template/javascript/rev-slider.js"></script>
+    <script>
+        // Preloader fallback - ensure it gets hidden even if other scripts fail
+        $(document).ready(function() {
+            setTimeout(function() {
+                $('.preloader').fadeOut(1000, function() {
+                    $(this).remove();
+                });
+            }, 2000);
+        });
+        
+        // Additional window load handler
+        $(window).on('load', function() {
+            $('.preloader').fadeOut(1000, function() {
+                $(this).remove();
+            });
+        });
+    </script>
     <script src="/landscaping-template/rev-slider/js/jquery.themepunch.tools.min.js"></script>
     <script src="/landscaping-template/rev-slider/js/jquery.themepunch.revolution.min.js"></script>
     <script src="/landscaping-template/javascript/rev-slider.js"></script>
