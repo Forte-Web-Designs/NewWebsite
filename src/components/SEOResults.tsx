@@ -800,7 +800,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                   src={desktopData.screenshot}
                   alt="Desktop Screenshot"
                   className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
-                  style={{ maxHeight: '400px', minHeight: '250px' }}
+                  style={{ maxHeight: '400px' }}
                 />
               </div>
             )}
@@ -841,7 +841,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                   src={mobileData.screenshot}
                   alt="Mobile Screenshot"
                   className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
-                  style={{ maxHeight: '400px', minHeight: '250px' }}
+                  style={{ maxHeight: '400px' }}
                 />
               </div>
             )}
