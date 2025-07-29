@@ -5,10 +5,10 @@ import { useState, useEffect, useRef } from 'react';
 export default function PlumbingLanding() {
   const [currentTheme, setCurrentTheme] = useState('blue');
   const [params, setParams] = useState({
-    business: 'Professional Plumbing',
-    owner: '',
-    location: 'your area',
-    phone: '',
+    business: 'Forte Plumbing',
+    owner: 'Seth Forte',
+    location: 'Chicago',
+    phone: '(312) 555-0123',
     email: '',
     theme: 'blue',
     utm_source: 'email',
@@ -18,7 +18,7 @@ export default function PlumbingLanding() {
 
   // Utility function to properly capitalize business names
   const formatBusinessName = (name: string) => {
-    if (!name) return 'Professional Plumbing';
+    if (!name) return 'Forte Plumbing';
     
     // Split by spaces and capitalize each word
     return name
@@ -29,8 +29,8 @@ export default function PlumbingLanding() {
 
   // Utility function to generate clean email addresses
   const generateEmail = (businessName: string) => {
-    if (!businessName || businessName === 'Professional Plumbing') {
-      return 'info@professionalplumbing.com';
+    if (!businessName || businessName === 'Forte Plumbing') {
+      return 'info@forteplumbing.com';
     }
     
     // Clean the business name: remove spaces, convert to lowercase
@@ -120,10 +120,10 @@ export default function PlumbingLanding() {
     const urlParams = new URLSearchParams(window.location.search);
     
     const extractedParams = {
-      business: formatBusinessName(urlParams.get('business') || '') || 'Professional Plumbing',
-      owner: urlParams.get('owner') || '',
-      location: urlParams.get('location') || 'your area',
-      phone: urlParams.get('phone') || '',
+      business: formatBusinessName(urlParams.get('business') || '') || 'Forte Plumbing',
+      owner: urlParams.get('owner') || 'Seth Forte',
+      location: urlParams.get('location') || 'Chicago',
+      phone: urlParams.get('phone') || '(312) 555-0123',
       email: urlParams.get('email') || '',
       theme: urlParams.get('theme') || 'blue',
       utm_source: urlParams.get('utm_source') || 'email',
