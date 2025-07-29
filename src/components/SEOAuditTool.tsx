@@ -5,16 +5,7 @@ import { useState, useEffect } from 'react';
 interface DeviceResults {
   lighthouseResult?: {
     audits: Record<string, any>;
-    categories: Record<string, { score: nu        // Simulate the full loading experience with real screenshot capture
-        await new Promise(resolve => setTimeout(resolve, 3000)); // Wait for initial loading
-        
-        // Capture real website screenshots
-        console.log('📸 Capturing real website screenshots for:', validatedUrl);
-        const screenshots = await captureWebsiteScreenshots(validatedUrl);
-        
-        await new Promise(resolve => setTimeout(resolve, 2000)); // Additional loading time
-        
-        const mockResults: AuditResults = { }>;
+    categories: Record<string, { score: number }>;
     [key: string]: any;
   };
   [key: string]: any;
