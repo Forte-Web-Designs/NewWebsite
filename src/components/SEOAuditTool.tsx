@@ -86,6 +86,8 @@ export default function SEOAuditTool({
   // Function to capture website screenshots
   const captureWebsiteScreenshots = async (url: string) => {
     try {
+      console.log('🔍 Starting screenshot capture for:', url);
+      
       // Capture both desktop and mobile screenshots
       const [desktopScreenshot, mobileScreenshot] = await Promise.all([
         fetch('/api/screenshot', {
@@ -103,12 +105,31 @@ export default function SEOAuditTool({
       const desktopData = await desktopScreenshot.json();
       const mobileData = await mobileScreenshot.json();
 
-      return {
+      console.log('📸 Desktop screenshot captured:', {
+        success: !!desktopData.screenshot,
+        size: desktopData.screenshot ? Math.round(desktopData.screenshot.length / 1024) + 'KB' : 'N/A',
+        startsWithDataUrl: desktopData.screenshot?.startsWith('data:image/') || false
+      });
+
+      console.log('📱 Mobile screenshot captured:', {
+        success: !!mobileData.screenshot,
+        size: mobileData.screenshot ? Math.round(mobileData.screenshot.length / 1024) + 'KB' : 'N/A',
+        startsWithDataUrl: mobileData.screenshot?.startsWith('data:image/') || false
+      });
+
+      const result = {
         desktop: desktopData.screenshot,
         mobile: mobileData.screenshot
       };
+
+      console.log('✅ Screenshot capture complete:', {
+        desktop: !!result.desktop,
+        mobile: !!result.mobile
+      });
+
+      return result;
     } catch (error) {
-      console.error('Screenshot capture failed:', error);
+      console.error('❌ Screenshot capture failed:', error);
       return null;
     }
   };
