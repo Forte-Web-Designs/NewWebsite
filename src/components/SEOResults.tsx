@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CONTACT_INFO } from '../constants/contact';
 
 interface DeviceResults {
@@ -32,6 +32,16 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
   const [emailError, setEmailError] = useState('');
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [submittedEmail, setSubmittedEmail] = useState('');
+
+  // Auto-fill email from localStorage when popup opens
+  useEffect(() => {
+    if (showEmailForm) {
+      const savedEmail = localStorage.getItem('auditReportEmail');
+      if (savedEmail && !userEmail) {
+        setUserEmail(savedEmail);
+      }
+    }
+  }, [showEmailForm, userEmail]);
   
   if (!results) return null;
 
@@ -333,6 +343,9 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
       // Proceed with PDF download
       downloadPDF();
       
+      // Save email to localStorage for future auto-fill
+      localStorage.setItem('auditReportEmail', userEmail);
+      
       // Show success message
       setSubmittedEmail(userEmail);
       setShowSuccessMessage(true);
@@ -619,7 +632,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                 </p>
                 <input
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder={userEmail ? userEmail : "your@email.com"}
                   value={userEmail}
                   onChange={(e) => {
                     setUserEmail(e.target.value);
@@ -634,6 +647,14 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                   disabled={isSubmitting}
                   autoComplete="email"
                 />
+                {userEmail && localStorage.getItem('auditReportEmail') === userEmail && (
+                  <div className="mb-2 text-xs text-green-600 dark:text-green-400 flex items-center gap-1">
+                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                    </svg>
+                    Email auto-filled from previous download
+                  </div>
+                )}
                 {emailError && (
                   <div className="mb-3 text-red-500 text-sm flex items-center gap-2">
                     <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
