@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState, Suspense } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 interface BusinessDetails {
@@ -29,8 +29,8 @@ function CustomPlumbingPageContent() {
     industry: 'plumbing'
   });
 
+  // Extract business details from URL parameters
   useEffect(() => {
-    // Load business details from URL parameters
     const urlData: Partial<BusinessDetails> = {};
     
     searchParams.forEach((value, key) => {
@@ -44,651 +44,80 @@ function CustomPlumbingPageContent() {
     }
   }, [searchParams]);
 
-  useEffect(() => {
-    // Create a dynamic HTML template with the business details
-    const createCustomTemplate = () => {
-      const templateContent = `
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${businessDetails.businessName} - Professional Plumbing Services</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Arial', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Header */
-        .header {
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .nav {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav a {
-            color: white;
-            text-decoration: none;
-            transition: opacity 0.3s;
-        }
-        
-        .nav a:hover {
-            opacity: 0.8;
-        }
-        
-        .cta-button {
-            background: #ef4444;
-            color: white;
-            padding: 0.7rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        
-        .cta-button:hover {
-            background: #dc2626;
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(30, 64, 175, 0.9), rgba(59, 130, 246, 0.9)), url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23f3f4f6" width="1200" height="600"/><circle cx="200" cy="150" r="30" fill="%233b82f6" opacity="0.1"/><circle cx="800" cy="300" r="50" fill="%231e40af" opacity="0.1"/><circle cx="1000" cy="100" r="40" fill="%23ef4444" opacity="0.1"/></svg>');
-            color: white;
-            padding: 150px 0 100px;
-            text-align: center;
-            background-size: cover;
-            background-position: center;
-        }
-        
-        .hero h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn-primary {
-            background: #ef4444;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            border: 2px solid #ef4444;
-        }
-        
-        .btn-primary:hover {
-            background: #dc2626;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(239, 68, 68, 0.4);
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s;
-            border: 2px solid white;
-        }
-        
-        .btn-secondary:hover {
-            background: white;
-            color: #1e40af;
-        }
-        
-        /* Services Section */
-        .services {
-            padding: 80px 0;
-            background: #f8fafc;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            color: #1e40af;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            text-align: center;
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .service-card h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #1e40af;
-        }
-        
-        /* About Section */
-        .about {
-            padding: 80px 0;
-            background: white;
-        }
-        
-        .about-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-            align-items: center;
-        }
-        
-        .about-text h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-            color: #1e40af;
-        }
-        
-        .about-text p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #64748b;
-        }
-        
-        .about-features {
-            list-style: none;
-        }
-        
-        .about-features li {
-            padding: 0.5rem 0;
-            display: flex;
-            align-items: center;
-        }
-        
-        .about-features li:before {
-            content: "✓";
-            color: #10b981;
-            font-weight: bold;
-            margin-right: 1rem;
-            font-size: 1.2rem;
-        }
-        
-        .about-image {
-            background: linear-gradient(45deg, #3b82f6, #1e40af);
-            height: 400px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-size: 4rem;
-        }
-        
-        /* Emergency Section */
-        .emergency {
-            background: #ef4444;
-            color: white;
-            padding: 60px 0;
-            text-align: center;
-        }
-        
-        .emergency h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .emergency p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
-        
-        .emergency-phone {
-            font-size: 2rem;
-            font-weight: bold;
-            text-decoration: none;
-            color: white;
-            border: 3px solid white;
-            padding: 1rem 2rem;
-            border-radius: 10px;
-            display: inline-block;
-            transition: all 0.3s;
-        }
-        
-        .emergency-phone:hover {
-            background: white;
-            color: #ef4444;
-        }
-        
-        /* Contact Section */
-        .contact {
-            padding: 80px 0;
-            background: #f8fafc;
-        }
-        
-        .contact-content {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-        
-        .contact-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 2rem;
-            color: #1e40af;
-        }
-        
-        .contact-item {
-            margin-bottom: 1.5rem;
-            display: flex;
-            align-items: center;
-        }
-        
-        .contact-item span {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            width: 40px;
-        }
-        
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: bold;
-            color: #374151;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #d1d5db;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .form-group textarea {
-            resize: vertical;
-            height: 120px;
-        }
-        
-        .submit-btn {
-            background: #1e40af;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            width: 100%;
-            transition: background 0.3s;
-        }
-        
-        .submit-btn:hover {
-            background: #1d4ed8;
-        }
-        
-        /* Footer */
-        .footer {
-            background: #1f2937;
-            color: white;
-            padding: 40px 0;
-            text-align: center;
-        }
-        
-        .footer h3 {
-            margin-bottom: 1rem;
-        }
-        
-        .footer p {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer a {
-            color: #60a5fa;
-            text-decoration: none;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2rem;
-            }
-            
-            .hero-buttons {
-                flex-direction: column;
-                align-items: center;
-            }
-            
-            .about-content,
-            .contact-content {
-                grid-template-columns: 1fr;
-            }
-            
-            .nav {
-                display: none;
-            }
-            
-            .section-title {
-                font-size: 2rem;
-            }
-            
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">${businessDetails.businessName}</div>
-                <nav>
-                    <ul class="nav">
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </nav>
-                <a href="#contact" class="cta-button">Get Quote</a>
-            </div>
-        </div>
-    </header>
+  // Convert business details to the params format expected by the plumbing landing page
+  const params = {
+    business: businessDetails.businessName || 'Forte Plumbing',
+    owner: businessDetails.ownerName || 'Business Owner',
+    location: businessDetails.city || 'Chicago',
+    phone: businessDetails.phone || '(555) 123-4567',
+    email: businessDetails.email || 'info@business.com',
+    theme: 'blue',
+    utm_source: 'custom-demo',
+    utm_medium: 'demo-page',
+    utm_campaign: 'plumbing-custom'
+  };
 
-    <!-- Hero Section -->
-    <section class="hero" id="home">
-        <div class="container">
-            <h1>Professional Plumbing Services${businessDetails.city ? ' in ' + businessDetails.city : ''}</h1>
-            <p>Expert plumbing solutions for your home and business. Available 24/7 for emergencies with licensed, insured professionals you can trust.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Get Free Quote</a>
-                <a href="tel:${businessDetails.phone}" class="btn-secondary">Call Now: ${businessDetails.phone}</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="services" id="services">
-        <div class="container">
-            <h2 class="section-title">Our Plumbing Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🔧</div>
-                    <h3>Emergency Repairs</h3>
-                    <p>24/7 emergency plumbing services for burst pipes, clogged drains, and urgent repairs that can't wait.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🚿</div>
-                    <h3>Bathroom Plumbing</h3>
-                    <p>Complete bathroom plumbing services including toilet installation, shower repairs, and fixture upgrades.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🍽️</div>
-                    <h3>Kitchen Plumbing</h3>
-                    <p>Kitchen sink installation, garbage disposal repair, dishwasher connections, and water line services.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🔥</div>
-                    <h3>Water Heater Service</h3>
-                    <p>Water heater installation, repair, and maintenance for both traditional and tankless systems.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">💧</div>
-                    <h3>Drain Cleaning</h3>
-                    <p>Professional drain cleaning and sewer line services to clear blockages and prevent future clogs.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Whole House Plumbing</h3>
-                    <p>Complete plumbing system installation and repiping for new construction and home renovations.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section class="about" id="about">
-        <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <h2>Why Choose ${businessDetails.businessName}?</h2>
-                    <p>With over 15 years of experience serving${businessDetails.city ? ' ' + businessDetails.city + ' and surrounding areas' : ' the local community'}, ${businessDetails.businessName} is your trusted partner for all plumbing needs. Our team of licensed professionals is committed to providing high-quality workmanship and exceptional customer service.</p>
-                    <ul class="about-features">
-                        <li>Licensed & Insured Plumbers</li>
-                        <li>24/7 Emergency Service</li>
-                        <li>Upfront Pricing - No Hidden Fees</li>
-                        <li>Quality Workmanship Guarantee</li>
-                        <li>Modern Equipment & Techniques</li>
-                        <li>Fast Response Times</li>
-                    </ul>
-                </div>
-                <div class="about-image">
-                    🔧
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Emergency Section -->
-    <section class="emergency">
-        <div class="container">
-            <h2>Plumbing Emergency?</h2>
-            <p>Don't wait! Call us now for immediate assistance with burst pipes, major leaks, and urgent plumbing issues.</p>
-            <a href="tel:${businessDetails.phone}" class="emergency-phone">${businessDetails.phone}</a>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Get Your Free Quote Today</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-item">
-                        <span>📍</span>
-                        <div>
-                            <strong>Address:</strong><br>
-                            ${businessDetails.address}<br>
-                            ${businessDetails.city}, ${businessDetails.state} ${businessDetails.zip}
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span>📞</span>
-                        <div>
-                            <strong>Phone:</strong><br>
-                            <a href="tel:${businessDetails.phone}">${businessDetails.phone}</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span>✉️</span>
-                        <div>
-                            <strong>Email:</strong><br>
-                            <a href="mailto:${businessDetails.email}">${businessDetails.email}</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span>👤</span>
-                        <div>
-                            <strong>Contact:</strong><br>
-                            ${businessDetails.ownerName}
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <h3>Request Service Quote</h3>
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number</label>
-                        <input type="tel" id="phone" name="phone" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="service">Service Needed</label>
-                        <select id="service" name="service">
-                            <option>Select Service</option>
-                            <option>Emergency Repair</option>
-                            <option>Bathroom Plumbing</option>
-                            <option>Kitchen Plumbing</option>
-                            <option>Water Heater Service</option>
-                            <option>Drain Cleaning</option>
-                            <option>Whole House Plumbing</option>
-                            <option>Other</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Problem Description</label>
-                        <textarea id="message" name="message" placeholder="Please describe your plumbing issue or service need..."></textarea>
-                    </div>
-                    <button type="submit" class="submit-btn">Request Quote</button>
-                </form>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <h3>${businessDetails.businessName}</h3>
-            <p>${businessDetails.address}, ${businessDetails.city}, ${businessDetails.state} ${businessDetails.zip}</p>
-            <p>Phone: <a href="tel:${businessDetails.phone}">${businessDetails.phone}</a> | Email: <a href="mailto:${businessDetails.email}">${businessDetails.email}</a></p>
-            <p style="margin-top: 20px; opacity: 0.8;">
-                Copyright 2025 by ${businessDetails.businessName}. All rights reserved.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
-        
-        // Contact form submission
-        document.querySelector('.contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            alert('Thank you for your interest! This is a demo. In the real website, this form would submit your service request to ${businessDetails.businessName}.');
-        });
-    </script>
-</body>
-</html>`;
-
-      return templateContent;
-    };
-
-    // Create and inject the template
-    const iframe = document.getElementById('customTemplate') as HTMLIFrameElement;
-    if (iframe) {
-      const doc = iframe.contentDocument || iframe.contentWindow?.document;
-      if (doc) {
-        doc.open();
-        doc.write(createCustomTemplate());
-        doc.close();
-      }
+  // Generate clean email addresses
+  const generateEmail = (businessName: string) => {
+    if (!businessName || businessName === 'Forte Plumbing') {
+      return 'info@forteplumbing.com';
     }
-  }, [businessDetails]);
+    
+    let cleanName = businessName.toLowerCase().replace(/\s+/g, '');
+    
+    cleanName = cleanName
+      .replace(/plumbing/g, '')
+      .replace(/services?/g, '')
+      .replace(/solutions?/g, '')
+      .replace(/company?/g, '')
+      .replace(/co$/g, '')
+      .replace(/inc$/g, '')
+      .replace(/llc$/g, '');
+    
+    if (cleanName.length < 2) {
+      cleanName = 'plumbingpro';
+    }
+    
+    return `info@${cleanName}plumbing.com`;
+  };
+
+  // Use generated email if not provided
+  if (!businessDetails.email || businessDetails.email === 'info@business.com') {
+    params.email = generateEmail(params.business);
+  }
+
+  // State management (copied from plumbing landing page)
+  const [isLoaded, setIsLoaded] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+
+  // Color themes (copied from plumbing landing page)
+  const colorThemes = {
+    blue: {
+      primary: 'bg-blue-900',
+      primaryHover: 'hover:bg-blue-800',
+      primaryText: 'text-blue-900',
+      secondary: 'bg-orange-500',
+      secondaryHover: 'hover:bg-orange-600',
+      secondaryText: 'text-orange-500',
+      accent: 'text-orange-400',
+      gradient: 'from-blue-900 to-blue-800',
+      bgGradient: 'bg-gradient-to-br from-blue-50 to-white'
+    }
+  };
+
+  const currentTheme = colorThemes.blue;
+
+  useEffect(() => {
+    setIsLoaded(true);
+  }, []);
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
       {/* Demo Header */}
-      <div className="bg-blue-600 text-white p-4">
+      <div className="bg-blue-600 text-white p-4 relative z-50">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl font-semibold">
-            Demo: {businessDetails.businessName} - Custom Plumbing Website
+            Demo: {params.business} - Custom Website
           </h1>
           <div className="flex space-x-4">
             <a
@@ -707,14 +136,349 @@ function CustomPlumbingPageContent() {
         </div>
       </div>
 
-      {/* Template Display */}
-      <iframe
-        id="customTemplate"
-        className="w-full"
-        style={{ height: 'calc(100vh - 80px)' }}
-        frameBorder="0"
-        title={`${businessDetails.businessName} Demo Website`}
-      />
+      {/* EXACT COPY OF PLUMBING LANDING PAGE CONTENT STARTS HERE */}
+      <div className={`min-h-screen ${currentTheme.bgGradient}`}>
+        {/* Header */}
+        <header className={`${currentTheme.primary} text-white shadow-lg sticky top-0 z-40 transition-all duration-300`}>
+          <div className="container mx-auto px-4 py-4">
+            <div className="flex justify-between items-center">
+              <div className="flex items-center space-x-3">
+                <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center">
+                  <svg className={`w-6 h-6 ${currentTheme.primaryText}`} fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div>
+                  <h1 className="text-xl font-bold">{params.business}</h1>
+                  <p className="text-sm opacity-90">Professional Plumbing Services</p>
+                </div>
+              </div>
+              
+              <div className="hidden md:flex items-center space-x-6">
+                <nav className="flex space-x-6">
+                  <a href="#services" className="hover:text-blue-200 transition-colors">Services</a>
+                  <a href="#about" className="hover:text-blue-200 transition-colors">About</a>
+                  <a href="#contact" className="hover:text-blue-200 transition-colors">Contact</a>
+                </nav>
+                <a href={`tel:${params.phone}`} className="bg-white text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors">
+                  {params.phone}
+                </a>
+              </div>
+
+              {/* Mobile menu button */}
+              <button 
+                className="md:hidden text-white"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+                </svg>
+              </button>
+            </div>
+
+            {/* Mobile menu */}
+            {mobileMenuOpen && (
+              <div className="md:hidden mt-4 pb-4">
+                <nav className="flex flex-col space-y-2">
+                  <a href="#services" className="hover:text-blue-200 transition-colors py-2">Services</a>
+                  <a href="#about" className="hover:text-blue-200 transition-colors py-2">About</a>
+                  <a href="#contact" className="hover:text-blue-200 transition-colors py-2">Contact</a>
+                  <a href={`tel:${params.phone}`} className="bg-white text-blue-900 px-4 py-2 rounded-lg font-semibold hover:bg-blue-50 transition-colors text-center mt-2">
+                    {params.phone}
+                  </a>
+                </nav>
+              </div>
+            )}
+          </div>
+        </header>
+
+        {/* Hero Section */}
+        <section className={`py-20 ${currentTheme.primary} text-white relative overflow-hidden`}>
+          <div className="absolute inset-0 bg-black opacity-20"></div>
+          <div className="container mx-auto px-4 relative z-10">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                  {params.location}'s Most Trusted Plumbing Experts
+                </h1>
+                <p className="text-xl mb-8 opacity-90">
+                  24/7 emergency service, licensed professionals, and guaranteed satisfaction. 
+                  {params.business} has been serving {params.location} with reliable plumbing solutions.
+                </p>
+                <div className="flex flex-col sm:flex-row gap-4">
+                  <a href="#contact" className={`${currentTheme.secondary} ${currentTheme.secondaryHover} text-white px-8 py-4 rounded-lg text-lg font-semibold transition-colors inline-block text-center`}>
+                    Get Free Estimate
+                  </a>
+                  <a href={`tel:${params.phone}`} className="border-2 border-white text-white hover:bg-white hover:text-blue-900 px-8 py-4 rounded-lg text-lg font-semibold transition-colors inline-block text-center">
+                    Call Now: {params.phone}
+                  </a>
+                </div>
+              </div>
+              <div className="relative">
+                <div className="bg-white p-8 rounded-2xl shadow-2xl">
+                  <h3 className="text-2xl font-bold text-gray-800 mb-6">Emergency? We're Here 24/7</h3>
+                  <div className="space-y-4">
+                    {[
+                      'Licensed & Insured',
+                      'Same-Day Service',
+                      'Upfront Pricing',
+                      '100% Satisfaction Guarantee'
+                    ].map((feature, index) => (
+                      <div key={index} className="flex items-center space-x-3">
+                        <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                          <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                          </svg>
+                        </div>
+                        <span className="text-gray-700">{feature}</span>
+                      </div>
+                    ))}
+                  </div>
+                  <a href="#contact" className={`w-full ${currentTheme.secondary} ${currentTheme.secondaryHover} text-white py-3 px-6 rounded-lg font-semibold mt-6 inline-block text-center transition-colors`}>
+                    Schedule Service Now
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section id="services" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">Our Plumbing Services</h2>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                From emergency repairs to complete installations, {params.business} provides comprehensive plumbing solutions for {params.location} residents and businesses.
+              </p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  title: "Emergency Repairs",
+                  description: "24/7 emergency plumbing repairs for burst pipes, leaks, and clogs",
+                  icon: "🚨"
+                },
+                {
+                  title: "Drain Cleaning",
+                  description: "Professional drain cleaning and sewer line maintenance",
+                  icon: "🚿"
+                },
+                {
+                  title: "Water Heater Service",
+                  description: "Installation, repair, and maintenance of all water heater types",
+                  icon: "🔥"
+                },
+                {
+                  title: "Pipe Installation",
+                  description: "New pipe installation and pipe replacement services",
+                  icon: "🔧"
+                },
+                {
+                  title: "Bathroom Remodeling",
+                  description: "Complete bathroom renovation and fixture installation",
+                  icon: "🛁"
+                },
+                {
+                  title: "Commercial Plumbing",
+                  description: "Comprehensive plumbing services for businesses and facilities",
+                  icon: "🏢"
+                }
+              ].map((service, index) => (
+                <div key={index} className="bg-gray-50 p-8 rounded-xl hover:shadow-lg transition-shadow">
+                  <div className="text-4xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-800 mb-4">{service.title}</h3>
+                  <p className="text-gray-600">{service.description}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className={`py-20 ${currentTheme.bgGradient}`}>
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div>
+                <h2 className="text-4xl font-bold text-gray-800 mb-6">Why Choose {params.business}?</h2>
+                <p className="text-lg text-gray-600 mb-6">
+                  {params.owner} and the team at {params.business} have been providing reliable plumbing services to {params.location} for years. We understand the unique challenges of local plumbing systems and are committed to delivering exceptional results.
+                </p>
+                <div className="space-y-4">
+                  {[
+                    'Licensed & Fully Insured',
+                    '24/7 Emergency Service',
+                    '100% Satisfaction Guarantee',
+                    'Upfront Pricing - No Hidden Fees',
+                    'Local Family-Owned Business',
+                    'Modern Equipment & Techniques'
+                  ].map((feature, index) => (
+                    <div key={index} className="flex items-center space-x-4">
+                      <div className="w-8 h-8 bg-green-500 rounded-full flex items-center justify-center">
+                        <svg className="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
+                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                        </svg>
+                      </div>
+                      <span className="text-lg text-gray-700">{feature}</span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+              <div className="relative">
+                <div className={`${currentTheme.primary} text-white p-8 rounded-2xl`}>
+                  <h3 className="text-2xl font-bold mb-4">Get Your Free Estimate</h3>
+                  <p className="text-blue-100 mb-6">Contact us today for a free, no-obligation estimate on your plumbing project.</p>
+                  <div className="space-y-3">
+                    <div className="flex items-center space-x-3">
+                      <span className="text-blue-200">📞</span>
+                      <a href={`tel:${params.phone}`} className="hover:text-blue-200">{params.phone}</a>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <span className="text-blue-200">✉️</span>
+                      <a href={`mailto:${params.email}`} className="hover:text-blue-200">{params.email}</a>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <span className="text-blue-200">📍</span>
+                      <span>Serving {params.location} & Surrounding Areas</span>
+                    </div>
+                    <div className="flex items-center space-x-3">
+                      <span className="text-blue-200">👤</span>
+                      <span>Owner: {params.owner}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section id="contact" className="py-20 bg-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-bold text-gray-800 mb-4">Ready to Get Started?</h2>
+              <p className="text-xl text-gray-600">Contact {params.business} today for reliable plumbing services in {params.location}</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12">
+              <div>
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">📞</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Phone</h4>
+                      <a href={`tel:${params.phone}`} className="text-blue-600 hover:text-blue-800">{params.phone}</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">✉️</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Email</h4>
+                      <a href={`mailto:${params.email}`} className="text-blue-600 hover:text-blue-800">{params.email}</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">📍</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Service Area</h4>
+                      <p className="text-gray-600">{params.location} & Surrounding Areas</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">👤</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Owner</h4>
+                      <p className="text-gray-600">{params.owner}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="bg-gray-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">Request Service</h3>
+                <form className="space-y-4" onSubmit={(e) => {
+                  e.preventDefault();
+                  alert(`Thank you for your interest! This is a demo website for ${params.business}. In the actual website, this form would submit your service request directly to ${params.owner}.`);
+                }}>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                    <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                    <input type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" required />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Service Needed</label>
+                    <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                      <option>Emergency Repair</option>
+                      <option>Drain Cleaning</option>
+                      <option>Water Heater</option>
+                      <option>Pipe Installation</option>
+                      <option>Bathroom Remodel</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Message</label>
+                    <textarea rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent" placeholder="Describe your plumbing needs..."></textarea>
+                  </div>
+                  <button type="submit" className={`w-full ${currentTheme.primary} hover:bg-blue-800 text-white py-3 px-6 rounded-lg font-semibold transition-colors`}>
+                    Request Service
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className={`${currentTheme.primary} text-white py-12`}>
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-3 gap-8">
+              <div>
+                <h3 className="text-xl font-bold mb-4">{params.business}</h3>
+                <p className="text-blue-200 mb-4">Your trusted plumbing professionals in {params.location}</p>
+                <p className="text-blue-200">Licensed & Insured • 24/7 Emergency Service</p>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+                <div className="space-y-2 text-blue-200">
+                  <p>Phone: <a href={`tel:${params.phone}`} className="hover:text-white">{params.phone}</a></p>
+                  <p>Email: <a href={`mailto:${params.email}`} className="hover:text-white">{params.email}</a></p>
+                  <p>Owner: {params.owner}</p>
+                </div>
+              </div>
+              <div>
+                <h4 className="text-lg font-semibold mb-4">Services</h4>
+                <div className="space-y-2 text-blue-200">
+                  <p>Emergency Repairs</p>
+                  <p>Drain Cleaning</p>
+                  <p>Water Heater Service</p>
+                  <p>Pipe Installation</p>
+                </div>
+              </div>
+            </div>
+            <div className="border-t border-blue-700 mt-8 pt-8 text-center">
+              <p className="text-blue-200">&copy; 2025 {params.business}. All rights reserved.</p>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }

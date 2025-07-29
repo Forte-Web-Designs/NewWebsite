@@ -2,6 +2,7 @@
 
 import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
+import './styles.css';
 
 interface BusinessDetails {
   businessName: string;
@@ -45,476 +46,22 @@ function CustomLandscapingPageContent() {
   }, [searchParams]);
 
   useEffect(() => {
-    // Create and inject the template
-    const createCustomTemplate = () => {
-      return `<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>${businessDetails.businessName} - Professional Landscaping Services</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #f8f9fa;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #2d5a27 0%, #4a7c59 100%);
-            color: white;
-            padding: 1rem 0;
-            position: fixed;
-            top: 0;
-            width: 100%;
-            z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: #a8d5a3;
-            text-decoration: none;
-        }
-        
-        .nav-menu {
-            display: flex;
-            list-style: none;
-            gap: 2rem;
-        }
-        
-        .nav-menu a {
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .nav-menu a:hover {
-            color: #a8d5a3;
-        }
-        
-        .cta-button {
-            background: #a8d5a3;
-            color: #2d5a27;
-            padding: 0.75rem 1.5rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-        }
-        
-        .hero {
-            background: linear-gradient(rgba(45, 90, 39, 0.8), rgba(45, 90, 39, 0.8)), 
-                        linear-gradient(45deg, #228B22, #32CD32);
-            background-size: cover;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            text-align: center;
-            color: white;
-            margin-top: 80px;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .hero h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.9;
-        }
-        
-        .hero-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
-        
-        .btn-primary {
-            background: #a8d5a3;
-            color: #2d5a27;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .btn-secondary {
-            background: transparent;
-            color: white;
-            border: 2px solid white;
-            padding: 1rem 2rem;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s;
-            display: inline-block;
-        }
-        
-        .about, .services, .contact {
-            padding: 5rem 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-        
-        .section-title {
-            text-align: center;
-            font-size: 2.5rem;
-            color: #2d5a27;
-            margin-bottom: 3rem;
-        }
-        
-        .about {
-            background: white;
-        }
-        
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-        
-        .services {
-            background: #f8f9fa;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .service-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .service-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-        }
-        
-        .contact {
-            background: white;
-        }
-        
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-        }
-        
-        .contact-info h3 {
-            color: #2d5a27;
-            margin-bottom: 2rem;
-        }
-        
-        .contact-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-icon {
-            font-size: 1.5rem;
-            margin-right: 1rem;
-            color: #2d5a27;
-        }
-        
-        .contact-form {
-            background: #f8f9fa;
-            padding: 2rem;
-            border-radius: 10px;
-        }
-        
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-        
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            color: #2d5a27;
-            font-weight: bold;
-        }
-        
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-        }
-        
-        .submit-btn {
-            background: #2d5a27;
-            color: white;
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            width: 100%;
-        }
-        
-        .footer {
-            background: #2d5a27;
-            color: white;
-            padding: 3rem 0 1rem;
-            text-align: center;
-        }
-        
-        .footer h4 {
-            color: #a8d5a3;
-            margin-bottom: 1rem;
-        }
-        
-        @media (max-width: 768px) {
-            .nav-menu { display: none; }
-            .hero h1 { font-size: 2.5rem; }
-            .about-grid, .contact-grid { grid-template-columns: 1fr; }
-        }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <div class="nav-container">
-            <a href="#" class="logo">${businessDetails.businessName}</a>
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-            <a href="#contact" class="cta-button">Get Quote</a>
-        </div>
-    </header>
-
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Transform Your Outdoor Space</h1>
-            <p>Professional landscaping services that bring your vision to life. Creating beautiful, sustainable outdoor environments ${businessDetails.city ? 'throughout ' + businessDetails.city : 'in your area'}.</p>
-            <div class="hero-buttons">
-                <a href="#contact" class="btn-primary">Get Free Quote</a>
-                <a href="#services" class="btn-secondary">Our Services</a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About ${businessDetails.businessName}</h2>
-            <div class="about-grid">
-                <div>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">With years of experience in landscape design and maintenance, we specialize in creating outdoor spaces that enhance your property's beauty and value.</p>
-                    <p style="font-size: 1.1rem; margin-bottom: 1.5rem;">Located ${businessDetails.city ? 'in ' + businessDetails.city : 'locally'}, we serve residential and commercial clients with personalized landscaping solutions.</p>
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; margin-top: 2rem;">
-                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #2d5a27;">
-                            <h3 style="color: #2d5a27; margin-bottom: 0.5rem;">Expert Design</h3>
-                            <p>Custom landscape designs that complement your property</p>
-                        </div>
-                        <div style="padding: 1.5rem; background: #f8f9fa; border-radius: 8px; border-left: 4px solid #2d5a27;">
-                            <h3 style="color: #2d5a27; margin-bottom: 0.5rem;">Quality Work</h3>
-                            <p>Professional installation with attention to detail</p>
-                        </div>
-                    </div>
-                </div>
-                <div style="text-align: center;">
-                    <div style="width: 400px; height: 300px; background: linear-gradient(45deg, #2d5a27, #4a7c59); border-radius: 10px; display: flex; align-items: center; justify-content: center; color: white; font-size: 1.2rem; margin: 0 auto;">
-                        Beautiful Landscape Photo
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">🌿</div>
-                    <h3 style="color: #2d5a27; margin-bottom: 1rem;">Landscape Design</h3>
-                    <p>Custom landscape designs that transform your outdoor space into a beautiful, functional environment.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">🌱</div>
-                    <h3 style="color: #2d5a27; margin-bottom: 1rem;">Garden Installation</h3>
-                    <p>Professional planting services including trees, shrubs, flowers, and garden bed creation.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">✂️</div>
-                    <h3 style="color: #2d5a27; margin-bottom: 1rem;">Lawn Maintenance</h3>
-                    <p>Regular lawn care services including mowing, trimming, fertilization, and seasonal cleanup.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get Your Free Quote</h2>
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h3>Contact ${businessDetails.businessName}</h3>
-                    <div class="contact-item">
-                        <span class="contact-icon">📍</span>
-                        <div>
-                            <strong>Address:</strong><br>
-                            ${businessDetails.address}<br>
-                            ${businessDetails.city}, ${businessDetails.state} ${businessDetails.zip}
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">📞</span>
-                        <div>
-                            <strong>Phone:</strong><br>
-                            <a href="tel:${businessDetails.phone}" style="color: #2d5a27; text-decoration: none;">${businessDetails.phone}</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">✉️</span>
-                        <div>
-                            <strong>Email:</strong><br>
-                            <a href="mailto:${businessDetails.email}" style="color: #2d5a27; text-decoration: none;">${businessDetails.email}</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <span class="contact-icon">👤</span>
-                        <div>
-                            <strong>Owner:</strong><br>
-                            ${businessDetails.ownerName}
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3 style="color: #2d5a27; margin-bottom: 1.5rem;">Request Your Free Quote</h3>
-                    <form onsubmit="handleFormSubmit(event)">
-                        <div class="form-group">
-                            <label for="name">Your Name *</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address *</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone">
-                        </div>
-                        <div class="form-group">
-                            <label for="service">Service Needed</label>
-                            <select id="service" name="service">
-                                <option value="">Select a service</option>
-                                <option value="landscape-design">Landscape Design</option>
-                                <option value="garden-installation">Garden Installation</option>
-                                <option value="lawn-maintenance">Lawn Maintenance</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" placeholder="Tell us about your landscaping project..."></textarea>
-                        </div>
-                        <button type="submit" class="submit-btn">Send Quote Request</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <h4>${businessDetails.businessName}</h4>
-            <p>Professional Landscaping Services</p>
-            <p>${businessDetails.address}, ${businessDetails.city}, ${businessDetails.state} ${businessDetails.zip}</p>
-            <p>
-                Phone: <a href="tel:${businessDetails.phone}" style="color: #a8d5a3;">${businessDetails.phone}</a> | 
-                Email: <a href="mailto:${businessDetails.email}" style="color: #a8d5a3;">${businessDetails.email}</a>
-            </p>
-            <p style="margin-top: 2rem; opacity: 0.8;">&copy; 2025 ${businessDetails.businessName}. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-        
-        function handleFormSubmit(e) {
-            e.preventDefault();
-            alert('Thank you for your interest! This is a demo website for ${businessDetails.businessName}. In the actual website, this form would submit your quote request directly to ${businessDetails.ownerName}.');
-        }
-    </script>
-</body>
-</html>`;
-    };
-
-    // Create and inject the template with a delay to ensure iframe is ready
+    // Set page title with custom business name
+    document.title = `${businessDetails.businessName} - Garden & Landscaping`;
+    
+    // Simple preloader removal - no complex scripts
     setTimeout(() => {
-      const iframe = document.getElementById('customTemplate') as HTMLIFrameElement;
-      if (iframe) {
-        const doc = iframe.contentDocument || iframe.contentWindow?.document;
-        if (doc) {
-          doc.open();
-          doc.write(createCustomTemplate());
-          doc.close();
-        }
+      const preloader = document.querySelector('.preloader');
+      if (preloader) {
+        (preloader as HTMLElement).style.display = 'none';
       }
-    }, 100);
-  }, [businessDetails]);
+    }, 1000);
+  }, [businessDetails.businessName]);
 
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div className="min-h-screen">
       {/* Demo Header */}
-      <div className="bg-blue-600 text-white p-4">
+      <div className="bg-green-600 text-white p-4 relative z-50">
         <div className="max-w-6xl mx-auto flex justify-between items-center">
           <h1 className="text-xl font-semibold">
             Demo: {businessDetails.businessName} - Custom Website
@@ -522,7 +69,7 @@ function CustomLandscapingPageContent() {
           <div className="flex space-x-4">
             <a
               href="/demo/custom"
-              className="bg-blue-500 hover:bg-blue-400 px-4 py-2 rounded transition-colors"
+              className="bg-green-500 hover:bg-green-400 px-4 py-2 rounded transition-colors"
             >
               Edit Demo
             </a>
@@ -536,14 +83,373 @@ function CustomLandscapingPageContent() {
         </div>
       </div>
 
-      {/* Template Display */}
-      <iframe
-        id="customTemplate"
-        className="w-full"
-        style={{ height: 'calc(100vh - 80px)' }}
-        frameBorder="0"
-        title={`${businessDetails.businessName} Demo Website`}
-      />
+      {/* EXACT COPY OF LANDSCAPING LANDING PAGE CONTENT WITH CUSTOM BUSINESS DETAILS */}
+      <div className="gettree-template-container">
+        {/* Preloader */}
+        <div className="preloader">
+          <div className="loading-spinner"></div>
+        </div>
+
+        {/* Header */}
+        <div className="flat-header-box">
+          <div className="container">
+            <div className="top-header">
+              <div className="top-header-inner">
+                <div className="top-bar-left">
+                  <span className="top-location">📍 {businessDetails.address}, {businessDetails.city}, {businessDetails.state} {businessDetails.zip}</span>
+                  <span className="top-mail">✉️ {businessDetails.email}</span>
+                </div>
+                <div className="top-bar-right">
+                  <div className="social-links">
+                    <a href="#" aria-label="Facebook">📘</a>
+                    <a href="#" aria-label="Twitter">🐦</a>
+                    <a href="#" aria-label="Google Plus">🔴</a>
+                    <a href="#" aria-label="Instagram">📸</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <header className="header">
+              <div className="header-wrap">
+                <div className="logo-section">
+                  <div className="logo-header">
+                    <a href="#" title={businessDetails.businessName}>
+                      <span className="text-2xl font-bold text-green-600">{businessDetails.businessName}</span>
+                    </a>
+                  </div>
+                </div>
+
+                <div className="nav-section">
+                  <nav className="main-nav">
+                    <ul className="menu">
+                      <li className="current-menu-item">
+                        <a href="#" title="Home">Home</a>
+                      </li>
+                      <li>
+                        <a href="#about" title="About">About</a>
+                      </li>
+                      <li>
+                        <a href="#services" title="Services">Services</a>
+                      </li>
+                      <li>
+                        <a href="#portfolio" title="Portfolio">Portfolio</a>
+                      </li>
+                      <li>
+                        <a href="#contact" title="Contact">Contact</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </div>
+
+                <div className="header-actions">
+                  <div className="search-btn">
+                    <a href="#" aria-label="Search">🔍</a>
+                  </div>
+                  <div className="cart-btn">
+                    <a href="#" aria-label="Cart">🛒</a>
+                  </div>
+                  <div className="quote-btn">
+                    <a href="#contact" className="btn-primary">Get A Quote</a>
+                  </div>
+                </div>
+              </div>
+            </header>
+          </div>
+        </div>
+
+        {/* Hero Section */}
+        <section className="hero-section">
+          <div className="hero-bg">
+            <img src="/landscaping-template/images/slides/slide-1.jpg" alt="Hero Background" />
+          </div>
+          <div className="hero-content">
+            <div className="container">
+              <div className="hero-text">
+                <h1 className="hero-title">
+                  We're Providing Quality<br />
+                  Landscaping Service in {businessDetails.city}
+                </h1>
+                <p className="hero-description">
+                  {businessDetails.businessName} offers professional landscaping and garden care services.<br />
+                  Contact {businessDetails.ownerName} for a free consultation and estimate.
+                </p>
+                <div className="hero-actions">
+                  <a href="#contact" className="btn-hero">Get A Quote</a>
+                  <a href={`tel:${businessDetails.phone}`} className="btn-secondary ml-4">Call: {businessDetails.phone}</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Services Section */}
+        <section className="services-section" id="services">
+          <div className="container">
+            <div className="section-header">
+              <h2 className="section-title">Our Landscaping Services</h2>
+              <p className="section-description">{businessDetails.businessName} provides comprehensive landscaping solutions for {businessDetails.city} area residents and businesses.</p>
+            </div>
+            
+            <div className="services-grid">
+              <div className="service-item">
+                <div className="service-icon">
+                  <span className="icon">🌿</span>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">
+                    <a href="#">Garden Care & Maintenance</a>
+                  </h3>
+                  <p>Professional garden maintenance, pruning, weeding, and seasonal care to keep your landscape beautiful year-round.</p>
+                </div>
+              </div>
+
+              <div className="service-item">
+                <div className="service-icon">
+                  <span className="icon">🌺</span>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">
+                    <a href="#">Landscape Design & Planting</a>
+                  </h3>
+                  <p>Custom landscape design and professional planting services to transform your outdoor space into a beautiful oasis.</p>
+                </div>
+              </div>
+
+              <div className="service-item">
+                <div className="service-icon">
+                  <span className="icon">🌱</span>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">
+                    <a href="#">Lawn Care & Treatment</a>
+                  </h3>
+                  <p>Complete lawn care services including mowing, fertilization, aeration, and pest control for a healthy, green lawn.</p>
+                </div>
+              </div>
+
+              <div className="service-item">
+                <div className="service-icon">
+                  <span className="icon">🌳</span>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">
+                    <a href="#">Tree & Shrub Care</a>
+                  </h3>
+                  <p>Expert tree trimming, pruning, removal, and shrub maintenance to enhance your property's beauty and safety.</p>
+                </div>
+              </div>
+
+              <div className="service-item">
+                <div className="service-icon">
+                  <span className="icon">🏞️</span>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">
+                    <a href="#">Hardscaping & Irrigation</a>
+                  </h3>
+                  <p>Professional hardscaping installation including patios, walkways, retaining walls, and efficient irrigation systems.</p>
+                </div>
+              </div>
+
+              <div className="service-item">
+                <div className="service-icon">
+                  <span className="icon">❄️</span>
+                </div>
+                <div className="service-content">
+                  <h3 className="service-title">
+                    <a href="#">Seasonal Cleanup</a>
+                  </h3>
+                  <p>Spring and fall cleanup services including leaf removal, debris cleanup, and seasonal garden preparation.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section className="about-section" id="about">
+          <div className="container">
+            <div className="about-grid">
+              <div className="about-content">
+                <div className="section-header">
+                  <h2 className="section-title">About {businessDetails.businessName}</h2>
+                  <p className="section-description">Your trusted landscaping professionals in {businessDetails.city}</p>
+                </div>
+                
+                <p className="about-text">
+                  {businessDetails.ownerName} and the team at {businessDetails.businessName} have been providing 
+                  exceptional landscaping services to {businessDetails.city} and surrounding areas. We specialize in 
+                  creating and maintaining beautiful outdoor spaces that enhance your property's value and curb appeal.
+                </p>
+                
+                <div className="about-features">
+                  <div className="feature-item">
+                    <span className="check-icon">✓</span>
+                    Licensed & Insured Professional Service
+                  </div>
+                  <div className="feature-item">
+                    <span className="check-icon">✓</span>
+                    Experienced & Skilled Team Members
+                  </div>
+                  <div className="feature-item">
+                    <span className="check-icon">✓</span>
+                    Quality Guaranteed Workmanship
+                  </div>
+                  <div className="feature-item">
+                    <span className="check-icon">✓</span>
+                    Eco-Friendly Practices & Materials
+                  </div>
+                  <div className="feature-item">
+                    <span className="check-icon">✓</span>
+                    Competitive Pricing & Free Estimates
+                  </div>
+                  <div className="feature-item">
+                    <span className="check-icon">✓</span>
+                    Year-Round Service & Maintenance
+                  </div>
+                </div>
+                
+                <a href="#contact" className="btn-secondary">Get Free Estimate</a>
+              </div>
+              
+              <div className="about-image">
+                <img src="/landscaping-template/images/about-1.jpg" alt="About Us" />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Contact Section */}
+        <section className="contact-section" id="contact">
+          <div className="container">
+            <div className="section-header text-center mb-12">
+              <h2 className="section-title">Contact {businessDetails.businessName}</h2>
+              <p className="section-description">Ready to transform your outdoor space? Get in touch with us today!</p>
+            </div>
+            
+            <div className="grid md:grid-cols-2 gap-12">
+              <div className="contact-info">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">Get in Touch</h3>
+                <div className="space-y-6">
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">📞</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Phone</h4>
+                      <a href={`tel:${businessDetails.phone}`} className="text-green-600 hover:text-green-800">{businessDetails.phone}</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">✉️</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Email</h4>
+                      <a href={`mailto:${businessDetails.email}`} className="text-green-600 hover:text-green-800">{businessDetails.email}</a>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">📍</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Service Area</h4>
+                      <p className="text-gray-600">{businessDetails.city}, {businessDetails.state} & Surrounding Areas</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center space-x-4">
+                    <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                      <span className="text-2xl">👤</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-800">Owner</h4>
+                      <p className="text-gray-600">{businessDetails.ownerName}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="contact-form bg-gray-50 p-8 rounded-xl">
+                <h3 className="text-2xl font-bold text-gray-800 mb-6">Request Free Estimate</h3>
+                <form className="space-y-4" onSubmit={(e) => {
+                  e.preventDefault();
+                  alert(`Thank you for your interest! This is a demo website for ${businessDetails.businessName}. In the actual website, this form would submit your landscaping request directly to ${businessDetails.ownerName}.`);
+                }}>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Name</label>
+                    <input type="text" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone</label>
+                    <input type="tel" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <input type="email" className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" required />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Service Needed</label>
+                    <select className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                      <option>Garden Care & Maintenance</option>
+                      <option>Landscape Design & Planting</option>
+                      <option>Lawn Care & Treatment</option>
+                      <option>Tree & Shrub Care</option>
+                      <option>Hardscaping & Irrigation</option>
+                      <option>Seasonal Cleanup</option>
+                      <option>Other</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">Project Description</label>
+                    <textarea rows={4} className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent" placeholder="Describe your landscaping project..."></textarea>
+                  </div>
+                  <button type="submit" className="w-full bg-green-600 hover:bg-green-700 text-white py-3 px-6 rounded-lg font-semibold transition-colors">
+                    Request Free Estimate
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Footer */}
+        <footer className="footer">
+          <div className="container">
+            <div className="footer-content">
+              <div className="footer-info grid md:grid-cols-3 gap-8 mb-8">
+                <div>
+                  <div className="footer-logo mb-4">
+                    <span className="text-2xl font-bold text-white">{businessDetails.businessName}</span>
+                  </div>
+                  <p className="text-gray-300">Your trusted landscaping professionals in {businessDetails.city}</p>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Contact Info</h4>
+                  <div className="space-y-2 text-gray-300">
+                    <p>Phone: <a href={`tel:${businessDetails.phone}`} className="hover:text-white">{businessDetails.phone}</a></p>
+                    <p>Email: <a href={`mailto:${businessDetails.email}`} className="hover:text-white">{businessDetails.email}</a></p>
+                    <p>Owner: {businessDetails.ownerName}</p>
+                  </div>
+                </div>
+                <div>
+                  <h4 className="text-lg font-semibold text-white mb-4">Services</h4>
+                  <div className="space-y-2 text-gray-300">
+                    <p>Garden Care & Maintenance</p>
+                    <p>Landscape Design & Planting</p>
+                    <p>Lawn Care & Treatment</p>
+                    <p>Tree & Shrub Care</p>
+                  </div>
+                </div>
+              </div>
+              <div className="border-t border-gray-600 pt-8">
+                <p className="copyright text-center">© 2025 {businessDetails.businessName}. All rights reserved.</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 }
