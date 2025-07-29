@@ -19,45 +19,23 @@ export async function POST(request: NextRequest) {
     const height = device === 'mobile' ? 667 : 800;
     
     try {
-      // Using Screenshot Layer API - free service with good quality
-      const screenshotApiUrl = `https://api.screenshotlayer.com/api/capture`;
-      const apiKey = process.env.SCREENSHOT_LAYER_API_KEY || 'demo_key'; // You can get a free API key
+      // Try using various free screenshot services
+      console.log(`Taking screenshot of ${cleanUrl} for ${device}`);
       
-      const screenshotResponse = await fetch(
-        `${screenshotApiUrl}?access_key=${apiKey}&url=${encodeURIComponent(cleanUrl)}&width=${width}&viewport=${width}x${height}&format=PNG&fullpage=0&force=1`,
-        {
-          method: 'GET',
+      // Method 1: Try using UrlBox.io free tier (no API key required for basic use)
+      try {
+        const urlboxUrl = `https://api.urlbox.io/v1/ca482d7e-9417-4569-90fe-80f7c5e1c781/png?url=${encodeURIComponent(cleanUrl)}&width=${width}&height=${height}&retina=false&thumb_width=${width}`;
+        const response = await fetch(urlboxUrl, {
           headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
           }
-        }
-      );
-
-      if (screenshotResponse.ok) {
-        const imageBuffer = await screenshotResponse.arrayBuffer();
-        const base64Image = Buffer.from(imageBuffer).toString('base64');
-        
-        return NextResponse.json({
-          screenshot: `data:image/png;base64,${base64Image}`,
-          url: cleanUrl,
-          device,
-          real: true
         });
-      } else {
-        throw new Error(`Screenshot API failed: ${screenshotResponse.status}`);
-      }
-    } catch (apiError) {
-      console.warn('Screenshot API failed, using fallback:', apiError);
-      
-      // Fallback: Try using alternative free service (screenshot.guru)
-      try {
-        const fallbackUrl = `https://api.thumbnail.ws/api/${process.env.THUMBNAIL_WS_API_KEY || 'demo'}/thumbnail/get?url=${encodeURIComponent(cleanUrl)}&width=${width}`;
-        const fallbackResponse = await fetch(fallbackUrl);
-        
-        if (fallbackResponse.ok) {
-          const imageBuffer = await fallbackResponse.arrayBuffer();
+
+        if (response.ok && response.headers.get('content-type')?.includes('image')) {
+          const imageBuffer = await response.arrayBuffer();
           const base64Image = Buffer.from(imageBuffer).toString('base64');
           
+          console.log(`Successfully captured real screenshot for ${cleanUrl}`);
           return NextResponse.json({
             screenshot: `data:image/png;base64,${base64Image}`,
             url: cleanUrl,
@@ -65,11 +43,72 @@ export async function POST(request: NextRequest) {
             real: true
           });
         }
-      } catch (fallbackError) {
-        console.warn('Fallback screenshot service also failed:', fallbackError);
+      } catch (urlboxError) {
+        console.warn('UrlBox.io failed:', urlboxError);
       }
+
+      // Method 2: Try using Microlink API (free tier)
+      try {
+        const microlinkUrl = `https://api.microlink.io/screenshot?url=${encodeURIComponent(cleanUrl)}&viewport.width=${width}&viewport.height=${height}&viewport.deviceScaleFactor=${device === 'mobile' ? 2 : 1}`;
+        const response = await fetch(microlinkUrl);
+        
+        if (response.ok) {
+          const result = await response.json();
+          if (result.status === 'success' && result.data && result.data.screenshot) {
+            // Microlink returns a URL to the screenshot image
+            const imageResponse = await fetch(result.data.screenshot);
+            if (imageResponse.ok) {
+              const imageBuffer = await imageResponse.arrayBuffer();
+              const base64Image = Buffer.from(imageBuffer).toString('base64');
+              
+              console.log(`Successfully captured real screenshot for ${cleanUrl} using Microlink`);
+              return NextResponse.json({
+                screenshot: `data:image/png;base64,${base64Image}`,
+                url: cleanUrl,
+                device,
+                real: true
+              });
+            }
+          }
+        }
+      } catch (microlinkError) {
+        console.warn('Microlink API failed:', microlinkError);
+      }
+
+      // Method 3: Try using website-screenshot API (alternative free service)
+      try {
+        const screenshotUrl = `https://mini.s-shot.ru/${width}x${height}/PNG/1024/Z100/?${cleanUrl}`;
+        const response = await fetch(screenshotUrl, {
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+          }
+        });
+
+        if (response.ok && response.headers.get('content-type')?.includes('image')) {
+          const imageBuffer = await response.arrayBuffer();
+          const base64Image = Buffer.from(imageBuffer).toString('base64');
+          
+          console.log(`Successfully captured real screenshot for ${cleanUrl} using s-shot`);
+          return NextResponse.json({
+            screenshot: `data:image/png;base64,${base64Image}`,
+            url: cleanUrl,
+            device,
+            real: true
+          });
+        }
+      } catch (sshotError) {
+        console.warn('S-shot service failed:', sshotError);
+      }
+
+      // If all real screenshot services fail, log and fall through to mock
+      console.warn(`All screenshot services failed for ${cleanUrl}, using mock screenshot`);
+      throw new Error('All screenshot services failed');
+      
+    } catch (apiError) {
+      console.warn('Screenshot capture failed, using mock:', apiError);
       
       // Final fallback: Enhanced mock screenshot
+      console.log(`Using enhanced mock screenshot for ${cleanUrl}`);
       return NextResponse.json({
         screenshot: `data:image/svg+xml;base64,${Buffer.from(createMockScreenshot(cleanUrl, device)).toString('base64')}`,
         url: cleanUrl,
