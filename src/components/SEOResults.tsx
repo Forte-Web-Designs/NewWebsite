@@ -795,7 +795,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
             </div>
 
             {/* Desktop Screenshot - Mobile Optimized */}
-            {desktopData.screenshot && (
+            {desktopData.screenshot ? (
               <div ref={screenshotRef} className="text-center mb-4">
                 <div className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
                   {getMobileScreenshotMessage('desktop')}
@@ -807,6 +807,12 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                 />
                 <div className="text-xs text-gray-500 mt-2">
                   ✅ Real website screenshot • Tap to view full size
+                </div>
+              </div>
+            ) : (
+              <div className="text-center mb-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div className="text-sm text-gray-500 dark:text-gray-400">
+                  📸 Desktop screenshot not available - but your performance data is ready below!
                 </div>
               </div>
             )}
@@ -841,7 +847,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
             </div>
 
             {/* Mobile Screenshot - Mobile Optimized */}
-            {mobileData.screenshot && (
+            {mobileData.screenshot ? (
               <div className="text-center mb-4">
                 <div className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
                   {getMobileScreenshotMessage('mobile')}
@@ -853,6 +859,12 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                 />
                 <div className="text-xs text-gray-500 mt-2">
                   ✅ Real mobile screenshot • Tap to view full size
+                </div>
+              </div>
+            ) : (
+              <div className="text-center mb-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div className="text-sm text-gray-500 dark:text-gray-400">
+                  📱 Mobile screenshot not available - but your performance data is ready below!
                 </div>
               </div>
             )}
