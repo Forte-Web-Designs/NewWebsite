@@ -32,16 +32,6 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
   const [emailError, setEmailError] = useState('');
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
   const [submittedEmail, setSubmittedEmail] = useState('');
-
-  // Auto-fill email from localStorage when popup opens
-  useEffect(() => {
-    if (showEmailForm) {
-      const savedEmail = localStorage.getItem('auditReportEmail');
-      if (savedEmail && !userEmail) {
-        setUserEmail(savedEmail);
-      }
-    }
-  }, [showEmailForm, userEmail]);
   
   if (!results) return null;
 
@@ -684,14 +674,6 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                   disabled={isSubmitting}
                   autoComplete="email"
                 />
-                {userEmail && localStorage.getItem('auditReportEmail') === userEmail && (
-                  <div className="mb-2 text-xs text-green-600 dark:text-green-400 flex items-center gap-1">
-                    <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-                    </svg>
-                    Email auto-filled from previous download
-                  </div>
-                )}
                 {emailError && (
                   <div className="mb-3 text-red-500 text-sm flex items-center gap-2">
                     <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -817,8 +799,8 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                 <img
                   src={desktopData.screenshot}
                   alt="Desktop Screenshot"
-                  className="max-w-full h-auto mx-auto rounded-lg shadow-md"
-                  style={{ maxHeight: '200px' }}
+                  className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
+                  style={{ maxHeight: '400px', minHeight: '250px' }}
                 />
               </div>
             )}
@@ -858,8 +840,8 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                 <img
                   src={mobileData.screenshot}
                   alt="Mobile Screenshot"
-                  className="max-w-full h-auto mx-auto rounded-lg shadow-md"
-                  style={{ maxHeight: '200px' }}
+                  className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
+                  style={{ maxHeight: '400px', minHeight: '250px' }}
                 />
               </div>
             )}

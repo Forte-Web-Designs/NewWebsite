@@ -103,6 +103,18 @@ export default function SEOAuditTool({
 
     // Animate through loading stages
     let currentStageIndex = 0;
+    let cyclingMessageIndex = 0;
+    
+    // Cycling messages for when progress reaches 100%
+    const completionMessages = [
+      "🎉 Almost done - preparing your personalized desktop & mobile results!",
+      "🔍 Getting everything ready for you...",
+      "⚡ Almost there, processing final details...",
+      "🎯 Putting the finishing touches on your report...",
+      "🚀 Just a few more seconds...",
+      "✨ Making sure everything looks perfect..."
+    ];
+    
     const progressInterval = setInterval(() => {
       if (currentStageIndex < loadingStages.length) {
         const stage = loadingStages[currentStageIndex];
@@ -110,6 +122,12 @@ export default function SEOAuditTool({
         setLoadingMessage(stage.message);
         setLoadingProgress(stage.progress);
         currentStageIndex++;
+      } else {
+        // Keep cycling through completion messages at 100%
+        setCurrentStage('Complete');
+        setLoadingProgress(100);
+        setLoadingMessage(completionMessages[cyclingMessageIndex]);
+        cyclingMessageIndex = (cyclingMessageIndex + 1) % completionMessages.length;
       }
     }, 2000); // Change stage every 2 seconds
 
