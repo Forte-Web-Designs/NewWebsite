@@ -185,11 +185,6 @@ export default function GenericIndustryLeadModal({
       if (response.ok) {
         // Success - show success message and reset form (same pattern as ContactForm)
         
-        // Save email to localStorage for future auto-fill
-        if (formData.email) {
-          localStorage.setItem('auditReportEmail', formData.email);
-        }
-        
         setShowSuccess(true);
         setFormData({
           firstName: '',
