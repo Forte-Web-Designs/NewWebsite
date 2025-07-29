@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 
 interface BusinessDetails {
@@ -15,7 +15,7 @@ interface BusinessDetails {
   industry: string;
 }
 
-export default function CustomLandscapingPage() {
+function CustomLandscapingPageContent() {
   const searchParams = useSearchParams();
   const [businessDetails, setBusinessDetails] = useState<BusinessDetails>({
     businessName: 'Forte Landscaping',
@@ -484,5 +484,13 @@ export default function CustomLandscapingPage() {
         title={`${businessDetails.businessName} Demo Website`}
       />
     </div>
+  );
+}
+
+export default function CustomLandscapingPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CustomLandscapingPageContent />
+    </Suspense>
   );
 }

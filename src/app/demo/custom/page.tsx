@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 
@@ -17,7 +17,7 @@ interface BusinessDetails {
   template: string;
 }
 
-export default function CustomDemoPage() {
+function CustomDemoPageContent() {
   const searchParams = useSearchParams();
   const [businessDetails, setBusinessDetails] = useState<BusinessDetails>({
     businessName: '',
@@ -330,5 +330,13 @@ export default function CustomDemoPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function CustomDemoPage() {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <CustomDemoPageContent />
+    </Suspense>
   );
 }
