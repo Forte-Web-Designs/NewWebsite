@@ -44,8 +44,9 @@ export default function ScreenshotTest() {
 
     } catch (error) {
       console.error('Screenshot test error:', error);
-      setDesktopResult({ error: error.message });
-      setMobileResult({ error: error.message });
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      setDesktopResult({ error: errorMessage });
+      setMobileResult({ error: errorMessage });
     } finally {
       setLoading(false);
     }
