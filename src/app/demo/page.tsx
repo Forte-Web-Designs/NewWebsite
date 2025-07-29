@@ -10,10 +10,24 @@ export default function DemoShowcasePage() {
           <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
             Website Templates Demo
           </h1>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto mb-8">
             Showcase of professional website templates for different industries. 
             Perfect examples to show clients what their website could look like.
           </p>
+          
+          {/* Custom Demo Generator Button */}
+          <div className="mb-8">
+            <Link
+              href="/demo/custom"
+              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-green-600 text-white font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300"
+            >
+              <span className="mr-3 text-2xl">🎯</span>
+              Create Custom Client Demo
+            </Link>
+            <p className="text-sm text-gray-500 mt-2">
+              Generate personalized demos with client business details
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
