@@ -14,9 +14,10 @@ export async function POST(request: NextRequest) {
       cleanUrl = 'https://' + cleanUrl;
     }
 
-    // Use Screenshot Layer API (free tier available)
+    // Mobile-optimized viewport sizes
     const width = device === 'mobile' ? 375 : 1200;
     const height = device === 'mobile' ? 667 : 800;
+    const scaleFactor = device === 'mobile' ? 2 : 1; // Higher resolution for mobile
     
     try {
       // Try using various free screenshot services

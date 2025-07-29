@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import { CONTACT_INFO } from '../constants/contact';
+import { optimizeScreenshotForMobile, getMobileScreenshotMessage } from '../utils/mobileScreenshotUtils';
 
 interface DeviceResults {
   lighthouseResult?: {
@@ -793,15 +794,20 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
               </div>
             </div>
 
-            {/* Desktop Screenshot */}
+            {/* Desktop Screenshot - Mobile Optimized */}
             {desktopData.screenshot && (
               <div ref={screenshotRef} className="text-center mb-4">
+                <div className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
+                  {getMobileScreenshotMessage('desktop')}
+                </div>
                 <img
-                  src={desktopData.screenshot}
+                  {...optimizeScreenshotForMobile(desktopData.screenshot, 'desktop')}
                   alt="Desktop Screenshot"
                   className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
-                  style={{ maxHeight: '400px' }}
                 />
+                <div className="text-xs text-gray-500 mt-2">
+                  ✅ Real website screenshot • Tap to view full size
+                </div>
               </div>
             )}
 
@@ -834,15 +840,20 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
               </div>
             </div>
 
-            {/* Mobile Screenshot */}
+            {/* Mobile Screenshot - Mobile Optimized */}
             {mobileData.screenshot && (
               <div className="text-center mb-4">
+                <div className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
+                  {getMobileScreenshotMessage('mobile')}
+                </div>
                 <img
-                  src={mobileData.screenshot}
+                  {...optimizeScreenshotForMobile(mobileData.screenshot, 'mobile')}
                   alt="Mobile Screenshot"
                   className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
-                  style={{ maxHeight: '400px' }}
                 />
+                <div className="text-xs text-gray-500 mt-2">
+                  ✅ Real mobile screenshot • Tap to view full size
+                </div>
               </div>
             )}
 
