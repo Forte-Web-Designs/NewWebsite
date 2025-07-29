@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from 'react';
+import { captureClientScreenshots } from '../utils/clientScreenshots';
 
 interface DeviceResults {
   lighthouseResult?: {
@@ -88,48 +89,46 @@ export default function SEOAuditTool({
     try {
       console.log('🔍 Starting screenshot capture for:', url);
       
-      // Capture both desktop and mobile screenshots
-      const [desktopScreenshot, mobileScreenshot] = await Promise.all([
-        fetch('/api/screenshot', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ url, device: 'desktop' })
-        }),
-        fetch('/api/screenshot', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ url, device: 'mobile' })
-        })
-      ]);
+      // Try server-side API first (works in development and with serverless functions)
+      try {
+        const [desktopScreenshot, mobileScreenshot] = await Promise.all([
+          fetch('/api/screenshot', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url, device: 'desktop' })
+          }),
+          fetch('/api/screenshot', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url, device: 'mobile' })
+          })
+        ]);
 
-      const desktopData = await desktopScreenshot.json();
-      const mobileData = await mobileScreenshot.json();
+        if (desktopScreenshot.ok && mobileScreenshot.ok) {
+          const desktopData = await desktopScreenshot.json();
+          const mobileData = await mobileScreenshot.json();
 
-      console.log('📸 Desktop screenshot captured:', {
-        success: !!desktopData.screenshot,
-        size: desktopData.screenshot ? Math.round(desktopData.screenshot.length / 1024) + 'KB' : 'N/A',
-        startsWithDataUrl: desktopData.screenshot?.startsWith('data:image/') || false
-      });
+          console.log('📸 Server-side screenshots captured successfully');
+          return {
+            desktop: desktopData.screenshot,
+            mobile: mobileData.screenshot
+          };
+        }
+      } catch (serverError) {
+        console.log('Server-side screenshot failed, trying client-side:', serverError);
+      }
 
-      console.log('📱 Mobile screenshot captured:', {
-        success: !!mobileData.screenshot,
-        size: mobileData.screenshot ? Math.round(mobileData.screenshot.length / 1024) + 'KB' : 'N/A',
-        startsWithDataUrl: mobileData.screenshot?.startsWith('data:image/') || false
-      });
+      // Fallback to client-side screenshots (works with static exports)
+      console.log('🔄 Attempting client-side screenshot capture...');
+      const clientScreenshots = await captureClientScreenshots(url);
+      
+      if (clientScreenshots) {
+        console.log('📸 Client-side screenshots captured successfully');
+        return clientScreenshots;
+      }
 
-      const result = {
-        desktop: desktopData.screenshot,
-        mobile: mobileData.screenshot
-      };
-
-      console.log('✅ Screenshot capture complete:', {
-        desktop: !!result.desktop,
-        mobile: !!result.mobile,
-        desktopSize: result.desktop ? Math.round(result.desktop.length / 1024) + 'KB' : 'None',
-        mobileSize: result.mobile ? Math.round(result.mobile.length / 1024) + 'KB' : 'None'
-      });
-
-      return result;
+      console.warn('❌ All screenshot methods failed');
+      return null;
     } catch (error) {
       console.error('❌ Screenshot capture failed:', error);
       return null;
