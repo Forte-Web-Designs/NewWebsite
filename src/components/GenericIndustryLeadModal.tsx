@@ -77,6 +77,19 @@ export default function GenericIndustryLeadModal({
     }
   }, [isOpen]);
 
+  // Auto-fill email functionality
+  useEffect(() => {
+    if (isOpen && !formData.email) {
+      const savedEmail = localStorage.getItem('auditReportEmail');
+      if (savedEmail) {
+        setFormData(prev => ({
+          ...prev,
+          email: savedEmail
+        }));
+      }
+    }
+  }, [isOpen, formData.email]);
+
   // Form validation
   const validateField = (name: string, value: string): string => {
     switch (name) {
@@ -184,6 +197,12 @@ export default function GenericIndustryLeadModal({
 
       if (response.ok) {
         // Success - show success message and reset form (same pattern as ContactForm)
+        
+        // Save email to localStorage for future auto-fill
+        if (formData.email) {
+          localStorage.setItem('auditReportEmail', formData.email);
+        }
+        
         setShowSuccess(true);
         setFormData({
           firstName: '',
@@ -333,7 +352,11 @@ export default function GenericIndustryLeadModal({
               <div className="grid grid-cols-1 gap-2.5">
                 <div>
                   <label htmlFor="email" className="block text-xs font-medium text-gray-700 dark:text-gray-300 mb-1">
-                    Email Address *
+                    Email Address * {formData.email && localStorage.getItem('auditReportEmail') === formData.email && (
+                      <span className="text-green-600 dark:text-green-400 text-xs">
+                        ✓ Auto-filled
+                      </span>
+                    )}
                   </label>
                   <input
                     id="email"

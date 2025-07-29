@@ -156,8 +156,8 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         looksGood: [] as string[]
       };
 
-      // Performance findings
-      if (scores.Performance >= 90) {
+      // Performance findings - Use more realistic thresholds
+      if (scores.Performance >= 95) {
         findings.looksGood.push(`Your ${deviceType.toLowerCase()} site loads quickly, so visitors can see your business right away.`);
       } else {
         if (audits['first-contentful-paint']?.score < 1) {
@@ -171,10 +171,17 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
             `The main part of your ${deviceType.toLowerCase()} homepage is slow to appear (${audits['largest-contentful-paint']?.displayValue}). Many visitors won't wait for slow pages to load.`
           );
         }
+        if (audits['cumulative-layout-shift']?.score < 1) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page layout shifts while loading, which can frustrate visitors trying to click buttons or read content.`);
+        }
+        // Add general performance improvement if score is moderate
+        if (scores.Performance < 90 && scores.Performance >= 70) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site's performance could be improved to provide a better user experience and potentially better search rankings.`);
+        }
       }
 
-      // SEO findings
-      if (scores.Meta >= 90) {
+      // SEO findings - More comprehensive checks
+      if (scores.Meta >= 95) {
         findings.looksGood.push(`Your ${deviceType.toLowerCase()} site has good search engine optimization basics in place.`);
       } else {
         if (audits['meta-description']?.score < 1) {
@@ -183,10 +190,17 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         if (audits['document-title']?.score < 1) {
           findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page title needs optimization to help customers find you in search results.`);
         }
+        if (audits['structured-data']?.score < 1) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site is missing structured data markup, which helps search engines understand your business better.`);
+        }
+        // Add general SEO improvement if score is moderate
+        if (scores.Meta < 90 && scores.Meta >= 70) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site's SEO could be enhanced to improve search engine visibility.`);
+        }
       }
 
-      // Accessibility findings
-      if (scores.Accessibility >= 90) {
+      // Accessibility findings - More comprehensive checks
+      if (scores.Accessibility >= 95) {
         findings.looksGood.push(`Your ${deviceType.toLowerCase()} site is accessible to users with disabilities, which is great for both customers and search rankings.`);
       } else {
         if (audits['color-contrast']?.score < 1) {
@@ -194,6 +208,13 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         }
         if (audits['image-alt']?.score < 1) {
           findings.needsAttention.push(`Some images on your ${deviceType.toLowerCase()} site are missing descriptions, which hurts both accessibility and SEO.`);
+        }
+        if (audits['button-name']?.score < 1) {
+          findings.needsAttention.push(`Some buttons on your ${deviceType.toLowerCase()} site don't have clear labels, which can confuse users and screen readers.`);
+        }
+        // Add general accessibility improvement if score is moderate
+        if (scores.Accessibility < 90 && scores.Accessibility >= 70) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site's accessibility could be improved to better serve all users and improve search rankings.`);
         }
       }
 
@@ -204,6 +225,22 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         }
         if (audits['tap-targets']?.score < 1) {
           findings.needsAttention.push('Some buttons or links on mobile might be too small or too close together, making them hard to tap.');
+        }
+      }
+
+      // Failsafe: Ensure there are always some realistic findings for improvement
+      // Most real websites have at least some areas that could be optimized
+      if (findings.needsAttention.length === 0) {
+        // Add common optimization opportunities for high-performing sites
+        if (deviceType === 'Mobile') {
+          findings.needsAttention.push('Your mobile site could benefit from further speed optimizations to reduce bounce rate and improve user experience.');
+        } else {
+          findings.needsAttention.push('Your desktop site has solid fundamentals, but could benefit from advanced performance optimizations for even better user experience.');
+        }
+        
+        // Add a general improvement suggestion
+        if (overallScore >= 90) {
+          findings.needsAttention.push(`Consider implementing advanced ${deviceType.toLowerCase()} optimization techniques to maintain your competitive edge.`);
         }
       }
 
