@@ -592,7 +592,7 @@ export default function ElectriciansPage() {
                         "Our new website completely changed our business. Customers now call us first because they trust our credentials are real. Emergency calls almost doubled and we're booking bigger projects."
                       </blockquote>
                       <cite className="text-green-600 dark:text-green-400 text-xs block mt-2">
-                        — Tom Martinez, Master Electrician
+                        - Tom Martinez, Master Electrician
                       </cite>
                     </div>
                   </div>
@@ -733,7 +733,7 @@ export default function ElectriciansPage() {
         industry="electricians"
         formName="Electrician Inquiry"
         title="Let's Build Your Electrician Website Right"
-        subtitle="Tell us about your electrical business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        subtitle="Tell us about your electrical business and we'll get back to you within 1 business day. No pressure - just real help from a team that understands your industry."
         mobileCtaText="Ready to power up your leads?"
         mobileCtaSubtext="Get your electrician website today"
         mobileBgGradient="bg-gradient-to-r from-yellow-500 to-orange-600"

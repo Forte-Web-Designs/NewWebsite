@@ -69,7 +69,7 @@ const faqData: Record<string, FAQItem[]> = {
     {
       question: "How fast will my website be? ⚡",
       answer:
-        "Lightning fast! Our sites load in under 2 seconds—so visitors stay, engage, and convert faster. Why does this matter? Every second your site takes to load costs you 7% of potential customers. Our speed optimization has helped clients increase conversions by 40%+. Fast sites don't just feel better - they make more money.",
+        "Lightning fast! Our sites load in under 2 seconds-so visitors stay, engage, and convert faster. Why does this matter? Every second your site takes to load costs you 7% of potential customers. Our speed optimization has helped clients increase conversions by 40%+. Fast sites don't just feel better - they make more money.",
     },
     {
       question: "What makes your websites different from everyone else's? 🔥",

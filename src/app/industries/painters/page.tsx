@@ -68,12 +68,12 @@ export default function PaintersPage() {
   // FAQ data
   const faqs = [
     {
-      question: "Can I show off specific project types (e.g. kitchen cabinets)?",
-      answer: "Yes — we can build categorized galleries with image tags and filters for different project types like kitchens, exteriors, commercial spaces, and more."
+      question: "Can I show off specific project types (ex: kitchen cabinets)?",
+      answer: "Yes - we can build categorized galleries with image tags and filters for different project types like kitchens, exteriors, commercial spaces, and more."
     },
     {
       question: "Do I need to write all the content myself?",
-      answer: "No — we handle that for you. Just send a few project details and services you offer, and we'll create professional content that converts."
+      answer: "No - we handle that for you. Just send a few project details and services you offer, and we'll create professional content that converts."
     },
     {
       question: "What if I don't have before/after photos?",
@@ -128,7 +128,7 @@ export default function PaintersPage() {
                   Painter Websites That Turn <span className="text-purple-300">Brush Strokes Into Booked Jobs</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-purple-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Whether it's residential, commercial, or specialty painting — we build painter websites that are clean, professional, and optimized to convert.
+                  Whether it's residential, commercial, or specialty painting - we build painter websites that are clean, professional, and optimized to convert.
                 </p>
                 
                 <div className="flex justify-center lg:justify-start mb-6 sm:mb-8">
@@ -273,7 +273,7 @@ export default function PaintersPage() {
                 Why Choose a Painter-Specific Website?
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Your ideal customers are searching online for trustworthy, skilled painters — often comparing 3–5 businesses before deciding. A generic site won't make the cut. Forte builds industry-specific websites designed to win painting jobs.
+                Your ideal customers are searching online for trustworthy, skilled painters - often comparing 3–5 businesses before deciding. A generic site won't make the cut. Forte builds industry-specific websites designed to win painting jobs.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -535,7 +535,7 @@ export default function PaintersPage() {
                 🖌️ Let's Paint a Better Online Presence
               </h2>
               <p className="text-xl mb-8 text-purple-100">
-                Don't blend into the competition. Get a painter website built to convert — tailored to your craft, optimized for growth.
+                Don't blend into the competition. Get a painter website built to convert - tailored to your craft, optimized for growth.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -566,7 +566,7 @@ export default function PaintersPage() {
         industry="painters"
         formName="Painter Inquiry"
         title="Let's Build Your Painter Website Right"
-        subtitle="Tell us about your painting business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        subtitle="Tell us about your painting business and we'll get back to you within 1 business day. No pressure - just real help from a team that understands your industry."
         mobileCtaText="Ready to paint more leads?"
         mobileCtaSubtext="Get your painter website today"
         mobileBgGradient="bg-gradient-to-r from-purple-600 to-pink-600"

@@ -24,7 +24,7 @@ export default function SocialMediaManagement() {
     {
       title: "🔍 1. Foundations",
       description:
-        "Clarity → Faster Results\nWe start with a deep discovery session to align your brand, audience, and goals. No fluff—just clarity that drives focused execution.",
+        "Clarity - Faster Results\nWe start with a deep discovery session to align your brand, audience, and goals. No fluff-just clarity that drives focused execution.",
       icon: "/images/home/foundation.svg",
     },
     {
@@ -48,7 +48,7 @@ export default function SocialMediaManagement() {
     {
       title: "🔧 5. Grow",
       description:
-        "Ongoing Support → Compounding ROI\nWith Forte Care™, your site stays updated, secure, and optimized. And when you're ready to scale with SEO, ads, or social—we've already laid the groundwork for it to work.",
+        "Ongoing Support - Compounding ROI\nWith Forte Care™, your site stays updated, secure, and optimized. And when you're ready to scale with SEO, ads, or social-we've already laid the groundwork for it to work.",
       icon: "/images/home/elevate.svg",
     },
   ];
@@ -67,7 +67,7 @@ export default function SocialMediaManagement() {
         <p className="font-inter font-normal text-sm sm:text-base md:text-lg leading-relaxed text-center text-gray-700 dark:text-gray-300 max-w-3xl mx-auto px-4">
           At Forte Web Designs, we don't believe in overcomplicating things. No
           fluff. No gimmicks. Just a clear, proven system that delivers fast,
-          secure, and high-converting websites—every time. Here's what makes our
+          secure, and high-converting websites-every time. Here's what makes our
           process different:
         </p>
       </div>
@@ -174,7 +174,7 @@ export default function SocialMediaManagement() {
         <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl leading-relaxed font-medium font-inter dark:text-secondary-1050 max-w-4xl mx-auto px-4">
           We make getting started easy. You can launch with a 5-page
           custom-built site for $0 down and $200/month (12-month minimum). Need
-          more pages or custom features? We'll price it out based on scope—fair
+          more pages or custom features? We'll price it out based on scope-fair
           and simple.
         </p>
       </div>
@@ -200,7 +200,7 @@ export default function SocialMediaManagement() {
               Rock-Solid Security:
             </h3>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
-              Our static sites don't use databases—so there's nothing to hack.
+              Our static sites don't use databases-so there's nothing to hack.
             </p>
           </div>
 
@@ -209,7 +209,7 @@ export default function SocialMediaManagement() {
               SEO-Ready:
             </h3>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
-              Titles, tags, structure—all dialed in to help you rank.
+              Titles, tags, structure-all dialed in to help you rank.
             </p>
           </div>
 
@@ -227,7 +227,7 @@ export default function SocialMediaManagement() {
               Lifetime Support:
             </h3>
             <p className="text-sm sm:text-base md:text-lg leading-relaxed font-normal font-inter text-gray-700 dark:text-gray-300">
-              You get us—not a robot and U.S. based.
+              You get us-not a robot and U.S. based.
             </p>
           </div>
 

@@ -457,7 +457,7 @@ export default function WebDesignPageClient() {
           <SimpleScrollReveal direction="up" delay={700}>
             <div className="text-center mb-12 sm:mb-16 px-4 sm:px-0">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-                A Beautiful Website Isn't Enough — It Needs to Be Found
+                A Beautiful Website Isn't Enough - It Needs to Be Found
               </h2>
             </div>
 
@@ -467,7 +467,7 @@ export default function WebDesignPageClient() {
                   <Icon name="search" className="w-8 h-8 sm:w-10 sm:h-10 text-green-600 dark:text-green-400" />
                 </div>
                 <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto leading-relaxed mb-6 sm:mb-8 px-4 sm:px-0">
-                  Every Forte website is coded with search visibility in mind — clean structure, fast load times, and mobile optimization. 
+                  Every Forte website is coded with search visibility in mind - clean structure, fast load times, and mobile optimization. 
                   It's not just about how it looks, but how it performs on Google.
                 </p>
               </div>
@@ -525,7 +525,7 @@ export default function WebDesignPageClient() {
 
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-6 sm:p-8 md:p-12 shadow-lg border border-gray-200 dark:border-gray-700">
               <p className="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center mb-6 sm:mb-8 max-w-3xl mx-auto">
-                We don't just build your website — we maintain it like a high-performance machine. Forte Care™ ensures your site stays fast, secure, and optimized.
+                We don't just build your website - we maintain it like a high-performance machine. Forte Care™ ensures your site stays fast, secure, and optimized.
               </p>
               
               <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6 text-center">
@@ -621,7 +621,7 @@ export default function WebDesignPageClient() {
           <SimpleScrollReveal direction="up" delay={900}>
             <div className="text-center mb-12 sm:mb-16 px-4 sm:px-0">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 sm:mb-6">
-                Part of the Forte Ecosystem™ — Built to Grow With You
+                Part of the Forte Ecosystem™ - Built to Grow With You
               </h2>
             </div>
 
@@ -703,7 +703,7 @@ export default function WebDesignPageClient() {
               
               <div className="text-center bg-blue-50 dark:bg-blue-900/20 rounded-xl p-6">
                 <p className="text-lg font-semibold text-blue-800 dark:text-blue-200 mb-4">
-                  Every Forte website is designed to scale — no rebuild needed when you're ready to grow.
+                  Every Forte website is designed to scale - no rebuild needed when you're ready to grow.
                 </p>
                 <Link href="/ecosystem" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors inline-block">
                   Explore the Forte Ecosystem™
@@ -735,7 +735,7 @@ export default function WebDesignPageClient() {
                   "We went from invisible online to booked out within a month. Best investment we made."
                 </blockquote>
                 <div className="text-center">
-                  <div className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">— Maria Santos, Santos Family Restaurant</div>
+                  <div className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">- Maria Santos, Santos Family Restaurant</div>
                 </div>
               </div>
 
@@ -746,10 +746,10 @@ export default function WebDesignPageClient() {
                   </div>
                 </div>
                 <blockquote className="text-base sm:text-lg text-gray-700 dark:text-gray-300 text-center italic mb-4 sm:mb-6">
-                  "Forte built a site that actually converts. We're seeing 2x the leads — and they update everything fast."
+                  "Forte built a site that actually converts. We're seeing 2x the leads - and they update everything fast."
                 </blockquote>
                 <div className="text-center">
-                  <div className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">— Mike Chen, Elite Home Services</div>
+                  <div className="font-semibold text-gray-900 dark:text-white text-sm sm:text-base">- Mike Chen, Elite Home Services</div>
                 </div>
               </div>
             </div>
@@ -771,7 +771,7 @@ export default function WebDesignPageClient() {
               Let's Build a Site That Actually Works
             </h2>
             <p className="text-base sm:text-lg md:text-xl text-blue-100 max-w-3xl mx-auto mb-6 sm:mb-8 px-4 sm:px-0">
-              We build more than websites. We build your digital foundation for long-term growth. Whether you're just starting or scaling fast — we're ready when you are.
+              We build more than websites. We build your digital foundation for long-term growth. Whether you're just starting or scaling fast - we're ready when you are.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-6 sm:mb-8 px-4 sm:px-0">
@@ -804,7 +804,7 @@ export default function WebDesignPageClient() {
         industry="web-design"
         formName="Web Design Inquiry"
         title="Let's Build Your Custom Website Right"
-        subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure — just real help from a team that builds custom, high-performance websites."
+        subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from a team that builds custom, high-performance websites."
         mobileCtaText="Ready to get a custom website?"
         mobileCtaSubtext="Get your web design quote today"
         mobileBgGradient="bg-gradient-to-r from-blue-600 to-indigo-600"

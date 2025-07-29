@@ -674,7 +674,7 @@ export default function HealthcarePage() {
         industry="healthcare"
         formName="Healthcare Inquiry"
         title="Let's Build Your Healthcare Website Right"
-        subtitle="Tell us about your medical practice and we'll get back to you within 1 business day. No pressure — just HIPAA-compliant solutions from a team that understands healthcare."
+        subtitle="Tell us about your medical practice and we'll get back to you within 1 business day. No pressure - just HIPAA-compliant solutions from a team that understands healthcare."
         mobileCtaText="Ready to increase appointments?"
         mobileCtaSubtext="Get your healthcare website today"
         mobileBgGradient="bg-gradient-to-r from-teal-600 to-blue-600"

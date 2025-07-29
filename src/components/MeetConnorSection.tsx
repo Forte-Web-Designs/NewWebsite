@@ -64,10 +64,10 @@ export default function MeetSethSection() {
                   Why I Started Forte Web Designs
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-left leading-relaxed">
-                  You know what really got to me? Seeing so many amazing business owners getting stuck with websites that just... didn't work for them. Sure, they looked pretty in the demo, but then reality hit—slow loading times, constant updates breaking things, and when something went wrong? Good luck getting help!
+                  You know what really got to me? Seeing so many amazing business owners getting stuck with websites that just... didn't work for them. Sure, they looked pretty in the demo, but then reality hit - slow loading times, constant updates breaking things, and when something went wrong? Good luck getting help!
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 text-left leading-relaxed mt-4">
-                  I started Forte Web Designs because I believe you deserve better. Way better. I build websites the old-school way—by hand, line by line—so they're lightning fast, rock solid, and actually grow your business.
+                  I started Forte Web Designs because I believe you deserve better. Way better. I build websites the old-school way - by hand, line by line - so they're lightning fast, rock solid, and actually grow your business.
                 </p>
               </div>
               
@@ -142,11 +142,11 @@ export default function MeetSethSection() {
                   
                   <div className="space-y-4 text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
                     <p>
-                      You know what really got to me? Seeing so many amazing business owners getting stuck with websites that just... didn't work for them. Sure, they looked pretty in the demo, but then reality hit—slow loading times, constant updates breaking things, and when something went wrong? Good luck getting help!
+                      You know what really got to me? Seeing so many amazing business owners getting stuck with websites that just... didn't work for them. Sure, they looked pretty in the demo, but then reality hit - slow loading times, constant updates breaking things, and when something went wrong? Good luck getting help!
                     </p>
                     
                     <p>
-                      I started Forte Web Designs because I believe you deserve better. Way better. I build websites the old-school way—by hand, line by line—so they're lightning fast, rock solid, and actually grow your business.
+                      I started Forte Web Designs because I believe you deserve better. Way better. I build websites the old-school way - by hand, line by line - so they're lightning fast, rock solid, and actually grow your business.
                     </p>
                     
                     <p>

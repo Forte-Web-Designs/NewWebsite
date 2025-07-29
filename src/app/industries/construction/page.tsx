@@ -12,11 +12,11 @@ import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
   title: 'Construction Websites Built to Win Bids and Build Trust',
-  description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. Custom-coded sites for construction companies that turn browsers into buyers—and estimates into jobs.',
+  description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. Custom-coded sites for construction companies that turn browsers into buyers-and estimates into jobs.',
   keywords: 'construction website design, contractor websites, construction company websites, mobile construction quotes, construction bid optimization',
   openGraph: {
     title: 'Construction Websites Built to Win Bids and Build Trust',
-    description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. Custom-coded sites for construction companies that turn browsers into buyers—and estimates into jobs.',
+    description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. Custom-coded sites for construction companies that turn browsers into buyers-and estimates into jobs.',
     type: 'website',
   },
 };
@@ -133,7 +133,7 @@ export default function ConstructionPage() {
                   Construction Websites Built to <span className="text-slate-300">Win Bids</span> and <span className="text-slate-300">Build Trust</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-slate-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  In construction, reputation and clarity win projects. Your website should act like your best foreman: organized, authoritative, and ready to close the deal. At Forte, we design custom-coded sites for construction companies that turn browsers into buyers—and estimates into jobs.
+                  In construction, reputation and clarity win projects. Your website should act like your best foreman: organized, authoritative, and ready to close the deal. At Forte, we design custom-coded sites for construction companies that turn browsers into buyers-and estimates into jobs.
                 </p>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
@@ -659,7 +659,7 @@ export default function ConstructionPage() {
         industry="construction"
         formName="Construction Inquiry"
         title="Let's Build Your Construction Website Right"
-        subtitle="Tell us about your construction business and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        subtitle="Tell us about your construction business and we'll get back to you within 1 business day. No pressure - just real help from a team that understands your industry."
         mobileCtaText="Ready to build more leads?"
         mobileCtaSubtext="Get your construction website today"
         mobileBgGradient="bg-gradient-to-r from-orange-600 to-amber-600"

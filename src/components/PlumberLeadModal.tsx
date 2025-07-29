@@ -209,7 +209,7 @@ export default function PlumberLeadModal({ isOpen, onClose, trigger = 'button' }
               Let's Build Your Plumbing Website Right
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mt-1 text-xs leading-snug">
-              Tell us what you need, and we'll get back to you within 1 business day. No pressure — just real help from a team that gets your industry.
+              Tell us what you need, and we'll get back to you within 1 business day. No pressure - just real help from a team that gets your industry.
             </p>
           </div>
         </div>
@@ -223,7 +223,7 @@ export default function PlumberLeadModal({ isOpen, onClose, trigger = 'button' }
                 Thanks, we got it!
               </h3>
               <p className="text-gray-600 dark:text-gray-400 text-xs md:text-sm leading-relaxed px-1">
-                A member of the Forte team will follow up within 1 business day. We've helped plumbers like you bring in more emergency calls and local leads — now let's do the same for your business.
+                A member of the Forte team will follow up within 1 business day. We've helped plumbers like you bring in more emergency calls and local leads - now let's do the same for your business.
               </p>
               <button
                 onClick={onClose}

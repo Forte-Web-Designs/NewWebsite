@@ -6,15 +6,15 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 const data = [
   {
     title: "Introducing Forte Solutions™",
-    description: "I believe small businesses deserve more than cookie-cutter websites. Forte Solutions™ is my complete ecosystem — combining strategy, handcrafted design, optimized performance, and long-term care into one seamless experience with personal attention you won't get from agencies."
+    description: "I believe small businesses deserve more than cookie-cutter websites. Forte Solutions™ is my complete ecosystem - combining strategy, handcrafted design, optimized performance, and long-term care into one seamless experience with personal attention you won't get from agencies."
   },
   {
     title: "Forte Growth™",
-    description: "Our most popular all-in-one monthly plan. For $200/month, you get a custom-coded website, hosting, and Forte Care™ baked in — so your site stays fast, fresh, and fully supported as your business grows."
+    description: "Our most popular all-in-one monthly plan. For $200/month, you get a custom-coded website, hosting, and Forte Care™ baked in - so your site stays fast, fresh, and fully supported as your business grows."
   },
   {
     title: "Forte Essential™",
-    description: "A simpler, budget-friendly version of our custom-coded sites. Same clean code, just fewer pages and features—perfect for startups or local service providers."
+    description: "A simpler, budget-friendly version of our custom-coded sites. Same clean code, just fewer pages and features - perfect for startups or local service providers."
   },
   {
     title: "Forte Pro™",
@@ -22,11 +22,11 @@ const data = [
   },
   {
     title: "Forte SiteRefresh™",
-    description: "Already have a site? We'll modernize your design, clean up code, and boost performance — without rebuilding from scratch."
+    description: "Already have a site? We'll modernize your design, clean up code, and boost performance - without rebuilding from scratch."
   },
   {
     title: "Forte Guarantee™",
-    description: "If you're not 100% satisfied with your design, we'll revise it until you are — or refund your payment. No risk, no pressure."
+    description: "If you're not 100% satisfied with your design, we'll revise it until you are - or refund your payment. No risk, no pressure."
   },
 ];
 

@@ -300,7 +300,7 @@ export default function SocialMediaPage() {
                   <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300 text-center">
                     "Our social media went from embarrassing to enviable. Now customers come in saying they follow us online, and we're busier than ever. That coffee chain across the street? They're struggling while we're thriving."
                     <footer className="text-sm mt-2 not-italic font-medium">
-                      — Sarah Chen, Owner
+                      - Sarah Chen, Owner
                     </footer>
                   </blockquote>
                 </div>
@@ -369,7 +369,7 @@ export default function SocialMediaPage() {
                   It Supports Everything Else
                 </h3>
                 <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  Social media makes your website, Google ads, and word-of-mouth marketing work better. When people hear about you, they check you out online—and active social profiles build instant credibility.
+                  Social media makes your website, Google ads, and word-of-mouth marketing work better. When people hear about you, they check you out online - and active social profiles build instant credibility.
                 </p>
               </div>
             </div>
@@ -621,7 +621,7 @@ export default function SocialMediaPage() {
         industry="social-media"
         formName="Social Media Inquiry"
         title="Let's Build Your Social Media Strategy Right"
-        subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure — just real help from a team that builds engaging social media strategies."
+        subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from a team that builds engaging social media strategies."
         mobileCtaText="Ready to grow on social?"
         mobileCtaSubtext="Get your social media plan today"
         mobileBgGradient="bg-gradient-to-r from-pink-600 to-purple-600"

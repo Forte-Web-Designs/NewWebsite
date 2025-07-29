@@ -93,11 +93,11 @@ export default function LandscapersPage() {
     },
     {
       question: "Can I show off specific projects?",
-      answer: "Absolutely — we build gallery sections and organize projects by service or season."
+      answer: "Absolutely - we build gallery sections and organize projects by service or season."
     },
     {
       question: "Do I need to write the content?",
-      answer: "Nope — we write the content for you. You just send us the list of services, any testimonials, and photos."
+      answer: "Nope - we write the content for you. You just send us the list of services, any testimonials, and photos."
     }
   ];
 
@@ -197,7 +197,7 @@ export default function LandscapersPage() {
 
                 {/* Subheading */}
                 <p className="text-xl text-green-100 leading-relaxed">
-                  Your landscaping work is visual — your website should be too. At Forte, we build stunning, SEO-optimized websites that showcase your work, rank on Google, and bring in new clients every week.
+                  Your landscaping work is visual - your website should be too. At Forte, we build stunning, SEO-optimized websites that showcase your work, rank on Google, and bring in new clients every week.
                 </p>
 
                 {/* Key Benefits */}
@@ -339,7 +339,7 @@ export default function LandscapersPage() {
                 🌱 Why Landscapers Need a Tailored Website (Not a Generic One)
               </h2>
               <p className="text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto">
-                Most agencies just slap your name on a template. We build landscaping websites that actually convert — because we know your customers, your services, and how they search.
+                Most agencies just slap your name on a template. We build landscaping websites that actually convert - because we know your customers, your services, and how they search.
               </p>
             </div>
           </SimpleScrollReveal>

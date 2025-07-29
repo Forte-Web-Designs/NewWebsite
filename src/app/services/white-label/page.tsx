@@ -26,10 +26,10 @@ export default function WhiteLabelPage() {
                   Scale Your Agency with Forte Web Designs
                 </h1>
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8 max-w-3xl mx-auto">
-                  Custom-built websites, blazing performance, and hands-off fulfillment—all under your brand.
+                  Custom-built websites, blazing performance, and hands-off fulfillment - all under your brand.
                 </p>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl mx-auto">
-                  At Forte Web Designs, we don't just build websites—we build partnerships. We work behind the scenes to deliver premium websites for your clients while you take the credit. Whether you need a reliable white-label partner to boost your agency's capacity or just want to outsource the dev work you hate—we've got your back.
+                  At Forte Web Designs, we don't just build websites - we build partnerships. We work behind the scenes to deliver premium websites for your clients while you take the credit. Whether you need a reliable white-label partner to boost your agency's capacity or just want to outsource the dev work you hate - we've got your back.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -57,7 +57,7 @@ export default function WhiteLabelPage() {
                     </h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400">
-                    You bring the brand and strategy—we bring the code, speed, and clean execution.
+                    You bring the brand and strategy - we bring the code, speed, and clean execution.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -85,7 +85,7 @@ export default function WhiteLabelPage() {
                     </h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Work how you want—send us the brief, loop us in with your client, or let us stay invisible.
+                    Work how you want - send us the brief, loop us in with your client, or let us stay invisible.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -128,7 +128,7 @@ export default function WhiteLabelPage() {
                     Discovery Form
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    You fill out a short intake form—business goals, target audience, tone, etc.
+                    You fill out a short intake form - business goals, target audience, tone, etc.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -156,7 +156,7 @@ export default function WhiteLabelPage() {
                     Custom Development
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    We hand-code the full site—no templates, no bloat, just beautiful fast code.
+                    We hand-code the full site - no templates, no bloat, just beautiful fast code.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -270,7 +270,7 @@ export default function WhiteLabelPage() {
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
                   <div className="mb-6">
                     <p className="text-gray-600 dark:text-gray-400 italic mb-4">
-                      "We've tried a few white-label developers over the years—none of them matched the quality and consistency we've gotten from Forte Web Designs. The fact that I can hand things off without micromanaging is a lifesaver."
+                      "We've tried a few white-label developers over the years - none of them matched the quality and consistency we've gotten from Forte Web Designs. The fact that I can hand things off without micromanaging is a lifesaver."
                     </p>
                   </div>
                   <div className="border-t border-gray-200 dark:border-gray-700 pt-4">
@@ -303,7 +303,7 @@ export default function WhiteLabelPage() {
             <SimpleScrollReveal direction="up" delay={200}>
               <div className="text-center">
                 <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  📞 Let's Build Something Strong—Together
+                  📞 Let's Build Something Strong - Together
                 </h2>
                 <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 leading-relaxed mb-8">
                   Book a call with Seth or request more info. We'll walk you through how white label with Forte works and see if we're a fit.

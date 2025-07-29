@@ -148,7 +148,7 @@ function CompetitiveAnalysisContent() {
             Advanced Competitive Analysis
           </h1>
           <p className="max-w-4xl mx-auto font-inter font-normal text-sm sm:text-base lg:text-lg leading-relaxed tracking-normal text-center text-[#626262] dark:text-[#B4B4B4]">
-            Your site already performs well—but your competitors are studying you. 
+            Your site already performs well-but your competitors are studying you. 
             Our specialized analysis reveals the advanced strategies they're planning to use against you, 
             and exactly how to stay ahead.
           </p>

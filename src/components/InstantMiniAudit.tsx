@@ -204,7 +204,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
         mobileFriendly: false,
         seoScore: 0,
         isLoading: false,
-        error: "Please enter a real website URL (e.g., google.com, amazon.com)"
+        error: "Please enter a real website URL (ex: google.com, amazon.com)"
       });
       return;
     }

@@ -85,7 +85,7 @@ export default function RestaurantsPage() {
   const faqs = [
     {
       question: "Do you build for all food types?",
-      answer: "Yes — from food trucks and diners to upscale dining, cafes, and multi-location franchises. We understand the unique needs of different restaurant types and dining experiences."
+      answer: "Yes - from food trucks and diners to upscale dining, cafes, and multi-location franchises. We understand the unique needs of different restaurant types and dining experiences."
     },
     {
       question: "Can I show specials, events, and new menus?",
@@ -93,7 +93,7 @@ export default function RestaurantsPage() {
     },
     {
       question: "Do you handle online ordering?",
-      answer: "Yes — we can integrate tools like Toast, Square, or build a simple custom flow for to-go orders. We'll set up whatever works best for your restaurant's ordering process."
+      answer: "Yes - we can integrate tools like Toast, Square, or build a simple custom flow for to-go orders. We'll set up whatever works best for your restaurant's ordering process."
     },
     {
       question: "Do I need to provide all the content?",
@@ -144,7 +144,7 @@ export default function RestaurantsPage() {
                   Restaurant Websites That Fill <span className="text-orange-300">Tables (and Order Carts)</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-orange-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  Your food looks amazing — your website should too. We build restaurant websites that are fast, beautiful, and designed to drive reservations, online orders, and local search traffic.
+                  Your food looks amazing - your website should too. We build restaurant websites that are fast, beautiful, and designed to drive reservations, online orders, and local search traffic.
                 </p>
                 
                 <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 sm:gap-6 text-sm text-orange-200 mb-6 sm:mb-8">
@@ -358,7 +358,7 @@ export default function RestaurantsPage() {
                 🍕 Why Restaurants Need Industry-Specific Websites
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Generic web designers don't understand the restaurant world — we do. A slow site or clunky menu can cost you bookings, especially when 70% of diners browse from their phones.
+                Generic web designers don't understand the restaurant world - we do. A slow site or clunky menu can cost you bookings, especially when 70% of diners browse from their phones.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -599,7 +599,7 @@ export default function RestaurantsPage() {
                 🍽️ Ready to Turn Clicks into Customers?
               </h2>
               <p className="text-xl mb-8 text-orange-100">
-                Join restaurants like Red Oak Smokehouse who turned a boring website into a 24/7 reservations and revenue machine. You focus on the food — we'll handle the web.
+                Join restaurants like Red Oak Smokehouse who turned a boring website into a 24/7 reservations and revenue machine. You focus on the food - we'll handle the web.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -630,7 +630,7 @@ export default function RestaurantsPage() {
         industry="restaurants"
         formName="Restaurant Inquiry"
         title="Let's Build Your Restaurant Website Right"
-        subtitle="Tell us about your restaurant and we'll get back to you within 1 business day. No pressure — just real help from a team that understands your industry."
+        subtitle="Tell us about your restaurant and we'll get back to you within 1 business day. No pressure - just real help from a team that understands your industry."
         mobileCtaText="Ready to fill more tables?"
         mobileCtaSubtext="Get your restaurant website today"
         mobileBgGradient="bg-gradient-to-r from-red-600 to-pink-600"

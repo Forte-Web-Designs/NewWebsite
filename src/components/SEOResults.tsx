@@ -1,7 +1,8 @@
 "use client";
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CONTACT_INFO } from '../constants/contact';
+import { optimizeScreenshotForMobile, getMobileScreenshotMessage } from '../utils/mobileScreenshotUtils';
 
 interface DeviceResults {
   lighthouseResult?: {
@@ -146,54 +147,91 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         looksGood: [] as string[]
       };
 
-      // Performance findings
-      if (scores.Performance >= 90) {
+      // Performance findings - Use more realistic thresholds
+      if (scores.Performance >= 95) {
         findings.looksGood.push(`Your ${deviceType.toLowerCase()} site loads quickly, so visitors can see your business right away.`);
       } else {
         if (audits['first-contentful-paint']?.score < 1) {
           const seconds = Math.round((audits['first-contentful-paint']?.numericValue || 0) / 100) / 10;
           findings.needsAttention.push(
-            `Your ${deviceType.toLowerCase()} site is slow to show content (${seconds}s). Even a short delay can cause potential customers to leave.`
+            `Your ${deviceType.toLowerCase()} site takes ${seconds}s to show content. Visitors leave within 3 seconds if your site doesn't load fast enough - you could be losing customers every day.`
           );
         }
         if (audits['largest-contentful-paint']?.score < 1) {
           findings.needsAttention.push(
-            `The main part of your ${deviceType.toLowerCase()} homepage is slow to appear (${audits['largest-contentful-paint']?.displayValue}). Many visitors won't wait for slow pages to load.`
+            `Your main content takes ${audits['largest-contentful-paint']?.displayValue} to appear on ${deviceType.toLowerCase()}. Most potential customers won't wait - they'll go to your competitors instead.`
           );
+        }
+        if (audits['cumulative-layout-shift']?.score < 1) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page moves around while loading. When customers try to click your contact button or phone number, the page shifts and they click the wrong thing - this frustrates visitors and costs you leads.`);
+        }
+        // Add general performance improvement if score is moderate
+        if (scores.Performance < 90 && scores.Performance >= 70) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site loads okay, but it could be much faster. Every second of delay costs you 7% of potential customers - speed improvements directly increase your sales.`);
         }
       }
 
-      // SEO findings
-      if (scores.Meta >= 90) {
+      // SEO findings - More comprehensive checks
+      if (scores.Meta >= 95) {
         findings.looksGood.push(`Your ${deviceType.toLowerCase()} site has good search engine optimization basics in place.`);
       } else {
         if (audits['meta-description']?.score < 1) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} homepage is missing a meta description. This is a missed opportunity to attract clicks from Google search results.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site is missing compelling descriptions in Google search results. Without these, fewer people will click on your business when they search for your services.`);
         }
         if (audits['document-title']?.score < 1) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page title needs optimization to help customers find you in search results.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page titles aren't optimized for search. This means your business isn't showing up when customers search for what you offer.`);
+        }
+        if (audits['structured-data']?.score < 1) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site is missing special code that helps Google understand your business. Adding this can make your business stand out with star ratings, hours, and contact info right in search results.`);
+        }
+        // Add general SEO improvement if score is moderate
+        if (scores.Meta < 90 && scores.Meta >= 70) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site's search engine visibility could be much better. With proper optimization, more customers could find your business when they're actively looking for your services.`);
         }
       }
 
-      // Accessibility findings
-      if (scores.Accessibility >= 90) {
+      // Accessibility findings - More comprehensive checks
+      if (scores.Accessibility >= 95) {
         findings.looksGood.push(`Your ${deviceType.toLowerCase()} site is accessible to users with disabilities, which is great for both customers and search rankings.`);
       } else {
         if (audits['color-contrast']?.score < 1) {
-          findings.needsAttention.push(`Some text on your ${deviceType.toLowerCase()} site might be hard to read due to color contrast issues.`);
+          findings.needsAttention.push(`Some text on your ${deviceType.toLowerCase()} site is hard to read. When customers can't easily read your prices, services, or contact info, you lose sales.`);
         }
         if (audits['image-alt']?.score < 1) {
-          findings.needsAttention.push(`Some images on your ${deviceType.toLowerCase()} site are missing descriptions, which hurts both accessibility and SEO.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} images are missing descriptions. This not only hurts your Google rankings but also makes your site unusable for visually impaired customers.`);
+        }
+        if (audits['button-name']?.score < 1) {
+          findings.needsAttention.push(`Some buttons on your ${deviceType.toLowerCase()} site don't have clear labels. Customers get confused about what actions to take, leading to lost conversions.`);
+        }
+        // Add general accessibility improvement if score is moderate
+        if (scores.Accessibility < 90 && scores.Accessibility >= 70) {
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site could work better for all customers. Making it more accessible also improves your Google rankings and opens your business to more potential customers.`);
         }
       }
 
       // Mobile-specific findings
       if (deviceType === 'Mobile') {
         if (audits['viewport']?.score < 1) {
-          findings.needsAttention.push('Your site may not display properly on mobile devices due to viewport configuration issues.');
+          findings.needsAttention.push('Your site doesn\'t display properly on phones and tablets. With 60% of customers browsing on mobile, you\'re potentially losing more than half your business.');
         }
         if (audits['tap-targets']?.score < 1) {
-          findings.needsAttention.push('Some buttons or links on mobile might be too small or too close together, making them hard to tap.');
+          findings.needsAttention.push('Your buttons and links are too small or close together on mobile. Customers can\'t easily tap your phone number or contact forms, which directly costs you leads.');
+        }
+      }
+
+      // Failsafe: Ensure there are always some realistic findings for improvement
+      // Most real websites have at least some areas that could be optimized
+      if (findings.needsAttention.length === 0) {
+        // Add common optimization opportunities for high-performing sites
+        if (deviceType === 'Mobile') {
+          findings.needsAttention.push('Your mobile site is performing well, but there are advanced speed optimizations that could reduce bounce rate and increase the time customers spend browsing your services.');
+        } else {
+          findings.needsAttention.push('Your desktop site has solid fundamentals, but there are proven techniques to make it even faster and more engaging for potential customers.');
+        }
+        
+        // Add a general improvement suggestion
+        if (overallScore >= 90) {
+          findings.needsAttention.push(`Even high-performing sites like yours can benefit from advanced ${deviceType.toLowerCase()} optimization techniques to stay ahead of competitors and maximize your online presence.`);
         }
       }
 
@@ -332,6 +370,9 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
 
       // Proceed with PDF download
       downloadPDF();
+      
+      // Save email to localStorage for future auto-fill
+      localStorage.setItem('auditReportEmail', userEmail);
       
       // Show success message
       setSubmittedEmail(userEmail);
@@ -619,7 +660,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                 </p>
                 <input
                   type="email"
-                  placeholder="your@email.com"
+                  placeholder={userEmail ? userEmail : "your@email.com"}
                   value={userEmail}
                   onChange={(e) => {
                     setUserEmail(e.target.value);
@@ -753,15 +794,27 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
               </div>
             </div>
 
-            {/* Desktop Screenshot */}
-            {desktopData.screenshot && (
+            {/* Desktop Screenshot - Mobile Optimized */}
+            {desktopData.screenshot ? (
               <div ref={screenshotRef} className="text-center mb-4">
+                <div className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
+                  {getMobileScreenshotMessage('desktop')}
+                </div>
                 <img
                   src={desktopData.screenshot}
                   alt="Desktop Screenshot"
-                  className="max-w-full h-auto mx-auto rounded-lg shadow-md"
-                  style={{ maxHeight: '200px' }}
+                  className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
+                  style={{ maxHeight: '400px', minHeight: '250px' }}
                 />
+                <div className="text-xs text-gray-500 mt-2">
+                  ✅ Real website screenshot • Tap to view full size
+                </div>
+              </div>
+            ) : (
+              <div className="text-center mb-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div className="text-sm text-gray-500 dark:text-gray-400">
+                  📸 Desktop screenshot not available - but your performance data is ready below!
+                </div>
               </div>
             )}
 
@@ -794,15 +847,27 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
               </div>
             </div>
 
-            {/* Mobile Screenshot */}
-            {mobileData.screenshot && (
+            {/* Mobile Screenshot - Mobile Optimized */}
+            {mobileData.screenshot ? (
               <div className="text-center mb-4">
+                <div className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
+                  {getMobileScreenshotMessage('mobile')}
+                </div>
                 <img
                   src={mobileData.screenshot}
                   alt="Mobile Screenshot"
-                  className="max-w-full h-auto mx-auto rounded-lg shadow-md"
-                  style={{ maxHeight: '200px' }}
+                  className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
+                  style={{ maxHeight: '400px', minHeight: '250px' }}
                 />
+                <div className="text-xs text-gray-500 mt-2">
+                  ✅ Real mobile screenshot • Tap to view full size
+                </div>
+              </div>
+            ) : (
+              <div className="text-center mb-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                <div className="text-sm text-gray-500 dark:text-gray-400">
+                  📱 Mobile screenshot not available - but your performance data is ready below!
+                </div>
               </div>
             )}
 
