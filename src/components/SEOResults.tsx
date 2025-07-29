@@ -801,9 +801,10 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                   {getMobileScreenshotMessage('desktop')}
                 </div>
                 <img
-                  {...optimizeScreenshotForMobile(desktopData.screenshot, 'desktop')}
+                  src={desktopData.screenshot}
                   alt="Desktop Screenshot"
                   className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
+                  style={{ maxHeight: '400px', minHeight: '250px' }}
                 />
                 <div className="text-xs text-gray-500 mt-2">
                   ✅ Real website screenshot • Tap to view full size
@@ -853,9 +854,10 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
                   {getMobileScreenshotMessage('mobile')}
                 </div>
                 <img
-                  {...optimizeScreenshotForMobile(mobileData.screenshot, 'mobile')}
+                  src={mobileData.screenshot}
                   alt="Mobile Screenshot"
                   className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
+                  style={{ maxHeight: '400px', minHeight: '250px' }}
                 />
                 <div className="text-xs text-gray-500 mt-2">
                   ✅ Real mobile screenshot • Tap to view full size

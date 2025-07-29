@@ -25,18 +25,26 @@ export async function POST(request: NextRequest) {
       
       // Method 1: Try using UrlBox.io free tier (no API key required for basic use)
       try {
-        const urlboxUrl = `https://api.urlbox.io/v1/ca482d7e-9417-4569-90fe-80f7c5e1c781/png?url=${encodeURIComponent(cleanUrl)}&width=${width}&height=${height}&retina=false&thumb_width=${width}`;
+        const urlboxUrl = `https://api.urlbox.io/v1/ca482d7e-9417-4569-90fe-80f7c5e1c781/png?url=${encodeURIComponent(cleanUrl)}&width=${width}&height=${height}&retina=false&thumb_width=${width}&delay=3000`;
+        console.log(`Trying UrlBox.io for ${cleanUrl}...`);
+        
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
+        
         const response = await fetch(urlboxUrl, {
+          signal: controller.signal,
           headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
           }
         });
 
+        clearTimeout(timeoutId);
+
         if (response.ok && response.headers.get('content-type')?.includes('image')) {
           const imageBuffer = await response.arrayBuffer();
           const base64Image = Buffer.from(imageBuffer).toString('base64');
           
-          console.log(`Successfully captured real screenshot for ${cleanUrl}`);
+          console.log(`✅ Successfully captured real screenshot for ${cleanUrl} using UrlBox.io (${Math.round(base64Image.length / 1024)}KB)`);
           return NextResponse.json({
             screenshot: `data:image/png;base64,${base64Image}`,
             url: cleanUrl,
@@ -45,24 +53,45 @@ export async function POST(request: NextRequest) {
           });
         }
       } catch (urlboxError) {
-        console.warn('UrlBox.io failed:', urlboxError);
+        console.warn('UrlBox.io failed:', urlboxError instanceof Error ? urlboxError.message : urlboxError);
       }
 
-      // Method 2: Try using Microlink API (free tier)
+      // Method 2: Try using Microlink API (free tier) with timeout
       try {
-        const microlinkUrl = `https://api.microlink.io/screenshot?url=${encodeURIComponent(cleanUrl)}&viewport.width=${width}&viewport.height=${height}&viewport.deviceScaleFactor=${device === 'mobile' ? 2 : 1}`;
-        const response = await fetch(microlinkUrl);
+        const microlinkUrl = `https://api.microlink.io/screenshot?url=${encodeURIComponent(cleanUrl)}&viewport.width=${width}&viewport.height=${height}&viewport.deviceScaleFactor=${device === 'mobile' ? 2 : 1}&waitFor=3000`;
+        
+        console.log(`Trying Microlink API for ${cleanUrl}...`);
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
+        
+        const response = await fetch(microlinkUrl, {
+          signal: controller.signal,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+          }
+        });
+        
+        clearTimeout(timeoutId);
         
         if (response.ok) {
           const result = await response.json();
           if (result.status === 'success' && result.data && result.data.screenshot) {
+            console.log(`Microlink API success for ${cleanUrl}, fetching image...`);
             // Microlink returns a URL to the screenshot image
-            const imageResponse = await fetch(result.data.screenshot);
+            const imageController = new AbortController();
+            const imageTimeoutId = setTimeout(() => imageController.abort(), 10000);
+            
+            const imageResponse = await fetch(result.data.screenshot, {
+              signal: imageController.signal
+            });
+            
+            clearTimeout(imageTimeoutId);
+            
             if (imageResponse.ok) {
               const imageBuffer = await imageResponse.arrayBuffer();
               const base64Image = Buffer.from(imageBuffer).toString('base64');
               
-              console.log(`Successfully captured real screenshot for ${cleanUrl} using Microlink`);
+              console.log(`✅ Successfully captured real screenshot for ${cleanUrl} using Microlink (${Math.round(base64Image.length / 1024)}KB)`);
               return NextResponse.json({
                 screenshot: `data:image/png;base64,${base64Image}`,
                 url: cleanUrl,
@@ -73,23 +102,31 @@ export async function POST(request: NextRequest) {
           }
         }
       } catch (microlinkError) {
-        console.warn('Microlink API failed:', microlinkError);
+        console.warn('Microlink API failed:', microlinkError instanceof Error ? microlinkError.message : microlinkError);
       }
 
-      // Method 3: Try using website-screenshot API (alternative free service)
+      // Method 3: Try using S-Shot.ru (reliable, no API key needed)
       try {
         const screenshotUrl = `https://mini.s-shot.ru/${width}x${height}/PNG/1024/Z100/?${cleanUrl}`;
+        console.log(`Trying S-Shot.ru for ${cleanUrl}...`);
+        
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 20000); // 20 second timeout for s-shot
+        
         const response = await fetch(screenshotUrl, {
+          signal: controller.signal,
           headers: {
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
           }
         });
 
+        clearTimeout(timeoutId);
+
         if (response.ok && response.headers.get('content-type')?.includes('image')) {
           const imageBuffer = await response.arrayBuffer();
           const base64Image = Buffer.from(imageBuffer).toString('base64');
           
-          console.log(`Successfully captured real screenshot for ${cleanUrl} using s-shot`);
+          console.log(`✅ Successfully captured real screenshot for ${cleanUrl} using S-Shot.ru (${Math.round(base64Image.length / 1024)}KB)`);
           return NextResponse.json({
             screenshot: `data:image/png;base64,${base64Image}`,
             url: cleanUrl,
@@ -98,7 +135,40 @@ export async function POST(request: NextRequest) {
           });
         }
       } catch (sshotError) {
-        console.warn('S-shot service failed:', sshotError);
+        console.warn('S-shot service failed:', sshotError instanceof Error ? sshotError.message : sshotError);
+      }
+
+      // Method 4: Try using Screenshot Machine API (backup option)
+      try {
+        const screenshotMachineUrl = `https://api.screenshotmachine.com?key=demo&url=${encodeURIComponent(cleanUrl)}&dimension=${width}x${height}&format=png&cacheLimit=0`;
+        console.log(`Trying Screenshot Machine for ${cleanUrl}...`);
+        
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000);
+        
+        const response = await fetch(screenshotMachineUrl, {
+          signal: controller.signal,
+          headers: {
+            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36'
+          }
+        });
+
+        clearTimeout(timeoutId);
+
+        if (response.ok && response.headers.get('content-type')?.includes('image')) {
+          const imageBuffer = await response.arrayBuffer();
+          const base64Image = Buffer.from(imageBuffer).toString('base64');
+          
+          console.log(`✅ Successfully captured real screenshot for ${cleanUrl} using Screenshot Machine (${Math.round(base64Image.length / 1024)}KB)`);
+          return NextResponse.json({
+            screenshot: `data:image/png;base64,${base64Image}`,
+            url: cleanUrl,
+            device,
+            real: true
+          });
+        }
+      } catch (screenshotMachineError) {
+        console.warn('Screenshot Machine failed:', screenshotMachineError instanceof Error ? screenshotMachineError.message : screenshotMachineError);
       }
 
       // If all real screenshot services fail, log and fall through to mock
