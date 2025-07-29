@@ -84,6 +84,7 @@ export default function SEOAuditTool({
     }
   };
 
+<<<<<<< HEAD
   // Function to generate screenshot URLs using a reliable service
   const generateScreenshotUrls = (url: string) => {
     try {
@@ -103,6 +104,77 @@ export default function SEOAuditTool({
         desktop: `https://shot.screenshotapi.net/screenshot?token=9QS2YM4-KQAJTAH-H8XGQ1E-MZMKHPZ&url=${fallbackUrl}&width=1200&height=800&output=image&file_type=png&wait_for_event=load`,
         mobile: `https://shot.screenshotapi.net/screenshot?token=9QS2YM4-KQAJTAH-H8XGQ1E-MZMKHPZ&url=${fallbackUrl}&width=375&height=667&output=image&file_type=png&wait_for_event=load`
       };
+=======
+  // Function to capture website screenshots
+  const captureWebsiteScreenshots = async (url: string) => {
+    console.log('🔍 Starting screenshot capture for:', url);
+    
+    try {
+      // For production (static export), API routes don't work, so use client-side capture
+      const isProduction = process.env.NODE_ENV === 'production' || !window.location.hostname.includes('localhost');
+      
+      if (isProduction) {
+        console.log('🌐 Production environment detected, using client-side screenshot capture...');
+        const clientScreenshots = await captureClientScreenshots(url);
+        
+        if (clientScreenshots && (clientScreenshots.desktop || clientScreenshots.mobile)) {
+          console.log('✅ Client-side screenshots captured successfully');
+          return clientScreenshots;
+        }
+        
+        console.warn('❌ Client-side screenshot capture failed, will use mock screenshots');
+        return null;
+      }
+      
+      // For development, try server-side API first, then fallback to client-side
+      try {
+        console.log('🖥️ Development environment, attempting server-side screenshot capture...');
+        const [desktopScreenshot, mobileScreenshot] = await Promise.all([
+          fetch('/api/screenshot', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url, device: 'desktop' })
+          }),
+          fetch('/api/screenshot', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ url, device: 'mobile' })
+          })
+        ]);
+
+        if (desktopScreenshot.ok && mobileScreenshot.ok) {
+          const desktopData = await desktopScreenshot.json();
+          const mobileData = await mobileScreenshot.json();
+
+          if (desktopData.screenshot && mobileData.screenshot) {
+            console.log('✅ Server-side screenshots captured successfully');
+            return {
+              desktop: desktopData.screenshot,
+              mobile: mobileData.screenshot
+            };
+          }
+        }
+        
+        console.log('⚠️ Server-side API unavailable, trying client-side...');
+      } catch (serverError) {
+        console.log('🔄 Server-side screenshot failed, trying client-side:', serverError);
+      }
+
+      // Fallback to client-side screenshots (works with static exports)
+      console.log('🌐 Attempting client-side screenshot capture...');
+      const clientScreenshots = await captureClientScreenshots(url);
+      
+      if (clientScreenshots && (clientScreenshots.desktop || clientScreenshots.mobile)) {
+        console.log('✅ Client-side screenshots captured successfully');
+        return clientScreenshots;
+      }
+
+      console.warn('❌ All screenshot methods failed for:', url);
+      return null;
+    } catch (error) {
+      console.error('❌ Screenshot capture failed:', error);
+      return null;
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
     }
   };
 
@@ -168,6 +240,7 @@ export default function SEOAuditTool({
         // Provide demo results when API key is not configured
         console.log('🔧 API key not configured, providing demo results for:', validatedUrl);
         
+<<<<<<< HEAD
         // Generate real screenshots for demo results
         console.log('📸 Generating website screenshots...');
         setCurrentStage('Screenshot Capture');
@@ -179,6 +252,21 @@ export default function SEOAuditTool({
         console.log('🔍 Screenshot URLs generated:', {
           desktop: screenshots.desktop,
           mobile: screenshots.mobile
+=======
+        // Capture real screenshots for demo results
+        console.log('📸 Capturing website screenshots...');
+        setCurrentStage('Screenshot Capture');
+        setLoadingMessage('Capturing real screenshots of your website (this may take 20-35 seconds for better quality)...');
+        setLoadingProgress(20);
+        
+        const screenshots = await captureWebsiteScreenshots(validatedUrl);
+        
+        console.log('🔍 Final screenshots captured for mock results:', {
+          desktopExists: !!screenshots?.desktop,
+          mobileExists: !!screenshots?.mobile,
+          desktopStarts: screenshots?.desktop?.substring(0, 30) || 'N/A',
+          mobileStarts: screenshots?.mobile?.substring(0, 30) || 'N/A'
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
         });
         
         // If no real screenshots captured, provide mock screenshots for demo
@@ -242,7 +330,11 @@ export default function SEOAuditTool({
                 'total-blocking-time': { displayValue: '150 ms' },
                 'final-screenshot': {
                   details: {
+<<<<<<< HEAD
                     data: screenshots.desktop
+=======
+                    data: screenshots?.desktop || mockDesktopScreenshot
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
                   }
                 }
               }
@@ -264,7 +356,11 @@ export default function SEOAuditTool({
                 'total-blocking-time': { displayValue: '380 ms' },
                 'final-screenshot': {
                   details: {
+<<<<<<< HEAD
                     data: screenshots.mobile
+=======
+                    data: screenshots?.mobile || mockMobileScreenshot
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
                   }
                 }
               }
@@ -312,6 +408,7 @@ export default function SEOAuditTool({
       setLoadingMessage('Fetching desktop performance data...');
       setLoadingProgress(35);
 
+<<<<<<< HEAD
       // Generate screenshots first
       console.log('📸 Generating website screenshots...');
       setCurrentStage('Screenshot Capture');
@@ -319,6 +416,15 @@ export default function SEOAuditTool({
       setLoadingProgress(20);
       
       const screenshots = generateScreenshotUrls(validatedUrl);
+=======
+      // Capture screenshots first
+      console.log('📸 Capturing website screenshots...');
+      setCurrentStage('Screenshot Capture');
+      setLoadingMessage('Capturing real screenshots of your website (this may take 20-35 seconds for better quality)...');
+      setLoadingProgress(20);
+      
+      const screenshots = await captureWebsiteScreenshots(validatedUrl);
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
 
       // Fetch both desktop and mobile results in parallel
       const [desktopResponse, mobileResponse] = await Promise.all([
@@ -352,11 +458,21 @@ export default function SEOAuditTool({
             ...desktopData.lighthouseResult,
             audits: {
               ...desktopData.lighthouseResult?.audits,
+<<<<<<< HEAD
               'final-screenshot': {
                 details: {
                   data: screenshots.desktop
                 }
               }
+=======
+              ...(screenshots?.desktop && {
+                'final-screenshot': {
+                  details: {
+                    data: screenshots.desktop
+                  }
+                }
+              })
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
             }
           }
         },
@@ -366,11 +482,21 @@ export default function SEOAuditTool({
             ...mobileData.lighthouseResult,
             audits: {
               ...mobileData.lighthouseResult?.audits,
+<<<<<<< HEAD
               'final-screenshot': {
                 details: {
                   data: screenshots.mobile
                 }
               }
+=======
+              ...(screenshots?.mobile && {
+                'final-screenshot': {
+                  details: {
+                    data: screenshots.mobile
+                  }
+                }
+              })
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
             }
           }
         }
@@ -399,6 +525,7 @@ export default function SEOAuditTool({
       // Provide fallback demo results instead of showing an error
       console.log('🔄 API request failed, providing fallback demo results for:', validatedUrl);
       
+<<<<<<< HEAD
       // Generate screenshots even in fallback mode
       console.log('📸 Generating website screenshots for fallback results...');
       setCurrentStage('Screenshot Capture');
@@ -406,6 +533,15 @@ export default function SEOAuditTool({
       setLoadingProgress(20);
       
       const screenshots = generateScreenshotUrls(validatedUrl);
+=======
+      // Try to capture screenshots even in fallback mode
+      console.log('📸 Capturing website screenshots for fallback results...');
+      setCurrentStage('Screenshot Capture');
+      setLoadingMessage('Capturing website screenshots...');
+      setLoadingProgress(20);
+      
+      const screenshots = await captureWebsiteScreenshots(validatedUrl);
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
       
       // Generate realistic demo results based on the URL
       const mockResults: AuditResults = {
@@ -447,7 +583,11 @@ export default function SEOAuditTool({
               'total-blocking-time': { displayValue: '450 ms' },
               'final-screenshot': {
                 details: {
+<<<<<<< HEAD
                   data: screenshots?.mobile || `https://api.screenshotone.com/take?access_key=demo&url=${encodeURIComponent(validatedUrl)}&format=png&viewport_width=375&viewport_height=667&device_scale_factor=2&full_page=false&cache=false`
+=======
+                  data: screenshots?.mobile || 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzc1IiBoZWlnaHQ9IjY2NyIgdmlld0JveD0iMCAwIDM3NSA2NjciIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJwYWdlR3JhZGllbnQiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIG9mZnNldD0iMCUiIHN0b3AtY29sb3I9IiNmMGY0ZjgiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNlNWU3ZWIiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB3aWR0aD0iMzc1IiBoZWlnaHQ9IjY2NyIgZmlsbD0idXJsKCNwYWdlR3JhZGllbnQpIi8+PGNpcmNsZSBjeD0iMTUiIGN5PSIxNSIgcj0iNCIgZmlsbD0iI2VmNDQ0NCIvPjxjaXJjbGUgY3g9IjMwIiBjeT0iMTUiIHI9IjQiIGZpbGw9IiNmOTc1MTYiLz48Y2lyY2xlIGN4PSI0NSIgY3k9IjE1IiByPSI0IiBmaWxsPSIjMTBiOTgxIi8+PHJlY3QgeD0iMTAiIHk9IjMwIiB3aWR0aD0iMzU1IiBoZWlnaHQ9IjYwIiBmaWxsPSIjMzMzMzMzIi8+PHJlY3QgeD0iMjAiIHk9IjQ1IiB3aWR0aD0iMTAwIiBoZWlnaHQ9IjMwIiBmaWxsPSJ3aGl0ZSIgcng9IjMiLz48dGV4dCB4PSI3MCIgeT0iNjUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzMzMzMzMyIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TG9nbzwvdGV4dD48cmVjdCB4PSIyNzAiIHk9IjQ1IiB3aWR0aD0iODAiIGhlaWdodD0iMzAiIGZpbGw9IiM2MzY2ZjEiIHJ4PSIzIi8+PHRleHQgeD0iMzEwIiB5PSI2NSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjEyIiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TWVudTwvdGV4dD48cmVjdCB4PSIxMCIgeT0iMTEwIiB3aWR0aD0iMzU1IiBoZWlnaHQ9IjIwMCIgZmlsbD0iIzJkM2Q0ZiIvPjx0ZXh0IHg9IjE4NyIgeT0iMTMwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMjgiIGZpbGw9IndoaXRlIiB0ZXh0LWFuY2hvcj0ibWlkZGxlIiBmb250LXdlaWdodD0iYm9sZCI+V2VsY29tZSB0byBPdXIgTW9iaWxlIFNpdGU8L3RleHQ+PHRleHQgeD0iMTg3IiB5PSIxNzAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNiIgZmlsbD0iI2JjYzhmYSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+UmVzcG9uc2l2ZSBkZXNpZ24gZm9yIG1vYmlsZSB1c2VyczwvdGV4dD48cmVjdCB4PSIxMDAiIHk9IjIwMCIgd2lkdGg9IjE3NSIgaGVpZ2h0PSI0MCIgZmlsbD0iIzEwYjk4MSIgcng9IjUiLz48dGV4dCB4PSIxODciIHk9IjIyNSIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE2IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9ImJvbGQiPkdldCBTdGFydGVkPC90ZXh0PjxyZWN0IHg9IjIwIiB5PSIzMzAiIHdpZHRoPSIzMzUiIGhlaWdodD0iMTIwIiBmaWxsPSJ3aGl0ZSIgcng9IjgiLz48dGV4dCB4PSIzNSIgeT0iMzUwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTgiIGZpbGw9IiMzMzMzMzMiIGZvbnQtd2VpZ2h0PSJib2xkIj5GZWF0dXJlczwvdGV4dD48dGV4dCB4PSIzNSIgeT0iMzgwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2NjY2NjYiPuKAoSBNb2JpbGUtZmlyc3QgZGVzaWduPC90ZXh0Pjx0ZXh0IHg9IjM1IiB5PSI0MDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiI+4oCiIEZhc3QgbG9hZGluZyB0aW1lczwvdGV4dD48dGV4dCB4PSIzNSIgeT0iNDIwIiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM2NjY2NjYiPuKAoiBTRU8gb3B0aW1pemVkPC90ZXh0Pjx0ZXh0IHg9IjM1IiB5PSI0NDAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxNCIgZmlsbD0iIzY2NjY2NiI+4oCiIFVzZXItZnJpZW5kbHkgaW50ZXJmYWNlPC90ZXh0PjxyZWN0IHg9IjIwIiB5PSI0NzAiIHdpZHRoPSIzMzUiIGhlaWdodD0iMTIwIiBmaWxsPSIjZjlmYWZiIiByeD0iOCIvPjx0ZXh0IHg9IjM1IiB5PSI0OTAiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxOCIgZmlsbD0iIzMzMzMzMyIgZm9udC13ZWlnaHQ9ImJvbGQiPkNvbnRhY3QgVXM8L3RleHQ+PHJlY3QgeD0iMzUiIHk9IjUxNSIgd2lkdGg9IjMwNSIgaGVpZ2h0PSIzNSIgZmlsbD0id2hpdGUiIHJ4PSI1IiBzdHJva2U9IiNkMWQ1ZGIiLz48dGV4dCB4PSI0NSIgeT0iNTM3IiBmb250LWZhbWlseT0iQXJpYWwsIHNhbnMtc2VyaWYiIGZvbnQtc2l6ZT0iMTQiIGZpbGw9IiM5Y2E0YWYiPkVudGVyIHlvdXIgZW1haWwuLi48L3RleHQ+PHJlY3QgeD0iMzUiIHk9IjU2MCIgd2lkdGg9IjMwNSIgaGVpZ2h0PSIzNSIgZmlsbD0iIzM5NTFhNiIgcng9IjUiLz48dGV4dCB4PSIxODciIHk9IjU4MiIgZm9udC1mYW1pbHk9IkFyaWFsLCBzYW5zLXNlcmlmIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZm9udC13ZWlnaHQ9ImJvbGQiPlN1YnNjcmliZTwvdGV4dD48cmVjdCB4PSIxMCIgeT0iNjIwIiB3aWR0aD0iMzU1IiBoZWlnaHQ9IjQ3IiBmaWxsPSIjMTExODI3Ii8+PHRleHQgeD0iMTg3IiB5PSI2MzUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMiIgZmlsbD0iIzllYWM4ZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+SG9tZSB8IEFib3V0IHwgQ29udGFjdCB8IFByaXZhY3k8L3RleHQ+PHRleHQgeD0iMTg3IiB5PSI2NTUiIGZvbnQtZmFtaWx5PSJBcmlhbCwgc2Fucy1zZXJpZiIgZm9udC1zaXplPSIxMCIgZmlsbD0iIzllYWM4ZCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+wqkgMjAyNCBZb3VyIENvbXBhbnkuIEFsbCByaWdodHMgcmVzZXJ2ZWQuPC90ZXh0Pjwvc3ZnPg=='
+>>>>>>> 00e4574b0c568cb5adef1f993f78bfc60b427440
                 }
               }
             }
