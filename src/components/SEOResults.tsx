@@ -163,20 +163,20 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         if (audits['first-contentful-paint']?.score < 1) {
           const seconds = Math.round((audits['first-contentful-paint']?.numericValue || 0) / 100) / 10;
           findings.needsAttention.push(
-            `Your ${deviceType.toLowerCase()} site is slow to show content (${seconds}s). Even a short delay can cause potential customers to leave.`
+            `Your ${deviceType.toLowerCase()} site takes ${seconds}s to show content. Visitors leave within 3 seconds if your site doesn't load fast enough - you could be losing customers every day.`
           );
         }
         if (audits['largest-contentful-paint']?.score < 1) {
           findings.needsAttention.push(
-            `The main part of your ${deviceType.toLowerCase()} homepage is slow to appear (${audits['largest-contentful-paint']?.displayValue}). Many visitors won't wait for slow pages to load.`
+            `Your main content takes ${audits['largest-contentful-paint']?.displayValue} to appear on ${deviceType.toLowerCase()}. Most potential customers won't wait - they'll go to your competitors instead.`
           );
         }
         if (audits['cumulative-layout-shift']?.score < 1) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page layout shifts while loading, which can frustrate visitors trying to click buttons or read content.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page moves around while loading. When customers try to click your contact button or phone number, the page shifts and they click the wrong thing - this frustrates visitors and costs you leads.`);
         }
         // Add general performance improvement if score is moderate
         if (scores.Performance < 90 && scores.Performance >= 70) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site's performance could be improved to provide a better user experience and potentially better search rankings.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site loads okay, but it could be much faster. Every second of delay costs you 7% of potential customers - speed improvements directly increase your sales.`);
         }
       }
 
@@ -185,17 +185,17 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         findings.looksGood.push(`Your ${deviceType.toLowerCase()} site has good search engine optimization basics in place.`);
       } else {
         if (audits['meta-description']?.score < 1) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} homepage is missing a meta description. This is a missed opportunity to attract clicks from Google search results.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site is missing compelling descriptions in Google search results. Without these, fewer people will click on your business when they search for your services.`);
         }
         if (audits['document-title']?.score < 1) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page title needs optimization to help customers find you in search results.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} page titles aren't optimized for search. This means your business isn't showing up when customers search for what you offer.`);
         }
         if (audits['structured-data']?.score < 1) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site is missing structured data markup, which helps search engines understand your business better.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site is missing special code that helps Google understand your business. Adding this can make your business stand out with star ratings, hours, and contact info right in search results.`);
         }
         // Add general SEO improvement if score is moderate
         if (scores.Meta < 90 && scores.Meta >= 70) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site's SEO could be enhanced to improve search engine visibility.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site's search engine visibility could be much better. With proper optimization, more customers could find your business when they're actively looking for your services.`);
         }
       }
 
@@ -204,27 +204,27 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         findings.looksGood.push(`Your ${deviceType.toLowerCase()} site is accessible to users with disabilities, which is great for both customers and search rankings.`);
       } else {
         if (audits['color-contrast']?.score < 1) {
-          findings.needsAttention.push(`Some text on your ${deviceType.toLowerCase()} site might be hard to read due to color contrast issues.`);
+          findings.needsAttention.push(`Some text on your ${deviceType.toLowerCase()} site is hard to read. When customers can't easily read your prices, services, or contact info, you lose sales.`);
         }
         if (audits['image-alt']?.score < 1) {
-          findings.needsAttention.push(`Some images on your ${deviceType.toLowerCase()} site are missing descriptions, which hurts both accessibility and SEO.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} images are missing descriptions. This not only hurts your Google rankings but also makes your site unusable for visually impaired customers.`);
         }
         if (audits['button-name']?.score < 1) {
-          findings.needsAttention.push(`Some buttons on your ${deviceType.toLowerCase()} site don't have clear labels, which can confuse users and screen readers.`);
+          findings.needsAttention.push(`Some buttons on your ${deviceType.toLowerCase()} site don't have clear labels. Customers get confused about what actions to take, leading to lost conversions.`);
         }
         // Add general accessibility improvement if score is moderate
         if (scores.Accessibility < 90 && scores.Accessibility >= 70) {
-          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site's accessibility could be improved to better serve all users and improve search rankings.`);
+          findings.needsAttention.push(`Your ${deviceType.toLowerCase()} site could work better for all customers. Making it more accessible also improves your Google rankings and opens your business to more potential customers.`);
         }
       }
 
       // Mobile-specific findings
       if (deviceType === 'Mobile') {
         if (audits['viewport']?.score < 1) {
-          findings.needsAttention.push('Your site may not display properly on mobile devices due to viewport configuration issues.');
+          findings.needsAttention.push('Your site doesn\'t display properly on phones and tablets. With 60% of customers browsing on mobile, you\'re potentially losing more than half your business.');
         }
         if (audits['tap-targets']?.score < 1) {
-          findings.needsAttention.push('Some buttons or links on mobile might be too small or too close together, making them hard to tap.');
+          findings.needsAttention.push('Your buttons and links are too small or close together on mobile. Customers can\'t easily tap your phone number or contact forms, which directly costs you leads.');
         }
       }
 
@@ -233,14 +233,14 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
       if (findings.needsAttention.length === 0) {
         // Add common optimization opportunities for high-performing sites
         if (deviceType === 'Mobile') {
-          findings.needsAttention.push('Your mobile site could benefit from further speed optimizations to reduce bounce rate and improve user experience.');
+          findings.needsAttention.push('Your mobile site is performing well, but there are advanced speed optimizations that could reduce bounce rate and increase the time customers spend browsing your services.');
         } else {
-          findings.needsAttention.push('Your desktop site has solid fundamentals, but could benefit from advanced performance optimizations for even better user experience.');
+          findings.needsAttention.push('Your desktop site has solid fundamentals, but there are proven techniques to make it even faster and more engaging for potential customers.');
         }
         
         // Add a general improvement suggestion
         if (overallScore >= 90) {
-          findings.needsAttention.push(`Consider implementing advanced ${deviceType.toLowerCase()} optimization techniques to maintain your competitive edge.`);
+          findings.needsAttention.push(`Even high-performing sites like yours can benefit from advanced ${deviceType.toLowerCase()} optimization techniques to stay ahead of competitors and maximize your online presence.`);
         }
       }
 
