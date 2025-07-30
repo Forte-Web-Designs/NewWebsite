@@ -28,8 +28,8 @@ function CustomDemoPageContent() {
     city: '',
     state: '',
     zip: '',
-    industry: 'landscaping',
-    template: 'landscaping'
+    industry: 'plumbing',
+    template: 'plumbing'
   });
 
   const [showDemo, setShowDemo] = useState(false);
@@ -71,14 +71,11 @@ function CustomDemoPageContent() {
 
     let baseUrl = '';
     switch (businessDetails.template) {
-      case 'landscaping':
-        baseUrl = '/landscaper/custom';
-        break;
       case 'plumbing':
         baseUrl = '/plumbing/custom';
         break;
       default:
-        baseUrl = '/landscaper/custom';
+        baseUrl = '/plumbing/custom';
     }
 
     const url = `${baseUrl}?${params.toString()}`;
@@ -93,12 +90,11 @@ function CustomDemoPageContent() {
   };
 
   const templates = [
-    { value: 'landscaping', label: 'Landscaping & Garden Design', icon: '🌳' },
     { value: 'plumbing', label: 'Plumbing Services', icon: '🔧' },
   ];
 
   const industries = [
-    'landscaping', 'plumbing', 'hvac', 'electrical', 'roofing', 'construction',
+    'plumbing', 'hvac', 'electrical', 'roofing', 'construction',
     'restaurant', 'retail', 'healthcare', 'legal', 'real estate', 'automotive'
   ];
 

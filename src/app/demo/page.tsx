@@ -31,33 +31,6 @@ export default function DemoShowcasePage() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* Landscaping Template */}
-          <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
-            <div className="h-48 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
-              <div className="text-center text-white">
-                <div className="text-6xl mb-4">🌳</div>
-                <h3 className="text-2xl font-bold">Landscaping</h3>
-              </div>
-            </div>
-            <div className="p-6">
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">Forte Landscaping</h3>
-              <p className="text-gray-600 mb-4">
-                Professional landscaping and garden design website featuring Forte Landscaping branding and services.
-              </p>
-              <div className="flex flex-wrap gap-2 mb-4">
-                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Garden Design</span>
-                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Tree Care</span>
-                <span className="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm">Lawn Care</span>
-              </div>
-              <Link 
-                href="/landscaper" 
-                className="block w-full bg-green-600 hover:bg-green-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
-              >
-                View Demo
-              </Link>
-            </div>
-          </div>
-
           {/* Plumbing Template */}
           <div className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 hover:scale-105">
             <div className="h-48 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
