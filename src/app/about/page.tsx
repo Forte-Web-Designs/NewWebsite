@@ -355,7 +355,7 @@ export default function AboutUs() {
                   Ready to Get Started?
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Book a free 30-minute strategy session to discuss your project goals and see how we can help your business grow.
+                  Book a free 15-minute strategy session to discuss your project goals and see how we can help your business grow.
                 </p>
               </div>
               
@@ -379,7 +379,7 @@ export default function AboutUs() {
                     </div>
                   </div>
                 </div>
-                <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
+                <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
               </div>
             </div>
           </SimpleScrollReveal>

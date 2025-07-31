@@ -116,9 +116,9 @@ export default function Contact() {
                 Prefer to Schedule a Call?
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Book a free 30-minute strategy session to discuss your project and see if we're a good fit.
+                Book a free 15-minute strategy session to discuss your project and see if we're a good fit.
               </p>
-              <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
+              <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
             </div>
 
             {/* Interactive Location Map */}

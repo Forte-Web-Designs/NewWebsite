@@ -551,14 +551,14 @@ export default function Home() {
                   Prefer to Schedule a Call?
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Book a free 30-minute strategy session to discuss your project.
+                  Book a free 15-minute strategy session to discuss your project.
                 </p>
                 <Suspense fallback={
                   <div className="h-96 flex items-center justify-center">
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                   </div>
                 }>
-                  <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
+                  <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
                 </Suspense>
               </div>
 

@@ -50,7 +50,7 @@ export default function SEOAuditTool({
     { stage: "Accessibility Check", message: "Checking if your site is easy for everyone to use...", progress: 85 },
     { stage: "Final Review", message: "Comparing desktop vs mobile user experience...", progress: 95 },
     { stage: "Optimization Tips", message: "Looking for ways to help you get more leads and customers...", progress: 95 },
-    { stage: "Complete", message: "Almost done - preparing your personalized desktop & mobile results!", progress: 100 }
+    { stage: "Complete", message: "Almost done - preparing your personalized performance report!", progress: 100 }
   ];
 
   const validateUrl = (url: string): string | null => {
@@ -107,7 +107,7 @@ export default function SEOAuditTool({
     
     // Cycling messages for when progress reaches 100%
     const completionMessages = [
-      "🎉 Almost done - preparing your personalized desktop & mobile results!",
+      "🎉 Almost done - preparing your personalized performance report!",
       "🔍 Getting everything ready for you...",
       "⚡ Almost there, processing final details...",
       "🎯 Putting the finishing touches on your report...",
