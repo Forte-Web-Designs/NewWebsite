@@ -1,8 +1,11 @@
 import { Metadata } from 'next';
+import { Suspense, lazy } from 'react';
 import ContactForm from "@/components/ContactForm";
-import CalendlyWidget from "@/components/CalendlyWidget";
 import { Icon } from '@/components/images/Icon';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
+
+// Lazy load CalendlyWidget for better performance
+const CalendlyWidget = lazy(() => import("@/components/CalendlyWidget"));
 
 export const metadata: Metadata = {
   title: 'Contact',
@@ -118,7 +121,9 @@ export default function Contact() {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Book a free 15-minute strategy session to discuss your project and see if we're a good fit.
               </p>
-              <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
+              <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+                <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
+              </Suspense>
             </div>
 
             {/* Interactive Location Map */}

@@ -7,18 +7,16 @@ interface CalendlyWidgetProps {
 
 export default function CalendlyWidget({ url }: CalendlyWidgetProps) {
   useEffect(() => {
-    // Load Calendly script
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script);
-      }
-    };
+    // Check if Calendly script is already loaded
+    const existingScript = document.querySelector('script[src="https://assets.calendly.com/assets/external/widget.js"]');
+    
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.type = 'text/javascript';
+      script.src = 'https://assets.calendly.com/assets/external/widget.js';
+      script.async = true;
+      document.head.appendChild(script);
+    }
   }, []);
 
   return (
@@ -26,6 +24,6 @@ export default function CalendlyWidget({ url }: CalendlyWidgetProps) {
       className="calendly-inline-widget" 
       data-url={url}
       style={{minWidth: '320px', height: '700px'}}
-    ></div>
+    />
   );
 }

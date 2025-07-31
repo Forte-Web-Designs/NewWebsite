@@ -1,11 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import { Suspense, lazy } from 'react';
 import ContactForm from "@/components/ContactForm";
-import CalendlyWidget from "@/components/CalendlyWidget";
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
+
+// Lazy load CalendlyWidget for better performance
+const CalendlyWidget = lazy(() => import("@/components/CalendlyWidget"));
 
 export default function AboutUs() {
   const statCards = [
@@ -379,7 +382,9 @@ export default function AboutUs() {
                     </div>
                   </div>
                 </div>
-                <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
+                <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+                  <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
+                </Suspense>
               </div>
             </div>
           </SimpleScrollReveal>
