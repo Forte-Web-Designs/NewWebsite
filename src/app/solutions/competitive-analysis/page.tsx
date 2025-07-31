@@ -252,7 +252,6 @@ function CompetitiveAnalysisContent() {
               auditedUrl={auditedUrl}
               headerRef={headerRef}
               gradesRef={gradesRef}
-              screenshotRef={screenshotRef}
             />
           </div>
         )}

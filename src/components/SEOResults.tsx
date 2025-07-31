@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { CONTACT_INFO } from '../constants/contact';
-import { optimizeScreenshotForMobile, getMobileScreenshotMessage } from '../utils/mobileScreenshotUtils';
 
 interface DeviceResults {
   lighthouseResult?: {
@@ -23,10 +22,9 @@ interface SEOResultsProps {
   auditedUrl: string;
   headerRef?: React.RefObject<HTMLDivElement | null>;
   gradesRef?: React.RefObject<HTMLDivElement | null>;
-  screenshotRef?: React.RefObject<HTMLDivElement | null>;
 }
 
-export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, screenshotRef }: SEOResultsProps) {
+export default function SEOResults({ results, auditedUrl, headerRef, gradesRef }: SEOResultsProps) {
   const [showEmailForm, setShowEmailForm] = useState(false);
   const [userEmail, setUserEmail] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -83,7 +81,6 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         overallScore: 100,
         overallGrade: getGrade(100),
         getGrade,
-        screenshot: lighthouse.audits['final-screenshot']?.details?.data,
         findings: {
           needsAttention: [],
           looksGood: [
@@ -136,9 +133,6 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
     // Calculate overall grade
     const overallScore = Math.round(Object.values(scores).reduce((a, b) => a + b, 0) / Object.values(scores).length);
     const overallGrade = getGrade(overallScore);
-
-    // Get screenshot if available
-    const screenshot = lighthouse.audits['final-screenshot']?.details?.data;
 
     // Generate findings
     const generateFindings = () => {
@@ -245,7 +239,6 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
       scores,
       overallScore,
       overallGrade,
-      screenshot,
       findings,
       getGrade
     };
@@ -401,13 +394,6 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
         <div style="margin: 30px 0; page-break-inside: avoid;">
           <h2 style="color: #081B8B; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 2px solid #081B8B;">${data.deviceType} Analysis</h2>
           
-          ${data.screenshot ? `
-            <div style="text-align: center; margin: 20px 0;">
-              <h3 style="color: #333; margin-bottom: 10px;">How Your Site Looks on ${data.deviceType}</h3>
-              <img src="${data.screenshot}" alt="${data.deviceType} Screenshot" style="max-width: 300px; border: 1px solid #ccc; border-radius: 8px;" />
-            </div>
-          ` : ''}
-
           <div style="margin: 20px 0;">
             <h3 style="color: #333; margin-bottom: 15px;">Overall ${data.deviceType} Score</h3>
             <div style="display: inline-flex; align-items: center; gap: 15px; padding: 15px; background: #f8f9fa; border-radius: 8px; margin-bottom: 20px;">
@@ -569,7 +555,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
             onClick={() => {
               const gradesElement = document.querySelector('[data-mobile-scroll-target]');
               if (gradesElement) {
-                // Custom slow scroll function that allows users to see screenshots
+                // Custom slow scroll function for smooth user experience
                 const slowScrollToElement = (element: Element) => {
                   const elementRect = element.getBoundingClientRect();
                   const elementTop = elementRect.top + window.pageYOffset;
@@ -794,30 +780,6 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
               </div>
             </div>
 
-            {/* Desktop Screenshot - Mobile Optimized */}
-            {desktopData.screenshot ? (
-              <div ref={screenshotRef} className="text-center mb-4">
-                <div className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
-                  {getMobileScreenshotMessage('desktop')}
-                </div>
-                <img
-                  src={desktopData.screenshot}
-                  alt="Desktop Screenshot"
-                  className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
-                  style={{ maxHeight: '400px', minHeight: '250px' }}
-                />
-                <div className="text-xs text-gray-500 mt-2">
-                  ✅ Real website screenshot • Tap to view full size
-                </div>
-              </div>
-            ) : (
-              <div className="text-center mb-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  📸 Desktop screenshot not available - but your performance data is ready below!
-                </div>
-              </div>
-            )}
-
             {/* Desktop Category Grades */}
             <div className="grid grid-cols-2 gap-2 mb-4">
               {Object.entries(desktopData.scores).map(([category, score]) => {
@@ -847,29 +809,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef, 
               </div>
             </div>
 
-            {/* Mobile Screenshot - Mobile Optimized */}
-            {mobileData.screenshot ? (
-              <div className="text-center mb-4">
-                <div className="text-sm text-gray-600 dark:text-gray-400 mb-2 font-medium">
-                  {getMobileScreenshotMessage('mobile')}
-                </div>
-                <img
-                  src={mobileData.screenshot}
-                  alt="Mobile Screenshot"
-                  className="max-w-full h-auto mx-auto rounded-lg shadow-lg border-2 border-gray-200 dark:border-gray-700"
-                  style={{ maxHeight: '400px', minHeight: '250px' }}
-                />
-                <div className="text-xs text-gray-500 mt-2">
-                  ✅ Real mobile screenshot • Tap to view full size
-                </div>
-              </div>
-            ) : (
-              <div className="text-center mb-4 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="text-sm text-gray-500 dark:text-gray-400">
-                  📱 Mobile screenshot not available - but your performance data is ready below!
-                </div>
-              </div>
-            )}
+
 
             {/* Mobile Category Grades */}
             <div className="grid grid-cols-2 gap-2 mb-4">

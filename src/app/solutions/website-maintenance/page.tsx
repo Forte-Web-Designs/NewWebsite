@@ -238,7 +238,6 @@ function WebsiteMaintenanceContent() {
                 auditedUrl={auditedUrl}
                 headerRef={headerRef}
                 gradesRef={gradesRef}
-                screenshotRef={screenshotRef}
               />
               
               {/* CTA Section */}

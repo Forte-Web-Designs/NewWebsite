@@ -1,0 +1,14 @@
+<svg width="200" height="60" viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="200" height="60" fill="transparent"/>
+  
+  <!-- Leaf icon -->
+  <g transform="translate(10, 15)">
+    <path d="M15 30C15 20 20 10 30 10C25 15 25 25 30 30C25 35 25 45 30 50C20 50 15 40 15 30Z" fill="#ffffff"/>
+    <path d="M15 30C15 20 10 10 0 10C5 15 5 25 0 30C5 35 5 45 0 50C10 50 15 40 15 30Z" fill="#4ade80"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="50" y="25" font-family="Georgia, serif" font-size="18" font-weight="bold" fill="#ffffff">Forte</text>
+  <text x="50" y="42" font-family="Georgia, serif" font-size="14" fill="#4ade80">Landscaping</text>
+</svg>

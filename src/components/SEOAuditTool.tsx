@@ -1,7 +1,6 @@
 "use client";
 
 import { useState, useEffect } from 'react';
-import { captureClientScreenshots } from '../utils/clientScreenshots';
 
 interface DeviceResults {
   lighthouseResult?: {
@@ -45,7 +44,6 @@ export default function SEOAuditTool({
 
   const loadingStages = [
     { stage: "Connection", message: "Checking your website's connection...", progress: 10 },
-    { stage: "Screenshot Capture", message: "Capturing real screenshots of your website (this may take 20-35 seconds for better quality)...", progress: 20 },
     { stage: "Desktop Analysis", message: "Analyzing desktop loading speed and performance...", progress: 35 },
     { stage: "Mobile Analysis", message: "Testing mobile responsiveness and speed...", progress: 55 },
     { stage: "SEO Review", message: "Reviewing your Google search visibility...", progress: 70 },
@@ -80,78 +78,6 @@ export default function SEOAuditTool({
       }
       return validUrl;
     } catch {
-      return null;
-    }
-  };
-
-  // Function to capture website screenshots
-  const captureWebsiteScreenshots = async (url: string) => {
-    console.log('🔍 Starting screenshot capture for:', url);
-    
-    try {
-      // For production (static export), API routes don't work, so use client-side capture
-      const isProduction = process.env.NODE_ENV === 'production' || !window.location.hostname.includes('localhost');
-      
-      if (isProduction) {
-        console.log('🌐 Production environment detected, using client-side screenshot capture...');
-        const clientScreenshots = await captureClientScreenshots(url);
-        
-        if (clientScreenshots && (clientScreenshots.desktop || clientScreenshots.mobile)) {
-          console.log('✅ Client-side screenshots captured successfully');
-          return clientScreenshots;
-        }
-        
-        console.warn('❌ Client-side screenshot capture failed, will use mock screenshots');
-        return null;
-      }
-      
-      // For development, try server-side API first, then fallback to client-side
-      try {
-        console.log('🖥️ Development environment, attempting server-side screenshot capture...');
-        const [desktopScreenshot, mobileScreenshot] = await Promise.all([
-          fetch('/api/screenshot', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ url, device: 'desktop' })
-          }),
-          fetch('/api/screenshot', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ url, device: 'mobile' })
-          })
-        ]);
-
-        if (desktopScreenshot.ok && mobileScreenshot.ok) {
-          const desktopData = await desktopScreenshot.json();
-          const mobileData = await mobileScreenshot.json();
-
-          if (desktopData.screenshot && mobileData.screenshot) {
-            console.log('✅ Server-side screenshots captured successfully');
-            return {
-              desktop: desktopData.screenshot,
-              mobile: mobileData.screenshot
-            };
-          }
-        }
-        
-        console.log('⚠️ Server-side API unavailable, trying client-side...');
-      } catch (serverError) {
-        console.log('🔄 Server-side screenshot failed, trying client-side:', serverError);
-      }
-
-      // Fallback to client-side screenshots (works with static exports)
-      console.log('🌐 Attempting client-side screenshot capture...');
-      const clientScreenshots = await captureClientScreenshots(url);
-      
-      if (clientScreenshots && (clientScreenshots.desktop || clientScreenshots.mobile)) {
-        console.log('✅ Client-side screenshots captured successfully');
-        return clientScreenshots;
-      }
-
-      console.warn('❌ All screenshot methods failed for:', url);
-      return null;
-    } catch (error) {
-      console.error('❌ Screenshot capture failed:', error);
       return null;
     }
   };
@@ -218,65 +144,6 @@ export default function SEOAuditTool({
         // Provide demo results when API key is not configured
         console.log('🔧 API key not configured, providing demo results for:', validatedUrl);
         
-        // Capture real screenshots for demo results
-        console.log('📸 Capturing website screenshots...');
-        setCurrentStage('Screenshot Capture');
-        setLoadingMessage('Capturing real screenshots of your website (this may take 20-35 seconds for better quality)...');
-        setLoadingProgress(20);
-        
-        const screenshots = await captureWebsiteScreenshots(validatedUrl);
-        
-        console.log('🔍 Final screenshots captured for mock results:', {
-          desktopExists: !!screenshots?.desktop,
-          mobileExists: !!screenshots?.mobile,
-          desktopStarts: screenshots?.desktop?.substring(0, 30) || 'N/A',
-          mobileStarts: screenshots?.mobile?.substring(0, 30) || 'N/A'
-        });
-        
-        // If no real screenshots captured, provide mock screenshots for demo
-        const mockDesktopScreenshot = "data:image/svg+xml;base64," + btoa(`
-          <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#f8fafc"/>
-                <stop offset="100%" stop-color="#e2e8f0"/>
-              </linearGradient>
-            </defs>
-            <rect width="1200" height="800" fill="url(#bg)"/>
-            <rect x="0" y="0" width="1200" height="60" fill="#1e40af"/>
-            <text x="50" y="40" fill="white" font-family="Arial" font-size="24" font-weight="bold">${validatedUrl.replace(/^https?:\/\//, '').replace(/^www\./, '')}</text>
-            <rect x="50" y="100" width="1100" height="150" fill="#ffffff" rx="8" stroke="#e2e8f0"/>
-            <text x="80" y="140" fill="#1f2937" font-family="Arial" font-size="32" font-weight="bold">Welcome to ${validatedUrl.replace(/^https?:\/\//, '').replace(/^www\./, '').split('.')[0]}</text>
-            <text x="80" y="180" fill="#6b7280" font-family="Arial" font-size="18">This is a demo screenshot of your website</text>
-            <rect x="50" y="280" width="350" height="200" fill="#f3f4f6" rx="8"/>
-            <rect x="420" y="280" width="350" height="200" fill="#f3f4f6" rx="8"/>
-            <rect x="790" y="280" width="350" height="200" fill="#f3f4f6" rx="8"/>
-            <rect x="0" y="720" width="1200" height="80" fill="#374151"/>
-            <text x="50" y="760" fill="#9ca3af" font-family="Arial" font-size="14">© 2024 ${validatedUrl.replace(/^https?:\/\//, '').replace(/^www\./, '').split('.')[0]}. Demo screenshot generated ${new Date().toLocaleDateString()}</text>
-          </svg>
-        `);
-
-        const mockMobileScreenshot = "data:image/svg+xml;base64," + btoa(`
-          <svg width="375" height="667" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="mobileBg" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stop-color="#f8fafc"/>
-                <stop offset="100%" stop-color="#e2e8f0"/>
-              </linearGradient>
-            </defs>
-            <rect width="375" height="667" fill="url(#mobileBg)"/>
-            <rect x="0" y="0" width="375" height="60" fill="#1e40af"/>
-            <text x="20" y="40" fill="white" font-family="Arial" font-size="16" font-weight="bold">${validatedUrl.replace(/^https?:\/\//, '').replace(/^www\./, '')}</text>
-            <rect x="20" y="80" width="335" height="120" fill="#ffffff" rx="8" stroke="#e2e8f0"/>
-            <text x="35" y="110" fill="#1f2937" font-family="Arial" font-size="20" font-weight="bold">${validatedUrl.replace(/^https?:\/\//, '').replace(/^www\./, '').split('.')[0]}</text>
-            <text x="35" y="140" fill="#6b7280" font-family="Arial" font-size="14">Mobile demo screenshot</text>
-            <rect x="20" y="220" width="335" height="120" fill="#f3f4f6" rx="8"/>
-            <rect x="20" y="360" width="335" height="120" fill="#f3f4f6" rx="8"/>
-            <rect x="0" y="600" width="375" height="67" fill="#374151"/>
-            <text x="20" y="635" fill="#9ca3af" font-family="Arial" font-size="12">© 2024 Demo Mobile Screenshot</text>
-          </svg>
-        `);
-        
         const mockResults: AuditResults = {
           desktop: {
             lighthouseResult: {
@@ -291,12 +158,7 @@ export default function SEOAuditTool({
                 'largest-contentful-paint': { displayValue: '2.1 s' },
                 'speed-index': { displayValue: '2.3 s' },
                 'cumulative-layout-shift': { displayValue: '0.1' },
-                'total-blocking-time': { displayValue: '150 ms' },
-                'final-screenshot': {
-                  details: {
-                    data: screenshots?.desktop || mockDesktopScreenshot
-                  }
-                }
+                'total-blocking-time': { displayValue: '150 ms' }
               }
             }
           },
@@ -313,19 +175,14 @@ export default function SEOAuditTool({
                 'largest-contentful-paint': { displayValue: '3.8 s' },
                 'speed-index': { displayValue: '4.2 s' },
                 'cumulative-layout-shift': { displayValue: '0.15' },
-                'total-blocking-time': { displayValue: '380 ms' },
-                'final-screenshot': {
-                  details: {
-                    data: screenshots?.mobile || mockMobileScreenshot
-                  }
-                }
+                'total-blocking-time': { displayValue: '380 ms' }
               }
             }
           }
         };
 
-        // Simulate the full loading experience with longer wait for screenshots
-        await new Promise(resolve => setTimeout(resolve, 15000)); // Extended wait for better screenshot capture
+        // Simulate the loading experience
+        await new Promise(resolve => setTimeout(resolve, 8000));
 
         // Complete the progress
         setLoadingProgress(100);
@@ -355,8 +212,6 @@ export default function SEOAuditTool({
           strategy
         });
         categories.forEach(cat => params.append('category', cat));
-        // Add screenshot parameter to include visual previews
-        params.append('screenshot', 'true');
         return `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?${params}`;
       };
 
@@ -364,14 +219,6 @@ export default function SEOAuditTool({
       setCurrentStage('Desktop Analysis');
       setLoadingMessage('Fetching desktop performance data...');
       setLoadingProgress(35);
-
-      // Capture screenshots first
-      console.log('📸 Capturing website screenshots...');
-      setCurrentStage('Screenshot Capture');
-      setLoadingMessage('Capturing real screenshots of your website (this may take 20-35 seconds for better quality)...');
-      setLoadingProgress(20);
-      
-      const screenshots = await captureWebsiteScreenshots(validatedUrl);
 
       // Fetch both desktop and mobile results in parallel
       const [desktopResponse, mobileResponse] = await Promise.all([
@@ -404,14 +251,7 @@ export default function SEOAuditTool({
           lighthouseResult: {
             ...desktopData.lighthouseResult,
             audits: {
-              ...desktopData.lighthouseResult?.audits,
-              ...(screenshots?.desktop && {
-                'final-screenshot': {
-                  details: {
-                    data: screenshots.desktop
-                  }
-                }
-              })
+              ...desktopData.lighthouseResult?.audits
             }
           }
         },
@@ -420,14 +260,7 @@ export default function SEOAuditTool({
           lighthouseResult: {
             ...mobileData.lighthouseResult,
             audits: {
-              ...mobileData.lighthouseResult?.audits,
-              ...(screenshots?.mobile && {
-                'final-screenshot': {
-                  details: {
-                    data: screenshots.mobile
-                  }
-                }
-              })
+              ...mobileData.lighthouseResult?.audits
             }
           }
         }
@@ -456,14 +289,6 @@ export default function SEOAuditTool({
       // Provide fallback demo results instead of showing an error
       console.log('🔄 API request failed, providing fallback demo results for:', validatedUrl);
       
-      // Try to capture screenshots even in fallback mode
-      console.log('📸 Capturing website screenshots for fallback results...');
-      setCurrentStage('Screenshot Capture');
-      setLoadingMessage('Capturing website screenshots...');
-      setLoadingProgress(20);
-      
-      const screenshots = await captureWebsiteScreenshots(validatedUrl);
-      
       // Generate realistic demo results based on the URL
       const mockResults: AuditResults = {
         desktop: {
@@ -479,17 +304,7 @@ export default function SEOAuditTool({
               'largest-contentful-paint': { displayValue: '2.9 s' },
               'speed-index': { displayValue: '3.1 s' },
               'cumulative-layout-shift': { displayValue: '0.12' },
-              'total-blocking-time': { displayValue: '220 ms' },
-              'final-screenshot': {
-                details: {
-                  data: screenshots?.desktop || "data:image/svg+xml;base64," + btoa(`
-                    <svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="1200" height="800" fill="#f8f9fa"/>
-                      <text x="600" y="400" text-anchor="middle" fill="#6c757d" font-size="24">Screenshot Preview</text>
-                    </svg>
-                  `)
-                }
-              }
+              'total-blocking-time': { displayValue: '220 ms' }
             }
           }
         },
@@ -506,17 +321,7 @@ export default function SEOAuditTool({
               'largest-contentful-paint': { displayValue: '4.5 s' },
               'speed-index': { displayValue: '5.2 s' },
               'cumulative-layout-shift': { displayValue: '0.18' },
-              'total-blocking-time': { displayValue: '450 ms' },
-              'final-screenshot': {
-                details: {
-                  data: screenshots?.mobile || "data:image/svg+xml;base64," + btoa(`
-                    <svg width="375" height="667" xmlns="http://www.w3.org/2000/svg">
-                      <rect width="375" height="667" fill="#f8f9fa"/>
-                      <text x="187" y="333" text-anchor="middle" fill="#6c757d" font-size="16">Mobile Preview</text>
-                    </svg>
-                  `)
-                }
-              }
+              'total-blocking-time': { displayValue: '450 ms' }
             }
           }
         }
