@@ -65,7 +65,7 @@ export default function SethFortePage() {
           <div className="text-center mb-12">
             <div className="mb-8">
               <OptimizedImage
-                src="/images/about/team.jpg"
+                src="/images/about/headshot.jpg"
                 alt="Seth Forte, custom web designer in Grapevine TX"
                 width={200}
                 height={200}
