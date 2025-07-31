@@ -65,7 +65,7 @@ export default function SethFortePage() {
           <div className="text-center mb-12">
             <div className="mb-8">
               <OptimizedImage
-                src="/images/team/seth-forte-dfw-web-designer.jpg"
+                src="/images/about/team.jpg"
                 alt="Seth Forte, custom web designer in Grapevine TX"
                 width={200}
                 height={200}
@@ -104,15 +104,15 @@ export default function SethFortePage() {
             </p>
             <ul className="space-y-3 text-lg text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-3">
-                <Icon name="checkCircle" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                <Icon name="check" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                 <span><strong>Custom-built sites</strong> that reflect your brand</span>
               </li>
               <li className="flex items-start gap-3">
-                <Icon name="checkCircle" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                <Icon name="check" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                 <span><strong>SEO foundations</strong> that actually get results</span>
               </li>
               <li className="flex items-start gap-3">
-                <Icon name="checkCircle" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                <Icon name="check" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
                 <span><strong>Real support</strong> from a local partner—not a call center</span>
               </li>
             </ul>
@@ -176,17 +176,17 @@ export default function SethFortePage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Icon name="briefcase" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <Icon name="services" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 dark:text-gray-300">Local service providers</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Icon name="heart" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <Icon name="star" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 dark:text-gray-300">Medical and wellness professionals</span>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Icon name="shoppingBag" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <Icon name="bag" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 dark:text-gray-300">Retail, hospitality & food businesses</span>
                 </div>
                 <div className="flex items-start gap-3">
