@@ -13,6 +13,85 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'web-designers-near-me-why-dfw-needs-more-than-templates',
+    title: 'Web Designers Near Me? Why DFW Small Businesses Need More Than Just a Template',
+    excerpt: 'If you\'re a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you\'ve probably Googled "web designers near me." Here\'s the truth: most results lead to generic agencies or cookie-cutter platforms.',
+    content: `
+      <p>If you're a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you've probably Googled something like "web designers near me." But here's the truth: most results lead to generic agencies or cookie-cutter platforms that churn out one-size-fits-all sites.</p>
+
+      <p>Your business isn't generic—and your website shouldn't be either.</p>
+
+      <p>At Forte Web Designs, we work exclusively with small businesses across North Texas to build custom, hand-coded websites that reflect your brand, serve your audience, and actually help you grow.</p>
+
+      <h2>Why Small Businesses Need Specialized Web Design</h2>
+
+      <p>You don't have a Fortune 500 budget. You don't need a bloated site with features you'll never use. You need a website that's lean, fast, and built around your actual goals—whether that's booking appointments, generating calls, or driving foot traffic to your storefront.</p>
+
+      <p>We start by understanding your niche, your customers, and what makes your business unique in Grapevine, DFW, or wherever you serve. From there, we hand-code a site that's tailored—not templated.</p>
+
+      <h2>One-Size-Fits-All = Missed Opportunities</h2>
+
+      <p>Template platforms like Wix, Squarespace, or even mass-agencies often build sites based on what's "easy to scale," not what's best for your business. That means:</p>
+
+      <ul>
+        <li>Bloated code that slows down your load time</li>
+        <li>Weak SEO that buries you in search results</li>
+        <li>Generic layouts that don't convert visitors</li>
+        <li>No thought given to local traffic or DFW-specific visibility</li>
+      </ul>
+
+      <p>We've seen it happen too many times. Small businesses get a site that looks nice—but doesn't work.</p>
+
+      <h2>Local Design. Real Results.</h2>
+
+      <p>We're based in Grapevine, TX, and we work with small businesses all over the Dallas-Fort Worth area. That means we understand:</p>
+
+      <ul>
+        <li>How people in DFW search for services</li>
+        <li>What matters to your audience</li>
+        <li>How to create calls-to-action that convert in your specific industry</li>
+      </ul>
+
+      <p>Whether you're a home services pro in Southlake, a boutique in Fort Worth, or a startup in Frisco—we speak your small business language.</p>
+
+      <h2>Custom Code = Custom Results</h2>
+
+      <p>Every website we build is coded by hand. That means:</p>
+
+      <ul>
+        <li>Faster load times for better user experience and higher rankings</li>
+        <li>Full SEO control from meta titles to structured data</li>
+        <li>Better mobile responsiveness and local optimization</li>
+        <li>Scalability as your business grows</li>
+      </ul>
+
+      <p>And you won't be left to manage it alone. Our Forte Care™ plans include SEO tuning, performance audits, and updates—so your site stays fresh and functional.</p>
+
+      <h2>When You Search "Web Designers Near Me"—This is What You Actually Need</h2>
+
+      <p>Not just a vendor. Not just a freelancer. A partner who's close by, responsive, and invested in your business growth.</p>
+
+      <p>📍 We're located right here in Grapevine. We build for businesses across Keller, Colleyville, Southlake, Dallas, Fort Worth, and more.</p>
+
+      <h2>Let's Make Your Website Work for You</h2>
+
+      <p>If you're a small business owner looking to get more traffic, more leads, and more visibility in your local market, we're here for it.</p>
+
+      <p>Start with a free 5-point website audit—we'll show you exactly what's holding your site back and how to fix it.</p>
+
+      <p><a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">👉 Claim Your Free Audit Today</a></p>
+
+      <p><em>Proudly built for small businesses. Proudly based in Grapevine. Serving all of DFW.</em></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-08-01',
+    readTime: '5 min read',
+    category: 'Web Design',
+    image: '/images/home/hero.jpg',
+    tags: ['Web Design', 'Local Business', 'DFW', 'Small Business', 'Custom Development'],
+    featured: true
+  },
+  {
     id: 'hand-coded-websites-seo-2025',
     title: '5 Reasons Hand-Coded Websites Outperform Templates for SEO in 2025',
     excerpt: 'In the race to the top of Google, your website\'s structure and speed matter more than ever. Discover why custom-coded websites are the secret weapon behind many top-ranking businesses.',
