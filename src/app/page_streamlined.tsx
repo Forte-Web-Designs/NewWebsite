@@ -558,7 +558,7 @@ export default function Home() {
                     <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
                   </div>
                 }>
-                  <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
+                  <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
                 </Suspense>
               </div>
 

@@ -1493,7 +1493,7 @@ export default function Home() {
                 Book a free 15-minute strategy session to discuss your project and see if we're a good fit.
               </p>
               <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
-                <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/15min" />
+                <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
               </Suspense>
             </div>
 
