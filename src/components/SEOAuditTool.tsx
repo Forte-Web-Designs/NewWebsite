@@ -408,6 +408,12 @@ export default function SEOAuditTool({
               placeholder="Enter your website's URL (ex: example.com)"
               value={websiteUrl}
               onChange={(e) => setWebsiteUrl(e.target.value)}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' && !isLoading && websiteUrl.trim()) {
+                  e.preventDefault();
+                  runAudit();
+                }
+              }}
               className="w-full px-4 py-3 bg-white/10 text-white placeholder-white/60 rounded-lg border border-white/20 focus:border-white/40 focus:outline-none focus:ring-2 focus:ring-white/20 backdrop-blur-sm"
               disabled={isLoading}
             />

@@ -104,15 +104,15 @@ export default function SethFortePage() {
             </p>
             <ul className="space-y-3 text-lg text-gray-700 dark:text-gray-300">
               <li className="flex items-start gap-3">
-                <Icon name="check" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                <Icon name="check" className="w-6 h-6 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                 <span><strong>Custom-built sites</strong> that reflect your brand</span>
               </li>
               <li className="flex items-start gap-3">
-                <Icon name="check" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                <Icon name="check" className="w-6 h-6 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                 <span><strong>SEO foundations</strong> that actually get results</span>
               </li>
               <li className="flex items-start gap-3">
-                <Icon name="check" className="w-6 h-6 text-green-500 flex-shrink-0 mt-0.5" />
+                <Icon name="check" className="w-6 h-6 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" />
                 <span><strong>Real support</strong> from a local partner—not a call center</span>
               </li>
             </ul>
@@ -133,25 +133,25 @@ export default function SethFortePage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
                   <span className="font-semibold text-gray-900 dark:text-white">Speed</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
                   <span className="font-semibold text-gray-900 dark:text-white">Search performance</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
                   <span className="font-semibold text-gray-900 dark:text-white">User experience</span>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
                   <span className="font-semibold text-gray-900 dark:text-white">Mobile responsiveness</span>
                 </div>
                 <div className="flex items-center gap-3">
-                  <span className="w-2 h-2 bg-blue-600 rounded-full"></span>
+                  <span className="w-2 h-2 bg-blue-600 dark:bg-blue-400 rounded-full"></span>
                   <span className="font-semibold text-gray-900 dark:text-white">Long-term scalability</span>
                 </div>
               </div>
@@ -176,21 +176,21 @@ export default function SethFortePage() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Icon name="services" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <Icon name="services" className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 dark:text-gray-300">Local service providers</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Icon name="star" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <Icon name="star" className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 dark:text-gray-300">Medical and wellness professionals</span>
                 </div>
               </div>
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
-                  <Icon name="bag" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <Icon name="bag" className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 dark:text-gray-300">Retail, hospitality & food businesses</span>
                 </div>
                 <div className="flex items-start gap-3">
-                  <Icon name="users" className="w-6 h-6 text-blue-600 flex-shrink-0 mt-0.5" />
+                  <Icon name="users" className="w-6 h-6 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" />
                   <span className="text-gray-700 dark:text-gray-300">Consultants, legal, and financial experts</span>
                 </div>
               </div>
@@ -253,7 +253,7 @@ export default function SethFortePage() {
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
               <Link
-                href="/solutions/seotool"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors inline-flex items-center gap-2"
               >
                 👉 Book a Free Strategy Call
