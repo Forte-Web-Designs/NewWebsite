@@ -447,98 +447,232 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef }
       `;
     };
 
+    // Format phone number properly
+    const formattedPhone = CONTACT_INFO.phone.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3');
+    const currentDate = new Date().toLocaleDateString('en-US', { 
+      year: 'numeric', 
+      month: 'long', 
+      day: 'numeric' 
+    });
+    const cleanUrl = auditedUrl.replace(/^https?:\/\/(www\.)?/i, '');
+
     const reportContent = `
       <!DOCTYPE html>
       <html>
       <head>
         <meta charset="UTF-8">
-        <title>Website Audit Report - ${auditedUrl}</title>
+        <title>Website Audit Report - ${cleanUrl}</title>
         <style>
-          body { font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto; padding: 20px; }
-          .header { text-align: center; margin-bottom: 30px; padding-bottom: 20px; border-bottom: 2px solid #081B8B; }
-          .logo { max-width: 200px; margin-bottom: 20px; }
-          h1 { color: #081B8B; margin-bottom: 10px; }
-          .url { word-break: break-all; color: #666; }
-          .combined-score { text-align: center; margin: 30px 0; padding: 20px; background: #f8f9fa; border-radius: 12px; }
-          .device-comparison { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 20px 0; }
-          .device-summary { padding: 15px; background: #f8f9fa; border-radius: 8px; text-align: center; }
-          @media print { .device-comparison { display: block; } .device-summary { margin-bottom: 15px; } }
+          @media print {
+            body { -webkit-print-color-adjust: exact; color-adjust: exact; }
+            .no-print { display: none !important; }
+            .page-break { page-break-before: always; }
+          }
+          body { 
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+            line-height: 1.6; 
+            color: #333; 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            background: white;
+          }
+          .header { 
+            text-align: center; 
+            margin-bottom: 30px; 
+            padding-bottom: 20px; 
+            border-bottom: 3px solid #081B8B; 
+          }
+          .logo { 
+            max-width: 200px; 
+            margin-bottom: 20px; 
+          }
+          h1 { 
+            color: #081B8B; 
+            margin-bottom: 10px; 
+            font-size: 28px;
+          }
+          .url { 
+            word-break: break-all; 
+            color: #666; 
+            font-size: 18px;
+            font-weight: 500;
+          }
+          .combined-score { 
+            text-align: center; 
+            margin: 30px 0; 
+            padding: 25px; 
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); 
+            border-radius: 15px; 
+            border: 2px solid #081B8B;
+          }
+          .device-comparison { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 20px; 
+            margin: 25px 0; 
+          }
+          .device-summary { 
+            padding: 20px; 
+            background: #f8f9fa; 
+            border-radius: 12px; 
+            text-align: center; 
+            border: 1px solid #dee2e6;
+          }
+          .footer-contact {
+            background: #081B8B;
+            color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            margin-top: 40px;
+          }
+          .footer-contact h3 {
+            color: white;
+            margin-top: 0;
+          }
+          .print-button {
+            background: #081B8B;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 20px 0;
+          }
+          .print-button:hover {
+            background: #061559;
+          }
+          @media screen {
+            .print-instructions {
+              background: #e3f2fd;
+              border: 1px solid #2196f3;
+              padding: 15px;
+              border-radius: 8px;
+              margin: 20px 0;
+              text-align: center;
+            }
+          }
+          @media print { 
+            .device-comparison { display: block; } 
+            .device-summary { margin-bottom: 15px; } 
+            .print-instructions { display: none; }
+          }
         </style>
       </head>
       <body>
+        <div class="no-print print-instructions">
+          <strong>📄 To save as PDF:</strong> Press <kbd>Ctrl+P</kbd> (or <kbd>Cmd+P</kbd> on Mac), then choose "Save as PDF" as your destination.
+          <br>
+          <button class="print-button" onclick="window.print()">🖨️ Print/Save as PDF</button>
+        </div>
+
         <div class="header">
-          <svg width="200" height="60" viewBox="0 0 200 60" style="margin-bottom: 20px;">
-            <text x="100" y="25" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #081B8B;">Forte Web Designs</text>
-            <text x="100" y="45" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #666;">Professional Web Solutions</text>
+          <svg width="250" height="80" viewBox="0 0 250 80" style="margin-bottom: 15px;">
+            <rect width="250" height="80" fill="#081B8B" rx="8"/>
+            <text x="125" y="30" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 20px; font-weight: bold; fill: white;">Forte Web Designs</text>
+            <text x="125" y="50" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 12px; fill: #ccc;">Professional Web Solutions</text>
+            <text x="125" y="65" text-anchor="middle" style="font-family: Arial, sans-serif; font-size: 10px; fill: #aaa;">🌐 fortewebdesigns.com</text>
           </svg>
-          <h1>Website Audit Report</h1>
-          <p class="url">${auditedUrl}</p>
-          <p style="color: #666; font-size: 14px;">Generated on ${new Date().toLocaleDateString()} by Forte SiteCheckup™</p>
+          
+          <h1>Website Performance Report</h1>
+          <p class="url">${cleanUrl}</p>
+          <p style="color: #666; font-size: 14px; margin-top: 15px;">
+            <strong>Report generated by Forte SiteCheckup™</strong><br>
+            Generated on ${currentDate}
+          </p>
         </div>
 
         <div class="combined-score">
-          <h2 style="color: #333; margin-bottom: 15px; text-align: center;">Combined Desktop & Mobile Score</h2>
-          <div style="display: flex; align-items: center; justify-content: center; gap: 20px;">
-            <div style="font-size: 48px; font-weight: bold; color: ${combinedGrade.color.includes('green') ? '#059669' : combinedGrade.color.includes('yellow') ? '#d97706' : combinedGrade.color.includes('orange') ? '#ea580c' : '#dc2626'};">
+          <h2 style="color: #333; margin-bottom: 20px; text-align: center; font-size: 24px;">
+            🏆 Overall Performance Score
+          </h2>
+          <div style="display: flex; align-items: center; justify-content: center; gap: 25px; margin-bottom: 15px;">
+            <div style="font-size: 56px; font-weight: bold; color: ${combinedGrade.color.includes('green') ? '#059669' : combinedGrade.color.includes('yellow') ? '#d97706' : combinedGrade.color.includes('orange') ? '#ea580c' : '#dc2626'};">
               ${combinedGrade.grade}
             </div>
             <div style="text-align: center;">
-              <div style="font-weight: 600; color: #333; font-size: 18px;">Overall Score</div>
-              <div style="color: #666;">${combinedScore}/100</div>
+              <div style="font-weight: 600; color: #333; font-size: 20px;">Combined Score</div>
+              <div style="color: #666; font-size: 16px;">${combinedScore}/100</div>
+              <div style="color: #888; font-size: 12px;">Desktop + Mobile Average</div>
             </div>
-            <div style="font-size: 36px;">${combinedGrade.emoji}</div>
+            <div style="font-size: 42px;">${combinedGrade.emoji}</div>
           </div>
-          <p style="margin-top: 15px; color: #666; max-width: 500px; text-align: center; margin-left: auto; margin-right: auto;">${getSummaryText()}</p>
+          <p style="margin-top: 20px; color: #666; max-width: 600px; text-align: center; margin-left: auto; margin-right: auto; font-size: 16px;">
+            ${getSummaryText()}
+          </p>
         </div>
 
         ${desktopData && mobileData ? `
           <div class="device-comparison">
             <div class="device-summary">
-              <h3 style="color: #081B8B; margin-bottom: 10px;">🖥️ Desktop Score</h3>
-              <div style="font-size: 32px; font-weight: bold; color: ${desktopData.overallGrade.color.includes('green') ? '#059669' : desktopData.overallGrade.color.includes('yellow') ? '#d97706' : desktopData.overallGrade.color.includes('orange') ? '#ea580c' : '#dc2626'};">
+              <h3 style="color: #081B8B; margin-bottom: 15px; font-size: 18px;">🖥️ Desktop Performance</h3>
+              <div style="font-size: 42px; font-weight: bold; color: ${desktopData.overallGrade.color.includes('green') ? '#059669' : desktopData.overallGrade.color.includes('yellow') ? '#d97706' : desktopData.overallGrade.color.includes('orange') ? '#ea580c' : '#dc2626'}; margin-bottom: 8px;">
                 ${desktopData.overallGrade.grade}
               </div>
-              <div style="color: #666;">${desktopData.overallScore}/100</div>
+              <div style="color: #666; font-size: 16px; font-weight: 500;">${desktopData.overallScore}/100</div>
+              <div style="font-size: 24px; margin-top: 10px;">${desktopData.overallGrade.emoji}</div>
             </div>
             <div class="device-summary">
-              <h3 style="color: #081B8B; margin-bottom: 10px;">📱 Mobile Score</h3>
-              <div style="font-size: 32px; font-weight: bold; color: ${mobileData.overallGrade.color.includes('green') ? '#059669' : mobileData.overallGrade.color.includes('yellow') ? '#d97706' : mobileData.overallGrade.color.includes('orange') ? '#ea580c' : '#dc2626'};">
+              <h3 style="color: #081B8B; margin-bottom: 15px; font-size: 18px;">📱 Mobile Performance</h3>
+              <div style="font-size: 42px; font-weight: bold; color: ${mobileData.overallGrade.color.includes('green') ? '#059669' : mobileData.overallGrade.color.includes('yellow') ? '#d97706' : mobileData.overallGrade.color.includes('orange') ? '#ea580c' : '#dc2626'}; margin-bottom: 8px;">
                 ${mobileData.overallGrade.grade}
               </div>
-              <div style="color: #666;">${mobileData.overallScore}/100</div>
+              <div style="color: #666; font-size: 16px; font-weight: 500;">${mobileData.overallScore}/100</div>
+              <div style="font-size: 24px; margin-top: 10px;">${mobileData.overallGrade.emoji}</div>
             </div>
           </div>
         ` : ''}
 
+        <div class="page-break"></div>
         ${generateDeviceSection(desktopData)}
+        
+        ${desktopData && mobileData ? '<div class="page-break"></div>' : ''}
         ${generateDeviceSection(mobileData)}
 
-        <div style="margin-top: 40px; text-align: center; font-size: 12px; color: #666; border-top: 1px solid #ccc; padding-top: 20px;">
-          <p style="margin: 5px 0; font-weight: bold;">Report generated by Forte SiteCheckup™</p>
-          <p style="margin: 5px 0;">Need help implementing these improvements? Contact Forte Web Designs</p>
-          <p style="margin: 5px 0;">Phone: {CONTACT_INFO.phone.replace(/[^\d]/g, '').replace(/(\d{3})(\d{3})(\d{4})/, '$1-$2-$3')} • Email: {CONTACT_INFO.email}</p>
-          <p style="margin: 5px 0;">Visit: fortewebdesigns.com</p>
+        <div class="footer-contact">
+          <h3 style="margin-bottom: 15px;">Need Help Implementing These Improvements?</h3>
+          <p style="font-size: 16px; margin-bottom: 10px;"><strong>Contact Forte Web Designs</strong></p>
+          <p style="font-size: 14px; margin: 8px 0;">📞 Phone: ${formattedPhone}</p>
+          <p style="font-size: 14px; margin: 8px 0;">📧 Email: ${CONTACT_INFO.email}</p>
+          <p style="font-size: 14px; margin: 8px 0;">🌐 Visit: fortewebdesigns.com</p>
+          <p style="font-size: 12px; margin-top: 15px; opacity: 0.9;">
+            Serving businesses across Dallas-Fort Worth with custom web design, SEO, and digital marketing solutions.
+          </p>
         </div>
       </body>
       </html>
     `;
 
-    // Create a blob with the HTML content
-    const blob = new Blob([reportContent], { type: 'text/html' });
-    const url = URL.createObjectURL(blob);
-    
-    // Create download link
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `website-audit-report-desktop-mobile-${auditedUrl.replace(/[^a-zA-Z0-9]/g, '-')}-${new Date().toISOString().split('T')[0]}.html`;
-    
-    // Trigger download
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    
-    // Clean up
-    URL.revokeObjectURL(url);
+    // Open the formatted report in a new window for printing/PDF conversion
+    const printWindow = window.open('', '_blank', 'width=800,height=600');
+    if (printWindow) {
+      printWindow.document.write(reportContent);
+      printWindow.document.close();
+      
+      // Auto-trigger print dialog after a short delay to ensure content is loaded
+      printWindow.onload = () => {
+        setTimeout(() => {
+          printWindow.focus();
+          // Don't auto-print, let user choose when to print
+        }, 500);
+      };
+    } else {
+      // Fallback: create downloadable HTML file
+      const blob = new Blob([reportContent], { type: 'text/html' });
+      const url = URL.createObjectURL(blob);
+      
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `forte-website-audit-${cleanUrl.replace(/[^a-zA-Z0-9]/g, '-')}-${new Date().toISOString().split('T')[0]}.html`;
+      
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      URL.revokeObjectURL(url);
+    }
   };
 
   return (
@@ -610,7 +744,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef }
       <div className="mb-6 text-center">
         <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-lg p-4 border border-blue-200 dark:border-blue-800">
           <p className="text-blue-800 dark:text-blue-200 mb-3 text-sm">
-            📄 Get your complete desktop & mobile audit report with personalized recommendations
+            📄 Download your complete desktop & mobile audit report as a formatted PDF
           </p>
           <button
             onClick={handleDownloadClick}
@@ -619,7 +753,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef }
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
             </svg>
-            {showSuccessMessage ? 'Download Again' : 'Download Full Report'}
+            {showSuccessMessage ? 'Download PDF Again' : 'Download PDF Report'}
           </button>
 
           {/* Email Form Modal */}
@@ -699,14 +833,14 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef }
             <div className="text-center">
               <div className="text-4xl mb-3">✅</div>
               <h3 className="text-xl font-bold text-green-800 dark:text-green-200 mb-3">
-                Success! Your Download Should Start Soon
+                Success! Your PDF Report Is Ready
               </h3>
               <p className="text-green-700 dark:text-green-300 mb-4 leading-relaxed">
-                Thank you! Your detailed SEO audit report download should begin automatically. 
-                If it doesn't start, you can click the "Download Again" button below.
+                Thank you! Your detailed SEO audit report should open in a new window where you can print or save it as a PDF. 
+                If it doesn't open automatically, you can click "Download PDF Again" below.
               </p>
               <div className="text-green-600 dark:text-green-400 text-sm mb-4">
-                <span className="font-semibold">What's next?</span> Review your report and feel free to reach out if you have any questions about improving your website's performance.
+                <span className="font-semibold">Tip:</span> In the new window, press Ctrl+P (or Cmd+P on Mac) and choose "Save as PDF" to save the report to your computer.
               </div>
               <button
                 onClick={() => {
