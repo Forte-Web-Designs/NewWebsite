@@ -13,6 +13,72 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'what-makes-great-web-design-small-business-needs',
+    title: 'What Makes a Great Web Design? 5 Things Every Small Business Website Needs',
+    excerpt: 'A great website isn\'t just about good looks—it\'s about results. Here are the 5 must-haves for modern web design, especially for small businesses in the Dallas–Fort Worth area.',
+    content: `
+      <p>A great website isn't just about good looks—it's about results. Whether you're a service provider in Southlake or a retail shop in Grapevine, your site is often the <strong>first impression</strong> customers have of your business.</p>
+
+      <p>At <strong>Forte Web Designs</strong>, we focus on building sites that don't just look good—they load fast, rank high, and convert visitors into customers.</p>
+
+      <p>Here are the 5 must-haves for modern web design, especially for small businesses in the <strong>Dallas–Fort Worth area</strong>.</p>
+
+      <h2>1. Speed & Performance</h2>
+
+      <p>Slow websites kill conversions and SEO. Google favors sites that load quickly—and so do your customers.</p>
+
+      <p>We hand-code every site from scratch, removing bloated code, unnecessary plugins, and anything that slows you down. Your site loads in seconds, even on mobile.</p>
+
+      <h2>2. Mobile-First Design</h2>
+
+      <p>Over 60% of web traffic happens on phones. If your site isn't mobile-friendly, you're losing customers.</p>
+
+      <p>We build every page to be responsive, smooth, and intuitive—whether someone's browsing on a desktop or booking from their phone.</p>
+
+      <h2>3. SEO-Ready Structure</h2>
+
+      <p>Most sites look fine, but they're missing the backend essentials—like proper headings, alt tags, schema markup, and metadata.</p>
+
+      <p>With Forte, <strong>SEO is built in from the ground up</strong>. Our sites are structured to help you rank better on Google in Grapevine, Keller, Southlake, and beyond.</p>
+
+      <h2>4. Clear Call-to-Action</h2>
+
+      <p>Great design should lead somewhere: a call, a booking, a sale.</p>
+
+      <p>We map out your site to guide users step-by-step toward your business goals—whether that's filling out a form or clicking to call.</p>
+
+      <h2>5. Local Focus</h2>
+
+      <p>Your site should help local customers find you. That means local SEO strategies like:</p>
+
+      <ul>
+        <li>City-specific service pages</li>
+        <li>Local keyword targeting</li>
+        <li>Google Maps integration</li>
+        <li>Schema that reinforces your <strong>DFW location</strong></li>
+      </ul>
+
+      <p>We've helped small businesses across Dallas–Fort Worth rise in search rankings by making their websites locally relevant.</p>
+
+      <h2>Is Your Current Website Helping or Hurting You?</h2>
+
+      <p>A lot of businesses have "decent" sites—but decent doesn't drive growth.</p>
+
+      <p>If your site doesn't check all five boxes, we'll show you exactly what to fix.</p>
+
+      <p>👉 <a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">Claim Your Free Website Audit Now</a></p>
+
+      <p>📍 Proudly building custom websites for businesses in Grapevine, Southlake, Fort Worth, and across DFW.</p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-08-06',
+    readTime: '4 min read',
+    category: 'Web Design',
+    image: '/images/blog/great-web-design-small-business.webp',
+    tags: ['Web Design', 'Small Business', 'Performance', 'Mobile Design', 'Local SEO'],
+    featured: true
+  },
+  {
     id: 'hand-coded-vs-page-builders-custom-websites-win',
     title: 'Hand-Coded vs. Page Builders: Why Custom Websites Win in the Long Run',
     excerpt: 'It\'s never been easier to build a website—but not all websites are created equal. Here\'s why small business owners across Grapevine and DFW are shifting back toward custom, hand-coded sites.',
