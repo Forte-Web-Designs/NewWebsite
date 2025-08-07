@@ -117,7 +117,7 @@ export default function PlumbingLanding() {
 
   // Webhook tracking function with enhanced debugging - Updated to match Mehmet's format
   const trackVisitorData = async (visitorParams: any) => {
-    const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
+    const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
     
     try {
       // Match Mehmet's JavaScript code structure exactly
@@ -142,16 +142,6 @@ export default function PlumbingLanding() {
         lead_score: visitorParams.business !== 'Professional Plumbing' ? 100 : 50
       };
 
-      console.log('🔄 Sending visitor data to webhook:', {
-        url: webhookUrl,
-        method: 'POST',
-        dataPreview: {
-          business: webhookData.business,
-          location: webhookData.location,
-          timestamp: webhookData.timestamp,
-          session_id: webhookData.session_id
-        }
-      });
 
       const response = await fetch(webhookUrl, {
         method: 'POST',
@@ -161,30 +151,11 @@ export default function PlumbingLanding() {
         body: JSON.stringify(webhookData),
       });
 
-      // Try to parse as JSON first (like Mehmet's code), fallback to text
-      let responseData;
+      // Try to parse as JSON first, fallback to text
       try {
-        responseData = await response.json();
-        console.log('✅ Visitor tracking successful:', responseData);
+        await response.json();
       } catch (jsonError) {
-        // If JSON parsing fails, get text response
-        const responseText = await response.text();
-        if (response.ok) {
-          console.log('✅ Visitor tracking successful:', responseText);
-        } else {
-          console.warn('⚠️ Webhook response not ok:', {
-            status: response.status,
-            statusText: response.statusText,
-            response: responseText
-          });
-          
-          // Check for common webhook issues
-          if (response.status === 404) {
-            console.warn('🔧 WEBHOOK SETUP ISSUE: The webhook endpoint is not active.');
-            console.warn('💡 SOLUTION: Mehmet needs to click "Execute workflow" in n8n interface.');
-            console.warn('📝 Alternative: Switch from test webhook to production webhook.');
-          }
-        }
+        await response.text();
       }
     } catch (error) {
       console.warn('⚠️ Webhook tracking failed:', error);
@@ -275,11 +246,9 @@ export default function PlumbingLanding() {
       
       // Send to webhook first (don't let failure block form submission)
       try {
-        const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
-        
+        const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
         // Match Mehmet's structure for form submissions
         const webhookData = {
-          // Core URL parameters (matching visitor tracking)
           business: params.business,
           owner: params.owner,
           location: params.location,
@@ -289,8 +258,6 @@ export default function PlumbingLanding() {
           utm_campaign: params.utm_campaign,
           timestamp: new Date().toISOString(),
           page_url: window.location.href,
-          
-          // Form-specific data
           business_name: formDataToSend.get('business-name')?.toString() || '',
           contact_name: formDataToSend.get('name')?.toString() || '',
           email: formDataToSend.get('email')?.toString() || '',
@@ -301,18 +268,6 @@ export default function PlumbingLanding() {
           lead_quality: 'hot',
           lead_score: 100
         };
-        
-        console.log('📤 Sending form lead data to webhook:', {
-          url: webhookUrl,
-          leadData: {
-            business: webhookData.business,
-            contact_name: webhookData.contact_name,
-            email: webhookData.email,
-            form_source: webhookData.form_source,
-            lead_quality: webhookData.lead_quality
-          }
-        });
-        
         const webhookResponse = await fetch(webhookUrl, {
           method: 'POST',
           headers: {
@@ -320,24 +275,13 @@ export default function PlumbingLanding() {
           },
           body: JSON.stringify(webhookData),
         });
-        
-        // Try JSON first, fallback to text (matching Mehmet's approach)
         try {
-          const webhookResponseData = await webhookResponse.json();
-          console.log('✅ Lead data sent to webhook successfully:', webhookResponseData);
+          await webhookResponse.json();
         } catch (jsonError) {
-          const webhookResponseText = await webhookResponse.text();
-          if (webhookResponse.ok) {
-            console.log('✅ Lead data sent to webhook successfully:', webhookResponseText);
-          } else {
-            console.warn('⚠️ Webhook failed with status:', webhookResponse.status, webhookResponseText);
-            if (webhookResponse.status === 404) {
-              console.warn('🔧 WEBHOOK SETUP NEEDED: Ask Mehmet to activate the webhook in n8n');
-            }
-          }
+          await webhookResponse.text();
         }
       } catch (webhookError) {
-        console.warn('⚠️ Webhook failed, but continuing with form submission:', webhookError);
+        // Fail silently
       }
 
       // Add form name for Netlify
@@ -398,11 +342,9 @@ export default function PlumbingLanding() {
       
       // Send to webhook first (don't let failure block form submission)
       try {
-        const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
-        
+        const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
         // Match Mehmet's structure for popup form submissions
         const webhookData = {
-          // Core URL parameters (matching visitor tracking)
           business: params.business,
           owner: params.owner,
           location: params.location,
@@ -412,8 +354,6 @@ export default function PlumbingLanding() {
           utm_campaign: params.utm_campaign,
           timestamp: new Date().toISOString(),
           page_url: window.location.href,
-          
-          // Form-specific data
           business_name: formDataToSend.get('business-name')?.toString() || '',
           contact_name: formDataToSend.get('name')?.toString() || '',
           email: formDataToSend.get('email')?.toString() || '',
@@ -424,18 +364,6 @@ export default function PlumbingLanding() {
           lead_quality: 'hot',
           lead_score: 100
         };
-        
-        console.log('📤 Sending popup lead data to webhook:', {
-          url: webhookUrl,
-          leadData: {
-            business: webhookData.business,
-            contact_name: webhookData.contact_name,
-            email: webhookData.email,
-            form_source: webhookData.form_source,
-            lead_quality: webhookData.lead_quality
-          }
-        });
-        
         const webhookResponse = await fetch(webhookUrl, {
           method: 'POST',
           headers: {
@@ -443,24 +371,13 @@ export default function PlumbingLanding() {
           },
           body: JSON.stringify(webhookData),
         });
-        
-        // Try JSON first, fallback to text (matching Mehmet's approach)
         try {
-          const webhookResponseData = await webhookResponse.json();
-          console.log('✅ Popup lead data sent to webhook successfully:', webhookResponseData);
+          await webhookResponse.json();
         } catch (jsonError) {
-          const webhookResponseText = await webhookResponse.text();
-          if (webhookResponse.ok) {
-            console.log('✅ Popup lead data sent to webhook successfully:', webhookResponseText);
-          } else {
-            console.warn('⚠️ Popup webhook failed with status:', webhookResponse.status, webhookResponseText);
-            if (webhookResponse.status === 404) {
-              console.warn('🔧 WEBHOOK SETUP NEEDED: Ask Mehmet to activate the webhook in n8n');
-            }
-          }
+          await webhookResponse.text();
         }
       } catch (webhookError) {
-        console.warn('⚠️ Webhook failed, but continuing with form submission:', webhookError);
+        // Fail silently
       }
       
       // Add form name for Netlify
