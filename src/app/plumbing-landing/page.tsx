@@ -115,7 +115,7 @@ export default function PlumbingLanding() {
     }
   };
 
-  // Webhook tracking function
+  // Webhook tracking function with enhanced debugging
   const trackVisitorData = async (visitorParams: any) => {
     const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
     
@@ -155,6 +155,17 @@ export default function PlumbingLanding() {
         demo_mode: visitorParams.business !== 'Professional Plumbing'
       };
 
+      console.log('🔄 Sending visitor data to webhook:', {
+        url: webhookUrl,
+        method: 'POST',
+        dataPreview: {
+          business: visitorData.business,
+          location: visitorData.location,
+          timestamp: visitorData.timestamp,
+          session_id: visitorData.session_id
+        }
+      });
+
       const response = await fetch(webhookUrl, {
         method: 'POST',
         headers: {
@@ -163,13 +174,27 @@ export default function PlumbingLanding() {
         body: JSON.stringify(visitorData),
       });
 
+      const responseText = await response.text();
+      
       if (response.ok) {
-        console.log('✅ Visitor tracking successful');
+        console.log('✅ Visitor tracking successful:', responseText);
       } else {
-        console.warn('⚠️ Webhook response not ok:', response.status);
+        console.warn('⚠️ Webhook response not ok:', {
+          status: response.status,
+          statusText: response.statusText,
+          response: responseText
+        });
+        
+        // Check for common webhook issues
+        if (response.status === 404) {
+          console.warn('🔧 WEBHOOK SETUP ISSUE: The webhook endpoint is not active.');
+          console.warn('💡 SOLUTION: Mehmet needs to click "Execute workflow" in n8n interface.');
+          console.warn('📝 Alternative: Switch from test webhook to production webhook.');
+        }
       }
     } catch (error) {
       console.warn('⚠️ Webhook tracking failed:', error);
+      console.warn('🔧 Check if webhook endpoint is accessible and CORS is configured properly.');
       // Fail silently - don't disrupt user experience
     }
   };
@@ -296,14 +321,36 @@ export default function PlumbingLanding() {
       // Send to webhook first (don't let failure block form submission)
       try {
         const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
-        await fetch(webhookUrl, {
+        
+        console.log('📤 Sending form lead data to webhook:', {
+          url: webhookUrl,
+          leadData: {
+            business_name: webhookLeadData.business_name,
+            contact_name: webhookLeadData.contact_name,
+            email: webhookLeadData.email,
+            form_source: webhookLeadData.form_source,
+            lead_quality: webhookLeadData.lead_quality
+          }
+        });
+        
+        const webhookResponse = await fetch(webhookUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(webhookLeadData),
         });
-        console.log('✅ Lead data sent to webhook successfully');
+        
+        const webhookResponseText = await webhookResponse.text();
+        
+        if (webhookResponse.ok) {
+          console.log('✅ Lead data sent to webhook successfully:', webhookResponseText);
+        } else {
+          console.warn('⚠️ Webhook failed with status:', webhookResponse.status, webhookResponseText);
+          if (webhookResponse.status === 404) {
+            console.warn('🔧 WEBHOOK SETUP NEEDED: Ask Mehmet to activate the webhook in n8n');
+          }
+        }
       } catch (webhookError) {
         console.warn('⚠️ Webhook failed, but continuing with form submission:', webhookError);
       }
@@ -406,14 +453,36 @@ export default function PlumbingLanding() {
       // Send to webhook first (don't let failure block form submission)
       try {
         const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
-        await fetch(webhookUrl, {
+        
+        console.log('📤 Sending popup lead data to webhook:', {
+          url: webhookUrl,
+          leadData: {
+            business_name: webhookLeadData.business_name,
+            contact_name: webhookLeadData.contact_name,
+            email: webhookLeadData.email,
+            form_source: webhookLeadData.form_source,
+            lead_quality: webhookLeadData.lead_quality
+          }
+        });
+        
+        const webhookResponse = await fetch(webhookUrl, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
           },
           body: JSON.stringify(webhookLeadData),
         });
-        console.log('✅ Popup lead data sent to webhook successfully');
+        
+        const webhookResponseText = await webhookResponse.text();
+        
+        if (webhookResponse.ok) {
+          console.log('✅ Popup lead data sent to webhook successfully:', webhookResponseText);
+        } else {
+          console.warn('⚠️ Popup webhook failed with status:', webhookResponse.status, webhookResponseText);
+          if (webhookResponse.status === 404) {
+            console.warn('🔧 WEBHOOK SETUP NEEDED: Ask Mehmet to activate the webhook in n8n');
+          }
+        }
       } catch (webhookError) {
         console.warn('⚠️ Webhook failed, but continuing with form submission:', webhookError);
       }
