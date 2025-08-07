@@ -115,6 +115,65 @@ export default function PlumbingLanding() {
     }
   };
 
+  // Webhook tracking function
+  const trackVisitorData = async (visitorParams: any) => {
+    const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
+    
+    try {
+      const visitorData = {
+        // Page parameters
+        business: visitorParams.business,
+        owner: visitorParams.owner,
+        location: visitorParams.location,
+        phone: visitorParams.phone,
+        email: visitorParams.email,
+        theme: visitorParams.theme,
+        utm_source: visitorParams.utm_source,
+        utm_medium: visitorParams.utm_medium,
+        utm_campaign: visitorParams.utm_campaign,
+        
+        // Visitor metadata
+        timestamp: new Date().toISOString(),
+        page_url: window.location.href,
+        referrer: document.referrer || 'Direct',
+        user_agent: navigator.userAgent,
+        screen_resolution: `${window.screen.width}x${window.screen.height}`,
+        viewport_size: `${window.innerWidth}x${window.innerHeight}`,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+        language: navigator.language,
+        platform: navigator.platform,
+        
+        // Session data
+        session_id: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        page_type: 'plumbing_landing_page',
+        visitor_type: visitorParams.business !== 'Professional Plumbing' ? 'business_owner' : 'general_visitor',
+        lead_score: visitorParams.business !== 'Professional Plumbing' ? 100 : 50, // High score for targeted business owners
+        
+        // Marketing data
+        campaign_type: 'plumbing_outreach',
+        landing_page_version: 'v1.0',
+        demo_mode: visitorParams.business !== 'Professional Plumbing'
+      };
+
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(visitorData),
+      });
+
+      if (response.ok) {
+        console.log('✅ Visitor tracking successful');
+      } else {
+        console.warn('⚠️ Webhook response not ok:', response.status);
+      }
+    } catch (error) {
+      console.warn('⚠️ Webhook tracking failed:', error);
+      // Fail silently - don't disrupt user experience
+    }
+  };
+
   useEffect(() => {
     // Client-side parameter extraction
     const urlParams = new URLSearchParams(window.location.search);
@@ -134,6 +193,9 @@ export default function PlumbingLanding() {
     setParams(extractedParams);
     setCurrentTheme(extractedParams.theme);
     setIsLoaded(true);
+
+    // Track visitor data after page loads and parameters are extracted
+    trackVisitorData(extractedParams);
 
     // Scroll listener for popup trigger
     const handleScroll = () => {
@@ -192,6 +254,60 @@ export default function PlumbingLanding() {
       const form = e.target as HTMLFormElement;
       const formDataToSend = new FormData(form);
       
+      // Extract form data for webhook
+      const webhookLeadData = {
+        // Lead information
+        business_name: formDataToSend.get('business-name')?.toString() || '',
+        contact_name: formDataToSend.get('name')?.toString() || '',
+        email: formDataToSend.get('email')?.toString() || '',
+        phone: formDataToSend.get('phone')?.toString() || '',
+        location: formDataToSend.get('location')?.toString() || '',
+        
+        // Form metadata
+        form_type: 'website_mockup_claim',
+        form_source: formDataToSend.get('source')?.toString() || 'hero-section',
+        campaign: formDataToSend.get('campaign')?.toString() || 'plumber-email-campaign',
+        submission_time: new Date().toISOString(),
+        
+        // Page context
+        page_url: window.location.href,
+        referrer: document.referrer || 'Direct',
+        
+        // URL parameters (lead qualification data)
+        url_business: params.business,
+        url_owner: params.owner,
+        url_location: params.location,
+        url_phone: params.phone,
+        url_utm_source: params.utm_source,
+        url_utm_medium: params.utm_medium,
+        url_utm_campaign: params.utm_campaign,
+        
+        // Lead scoring
+        lead_quality: 'hot', // Form submission = hot lead
+        lead_score: 100,
+        follow_up_priority: 'high',
+        
+        // Session data
+        session_id: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        user_agent: navigator.userAgent,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      };
+
+      // Send to webhook first (don't let failure block form submission)
+      try {
+        const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookLeadData),
+        });
+        console.log('✅ Lead data sent to webhook successfully');
+      } catch (webhookError) {
+        console.warn('⚠️ Webhook failed, but continuing with form submission:', webhookError);
+      }
+
       // Add form name for Netlify
       formDataToSend.append('form-name', 'website-mockup');
       
@@ -247,6 +363,60 @@ export default function PlumbingLanding() {
       // Get form data directly from the form element
       const form = e.target as HTMLFormElement;
       const formDataToSend = new FormData(form);
+      
+      // Extract form data for webhook
+      const webhookLeadData = {
+        // Lead information
+        business_name: formDataToSend.get('business-name')?.toString() || '',
+        contact_name: formDataToSend.get('name')?.toString() || '',
+        email: formDataToSend.get('email')?.toString() || '',
+        phone: formDataToSend.get('phone')?.toString() || '',
+        location: formDataToSend.get('location')?.toString() || '',
+        
+        // Form metadata
+        form_type: 'website_mockup_claim',
+        form_source: 'popup-form',
+        campaign: 'plumber-email-campaign',
+        submission_time: new Date().toISOString(),
+        
+        // Page context
+        page_url: window.location.href,
+        referrer: document.referrer || 'Direct',
+        
+        // URL parameters (lead qualification data)
+        url_business: params.business,
+        url_owner: params.owner,
+        url_location: params.location,
+        url_phone: params.phone,
+        url_utm_source: params.utm_source,
+        url_utm_medium: params.utm_medium,
+        url_utm_campaign: params.utm_campaign,
+        
+        // Lead scoring
+        lead_quality: 'hot', // Popup form submission = hot lead
+        lead_score: 100,
+        follow_up_priority: 'high',
+        
+        // Session data
+        session_id: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+        user_agent: navigator.userAgent,
+        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
+      };
+
+      // Send to webhook first (don't let failure block form submission)
+      try {
+        const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
+        await fetch(webhookUrl, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(webhookLeadData),
+        });
+        console.log('✅ Popup lead data sent to webhook successfully');
+      } catch (webhookError) {
+        console.warn('⚠️ Webhook failed, but continuing with form submission:', webhookError);
+      }
       
       // Add form name for Netlify
       formDataToSend.append('form-name', 'website-mockup');
