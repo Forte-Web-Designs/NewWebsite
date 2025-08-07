@@ -115,54 +115,41 @@ export default function PlumbingLanding() {
     }
   };
 
-  // Webhook tracking function with enhanced debugging
+  // Webhook tracking function with enhanced debugging - Updated to match Mehmet's format
   const trackVisitorData = async (visitorParams: any) => {
     const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
     
     try {
-      const visitorData = {
-        // Page parameters
+      // Match Mehmet's JavaScript code structure exactly
+      const webhookData = {
         business: visitorParams.business,
         owner: visitorParams.owner,
         location: visitorParams.location,
         phone: visitorParams.phone,
-        email: visitorParams.email,
-        theme: visitorParams.theme,
         utm_source: visitorParams.utm_source,
         utm_medium: visitorParams.utm_medium,
         utm_campaign: visitorParams.utm_campaign,
-        
-        // Visitor metadata
         timestamp: new Date().toISOString(),
         page_url: window.location.href,
-        referrer: document.referrer || 'Direct',
-        user_agent: navigator.userAgent,
-        screen_resolution: `${window.screen.width}x${window.screen.height}`,
-        viewport_size: `${window.innerWidth}x${window.innerHeight}`,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
-        language: navigator.language,
-        platform: navigator.platform,
         
-        // Session data
+        // Additional context data (keeping essential tracking info)
+        email: visitorParams.email,
+        theme: visitorParams.theme,
+        referrer: document.referrer || 'Direct',
         session_id: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
         page_type: 'plumbing_landing_page',
         visitor_type: visitorParams.business !== 'Professional Plumbing' ? 'business_owner' : 'general_visitor',
-        lead_score: visitorParams.business !== 'Professional Plumbing' ? 100 : 50, // High score for targeted business owners
-        
-        // Marketing data
-        campaign_type: 'plumbing_outreach',
-        landing_page_version: 'v1.0',
-        demo_mode: visitorParams.business !== 'Professional Plumbing'
+        lead_score: visitorParams.business !== 'Professional Plumbing' ? 100 : 50
       };
 
       console.log('🔄 Sending visitor data to webhook:', {
         url: webhookUrl,
         method: 'POST',
         dataPreview: {
-          business: visitorData.business,
-          location: visitorData.location,
-          timestamp: visitorData.timestamp,
-          session_id: visitorData.session_id
+          business: webhookData.business,
+          location: webhookData.location,
+          timestamp: webhookData.timestamp,
+          session_id: webhookData.session_id
         }
       });
 
@@ -171,25 +158,32 @@ export default function PlumbingLanding() {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify(visitorData),
+        body: JSON.stringify(webhookData),
       });
 
-      const responseText = await response.text();
-      
-      if (response.ok) {
-        console.log('✅ Visitor tracking successful:', responseText);
-      } else {
-        console.warn('⚠️ Webhook response not ok:', {
-          status: response.status,
-          statusText: response.statusText,
-          response: responseText
-        });
-        
-        // Check for common webhook issues
-        if (response.status === 404) {
-          console.warn('🔧 WEBHOOK SETUP ISSUE: The webhook endpoint is not active.');
-          console.warn('💡 SOLUTION: Mehmet needs to click "Execute workflow" in n8n interface.');
-          console.warn('📝 Alternative: Switch from test webhook to production webhook.');
+      // Try to parse as JSON first (like Mehmet's code), fallback to text
+      let responseData;
+      try {
+        responseData = await response.json();
+        console.log('✅ Visitor tracking successful:', responseData);
+      } catch (jsonError) {
+        // If JSON parsing fails, get text response
+        const responseText = await response.text();
+        if (response.ok) {
+          console.log('✅ Visitor tracking successful:', responseText);
+        } else {
+          console.warn('⚠️ Webhook response not ok:', {
+            status: response.status,
+            statusText: response.statusText,
+            response: responseText
+          });
+          
+          // Check for common webhook issues
+          if (response.status === 404) {
+            console.warn('🔧 WEBHOOK SETUP ISSUE: The webhook endpoint is not active.');
+            console.warn('💡 SOLUTION: Mehmet needs to click "Execute workflow" in n8n interface.');
+            console.warn('📝 Alternative: Switch from test webhook to production webhook.');
+          }
         }
       }
     } catch (error) {
@@ -279,57 +273,43 @@ export default function PlumbingLanding() {
       const form = e.target as HTMLFormElement;
       const formDataToSend = new FormData(form);
       
-      // Extract form data for webhook
-      const webhookLeadData = {
-        // Lead information
-        business_name: formDataToSend.get('business-name')?.toString() || '',
-        contact_name: formDataToSend.get('name')?.toString() || '',
-        email: formDataToSend.get('email')?.toString() || '',
-        phone: formDataToSend.get('phone')?.toString() || '',
-        location: formDataToSend.get('location')?.toString() || '',
-        
-        // Form metadata
-        form_type: 'website_mockup_claim',
-        form_source: formDataToSend.get('source')?.toString() || 'hero-section',
-        campaign: formDataToSend.get('campaign')?.toString() || 'plumber-email-campaign',
-        submission_time: new Date().toISOString(),
-        
-        // Page context
-        page_url: window.location.href,
-        referrer: document.referrer || 'Direct',
-        
-        // URL parameters (lead qualification data)
-        url_business: params.business,
-        url_owner: params.owner,
-        url_location: params.location,
-        url_phone: params.phone,
-        url_utm_source: params.utm_source,
-        url_utm_medium: params.utm_medium,
-        url_utm_campaign: params.utm_campaign,
-        
-        // Lead scoring
-        lead_quality: 'hot', // Form submission = hot lead
-        lead_score: 100,
-        follow_up_priority: 'high',
-        
-        // Session data
-        session_id: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        user_agent: navigator.userAgent,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-      };
-
       // Send to webhook first (don't let failure block form submission)
       try {
         const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
         
+        // Match Mehmet's structure for form submissions
+        const webhookData = {
+          // Core URL parameters (matching visitor tracking)
+          business: params.business,
+          owner: params.owner,
+          location: params.location,
+          phone: params.phone,
+          utm_source: params.utm_source,
+          utm_medium: params.utm_medium,
+          utm_campaign: params.utm_campaign,
+          timestamp: new Date().toISOString(),
+          page_url: window.location.href,
+          
+          // Form-specific data
+          business_name: formDataToSend.get('business-name')?.toString() || '',
+          contact_name: formDataToSend.get('name')?.toString() || '',
+          email: formDataToSend.get('email')?.toString() || '',
+          form_phone: formDataToSend.get('phone')?.toString() || '',
+          form_location: formDataToSend.get('location')?.toString() || '',
+          form_type: 'website_mockup_claim',
+          form_source: formDataToSend.get('source')?.toString() || 'hero-section',
+          lead_quality: 'hot',
+          lead_score: 100
+        };
+        
         console.log('📤 Sending form lead data to webhook:', {
           url: webhookUrl,
           leadData: {
-            business_name: webhookLeadData.business_name,
-            contact_name: webhookLeadData.contact_name,
-            email: webhookLeadData.email,
-            form_source: webhookLeadData.form_source,
-            lead_quality: webhookLeadData.lead_quality
+            business: webhookData.business,
+            contact_name: webhookData.contact_name,
+            email: webhookData.email,
+            form_source: webhookData.form_source,
+            lead_quality: webhookData.lead_quality
           }
         });
         
@@ -338,17 +318,22 @@ export default function PlumbingLanding() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(webhookLeadData),
+          body: JSON.stringify(webhookData),
         });
         
-        const webhookResponseText = await webhookResponse.text();
-        
-        if (webhookResponse.ok) {
-          console.log('✅ Lead data sent to webhook successfully:', webhookResponseText);
-        } else {
-          console.warn('⚠️ Webhook failed with status:', webhookResponse.status, webhookResponseText);
-          if (webhookResponse.status === 404) {
-            console.warn('🔧 WEBHOOK SETUP NEEDED: Ask Mehmet to activate the webhook in n8n');
+        // Try JSON first, fallback to text (matching Mehmet's approach)
+        try {
+          const webhookResponseData = await webhookResponse.json();
+          console.log('✅ Lead data sent to webhook successfully:', webhookResponseData);
+        } catch (jsonError) {
+          const webhookResponseText = await webhookResponse.text();
+          if (webhookResponse.ok) {
+            console.log('✅ Lead data sent to webhook successfully:', webhookResponseText);
+          } else {
+            console.warn('⚠️ Webhook failed with status:', webhookResponse.status, webhookResponseText);
+            if (webhookResponse.status === 404) {
+              console.warn('🔧 WEBHOOK SETUP NEEDED: Ask Mehmet to activate the webhook in n8n');
+            }
           }
         }
       } catch (webhookError) {
@@ -411,57 +396,43 @@ export default function PlumbingLanding() {
       const form = e.target as HTMLFormElement;
       const formDataToSend = new FormData(form);
       
-      // Extract form data for webhook
-      const webhookLeadData = {
-        // Lead information
-        business_name: formDataToSend.get('business-name')?.toString() || '',
-        contact_name: formDataToSend.get('name')?.toString() || '',
-        email: formDataToSend.get('email')?.toString() || '',
-        phone: formDataToSend.get('phone')?.toString() || '',
-        location: formDataToSend.get('location')?.toString() || '',
-        
-        // Form metadata
-        form_type: 'website_mockup_claim',
-        form_source: 'popup-form',
-        campaign: 'plumber-email-campaign',
-        submission_time: new Date().toISOString(),
-        
-        // Page context
-        page_url: window.location.href,
-        referrer: document.referrer || 'Direct',
-        
-        // URL parameters (lead qualification data)
-        url_business: params.business,
-        url_owner: params.owner,
-        url_location: params.location,
-        url_phone: params.phone,
-        url_utm_source: params.utm_source,
-        url_utm_medium: params.utm_medium,
-        url_utm_campaign: params.utm_campaign,
-        
-        // Lead scoring
-        lead_quality: 'hot', // Popup form submission = hot lead
-        lead_score: 100,
-        follow_up_priority: 'high',
-        
-        // Session data
-        session_id: `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
-        user_agent: navigator.userAgent,
-        timezone: Intl.DateTimeFormat().resolvedOptions().timeZone
-      };
-
       // Send to webhook first (don't let failure block form submission)
       try {
         const webhookUrl = 'https://n8n.srv907708.hstgr.cloud/webhook-test/6fc6553d-8aae-4b30-af4a-45e2802c46cd';
         
+        // Match Mehmet's structure for popup form submissions
+        const webhookData = {
+          // Core URL parameters (matching visitor tracking)
+          business: params.business,
+          owner: params.owner,
+          location: params.location,
+          phone: params.phone,
+          utm_source: params.utm_source,
+          utm_medium: params.utm_medium,
+          utm_campaign: params.utm_campaign,
+          timestamp: new Date().toISOString(),
+          page_url: window.location.href,
+          
+          // Form-specific data
+          business_name: formDataToSend.get('business-name')?.toString() || '',
+          contact_name: formDataToSend.get('name')?.toString() || '',
+          email: formDataToSend.get('email')?.toString() || '',
+          form_phone: formDataToSend.get('phone')?.toString() || '',
+          form_location: formDataToSend.get('location')?.toString() || '',
+          form_type: 'website_mockup_claim',
+          form_source: 'popup-form',
+          lead_quality: 'hot',
+          lead_score: 100
+        };
+        
         console.log('📤 Sending popup lead data to webhook:', {
           url: webhookUrl,
           leadData: {
-            business_name: webhookLeadData.business_name,
-            contact_name: webhookLeadData.contact_name,
-            email: webhookLeadData.email,
-            form_source: webhookLeadData.form_source,
-            lead_quality: webhookLeadData.lead_quality
+            business: webhookData.business,
+            contact_name: webhookData.contact_name,
+            email: webhookData.email,
+            form_source: webhookData.form_source,
+            lead_quality: webhookData.lead_quality
           }
         });
         
@@ -470,17 +441,22 @@ export default function PlumbingLanding() {
           headers: {
             'Content-Type': 'application/json',
           },
-          body: JSON.stringify(webhookLeadData),
+          body: JSON.stringify(webhookData),
         });
         
-        const webhookResponseText = await webhookResponse.text();
-        
-        if (webhookResponse.ok) {
-          console.log('✅ Popup lead data sent to webhook successfully:', webhookResponseText);
-        } else {
-          console.warn('⚠️ Popup webhook failed with status:', webhookResponse.status, webhookResponseText);
-          if (webhookResponse.status === 404) {
-            console.warn('🔧 WEBHOOK SETUP NEEDED: Ask Mehmet to activate the webhook in n8n');
+        // Try JSON first, fallback to text (matching Mehmet's approach)
+        try {
+          const webhookResponseData = await webhookResponse.json();
+          console.log('✅ Popup lead data sent to webhook successfully:', webhookResponseData);
+        } catch (jsonError) {
+          const webhookResponseText = await webhookResponse.text();
+          if (webhookResponse.ok) {
+            console.log('✅ Popup lead data sent to webhook successfully:', webhookResponseText);
+          } else {
+            console.warn('⚠️ Popup webhook failed with status:', webhookResponse.status, webhookResponseText);
+            if (webhookResponse.status === 404) {
+              console.warn('🔧 WEBHOOK SETUP NEEDED: Ask Mehmet to activate the webhook in n8n');
+            }
           }
         }
       } catch (webhookError) {
