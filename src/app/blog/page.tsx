@@ -13,6 +13,71 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'why-your-website-isnt-ranking-and-how-to-fix-it',
+    title: 'Why Your Website Isn\'t Ranking (And How to Fix It)',
+    excerpt: 'Your website might look great—but if it\'s buried on page 3 of Google, it\'s not doing its job. We work with small businesses across Grapevine and the DFW area who are frustrated by low visibility and missed opportunities.',
+    content: `
+      <p>Your website might look great—but if it's buried on page 3 of Google, it's not doing its job.</p>
+
+      <p>At Forte Web Designs, we work with small businesses across Grapevine and the DFW area who are frustrated by low visibility and missed opportunities. The truth? Most websites fail to rank because of 3 simple issues—and the good news is, they're fixable.</p>
+
+      <p>Here's what could be holding your site back—and how to turn things around fast.</p>
+
+      <h2>1. Your Site Is Too Slow</h2>
+
+      <p>Google loves fast websites. If your site takes more than 3 seconds to load, you're losing both rankings and customers.</p>
+
+      <p>Most templated builders (Wix, Squarespace, WordPress themes) are bloated with unused code, plugins, and third-party scripts. We hand-code every site from scratch—so it loads fast, ranks faster, and keeps people engaged.</p>
+
+      <h2>2. Your SEO Foundation Is Weak</h2>
+
+      <p>Many small business sites miss the basics:</p>
+
+      <ul>
+        <li>No meta titles or descriptions</li>
+        <li>No header structure (H1, H2, etc.)</li>
+        <li>Missing alt text on images</li>
+        <li>No schema or local markup</li>
+      </ul>
+
+      <p>Our custom builds include SEO baked in—not bolted on. That's why clients across DFW see gains in search rankings shortly after launch.</p>
+
+      <h2>3. You're Missing Local Signals</h2>
+
+      <p>If you want to rank for "web designer Grapevine" or "plumber in Southlake," your site needs local SEO cues. That means:</p>
+
+      <ul>
+        <li>Mentioning cities in content</li>
+        <li>Embedding a Google Map</li>
+        <li>Creating individual service-area pages</li>
+        <li>Consistent Name/Address/Phone (NAP) across the web</li>
+      </ul>
+
+      <p>We optimize every site for Dallas–Fort Worth visibility—because if you're local, your SEO should be too.</p>
+
+      <h2>How to Know Where You Stand</h2>
+
+      <p>Don't guess. Get a free, no-pressure audit of your website and SEO. We'll show you what's working, what's broken, and what to fix first.</p>
+
+      <p>👉 <a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">Claim Your Free SiteCheckup™</a></p>
+
+      <h2>Final Word</h2>
+
+      <p>Your website is an asset. But if it's invisible on search engines, it's just an expensive brochure.</p>
+
+      <p>Let's change that.</p>
+
+      <p>📍 Based in Grapevine. Helping small businesses grow across Keller, Southlake, and all of DFW.</p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-08-08',
+    readTime: '5 min read',
+    category: 'SEO',
+    image: '/images/blog/website-ranking-seo.webp',
+    tags: ['SEO', 'Website Rankings', 'Google', 'Local SEO', 'DFW'],
+    featured: true
+  },
+  {
     id: 'what-makes-great-web-design-small-business-needs',
     title: 'What Makes a Great Web Design? 5 Things Every Small Business Website Needs',
     excerpt: 'A great website isn\'t just about good looks—it\'s about results. Here are the 5 must-haves for modern web design, especially for small businesses in the Dallas–Fort Worth area.',
