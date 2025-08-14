@@ -6,6 +6,7 @@ import Link from 'next/link';
 import DarkButton from './DarkButton';
 import SimpleScrollReveal from './animations/SimpleScrollReveal';
 import SimpleAnimatedCard from './animations/SimpleAnimatedCard';
+import ContactModal from './ContactModal';
 
 // Main website plans with detailed features for comparison
 const mainPlans = [
@@ -239,10 +240,11 @@ function PricingToggle({ isMonthly, onToggle }: PricingToggleProps) {
 }
 
 // Comparison table component
-function ComparisonTable({ isMonthly, selectedPlan, onPlanSelect }: { 
+function ComparisonTable({ isMonthly, selectedPlan, onPlanSelect, onContactClick }: { 
   isMonthly: boolean; 
   selectedPlan: 'foundation' | 'pro';
   onPlanSelect: (plan: 'foundation' | 'pro') => void;
+  onContactClick: () => void;
 }) {
   const features = [
     'Pages Included',
@@ -325,12 +327,12 @@ function ComparisonTable({ isMonthly, selectedPlan, onPlanSelect }: {
         </div>
         
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-4">
-          <Link href="/contact" className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+          <button onClick={onContactClick} className="bg-gray-600 hover:bg-gray-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
             Choose Foundation
-          </Link>
-          <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+          </button>
+          <button onClick={onContactClick} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
             Choose Pro
-          </Link>
+          </button>
         </div>
       </div>
 
@@ -427,12 +429,12 @@ function ComparisonTable({ isMonthly, selectedPlan, onPlanSelect }: {
 
           {/* CTA Button */}
           <div className="text-center">
-            <Link 
-              href="/contact" 
+            <button 
+              onClick={onContactClick}
               className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block w-full"
             >
               Choose {selectedPlan === 'foundation' ? 'Foundation' : 'Pro'}
-            </Link>
+            </button>
           </div>
         </div>
       </div>
@@ -441,7 +443,7 @@ function ComparisonTable({ isMonthly, selectedPlan, onPlanSelect }: {
 }
 
 // Ecosystem timeline component
-function EcosystemTimeline() {
+function EcosystemTimeline({ onContactClick }: { onContactClick: () => void }) {
   const stages = [
     {
       stage: 1,
@@ -507,16 +509,16 @@ function EcosystemTimeline() {
           <strong>Total Investment:</strong> Foundation → Growth → Scale → Dominate = $1,100/month for complete digital domination<br />
           <span className="text-xs">*Monthly plans require 12-month minimum commitment, then month-to-month</span>
         </p>
-        <Link href="/contact" className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+        <button onClick={onContactClick} className="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
           Start Your Journey
-        </Link>
+        </button>
       </div>
     </div>
   );
 }
 
 // Add-on services grid
-function AddOnServicesGrid({ isMonthly }: { isMonthly: boolean }) {
+function AddOnServicesGrid({ isMonthly, onContactClick }: { isMonthly: boolean; onContactClick: () => void }) {
   return (
     <div className="mb-16">
       <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
@@ -555,9 +557,9 @@ function AddOnServicesGrid({ isMonthly }: { isMonthly: boolean }) {
               ))}
             </ul>
             
-            <Link href="/contact" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+            <button onClick={onContactClick} className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
               Add {service.name}
-            </Link>
+            </button>
           </div>
         ))}
       </div>
@@ -566,7 +568,7 @@ function AddOnServicesGrid({ isMonthly }: { isMonthly: boolean }) {
 }
 
 // Bundled plans section
-function BundledPlansSection({ isMonthly }: { isMonthly: boolean }) {
+function BundledPlansSection({ isMonthly, onContactClick }: { isMonthly: boolean; onContactClick: () => void }) {
   return (
     <div className="grid md:grid-cols-3 gap-8">
       {bundledPlans.map((plan, index) => (
@@ -620,9 +622,9 @@ function BundledPlansSection({ isMonthly }: { isMonthly: boolean }) {
             </ul>
           </div>
           
-          <Link href="/contact" className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+          <button onClick={onContactClick} className="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors text-center">
             {plan.ctaText}
-          </Link>
+          </button>
         </div>
       ))}
     </div>
@@ -666,6 +668,7 @@ function FAQAccordion() {
 export function PricingPage() {
   const [isMonthly, setIsMonthly] = useState(true);
   const [selectedPlan, setSelectedPlan] = useState<'foundation' | 'pro'>('foundation');
+  const [showContactModal, setShowContactModal] = useState(false);
 
   return (
     <section className="py-16 md:py-24">
@@ -700,6 +703,7 @@ export function PricingPage() {
               isMonthly={isMonthly} 
               selectedPlan={selectedPlan} 
               onPlanSelect={setSelectedPlan}
+              onContactClick={() => setShowContactModal(true)}
             />
           </div>
         </SimpleScrollReveal>
@@ -794,9 +798,9 @@ export function PricingPage() {
                         <p className="text-gray-600 dark:text-gray-400 text-sm">Enterprise solutions with complex requirements</p>
                       </div>
                       <div className="text-right ml-4">
-                        <Link href="/contact" className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
+                        <button onClick={() => setShowContactModal(true)} className="text-blue-600 dark:text-blue-400 font-semibold hover:underline">
                           Custom Quote
-                        </Link>
+                        </button>
                       </div>
                     </div>
                   </div>
@@ -809,9 +813,9 @@ export function PricingPage() {
                 </div>
                 
                 <div className="mt-8 text-center">
-                  <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                  <button onClick={() => setShowContactModal(true)} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                     Get Your One-Time Quote
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -849,7 +853,7 @@ export function PricingPage() {
                     <tr>
                       <td className="py-4 px-6 text-gray-700 dark:text-gray-300">Custom / Large Websites</td>
                       <td className="py-4 px-6 text-right text-lg font-semibold text-purple-600 dark:text-purple-400">
-                        <Link href="/contact" className="hover:underline">Custom Quote</Link>
+                        <button onClick={() => setShowContactModal(true)} className="hover:underline">Custom Quote</button>
                       </td>
                     </tr>
                   </tbody>
@@ -863,9 +867,9 @@ export function PricingPage() {
               </div>
               
               <div className="text-center mt-6">
-                <Link href="/contact" className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+                <button onClick={() => setShowContactModal(true)} className="bg-purple-600 hover:bg-purple-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                   Get One-Time Pricing Quote
-                </Link>
+                </button>
               </div>
             </div>
           </SimpleScrollReveal>
@@ -874,13 +878,13 @@ export function PricingPage() {
         {/* Forte Ecosystem Timeline */}
         <SimpleScrollReveal direction="up" delay={600}>
           <div className="mb-16">
-            <EcosystemTimeline />
+            <EcosystemTimeline onContactClick={() => setShowContactModal(true)} />
           </div>
         </SimpleScrollReveal>
 
         {/* Add-On Services Grid */}
         <SimpleScrollReveal direction="up" delay={800}>
-          <AddOnServicesGrid isMonthly={isMonthly} />
+          <AddOnServicesGrid isMonthly={isMonthly} onContactClick={() => setShowContactModal(true)} />
         </SimpleScrollReveal>
 
         {/* Bundled Plans */}
@@ -896,7 +900,7 @@ export function PricingPage() {
               </p>
             </div>
             
-            <BundledPlansSection isMonthly={isMonthly} />
+            <BundledPlansSection isMonthly={isMonthly} onContactClick={() => setShowContactModal(true)} />
           </div>
         </SimpleScrollReveal>
 
@@ -917,9 +921,9 @@ export function PricingPage() {
               Join hundreds of businesses that have transformed their online presence with the Forte Ecosystem™. Let's discuss which plan is right for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
+              <button onClick={() => setShowContactModal(true)} className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors">
                 Get Started Today
-              </Link>
+              </button>
               <Link href="/case-studies" className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 font-semibold py-3 px-8 rounded-lg transition-colors">
                 View Success Stories
               </Link>
@@ -928,6 +932,14 @@ export function PricingPage() {
         </SimpleScrollReveal>
         
       </div>
+      
+      {/* Contact Modal */}
+      <ContactModal 
+        isOpen={showContactModal} 
+        onClose={() => setShowContactModal(false)} 
+        title="Get Your Custom Quote"
+        subtitle="Ready to start your Forte™ ecosystem? Let's discuss your specific needs and create a plan that works for your business."
+      />
     </section>
   );
 }
