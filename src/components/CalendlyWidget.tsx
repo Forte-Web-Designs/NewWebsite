@@ -151,10 +151,10 @@ export default function CalendlyWidget({ url }: CalendlyWidgetProps) {
   }
 
   return (
-    <div className="relative">
+    <div className="relative w-full">
       {/* Loading state */}
       {isLoading && (
-        <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 z-10">
+        <div className="absolute inset-0 flex items-center justify-center bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 z-10" style={{height: '700px'}}>
           <div className="text-center">
             <div className="inline-flex items-center px-4 py-2 font-semibold leading-6 text-sm shadow rounded-md text-blue-500 bg-blue-100 dark:bg-blue-900/20 transition ease-in-out duration-150">
               <svg className="animate-spin -ml-1 mr-3 h-5 w-5 text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
@@ -170,9 +170,9 @@ export default function CalendlyWidget({ url }: CalendlyWidgetProps) {
       {/* Calendly Widget Container */}
       <div 
         ref={widgetRef}
-        className="calendly-inline-widget" 
+        className="calendly-inline-widget w-full overflow-hidden" 
         data-url={url}
-        style={{minWidth: '320px', height: '700px'}}
+        style={{minWidth: '320px', height: '700px', maxHeight: '700px'}}
       />
     </div>
   );
