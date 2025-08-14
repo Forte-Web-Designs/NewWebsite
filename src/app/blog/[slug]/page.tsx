@@ -11,6 +11,111 @@ interface BlogPostPageProps {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'web-designers-near-me-how-to-choose-right-one-dfw',
+    title: 'Web Designers Near Me: How to Choose the Right One in DFW',
+    excerpt: 'If you\'ve searched "web designers near me" in the Dallas–Fort Worth area, you\'ve probably been flooded with options. Here\'s how to find the right web designer who understands your business, your audience, and your goals.',
+    content: `
+      <p>If you've searched "web designers near me" in the Dallas–Fort Worth area, you've probably been flooded with options—from big agencies to freelancers. But finding the right web designer isn't just about who's closest—it's about who understands your business, your audience, and your goals.</p>
+
+      <p>At Forte Web Designs, based in Grapevine, we've helped countless local businesses build sites that not only look great but work hard for their owners.</p>
+
+      <h2>1. Look for Local Expertise</h2>
+
+      <p>DFW is unique—it's not just one city but a collection of thriving communities. A designer familiar with Grapevine, Southlake, and the surrounding areas knows what resonates with local customers.</p>
+
+      <h2>2. Ask About Customization</h2>
+
+      <p>A one-size-fits-all site will never outperform a tailored, hand-coded design. Customization means your website is built for your goals—not squeezed into a pre-made template.</p>
+
+      <h2>3. Check Their Process</h2>
+
+      <p>Do they understand your business before designing? At Forte, we start with The Forte Method™, learning your market and mapping your site to your audience's buying habits.</p>
+
+      <h2>4. Look for Ongoing Support</h2>
+
+      <p>A great website isn't "set it and forget it." We provide Forte Care™, which includes updates, SEO tuning, and performance checks to keep you competitive.</p>
+
+      <h2>Ready to Find Your Perfect Web Designer?</h2>
+
+      <p>If you want a site that's built to convert and backed by local expertise, let's talk.</p>
+
+      <p>👉 <a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">Get Your Free Website Audit</a></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-08-11',
+    readTime: '3 min read',
+    category: 'Local Business',
+    image: '/images/blog/web-designers-near-me-dfw.webp',
+    tags: ['DFW', 'Local Business', 'Web Design', 'Dallas Fort Worth', 'Web Designer Selection'],
+    featured: true
+  },
+  {
+    id: 'what-makes-great-web-design-small-business-needs',
+    title: 'What Makes a Great Web Design? 5 Things Every Small Business Website Needs',
+    excerpt: 'A great website isn\'t just about good looks—it\'s about results. Here are the 5 must-haves for modern web design, especially for small businesses in the Dallas–Fort Worth area.',
+    content: `
+      <p>A great website isn't just about good looks—it's about results. Whether you're a service provider in Southlake or a retail shop in Grapevine, your site is often the <strong>first impression</strong> customers have of your business.</p>
+
+      <p>At <strong>Forte Web Designs</strong>, we focus on building sites that don't just look good—they load fast, rank high, and convert visitors into customers.</p>
+
+      <p>Here are the 5 must-haves for modern web design, especially for small businesses in the <strong>Dallas–Fort Worth area</strong>.</p>
+
+      <h2>1. Speed & Performance</h2>
+
+      <p>Slow websites kill conversions and SEO. Google favors sites that load quickly—and so do your customers.</p>
+
+      <p>We hand-code every site from scratch, removing bloated code, unnecessary plugins, and anything that slows you down. Your site loads in seconds, even on mobile.</p>
+
+      <h2>2. Mobile-First Design</h2>
+
+      <p>Over 60% of web traffic happens on phones. If your site isn't mobile-friendly, you're losing customers.</p>
+
+      <p>We build every page to be responsive, smooth, and intuitive—whether someone's browsing on a desktop or booking from their phone.</p>
+
+      <h2>3. SEO-Ready Structure</h2>
+
+      <p>Most sites look fine, but they're missing the backend essentials—like proper headings, alt tags, schema markup, and metadata.</p>
+
+      <p>With Forte, <strong>SEO is built in from the ground up</strong>. Our sites are structured to help you rank better on Google in Grapevine, Keller, Southlake, and beyond.</p>
+
+      <h2>4. Clear Call-to-Action</h2>
+
+      <p>Great design should lead somewhere: a call, a booking, a sale.</p>
+
+      <p>We map out your site to guide users step-by-step toward your business goals—whether that's filling out a form or clicking to call.</p>
+
+      <h2>5. Local Focus</h2>
+
+      <p>Your site should help local customers find you. That means local SEO strategies like:</p>
+
+      <ul>
+        <li>City-specific service pages</li>
+        <li>Local keyword targeting</li>
+        <li>Google Maps integration</li>
+        <li>Schema that reinforces your <strong>DFW location</strong></li>
+      </ul>
+
+      <p>We've helped small businesses across Dallas–Fort Worth rise in search rankings by making their websites locally relevant.</p>
+
+      <h2>Is Your Current Website Helping or Hurting You?</h2>
+
+      <p>A lot of businesses have "decent" sites—but decent doesn't drive growth.</p>
+
+      <p>If your site doesn't check all five boxes, we'll show you exactly what to fix.</p>
+
+      <p>👉 <a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">Claim Your Free Website Audit Now</a></p>
+
+      <p>📍 Proudly building custom websites for businesses in Grapevine, Southlake, Fort Worth, and across DFW.</p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-08-06',
+    readTime: '4 min read',
+    category: 'Web Design',
+    image: '/images/blog/great-web-design-small-business.webp',
+    tags: ['Web Design', 'Small Business', 'Performance', 'Mobile Design', 'Local SEO'],
+    featured: true
+  },
+  {
     id: 'hand-coded-vs-page-builders-custom-websites-win',
     title: 'Hand-Coded vs. Page Builders: Why Custom Websites Win in the Long Run',
     excerpt: 'It\'s never been easier to build a website—but not all websites are created equal. Here\'s why small business owners across Grapevine and DFW are shifting back toward custom, hand-coded sites.',

@@ -13,68 +13,42 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
-    id: 'why-your-website-isnt-ranking-and-how-to-fix-it',
-    title: 'Why Your Website Isn\'t Ranking (And How to Fix It)',
-    excerpt: 'Your website might look great—but if it\'s buried on page 3 of Google, it\'s not doing its job. We work with small businesses across Grapevine and the DFW area who are frustrated by low visibility and missed opportunities.',
+    id: 'web-designers-near-me-how-to-choose-right-one-dfw',
+    title: 'Web Designers Near Me: How to Choose the Right One in DFW',
+    excerpt: 'If you\'ve searched "web designers near me" in the Dallas–Fort Worth area, you\'ve probably been flooded with options. Here\'s how to find the right web designer who understands your business, your audience, and your goals.',
     content: `
-      <p>Your website might look great—but if it's buried on page 3 of Google, it's not doing its job.</p>
+      <p>If you've searched "web designers near me" in the Dallas–Fort Worth area, you've probably been flooded with options—from big agencies to freelancers. But finding the right web designer isn't just about who's closest—it's about who understands your business, your audience, and your goals.</p>
 
-      <p>At Forte Web Designs, we work with small businesses across Grapevine and the DFW area who are frustrated by low visibility and missed opportunities. The truth? Most websites fail to rank because of 3 simple issues—and the good news is, they're fixable.</p>
+      <p>At Forte Web Designs, based in Grapevine, we've helped countless local businesses build sites that not only look great but work hard for their owners.</p>
 
-      <p>Here's what could be holding your site back—and how to turn things around fast.</p>
+      <h2>1. Look for Local Expertise</h2>
 
-      <h2>1. Your Site Is Too Slow</h2>
+      <p>DFW is unique—it's not just one city but a collection of thriving communities. A designer familiar with Grapevine, Southlake, and the surrounding areas knows what resonates with local customers.</p>
 
-      <p>Google loves fast websites. If your site takes more than 3 seconds to load, you're losing both rankings and customers.</p>
+      <h2>2. Ask About Customization</h2>
 
-      <p>Most templated builders (Wix, Squarespace, WordPress themes) are bloated with unused code, plugins, and third-party scripts. We hand-code every site from scratch—so it loads fast, ranks faster, and keeps people engaged.</p>
+      <p>A one-size-fits-all site will never outperform a tailored, hand-coded design. Customization means your website is built for your goals—not squeezed into a pre-made template.</p>
 
-      <h2>2. Your SEO Foundation Is Weak</h2>
+      <h2>3. Check Their Process</h2>
 
-      <p>Many small business sites miss the basics:</p>
+      <p>Do they understand your business before designing? At Forte, we start with The Forte Method™, learning your market and mapping your site to your audience's buying habits.</p>
 
-      <ul>
-        <li>No meta titles or descriptions</li>
-        <li>No header structure (H1, H2, etc.)</li>
-        <li>Missing alt text on images</li>
-        <li>No schema or local markup</li>
-      </ul>
+      <h2>4. Look for Ongoing Support</h2>
 
-      <p>Our custom builds include SEO baked in—not bolted on. That's why clients across DFW see gains in search rankings shortly after launch.</p>
+      <p>A great website isn't "set it and forget it." We provide Forte Care™, which includes updates, SEO tuning, and performance checks to keep you competitive.</p>
 
-      <h2>3. You're Missing Local Signals</h2>
+      <h2>Ready to Find Your Perfect Web Designer?</h2>
 
-      <p>If you want to rank for "web designer Grapevine" or "plumber in Southlake," your site needs local SEO cues. That means:</p>
+      <p>If you want a site that's built to convert and backed by local expertise, let's talk.</p>
 
-      <ul>
-        <li>Mentioning cities in content</li>
-        <li>Embedding a Google Map</li>
-        <li>Creating individual service-area pages</li>
-        <li>Consistent Name/Address/Phone (NAP) across the web</li>
-      </ul>
-
-      <p>We optimize every site for Dallas–Fort Worth visibility—because if you're local, your SEO should be too.</p>
-
-      <h2>How to Know Where You Stand</h2>
-
-      <p>Don't guess. Get a free, no-pressure audit of your website and SEO. We'll show you what's working, what's broken, and what to fix first.</p>
-
-      <p>👉 <a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">Claim Your Free SiteCheckup™</a></p>
-
-      <h2>Final Word</h2>
-
-      <p>Your website is an asset. But if it's invisible on search engines, it's just an expensive brochure.</p>
-
-      <p>Let's change that.</p>
-
-      <p>📍 Based in Grapevine. Helping small businesses grow across Keller, Southlake, and all of DFW.</p>
+      <p>👉 <a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">Get Your Free Website Audit</a></p>
     `,
     author: 'Seth Forte',
-    date: '2025-08-08',
-    readTime: '5 min read',
-    category: 'SEO',
-    image: '/images/blog/website-ranking-seo.webp',
-    tags: ['SEO', 'Website Rankings', 'Google', 'Local SEO', 'DFW'],
+    date: '2025-08-11',
+    readTime: '3 min read',
+    category: 'Local Business',
+    image: '/images/blog/web-designers-near-me-dfw.webp',
+    tags: ['DFW', 'Local Business', 'Web Design', 'Dallas Fort Worth', 'Web Designer Selection'],
     featured: true
   },
   {
