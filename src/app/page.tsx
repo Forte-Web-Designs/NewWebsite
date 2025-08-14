@@ -629,7 +629,7 @@ export default function Home() {
               <div 
                 className="flex gap-3 sm:gap-6 transition-transform duration-500 ease-in-out hover:pause-animation"
                 style={{
-                  animation: 'scroll 10s linear infinite'
+                  animation: 'scroll 6s linear infinite'
                 }}
               >
                 {[...googleReviews, ...googleReviews].map((review, index) => (
