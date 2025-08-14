@@ -41,7 +41,7 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
   businessName = "Forte Web Designs",
   description = "Professional web design and development services specializing in custom-coded websites for Texas businesses",
   address = {
-    streetAddress: "Grapevine",
+    streetAddress: "1452 Hughes Rd #200",
     addressLocality: "Grapevine",
     addressRegion: "TX",
     postalCode: "76051",

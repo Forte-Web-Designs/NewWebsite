@@ -633,7 +633,7 @@ export default function Home() {
               </div>
               
               {/* Industry Icons */}
-              <div className="flex flex-wrap justify-center items-center gap-6 mb-8">
+              <div className="flex flex-wrap justify-center items-center gap-6 mb-12">
                 <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700">
                   <span className="text-2xl">🔧</span>
                   <span className="text-sm font-medium">HVAC Services</span>
@@ -1058,23 +1058,23 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
-                  Dallas-Fort Worth Based
+                  Grapevine, Texas Office
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                  Proudly serving businesses throughout Texas and nationwide with cutting-edge web solutions.
+                  Serving businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions from our Grapevine headquarters.
                 </p>
                 
                 {/* Interactive Google Map */}
                 <div className="relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-600" style={{height: '300px'}}>
                   <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d429516.5330124774!2d-97.0945249!3d32.8206721!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.8956789!2d-97.07744952475!3d32.93464427363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864dd8e48fff5555%3A0x123456789abcdef!2s1452%20Hughes%20Rd%20%23200%2C%20Grapevine%2C%20TX%2076051!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
                     width="100%"
                     height="100%"
                     style={{border: 0}}
                     allowFullScreen
                     loading="lazy"
                     referrerPolicy="no-referrer-when-downgrade"
-                    title="Dallas, Texas Location"
+                    title="Forte Web Designs Location - Grapevine, Texas"
                   ></iframe>
                   
                   {/* Tech overlay effect */}
@@ -1082,7 +1082,7 @@ export default function Home() {
                   
                   {/* Floating tech elements */}
                   <div className="absolute top-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-300 shadow-lg">
-                    🚀 Serving DFW & Beyond
+                    🚀 Serving from Grapevine, TX
                   </div>
                 </div>
                 
