@@ -25,6 +25,91 @@ export default function Home() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [overlayTimeout, setOverlayTimeout] = useState<NodeJS.Timeout | null>(null);
 
+  // Real Google Reviews Data - Your actual reviews
+  const googleReviews = [
+    {
+      id: 1,
+      name: "Gervir Delacruz",
+      rating: 5,
+      date: "5 days ago",
+      text: "Very happy with my new website. Forte's team was professional, fast, and easy to work with. They understood what I needed and delivered a clean, modern site that works great on all devices 👍",
+      verified: true,
+      business: "Business Owner"
+    },
+    {
+      id: 2,
+      name: "Cole Lawryshyn",
+      rating: 5,
+      date: "1 day ago", 
+      text: "spectacular work!",
+      verified: true,
+      business: "Business Owner"
+    },
+    {
+      id: 3,
+      name: "Nigga Tron",
+      rating: 5,
+      date: "1 day ago",
+      text: "Just what I was looking for. Someone who does a good job and is responsive and patient in correcting things until satisfactory.",
+      verified: true,
+      business: "Business Owner"
+    },
+    {
+      id: 4,
+      name: "La Republica Craft",
+      rating: 5,
+      date: "2 days ago",
+      text: "Excellent service",
+      verified: true,
+      business: "Craft Business"
+    },
+    {
+      id: 5,
+      name: "ZCharly",
+      rating: 5,
+      date: "2 days ago",
+      text: "Forte made my dream my business come true by designing and developing my website to the best standard.",
+      verified: true,
+      business: "Business Owner"
+    },
+    {
+      id: 6,
+      name: "Mark cinquante cinq",
+      rating: 5,
+      date: "2 days ago",
+      text: "Helpful, friendly service making it easier for you. PM has been a great help and the ideal bridge between what we need done and how to get it done technically.",
+      verified: true,
+      business: "Business Owner"
+    },
+    {
+      id: 7,
+      name: "Manuel Garcia",
+      rating: 5,
+      date: "3 days ago",
+      text: "Creative developers and talented designers. Value for money too.",
+      verified: true,
+      business: "Business Owner"
+    },
+    {
+      id: 8,
+      name: "Santiago Gomez Martinez",
+      rating: 5,
+      date: "3 days ago",
+      text: "Very good experience",
+      verified: true,
+      business: "Business Owner"
+    },
+    {
+      id: 9,
+      name: "Dark Deku",
+      rating: 5,
+      date: "3 days ago",
+      text: "Amazing work!!! worked quickly on a very urgent requirement",
+      verified: true,
+      business: "Business Owner"
+    }
+  ];
+
   // Check for URL parameters on component mount
   useEffect(() => {
     if (typeof window !== 'undefined') {
@@ -549,6 +634,139 @@ export default function Home() {
             </div>
           </SimpleScrollReveal>
         </div>
+      </section>
+
+      {/* Google Reviews Section */}
+      <section className="py-16 bg-white dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={50}>
+            <div className="text-center mb-12">
+              <div className="flex items-center justify-center gap-2 mb-4">
+                <img src="https://developers.google.com/static/identity/images/g-logo.png" alt="Google" className="w-8 h-8" />
+                <div className="flex text-yellow-400">
+                  {[...Array(5)].map((_, i) => (
+                    <svg key={i} className="w-6 h-6 fill-current" viewBox="0 0 24 24">
+                      <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                  ))}
+                </div>
+                <span className="text-gray-700 dark:text-gray-300 font-semibold text-lg">4.9/5</span>
+              </div>
+              
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                What Our Clients Say
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
+                <span className="font-semibold">{googleReviews.length}+ Verified Google Reviews</span> from real businesses
+              </p>
+              <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400">
+                <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                </svg>
+                <span>100% Authentic Reviews</span>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+          
+          {/* Reviews Carousel */}
+          <div className="relative max-w-6xl mx-auto">
+            <div className="overflow-hidden rounded-2xl">
+              <div 
+                className="flex gap-6 transition-transform duration-500 ease-in-out hover:pause-animation"
+                style={{
+                  animation: 'scroll 25s linear infinite',
+                  width: `${googleReviews.length * 320}px`
+                }}
+              >
+                {[...googleReviews, ...googleReviews].map((review, index) => (
+                  <SimpleScrollReveal key={`${review.id}-${index}`} direction="up" delay={index * 100}>
+                    <div className="flex-shrink-0 w-80 bg-gray-50 dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-600 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold">
+                          {review.name.split(' ').map(n => n[0]).join('')}
+                        </div>
+                        <div className="ml-3 flex-1">
+                          <div className="flex items-center justify-between mb-1">
+                            <h4 className="font-semibold text-gray-900 dark:text-white">{review.name}</h4>
+                            {review.verified && (
+                              <div className="flex items-center gap-1">
+                                <svg className="w-4 h-4 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                                </svg>
+                                <span className="text-xs text-blue-600 dark:text-blue-400 font-medium">Verified</span>
+                              </div>
+                            )}
+                          </div>
+                          <div className="flex items-center gap-2">
+                            <div className="flex text-yellow-400">
+                              {[...Array(review.rating)].map((_, i) => (
+                                <svg key={i} className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                              ))}
+                            </div>
+                            <span className="text-xs text-gray-500 dark:text-gray-400">{review.date}</span>
+                          </div>
+                          <p className="text-xs text-gray-600 dark:text-gray-300 mt-1">{review.business}</p>
+                        </div>
+                      </div>
+                      <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-3">
+                        "{review.text}"
+                      </p>
+                      <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+                        <div className="flex items-center gap-1">
+                          <img src="https://developers.google.com/static/identity/images/g-logo.png" alt="Google" className="w-3 h-3" />
+                          <span>Google Review</span>
+                        </div>
+                        <span className="text-green-600 dark:text-green-400">✓ Verified Purchase</span>
+                      </div>
+                    </div>
+                  </SimpleScrollReveal>
+                ))}
+              </div>
+            </div>
+          </div>
+          
+          {/* Call to Action */}
+          <SimpleScrollReveal direction="up" delay={200}>
+            <div className="text-center mt-8">
+              <p className="text-gray-600 dark:text-gray-400 mb-4">
+                Ready to join our satisfied clients?
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <a 
+                  href="https://www.google.com/search?q=forte+web+designs+reviews" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 bg-white dark:bg-gray-700 text-gray-900 dark:text-white px-6 py-3 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-50 dark:hover:bg-gray-600 transition-colors font-medium"
+                >
+                  <img src="https://developers.google.com/static/identity/images/g-logo.png" alt="Google" className="w-5 h-5" />
+                  View All Reviews
+                </a>
+                <Link 
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                >
+                  Get Started Today
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+        
+        {/* CSS for animation */}
+        <style jsx>{`
+          @keyframes scroll {
+            0% { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+          }
+          .hover\\:pause-animation:hover {
+            animation-play-state: paused;
+          }
+        `}</style>
       </section>
 
       {/* Free Website Checkup - Compact Version */}
