@@ -622,7 +622,7 @@ export default function Home() {
                 </div>
                 
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-2">
-                  <span className="font-semibold">{googleReviews.length}+ Verified Google Reviews</span> from real businesses
+                  <span className="font-semibold">{googleReviews.length}+ Five-Star Google Reviews</span> from satisfied clients
                 </p>
                 <div className="flex items-center justify-center gap-2 text-sm text-green-600 dark:text-green-400 mb-6">
                   <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -651,12 +651,12 @@ export default function Home() {
                   <span className="text-sm font-medium">Healthcare</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700">
-                  <span className="text-2xl">🏠</span>
-                  <span className="text-sm font-medium">Real Estate</span>
+                  <span className="text-2xl">�</span>
+                  <span className="text-sm font-medium">Landscapers</span>
                 </div>
                 <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-800 px-3 py-2 rounded-lg border border-gray-200 dark:border-gray-700">
-                  <span className="text-2xl">🍕</span>
-                  <span className="text-sm font-medium">Restaurants</span>
+                  <span className="text-2xl">🚰</span>
+                  <span className="text-sm font-medium">Plumbers</span>
                 </div>
               </div>
             </div>
