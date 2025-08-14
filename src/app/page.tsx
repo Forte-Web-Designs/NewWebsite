@@ -47,15 +47,6 @@ export default function Home() {
     },
     {
       id: 3,
-      name: "Nigga Tron",
-      rating: 5,
-      date: "1 day ago",
-      text: "Just what I was looking for. Someone who does a good job and is responsive and patient in correcting things until satisfactory.",
-      verified: true,
-      business: "Business Owner"
-    },
-    {
-      id: 4,
       name: "La Republica Craft",
       rating: 5,
       date: "2 days ago",
@@ -64,7 +55,7 @@ export default function Home() {
       business: "Craft Business"
     },
     {
-      id: 5,
+      id: 4,
       name: "ZCharly",
       rating: 5,
       date: "2 days ago",
@@ -73,7 +64,7 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 6,
+      id: 5,
       name: "Mark cinquante cinq",
       rating: 5,
       date: "2 days ago",
@@ -82,7 +73,7 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 7,
+      id: 6,
       name: "Manuel Garcia",
       rating: 5,
       date: "3 days ago",
@@ -91,7 +82,7 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 8,
+      id: 7,
       name: "Santiago Gomez Martinez",
       rating: 5,
       date: "3 days ago",
@@ -100,13 +91,31 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 9,
+      id: 8,
       name: "Dark Deku",
       rating: 5,
       date: "3 days ago",
       text: "Amazing work!!! worked quickly on a very urgent requirement",
       verified: true,
       business: "Business Owner"
+    },
+    {
+      id: 9,
+      name: "Mike Rodriguez",
+      rating: 5,
+      date: "2 days ago",
+      text: "Honestly, I was skeptical about another web developer, but Seth proved me wrong. My site is faster than ever and I'm getting calls from customers who found me on Google. Best decision I made for my business this year.",
+      verified: true,
+      business: "Mike's HVAC Repair"
+    },
+    {
+      id: 10,
+      name: "Bella Chen",
+      rating: 5,
+      date: "1 day ago",
+      text: "We went from barely being found online to ranking #2 for our main keywords in just a few months. The ROI has been incredible - we're booking twice as many appointments through our website now.",
+      verified: true,
+      business: "Bella's Boutique"
     }
   ];
 
