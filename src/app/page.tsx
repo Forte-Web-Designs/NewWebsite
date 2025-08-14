@@ -629,10 +629,10 @@ export default function Home() {
               <div 
                 className="flex gap-3 sm:gap-6 transition-transform duration-500 ease-in-out hover:pause-animation"
                 style={{
-                  animation: 'scroll 12s linear infinite'
+                  animation: 'scroll 20s linear infinite'
                 }}
               >
-                {[...googleReviews, ...googleReviews].map((review, index) => (
+                {[...googleReviews, ...googleReviews, ...googleReviews].map((review, index) => (
                   <SimpleScrollReveal key={`${review.id}-${index}`} direction="up" delay={index * 100}>
                     <div className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
                       <div className="flex items-start mb-3">
@@ -707,7 +707,7 @@ export default function Home() {
         <style jsx>{`
           @keyframes scroll {
             0% { transform: translateX(0); }
-            100% { transform: translateX(-50%); }
+            100% { transform: translateX(-66.666%); }
           }
           .hover\\:pause-animation:hover {
             animation-play-state: paused;
