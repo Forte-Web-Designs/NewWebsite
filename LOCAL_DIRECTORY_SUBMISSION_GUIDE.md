@@ -26,7 +26,7 @@ Before submitting to directories, ensure you have consistent information:
 - **URL:** https://biz.yelp.com
 - **Priority:** Critical
 - **Category:** Web Design
-- **Description:** Custom web design and development for Texas businesses. Specializing in high-performance websites that dominate local search results.
+- **Description:** Custom web design and development for businesses. Specializing in high-performance websites that dominate local search results.
 - **Photos:** Upload 5-10 portfolio images
 - **Hours:** Mon-Fri 9AM-5PM
 

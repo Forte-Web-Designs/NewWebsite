@@ -34,7 +34,7 @@ Google My Business (now Google Business Profile) is the most important factor fo
 - E-commerce Service
 
 **Business Description (750 character limit):**
-"Custom web design and development for Texas businesses. We build high-performance, custom-coded websites that dominate local search results. Specializing in Dallas, Fort Worth, and DFW metro markets. No WordPress templates - just pure performance that helps your business compete and win. Local expertise that understands your market challenges."
+"Custom web design and development for businesses. We build high-performance, custom-coded websites that dominate local search results. Specializing in Dallas, Fort Worth, and DFW metro markets. No WordPress templates - just pure performance that helps your business compete and win. Local expertise that understands your market challenges."
 
 **Services List:**
 - Web Design

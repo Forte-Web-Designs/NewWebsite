@@ -39,7 +39,7 @@ interface GoogleBusinessSchemaProps {
 
 export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
   businessName = "Forte Web Designs",
-  description = "Professional web design and development services specializing in custom-coded websites for Texas businesses",
+  description = "Professional web design and development services specializing in custom-coded websites for businesses",
   address = {
     streetAddress: "129 S Main St #260",
     addressLocality: "Grapevine",

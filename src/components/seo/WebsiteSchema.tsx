@@ -27,7 +27,7 @@ export const WebsiteSchema: React.FC<WebsiteSchemaProps> = ({
   name = "Forte Web Designs",
   alternateName = "Forte Web Designs - Custom Websites That Grow With You",
   url = "https://fortewebdesigns.com",
-  description = "Professional web design and development services specializing in custom-coded websites, SEO, and digital marketing for Texas businesses.",
+  description = "Professional web design and development services specializing in custom-coded websites, SEO, and digital marketing for businesses.",
   publisher = {
     name: "Forte Web Designs",
     logo: "https://fortewebdesigns.com/images/home/logo2.png"
@@ -128,7 +128,7 @@ export const WebsiteSchema: React.FC<WebsiteSchemaProps> = ({
         "@id": `${url}/blog#webpage`,
         "url": `${url}/blog`,
         "name": "Blog - Web Design Tips & Insights",
-        "description": "Expert insights on web design, SEO, and digital marketing for Texas businesses.",
+        "description": "Expert insights on web design, SEO, and digital marketing for businesses.",
         "isPartOf": {
           "@id": `${url}#website`
         }
