@@ -26,11 +26,32 @@ export default function Home() {
   const [showOverlay, setShowOverlay] = useState(false);
   const [overlayTimeout, setOverlayTimeout] = useState<NodeJS.Timeout | null>(null);
   const [showContactModal, setShowContactModal] = useState(false);
+  const [showReviewsModal, setShowReviewsModal] = useState(false);
 
   // Real Google Reviews Data - Your actual reviews
   const googleReviews = [
     {
       id: 1,
+      name: "Gaming with Pro",
+      rating: 5,
+      date: "3 hours ago",
+      text: "Very responsive support during website and after sales service has been excellent",
+      verified: true,
+      business: "Gaming Business",
+      isNew: true
+    },
+    {
+      id: 2,
+      name: "Michael Mackey",
+      rating: 5,
+      date: "4 hours ago",
+      text: "Very professional and an excellent team. I was very pleased and they did a great project for me.",
+      verified: true,
+      business: "Business Owner",
+      isNew: true
+    },
+    {
+      id: 3,
       name: "Gervir Delacruz",
       rating: 5,
       date: "5 days ago",
@@ -39,16 +60,17 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 2,
+      id: 4,
       name: "Cole Lawryshyn",
       rating: 5,
-      date: "1 day ago", 
+      date: "2 days ago", 
       text: "spectacular work!",
       verified: true,
-      business: "Business Owner"
+      business: "Business Owner",
+      isNew: true
     },
     {
-      id: 3,
+      id: 5,
       name: "La Republica Craft",
       rating: 5,
       date: "2 days ago",
@@ -57,7 +79,7 @@ export default function Home() {
       business: "Craft Business"
     },
     {
-      id: 4,
+      id: 6,
       name: "ZCharly",
       rating: 5,
       date: "2 days ago",
@@ -66,7 +88,7 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 5,
+      id: 7,
       name: "Mark cinquante cinq",
       rating: 5,
       date: "2 days ago",
@@ -75,7 +97,7 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 6,
+      id: 8,
       name: "Manuel Garcia",
       rating: 5,
       date: "3 days ago",
@@ -84,7 +106,7 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 7,
+      id: 9,
       name: "Santiago Gomez Martinez",
       rating: 5,
       date: "3 days ago",
@@ -93,7 +115,7 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 8,
+      id: 10,
       name: "Dark Deku",
       rating: 5,
       date: "3 days ago",
@@ -102,7 +124,7 @@ export default function Home() {
       business: "Business Owner"
     },
     {
-      id: 9,
+      id: 11,
       name: "Mike Rodriguez",
       rating: 5,
       date: "2 days ago",
@@ -111,7 +133,7 @@ export default function Home() {
       business: "Mike's HVAC Repair"
     },
     {
-      id: 10,
+      id: 12,
       name: "Bella Chen",
       rating: 5,
       date: "1 day ago",
@@ -680,7 +702,12 @@ export default function Home() {
               >
                 {/* First set of reviews */}
                 {googleReviews.map((review, index) => (
-                  <div key={`set1-${review.id}`} className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div key={`set1-${review.id}`} className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
+                    {review.isNew && (
+                      <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                        NEW
+                      </div>
+                    )}
                     <div className="flex items-start mb-3">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
                         {review.name.split(' ').map(n => n[0]).join('')}
@@ -725,7 +752,12 @@ export default function Home() {
                 ))}
                 {/* Second set of reviews (duplicate for seamless loop) */}
                 {googleReviews.map((review, index) => (
-                  <div key={`set2-${review.id}`} className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div key={`set2-${review.id}`} className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
+                    {review.isNew && (
+                      <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                        NEW
+                      </div>
+                    )}
                     <div className="flex items-start mb-3">
                       <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm">
                         {review.name.split(' ').map(n => n[0]).join('')}
@@ -777,7 +809,7 @@ export default function Home() {
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
                   Ready to join our satisfied clients nationwide with professional web design and digital marketing services? <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our proven process</Link> or explore our <Link href="/solutions" className="text-primary-600 hover:text-primary-700 underline font-medium">complete SEO and web design service offerings</Link> for businesses across the country. DFW-based, nationwide reach.
                 </p>
-                <div className="flex justify-center">
+                <div className="flex flex-col sm:flex-row justify-center gap-4">
                   <button
                     onClick={() => setShowContactModal(true)}
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
@@ -786,6 +818,13 @@ export default function Home() {
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
+                  </button>
+                  <button
+                    onClick={() => setShowReviewsModal(true)}
+                    className="inline-flex items-center gap-2 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-700 px-6 py-3 rounded-lg transition-colors font-medium"
+                  >
+                    <img src="https://developers.google.com/static/identity/images/g-logo.png" alt="Google" className="w-4 h-4" />
+                    See All Reviews
                   </button>
                 </div>
               </div>
@@ -1179,6 +1218,110 @@ export default function Home() {
         isOpen={showContactModal} 
         onClose={() => setShowContactModal(false)} 
       />
+      
+      {/* Reviews Modal */}
+      {showReviewsModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden">
+            {/* Modal Header */}
+            <div className="flex items-center justify-between p-6 border-b border-gray-200 dark:border-gray-700">
+              <div className="flex items-center gap-3">
+                <img src="https://developers.google.com/static/identity/images/g-logo.png" alt="Google" className="w-8 h-8" />
+                <div>
+                  <h2 className="text-2xl font-bold text-gray-900 dark:text-white">Google Reviews</h2>
+                  <div className="flex items-center gap-2">
+                    <div className="flex text-yellow-400">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    <span className="text-gray-700 dark:text-gray-300 font-semibold">4.9/5 • {googleReviews.length} reviews</span>
+                  </div>
+                </div>
+              </div>
+              <button
+                onClick={() => setShowReviewsModal(false)}
+                className="p-2 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-full transition-colors"
+              >
+                <svg className="w-6 h-6 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            
+            {/* Modal Body - Scrollable Reviews */}
+            <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {googleReviews.map((review) => (
+                  <div key={review.id} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 relative">
+                    {review.isNew && (
+                      <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                        NEW
+                      </div>
+                    )}
+                    <div className="flex items-start mb-3">
+                      <div className="w-10 h-10 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-semibold text-sm flex-shrink-0">
+                        {review.name.split(' ').map(n => n[0]).join('')}
+                      </div>
+                      <div className="ml-3 flex-1 min-w-0">
+                        <div className="flex items-center justify-between mb-1">
+                          <h4 className="font-semibold text-gray-900 dark:text-white text-sm truncate">{review.name}</h4>
+                          {review.verified && (
+                            <div className="flex items-center gap-1 flex-shrink-0 ml-2">
+                              <svg className="w-3 h-3 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/>
+                              </svg>
+                              <span className="text-xs text-blue-600 dark:text-blue-400 font-medium">Verified</span>
+                            </div>
+                          )}
+                        </div>
+                        <div className="flex items-center gap-2 mb-1">
+                          <div className="flex text-yellow-400">
+                            {[...Array(review.rating)].map((_, i) => (
+                              <svg key={i} className="w-3 h-3 fill-current" viewBox="0 0 24 24">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                              </svg>
+                            ))}
+                          </div>
+                          <span className="text-xs text-gray-500 dark:text-gray-400">{review.date}</span>
+                        </div>
+                        <p className="text-xs text-gray-600 dark:text-gray-300 mb-2">{review.business}</p>
+                      </div>
+                    </div>
+                    <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-3">
+                      "{review.text}"
+                    </p>
+                    <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
+                      <div className="flex items-center gap-1">
+                        <img src="https://developers.google.com/static/identity/images/g-logo.png" alt="Google" className="w-3 h-3" />
+                        <span>Google Review</span>
+                      </div>
+                      <span className="text-green-600 dark:text-green-400">✓ Verified</span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              
+              {/* Call to Action in Modal */}
+              <div className="mt-8 text-center p-6 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-900/20 dark:to-purple-900/20 rounded-xl border border-blue-200 dark:border-blue-800/50">
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Ready to Join Our Happy Clients?</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">Let's discuss your project and see how we can help grow your business online.</p>
+                <button
+                  onClick={() => {
+                    setShowReviewsModal(false);
+                    setShowContactModal(true);
+                  }}
+                  className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                >
+                  Get Your Free Consultation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </>
   );
 }
