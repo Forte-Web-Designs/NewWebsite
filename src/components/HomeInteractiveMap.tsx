@@ -50,10 +50,7 @@ export default function HomeInteractiveMap({ className = "" }: HomeInteractiveMa
         </button>
       </div>
       
-      {/* Floating tech elements - moved to bottom right to avoid overlap */}
-      <div className="absolute bottom-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-300 shadow-lg">
-        🚀 Serving from Grapevine, TX
-      </div>
+
     </div>
   );
 }

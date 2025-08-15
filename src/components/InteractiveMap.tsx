@@ -11,32 +11,9 @@ export default function InteractiveMap({ className = "" }: InteractiveMapProps) 
   };
 
   return (
-    <div className={`relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-600 ${className}`} style={{height: '300px'}}>
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.2!2d-97.0778!3d32.9343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864dd749e80a6fff%3A0x123456789abcdef!2s129%20S%20Main%20St%20%23260%2C%20Grapevine%2C%20TX%2076051!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
-        width="100%"
-        height="100%"
-        style={{border: 0}}
-        allowFullScreen
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        title="Forte Web Designs - 129 S Main St #260, Grapevine, TX"
-      ></iframe>
-      
-      {/* Address overlay */}
-      <div className="absolute top-4 left-4 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
-        <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">🏢 Serving from Grapevine, TX</div>
-        <div className="text-xs text-gray-700 dark:text-gray-300">
-          <div>📍 129 S Main St #260</div>
-          <div>Grapevine, TX 76051</div>
-        </div>
-      </div>
-      
-      {/* Tech overlay effect */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none"></div>
-      
-      {/* Street View Button */}
-      <div className="absolute top-4 right-4 z-10">
+    <div className={className}>
+      {/* Street View Button - Positioned above map */}
+      <div className="flex justify-end mb-3">
         <button
           onClick={handleStreetViewClick}
           className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg shadow-lg transition-colors flex items-center gap-2 text-sm font-medium"
@@ -50,9 +27,32 @@ export default function InteractiveMap({ className = "" }: InteractiveMapProps) 
         </button>
       </div>
       
-      {/* Floating tech elements - moved to bottom right to avoid overlap */}
-      <div className="absolute bottom-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg px-3 py-2 text-xs font-medium text-gray-700 dark:text-gray-300 shadow-lg">
-        🚀 Serving DFW & Beyond
+      <div className="relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-600" style={{height: '300px'}}>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3345.2!2d-97.0778!3d32.9343!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864dd749e80a6fff%3A0x123456789abcdef!2s129%20S%20Main%20St%20%23260%2C%20Grapevine%2C%20TX%2076051!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+          width="100%"
+          height="100%"
+          style={{border: 0}}
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Forte Web Designs - 129 S Main St #260, Grapevine, TX"
+        ></iframe>
+        
+        {/* Address overlay */}
+        <div className="absolute top-4 left-4 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-lg p-3 shadow-lg max-w-xs">
+          <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">🚀 Serving from Grapevine, TX</div>
+          <div className="text-xs text-gray-700 dark:text-gray-300 mb-2">
+            <div>📍 129 S Main St #260</div>
+            <div>Grapevine, TX 76051</div>
+          </div>
+          <div className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
+            Serving businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions.
+          </div>
+        </div>
+        
+        {/* Tech overlay effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none"></div>
       </div>
     </div>
   );

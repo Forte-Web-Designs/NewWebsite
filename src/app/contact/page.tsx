@@ -134,12 +134,9 @@ export default function Contact() {
                   <span className="text-2xl">🚀</span>
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-lg font-semibold mb-2 text-gray-900 dark:text-white">
+                  <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
                     Grapevine, Texas Office
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
-                    Serving businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions from our Grapevine headquarters.
-                  </p>
                   
                   {/* Interactive Google Map */}
                   <InteractiveMap />
