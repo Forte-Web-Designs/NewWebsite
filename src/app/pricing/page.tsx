@@ -3,8 +3,8 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import { PricingPage } from '@/components/pricing';
 
 export const metadata: Metadata = {
-  title: 'Simple, Transparent Pricing - Built to Grow With You | Forte Web Designs',
-  description: 'No setup fees. No surprises. Just clean websites and powerful marketing tools designed to grow your business.',
+  title: 'Professional Website Design Pricing Dallas Fort Worth | Transparent Web Development Costs Texas | Forte Web Designs',
+  description: 'Transparent professional website design pricing for Dallas Fort Worth Texas businesses. No setup fees, no surprises. Professional custom websites, SEO optimization, and digital marketing packages designed to grow your business.',
 };
 
 export default function Pricing() {

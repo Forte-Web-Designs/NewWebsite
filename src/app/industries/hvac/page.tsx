@@ -12,12 +12,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'HVAC Websites That Bring the Heat (and Cool New Leads)',
-  description: 'HVAC websites optimized for local SEO, mobile bookings, and 24/7 emergency calls. We design HVAC websites that make you the obvious choice when customers search for fast, reliable heating and cooling service.',
-  keywords: 'HVAC website design, heating cooling websites, emergency HVAC mobile optimization, local HVAC SEO, HVAC lead generation',
+  title: 'HVAC Websites That Bring the Heat (and Cool New Leads) | Nationwide from DFW | Forte Web Designs',
+  description: 'HVAC websites optimized for local SEO, mobile bookings, and 24/7 emergency calls. DFW-based team serving HVAC contractors nationwide with websites that make you the obvious choice when customers search for fast, reliable heating and cooling service.',
+  keywords: 'HVAC website design, heating cooling websites, emergency HVAC mobile optimization, local HVAC SEO, HVAC lead generation nationwide',
   openGraph: {
-    title: 'HVAC Websites That Bring the Heat (and Cool New Leads)',
-    description: 'HVAC websites optimized for local SEO, mobile bookings, and 24/7 emergency calls. We design HVAC websites that make you the obvious choice when customers search for fast, reliable heating and cooling service.',
+    title: 'HVAC Websites That Bring the Heat (and Cool New Leads) | Nationwide from DFW',
+    description: 'HVAC websites optimized for local SEO, mobile bookings, and 24/7 emergency calls. DFW-based team serving HVAC contractors nationwide.',
     type: 'website',
   },
 };

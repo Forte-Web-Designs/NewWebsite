@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Head from "next/head";
 import { Suspense, lazy } from 'react';
 import ContactForm from "@/components/ContactForm";
 import { OptimizedImage } from '@/components/images/OptimizedImage';
@@ -14,91 +15,91 @@ export default function AboutUs() {
   const statCards = [
     {
       icon: "🇺🇸",
-      title: "100% USA-Based",
-      description: "Local team, direct communication"
+      title: "100% USA-Based Team",
+      description: "Local DFW team serving businesses nationwide, direct communication, no outsourcing"
     },
     {
       icon: "💻",
       title: "100% Custom Code",
-      description: "Hand-built for performance"
+      description: "Hand-built websites for performance & SEO optimization"
     },
     {
       icon: "🙌",
       title: "100% Customer-First",
-      description: "Your success is our priority"
+      description: "Your business success is our top priority"
     }
   ];
 
   const differentiators = [
     {
       icon: "⚡",
-      title: "Built for Speed",
-      description: "Faster sites don't just load better - they rank better, convert more, and reduce ad costs."
+      title: "Built for Speed & SEO",
+      description: "Faster websites don't just load better - they rank higher in search results, convert more visitors, and reduce advertising costs through better user experience."
     },
     {
       icon: "🔐", 
       title: "Stable and Secure",
-      description: "No plugins to manage, no surprise breakdowns. Just clean code built to run reliably."
+      description: "No WordPress plugins to manage, no surprise security issues. Just clean, hand-coded websites built to run reliably and securely for years."
     },
     {
       icon: "🧭",
       title: "Designed for Your Industry", 
-      description: "Whether you're a plumber or a pediatrician, we build with your audience in mind - not a generic playbook."
+      description: "Whether you're a Dallas plumber, Fort Worth pediatrician, or any business nationwide, we build with your target audience in mind - not a generic template approach."
     },
     {
       icon: "🎯",
-      title: "Focused on Outcomes",
-      description: "Every site is mapped to real goals - calls, bookings, sales. Not just clicks and traffic."
+      title: "Focused on Business Results",
+      description: "Every website is mapped to real business goals - phone calls, online bookings, sales inquiries. Not just traffic and vanity metrics."
     }
   ];
 
   const methodSteps = [
     {
       step: "1",
-      title: "Foundation",
-      description: "We learn about your business, your customers, and your market before we ever write a line of code.",
-      example: "Mike's HVAC discovered key competitor gaps we used to shape his messaging."
+      title: "Business Foundation Analysis",
+      description: "We learn about your business, your customers, your local market, and your competitors before we ever write a line of code or design a single page.",
+      example: "Mike's HVAC discovered key competitor gaps we used to shape his messaging and service positioning."
     },
     {
       step: "2", 
-      title: "Outline",
-      description: "We map out content, structure, and layout to match your goals and audience behavior.",
-      example: "Bella's Boutique restructured her homepage to boost online sales conversions."
+      title: "Strategic Content Outline",
+      description: "We map out content strategy, site structure, and user experience flows to match your business goals and customer behavior patterns.",
+      example: "Bella's Boutique restructured her homepage navigation to boost online sales conversions by 40%."
     },
     {
       step: "3",
-      title: "Refine", 
-      description: "You review a live homepage design and we fine-tune it together during a collaborative video call.",
-      example: "A tech firm dropped load times by 80% after moving away from their previous setup."
+      title: "Design & Development Review", 
+      description: "You review a live homepage design and we fine-tune the entire website together during collaborative video calls until it's perfect.",
+      example: "A local tech firm dropped page load times by 80% after moving away from their previous WordPress setup."
     },
     {
       step: "4",
-      title: "Tailor",
-      description: "We hand-code every page and feature - optimized for mobile, speed, and smooth user experience.",
-      example: "Sunrise Vet went live with a fully mobile-optimized site and built-in booking."
+      title: "Custom Code Implementation",
+      description: "We hand-code every page and feature - optimized for mobile responsiveness, page speed, search engine optimization, and smooth user experience.",
+      example: "Sunrise Veterinary went live with a fully mobile-optimized site and built-in appointment booking system."
     },
     {
       step: "5",
-      title: "Elevate",
-      description: "After launch, we track performance and evolve your site as your business grows.", 
-      example: "A local law firm expanded their service pages after strong SEO gains in the first 3 months."
+      title: "Launch & Growth Optimization",
+      description: "After launch, we track website performance and evolve your site as your business grows, adding new features and optimizations.", 
+      example: "A local law firm expanded their practice area pages after strong SEO gains in the first 3 months brought 5x more leads."
     }
   ];
 
   const industries = [
     {
       icon: "🏠",
-      title: "Local Services",
-      description: "Contractors, plumbers, electricians, HVAC, real estate, and more"
+      title: "Local Service Businesses",
+      description: "Contractors, plumbers, electricians, HVAC technicians, real estate agents, and home service professionals throughout DFW"
     },
     {
       icon: "🧠",
       title: "Professional Services", 
-      description: "Consultants, legal, financial, and healthcare providers"
+      description: "Consultants, legal practices, financial advisors, healthcare providers, and medical practices across Dallas Fort Worth"
     },
     {
       icon: "🛍️",
-      title: "Retail & Hospitality",
+      title: "Retail & Hospitality Businesses",
       description: "Restaurants, salons, boutiques, and specialty shops"
     },
     {
@@ -110,6 +111,12 @@ export default function AboutUs() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black">
+      <Head>
+        <title>About Forte Web Designs | DFW-Based Web Design Team Serving Businesses Nationwide | Forte Web Designs</title>
+        <meta name="description" content="Meet the DFW-based team behind Forte Web Designs. 100% USA-based, custom code specialists serving businesses nationwide with industry-specific websites designed for results, not just looks." />
+        <meta name="keywords" content="about forte web designs, DFW web design team, custom web development team, USA-based web designers, professional web design company" />
+        <link rel="canonical" href="https://fortewebdesigns.com/about" />
+      </Head>
       {/* Hero Section */}
       <section className="relative overflow-hidden pt-16 pb-16 sm:pt-24 sm:pb-24">
         <SectionBackgroundAnimation className="opacity-30" />

@@ -8,12 +8,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads',
-  description: 'Stunning, SEO-optimized landscaping websites that showcase your work, rank on Google, and bring in new clients every week. Visual design, local SEO, mobile booking ready.',
-  keywords: 'landscaping website design, landscaper websites, lawn care websites, landscape design websites, visual portfolio, local SEO, landscaping leads',
+  title: 'Professional Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads Nationwide',
+  description: 'Stunning, SEO-optimized professional landscaping websites that showcase your work, rank on Google, and bring in new clients every week. DFW-based team serving landscapers nationwide with visual design, local SEO, mobile booking ready solutions.',
+  keywords: 'professional landscaping website design, landscaper websites, lawn care websites, landscape design websites, visual portfolio design, professional local SEO, landscaping leads generation, nationwide landscaping websites, DFW landscaping web design',
   openGraph: {
-    title: 'Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads',
-    description: 'Stunning, SEO-optimized landscaping websites that showcase your work, rank on Google, and bring in new clients every week. Visual design, local SEO, mobile booking ready.',
+    title: 'Professional Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads',
+    description: 'Stunning, SEO-optimized professional landscaping websites that showcase your work, rank on Google, and bring in new clients every week. Visual design, local SEO, mobile booking ready.',
     type: 'website',
   },
 };

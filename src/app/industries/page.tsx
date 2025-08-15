@@ -7,12 +7,12 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 
 export const metadata: Metadata = {
-  title: 'Industry-Specific Websites | Forte Web Designs',
-  description: 'Professional websites designed for specific industries. We understand the unique challenges and requirements of your business sector.',
-  keywords: 'industry websites, professional website design, sector-specific websites, business websites',
+  title: 'Professional Industry-Specific Website Design | Specialized Business Websites | Nationwide from DFW | Forte Web Designs',
+  description: 'Professional websites designed for specific industries and business sectors. DFW-based team serving businesses nationwide, understanding the unique challenges, requirements, and conversion optimization needs of your business sector and target market.',
+  keywords: 'professional industry websites, specialized website design, business sector websites, industry-specific web design, professional business websites, targeted website development nationwide',
   openGraph: {
-    title: 'Industry-Specific Websites | Forte Web Designs',
-    description: 'Professional websites designed for specific industries. We understand the unique challenges and requirements of your business sector.',
+    title: 'Professional Industry-Specific Website Design | Specialized Business Websites | Nationwide from DFW',
+    description: 'Professional websites designed for specific industries and business sectors. DFW-based team serving businesses nationwide with specialized expertise.',
     type: 'website',
   },
 };
@@ -142,18 +142,18 @@ export default function IndustriesPage() {
           <div className="text-center max-w-4xl mx-auto">
             <SimpleScrollReveal direction="up" delay={100}>
               <div className="inline-flex items-center gap-2 bg-blue-800/50 text-blue-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                🏭 Industry Specialization
+                🏭 Professional Industry Specialization
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Websites Built for <span className="text-blue-300">Your Industry</span>
+                Professional Websites Built for <span className="text-blue-300">Your Specific Industry</span>
               </h1>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-                Generic websites don't convert. We build industry-specific websites that understand your customers, your challenges, and what drives results in your market.
+                Generic websites don't convert customers. We build professional industry-specific websites that understand your customers, your business challenges, and what drives real results in your market sector.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <DarkButton href="/contact" className="bg-orange-600 hover:bg-orange-700">
-                  Discuss My Industry Needs
+                  Discuss My Professional Industry Needs
                 </DarkButton>
                 <Link href="#industries" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
                   Browse Industries
@@ -171,10 +171,10 @@ export default function IndustriesPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Why <span className="text-blue-600">Industry-Specific</span> Websites Work Better
+                Why <span className="text-blue-600">Professional Industry-Specific</span> Websites Work Better
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                We've learned that one-size-fits-all websites don't convert. Each industry has unique customer behaviors, pain points, and conversion triggers.
+                We've learned that one-size-fits-all websites don't convert customers effectively. Each industry has unique customer behaviors, pain points, and conversion triggers that require professional expertise.
               </p>
             </div>
           </SimpleScrollReveal>

@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import LightButton from "@/components/LightButton";
 import DarkButton from "@/components/DarkButton";
 import { Icon } from "@/components/images/Icon";
@@ -56,6 +57,12 @@ export default function GooglePPCAdsPage() {
 
   return (
     <div className="relative">
+      <Head>
+        <title>Professional Google Ads Management | Expert PPC Services Nationwide from DFW | Forte Web Designs</title>
+        <meta name="description" content="Stop wasting money on Google Ads that don't convert. DFW-based team delivering professional PPC management nationwide with proven ROI strategies, custom landing pages, and real business results." />
+        <meta name="keywords" content="Google Ads management, PPC services, Google Ads optimization, paid advertising, digital marketing, Google Ads consultant, PPC management nationwide, professional Google Ads" />
+        <link rel="canonical" href="https://fortewebdesigns.com/services/ads" />
+      </Head>
       <SectionBackgroundAnimation />
       <div className="relative z-10">
         {/* FAQ Schema Markup */}
@@ -73,22 +80,22 @@ export default function GooglePPCAdsPage() {
               <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full mb-6 border border-blue-200 dark:border-blue-700">
                 <Icon name="star" className="w-4 h-4 text-blue-600" />
                 <span className="text-blue-600 dark:text-blue-400 text-sm font-medium">
-                  Google Ads That Convert
+                  Professional Google Ads That Convert
                 </span>
               </div>
             
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-roboto leading-tight dark:text-white mb-6 max-w-5xl mx-auto">
-                Google Ads That <span className="text-blue-600 dark:text-blue-400">Actually Perform</span>
+                Professional Google Ads That <span className="text-blue-600 dark:text-blue-400">Actually Deliver ROI</span>
               </h1>
               
               <p className="text-xl sm:text-2xl font-normal text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
-                Tired of paying for clicks that don't convert? Our Google Ads are built to deliver ROI - not vanity metrics. We help you turn ad spend into paying customers, fast.
+                Tired of paying for clicks that don't convert? Our DFW-based team delivers professional Google Ads management nationwide with real ROI - not vanity metrics. We help businesses across the country turn marketing budget into paying customers with proven PPC strategies.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <LightButton href="/contact">Fix My Ads & Get More Leads</LightButton>
+                <LightButton href="/contact">Fix My Ads & Get Professional Results</LightButton>
                 <DarkButton href="#pricing" className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600">
-                  Book a Free Ad Review
+                  Book a Free Professional Ad Review
                 </DarkButton>
               </div>
             </SimpleScrollReveal>
@@ -552,7 +559,7 @@ export default function GooglePPCAdsPage() {
                 Let's Turn Your Ad Budget into Real Business Growth
               </h2>
               <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                You've got a great business. Let's make sure customers can find it.
+                You've got a great business. Let's make sure customers can find it. Based in Grapevine, Texas, proudly serving businesses nationwide from our DFW headquarters.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -585,7 +592,7 @@ export default function GooglePPCAdsPage() {
           industry="ads"
           formName="Ads Inquiry"
           title="Let's Build Your Ads Strategy Right"
-          subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from a team that builds profitable ad campaigns."
+          subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from our DFW-based team that builds profitable ad campaigns nationwide."
           mobileCtaText="Ready to get more leads?"
           mobileCtaSubtext="Get your ads strategy today"
           mobileBgGradient="bg-gradient-to-r from-orange-600 to-red-600"

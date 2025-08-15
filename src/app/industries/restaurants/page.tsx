@@ -9,12 +9,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Restaurant Website Design | Websites That Fill Tables (and Order Carts)',
-  description: 'Restaurant websites that are fast, beautiful, and designed to drive reservations, online orders, and local search traffic. Mobile-first design with menu integration and local SEO.',
-  keywords: 'restaurant website design, restaurant websites, online menu integration, restaurant SEO, food delivery, mobile restaurant sites',
+  title: 'Restaurant Website Design | Websites That Fill Tables (and Order Carts) | Nationwide from DFW | Forte Web Designs',
+  description: 'Restaurant websites that are fast, beautiful, and designed to drive reservations, online orders, and local search traffic. DFW-based team serving restaurants nationwide with mobile-first design, menu integration and local SEO.',
+  keywords: 'restaurant website design, restaurant websites, online menu integration, restaurant SEO, food delivery, mobile restaurant sites nationwide',
   openGraph: {
-    title: 'Restaurant Website Design | Websites That Fill Tables (and Order Carts)',
-    description: 'Restaurant websites that are fast, beautiful, and designed to drive reservations, online orders, and local search traffic. Mobile-first design with menu integration and local SEO.',
+    title: 'Restaurant Website Design | Websites That Fill Tables (and Order Carts) | Nationwide from DFW',
+    description: 'Restaurant websites that are fast, beautiful, and designed to drive reservations, online orders, and local search traffic. DFW-based team serving restaurants nationwide.',
     type: 'website',
   },
 };

@@ -8,12 +8,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments',
-  description: 'HIPAA-aware medical websites for doctors, dentists, and clinics. Build patient trust, increase appointments, and comply with regulations. Lightning-fast, appointment-ready.',
-  keywords: 'healthcare website design, medical websites, doctor websites, HIPAA compliant websites, patient portal, healthcare SEO, medical practice websites, dental websites',
+  title: 'Professional Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments | Nationwide from DFW | Forte Web Designs',
+  description: 'HIPAA-aware professional medical websites for doctors, dentists, and clinics. DFW-based team serving healthcare providers nationwide. Build patient trust, increase appointments, and comply with regulations with lightning-fast, appointment-ready professional healthcare websites.',
+  keywords: 'professional healthcare website design, medical websites, doctor websites, HIPAA compliant websites, patient portal development, professional healthcare SEO, medical practice websites, dental websites nationwide',
   openGraph: {
-    title: 'Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments',
-    description: 'HIPAA-aware medical websites for doctors, dentists, and clinics. Build patient trust, increase appointments, and comply with regulations. Lightning-fast, appointment-ready.',
+    title: 'Professional Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments | Nationwide from DFW',
+    description: 'HIPAA-aware professional medical websites for doctors, dentists, and clinics. DFW-based team serving healthcare providers nationwide.',
     type: 'website',
   },
 };

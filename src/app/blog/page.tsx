@@ -13,6 +13,149 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'website-mistakes-costing-dfw-businesses-customers',
+    title: '5 Website Mistakes That Are Costing DFW Businesses Customers',
+    excerpt: 'Are website mistakes silently driving away your Dallas-Fort Worth customers? From slow loading times to poor mobile design, these common errors could be costing your business thousands. Here\'s how to identify and fix them.',
+    content: `
+      <p>Your website should be your most powerful sales tool. But if you're making these common mistakes, it might be driving potential customers straight to your competitors instead.</p>
+
+      <p>As a web design agency serving Grapevine, Southlake, and the greater Dallas-Fort Worth area, we've audited hundreds of local business websites. The same problems show up again and again—and they're costing business owners real money.</p>
+
+      <p>Here are the 5 biggest website mistakes we see DFW businesses making, and more importantly, how to fix them.</p>
+
+      <h2>1. Slow Loading Speed That Kills Conversions</h2>
+
+      <p><strong>The Problem:</strong> Your website takes more than 3 seconds to load on mobile devices.</p>
+
+      <p>In today's fast-paced world, users expect instant results. Google research shows that 53% of mobile users abandon sites that take longer than 3 seconds to load. For DFW businesses competing in markets like Plano, Frisco, or Arlington, that means losing customers before they even see what you offer.</p>
+
+      <p><strong>The Cost:</strong> A 1-second delay in page load time can reduce conversions by 7%. For a business making $100,000 annually through their website, that's $7,000 in lost revenue per year.</p>
+
+      <p><strong>The Fix:</strong></p>
+      <ul>
+        <li>Optimize and compress all images before uploading</li>
+        <li>Choose a reliable hosting provider (avoid the cheapest options)</li>
+        <li>Minimize plugins and third-party scripts</li>
+        <li>Use a content delivery network (CDN)</li>
+        <li>Consider custom-coded websites over bloated templates</li>
+      </ul>
+
+      <h2>2. Poor Mobile Experience in a Mobile-First World</h2>
+
+      <p><strong>The Problem:</strong> Your website doesn't work well on smartphones and tablets.</p>
+
+      <p>Over 60% of web traffic nationwide comes from mobile devices. If your site is hard to navigate, text is too small to read, or buttons are impossible to tap on a phone, you're losing the majority of your potential customers.</p>
+
+      <p><strong>The Cost:</strong> Poor mobile experience doesn't just hurt user experience—it hurts your Google rankings. Google uses mobile-first indexing, meaning they primarily use the mobile version of your site for ranking.</p>
+
+      <p><strong>The Fix:</strong></p>
+      <ul>
+        <li>Implement responsive design that adapts to all screen sizes</li>
+        <li>Ensure text is readable without zooming</li>
+        <li>Make buttons and links large enough to tap easily</li>
+        <li>Test your site on multiple mobile devices</li>
+        <li>Prioritize the most important information "above the fold"</li>
+      </ul>
+
+      <h2>3. Confusing Navigation That Frustrates Visitors</h2>
+
+      <p><strong>The Problem:</strong> Visitors can't figure out how to find what they need on your site.</p>
+
+      <p>We've seen business websites nationwide with confusing menus, buried contact information, and unclear service descriptions. When potential customers can't quickly understand what you do or how to contact you, they leave.</p>
+
+      <p><strong>The Cost:</strong> Confusing navigation increases bounce rate and reduces the time visitors spend on your site—both factors that hurt your SEO rankings and lead generation.</p>
+
+      <p><strong>The Fix:</strong></p>
+      <ul>
+        <li>Keep your main navigation to 7 items or fewer</li>
+        <li>Use clear, descriptive labels (not clever or vague ones)</li>
+        <li>Make your phone number and contact info prominent</li>
+        <li>Include a search function for larger sites</li>
+        <li>Test your navigation with real users, not just yourself</li>
+      </ul>
+
+      <h2>4. Missing Local SEO Opportunities</h2>
+
+      <p><strong>The Problem:</strong> Your website doesn't show up when DFW customers search for your services locally.</p>
+
+      <p>Many businesses have beautiful websites that are invisible to local search. Without proper local SEO, you're missing out on customers searching for "dentist near me in Grapevine" or "plumber Southlake Texas."</p>
+
+      <p><strong>The Cost:</strong> Local searches have high commercial intent—these are people ready to buy. Missing out on local SEO means your competitors are getting customers you could have served.</p>
+
+      <p><strong>The Fix:</strong></p>
+      <ul>
+        <li>Claim and optimize your Google My Business profile</li>
+        <li>Include your city and service area in page titles and content</li>
+        <li>Create location-specific service pages</li>
+        <li>Gather customer reviews on Google and other platforms</li>
+        <li>Ensure your business name, address, and phone number are consistent across all platforms</li>
+      </ul>
+
+      <h2>5. Weak or Missing Calls-to-Action</h2>
+
+      <p><strong>The Problem:</strong> Visitors land on your site but don't know what to do next.</p>
+
+      <p>Your website might look professional, but if visitors can't figure out how to take the next step—whether that's calling, emailing, or scheduling an appointment—you're losing leads.</p>
+
+      <p><strong>The Cost:</strong> Without clear calls-to-action, even interested visitors will leave without converting. You're essentially paying for traffic that goes nowhere.</p>
+
+      <p><strong>The Fix:</strong></p>
+      <ul>
+        <li>Include a clear, prominent call-to-action on every page</li>
+        <li>Use action-oriented language ("Call Now," "Schedule Today," "Get Your Free Quote")</li>
+        <li>Make contact information easily accessible</li>
+        <li>Consider adding click-to-call buttons for mobile users</li>
+        <li>Test different CTA placements and colors to see what works best</li>
+      </ul>
+
+      <h2>The Real Cost of These Mistakes</h2>
+
+      <p>Let's put this in perspective for a typical DFW small business:</p>
+
+      <p>If your website gets 1,000 visitors per month and should convert at 3% (30 leads), but website problems drop that to 1% (10 leads), you're losing 20 potential customers every month. If your average customer value is $500, that's $10,000 in lost revenue monthly—$120,000 per year.</p>
+
+      <p>These aren't just technical problems. They're business problems with real financial impact.</p>
+
+      <h2>How to Audit Your Own Website</h2>
+
+      <p>Want to see how your website stacks up? Here's a quick self-audit checklist:</p>
+
+      <h3>Speed Test</h3>
+      <p>Use Google's PageSpeed Insights or GTmetrix to test your site's loading speed on mobile and desktop.</p>
+
+      <h3>Mobile Test</h3>
+      <p>Pull up your website on your phone. Can you easily read everything? Are buttons easy to tap?</p>
+
+      <h3>Navigation Test</h3>
+      <p>Ask someone unfamiliar with your business to find your contact information and main services on your site. Time how long it takes.</p>
+
+      <h3>Local Search Test</h3>
+      <p>Search for your services + your city on Google. Do you show up in the local results?</p>
+
+      <h3>Call-to-Action Test</h3>
+      <p>Look at each page on your site. Is it clear what action you want visitors to take?</p>
+
+      <h2>Ready to Fix Your Website?</h2>
+
+      <p>These mistakes are common, but they're also fixable. Whether you tackle them yourself or work with a professional web design team, the important thing is to start.</p>
+
+      <p>Your DFW business deserves a website that works as hard as you do—one that attracts customers instead of driving them away.</p>
+
+      <p>If you'd like a professional audit of your website's performance, we offer free 5-point website audits for businesses in the Dallas-Fort Worth area. We'll show you exactly what's working, what's not, and how to improve your results.</p>
+
+      <p>📍 Proudly serving Grapevine, Southlake, Fort Worth, Dallas, and all of North Texas.</p>
+
+      <p><a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">👉 Get your free website audit here</a></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-08-15',
+    readTime: '8 min read',
+    category: 'Web Design',
+    image: '/images/blog/website-mistakes-dfw-businesses.webp',
+    tags: ['Website Mistakes', 'DFW Business', 'Web Design', 'User Experience', 'Local SEO', 'Conversions'],
+    featured: true
+  },
+  {
     id: 'web-designers-near-me-how-to-choose-right-one-dfw',
     title: 'Web Designers Near Me: How to Choose the Right One in DFW',
     excerpt: 'If you\'ve searched "web designers near me" in the Dallas–Fort Worth area, you\'ve probably been flooded with options. Here\'s how to find the right web designer who understands your business, your audience, and your goals.',
@@ -489,7 +632,7 @@ const blogPosts = [
   }
 ];
 
-const categories = ['All', 'SEO', 'Business', 'Local Business'];
+const categories = ['All', 'SEO', 'Business', 'Local Business', 'Web Design'];
 
 export default function Blog() {
   const featuredPosts = blogPosts.filter(post => post.featured);

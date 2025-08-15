@@ -8,8 +8,8 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 const CalendlyWidget = lazy(() => import("@/components/CalendlyWidget"));
 
 export const metadata: Metadata = {
-  title: 'Contact',
-  description: 'Need any kind of services contact us.',
+  title: 'Contact Professional Web Design Team | Get Your Free Website Consultation | DFW-Based, Nationwide Service | Forte Web Designs',
+  description: 'Contact Forte Web Designs for professional web design services nationwide from our DFW headquarters. Get your free consultation, website quote, and discover how our professional website design can grow your business.',
 };
 
 export default function Contact() {
@@ -62,7 +62,7 @@ export default function Contact() {
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
-              Why 25+ Businesses Trust Forte Web Designs
+              Why 25+ Growing Businesses Nationwide Trust Forte Web Designs
             </h3>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
@@ -83,8 +83,8 @@ export default function Contact() {
             </div>
             <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
               <div className="text-2xl mb-2">🤝</div>
-              <div className="text-sm font-semibold text-gray-900 dark:text-white">Local Support</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Dallas-Fort Worth</div>
+              <div className="text-sm font-semibold text-gray-900 dark:text-white">DFW-Based Team</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Serving Nationwide</div>
             </div>
           </div>
         </div>

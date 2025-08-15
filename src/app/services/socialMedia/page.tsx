@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Head from "next/head";
 import { Icon } from "@/components/images/Icon";
 import LightButton from "@/components/LightButton";
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
@@ -14,7 +15,7 @@ type FAQItem = {
 const faqData: FAQItem[] = [
   {
     question: "What platforms do you manage?",
-    answer: "We focus on the platforms where your local customers actually spend time: Facebook, Instagram, and Google Business Profile. These three platforms drive the most engagement and business results for local service businesses."
+    answer: "We focus on the platforms where your customers actually spend time: Facebook, Instagram, and Google Business Profile. These three platforms drive the most engagement and business results for service businesses nationwide."
   },
   {
     question: "How much content do you create?",
@@ -58,21 +59,27 @@ export default function SocialMediaPage() {
 
   return (
     <>
+      <Head>
+        <title>Professional Social Media Management | Expert Social Marketing Nationwide from DFW | Forte Web Designs</title>
+        <meta name="description" content="Professional social media management that drives real business growth. DFW-based team serving businesses nationwide with custom content creation, community management, and proven social media strategies." />
+        <meta name="keywords" content="social media management, social media marketing, Facebook management, Instagram marketing, social media strategy, content creation, community management nationwide" />
+        <link rel="canonical" href="https://fortewebdesigns.com/services/socialMedia" />
+      </Head>
       {/* Hero Section */}
       <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <span className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm sm:text-base md:text-lg font-medium mb-4 sm:mb-6">
             <Icon name="star" className="h-4 w-4 sm:h-5 sm:w-5" />
-            Social Media Management
+            Professional Social Media Management
           </span>
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-4 sm:mb-6">
-            Social Media That Actually <span className="text-blue-600">Connects</span>
+            Professional Social Media That Actually <span className="text-blue-600">Drives Business Growth</span>
           </h1>
           <p className="text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-8 sm:mb-10 leading-relaxed">
-            Stop letting your competitors dominate social media while you're buried in your business. We keep you visible, engaging, and top-of-mind with customers who are ready to buy.
+            Stop letting your competitors dominate social media while you focus on running your business. Our DFW-based team provides professional social media management nationwide, keeping you visible, engaging, and top-of-mind with customers who are ready to buy.
           </p>
           <LightButton href="/contact" className="text-lg px-8 py-4">
-            Get Started Today
+            Get Professional Social Media Management
           </LightButton>
         </div>
       </section>
@@ -82,10 +89,10 @@ export default function SocialMediaPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-              The Social Media Reality Check
+              The Professional Social Media Reality Check
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              See yourself in this? You're not alone.
+              See yourself in this business scenario? You're not alone.
             </p>
           </div>
 
@@ -94,8 +101,8 @@ export default function SocialMediaPage() {
             <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-red-200 dark:border-red-800">
               <div className="text-center mb-8">
                 <div className="text-6xl mb-4">😤</div>
-                <h3 className="text-2xl font-bold text-red-700 dark:text-red-300 mb-2">Before Forte Social™</h3>
-                <p className="text-red-600 dark:text-red-400">What most business owners deal with</p>
+                <h3 className="text-2xl font-bold text-red-700 dark:text-red-300 mb-2">Before Professional Forte Social™</h3>
+                <p className="text-red-600 dark:text-red-400">What most business owners struggle with</p>
               </div>
               
               <div className="space-y-4">
@@ -621,7 +628,7 @@ export default function SocialMediaPage() {
         industry="social-media"
         formName="Social Media Inquiry"
         title="Let's Build Your Social Media Strategy Right"
-        subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from a team that builds engaging social media strategies."
+        subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from our DFW-based team that builds engaging social media strategies nationwide."
         mobileCtaText="Ready to grow on social?"
         mobileCtaSubtext="Get your social media plan today"
         mobileBgGradient="bg-gradient-to-r from-pink-600 to-purple-600"

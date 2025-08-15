@@ -11,12 +11,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Painter Website Design | Websites That Turn Brush Strokes Into Booked Jobs',
-  description: 'Professional painter websites that are clean, professional, and optimized to convert. Mobile-first design with project galleries, local SEO, and instant quote CTAs.',
-  keywords: 'painter website design, painter websites, painting contractor SEO, mobile painter sites, painting lead generation, project gallery websites',
+  title: 'Painter Website Design | Websites That Turn Brush Strokes Into Booked Jobs | Nationwide from DFW | Forte Web Designs',
+  description: 'Professional painter websites that are clean, professional, and optimized to convert. DFW-based team serving painting contractors nationwide with mobile-first design, project galleries, local SEO, and instant quote CTAs.',
+  keywords: 'painter website design, painter websites, painting contractor SEO, mobile painter sites, painting lead generation, project gallery websites nationwide',
   openGraph: {
-    title: 'Painter Website Design | Websites That Turn Brush Strokes Into Booked Jobs',
-    description: 'Professional painter websites that are clean, professional, and optimized to convert. Mobile-first design with project galleries, local SEO, and instant quote CTAs.',
+    title: 'Painter Website Design | Websites That Turn Brush Strokes Into Booked Jobs | Nationwide from DFW',
+    description: 'Professional painter websites that are clean, professional, and optimized to convert. DFW-based team serving painting contractors nationwide.',
     type: 'website',
   },
 };

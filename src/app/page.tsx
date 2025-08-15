@@ -160,39 +160,39 @@ export default function Home() {
 
   const sliderItems = [
     {
-      title: "🔍 1. Foundations",
+      title: "🔍 1. Discovery & Strategy",
       description:
-        "Clarity - Faster Results\nWe start with a deep discovery session to align your brand, audience, and goals. No fluff - just clarity that drives focused execution.",
+        "Clear Strategy = Faster Results\nWe start with a comprehensive business discovery session to align your brand positioning, target audience, and growth goals. No generic templates - just strategic clarity that drives focused web development and digital marketing execution.",
       icon: "/images/home/foundation.svg",
-      tagline: "Clarity → Faster Results"
+      tagline: "Clear Strategy → Faster Results"
     },
     {
-      title: "🧠 2. Refine", 
+      title: "🧠 2. Design & User Experience", 
       description:
-        "Feedback → On-Brand Accuracy\nWe turn insights into direction with collaborative design mockups and wireframes. Your feedback shapes the final product before we ever write a line of code.",
+        "Strategic Feedback = On-Brand Web Design\nWe transform business insights into professional web design direction with collaborative mockups and user experience wireframes. Your feedback shapes the final custom website before we write a single line of code.",
       icon: "/images/home/refine.svg",
-      tagline: "Feedback → On-Brand Accuracy"
+      tagline: "Strategic Feedback → On-Brand Web Design"
     },
     {
-      title: "💻 3. Build",
+      title: "💻 3. Custom Development",
       description:
-        "Clean Code → Speed & Security\nEvery site is hand-coded line by line. No bloated builders, no plugins. Just fast, secure, search-optimized performance from the start.",
+        "Hand-Coded Excellence = Speed & SEO Performance\nEvery website is professionally hand-coded line by line for optimal performance. No bloated page builders, no unnecessary plugins. Just fast-loading, secure, search engine optimized websites built for conversions from day one.",
       icon: "/images/home/tailor.svg",
-      tagline: "Clean Code → Speed & Security"
+      tagline: "Hand-Coded Excellence → Speed & SEO Performance"
     },
     {
-      title: "🚀 4. Launch",
+      title: "🚀 4. Launch & SEO Setup",
       description:
-        "Optimized Setup → Ready for Traffic\nWe deploy your site with all the essentials: SEO-ready structure, mobile optimization, and analytics tools set to track what matters most.",
+        "Professional Launch = Ready for Google Traffic\nWe deploy your professional website with all essential digital marketing foundations: SEO-optimized structure, local search optimization, mobile responsiveness, and analytics tracking configured to monitor what matters most for business growth.",
       icon: "/images/home/elevate.svg",
-      tagline: "Optimized Setup → Ready for Traffic"
+      tagline: "Professional Launch → Ready for Google Traffic"
     },
     {
-      title: "🔧 5. Grow",
+      title: "🔧 5. Growth & Optimization",
       description:
-        "Ongoing Support - Compounding ROI\nWith Forte Care™, your site stays updated, secure, and optimized. And when you're ready to scale with SEO, ads, or social - we've already laid the groundwork for it to work.",
+        "Ongoing Digital Marketing Support = Compounding ROI\nWith Forte Care™ maintenance and optimization services, your website stays updated, secure, and search engine optimized for continuous growth. When you're ready to scale with advanced SEO services, Google Ads management, or social media marketing - we've built the technical foundation for it all to work seamlessly together.",
       icon: "/images/home/elevate.svg",
-      tagline: "Ongoing Support → Compounding ROI"
+      tagline: "Ongoing Digital Marketing Support → Compounding ROI"
     },
   ];
 
@@ -328,7 +328,7 @@ export default function Home() {
                   </div>
                   
                   <h1 className="font-display font-medium text-[28px] sm:text-[36px] leading-[32px] sm:leading-[40px] tracking-[-0.04em] text-black dark:text-white px-4">
-                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> That Drive Results
+                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Professional Web Design Dallas</span> & Custom Websites That Drive Real Results
                   </h1>
                   
                   <div className="px-4 max-w-4xl mx-auto">
@@ -338,7 +338,7 @@ export default function Home() {
                           <span className="text-sm">⚡</span>
                         </div>
                         <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Meticulously built for performance
+                          Websites that actually show up on Google & load instantly
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
@@ -346,7 +346,7 @@ export default function Home() {
                           <span className="text-sm">🛡️</span>
                         </div>
                         <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Hardened for security
+                          Built secure & reliable - no WordPress headaches
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
@@ -354,7 +354,7 @@ export default function Home() {
                           <span className="text-sm">📈</span>
                         </div>
                         <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Tuned for serious growth
+                          Designed to turn visitors into paying customers
                         </span>
                       </div>
                     </div>
@@ -495,7 +495,7 @@ export default function Home() {
                       
                       <SimpleScrollReveal direction="up" delay={100}>
                         <h1 className="font-display font-medium text-[70px] leading-[74px] tracking-[-0.04em] text-black dark:text-white">
-                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Hand-Coded Websites</span> That <br />Drive Results
+                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Professional Web Design Dallas</span> & <br />Custom Websites That Drive Real Results
                         </h1>
                       </SimpleScrollReveal>
                       
@@ -506,7 +506,7 @@ export default function Home() {
                               <span className="text-lg">⚡</span>
                             </div>
                             <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Meticulously built for performance
+                              Websites that actually show up on Google & load instantly
                             </span>
                           </div>
                           <div className="flex items-center gap-3">
@@ -514,7 +514,7 @@ export default function Home() {
                               <span className="text-lg">🛡️</span>
                             </div>
                             <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Hardened for security
+                              Built secure & reliable - no WordPress headaches
                             </span>
                           </div>
                           <div className="flex items-center gap-3">
@@ -522,7 +522,7 @@ export default function Home() {
                               <span className="text-lg">📈</span>
                             </div>
                             <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Tuned for serious growth
+                              Designed to turn visitors into paying customers
                             </span>
                           </div>
                         </div>
@@ -610,10 +610,10 @@ export default function Home() {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Trusted by Growing Businesses</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Join 25+ Businesses Growing with Forte™
+                  Join 25+ Growing Businesses Nationwide Choosing Professional Web Design from Our DFW Team
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  From DFW contractors to Dallas healthcare professionals, businesses throughout the metroplex choose Forte for results they can measure. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories.
+                  From DFW contractors to Dallas healthcare professionals and clients across the nation, businesses everywhere choose Forte for custom web design, SEO services, and digital marketing solutions that deliver measurable results. Based in Grapevine, Texas, we serve clients nationwide with the same local attention and professional expertise. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories and case studies.
                 </p>
                 
                 {/* Google Reviews Header */}
@@ -775,14 +775,14 @@ export default function Home() {
           {/* Call to Action */}
           <SimpleScrollReveal direction="up" delay={200}>              <div className="text-center mt-8">
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Ready to join our satisfied clients? <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our process</Link> or explore our <Link href="/solutions" className="text-primary-600 hover:text-primary-700 underline font-medium">complete service offerings</Link>.
+                  Ready to join our satisfied clients nationwide with professional web design and digital marketing services? <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our proven process</Link> or explore our <Link href="/solutions" className="text-primary-600 hover:text-primary-700 underline font-medium">complete SEO and web design service offerings</Link> for businesses across the country. DFW-based, nationwide reach.
                 </p>
                 <div className="flex justify-center">
                   <button
                     onClick={() => setShowContactModal(true)}
                     className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
                   >
-                    Get Started Today
+                    Get Professional Web Design Quote
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -963,10 +963,10 @@ export default function Home() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    Your Website's Digital Pit Crew
+                    Your Website's Professional Digital Marketing Support Team
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    Just like race cars need regular tune-ups to stay competitive, your website needs ongoing optimization to keep winning customers. Forte Care™ is your dedicated pit crew – monitoring performance, making improvements, and keeping you ahead of the competition. <Link href="/pricing" className="text-green-600 hover:text-green-700 underline font-medium">View our pricing plans</Link> to see how we make ongoing website care affordable.
+                    Just like race cars need regular tune-ups to stay competitive, your business website needs ongoing SEO optimization, security updates, and performance monitoring to keep winning customers in competitive digital markets nationwide. Forte Care™ is your dedicated digital marketing pit crew – monitoring website performance, implementing SEO improvements, and keeping you ahead of local and national competition. <Link href="/pricing" className="text-green-600 hover:text-green-700 underline font-medium">View our comprehensive pricing plans</Link> to see how we make ongoing website maintenance and digital marketing support affordable for small businesses everywhere.
                   </p>
                   <Link
                     href="/solutions/care"
@@ -983,7 +983,7 @@ export default function Home() {
           {/* Pricing Value Proposition */}
           <div className="text-center mt-12">
             <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white max-w-4xl mx-auto">
-              <h3 className="text-2xl font-bold mb-4">Why Our Pricing Makes Sense</h3>
+              <h3 className="text-2xl font-bold mb-4">Why Our Web Design & SEO Pricing Makes Sense for Small Businesses</h3>
           <div className="grid md:grid-cols-3 gap-6 text-sm">
             <div>
               <div className="text-3xl mb-2">🚫</div>
@@ -992,13 +992,13 @@ export default function Home() {
             </div>
             <div>
               <div className="text-3xl mb-2">📈</div>
-              <div className="font-semibold">Predictable Investment</div>
-              <div className="opacity-90">Know exactly what you're paying each month with no surprise bills</div>
+              <div className="font-semibold">Predictable Digital Marketing Investment</div>
+              <div className="opacity-90">Know exactly what you're paying each month for web design and SEO with no surprise bills</div>
             </div>
             <div>
               <div className="text-3xl mb-2">🛠️</div>
-              <div className="font-semibold">Always Current</div>
-              <div className="opacity-90">Your site stays updated, secure, and optimized as technology evolves</div>
+              <div className="font-semibold">Always Current with Latest SEO & Web Standards</div>
+              <div className="opacity-90">Your site stays updated, secure, and search engine optimized as technology and Google algorithms evolve</div>
             </div>
           </div>
         </div>
@@ -1027,21 +1027,21 @@ export default function Home() {
           </p>
         </div>
         <h4 className="font-roboto font-medium text-[32px] sm:text-[62px] leading-[36px] sm:leading-[62px] tracking-[-1.24px] text-center text-[#000000] dark:text-[#F1F1EF] mb-6">
-          Ready to See What's Possible?
+          Ready to Grow Your Dallas Business Online?
         </h4>
         <p className="text-gray-700 font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-          Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your Dallas-Fort Worth business goals. No pressure, just possibilities. <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our process</Link> and discover why businesses trust Forte Web Designs.
+          Choosing the right web design and digital marketing partner can transform your business growth nationwide. Let's start with a friendly consultation about your business goals and online marketing needs. No pressure, just professional insights and custom solutions. <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our proven process</Link> and discover why businesses across the country trust our DFW-based team for web development and SEO services.
         </p>
         <div className="flex justify-center">
           <button
             onClick={() => setShowContactModal(true)}
             className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
           >
-            Schedule Call
+            Get Your Free Web Design Consultation
           </button>
         </div>
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
-          Proudly serving businesses throughout Dallas-Fort Worth from our Grapevine headquarters.
+          Serving businesses nationwide from our Grapevine, Texas headquarters. Professional web design, SEO services, and digital marketing solutions with DFW roots and national reach.
         </p>
       </div>
     </div>      </section>
@@ -1056,15 +1056,15 @@ export default function Home() {
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm font-medium text-blue-800 dark:text-blue-200">
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🇺🇸</span>
-              DFW-based Team
+              DFW-Based Web Design Team
             </div>
             <div className="flex items-center gap-2">
               <span className="text-blue-600">⚡</span>
-              24-hr Response
+              24-hr Response Time Guarantee
             </div>
             <div className="flex items-center gap-2">
               <span className="text-blue-600">✅</span>
-              100% Satisfaction Guarantee
+              100% Satisfaction Guarantee on All Projects
             </div>
           </div>
         </div>
@@ -1077,10 +1077,10 @@ export default function Home() {
           Ready to Get Started?
         </span>
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6 max-w-4xl mx-auto">
-          Let's Build Something Amazing Together
+          Let's Build Your Professional Website & Grow Your Business Together
         </h2>
         <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-          Ready to transform your online presence? Get started with a free 5-point website audit or schedule a strategy call.
+          Ready to transform your online presence with professional web design and digital marketing services? Get started with a free comprehensive website audit, SEO analysis, or schedule a strategy consultation to discuss your business growth goals. Serving businesses nationwide from our DFW headquarters.
         </p>
       </div>
 
@@ -1097,7 +1097,7 @@ export default function Home() {
           {/* Calendly Booking Widget */}
           <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
             <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-              Prefer to Schedule a Call?
+              Prefer to Schedule a Free Web Design Consultation?
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-6">
               Book a free 15-minute strategy session to discuss your project and see if we're a good fit.
@@ -1155,16 +1155,16 @@ export default function Home() {
                 {/* Tech stats */}
                 <div className="mt-4 grid grid-cols-3 gap-4 text-center">
                   <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
-                    <div className="text-lg font-bold text-blue-600 dark:text-blue-400">20+</div>
-                    <div className="text-xs text-gray-600 dark:text-gray-400">Businesses</div>
+                    <div className="text-lg font-bold text-blue-600 dark:text-blue-400">25+</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Texas Businesses</div>
                   </div>
                   <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
                     <div className="text-lg font-bold text-green-600 dark:text-green-400">24hr</div>
-                    <div className="text-xs text-gray-600 dark:text-gray-400">Response Time</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Support Response</div>
                   </div>
                   <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
                     <div className="text-lg font-bold text-purple-600 dark:text-purple-400">5★</div>
-                    <div className="text-xs text-gray-600 dark:text-gray-400">Client Rating</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">Google Rating</div>
                   </div>
                 </div>
               </div>

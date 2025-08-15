@@ -6,9 +6,9 @@ import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 
 export const metadata: Metadata = {
-  title: 'Web Designer Fort Worth TX | Custom Website Design & SEO',
-  description: 'Professional web designer serving Fort Worth, TX. Custom websites, local SEO, and digital marketing for Fort Worth businesses. Free consultation.',
-  keywords: 'web designer Fort Worth, website design Fort Worth TX, Fort Worth web development, custom websites Fort Worth',
+  title: 'Fort Worth Web Designer | Professional Website Design & SEO Services Texas',
+  description: 'Expert web designer serving Fort Worth, TX businesses with custom website design, local SEO optimization, and comprehensive digital marketing solutions. Free consultation for Fort Worth area companies.',
+  keywords: 'Fort Worth web designer, website design Fort Worth TX, Fort Worth web development, custom websites Fort Worth, SEO services Fort Worth, digital marketing Fort Worth, professional web design Texas',
 };
 
 export default function FortWorthWebDesigner() {
@@ -101,10 +101,10 @@ export default function FortWorthWebDesigner() {
               Web Designer in Fort Worth, Texas
             </span>
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
-              Professional Web Designer Serving Fort Worth, TX
+              Professional Fort Worth Web Designer | Custom Website Development & Local SEO Services
             </h1>
             <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
-              Custom website design and development for Fort Worth businesses. Get found, get calls, get results.
+              Award-winning custom website design, local SEO optimization, and digital marketing solutions for Fort Worth businesses. Boost your online presence, attract more qualified leads, and increase revenue with professional web development services designed specifically for the Fort Worth market and Cowtown business community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
               <DarkButton href="/contact?location=fort-worth" className="bg-primary-600 hover:bg-primary-700">
@@ -123,10 +123,10 @@ export default function FortWorthWebDesigner() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold dark:text-white mb-4">
-              Why Fort Worth Businesses Choose Forte Web Designs
+              Why Fort Worth Small Businesses Choose Forte Web Designs for Professional Website Development
             </h2>
             <p className="text-gray-700 dark:text-gray-300 text-lg max-w-3xl mx-auto">
-              We understand the Fort Worth market and what it takes to compete in Cowtown
+              We understand the unique Fort Worth business landscape and provide comprehensive digital marketing solutions including custom web design, local SEO services, and conversion optimization strategies to help your Cowtown business thrive online and outrank competitors.
             </p>
           </div>
 
@@ -135,9 +135,9 @@ export default function FortWorthWebDesigner() {
               <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center mb-4">
                 <Icon name="location" className="w-6 h-6 text-primary-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 dark:text-white">Local Fort Worth SEO</h3>
+              <h3 className="text-xl font-semibold mb-3 dark:text-white">Advanced Fort Worth Local SEO Optimization</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                We optimize your website to rank for "web designer near me" and other local Fort Worth searches, helping you dominate the competition.
+                We specialize in Fort Worth local search optimization, helping your business dominate search results for "web designer near me," "Fort Worth web development," and industry-specific keywords that attract qualified customers throughout Tarrant County.
               </p>
             </div>
 
@@ -145,9 +145,9 @@ export default function FortWorthWebDesigner() {
               <div className="w-12 h-12 bg-green-100 dark:bg-green-900/40 rounded-xl flex items-center justify-center mb-4">
                 <Icon name="star" className="w-6 h-6 text-green-600" />
               </div>
-              <h3 className="text-xl font-semibold mb-3 dark:text-white">DFW Market Knowledge</h3>
+              <h3 className="text-xl font-semibold mb-3 dark:text-white">DFW Market Expertise & Fort Worth Business Understanding</h3>
               <p className="text-gray-600 dark:text-gray-300">
-                Based in the Dallas-Fort Worth area, we understand your local market, competitors, and what Fort Worth customers expect.
+                Based in the Dallas-Fort Worth metroplex, we provide deep market insights, competitive analysis, and culturally-aware digital marketing strategies that connect with Fort Worth's unique business community and local customer base.
               </p>
             </div>
 

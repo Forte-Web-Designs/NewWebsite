@@ -11,12 +11,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Construction Websites Built to Win Bids and Build Trust',
-  description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. Custom-coded sites for construction companies that turn browsers into buyers-and estimates into jobs.',
-  keywords: 'construction website design, contractor websites, construction company websites, mobile construction quotes, construction bid optimization',
+  title: 'Construction Websites Built to Win Bids and Build Trust | Nationwide from DFW | Forte Web Designs',
+  description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. DFW-based team serving construction companies nationwide with custom-coded sites that turn browsers into buyers and estimates into jobs.',
+  keywords: 'construction website design, contractor websites, construction company websites, mobile construction quotes, construction bid optimization nationwide',
   openGraph: {
-    title: 'Construction Websites Built to Win Bids and Build Trust',
-    description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. Custom-coded sites for construction companies that turn browsers into buyers-and estimates into jobs.',
+    title: 'Construction Websites Built to Win Bids and Build Trust | Nationwide from DFW',
+    description: 'Construction websites that act like your best foreman: organized, authoritative, and ready to close the deal. DFW-based team serving construction companies nationwide.',
     type: 'website',
   },
 };

@@ -68,10 +68,21 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     template: '%s | Forte Web Designs',
-    default: 'Web Design DFW | Forte Web Designs | Custom Websites Dallas',
+    default: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
   },
-  description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth in the Dallas-Fort Worth area.",
-  keywords: ['web design DFW', 'web design Dallas', 'custom websites Dallas', 'Fort Worth web design', 'SEO services Dallas', 'google ads DFW', 'social media management Dallas', 'forte web designs', 'small business websites Dallas'],
+  description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, SEO optimization, Google Ads management, and digital marketing solutions for DFW businesses. Boost your online presence today.",
+  keywords: [
+    'web design DFW', 'web design Dallas', 'custom websites Dallas', 'Fort Worth web design', 'Dallas web development',
+    'SEO services Dallas', 'SEO optimization DFW', 'search engine optimization Dallas', 'local SEO Texas',
+    'Google Ads DFW', 'PPC advertising Dallas', 'pay per click marketing', 'digital advertising Texas',
+    'social media management Dallas', 'social media marketing DFW', 'Facebook advertising Dallas',
+    'responsive web design', 'mobile-friendly websites', 'fast loading websites', 'website optimization',
+    'ecommerce websites Dallas', 'online stores DFW', 'business websites Texas', 'professional web design',
+    'website redesign Dallas', 'web design agency DFW', 'digital marketing Dallas', 'online marketing Texas',
+    'website maintenance Dallas', 'web hosting Texas', 'domain registration DFW', 'SSL certificates Dallas',
+    'conversion optimization', 'lead generation websites', 'sales funnel design', 'landing page optimization',
+    'forte web designs', 'small business websites Dallas', 'startup web design DFW', 'nonprofit websites Texas'
+  ],
   creator: 'Forte Web Designs',
   publisher: 'Forte Web Designs',
   robots: {
@@ -86,14 +97,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://fortewebdesigns.com',
-    title: 'Web Design DFW | Forte Web Designs | Custom Websites Dallas',
-    description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth in the Dallas-Fort Worth area.",
+    title: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
+    description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, SEO optimization, Google Ads management, and digital marketing solutions for DFW businesses. Boost your online presence today.",
     siteName: 'Forte Web Designs',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Web Design DFW | Forte Web Designs | Custom Websites Dallas',
-    description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth in the Dallas-Fort Worth area.",
+    title: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
+    description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, SEO optimization, Google Ads management, and digital marketing solutions for DFW businesses. Boost your online presence today.",
   },
 };
 

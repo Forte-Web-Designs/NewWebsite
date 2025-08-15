@@ -3,9 +3,9 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import WebDesignPageClient from './WebDesignPageClient';
 
 export const metadata: Metadata = {
-  title: "Custom Website Design – Built for Speed, Security & Growth | Forte Web Designs",
+  title: "Professional Custom Website Design & Development Services | Nationwide from DFW | Forte Web Designs",
   description:
-    "Hand-coded websites that outperform templates every time. No WordPress, no page builders – just clean, fast, secure websites built from scratch for real business growth.",
+    "Hand-coded professional custom websites that outperform WordPress templates. DFW-based team serving businesses nationwide with lightning-fast, secure, SEO-optimized websites built from scratch for real business growth and lead generation.",
 };
 
 export default function WebDesignPage() {

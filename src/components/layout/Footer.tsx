@@ -39,36 +39,39 @@ export default function Footer() {
 
   const data = [
     {
-      heading: "What We Do",
+      heading: "Digital Services",
       points: [
-        { text: "Custom Website", href: "/services/webDesign" },
-        { text: "SEO Services", href: "/services/seo" },
-        { text: "Social Media Management", href: "/services/socialMedia" },
-        { text: "Google PPC Ads", href: "/services/ads" },
-        { text: "Forte Care™ Plan", href: "/solutions/care" },
+        { text: "Custom Website Design", href: "/services/webDesign" },
+        { text: "SEO Optimization Services", href: "/services/seo" },
+        { text: "Social Media Marketing", href: "/services/socialMedia" },
+        { text: "Google Ads Management", href: "/services/ads" },
+        { text: "Website Maintenance & Support", href: "/solutions/care" },
       ]
     },
     {
-      heading: "Company",
+      heading: "About Forte",
       points: [
-        { text: "About Us", href: "/about" },
-        { text: "Portfolio", href: "/about/work" },
-        { text: "FAQ", href: "/about/faqs" },
-        { text: "Contact", href: "/contact" }
+        { text: "Our Story & Mission", href: "/about" },
+        { text: "Portfolio & Case Studies", href: "/about/work" },
+        { text: "Client Success Stories", href: "/case-studies" },
+        { text: "Frequently Asked Questions", href: "/about/faqs" },
+        { text: "Get In Touch", href: "/contact" }
       ]
     },
     {
-      heading: "Connect",
+      heading: "Connect With Us",
       points: [
-        { text: "Facebook", href: "https://www.facebook.com/people/Forte-Web-Designs/61576746767359/" },
-        { text: "Instagram", href: "https://www.instagram.com/fortewebdesigns/" },
-        { text: "LinkedIn", href: "https://www.linkedin.com/company/forte-web-designs/?viewAsMember=true" },
+        { text: "Facebook - Digital Marketing Tips", href: "https://www.facebook.com/people/Forte-Web-Designs/61576746767359/" },
+        { text: "Instagram - Behind the Scenes", href: "https://www.instagram.com/fortewebdesigns/" },
+        { text: "LinkedIn - Business Insights", href: "https://www.linkedin.com/company/forte-web-designs/?viewAsMember=true" },
       ]
     },
     {
-      heading: "Resources",
+      heading: "Free Resources",
       points: [
-        { text: "Free Forte SiteCheckup™", href: "/solutions/seotool" }
+        { text: "Free Website Analysis Tool", href: "/solutions/seotool" },
+        { text: "Website Design Blog", href: "/blog" },
+        { text: "Digital Marketing Resources", href: "/resources" }
       ]
     }
   ];
@@ -107,7 +110,10 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>Flexible builds. Lightning-fast performance. Designed to grow with your business.</p>
+              <p>Professional web design and digital marketing solutions for Dallas Fort Worth businesses. Custom websites, SEO optimization, and marketing strategies designed to grow your business online.</p>
+              <p className="mt-3">
+                <strong>Proudly serving businesses throughout Dallas-Fort Worth</strong> from our Grapevine headquarters with 100% USA-based team and support.
+              </p>
             </div>
             <div className="flex gap-2 mt-5 flex-wrap">
               <Icon name="mail.svg" alt="email" size={20} folder="footer" />
@@ -150,7 +156,7 @@ export default function Footer() {
 
         <div className="mt-16">
           <p className="dark:text-gray-400 text-gray-700 text-sm md:block hidden">
-            © {new Date().getFullYear()} Forte Web Design. All rights reserved.
+            © {new Date().getFullYear()} Forte Web Designs - Professional Web Design & Digital Marketing Services Dallas Fort Worth Texas. All rights reserved.
           </p>
         </div>
       </div>

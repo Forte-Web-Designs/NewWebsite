@@ -2,6 +2,7 @@
 
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Head from 'next/head';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import DarkButton from '@/components/DarkButton';
@@ -10,6 +11,12 @@ import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 export default function WhiteLabelPage() {
   return (
     <div className="relative">
+      <Head>
+        <title>White Label Web Design Services | Agency Partnership Program Nationwide from DFW | Forte Web Designs</title>
+        <meta name="description" content="Scale your agency with premium white label web design services. DFW-based development team serving agencies nationwide with custom websites, blazing performance, and hands-off fulfillment under your brand." />
+        <meta name="keywords" content="white label web design, agency partnerships, web design reseller, white label development, agency web development, custom web design partners" />
+        <link rel="canonical" href="https://fortewebdesigns.com/services/white-label" />
+      </Head>
       <SectionBackgroundAnimation />
       
       <div className="relative z-10">
@@ -29,7 +36,7 @@ export default function WhiteLabelPage() {
                   Custom-built websites, blazing performance, and hands-off fulfillment - all under your brand.
                 </p>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-400 leading-relaxed max-w-4xl mx-auto">
-                  At Forte Web Designs, we don't just build websites - we build partnerships. We work behind the scenes to deliver premium websites for your clients while you take the credit. Whether you need a reliable white-label partner to boost your agency's capacity or just want to outsource the dev work you hate - we've got your back.
+                  At Forte Web Designs, we don't just build websites - we build partnerships. Based in DFW, we work with agencies nationwide behind the scenes to deliver premium websites for your clients while you take the credit. Whether you need a reliable white-label partner to boost your agency's capacity or just want to outsource the dev work you hate - we've got your back.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -331,7 +338,7 @@ export default function WhiteLabelPage() {
           mobileCtaText="Ready to partner with us?"
           mobileBgGradient="bg-gradient-to-r from-purple-600 to-blue-600"
           title="Ready to Scale Your Agency?"
-          subtitle="Get started with a white label partnership designed to grow your business with our proven development expertise."
+          subtitle="Get started with a white label partnership designed to grow your business. Our DFW-based development team serves agencies nationwide with proven expertise."
         />
       </div>
     </div>

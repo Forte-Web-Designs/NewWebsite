@@ -8,6 +8,7 @@ import { Icon } from "@/components/images/Icon";
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
+import { Metadata } from 'next';
 
 type FAQItem = {
   question: string;
@@ -32,6 +33,13 @@ const faqData: FAQItem[] = [
     answer: "We work with all types of local businesses - contractors, healthcare providers, professional services, restaurants, retail stores, and more. Our strategies adapt to your specific industry and local market.",
   },
 ];
+
+// SEO metadata for the page
+const pageMetadata = {
+  title: "Professional SEO Services | Expert Search Engine Optimization Nationwide from DFW | Forte Web Designs",
+  description: "Dominate Google search results with professional SEO services nationwide. DFW-based team delivering expert local SEO, advanced keyword optimization, content strategy, and proven search engine optimization that drives real business results.",
+  keywords: "professional SEO services, search engine optimization, expert local SEO, Google ranking optimization, keyword research, SEO company, search marketing, professional SEO optimization, digital marketing SEO, nationwide SEO services, DFW SEO team"
+};
 
 export default function SeoDesignPage() {
   const [openFAQ, setOpenFAQ] = useState<number | null>(null);

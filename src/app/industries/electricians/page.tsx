@@ -12,12 +12,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Electrician Website Design That Powers Up Lead Generation',
-  description: 'Mobile-first electrician websites that convert emergency calls into customers. We don\'t build just "pretty" websites. We build high-converting electrician websites that capture every service call, showcase safety credentials, and dominate local search.',
-  keywords: 'electrician website design, electrical contractor websites, emergency electrician SEO, local electrician marketing, electrical lead generation',
+  title: 'Electrician Website Design That Powers Up Lead Generation | Nationwide from DFW | Forte Web Designs',
+  description: 'Mobile-first electrician websites that convert emergency calls into customers. We don\'t build just "pretty" websites. DFW-based team serving electricians nationwide with high-converting websites that capture every service call, showcase safety credentials, and dominate local search.',
+  keywords: 'electrician website design, electrical contractor websites, emergency electrician SEO, local electrician marketing, electrical lead generation nationwide',
   openGraph: {
-    title: 'Electrician Website Design That Powers Up Lead Generation',
-    description: 'Mobile-first electrician websites that convert emergency calls into customers. We don\'t build just "pretty" websites. We build high-converting electrician websites that capture every service call, showcase safety credentials, and dominate local search.',
+    title: 'Electrician Website Design That Powers Up Lead Generation | Nationwide from DFW',
+    description: 'Mobile-first electrician websites that convert emergency calls into customers. DFW-based team serving electricians nationwide with high-converting websites.',
     type: 'website',
   },
 };

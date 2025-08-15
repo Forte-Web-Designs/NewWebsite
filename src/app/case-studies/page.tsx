@@ -5,8 +5,8 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import LightButton from '@/components/LightButton';
 
 export const metadata: Metadata = {
-  title: 'Why Local Businesses Choose Forte™ | Forte Web Designs',
-  description: 'Discover how Forte™ websites help local businesses get found online, build credibility, and grow their customer base with professional web design.',
+  title: 'Website Design Case Studies | Local Business Success Stories Dallas Fort Worth | Forte Web Designs',
+  description: 'See how Forte™ websites help Dallas Fort Worth businesses get found online, build credibility, and grow their customer base with professional web design and digital marketing solutions.',
 };
 
 interface BusinessScenario {
@@ -20,85 +20,85 @@ interface BusinessScenario {
   const businessScenarios: BusinessScenario[] = [
   {
     id: 'restaurant',
-    businessType: 'Restaurant & Food Service',
-    challenge: 'Most local restaurants struggle with online visibility. Customers can\'t find you on Google, your website looks outdated, and competitors are taking your business.',
-    forteSolution: 'Professional website with mobile-optimized design, local SEO optimization, and Google Business Profile management. Perfect for showcasing your menu and taking online orders.',
+    businessType: 'Restaurant & Food Service Businesses',
+    challenge: 'Most local restaurants struggle with online visibility and digital marketing. Customers can\'t find you on Google search results, your website looks outdated compared to competitors, and you\'re losing potential diners to restaurants with better online presence.',
+    forteSolution: 'Professional restaurant website with mobile-optimized design, local SEO optimization, Google Business Profile management, and online ordering integration. Perfect for showcasing your menu, atmosphere, and taking online reservations.',
     benefits: [
-      'Get found when customers search "restaurants near me"',
-      'Professional menu display and online ordering',
-      'Mobile-friendly for customers on-the-go',
-      'Connect with delivery platforms',
-      'Showcase customer reviews and atmosphere'
+      'Get found when customers search "restaurants near me" and local food queries',
+      'Professional menu display with mouth-watering food photography and online ordering',
+      'Mobile-friendly responsive design for customers on-the-go and social media sharing',
+      'Seamless integration with delivery platforms like DoorDash, Uber Eats, Grubhub',
+      'Showcase customer reviews, testimonials, and restaurant atmosphere with photo galleries'
     ],
     icon: '🍽️'
   },
   {
     id: 'home-services',
     businessType: 'Home Services & Contractors', 
-    challenge: 'Contractors often rely on word-of-mouth but miss out on customers who search online first. No website means no credibility and lost business to competitors.',
-    forteSolution: 'Professional contractor website with service pages, project galleries, and lead capture forms. Built to convert visitors into paying customers.',
+    challenge: 'Contractors often rely on word-of-mouth referrals but miss out on customers who search online first for services. No professional website means no credibility, and you\'re losing jobs to competitors with strong online presence and search engine optimization.',
+    forteSolution: 'Professional contractor website with service-specific pages, before/after project galleries, customer testimonials, and lead capture forms. Built to convert visitors into paying customers with clear calls-to-action and mobile optimization.',
     benefits: [
-      'Professional credibility that wins more jobs',
-      'Showcase your work with before/after galleries',
-      'Capture leads 24/7 even when you\'re working',
-      'Mobile-optimized for emergency service calls',
-      'Local SEO to dominate your service area'
+      'Establish professional credibility that wins more jobs and higher-value projects',
+      'Showcase your work with stunning before/after photo galleries and project case studies',
+      'Capture leads 24/7 with contact forms and quote request systems, even when you\'re working',
+      'Mobile-optimized for emergency service calls and on-the-go customer research',
+      'Local SEO optimization to dominate your service area and "near me" searches'
     ],
     icon: '🔨'
   },
   {
     id: 'healthcare',
-    businessType: 'Healthcare & Dental',
-    challenge: 'Healthcare practices need to build trust online. Patients research providers before booking appointments, and a poor website means lost patients.',
-    forteSolution: 'HIPAA-compliant website with patient-focused design, online appointment booking, and professional content that builds trust and authority.',
+    businessType: 'Healthcare & Medical Practices',
+    challenge: 'Healthcare practices need to build trust and credibility online before patients ever walk through the door. Patients research providers extensively before booking appointments, and a poor website design means lost patients to competitors with professional online presence.',
+    forteSolution: 'HIPAA-compliant medical website with patient-focused design, online appointment booking, provider credentials showcase, and educational content that builds trust and authority in your medical specialty.',
     benefits: [
-      'Build patient trust with professional design',
-      'Online appointment booking for convenience',
-      'Showcase credentials and specializations',
-      'Educational content that positions you as an expert',
-      'Reputation management and review optimization'
+      'Build patient trust and confidence with professional medical website design',
+      'Streamline operations with online appointment booking and patient portal integration',
+      'Showcase medical credentials, specializations, and years of experience effectively',
+      'Educational content that positions you as the expert choice in your medical field',
+      'Reputation management integration and patient review optimization for credibility'
     ],
     icon: '🏥'
   },
   {
     id: 'professional-services',
-    businessType: 'Professional Services',
-    challenge: 'Lawyers, accountants, and consultants need credibility online. A DIY website makes you look like an amateur and drives potential clients away.',
-    forteSolution: 'Premium professional website that positions you as the expert choice. Clean design, authority content, and lead capture that converts prospects into clients.',
+    businessType: 'Professional Services & Consulting',
+    challenge: 'Lawyers, accountants, financial advisors, and consultants need credibility and authority online. A DIY website or outdated design makes you look like an amateur and drives potential high-value clients to competitors with more professional online presence.',
+    forteSolution: 'Premium professional services website that positions you as the expert choice. Clean, authoritative design with case studies, client testimonials, service explanations, and lead capture that converts prospects into high-value clients.',
     benefits: [
-      'Premium positioning that justifies higher fees',
-      'Showcase expertise and case results',
-      'Professional content that builds authority',
-      'Lead capture for consultation requests',
-      'Mobile-optimized for busy professionals'
+      'Premium positioning that justifies higher fees and attracts quality clients',
+      'Showcase expertise through case studies, white papers, and professional achievements',
+      'Authority-building content that demonstrates deep knowledge in your field',
+      'Professional lead capture system for consultation requests and client inquiries',
+      'Mobile-optimized for busy professionals researching services on-the-go'
     ],
     icon: '⚖️'
   },
   {
     id: 'retail',
-    businessType: 'Retail & E-commerce',
-    challenge: 'Local retailers compete with Amazon and big box stores. Without a professional online presence, you\'re invisible to customers who shop online.',
-    forteSolution: 'E-commerce enabled website with product catalogs, local pickup options, and inventory management. Compete online while leveraging your local advantage.',
+    businessType: 'Retail & E-commerce Businesses',
+    challenge: 'Local retailers compete with Amazon and big box stores every day. Without a professional online presence and e-commerce capabilities, you\'re invisible to customers who prefer to shop online or research products before visiting your store.',
+    forteSolution: 'E-commerce enabled website with product catalogs, online shopping capabilities, local pickup options, inventory management, and customer loyalty programs. Compete online while leveraging your local advantage.',
     benefits: [
-      'Sell online and compete with big retailers',
-      'Local pickup and delivery options',
-      'Showcase unique products and services',
-      'Customer loyalty programs',
-      'Inventory management and order tracking'
+      'Sell products online and compete with major retailers while maintaining personal service',
+      'Offer local pickup and delivery options that big retailers can\'t match',
+      'Showcase unique products and services with high-quality product photography',
+      'Build customer loyalty programs and repeat business through personalized service',
+      'Inventory management and order tracking systems for seamless operations'
     ],
     icon: '🛍️'
   },
   {
     id: 'automotive',
-    businessType: 'Automotive Services',
-    challenge: 'Auto repair shops and dealerships need trust and convenience. Customers want to see services, prices, and availability before visiting.',
-    forteSolution: 'Automotive-focused website with service scheduling, price transparency, and customer portal. Build trust and streamline operations.',
+    businessType: 'Automotive Services & Dealerships',
+    challenge: 'Auto repair shops and dealerships need trust and convenience for customers. People want to see services, transparent pricing, and easy scheduling before visiting. Without these features, customers choose competitors who offer online convenience and professional credibility.',
+    forteSolution: 'Automotive-focused website with service scheduling, transparent pricing, customer portal, service history tracking, and trust-building features. Make it easy for customers to choose you and keep coming back.',
     benefits: [
-      'Online service scheduling and reminders',
-      'Transparent pricing builds customer trust',
-      'Customer portal for service history',
-      'Mobile-optimized for roadside assistance',
-      'Local SEO for emergency services'
+      'Online service scheduling and appointment reminders reduce no-shows and improve efficiency',
+      'Transparent pricing builds customer trust and reduces price shopping with competitors',
+      'Customer portal for service history, maintenance reminders, and loyalty tracking',
+      'Mobile-optimized for customers needing emergency roadside assistance and quick service',
+      'Local SEO optimization for "auto repair near me" and emergency automotive services'
     ],
     icon: '🚗'
   }

@@ -11,12 +11,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Handyman Website Design | Websites That Turn Searches Into Service Calls',
-  description: 'Fast, mobile-ready handyman websites optimized to turn "fix-it" searches into real paying jobs. Mobile-first design with instant call & quote CTAs and local SEO.',
-  keywords: 'handyman website design, handyman websites, local handyman SEO, mobile handyman sites, handyman lead generation, service call optimization',
+  title: 'Handyman Website Design | Websites That Turn Searches Into Service Calls | Nationwide from DFW | Forte Web Designs',
+  description: 'Fast, mobile-ready handyman websites optimized to turn "fix-it" searches into real paying jobs. DFW-based team serving handyman services nationwide with mobile-first design, instant call & quote CTAs and local SEO.',
+  keywords: 'handyman website design, handyman websites, local handyman SEO, mobile handyman sites, handyman lead generation, service call optimization nationwide',
   openGraph: {
-    title: 'Handyman Website Design | Websites That Turn Searches Into Service Calls',
-    description: 'Fast, mobile-ready handyman websites optimized to turn "fix-it" searches into real paying jobs. Mobile-first design with instant call & quote CTAs and local SEO.',
+    title: 'Handyman Website Design | Websites That Turn Searches Into Service Calls | Nationwide from DFW',
+    description: 'Fast, mobile-ready handyman websites optimized to turn "fix-it" searches into real paying jobs. DFW-based team serving handyman services nationwide.',
     type: 'website',
   },
 };

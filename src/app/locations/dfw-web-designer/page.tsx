@@ -6,9 +6,9 @@ import DarkButton from '@/components/DarkButton';
 import LightButton from '@/components/LightButton';
 
 export const metadata: Metadata = {
-  title: 'Web Designer DFW Texas | Dallas Fort Worth Web Design Services',
-  description: 'Professional web designer serving the Dallas-Fort Worth metroplex. Custom websites, SEO, and digital marketing for DFW businesses. Free consultation.',
-  keywords: 'web designer DFW, website design Dallas Fort Worth, DFW web development, custom websites DFW metroplex',
+  title: 'Professional Web Designer DFW Metroplex | Custom Website Design Dallas Fort Worth Texas | Forte Web Designs',
+  description: 'Leading web designer serving Dallas Fort Worth metroplex. Custom website design, SEO optimization, and digital marketing for DFW businesses. Mobile-responsive, fast-loading websites that convert visitors into customers.',
+  keywords: 'web designer DFW, website design Dallas Fort Worth, DFW web development, custom websites DFW metroplex, responsive web design Texas, SEO services DFW, Dallas web designer, Fort Worth website development',
 };
 
 export default function DFWWebDesigner() {

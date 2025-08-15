@@ -10,16 +10,16 @@ import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 const coreServices = [
   {
     id: "websites",
-    title: "Website Design",
-    desc: "Hand-coded websites that work as hard as you do. No templates, no cookie-cutters - just custom-built digital powerhouses that turn visitors into paying customers while you sleep.",
+    title: "Professional Website Design & Development",
+    desc: "Hand-coded professional websites that work as hard as you do. No templates, no cookie-cutters - just custom-built digital powerhouses optimized for search engine rankings, conversion optimization, and mobile performance that turn visitors into paying customers 24/7.",
     features: [
-      "Custom coded for speed & SEO dominance",
-      "Mobile-first responsive design", 
-      "Forte Care™ support included",
-      "Built for maximum conversions"
+      "Professional custom coding for lightning-fast speed & SEO dominance",
+      "Mobile-first responsive web design with conversion optimization", 
+      "Forte Care™ ongoing support, maintenance & SEO monitoring included",
+      "Built for maximum lead generation & business growth results"
     ],
     pricing: "Starting at $200/month",
-    linkText: "Get My Converting Website",
+    linkText: "Get My Professional Converting Website",
     href: "/services/webDesign",
     caseStudy: {
       client: "Mike's HVAC",
@@ -29,16 +29,16 @@ const coreServices = [
   },
   {
     id: "seo",
-    title: "SEO Services",
-    desc: "Get found by customers who are actively searching for what you sell. Our SEO doesn't just improve rankings - it drives qualified leads to your door every single day.",
+    title: "Professional SEO & Search Engine Optimization",
+    desc: "Get discovered by customers who are actively searching for your services. Our comprehensive SEO optimization services don't just improve search rankings - they drive qualified leads and increase online visibility through proven search engine optimization strategies that deliver real business results.",
     features: [
-      "Local & national SEO dominance",
-      "Content strategy that converts",
-      "Technical SEO that Google loves", 
-      "Monthly performance & ROI reports"
+      "Professional local & national SEO optimization services",
+      "Advanced content strategy & keyword research that converts visitors",
+      "Technical SEO optimization & website performance enhancement", 
+      "Monthly SEO performance analytics & ROI tracking reports"
     ],
     pricing: "Starting at $300/month",
-    linkText: "Dominate Google Now",
+    linkText: "Dominate Google Search Rankings",
     href: "/services/seo",
     caseStudy: {
       client: "Local Law Firm",
@@ -48,16 +48,16 @@ const coreServices = [
   },
   {
     id: "ppc",
-    title: "PPC Advertising",
-    desc: "Google Ads campaigns that actually make you money. Stop throwing cash at keywords that don't convert - get campaigns optimized for your bottom line, not just clicks.",
+    title: "Professional Google Ads & PPC Management",
+    desc: "Google Ads campaigns that actually generate revenue and ROI. Stop wasting marketing budget on keywords that don't convert - get professional PPC campaigns optimized for your bottom line with proven conversion tracking, landing page optimization, and ROI-focused digital advertising management.",
     features: [
-      "Strategic campaign setup & optimization",
-      "Landing page conversion optimization",
-      "Advanced conversion tracking & analysis",
-      "Continuous ROI improvement"
+      "Strategic Google Ads campaign setup, optimization & management",
+      "Professional landing page conversion optimization & A/B testing",
+      "Advanced conversion tracking, analytics & performance analysis",
+      "Continuous ROI improvement & marketing budget optimization"
     ],
     pricing: "Starting at $400/month",
-    linkText: "Stop Wasting Ad Money",
+    linkText: "Stop Wasting Marketing Budget",
     href: "/services/ads",
     caseStudy: {
       client: "Local Restaurant",
@@ -67,16 +67,16 @@ const coreServices = [
   },
   {
     id: "social",
-    title: "Social Media Management",
-    desc: "Stop posting into the void. Our social media strategies build real relationships that convert followers into loyal customers. Every post, every story, every interaction designed to grow your bottom line.",
+    title: "Professional Social Media Marketing & Management",
+    desc: "Stop posting into the void with ineffective social media. Our professional social media marketing strategies build genuine relationships that convert followers into loyal customers. Every post, story, and interaction designed to grow your business and increase brand awareness across all platforms.",
     features: [
-      "Platform-specific content strategy",
-      "Professional content creation & design",
-      "Community management & engagement",
-      "Performance analytics & optimization"
+      "Professional platform-specific content strategy & marketing planning",
+      "Expert content creation, graphic design & brand messaging",
+      "Professional community management & audience engagement services",
+      "Advanced social media analytics, tracking & performance optimization"
     ],
     pricing: "Starting at $500/month",
-    linkText: "Build My Community",
+    linkText: "Build My Professional Social Media Presence",
     href: "/services/socialMedia",
     caseStudy: {
       client: "Local Fitness Studio",
@@ -86,16 +86,16 @@ const coreServices = [
   },
   {
     id: "white-label",
-    title: "White Label Partnerships",
-    desc: "Power Your Agency with Custom, Blazing-Fast Websites - Built by Forte. We partner with marketing and SEO agencies to deliver high-performance websites under your brand. Custom-coded, lightning-fast, 100% U.S.-based.",
+    title: "Professional White Label Web Design Partnerships",
+    desc: "Power Your Agency with Professional Custom Websites - Built by Forte. We partner with marketing agencies, SEO companies, and digital consultants to deliver high-performance, professional websites under your brand. Custom-coded, lightning-fast, 100% U.S.-based development team.",
     features: [
-      "Custom-coded websites under your brand",
-      "100% U.S.-based development team",
-      "Flexible workflow and communication",
-      "Optional Forte Care™ support included"
+      "Professional custom-coded websites delivered under your agency brand",
+      "100% U.S.-based professional development & support team",
+      "Flexible workflow integration & white-label communication protocols",
+      "Optional Forte Care™ professional maintenance & support included"
     ],
     pricing: "Partner Pricing Available",
-    linkText: "Learn More",
+    linkText: "Partner With Forte",
     href: "/services/white-label",
     caseStudy: {
       client: "Blueprint Creative Co.",
@@ -143,7 +143,7 @@ export default function ServicePage() {
                 Complete Digital Marketing Solutions
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
-                From stunning websites to powerful SEO, strategic advertising to social media management - get everything you need to dominate your market. One team, comprehensive solutions, guaranteed results.
+                From stunning websites to powerful SEO, strategic advertising to social media management - get everything you need to dominate your market. One DFW-based team, nationwide reach, comprehensive solutions, guaranteed results.
               </p>
             </div>
           </div>
