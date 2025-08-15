@@ -321,8 +321,8 @@ export default function Home() {
             <div className="mb-6">
               <SimpleScrollReveal direction="up" delay={50}>
                 <div className="text-center space-y-4">
-                  <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(251,191,36,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(245,158,11,0.4)_0%,rgba(255,255,255,0)_100%)]">
-                    <p className="font-sans font-normal text-[12px] leading-[14px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#D97706] to-[#F59E0B] dark:from-[#F59E0B] dark:to-[#FBBF24]">
+                  <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(245,158,11,0.25)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(217,119,6,0.5)_0%,rgba(255,255,255,0)_100%)]">
+                    <p className="font-sans font-normal text-[12px] leading-[14px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#B45309] to-[#D97706] dark:from-[#F59E0B] dark:to-[#FBBF24]">
                       25+ Businesses Growing with Forte
                     </p>
                   </div>
@@ -487,8 +487,8 @@ export default function Home() {
                 <SimpleScrollReveal direction="left" delay={50}>
                   <div className="space-y-6">
                     <div className="space-y-4">
-                      <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(251,191,36,0.18)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(245,158,11,0.4)_0%,rgba(255,255,255,0)_100%)]">
-                        <p className="font-sans font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#D97706] to-[#F59E0B] dark:from-[#F59E0B] dark:to-[#FBBF24]">
+                      <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(245,158,11,0.25)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(217,119,6,0.5)_0%,rgba(255,255,255,0)_100%)]">
+                        <p className="font-sans font-normal text-[16px] leading-[18px] tracking-[-0.24px] text-transparent bg-clip-text bg-gradient-to-r from-[#B45309] to-[#D97706] dark:from-[#F59E0B] dark:to-[#FBBF24]">
                           25+ Businesses Growing with Forte
                         </p>
                       </div>
