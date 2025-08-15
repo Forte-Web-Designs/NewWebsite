@@ -704,7 +704,7 @@ export default function Home() {
                 {googleReviews.map((review, index) => (
                   <div key={`set1-${review.id}`} className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
                     {review.isNew && (
-                      <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                      <div className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-10">
                         NEW
                       </div>
                     )}
@@ -754,7 +754,7 @@ export default function Home() {
                 {googleReviews.map((review, index) => (
                   <div key={`set2-${review.id}`} className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
                     {review.isNew && (
-                      <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                      <div className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-10">
                         NEW
                       </div>
                     )}
@@ -1257,7 +1257,7 @@ export default function Home() {
                 {googleReviews.map((review) => (
                   <div key={review.id} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 relative">
                     {review.isNew && (
-                      <div className="absolute top-2 right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold">
+                      <div className="absolute top-2 left-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-10">
                         NEW
                       </div>
                     )}
