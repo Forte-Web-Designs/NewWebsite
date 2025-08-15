@@ -610,10 +610,10 @@ export default function Home() {
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Trusted by Growing Businesses</span>
                 </div>
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Join 25+ Growing Businesses Nationwide Choosing Professional Web Design from Our DFW Team
+                  Join 25+ Growing Businesses Nationwide Choosing Professional Web Design from Our Team
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  From DFW contractors to Dallas healthcare professionals and clients across the nation, businesses everywhere choose Forte for custom web design, SEO services, and digital marketing solutions that deliver measurable results. Based in Grapevine, Texas, we serve clients nationwide with the same local attention and professional expertise. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories and case studies.
+                  From contractors to healthcare professionals and clients across the nation, businesses everywhere choose Forte for custom web design, SEO services, and digital marketing solutions that deliver measurable results. Based in Grapevine, Texas, we serve clients nationwide with the same local attention and professional expertise. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories and case studies.
                 </p>
                 
                 {/* Google Reviews Header */}
