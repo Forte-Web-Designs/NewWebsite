@@ -1167,24 +1167,7 @@ export default function Home() {
                     Supporting businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions.
                   </div>
                 </div>
-                
-                {/* Street View Button - Positioned above map */}
-                <div className="flex justify-end mb-3">
-                    <button
-                      onClick={() => {
-                        // Open Google Maps with Street View layer enabled for easy access
-                        window.open('https://www.google.com/maps/place/129+S+Main+St+%23260,+Grapevine,+TX+76051/@32.9343,-97.0778,18z?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D', '_blank')
-                      }}
-                      className="bg-blue-600 hover:bg-blue-700 text-white px-3 py-2 rounded-lg shadow-lg transition-colors flex items-center gap-2 text-sm font-medium"
-                      title="Open in Google Maps - Click the yellow Pegman for Street View"
-                    >
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                      </svg>
-                      Street View
-                    </button>
-                  </div>
+
                   
                   {/* Interactive Google Map */}
                   <div className="relative overflow-hidden rounded-lg border border-gray-200 dark:border-gray-600" style={{height: '300px'}}>
