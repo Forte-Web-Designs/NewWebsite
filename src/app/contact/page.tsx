@@ -135,7 +135,7 @@ export default function Contact() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-                    🚀 Serving from Grapevine, TX
+                    Serving from Grapevine, TX
                   </h3>
                   
                   {/* Location Information */}
