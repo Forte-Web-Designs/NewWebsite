@@ -328,7 +328,7 @@ export default function Home() {
                   </div>
                   
                   <h1 className="font-display font-medium text-[28px] sm:text-[36px] leading-[32px] sm:leading-[40px] tracking-[-0.04em] text-black dark:text-white px-4">
-                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Professional Web Design Dallas</span> & Custom Websites That Drive Real Results
+                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Custom Websites That Drive Real Results</span>
                   </h1>
                   
                   <div className="px-4 max-w-4xl mx-auto">
@@ -338,7 +338,7 @@ export default function Home() {
                           <span className="text-sm">⚡</span>
                         </div>
                         <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Websites that actually show up on Google & load instantly
+                          Built to dominate Google & load lightning-fast
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
@@ -346,7 +346,7 @@ export default function Home() {
                           <span className="text-sm">🛡️</span>
                         </div>
                         <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Built secure & reliable - no WordPress headaches
+                          Rock-solid security & zero headaches
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
@@ -495,7 +495,7 @@ export default function Home() {
                       
                       <SimpleScrollReveal direction="up" delay={100}>
                         <h1 className="font-display font-medium text-[70px] leading-[74px] tracking-[-0.04em] text-black dark:text-white">
-                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Professional Web Design Dallas</span> & <br />Custom Websites That Drive Real Results
+                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Custom Websites That Drive Real Results</span>
                         </h1>
                       </SimpleScrollReveal>
                       
@@ -506,7 +506,7 @@ export default function Home() {
                               <span className="text-lg">⚡</span>
                             </div>
                             <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Websites that actually show up on Google & load instantly
+                              Built to dominate Google & load lightning-fast
                             </span>
                           </div>
                           <div className="flex items-center gap-3">
@@ -514,7 +514,7 @@ export default function Home() {
                               <span className="text-lg">🛡️</span>
                             </div>
                             <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Built secure & reliable - no WordPress headaches
+                              Rock-solid security & zero headaches
                             </span>
                           </div>
                           <div className="flex items-center gap-3">
@@ -1027,7 +1027,7 @@ export default function Home() {
           </p>
         </div>
         <h4 className="font-roboto font-medium text-[32px] sm:text-[62px] leading-[36px] sm:leading-[62px] tracking-[-1.24px] text-center text-[#000000] dark:text-[#F1F1EF] mb-6">
-          Ready to Grow Your Dallas Business Online?
+          Ready to Grow Your Business Online?
         </h4>
         <p className="text-gray-700 font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-gray-300 mb-8 max-w-2xl mx-auto">
           Choosing the right web design and digital marketing partner can transform your business growth nationwide. Let's start with a friendly consultation about your business goals and online marketing needs. No pressure, just professional insights and custom solutions. <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our proven process</Link> and discover why businesses across the country trust our DFW-based team for web development and SEO services.
