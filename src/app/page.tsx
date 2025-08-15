@@ -704,7 +704,7 @@ export default function Home() {
                 {googleReviews.map((review, index) => (
                   <div key={`set1-${review.id}`} className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
                     {review.isNew && (
-                      <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-10 shadow-lg">
+                      <div className="absolute -top-3 -right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-20 shadow-lg border-2 border-white dark:border-gray-800">
                         NEW
                       </div>
                     )}
@@ -754,7 +754,7 @@ export default function Home() {
                 {googleReviews.map((review, index) => (
                   <div key={`set2-${review.id}`} className="flex-shrink-0 w-72 sm:w-80 bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 relative">
                     {review.isNew && (
-                      <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-10 shadow-lg">
+                      <div className="absolute -top-3 -right-3 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-20 shadow-lg border-2 border-white dark:border-gray-800">
                         NEW
                       </div>
                     )}
@@ -1253,11 +1253,11 @@ export default function Home() {
             
             {/* Modal Body - Scrollable Reviews */}
             <div className="p-6 overflow-y-auto max-h-[calc(90vh-140px)]">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 {googleReviews.map((review) => (
-                  <div key={review.id} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 relative">
+                  <div key={review.id} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-4 border border-gray-200 dark:border-gray-700 relative overflow-visible">
                     {review.isNew && (
-                      <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-10 shadow-lg">
+                      <div className="absolute -top-2 -right-2 bg-green-500 text-white text-xs px-2 py-1 rounded-full font-semibold z-20 shadow-lg border-2 border-white dark:border-gray-800">
                         NEW
                       </div>
                     )}
