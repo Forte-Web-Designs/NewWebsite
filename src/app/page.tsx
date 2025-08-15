@@ -1157,6 +1157,18 @@ export default function Home() {
                   Grapevine, Texas Office
                 </h3>
                 
+                {/* Location Information */}
+                <div className="mb-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
+                  <div className="text-sm font-semibold text-gray-900 dark:text-white mb-2">🚀 Serving from Grapevine, TX</div>
+                  <div className="text-sm text-gray-700 dark:text-gray-300 mb-2">
+                    <div>📍 129 S Main St #260</div>
+                    <div>Grapevine, TX 76051</div>
+                  </div>
+                  <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Serving businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions.
+                  </div>
+                </div>
+                
                 {/* Street View Button - Positioned above map */}
                 <div className="flex justify-end mb-3">
                     <button
@@ -1187,18 +1199,6 @@ export default function Home() {
                       referrerPolicy="no-referrer-when-downgrade"
                       title="Forte Web Designs - 129 S Main St #260, Grapevine, TX"
                     ></iframe>
-                    
-                    {/* Address overlay */}
-                    <div className="absolute top-4 left-4 bg-white/95 dark:bg-gray-800/95 backdrop-blur-sm rounded-lg p-3 shadow-lg max-w-xs">
-                      <div className="text-sm font-semibold text-gray-900 dark:text-white mb-1">🚀 Serving from Grapevine, TX</div>
-                      <div className="text-xs text-gray-700 dark:text-gray-300 mb-2">
-                        <div>📍 129 S Main St #260</div>
-                        <div>Grapevine, TX 76051</div>
-                      </div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400 leading-relaxed">
-                        Serving businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions.
-                      </div>
-                    </div>
                     
                     {/* Tech overlay effect */}
                     <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 pointer-events-none"></div>
