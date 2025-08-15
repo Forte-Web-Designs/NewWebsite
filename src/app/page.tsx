@@ -613,7 +613,7 @@ export default function Home() {
                   Join 25+ Businesses Growing with Forte™
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  From local contractors to healthcare professionals, businesses choose Forte for results they can measure. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories.
+                  From DFW contractors to Dallas healthcare professionals, businesses throughout the metroplex choose Forte for results they can measure. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories.
                 </p>
                 
                 {/* Google Reviews Header */}
@@ -1030,7 +1030,7 @@ export default function Home() {
           Ready to See What's Possible?
         </h4>
         <p className="text-gray-700 font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-          Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities. <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our process</Link> and discover why businesses trust Forte Web Designs.
+          Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your Dallas-Fort Worth business goals. No pressure, just possibilities. <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our process</Link> and discover why businesses trust Forte Web Designs.
         </p>
         <div className="flex justify-center">
           <button
@@ -1041,7 +1041,7 @@ export default function Home() {
           </button>
         </div>
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
-          Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals.
+          Proudly serving businesses throughout Dallas-Fort Worth from our Grapevine headquarters.
         </p>
       </div>
     </div>      </section>
@@ -1056,7 +1056,7 @@ export default function Home() {
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm font-medium text-blue-800 dark:text-blue-200">
             <div className="flex items-center gap-2">
               <span className="text-blue-600">🇺🇸</span>
-              USA-based Team
+              DFW-based Team
             </div>
             <div className="flex items-center gap-2">
               <span className="text-blue-600">⚡</span>
