@@ -613,7 +613,7 @@ export default function Home() {
                   Join 25+ Businesses Growing with Forte™
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  From local contractors to healthcare professionals, businesses choose Forte for results they can measure.
+                  From local contractors to healthcare professionals, businesses choose Forte for results they can measure. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories.
                 </p>
                 
                 {/* Google Reviews Header */}
@@ -773,23 +773,22 @@ export default function Home() {
           </div>
           
           {/* Call to Action */}
-          <SimpleScrollReveal direction="up" delay={200}>
-            <div className="text-center mt-8">
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                Ready to join our satisfied clients?
-              </p>
-              <div className="flex justify-center">
-                <button
-                  onClick={() => setShowContactModal(true)}
-                  className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
-                >
-                  Get Started Today
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
+          <SimpleScrollReveal direction="up" delay={200}>              <div className="text-center mt-8">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Ready to join our satisfied clients? <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our process</Link> or explore our <Link href="/solutions" className="text-primary-600 hover:text-primary-700 underline font-medium">complete service offerings</Link>.
+                </p>
+                <div className="flex justify-center">
+                  <button
+                    onClick={() => setShowContactModal(true)}
+                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg transition-colors font-medium"
+                  >
+                    Get Started Today
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
           </SimpleScrollReveal>
         </div>
         
@@ -967,7 +966,7 @@ export default function Home() {
                     Your Website's Digital Pit Crew
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300 mb-4">
-                    Just like race cars need regular tune-ups to stay competitive, your website needs ongoing optimization to keep winning customers. Forte Care™ is your dedicated pit crew – monitoring performance, making improvements, and keeping you ahead of the competition.
+                    Just like race cars need regular tune-ups to stay competitive, your website needs ongoing optimization to keep winning customers. Forte Care™ is your dedicated pit crew – monitoring performance, making improvements, and keeping you ahead of the competition. <Link href="/pricing" className="text-green-600 hover:text-green-700 underline font-medium">View our pricing plans</Link> to see how we make ongoing website care affordable.
                   </p>
                   <Link
                     href="/solutions/care"
@@ -1031,7 +1030,7 @@ export default function Home() {
           Ready to See What's Possible?
         </h4>
         <p className="text-gray-700 font-inter font-normal text-[14px] sm:text-[18px] leading-[14px] sm:leading-[22px] text-center dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-          Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities.
+          Choosing the right web partner can feel overwhelming. Let's start with a friendly chat about your goals. No pressure, just possibilities. <Link href="/about" className="text-primary-600 hover:text-primary-700 underline font-medium">Learn about our process</Link> and discover why businesses trust Forte Web Designs.
         </p>
         <div className="flex justify-center">
           <button

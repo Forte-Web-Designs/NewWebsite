@@ -1,6 +1,14 @@
-# Allow all web crawlers
+# Allow all web crawlers - Optimized for Google Sitelinks
 User-agent: *
 Allow: /
+
+# Priority pages for sitelinks crawling
+Allow: /about
+Allow: /pricing
+Allow: /solutions
+Allow: /about/work
+Allow: /blog
+Allow: /contact
 
 # Enhanced Local SEO Crawling Instructions
 # Allow crawling of location-specific pages

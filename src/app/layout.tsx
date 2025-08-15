@@ -14,6 +14,8 @@ import JavaScriptOptimizer from "@/components/performance/JavaScriptOptimizer";
 import ResourceHints from "@/components/performance/ResourceHints";
 import GoogleAnalytics from "@/components/analytics/GoogleAnalytics";
 import GoogleBusinessSchema from "@/components/seo/GoogleBusinessSchema";
+import WebsiteSchema from "@/components/seo/WebsiteSchema";
+import NavigationSchema from "@/components/seo/NavigationSchema";
 
 // Original fonts restored
 const roboto = Roboto({
@@ -66,10 +68,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     template: '%s | Forte Web Designs',
-    default: 'Forte Web Designs - Custom Websites That Grow With You',
+    default: 'Web Design DFW | Forte Web Designs | Custom Websites Dallas',
   },
-  description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth.",
-  keywords: ['web design', 'custom websites', 'SEO services', 'google ads', 'social media management', 'forte web designs', 'small business websites'],
+  description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth in the Dallas-Fort Worth area.",
+  keywords: ['web design DFW', 'web design Dallas', 'custom websites Dallas', 'Fort Worth web design', 'SEO services Dallas', 'google ads DFW', 'social media management Dallas', 'forte web designs', 'small business websites Dallas'],
   creator: 'Forte Web Designs',
   publisher: 'Forte Web Designs',
   robots: {
@@ -84,14 +86,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://fortewebdesigns.com',
-    title: 'Forte Web Designs - Custom Websites That Grow With You',
-    description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth.",
+    title: 'Web Design DFW | Forte Web Designs | Custom Websites Dallas',
+    description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth in the Dallas-Fort Worth area.",
     siteName: 'Forte Web Designs',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Forte Web Designs - Custom Websites That Grow With You',
-    description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth.",
+    title: 'Web Design DFW | Forte Web Designs | Custom Websites Dallas',
+    description: "Whether you're launching a new business or ready to level up, Forte Web Designs offers fully custom-coded websites built for speed, security, and long-term growth in the Dallas-Fort Worth area.",
   },
 };
 
@@ -194,8 +196,10 @@ export default function RootLayout({
         {/* Google Analytics 4 */}
         <GoogleAnalytics />
         
-        {/* Google Business Profile Schema */}
+        {/* Enhanced Structured Data for Sitelinks */}
         <GoogleBusinessSchema />
+        <WebsiteSchema />
+        <NavigationSchema />
         
         <ThemeProvider>
           <div className="dark:bg-[url(/images/navbar/navbar-bg.png)] bg-[url(/images/navbar/navbar-bg-light.png)] bg-no-repeat">
