@@ -1154,18 +1154,17 @@ export default function Home() {
               </div>
               <div className="flex-1">
                 <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-                  Grapevine, Texas Office
+                  🚀 Serving from Grapevine, TX
                 </h3>
                 
                 {/* Location Information */}
                 <div className="mb-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
-                  <div className="text-sm font-semibold text-gray-900 dark:text-white mb-2">🚀 Serving from Grapevine, TX</div>
+                  <div className="text-sm font-semibold text-gray-900 dark:text-white mb-2">📍 129 S Main St #260</div>
                   <div className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                    <div>📍 129 S Main St #260</div>
                     <div>Grapevine, TX 76051</div>
                   </div>
                   <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Serving businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions.
+                    Supporting businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions.
                   </div>
                 </div>
                 
