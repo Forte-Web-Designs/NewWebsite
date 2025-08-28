@@ -25,6 +25,24 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
   const [submitError, setSubmitError] = useState<string | null>(null);
   const [fieldErrors, setFieldErrors] = useState<Record<string, string>>({});
   const [isDirty, setIsDirty] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Check for dark mode
+  useEffect(() => {
+    const checkDarkMode = () => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'));
+    };
+    
+    checkDarkMode();
+    
+    const observer = new MutationObserver(checkDarkMode);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+    
+    return () => observer.disconnect();
+  }, []);
 
   // Auto-save form data to localStorage
   useEffect(() => {
@@ -255,33 +273,23 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
   return (
     <section
       className={`${className}`}
-    // style={{
-    //   background: isDark ? darkBackground : lightBackground,
-    // }}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative rounded-[32px] overflow-hidden">
-          {/* Background Image - now properly contained */}
-          <div
-            className="absolute inset-0 bg-cover bg-no-repeat bg-left z-0"
-            style={{
-              backgroundImage: "url('/images/contactForm/contact-form-bg.webp')",
-            }}
-          />
-
-          {/* Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-black/40 z-0" />
-
+        <div className={`relative overflow-hidden ${
+          isDarkMode 
+            ? 'rounded-[32px] bg-gray-800 border border-gray-600 shadow-2xl' 
+            : 'rounded-xl bg-white border border-gray-200 shadow-lg'
+        }`}>
           {/* Content */}
           <div className="relative z-10 p-8 md:p-12 pb-16 md:pb-20">
             <div className="max-w-2xl mx-auto">
               {/* Header */}
               <SimpleScrollReveal direction="up" delay={200}>
                 <div className="text-center mb-8">
-                  <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 drop-shadow-lg">
+                  <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>
                     Let&apos;s Build You a Stronger Website
                   </h2>
-                  <p className="text-gray-200 text-lg drop-shadow">
+                  <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                     We&apos;ll show you how your current site stacks up and how we
                     can make it way better
                   </p>
@@ -290,7 +298,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
 
               {/* Form */}
               <SimpleScrollReveal direction="up" delay={400}>
-                <div className="bg-black/30 backdrop-blur-md rounded-2xl p-8 mb-8 border border-white/20 shadow-2xl">
+                <div className={`rounded-2xl p-8 mb-8 shadow-2xl ${isDarkMode ? 'contact-form-card-dark' : 'contact-form-card-light'}`}>
                   
                   {/* Success Message - Better positioning for contact page */}
                   {showSuccess && (
@@ -413,10 +421,12 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       name="service"
                       value={formData.service}
                       onChange={handleInputChange}
-                      className={`w-full px-4 py-3 backdrop-blur-md border-2 rounded-lg text-white font-medium focus:outline-none focus:ring-2 transition-all duration-300 shadow-md appearance-none ${
+                      className={`w-full px-4 py-3 rounded-lg font-medium focus:outline-none focus:ring-2 transition-all duration-300 shadow-md appearance-none ${
                         fieldErrors.service 
                           ? 'bg-red-50/10 border-red-400/70 focus:border-red-400 focus:ring-red-400/50 focus:shadow-red-500/20' 
-                          : 'bg-white/25 border-white/50 hover:border-white/70 focus:ring-blue-400/50 focus:border-blue-400 focus:bg-white/30 focus:shadow-lg focus:shadow-blue-500/20'
+                          : isDarkMode 
+                            ? 'contact-form-input-dark' 
+                            : 'contact-form-input-light'
                       }`}
                       required
                     >
@@ -429,13 +439,13 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       <option value="Forte Care™" className="text-gray-900">Forte Care™</option>
                       <option value="Other" className="text-gray-900">Other</option>
                     </select>
-                    <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                      <svg className="w-5 h-5 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <div className={`absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none ${isDarkMode ? 'text-white/70' : 'text-gray-600'}`}>
+                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
                       </svg>
                     </div>
                     {fieldErrors.service && (
-                      <div className="mt-2 text-red-300 text-sm flex items-center gap-2">
+                      <div className={`mt-2 text-sm flex items-center gap-2 ${isDarkMode ? 'text-red-300' : 'text-red-600'}`}>
                         <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                         </svg>

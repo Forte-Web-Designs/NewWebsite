@@ -334,3 +334,80 @@ a:hover,
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+/* Contact Form Light Mode Optimizations */
+@layer components {
+  .contact-form-overlay-light {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(249, 250, 251, 0.9) 100%);
+    backdrop-filter: blur(8px);
+  }
+  
+  .contact-form-overlay-dark {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(8px);
+  }
+  
+  .contact-form-card-light {
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(229, 231, 235);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    backdrop-filter: none;
+  }
+  
+  .contact-form-card-dark {
+    background: rgba(31, 41, 55, 0.95);
+    border: 1px solid rgba(75, 85, 99, 0.8);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+  }
+  
+  .contact-form-input-light {
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(229, 231, 235);
+    color: #1f2937;
+  }
+  
+  .contact-form-input-light:hover {
+    border-color: rgb(156, 163, 175);
+    background: rgb(255, 255, 255);
+  }
+  
+  .contact-form-input-light:focus {
+    border-color: #3b82f6;
+    background: rgb(249, 250, 251);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  }
+  
+  .contact-form-input-light::placeholder {
+    color: #6b7280;
+  }
+  
+  .contact-form-input-dark {
+    background: rgba(55, 65, 81, 0.9);
+    border: 2px solid rgba(75, 85, 99, 0.8);
+    color: white;
+  }
+  
+  .contact-form-input-dark:hover {
+    border-color: rgba(107, 114, 128, 0.9);
+    background: rgba(55, 65, 81, 0.95);
+  }
+  
+  .contact-form-input-dark:focus {
+    border-color: #60a5fa;
+    background: rgba(55, 65, 81, 1);
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+  }
+  
+  .contact-form-input-dark::placeholder {
+    color: rgba(156, 163, 175, 0.8);
+  }
+  
+  .contact-form-text-light {
+    color: #1f2937;
+  }
+  
+  .contact-form-text-dark {
+    color: white;
+  }
+}
