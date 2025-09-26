@@ -182,24 +182,29 @@ export default function HVACPage() {
                   🌡️ Industry Expertise: HVAC Companies
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  HVAC Websites That <span className="text-blue-300">Bring the Heat</span> (and <span className="text-red-300">Cool New Leads</span>)
+                  <span className="text-blue-300">Never Miss Another Call.</span>
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  Your customers search for fast, reliable HVAC service when they need it most. We design HVAC websites that make you the obvious choice-optimized for local SEO, mobile bookings, and 24/7 emergency calls.
+                  For HVAC and contractors, speed matters. Missed calls = lost jobs. Our Growth Layer captures leads instantly, follows up automatically, and books appointments even after hours. With our Scaling Layer, you'll have a CRM and dashboards to track every inquiry and job across your team.
                 </p>
+                <div className="bg-blue-800/30 rounded-lg p-4 mb-8">
+                  <p className="text-blue-100 font-semibold">
+                    <span className="text-yellow-300">✨ Result Highlight:</span> Clients see 2x more booked jobs in the first 60 days.
+                  </p>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <Link 
                     href="/contact?industry=hvac"
                     className="bg-white text-blue-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg border-2 border-white"
                   >
-                    Get My HVAC Website Quote
+                    Book My Free Growth Audit
                   </Link>
                   <Link 
-                    href="/contact?industry=hvac"
+                    href="/about/work"
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-center"
                   >
-                    Schedule Free Consultation
+                    View Our Work
                   </Link>
                 </div>
 

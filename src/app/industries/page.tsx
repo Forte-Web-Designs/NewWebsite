@@ -145,10 +145,10 @@ export default function IndustriesPage() {
                 🏭 Professional Industry Specialization
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Professional Websites Built for <span className="text-blue-300">Your Specific Industry</span>
+                Industries We Serve — <span className="text-blue-300">Growth Systems for Real Businesses</span>
               </h1>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-                Generic websites don't convert customers. We build professional industry-specific websites that understand your customers, your business challenges, and what drives real results in your market sector.
+                We don't just build websites. We design growth systems tailored to the unique challenges of your industry. From capturing more leads to automating follow-up and integrating your operations, Forte helps you scale with predictable, measurable results.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -370,18 +370,18 @@ export default function IndustriesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Don't See Your Industry? We Can Help.
+              Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Even if your industry isn't listed, we research your market, analyze your competition, and build websites that convert your specific customer type.
+              Ready to see how a growth system could transform your business? Book your free Growth Audit today and let's map out your path to measurable results.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <DarkButton href="/contact" className="bg-orange-600 hover:bg-orange-700">
-                Discuss My Industry
+                Book My Free Growth Audit
               </DarkButton>
               <Link href="/checkup" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                Get Free Industry Analysis
+                View Our Work
               </Link>
             </div>
           </div>

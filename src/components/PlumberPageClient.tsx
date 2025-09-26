@@ -198,25 +198,30 @@ export default function PlumberPageClient() {
                   🔧 Industry Expertise: Plumbing
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  Plumber Websites That Convert <span className="text-cyan-300">Emergency Calls Into Customers</span>
+                  <span className="text-cyan-300">Booked Jobs While You're Still in the Field.</span>
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  We don't build just "pretty" websites. We build high-converting, mobile-first plumber websites that capture emergency leads, build trust instantly, and dominate local search.
+                  Plumbing businesses live and die on fast response. Our Smart Reception System answers leads 24/7, automated texts and emails keep prospects warm, and appointment scheduling makes it easy for customers to book without waiting. Plus, lead dashboards show exactly where your jobs come from.
                 </p>
+                <div className="bg-blue-800/30 rounded-lg p-4 mb-8">
+                  <p className="text-blue-100 font-semibold">
+                    <span className="text-yellow-300">✨ Result Highlight:</span> Clients cut response time by 40% and increase booked jobs within weeks.
+                  </p>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 mb-8">
                   <button 
                     onClick={() => openModal('hero-primary')}
                     className="bg-white text-cyan-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg cursor-pointer"
                   >
-                    Get My Plumber Website Quote
+                    Book My Free Growth Audit
                   </button>
-                  <button 
-                    onClick={() => openModal('hero-secondary')}
-                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-700 transition-colors text-center cursor-pointer"
+                  <Link 
+                    href="/about/work"
+                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-700 transition-colors text-center"
                   >
-                    Schedule Free Consultation
-                  </button>
+                    View Our Work
+                  </Link>
                 </div>
 
                 <div className="flex flex-wrap items-center gap-6 text-sm text-blue-200">

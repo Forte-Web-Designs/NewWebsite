@@ -196,13 +196,19 @@ export default function HealthcarePage() {
 
                 {/* Headline */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Medical Websites That Build Trust, Increase Appointments, and Comply with Regulations
+                  <span className="text-teal-300">More Appointments, Fewer No-Shows.</span>
                 </h1>
 
                 {/* Subheading */}
                 <p className="text-xl text-teal-100 leading-relaxed">
-                  Your website should reflect the same professionalism as your practice. At Forte, we build lightning-fast, HIPAA-conscious websites for doctors, dentists, specialists, and clinics that build trust instantly and make it easy for patients to take action.
+                  Healthcare providers need reliable appointment systems. Our Growth Layer handles reminders and follow-ups automatically. Our Scaling Layer integrates intake forms, HIPAA-friendly systems, and CRM dashboards for clear patient tracking.
                 </p>
+                
+                <div className="bg-teal-800/30 rounded-lg p-4">
+                  <p className="text-teal-100 font-semibold">
+                    <span className="text-yellow-300">✨ Result Highlight:</span> Clients report up to 85% fewer no-shows with automated reminders.
+                  </p>
+                </div>
 
                 {/* Key Benefits */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">

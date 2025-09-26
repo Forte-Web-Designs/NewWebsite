@@ -130,24 +130,29 @@ export default function ConstructionPage() {
                   🏗️ Industry Expertise: Construction
                 </div>
                 <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 leading-tight">
-                  Construction Websites Built to <span className="text-slate-300">Win Bids</span> and <span className="text-slate-300">Build Trust</span>
+                  <span className="text-slate-300">Never Miss Another Call.</span>
                 </h1>
                 <p className="text-lg sm:text-xl text-slate-100 mb-6 sm:mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0">
-                  In construction, reputation and clarity win projects. Your website should act like your best foreman: organized, authoritative, and ready to close the deal. At Forte, we design custom-coded sites for construction companies that turn browsers into buyers-and estimates into jobs.
+                  For HVAC and contractors, speed matters. Missed calls = lost jobs. Our Growth Layer captures leads instantly, follows up automatically, and books appointments even after hours. With our Scaling Layer, you'll have a CRM and dashboards to track every inquiry and job across your team.
                 </p>
+                <div className="bg-slate-800/30 rounded-lg p-4 mb-6">
+                  <p className="text-slate-100 font-semibold">
+                    <span className="text-yellow-300">✨ Result Highlight:</span> Clients see 2x more booked jobs in the first 60 days.
+                  </p>
+                </div>
                 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-6 sm:mb-8">
                   <Link 
                     href="/contact?industry=construction"
                     className="bg-white text-slate-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg"
                   >
-                    Get My Construction Website Quote
+                    Book My Free Growth Audit
                   </Link>
                   <Link 
-                    href="/contact?industry=construction"
+                    href="/about/work"
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-slate-700 transition-colors text-center"
                   >
-                    Schedule Free Consultation
+                    View Our Work
                   </Link>
                 </div>
 

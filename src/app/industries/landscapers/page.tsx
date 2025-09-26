@@ -191,13 +191,19 @@ export default function LandscapersPage() {
 
                 {/* Headline */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  Landscaping Websites That Turn Visitors Into Local Leads
+                  <span className="text-green-300">Grow Your Business While You're on the Job.</span>
                 </h1>
 
                 {/* Subheading */}
                 <p className="text-xl text-green-100 leading-relaxed">
-                  Your landscaping work is visual — your website should be too. At Forte, we build stunning, SEO-optimized websites that showcase your work, rank on Google, and bring in new clients every week.
+                  Landscapers and home service providers spend their days in the field, not behind a desk. Our Growth Layer books new jobs automatically, while our Scaling Layer integrates scheduling, invoicing, and customer management in one system.
                 </p>
+                
+                <div className="bg-green-800/30 rounded-lg p-4">
+                  <p className="text-green-100 font-semibold">
+                    <span className="text-yellow-300">✨ Result Highlight:</span> Landscaping clients report doubling booked projects in one season.
+                  </p>
+                </div>
 
                 {/* Key Benefits */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
@@ -218,10 +224,10 @@ export default function LandscapersPage() {
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact?industry=landscapers" className="bg-white text-green-700 hover:text-green-700 font-semibold px-8 py-4 rounded-lg text-center transition-colors cursor-pointer border-none">
-                    Get My Landscaping Website Quote →
+                    Book My Free Growth Audit →
                   </Link>
-                  <Link href="/contact?industry=landscapers" className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors cursor-pointer bg-transparent">
-                    Free Website Audit for Landscapers →
+                  <Link href="/about/work" className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors cursor-pointer bg-transparent">
+                    View Our Work →
                   </Link>
                 </div>
 
