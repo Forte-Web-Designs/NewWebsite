@@ -4,12 +4,12 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Local Web Design Solutions - Texas, Oklahoma, New Mexico | Forte Web Designs',
-  description: 'Custom web design for specific Southwest markets. Dallas corporate competition, Fort Worth authenticity, Oklahoma energy sector, New Mexico cultural markets - we solve your local business challenges.',
-  keywords: 'local web design Texas Oklahoma New Mexico, Dallas web designer near me, Fort Worth web design, Oklahoma City web designer, Albuquerque web design, Santa Fe web designer, custom websites Southwest, local SEO Texas Oklahoma New Mexico',
+  title: 'Local Web Design & Growth Systems | Texas • Oklahoma • New Mexico | Forte Web Designs',
+  description: 'Forte builds custom-coded websites and growth systems for Texas, Oklahoma, and New Mexico businesses. Local SEO, automation, and design built to win your market.',
+  keywords: 'local web design Texas Oklahoma New Mexico, growth systems Southwest, Dallas business growth, Oklahoma City marketing automation, Albuquerque custom websites, local SEO Southwest, business automation Texas',
   openGraph: {
-    title: 'Local Web Design Solutions - Texas, Oklahoma, New Mexico | Forte Web Designs',
-    description: 'Custom web design for specific Southwest markets. Solutions for Dallas corporate competition, Fort Worth authenticity, Oklahoma energy sector, New Mexico cultural markets.',
+    title: 'Local Web Design & Growth Systems | Texas • Oklahoma • New Mexico | Forte Web Designs',
+    description: 'Forte builds custom-coded websites and growth systems for Texas, Oklahoma, and New Mexico businesses. Local SEO, automation, and design built to win your market.',
     url: 'https://fortewebdesigns.com/locations',
     type: 'website',
   },
@@ -25,13 +25,13 @@ const topLocations = [
     slug: 'texas/dallas',
     description: 'Big D means big competition. Every day, 45,000+ businesses fight for the same customers online. Your website either dominates search results or gets buried on page 10.',
     problem: 'Corporate giants with million-dollar marketing budgets push small businesses into digital obscurity.',
-    solution: 'Custom-coded websites that load instantly and outrank template-based competitors in local searches.',
+    solution: 'Custom-coded websites + local SEO + automated follow-ups that compete against corporate marketing budgets.',
     challenges: ['Corporate giants dominating search', 'Template websites looking identical', 'High cost-per-click advertising'],
     solutions: ['Lightning-fast custom code', 'Local SEO that actually works', 'Authentic brand positioning'],
     population: '1.3M+',
     businesses: '45,000+',
     keyAreas: ['Downtown Dallas', 'Deep Ellum', 'Uptown', 'Oak Lawn'],
-    marketInsight: 'Dallas customers scroll fast and decide faster. Your website has 3 seconds to win or lose.',
+    marketInsight: 'Dallas customers scroll fast and decide faster. Your growth system has 3 seconds to win or lose.',
     featured: true,
   },
   {
@@ -40,7 +40,7 @@ const topLocations = [
     slug: 'texas/fort-worth',
     description: 'Cowtown is booming, but customers still value authenticity over corporate polish. Your website needs to feel local while competing with Big D neighbors.',
     problem: 'Generic web design makes Fort Worth businesses look like every other Dallas suburb.',
-    solution: 'Websites that capture Fort Worth\'s unique character while delivering modern functionality.',
+    solution: 'Growth System Solution: Websites that capture Fort Worth\'s unique character with speed, SEO, automation, and authentic local connection.',
     challenges: ['Being overshadowed by Dallas', 'Balancing tradition with tech', 'Tourist vs. local customer needs'],
     solutions: ['Authentic Texas branding', 'Mobile-first local optimization', 'Cultural market positioning'],
     population: '950K+',
@@ -70,13 +70,13 @@ const topLocations = [
     slug: 'texas/plano',
     description: 'Corporate headquarters capital of Texas. Your website competes with Fortune 500 companies for the same affluent customers.',
     problem: 'Small businesses look amateur next to corporate giants with unlimited budgets.',
-    solution: 'Enterprise-level custom development that makes you look like the established player.',
+    solution: 'Growth System Solution: Enterprise-level automation and SEO that makes you look like the established player with professional lead generation.',
     challenges: ['Corporate competition', 'High customer expectations', 'Affluent market standards'],
     solutions: ['Enterprise-grade development', 'Premium user experience', 'Professional positioning'],
     population: '295K+',
     businesses: '15,000+',
     keyAreas: ['Legacy West', 'Plano East', 'West Plano', 'Downtown Plano'],
-    marketInsight: 'Plano customers have high expectations - your website is your first impression.',
+    marketInsight: 'Plano customers expect Fortune 500 professionalism and instant response times.',
     featured: false,
   },
   {
@@ -85,13 +85,13 @@ const topLocations = [
     slug: 'texas/frisco',
     description: 'Fastest-growing city in America. New businesses open daily, but only the ones with strong digital presence survive the competition.',
     problem: 'Rapid growth means instant competition - new businesses struggle to get noticed.',
-    solution: 'Fast-launching websites optimized for immediate local search domination.',
+    solution: 'Growth System Solution: Fast-launching websites with automation and SEO for immediate local search domination and lead generation.',
     challenges: ['Rapid business growth', 'New competition daily', 'Young demographic'],
     solutions: ['Quick-launch optimization', 'Modern mobile design', 'Social integration'],
     population: '200K+',
     businesses: '12,000+',
     keyAreas: ['The Star', 'Frisco Square', 'Stonebriar', 'Legacy West'],
-    marketInsight: 'Frisco customers are tech-savvy and mobile-first - your site must be flawless.',
+    marketInsight: 'Frisco customers are tech-savvy and expect instant, mobile-perfect experiences.',
     featured: false,
   },
   {
@@ -100,13 +100,13 @@ const topLocations = [
     slug: 'texas/arlington',
     description: 'Sports capital of Texas. Your website needs to capture attention in a city where major events bring millions of visitors.',
     problem: 'Event-driven traffic spikes crash template websites and lose potential customers.',
-    solution: 'High-performance architecture that handles traffic surges and converts visitors.',
+    solution: 'Growth System Solution: High-performance architecture with automated lead capture that handles traffic surges and converts visitors.',
     challenges: ['Event traffic spikes', 'Tourism vs. local focus', 'Competition with venues'],
     solutions: ['Scalable performance', 'Event-aware optimization', 'Conversion-focused design'],
     population: '395K+',
     businesses: '20,000+',
     keyAreas: ['Downtown Arlington', 'Entertainment District', 'Mansfield Highway', 'Cooper Street'],
-    marketInsight: 'Arlington customers come from everywhere - your website is often their first local contact.',
+    marketInsight: 'Arlington customers come from everywhere - your automated systems must capture them instantly.',
     featured: false,
   },
   {
@@ -115,13 +115,13 @@ const topLocations = [
     slug: 'texas/irving',
     description: 'Corporate business hub with Las Colinas and DFW Airport. Your website needs to meet professional standards for business clients.',
     problem: 'Corporate environment means high expectations - amateur websites lose business.',
-    solution: 'Professional websites that match Irving\'s corporate sophistication.',
+    solution: 'Growth System Solution: Professional websites with enterprise-level automation that match Irving\'s corporate sophistication.',
     challenges: ['Corporate expectations', 'Business-focused market', 'Professional standards'],
     solutions: ['Corporate-grade design', 'Professional presentation', 'Business optimization'],
     population: '240K+',
     businesses: '18,000+',
     keyAreas: ['Las Colinas', 'DFW Airport', 'Irving Business District', 'Valley Ranch'],
-    marketInsight: 'Irving customers expect Fortune 500 professionalism - your website is your business card.',
+    marketInsight: 'Irving customers expect Fortune 500 professionalism and instant business response.',
     featured: false,
   },
   // Oklahoma Locations
@@ -131,7 +131,7 @@ const topLocations = [
     slug: 'oklahoma/oklahoma-city',
     description: 'Energy capital of the Southwest. Your website competes with major energy companies while serving diverse local businesses from Bricktown to Midtown.',
     problem: 'Energy boom creates high competition - local businesses struggle to stand out against major corporations.',
-    solution: 'Custom websites that balance professional credibility with local Oklahoma authenticity.',
+    solution: 'Professional websites with built-in booking, automation, and SEO tuned for Oklahoma authenticity.',
     challenges: ['Energy industry competition', 'Diverse market segments', 'Professional vs. local balance'],
     solutions: ['Industry-specific optimization', 'Local market positioning', 'Professional branding'],
     population: '695K+',
@@ -146,13 +146,13 @@ const topLocations = [
     slug: 'oklahoma/tulsa',
     description: 'Oil capital with a thriving arts scene. Your website needs to appeal to both traditional energy businesses and the growing creative economy.',
     problem: 'Diverse economy means conflicting customer expectations - corporate vs. creative markets.',
-    solution: 'Flexible websites that adapt messaging and design to different market segments.',
+    solution: 'Growth System Solution: Flexible websites with automation and SEO that adapt messaging to different market segments.',
     challenges: ['Dual market appeal', 'Economic transition', 'Traditional vs. modern expectations'],
     solutions: ['Adaptive design systems', 'Market-specific landing pages', 'Cultural sensitivity'],
     population: '415K+',
     businesses: '22,000+',
     keyAreas: ['Downtown Tulsa', 'Arts District', 'Brookside', 'Cherry Street'],
-    marketInsight: 'Tulsa customers appreciate both business acumen and creative authenticity.',
+    marketInsight: 'Tulsa customers appreciate business professionalism with authentic creative character.',
     featured: false,
   },
   {
@@ -161,13 +161,13 @@ const topLocations = [
     slug: 'oklahoma/norman',
     description: 'University town with growing tech sector. Your website competes for educated customers who expect modern functionality and local relevance.',
     problem: 'High education levels mean sophisticated customers who quickly spot amateur web design.',
-    solution: 'University-grade websites that demonstrate technical expertise while maintaining local appeal.',
+    solution: 'Growth System Solution: University-grade websites with advanced automation that demonstrate technical expertise and local appeal.',
     challenges: ['Educated customer base', 'Student vs. permanent residents', 'Seasonal fluctuations'],
     solutions: ['Technical excellence', 'Academic credibility', 'Year-round optimization'],
     population: '128K+',
     businesses: '8,500+',
     keyAreas: ['Campus Corner', 'Downtown Norman', 'Legacy Park', 'Riverwind Casino area'],
-    marketInsight: 'Norman customers research thoroughly and expect both innovation and reliability.',
+    marketInsight: 'Norman customers research thoroughly and expect cutting-edge functionality with reliable performance.',
     featured: false,
   },
   // New Mexico Locations
@@ -177,13 +177,13 @@ const topLocations = [
     slug: 'new-mexico/albuquerque',
     description: 'Desert metropolis with unique Southwestern culture. Your website needs to reflect local character while competing with national chains.',
     problem: 'Generic corporate websites dominate search results, making local businesses invisible.',
-    solution: 'Culturally-aware websites that showcase authentic New Mexico character while maintaining professional standards.',
+    solution: 'Culturally-aware growth systems that showcase New Mexico character while optimizing for Google search.',
     challenges: ['Cultural authenticity', 'Corporate competition', 'Tourist vs. local markets'],
     solutions: ['Southwest-inspired design', 'Cultural market positioning', 'Bilingual optimization'],
     population: '565K+',
     businesses: '28,000+',
     keyAreas: ['Old Town', 'Nob Hill', 'Westside', 'Northeast Heights'],
-    marketInsight: 'Albuquerque customers value authentic local character alongside professional service.',
+    marketInsight: 'Albuquerque customers value authentic culture plus professionalism.',
     featured: true,
   },
   {
@@ -192,13 +192,13 @@ const topLocations = [
     slug: 'new-mexico/santa-fe',
     description: 'Arts capital with affluent tourism market. Your website must appeal to both discerning locals and high-end visitors.',
     problem: 'Tourist-focused businesses struggle with seasonal fluctuations and local authenticity.',
-    solution: 'Dual-market websites that serve both tourist appeal and local community needs.',
+    solution: 'Growth System Solution: Dual-market websites with automation and SEO that serve both tourist appeal and local community needs.',
     challenges: ['Seasonal tourism', 'Affluent expectations', 'Arts community standards'],
     solutions: ['Seasonal optimization', 'Premium positioning', 'Cultural sensitivity'],
     population: '87K+',
     businesses: '6,200+',
     keyAreas: ['Plaza District', 'Canyon Road', 'Railyard District', 'Midtown'],
-    marketInsight: 'Santa Fe customers expect artistic sophistication and authentic cultural representation.',
+    marketInsight: 'Santa Fe customers expect artistic sophistication with authentic cultural respect and professionalism.',
     featured: false,
   },
   {
@@ -207,13 +207,13 @@ const topLocations = [
     slug: 'new-mexico/las-cruces',
     description: 'Border city with growing university influence. Your website needs to serve diverse populations while maintaining professional credibility.',
     problem: 'Border location creates unique challenges - serving both local and cross-border markets.',
-    solution: 'Bilingual-ready websites optimized for diverse customer bases and cross-border commerce.',
+    solution: 'Growth System Solution: Bilingual-ready websites with automation and SEO optimized for diverse customer bases and cross-border commerce.',
     challenges: ['Bilingual requirements', 'Cross-border commerce', 'University influence'],
     solutions: ['Multilingual optimization', 'Cultural adaptation', 'Academic partnerships'],
     population: '112K+',
     businesses: '7,800+',
     keyAreas: ['Downtown Las Cruces', 'NMSU area', 'Mesilla', 'East Mesa'],
-    marketInsight: 'Las Cruces customers appreciate bilingual service and cultural understanding.',
+    marketInsight: 'Las Cruces customers expect bilingual accessibility and authentic cultural understanding.',
     featured: false,
   },
 ];
@@ -349,10 +349,10 @@ export default function LocationsPage() {
                 Top Locations
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
-                Your Local Market, Your Custom Solution
+                Local Growth Systems for Southwest Businesses
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                Dallas businesses face corporate giants. Oklahoma City competes with energy companies. Albuquerque needs authentic Southwest character. We build websites that win in your specific market – not generic solutions that work nowhere.
+                From Texas to Oklahoma to New Mexico, every market has unique challenges. We build <strong>custom-coded websites and integrated growth systems</strong> designed to dominate local search, capture leads, and scale your business.
               </p>
             </div>
           </div>
@@ -363,10 +363,10 @@ export default function LocationsPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Local Challenges, Custom Solutions
+                Local Markets, Tailored Systems
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Every Southwest market has unique challenges that template websites can't solve. We build custom solutions that address your specific local business problems across Texas, Oklahoma, and New Mexico.
+                Generic templates can't solve local business problems. Our growth systems combine <strong>web design, automation, and SEO</strong> to help you win in Dallas, Oklahoma City, Albuquerque, and beyond.
               </p>
             </div>
 
@@ -468,10 +468,10 @@ export default function LocationsPage() {
             <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-16">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Beyond Templates: Southwest-Level Performance
+                  Beyond Templates: Growth Systems Built to Scale
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Competing across Texas, Oklahoma, and New Mexico means your website needs to be as tough as you are. No WordPress vulnerabilities, no bloated templates, no security headaches.
+                  While others sell the same template sites, Forte builds <strong>custom-coded websites with automation, SEO, and integrated systems</strong>. Faster, safer, and built to scale with your business.
                 </p>
               </div>
 
@@ -518,33 +518,33 @@ export default function LocationsPage() {
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Mobile-first design</span>
+                          <span>Mobile-first, fast-loading</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Lightning-fast performance</span>
+                          <span>Automated lead capture & follow-up</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Security built-in</span>
+                          <span>Secure, no WordPress vulnerabilities</span>
                         </div>
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>No WordPress headaches</span>
+                          <span>Custom features for your industry</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Custom functionality</span>
+                          <span>Ongoing Forte Care™ support</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Ongoing support</span>
+                          <span>Built to scale across cities/states</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Growth-ready</span>
+                          <span>Growth systems integration</span>
                         </div>
                       </div>
                     </div>
@@ -568,10 +568,10 @@ export default function LocationsPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
               <h2 className="text-3xl font-bold mb-4">
-                Stop Losing to Template Websites
+                Win Local Markets with Custom Growth Systems
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Your competitors are using the same WordPress templates. Stand out with custom-coded solutions that actually work in your local market.
+                Your competitors are using the same WordPress templates. Dominate with custom-coded Growth Systems that actually work in your local market.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
@@ -581,10 +581,10 @@ export default function LocationsPage() {
                   Get Local Market Analysis
                 </Link>
                 <Link
-                  href="tel:8178736655"
+                  href="/contact?utm_source=locations_page&utm_medium=growth_audit"
                   className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
                 >
-                  Call (817) 873-6655
+                  Book Free Growth Audit
                 </Link>
               </div>
             </div>
