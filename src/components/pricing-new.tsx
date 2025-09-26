@@ -35,7 +35,7 @@ const growthSystemPlans = [
     subtitle: 'Add AI & Automation',
     ctaText: 'Start My Growth Layer',
     features: [
-      'AI receptionist 24/7',
+      'Smart reception system 24/7',
       'Automated SMS/email follow-up',
       'Booking calendar + reminders',
       'Lead dashboard reporting'
@@ -170,7 +170,7 @@ const faqData = [
   },
   {
     question: "What's included in Forte Care™?",
-    answer: 'Forte Care™ includes security monitoring, performance optimization, software updates, analytics reporting, technical support, and regular backups. Growth and Scaling layers include advanced features like AI fine-tuning, automation optimization, and CRM management.'
+    answer: 'Forte Care™ includes security monitoring, performance optimization, software updates, analytics reporting, technical support, and regular backups. Growth and Scaling layers include advanced features like system optimization, automation improvements, and CRM management.'
   },
   {
     question: 'Do I own my system if I cancel?',

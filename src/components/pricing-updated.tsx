@@ -29,13 +29,13 @@ const growthSystemPlans = [
   {
     id: 'growth',
     name: 'Growth Layer',
-    description: 'Automation & AI',
+    description: 'Smart Automation',
     setupFee: '$1,500',
     monthlyPrice: '$300',
-    subtitle: 'Add AI & Automation',
+    subtitle: 'Add Smart Automation',
     ctaText: 'Start My Growth Layer',
     features: [
-      'AI receptionist 24/7',
+      'Smart reception system 24/7',
       'Automated SMS/email follow-up',
       'Booking calendar + reminders',
       'Lead dashboard reporting'
@@ -104,7 +104,7 @@ const forteCareOptions = [
     features: [
       'Everything in Basic',
       'AI system optimization',
-      'Automation fine-tuning',
+      'Automation optimization',
       'Priority support'
     ]
   },
@@ -138,7 +138,7 @@ const comparisonFeatures = [
     pro: true
   },
   {
-    feature: 'AI Receptionist',
+    feature: 'Smart Reception System',
     foundation: false,
     growth: true,
     scaling: true,
@@ -428,7 +428,7 @@ export function PricingPage() {
                       </span>
                     </td>
                     <td className="py-4 px-4 text-sm text-gray-600 dark:text-gray-400">
-                      Website + Automation & AI (AI receptionist, follow-up, booking, lead dashboard)
+                      Website + Smart Automation (reception system, follow-up, booking, lead dashboard)
                     </td>
                   </tr>
                   <tr className="border-b border-gray-100 dark:border-gray-800">

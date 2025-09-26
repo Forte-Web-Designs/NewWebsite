@@ -30,15 +30,15 @@ const faqData: FAQItem[] = [
   },
   {
     question: "Does this work after hours and weekends?",
-    answer: "That's the whole point! Your AI receptionist works 24/7, capturing leads, answering questions, and booking appointments even when you're sleeping or busy with customers.",
+    answer: "That's the whole point! Your smart reception system works 24/7, capturing leads, answering questions, and booking appointments even when you're sleeping or busy with customers.",
   },
 ];
 
 // Growth Layer: Automation & AI metadata for the page
 const pageMetadata = {
-  title: "Growth Layer: Automation & AI | 24/7 Lead Capture & Booking System | Forte Web Designs",
-  description: "Transform your website into a 24/7 sales machine. AI receptionists, automated follow-up, and smart booking systems that convert traffic into paying clients. Turn leads into revenue automatically.",
-  keywords: "automation systems, AI receptionist, automated booking, lead capture automation, business automation, AI chat, automated follow-up, smart scheduling, lead conversion, automated sales funnel"
+  title: "Growth Layer: Smart Automation | 24/7 Lead Capture & Booking System | Forte Web Designs",
+  description: "Transform your website into a 24/7 sales machine. Smart reception systems, automated follow-up, and intelligent booking systems that convert traffic into paying clients. Turn leads into revenue automatically.",
+  keywords: "automation systems, smart reception system, automated booking, lead capture automation, business automation, smart chat, automated follow-up, smart scheduling, lead conversion, automated sales funnel"
 };
 
 export default function SeoDesignPage() {
@@ -81,16 +81,16 @@ export default function SeoDesignPage() {
               <div className="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full mb-6 border border-green-200 dark:border-green-700">
                 <Icon name="star" className="w-4 h-4 text-green-600" />
                 <span className="text-green-600 dark:text-green-400 text-sm font-medium">
-                  Growth Layer: Automation & AI
+                  Growth Layer: Smart Automation
                 </span>
               </div>
             
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-roboto leading-tight dark:text-white mb-6 max-w-5xl mx-auto">
-                Growth Layer: <span className="text-green-600 dark:text-green-400">Automation & AI</span>
+                Growth Layer: <span className="text-green-600 dark:text-green-400">Smart Automation</span>
               </h1>
               
               <p className="text-xl sm:text-2xl font-normal text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
-                Turn your website into a 24/7 sales rep. AI receptionists, automated follow-up, and booking flows that convert traffic into paying clients.
+                Turn your website into a 24/7 sales rep. Smart reception systems, automated follow-up, and booking flows that convert traffic into paying clients.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">

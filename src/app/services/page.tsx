@@ -29,10 +29,10 @@ const growthSystems = [
   },
   {
     id: "growth",
-    title: "Growth Layer: Automation & AI",
-    desc: "Your growth system doesn't stop at a website. With AI and automation, every lead is followed up instantly and booked without human effort.",
+    title: "Growth Layer: Smart Automation",
+    desc: "Your growth system doesn't stop at a website. With smart automation systems, every lead is followed up instantly and booked without human effort.",
     features: [
-      "AI receptionist/chatbot to qualify leads 24/7",
+      "Smart reception system to qualify leads 24/7",
       "Automated text & email follow-up sequences",
       "Instant calendar booking integration",
       "Smart reminders to reduce no-shows"
@@ -71,7 +71,7 @@ const growthSystems = [
     desc: "Growth systems need ongoing optimization to keep generating results. Forte Care™ isn't just maintenance — it's proactive growth support.",
     features: [
       "24/7 system monitoring and support",
-      "AI fine-tuning and A/B testing for conversions",
+      "System optimization and A/B testing for conversions",
       "Monthly optimization of automations & flows",
       "Growth insights and reporting delivered monthly"
     ],

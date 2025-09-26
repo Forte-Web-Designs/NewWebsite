@@ -345,12 +345,12 @@ export default function Home() {
                 <div className="text-center space-y-4">
                   <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(245,158,11,0.25)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(217,119,6,0.5)_0%,rgba(255,255,255,0)_100%)]">
                     <p className="font-sans font-medium text-[16px] leading-[18px] tracking-[-0.24px] text-[#78350F] sm:text-[18px] sm:leading-[20px] sm:text-transparent sm:bg-clip-text sm:bg-gradient-to-r sm:from-[#92400E] sm:to-[#B45309] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F59E0B] dark:to-[#FBBF24]">
-                      25+ Businesses Growing with Forte
+                      Business Growth Systems Partner
                     </p>
                   </div>
                   
                   <h1 className="font-display font-medium text-[28px] sm:text-[36px] leading-[32px] sm:leading-[40px] tracking-[-0.04em] text-black dark:text-white px-4">
-                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Custom Websites That Drive Real Results</span>
+                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Websites Were Just the Start. We Build Growth Systems.</span>
                   </h1>
                   
                   <div className="px-4 max-w-4xl mx-auto">
@@ -360,7 +360,7 @@ export default function Home() {
                           <span className="text-sm">⚡</span>
                         </div>
                         <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Built to dominate Google & load lightning-fast
+                          Get found on Google & convert more visitors
                         </span>
                       </div>
                       <div className="flex items-center gap-3">
@@ -376,7 +376,7 @@ export default function Home() {
                           <span className="text-sm">📈</span>
                         </div>
                         <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Designed to turn visitors into paying customers
+                          Smart systems that capture leads 24/7
                         </span>
                       </div>
                     </div>
@@ -511,13 +511,13 @@ export default function Home() {
                     <div className="space-y-4">
                       <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(245,158,11,0.25)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(217,119,6,0.5)_0%,rgba(255,255,255,0)_100%)]">
                         <p className="font-sans font-medium text-[18px] leading-[20px] tracking-[-0.24px] text-[#78350F] lg:text-[20px] lg:leading-[22px] lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-[#92400E] lg:to-[#B45309] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F59E0B] dark:to-[#FBBF24]">
-                          25+ Businesses Growing with Forte
+                          Business Growth Systems Partner
                         </p>
                       </div>
                       
                       <SimpleScrollReveal direction="up" delay={100}>
                         <h1 className="font-display font-medium text-[70px] leading-[74px] tracking-[-0.04em] text-black dark:text-white">
-                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Custom Websites That Drive Real Results</span>
+                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Websites Were Just the Start. We Build Growth Systems.</span>
                         </h1>
                       </SimpleScrollReveal>
                       
@@ -528,7 +528,7 @@ export default function Home() {
                               <span className="text-lg">⚡</span>
                             </div>
                             <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Built to dominate Google & load lightning-fast
+                              Get found on Google & convert more visitors
                             </span>
                           </div>
                           <div className="flex items-center gap-3">
@@ -544,7 +544,7 @@ export default function Home() {
                               <span className="text-lg">📈</span>
                             </div>
                             <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Designed to turn visitors into paying customers
+                              Smart systems that capture leads 24/7
                             </span>
                           </div>
                         </div>
@@ -635,7 +635,7 @@ export default function Home() {
                   Join 25+ Growing Businesses Nationwide Choosing Professional Web Design from Our Team
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  From contractors to healthcare professionals and clients across the nation, businesses everywhere choose Forte for custom web design, automation & AI, and business growth systems that deliver measurable results. Based in Grapevine, Texas, we serve clients nationwide with the same local attention and professional expertise. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories and case studies.
+                  From contractors to healthcare professionals and clients across the nation, businesses everywhere choose Forte for custom web design, smart automation systems, and business growth solutions that deliver measurable results. Based in Grapevine, Texas, we serve clients nationwide with the same local attention and professional expertise. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories and case studies.
                 </p>
                 
                 {/* Google Reviews Header */}
@@ -1080,7 +1080,7 @@ export default function Home() {
           </button>
         </div>
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
-          Serving businesses nationwide from our Grapevine, Texas headquarters. Professional web design, automation & AI, and business growth systems with DFW roots and national reach.
+          Serving businesses nationwide from our Grapevine, Texas headquarters. Professional web design, smart automation systems, and business growth solutions with DFW roots and national reach.
         </p>
       </div>
     </div>      </section>
