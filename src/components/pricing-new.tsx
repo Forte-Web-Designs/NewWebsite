@@ -7,25 +7,22 @@ import DarkButton from './DarkButton';
 import SimpleScrollReveal from './animations/SimpleScrollReveal';
 import ContactModal from './ContactModal';
 
-// Growth System Layer plans with transparent pricing
+// New Growth Systems Partner Model - 4-card pricing structure
 const growthSystemPlans = [
   {
     id: 'foundation',
     name: 'Foundation',
-    description: 'Custom Website Design',
-    setupFee: '$2,500',
+    description: 'Website',
+    setupFee: '$500',
     monthlyPrice: '$200',
     oneTimePrice: '$4,500',
     subtitle: 'Essential Starting Point',
-    ctaText: 'Start My Foundation',
+    ctaText: 'Start My Website Foundation',
     features: [
-      'Custom-coded website (5-10 pages)',
-      'Premium hosting & domain', 
-      'Mobile-responsive design',
+      'Custom-coded 5-page website',
+      'Hosting + domain included',
       'SEO-ready foundation',
-      'Basic analytics setup',
-      'SSL certificate & security',
-      'Forte Care™ basic included'
+      'Forte Care™ basic support'
     ],
     popular: false
   },
@@ -33,20 +30,17 @@ const growthSystemPlans = [
     id: 'growth',
     name: 'Growth Layer',
     description: 'Automation & AI',
-    setupFee: '$1,500', 
+    setupFee: '$1,500',
     monthlyPrice: '$300',
-    subtitle: 'Add-On to Foundation',
+    subtitle: 'Add AI & Automation',
     ctaText: 'Start My Growth Layer',
     features: [
-      'AI receptionist (24/7 lead capture)',
-      'Automated follow-up sequences',
-      'Booking system integration',
-      'Lead tracking dashboard',
-      'Customer communication automation',
-      'Performance analytics',
-      'Forte Care™ growth optimization'
+      'AI receptionist 24/7',
+      'Automated SMS/email follow-up',
+      'Booking calendar + reminders',
+      'Lead dashboard reporting'
     ],
-    popular: true,
+    popular: false,
     requiresFoundation: true
   },
   {

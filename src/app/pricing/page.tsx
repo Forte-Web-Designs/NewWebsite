@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import { PricingPage } from '@/components/pricing-new';
+import { PricingPage } from '@/components/pricing-updated';
 
 export const metadata: Metadata = {
   title: 'Simple, Transparent Pricing | Growth System Layers | Forte Web Designs',

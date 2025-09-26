@@ -4,7 +4,7 @@ import { useState } from "react";
 import LightButton from "@/components/LightButton";
 import { Icon } from "@/components/images/Icon";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
-import { PricingPage } from "@/components/pricing-new";
+import { PricingPage } from "@/components/pricing-updated";
 
 type FAQItem = {
   question: string;

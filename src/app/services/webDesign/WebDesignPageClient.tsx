@@ -345,7 +345,7 @@ export default function WebDesignPageClient() {
                   onClick={() => setSelectedPlan('foundation')}
                   className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
                     selectedPlan === 'foundation'
-                      ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm'
+                      ? 'bg-white dark:bg-gray-800 text-green-600 dark:text-green-400 shadow-sm'
                       : 'text-gray-700 dark:text-gray-300'
                   }`}
                 >
@@ -355,11 +355,11 @@ export default function WebDesignPageClient() {
                   onClick={() => setSelectedPlan('pro')}
                   className={`flex-1 py-2 px-4 rounded-md text-sm font-medium transition-colors ${
                     selectedPlan === 'pro'
-                      ? 'bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 shadow-sm'
+                      ? 'bg-white dark:bg-gray-800 text-green-600 dark:text-green-400 shadow-sm'
                       : 'text-gray-700 dark:text-gray-300'
                   }`}
                 >
-                  Pro ⭐
+                  Growth Layer ⭐
                 </button>
               </div>
 
@@ -367,13 +367,13 @@ export default function WebDesignPageClient() {
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-200 dark:border-gray-700 p-6">
                 <div className="text-center mb-6">
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {selectedPlan === 'foundation' ? 'Forte Foundation™' : 'Forte Pro™'}
+                    {selectedPlan === 'foundation' ? 'Foundation' : 'Growth Layer'}
                     {selectedPlan === 'pro' && ' ⭐'}
                   </h3>
                   <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">
                     {selectedPlan === 'foundation' 
-                      ? (isMonthly ? '$2,500 + $200/mo' : '$4,500')
-                      : (isMonthly ? '$4,500 + $350/mo' : '$7,500')
+                      ? (isMonthly ? '$500 + $200/mo' : '$4,500')
+                      : (isMonthly ? '$1,500 + $300/mo' : '$6,500')
                     }
                   </div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">
