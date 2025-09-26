@@ -635,7 +635,7 @@ export default function Home() {
                   Join 25+ Growing Businesses Nationwide Choosing Professional Web Design from Our Team
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  From contractors to healthcare professionals and clients across the nation, businesses everywhere choose Forte for custom web design, SEO services, and digital marketing solutions that deliver measurable results. Based in Grapevine, Texas, we serve clients nationwide with the same local attention and professional expertise. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories and case studies.
+                  From contractors to healthcare professionals and clients across the nation, businesses everywhere choose Forte for custom web design, automation & AI, and business growth systems that deliver measurable results. Based in Grapevine, Texas, we serve clients nationwide with the same local attention and professional expertise. <Link href="/about/work" className="text-primary-600 hover:text-primary-700 underline font-medium">View our portfolio</Link> to see real client success stories and case studies.
                 </p>
                 
                 {/* Google Reviews Header */}
@@ -1080,7 +1080,7 @@ export default function Home() {
           </button>
         </div>
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center mt-3 max-w-md mx-auto">
-          Serving businesses nationwide from our Grapevine, Texas headquarters. Professional web design, SEO services, and digital marketing solutions with DFW roots and national reach.
+          Serving businesses nationwide from our Grapevine, Texas headquarters. Professional web design, automation & AI, and business growth systems with DFW roots and national reach.
         </p>
       </div>
     </div>      </section>

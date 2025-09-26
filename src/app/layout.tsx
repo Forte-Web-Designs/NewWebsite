@@ -70,7 +70,7 @@ export const metadata: Metadata = {
     template: '%s | Forte Web Designs',
     default: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
   },
-  description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, SEO optimization, Google Ads management, and digital marketing solutions for DFW businesses. Boost your online presence today.",
+  description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, automation & AI, business systems integration, and growth systems for DFW businesses. Scale your business online today.",
   keywords: [
     'web design DFW', 'web design Dallas', 'custom websites Dallas', 'Fort Worth web design', 'Dallas web development',
     'SEO services Dallas', 'SEO optimization DFW', 'search engine optimization Dallas', 'local SEO Texas',
@@ -98,13 +98,13 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://fortewebdesigns.com',
     title: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
-    description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, SEO optimization, Google Ads management, and digital marketing solutions for DFW businesses. Boost your online presence today.",
+    description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, automation & AI, business systems integration, and growth systems for DFW businesses. Scale your business online today.",
     siteName: 'Forte Web Designs',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
-    description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, SEO optimization, Google Ads management, and digital marketing solutions for DFW businesses. Boost your online presence today.",
+    description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, automation & AI, business systems integration, and growth systems for DFW businesses. Scale your business online today.",
   },
 };
 

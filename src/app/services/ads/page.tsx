@@ -17,20 +17,20 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "How much should I spend on Google Ads?",
-    answer: "We recommend $1,000/month to start. You can scale up once we optimize performance and prove ROI with your initial budget.",
+    question: "Do I need a CRM already to get started?",
+    answer: "Not at all! We'll help you choose and set up the right CRM for your business size and needs. We work with HubSpot, Zoho, GoHighLevel, and others to find the perfect fit.",
   },
   {
-    question: "Do I need a Forte website to use PPC?",
-    answer: "Yes - landing pages matter. All campaigns are built on your Forte Foundation™ or Pro™ site. We need conversion-focused pages to maximize your ad spend.",
+    question: "Which CRMs and systems do you support?",
+    answer: "We integrate with all major CRMs (HubSpot, Salesforce, Zoho, GoHighLevel), booking systems (Calendly, Acuity, ServiceTitan), and payment processors (Stripe, Square, PayPal). If you have existing tools, we'll make them work together.",
   },
   {
-    question: "Can I cancel after a few months?",
-    answer: "Plans require a 12-month minimum commitment, then go month-to-month. This gives us time to properly optimize and scale your campaigns.",
+    question: "Can this integrate with my existing booking system?",
+    answer: "Yes! We specialize in connecting existing systems. Whether you use ServiceTitan, Calendly, or custom booking software, we'll create seamless integrations that eliminate double-entry and missed appointments.",
   },
   {
-    question: "Will I see results quickly?",
-    answer: "Most campaigns see strong lead flow in the first 30–60 days after optimization. Initial setup and testing typically takes 2-3 weeks.",
+    question: "How long does the systems integration setup take?",
+    answer: "Most integrations are completed within 2-4 weeks. We handle the technical setup while training your team on the new workflows. You'll see immediate improvements in lead tracking and response times.",
   },
 ];
 
@@ -58,9 +58,9 @@ export default function GooglePPCAdsPage() {
   return (
     <div className="relative">
       <Head>
-        <title>Professional Google Ads Management | Expert PPC Services Nationwide from DFW | Forte Web Designs</title>
-        <meta name="description" content="Stop wasting money on Google Ads that don't convert. DFW-based team delivering professional PPC management nationwide with proven ROI strategies, custom landing pages, and real business results." />
-        <meta name="keywords" content="Google Ads management, PPC services, Google Ads optimization, paid advertising, digital marketing, Google Ads consultant, PPC management nationwide, professional Google Ads" />
+        <title>Scaling Layer: Business Systems Integration | CRM & Automation Setup | Forte Web Designs</title>
+        <meta name="description" content="Stop losing leads through disconnected systems. DFW-based team delivering business systems integration nationwide - CRM setup, automation workflows, and unified dashboards that scale your operations." />
+        <meta name="keywords" content="business systems integration, CRM setup, workflow automation, lead routing, business operations, systems integration, business automation, lead management, dashboard reporting" />
         <link rel="canonical" href="https://fortewebdesigns.com/services/ads" />
       </Head>
       <SectionBackgroundAnimation />
@@ -77,38 +77,38 @@ export default function GooglePPCAdsPage() {
         <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container max-w-7xl mx-auto text-center">
             <SimpleScrollReveal direction="up" delay={200}>
-              <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full mb-6 border border-blue-200 dark:border-blue-700">
-                <Icon name="star" className="w-4 h-4 text-blue-600" />
-                <span className="text-blue-600 dark:text-blue-400 text-sm font-medium">
-                  Professional Google Ads That Convert
+              <div className="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full mb-6 border border-green-200 dark:border-green-700">
+                <Icon name="star" className="w-4 h-4 text-green-600" />
+                <span className="text-green-600 dark:text-green-400 text-sm font-medium">
+                  Business Systems Integration Partner
                 </span>
               </div>
             
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-roboto leading-tight dark:text-white mb-6 max-w-5xl mx-auto">
-                Professional Google Ads That <span className="text-blue-600 dark:text-blue-400">Actually Deliver ROI</span>
+                Scaling Layer: <span className="text-green-600 dark:text-green-400">Business Systems Integration</span>
               </h1>
               
               <p className="text-xl sm:text-2xl font-normal text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
-                Tired of paying for clicks that don't convert? Our DFW-based team delivers professional Google Ads management nationwide with real ROI - not vanity metrics. We help businesses across the country turn marketing budget into paying customers with proven PPC strategies.
+                Your business deserves more than disconnected tools. We integrate your CRM, website, booking, and analytics into one seamless growth engine. No more lost leads, missed opportunities, or wondering what's working.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <LightButton href="/contact">Fix My Ads & Get Professional Results</LightButton>
-                <DarkButton href="#pricing" className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600">
-                  Book a Free Professional Ad Review
+                <LightButton href="/contact">Book My Free Systems Audit</LightButton>
+                <DarkButton href="#pricing" className="bg-green-600 hover:bg-green-700 text-white border-green-600">
+                  See Integration Packages
                 </DarkButton>
               </div>
             </SimpleScrollReveal>
           </div>
         </section>
 
-        {/* Common PPC Problems Section */}
+        {/* Business Systems Problems Section */}
         <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-red-50 dark:bg-red-900/10">
           <div className="container max-w-7xl mx-auto">
             <SimpleScrollReveal direction="up" delay={300}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Struggling with Google Ads? You're Not Alone.
+                  Losing Leads in the Chaos? Your Systems Are Broken.
                 </h2>
               </div>
 
@@ -117,26 +117,26 @@ export default function GooglePPCAdsPage() {
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center">
                       <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">💸</span>
-                      </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">High Spend, Low-Quality Leads</h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Burning through budget without getting qualified prospects</p>
-                    </div>
-
-                    <div className="text-center">
-                      <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                         <span className="text-2xl">🔄</span>
                       </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Clicks That Don't Convert</h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Traffic that looks good on paper but never turns into customers</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Leads Falling Through the Cracks</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">No system to track or follow up on inquiries properly</p>
                     </div>
 
                     <div className="text-center">
                       <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">🏢</span>
+                        <span className="text-2xl">🧩</span>
                       </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Competing with Giants</h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Trying to outbid massive companies on tiny budgets</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Tools Don't Talk to Each Other</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Website, CRM, booking system all completely disconnected</p>
+                    </div>
+
+                    <div className="text-center">
+                      <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                        <span className="text-2xl">📉</span>
+                      </div>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">No Visibility Into What's Working</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">No idea where leads come from or what drives revenue</p>
                     </div>
                   </div>
                 </div>
@@ -145,65 +145,75 @@ export default function GooglePPCAdsPage() {
           </div>
         </section>
 
-        {/* Forte PPC™ Solution Section */}
+        {/* Business Systems Integration Solution Section */}
         <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container max-w-7xl mx-auto">
             <SimpleScrollReveal direction="up" delay={400}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Smart Ads That Deliver Results
+                  All Your Tools, Finally Working Together
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
-                  We build your campaigns from the ground up - using smart targeting, custom landing pages, and constant optimization to stretch every dollar.
+                  We connect your website, CRM, booking system, and analytics into one seamless growth engine that captures every lead and tracks every dollar.
                 </p>
               </div>
 
               <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-200 dark:border-gray-700 max-w-5xl mx-auto">
-                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">🔧</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">High-intent keyword targeting</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Reach buyers, not browsers</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">CRM Setup & Automation</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Custom pipelines for tracking leads from inquiry to close</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">📊</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Landing pages built for conversions</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Turn clicks into customers</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Lead Routing & Dashboards</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Send inquiries to the right team instantly with real-time reporting</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">🧩</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Real-time optimization</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Reduce wasted spend daily</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Booking & Payment Integration</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Seamless scheduling and payment processing in one flow</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">🤖</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Weekly reporting & strategy</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Know exactly what's working</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Workflow Automations</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Reduce busywork and speed up your sales cycles</p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-3">
+                    <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
+                      <span className="text-green-500 text-xl">🌍</span>
+                    </div>
+                    <div>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Multi-Location Support</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Perfect for franchises and growing teams</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700 text-center">
-                  <p className="text-blue-800 dark:text-blue-200 font-semibold text-lg">
-                    Most clients see 3–5x Return on Ad Spend (ROAS) within the first 60 days.
+                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl border border-green-200 dark:border-green-700 text-center">
+                  <p className="text-green-800 dark:text-green-200 font-semibold text-lg">
+                    Most clients achieve 95%+ lead response rate and cut operational overhead by 40% within 90 days.
                   </p>
                 </div>
               </div>
@@ -217,21 +227,21 @@ export default function GooglePPCAdsPage() {
             <div className="flex items-start gap-6">
               <div className="flex-shrink-0">
                 <div className="w-16 h-16 bg-green-100 dark:bg-green-900/50 rounded-full flex items-center justify-center">
-                  <span className="text-2xl">🎯</span>
+                  <span className="text-2xl">🔧</span>
                 </div>
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  Keep Your Landing Pages Converting
+                  Keep Your Systems Running Smoothly
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Your ads can be perfect, but if your landing pages are slow or outdated, you're wasting money. Forte Care™ ensures your website stays optimized for conversions – fast loading times, mobile-friendly design, and updated content that turns clicks into customers.
+                  Your systems integration is only as good as its maintenance. Forte Care™ ensures your CRM, automations, and integrations stay optimized and running smoothly – monitoring performance, updating workflows, and fine-tuning processes that keep your business growing.
                 </p>
                 <Link
                   href="/solutions/care"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
-                  <span>Optimize Your Conversions</span>
+                  <span>Maintain My Systems</span>
                   <span className="text-sm">→</span>
                 </Link>
               </div>
@@ -245,10 +255,10 @@ export default function GooglePPCAdsPage() {
             <SimpleScrollReveal direction="up" delay={500}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Case Study Spotlight
+                  Real Client Results
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  How we transformed a struggling ad campaign into a lead generation machine
+                  How systems integration transformed this growing business
                 </p>
               </div>
 
@@ -257,34 +267,34 @@ export default function GooglePPCAdsPage() {
                   {/* Client Info */}
                   <div>
                     <div className="flex items-center gap-4 mb-8">
-                      <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center">
+                      <div className="w-16 h-16 bg-green-100 dark:bg-green-900/40 rounded-xl flex items-center justify-center">
                         <span className="text-2xl">🏠</span>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Summit Roofing</h3>
-                        <p className="text-gray-600 dark:text-gray-400">Local roofing contractor</p>
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">ABC Roofing</h3>
+                        <p className="text-gray-600 dark:text-gray-400">Multi-location roofing company</p>
                       </div>
                     </div>
 
                     <div className="space-y-4 mb-8">
                       <div className="bg-red-50 dark:bg-red-900/20 p-4 rounded-lg border border-red-200 dark:border-red-800">
                         <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">
-                          Challenge
+                          Problem
                         </h4>
                         <p className="text-red-700 dark:text-red-300 text-sm">
-                          $3,500/month ad budget, only 2–3 leads per month
+                          Losing track of leads from website, calls, and ads across 3 locations
                         </p>
                       </div>
 
                       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
                         <h4 className="font-semibold text-blue-800 dark:text-blue-200 mb-2">
-                          Fix
+                          Solution
                         </h4>
                         <ul className="text-blue-700 dark:text-blue-300 text-sm space-y-1">
-                          <li>• Rebuilt campaign targeting local, service-based keywords</li>
-                          <li>• Created service-specific landing pages</li>
-                          <li>• Added negative keywords to filter out bad traffic</li>
-                          <li>• Installed call/conversion tracking</li>
+                          <li>• CRM integration with lead routing by location</li>
+                          <li>• Automated booking system with calendar sync</li>
+                          <li>• Unified dashboard for all locations</li>
+                          <li>• Lead scoring and follow-up automation</li>
                         </ul>
                       </div>
                     </div>
@@ -294,42 +304,42 @@ export default function GooglePPCAdsPage() {
                   <div>
                     <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
                       <h4 className="font-semibold text-green-800 dark:text-green-200 mb-6 text-center text-xl">
-                        Results (3 Months):
+                        Results (90 Days):
                       </h4>
                       
                       <div className="grid grid-cols-1 gap-6 mb-6">
                         <div className="grid grid-cols-3 gap-4">
                           <div className="text-center">
                             <div className="text-3xl font-bold text-green-600 dark:text-green-400">
-                              📈 580%
+                              📊 95%
                             </div>
                             <div className="text-sm text-green-700 dark:text-green-300">
-                              more leads
+                              lead response rate
                             </div>
                           </div>
                           <div className="text-center">
                             <div className="text-3xl font-bold text-green-600 dark:text-green-400">
-                              💰 67%
+                              ⚡ 40%
                             </div>
                             <div className="text-sm text-green-700 dark:text-green-300">
-                              lower cost per lead
+                              faster close times
                             </div>
                           </div>
                           <div className="text-center">
                             <div className="text-3xl font-bold text-green-600 dark:text-green-400">
-                              🚀 4.2x
+                              📈 100%
                             </div>
                             <div className="text-sm text-green-700 dark:text-green-300">
-                              Return on Ad Spend
+                              clear dashboards
                             </div>
                           </div>
                         </div>
                       </div>
 
                       <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300 text-center">
-                        "Night and day difference. We went from barely getting leads to having more qualified prospects than we can handle."
+                        "Finally have visibility into our entire operation. No more lost leads, and our team knows exactly what to do with every inquiry."
                         <footer className="text-sm mt-2 not-italic font-semibold">
-                          - Mike Torres, Summit Roofing
+                          - Sarah Johnson, ABC Roofing
                         </footer>
                       </blockquote>
                     </div>
@@ -340,57 +350,57 @@ export default function GooglePPCAdsPage() {
           </div>
         </section>
 
-        {/* Why Our PPC Campaigns Work */}
+        {/* Why Our Systems Integration Works */}
         <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container max-w-7xl mx-auto">
             <SimpleScrollReveal direction="up" delay={600}>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Why Our PPC Campaigns Work
+                  Our Systems Integration Process
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  No guesswork. No wasted spend. Just proven strategies that turn clicks into customers.
+                  No more scattered tools. We create one unified system that grows with your business.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
-                  <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🎯</span>
+                  <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🔍</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">1. We Learn Your Business</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">1. Systems Audit</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    We start with strategy - understanding your goals, budget, and who you want to reach.
+                    We map your current tools and identify gaps in your lead tracking and follow-up process.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
+                  <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🔧</span>
+                  </div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">2. CRM & Integration Setup</h3>
+                  <p className="text-gray-600 dark:text-gray-400 text-sm">
+                    We connect your website, booking system, and communications into one unified platform.
                   </p>
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
                   <div className="bg-purple-100 dark:bg-purple-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🔍</span>
+                    <span className="text-3xl">🤖</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">2. Laser-Focused Targeting</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">3. Automation & Workflows</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    We don't guess. We use data-driven keyword research to reach buyers, not browsers.
-                  </p>
-                </div>
-
-                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
-                  <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">🎨</span>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">3. Conversion-Focused Ads</h3>
-                  <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    No fluff. Just clear messaging that turns clicks into customers.
+                    We build automated workflows that route leads, trigger follow-ups, and keep deals moving.
                   </p>
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
                   <div className="bg-orange-100 dark:bg-orange-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                    <span className="text-3xl">⚡</span>
+                    <span className="text-3xl">📊</span>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">4. Constant Testing</h3>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">4. Training & Optimization</h3>
                   <p className="text-gray-600 dark:text-gray-400 text-sm">
-                    We manage, monitor, and tweak your campaigns every week. No "set it and forget it."
+                    We train your team and continuously optimize your systems for maximum efficiency.
                   </p>
                 </div>
               </div>
@@ -398,16 +408,16 @@ export default function GooglePPCAdsPage() {
           </div>
         </section>
 
-        {/* PPC Features & Deliverables */}
+        {/* What's Included - Scaling Layer Package */}
         <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
           <div className="container max-w-7xl mx-auto">
             <SimpleScrollReveal direction="up" delay={700}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  PPC Features & Deliverables
+                  What's Included - Scaling Layer Package
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  Everything you need for successful Google Ads campaigns, all included
+                  Everything you need to scale your operations and never lose another lead
                 </p>
               </div>
 
@@ -415,39 +425,39 @@ export default function GooglePPCAdsPage() {
                 <div className="grid md:grid-cols-2 gap-6 p-8">
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">Campaign Setup & Targeting</span>
+                      <span className="text-green-500 text-xl">🔧</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">CRM Setup - HubSpot, Zoho, or GoHighLevel pipelines ready to use</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">Landing Page Optimization</span>
+                      <span className="text-green-500 text-xl">📊</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Dashboard Reporting - leads, calls, and revenue in one view</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">Ad Copy Writing</span>
+                      <span className="text-green-500 text-xl">🧩</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Integration - website, booking, payments, email, SMS all connected</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">Keyword & Negative Keyword Strategy</span>
+                      <span className="text-green-500 text-xl">🤖</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Automation - triggers and workflows to speed up sales cycles</span>
                     </div>
                   </div>
                   
                   <div className="space-y-4">
                     <div className="flex items-center gap-3">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">Bid Management</span>
+                      <span className="text-green-500 text-xl">🌍</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Multi-Location Support - perfect for franchises and growing teams</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">Conversion Tracking</span>
+                      <span className="text-green-500 text-xl">📞</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Lead Routing - send inquiries to the right team instantly</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">Weekly Reporting</span>
+                      <span className="text-green-500 text-xl">📈</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Performance Tracking - monitor response times and conversion rates</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <span className="text-green-500 text-xl">✅</span>
-                      <span className="font-semibold text-gray-900 dark:text-white">A/B Testing</span>
+                      <span className="text-green-500 text-xl">🎓</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">Team Training - comprehensive onboarding for your staff</span>
                     </div>
                   </div>
                 </div>
@@ -462,48 +472,92 @@ export default function GooglePPCAdsPage() {
             <SimpleScrollReveal direction="up" delay={800}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Pricing: Forte PPC™
+                  Scaling Layer Pricing
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-                  Professional Google Ads management with proven results
+                  Business systems integration that scales with your growth
                 </p>
               </div>
 
-              <div className="max-w-3xl mx-auto">
+              <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                {/* Systems Starter */}
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 text-center">
-                  <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                  <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                     <span className="text-3xl">🚀</span>
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Forte PPC™</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6">Complete Google Ads management + ad spend</p>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Systems Starter</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">CRM setup + automation basics</p>
                   
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">$400</div>
-                    <div className="text-gray-500 dark:text-gray-400 mb-1">/month + ad spend</div>
+                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$500</div>
+                    <div className="text-gray-500 dark:text-gray-400 mb-1">/month</div>
                     <div className="text-gray-500 dark:text-gray-400 text-sm">(12-month minimum)</div>
                   </div>
                   
-                  <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg mb-6">
-                    <p className="text-blue-800 dark:text-blue-200 font-semibold">
-                      ⚡ Starter Budget Recommendation:
-                    </p>
-                    <p className="text-blue-700 dark:text-blue-300 text-sm mt-1">
-                      Start with $1,000/month ad spend + $400 management = $1,400/month total investment.
-                    </p>
+                  <div className="space-y-2 mb-6 text-sm text-left">
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>CRM setup + automation basics</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>Dashboard reporting</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>Website + booking integration</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>Ongoing Forte Care™ optimization</span>
+                    </div>
                   </div>
                   
-                  <div className="bg-amber-50 dark:bg-amber-900/20 p-4 rounded-lg mb-6">
-                    <p className="text-amber-800 dark:text-amber-200 text-sm">
-                      Want SEO + PPC together? Check out the <strong>Forte Growth™ Bundle</strong> and save $150/month.
-                    </p>
+                  <LightButton href="/contact" className="w-full">Start with Systems Starter</LightButton>
+                </div>
+
+                {/* Systems Pro */}
+                <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 border-green-500 text-center relative">
+                  <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">Most Popular</span>
                   </div>
                   
-                  <div className="text-center">
-                    <LightButton href="/contact" className="w-full mb-4">Get Started with PPC</LightButton>
-                    <DarkButton href="/pricing" className="w-full bg-gray-600 hover:bg-gray-700 text-white border-gray-600">
-                      View All Bundles
-                    </DarkButton>
+                  <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+                    <span className="text-3xl">🏆</span>
                   </div>
+                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Systems Pro</h3>
+                  <p className="text-gray-600 dark:text-gray-400 mb-6">Everything in Starter + advanced automation</p>
+                  
+                  <div className="text-center mb-6">
+                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$1,000</div>
+                    <div className="text-gray-500 dark:text-gray-400 mb-1">/month</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">(12-month minimum)</div>
+                  </div>
+                  
+                  <div className="space-y-2 mb-6 text-sm text-left">
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>Everything in Systems Starter</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>Multi-channel automation</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>Lead routing & scoring</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>Advanced dashboards</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <span className="text-green-500">✅</span>
+                      <span>Multi-location support</span>
+                    </div>
+                  </div>
+                  
+                  <LightButton href="/contact" className="w-full">Get Systems Pro</LightButton>
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -552,14 +606,14 @@ export default function GooglePPCAdsPage() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-blue-600 dark:bg-blue-800">
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-green-600 dark:bg-green-800">
           <div className="container max-w-7xl mx-auto text-center">
             <SimpleScrollReveal direction="up" delay={1000}>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Let's Turn Your Ad Budget into Real Business Growth
+                Let's Build Your Business Operating System
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                You've got a great business. Let's make sure customers can find it. Based in Grapevine, Texas, proudly serving businesses nationwide from our DFW headquarters.
+              <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
+                Stop losing leads to broken systems. Let's create one unified platform that captures every opportunity and scales with your growth. Based in Grapevine, Texas, proudly serving businesses nationwide from our DFW headquarters.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -569,18 +623,18 @@ export default function GooglePPCAdsPage() {
                 </div>
                 <div className="flex items-center gap-2 text-white">
                   <span className="text-lg">📧</span>
-                  <a href="mailto:seth@fortewebdesigns.com" className="text-lg font-semibold hover:text-blue-200 transition-colors">
+                  <a href="mailto:seth@fortewebdesigns.com" className="text-lg font-semibold hover:text-green-200 transition-colors">
                     Email: seth@fortewebdesigns.com
                   </a>
                 </div>
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <LightButton href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
-                  Fix My Ads & Get More Leads
+                <LightButton href="/contact" className="bg-white text-green-600 hover:bg-gray-100">
+                  Book My Free Systems Audit
                 </LightButton>
-                <DarkButton href="/pricing" className="bg-blue-800 hover:bg-blue-900 text-white border-blue-800">
-                  Start My Forte™ Ecosystem
+                <DarkButton href="/pricing" className="bg-green-800 hover:bg-green-900 text-white border-green-800">
+                  Start My Growth System
                 </DarkButton>
               </div>
             </SimpleScrollReveal>
@@ -589,13 +643,13 @@ export default function GooglePPCAdsPage() {
 
         {/* Industry-specific CTA functionality */}
         <IndustryLeadCTA 
-          industry="ads"
-          formName="Ads Inquiry"
-          title="Let's Build Your Ads Strategy Right"
-          subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from our DFW-based team that builds profitable ad campaigns nationwide."
-          mobileCtaText="Ready to get more leads?"
-          mobileCtaSubtext="Get your ads strategy today"
-          mobileBgGradient="bg-gradient-to-r from-orange-600 to-red-600"
+          industry="systems"
+          formName="Systems Integration Inquiry"
+          title="Let's Build Your Business Operating System"
+          subtitle="Tell us about your current tools and challenges. We'll show you how to connect everything into one seamless system that scales with your growth."
+          mobileCtaText="Ready to integrate your systems?"
+          mobileCtaSubtext="Get your free systems audit today"
+          mobileBgGradient="bg-gradient-to-r from-green-600 to-blue-600"
         />
       </div>
     </div>

@@ -39,13 +39,14 @@ export default function Footer() {
 
   const data = [
     {
-      heading: "Digital Services",
+      heading: "Growth System Layers",
       points: [
-        { text: "Custom Website Design", href: "/services/webDesign" },
-        { text: "SEO Optimization Services", href: "/services/seo" },
-        { text: "Social Media Marketing", href: "/services/socialMedia" },
-        { text: "Google Ads Management", href: "/services/ads" },
-        { text: "Website Maintenance & Support", href: "/solutions/care" },
+        { text: "Foundation: Custom Website Design", href: "/services/webDesign" },
+        { text: "Growth Layer: Automation & AI", href: "/services/seo" },
+        { text: "Scaling Layer: Business Systems Integration", href: "/services/ads" },
+        { text: "Ongoing Forte Care™", href: "/solutions/care" },
+        { text: "Agency Partnership Program", href: "/services/white-label" },
+        { text: "Free Growth System Audit", href: "/solutions/seotool" },
       ]
     },
     {
@@ -110,7 +111,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>Professional web design and digital marketing solutions for Dallas Fort Worth businesses. Custom websites, SEO optimization, and marketing strategies designed to grow your business online.</p>
+              <p>Professional web design and business growth systems for Dallas Fort Worth businesses. Custom websites, AI automation, and integrated systems designed to scale your business online.</p>
               <p className="mt-3">
                 <strong>Proudly serving businesses throughout Dallas-Fort Worth</strong> from our Grapevine headquarters with 100% USA-based team and support.
               </p>
