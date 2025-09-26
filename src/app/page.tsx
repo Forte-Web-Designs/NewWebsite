@@ -517,13 +517,13 @@ export default function Home() {
 
           {/* Desktop Hero Content - Side by Side */}
           <div className="hidden lg:block">
-            <div className="rounded-[22px] border border-[#DCDCDC] bg-white shadow-[0px_44px_44px_-30px_#00000026] dark:bg-[#0C0C0C] dark:border-[#323232] dark:shadow-[0px_44px_44px_30px_#00000026] pt-5 pr-3 pb-5 pl-5">
-              <div className="grid lg:grid-cols-2 items-center gap-8 rounded-[10px] border border-[#DCDCDC] bg-[#F8F8F8] bg-[url('/images/home/banner-bg.png')] bg-cover bg-center bg-no-repeat p-6 dark:border-[#323232] dark:bg-[#141414] dark:bg-[url('/images/home/dark-banner-bg.png')]">
+            <div className="rounded-[22px] border border-[#DCDCDC] bg-white shadow-[0px_44px_44px_-30px_#00000026] dark:bg-[#0C0C0C] dark:border-[#323232] dark:shadow-[0px_44px_44px_30px_#00000026] pt-3 pr-3 pb-3 pl-5">
+              <div className="grid lg:grid-cols-2 items-center gap-8 rounded-[10px] border border-[#DCDCDC] bg-[#F8F8F8] bg-[url('/images/home/banner-bg.png')] bg-cover bg-center bg-no-repeat px-6 py-4 dark:border-[#323232] dark:bg-[#141414] dark:bg-[url('/images/home/dark-banner-bg.png')]">
                 
                 {/* Left Column - Content */}
                 <SimpleScrollReveal direction="left" delay={50}>
-                  <div className="space-y-6">
-                    <div className="space-y-4">
+                  <div className="space-y-4">
+                    <div className="space-y-3">
                       <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(245,158,11,0.25)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(217,119,6,0.5)_0%,rgba(255,255,255,0)_100%)]">
                         <p className="font-sans font-medium text-[18px] leading-[20px] tracking-[-0.24px] text-[#78350F] lg:text-[20px] lg:leading-[22px] lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-[#92400E] lg:to-[#B45309] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F59E0B] dark:to-[#FBBF24]">
                           25 Business growing with Forte
