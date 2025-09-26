@@ -8,12 +8,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Professional Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments | Nationwide from DFW | Forte Web Designs',
-  description: 'HIPAA-aware professional medical websites for doctors, dentists, and clinics. DFW-based team serving healthcare providers nationwide. Build patient trust, increase appointments, and comply with regulations with lightning-fast, appointment-ready professional healthcare websites.',
-  keywords: 'professional healthcare website design, medical websites, doctor websites, HIPAA compliant websites, patient portal development, professional healthcare SEO, medical practice websites, dental websites nationwide',
+  title: 'Healthcare Growth Systems | More Appointments, Fewer No-Shows | Nationwide from DFW | Forte Web Designs',
+  description: 'Complete healthcare growth systems with appointment flows, automated reminders, and HIPAA-aware forms. No-shows down up to 85%, appointment submissions 3.4x, top-3 ranking. DFW-based team serving healthcare providers nationwide.',
+  keywords: 'healthcare growth systems, medical appointment booking, automated healthcare reminders, healthcare CRM dashboard, HIPAA compliant systems, medical practice automation nationwide',
   openGraph: {
-    title: 'Professional Healthcare Website Design | Medical Websites That Build Trust & Increase Appointments | Nationwide from DFW',
-    description: 'HIPAA-aware professional medical websites for doctors, dentists, and clinics. DFW-based team serving healthcare providers nationwide.',
+    title: 'Healthcare Growth Systems | More Appointments, Fewer No-Shows | Nationwide from DFW',
+    description: 'Complete healthcare growth systems with appointment flows, automated reminders, and HIPAA-aware forms. No-shows down up to 85%, appointment submissions 3.4x.',
     type: 'website',
   },
 };
@@ -191,38 +191,53 @@ export default function HealthcarePage() {
               <div className="space-y-8">
                 {/* Badge */}
                 <div className="inline-flex items-center px-4 py-2 bg-teal-600/50 rounded-full text-teal-200 text-sm font-medium border border-teal-400/20">
-                  🩺 Industry Expertise: Healthcare
+                  🩺 Healthcare Growth Systems
                 </div>
 
                 {/* Headline */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-teal-300">More Appointments, Fewer No-Shows.</span>
+                  Healthcare Growth Systems
                 </h1>
+                <h2 className="text-2xl md:text-3xl font-semibold text-teal-300 mb-6">
+                  More Appointments. Fewer No-Shows.
+                </h2>
 
                 {/* Subheading */}
                 <p className="text-xl text-teal-100 leading-relaxed">
-                  Healthcare providers need reliable appointment systems. Our Growth Layer handles reminders and follow-ups automatically. Our Scaling Layer integrates intake forms, HIPAA-friendly systems, and CRM dashboards for clear patient tracking.
+                  Appointment flows, reminders, and HIPAA-aware forms integrated with dashboards—so staff stay efficient and patients show up.
                 </p>
                 
                 <div className="bg-teal-800/30 rounded-lg p-4">
                   <p className="text-teal-100 font-semibold">
-                    <span className="text-yellow-300">✨ Result Highlight:</span> Clients report up to 85% fewer no-shows with automated reminders.
+                    <span className="text-yellow-300">✨ Result Highlight:</span> No-shows down up to 85%, appointment form submissions 3.4×, top-3 ranking for core terms.
                   </p>
                 </div>
 
                 {/* Key Benefits */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
-                  <div className="flex items-center space-x-2">
-                    <span className="text-green-400">✅</span>
-                    <span className="text-teal-200">HIPAA-Aware</span>
-                  </div>
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center space-x-2">
                     <span className="text-green-400">📲</span>
-                    <span className="text-teal-200">Appointment-Ready</span>
+                    <span className="text-teal-200">Online Scheduling + Reminders</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <span className="text-green-400">📍</span>
-                    <span className="text-teal-200">Local SEO Optimized</span>
+                    <span className="text-green-400">🔒</span>
+                    <span className="text-teal-200">HIPAA-Aware Form Integrations</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">�</span>
+                    <span className="text-teal-200">Local SEO for "near me"</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">👩‍⚕️</span>
+                    <span className="text-teal-200">Provider Bios & Insurance</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">⭐</span>
+                    <span className="text-teal-200">Reviews Integration</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">📊</span>
+                    <span className="text-teal-200">Appointment Dashboards</span>
                   </div>
                 </div>
 

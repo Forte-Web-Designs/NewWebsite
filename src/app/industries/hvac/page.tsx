@@ -12,12 +12,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'HVAC Websites That Bring the Heat (and Cool New Leads) | Nationwide from DFW | Forte Web Designs',
-  description: 'HVAC websites optimized for local SEO, mobile bookings, and 24/7 emergency calls. DFW-based team serving HVAC contractors nationwide with websites that make you the obvious choice when customers search for fast, reliable heating and cooling service.',
-  keywords: 'HVAC website design, heating cooling websites, emergency HVAC mobile optimization, local HVAC SEO, HVAC lead generation nationwide',
+  title: 'HVAC Growth Systems | Capture Emergency Calls, Keep Calendar Full | Nationwide from DFW | Forte Web Designs',
+  description: 'Complete HVAC growth systems with emergency CTAs, seasonal promos, automated reminders, and local SEO. Emergency calls 2x, mobile calls up 220%, #1 for AC repair. DFW-based team serving HVAC contractors nationwide.',
+  keywords: 'HVAC growth systems, HVAC lead generation, automated HVAC follow-up, HVAC booking system, HVAC CRM dashboard, emergency HVAC systems nationwide',
   openGraph: {
-    title: 'HVAC Websites That Bring the Heat (and Cool New Leads) | Nationwide from DFW',
-    description: 'HVAC websites optimized for local SEO, mobile bookings, and 24/7 emergency calls. DFW-based team serving HVAC contractors nationwide.',
+    title: 'HVAC Growth Systems | Capture Emergency Calls, Keep Calendar Full | Nationwide from DFW',
+    description: 'Complete HVAC growth systems with emergency CTAs, seasonal promos, automated reminders, and local SEO. Emergency calls 2x, mobile calls up 220%.',
     type: 'website',
   },
 };
@@ -179,17 +179,17 @@ export default function HVACPage() {
             <SimpleScrollReveal direction="left" delay={100}>
               <div>
                 <div className="inline-flex items-center gap-2 bg-blue-600/50 text-blue-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                  🌡️ Industry Expertise: HVAC Companies
+                  🌡️ HVAC Growth Systems
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-                  <span className="text-blue-300">Never Miss Another Call.</span>
+                  <span className="text-blue-300">Capture Emergency Calls. Keep the Calendar Full.</span>
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  For HVAC and contractors, speed matters. Missed calls = lost jobs. Our Growth Layer captures leads instantly, follows up automatically, and books appointments even after hours. With our Scaling Layer, you'll have a CRM and dashboards to track every inquiry and job across your team.
+                  Emergency CTAs, seasonal promos, automated reminders, and local SEO—plus dashboards to track every call and booking. Your HVAC growth system works around the clock.
                 </p>
                 <div className="bg-blue-800/30 rounded-lg p-4 mb-8">
                   <p className="text-blue-100 font-semibold">
-                    <span className="text-yellow-300">✨ Result Highlight:</span> Clients see 2x more booked jobs in the first 60 days.
+                    <span className="text-yellow-300">✨ Result Highlight:</span> Emergency calls ~2×, mobile calls up 220%, #1 for "AC repair [city]".
                   </p>
                 </div>
                 
@@ -201,10 +201,10 @@ export default function HVACPage() {
                     Book My Free Growth Audit
                   </Link>
                   <Link 
-                    href="/about/work"
+                    href="/contact?industry=hvac"
                     className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-blue-700 transition-colors text-center"
                   >
-                    View Our Work
+                    Start My HVAC System
                   </Link>
                 </div>
 

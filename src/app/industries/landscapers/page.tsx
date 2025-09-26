@@ -8,12 +8,12 @@ import ScrollToTop from '@/components/ScrollToTop';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
 export const metadata: Metadata = {
-  title: 'Professional Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads Nationwide',
-  description: 'Stunning, SEO-optimized professional landscaping websites that showcase your work, rank on Google, and bring in new clients every week. DFW-based team serving landscapers nationwide with visual design, local SEO, mobile booking ready solutions.',
-  keywords: 'professional landscaping website design, landscaper websites, lawn care websites, landscape design websites, visual portfolio design, professional local SEO, landscaping leads generation, nationwide landscaping websites, DFW landscaping web design',
+  title: 'Landscaping Growth Systems | More Project Requests, Bigger Jobs | Nationwide from DFW | Forte Web Designs',
+  description: 'Complete landscaping growth systems with before/after galleries, automated follow-ups, and scheduling systems. Leads up ~50-60% in 90 days, average job size up ~15-20%. DFW-based team serving landscapers nationwide.',
+  keywords: 'landscaping growth systems, landscaper lead generation, automated landscaping follow-up, landscaping booking system, landscaping CRM dashboard, seasonal landscaping campaigns nationwide',
   openGraph: {
-    title: 'Professional Landscaping Website Design | Visual Websites That Turn Visitors Into Local Leads',
-    description: 'Stunning, SEO-optimized professional landscaping websites that showcase your work, rank on Google, and bring in new clients every week. Visual design, local SEO, mobile booking ready.',
+    title: 'Landscaping Growth Systems | More Project Requests, Bigger Jobs | Nationwide from DFW',
+    description: 'Complete landscaping growth systems with before/after galleries, automated follow-ups, and scheduling systems. Leads up ~50-60% in 90 days.',
     type: 'website',
   },
 };
@@ -186,48 +186,63 @@ export default function LandscapersPage() {
               <div className="space-y-8">
                 {/* Badge */}
                 <div className="inline-flex items-center px-4 py-2 bg-green-600/50 rounded-full text-green-200 text-sm font-medium border border-green-400/20">
-                  🌿 Industry Expertise: Landscaping
+                  🌿 Landscaping Growth Systems
                 </div>
 
                 {/* Headline */}
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight">
-                  <span className="text-green-300">Grow Your Business While You're on the Job.</span>
+                  Landscaping Growth Systems
                 </h1>
+                <h2 className="text-2xl md:text-3xl font-semibold text-green-300 mb-6">
+                  More Project Requests. Bigger Jobs.
+                </h2>
 
                 {/* Subheading */}
                 <p className="text-xl text-green-100 leading-relaxed">
-                  Landscapers and home service providers spend their days in the field, not behind a desk. Our Growth Layer books new jobs automatically, while our Scaling Layer integrates scheduling, invoicing, and customer management in one system.
+                  Before/after galleries that sell, automated follow-ups that nurture, and scheduling that fills your calendar—plus dashboards to track it all.
                 </p>
                 
                 <div className="bg-green-800/30 rounded-lg p-4">
                   <p className="text-green-100 font-semibold">
-                    <span className="text-yellow-300">✨ Result Highlight:</span> Landscaping clients report doubling booked projects in one season.
+                    <span className="text-yellow-300">✨ Result Highlight:</span> Leads up ~50–60% in 90 days; average job size up ~15–20% from improved trust.
                   </p>
                 </div>
 
                 {/* Key Benefits */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm">
                   <div className="flex items-center space-x-2">
-                    <span className="text-green-400">📷</span>
-                    <span className="text-green-200">Visual Design</span>
+                    <span className="text-green-400">�</span>
+                    <span className="text-green-200">Mobile-First + Visual Galleries</span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <span className="text-green-400">📍</span>
-                    <span className="text-green-200">Local SEO</span>
+                    <span className="text-green-200">Local SEO + Service Area Pages</span>
                   </div>
                   <div className="flex items-center space-x-2">
-                    <span className="text-green-400">📱</span>
-                    <span className="text-green-200">Mobile Booking</span>
+                    <span className="text-green-400">✉️</span>
+                    <span className="text-green-200">Automated Follow-Ups</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">📅</span>
+                    <span className="text-green-200">Easy Booking/Estimates</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">🌱</span>
+                    <span className="text-green-200">Seasonal Offer Modules</span>
+                  </div>
+                  <div className="flex items-center space-x-2">
+                    <span className="text-green-400">📊</span>
+                    <span className="text-green-200">Lead Dashboard & CRM</span>
                   </div>
                 </div>
 
                 {/* CTA Buttons */}
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact?industry=landscapers" className="bg-white text-green-700 hover:text-green-700 font-semibold px-8 py-4 rounded-lg text-center transition-colors cursor-pointer border-none">
-                    Book My Free Growth Audit →
+                    Book My Free Growth Audit
                   </Link>
-                  <Link href="/about/work" className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors cursor-pointer bg-transparent">
-                    View Our Work →
+                  <Link href="/contact?industry=landscapers" className="border-white text-white hover:bg-white hover:text-green-700 font-semibold px-8 py-4 rounded-lg border-2 text-center transition-colors cursor-pointer bg-transparent">
+                    Start My Landscaping System
                   </Link>
                 </div>
 

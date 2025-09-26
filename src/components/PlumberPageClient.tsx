@@ -195,17 +195,17 @@ export default function PlumberPageClient() {
             <SimpleScrollReveal direction="left" delay={100}>
               <div>
                 <div className="inline-flex items-center gap-2 bg-blue-600/50 text-blue-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                  🔧 Industry Expertise: Plumbing
+                  🔧 Plumbing Growth Systems
                 </div>
                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                  <span className="text-cyan-300">Booked Jobs While You're Still in the Field.</span>
+                  <span className="text-cyan-300">More Booked Jobs. Fewer Missed Calls.</span>
                 </h1>
                 <p className="text-xl text-blue-100 mb-8 leading-relaxed">
-                  Plumbing businesses live and die on fast response. Our Smart Reception System answers leads 24/7, automated texts and emails keep prospects warm, and appointment scheduling makes it easy for customers to book without waiting. Plus, lead dashboards show exactly where your jobs come from.
+                  From 24/7 smart reception to automated follow-ups and easy scheduling, our plumbing growth systems keep jobs flowing while you're still in the field. Track every call, lead, and job in one dashboard.
                 </p>
                 <div className="bg-blue-800/30 rounded-lg p-4 mb-8">
                   <p className="text-blue-100 font-semibold">
-                    <span className="text-yellow-300">✨ Result Highlight:</span> Clients cut response time by 40% and increase booked jobs within weeks.
+                    <span className="text-yellow-300">✨ Result Highlight:</span> Cut response times by ~40% and book up to 2–3× more jobs in 90 days.
                   </p>
                 </div>
                 
@@ -216,30 +216,44 @@ export default function PlumberPageClient() {
                   >
                     Book My Free Growth Audit
                   </button>
-                  <Link 
-                    href="/about/work"
-                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-700 transition-colors text-center"
+                  <button 
+                    onClick={() => openModal('hero-secondary')}
+                    className="border-2 border-white bg-transparent text-white font-bold py-4 px-8 rounded-lg hover:bg-white hover:text-cyan-700 transition-colors text-center cursor-pointer"
                   >
-                    View Our Work
-                  </Link>
+                    Start My Plumbing System
+                  </button>
                 </div>
 
-                <div className="flex flex-wrap items-center gap-6 text-sm text-blue-200">
+                <div className="grid grid-cols-2 md:grid-cols-3 gap-4 text-sm text-blue-200">
                   <div className="flex items-center gap-2">
-                    <span className="text-green-400">✓</span>
-                    Mobile-First Design
+                    <span className="text-green-400">📱</span>
+                    Mobile-First Emergency Design
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-green-400">✓</span>
-                    Local SEO Optimized
+                    <span className="text-green-400">🤝</span>
+                    Smart Reception System
                   </div>
                   <div className="flex items-center gap-2">
-                    <span className="text-green-400">✓</span>
-                    Emergency Call Ready
+                    <span className="text-green-400">✉️</span>
+                    Automated Follow-Ups
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-400">📅</span>
+                    Online Booking + Reminders
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-400">📍</span>
+                    Local SEO + Map Pack
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-400">📊</span>
+                    Lead Dashboard & CRM
                   </div>
                 </div>
               </div>
-            </SimpleScrollReveal>            <SimpleScrollReveal direction="right" delay={200}>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="right" delay={200}>
               <div className="text-center">
                 <div className="mb-8">
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
