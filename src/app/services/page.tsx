@@ -156,7 +156,7 @@ export default function ServicePage() {
             <div className="text-center">
               <div className="flex items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
                 <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">Business Growth Systems Partner</span>
+                <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">25 Business growing with Forte</span>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight mb-4 sm:mb-6">
                 Growth Systems That Actually Drive Clients

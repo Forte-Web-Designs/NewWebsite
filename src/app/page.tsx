@@ -358,7 +358,7 @@ export default function Home() {
                 <div className="text-center space-y-4">
                   <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(245,158,11,0.25)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(217,119,6,0.5)_0%,rgba(255,255,255,0)_100%)]">
                     <p className="font-sans font-medium text-[16px] leading-[18px] tracking-[-0.24px] text-[#78350F] sm:text-[18px] sm:leading-[20px] sm:text-transparent sm:bg-clip-text sm:bg-gradient-to-r sm:from-[#92400E] sm:to-[#B45309] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F59E0B] dark:to-[#FBBF24]">
-                      Business Growth Systems Partner
+                      25 Business growing with Forte
                     </p>
                   </div>
                   
@@ -526,7 +526,7 @@ export default function Home() {
                     <div className="space-y-4">
                       <div className="inline-block rounded-[5px] border pt-2 pb-2 pl-3 pr-3 bg-gradient-to-r from-[rgba(245,158,11,0.25)] to-transparent border-transparent [border-image:linear-gradient(90deg,rgba(217,119,6,0.5)_0%,rgba(255,255,255,0)_100%)]">
                         <p className="font-sans font-medium text-[18px] leading-[20px] tracking-[-0.24px] text-[#78350F] lg:text-[20px] lg:leading-[22px] lg:text-transparent lg:bg-clip-text lg:bg-gradient-to-r lg:from-[#92400E] lg:to-[#B45309] dark:text-transparent dark:bg-clip-text dark:bg-gradient-to-r dark:from-[#F59E0B] dark:to-[#FBBF24]">
-                          Business Growth Systems Partner
+                          25 Business growing with Forte
                         </p>
                       </div>
                       
