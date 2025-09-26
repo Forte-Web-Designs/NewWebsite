@@ -381,6 +381,110 @@ export function PricingPage() {
         </div>
       </section>
 
+      {/* Bundle Pricing Table */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="container max-w-7xl mx-auto">
+          <SimpleScrollReveal direction="up" delay={300}>
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full mb-4 border border-green-200 dark:border-green-700">
+                <span className="text-2xl">💡</span>
+                <span className="text-green-600 dark:text-green-400 text-sm font-medium">
+                  Bundle & Save
+                </span>
+              </div>
+              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                Smart Bundle Pricing
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Most clients choose Growth + Scaling together for the best ROI. Bundling multiple layers lowers your monthly cost and gives you the fastest path to results.
+              </p>
+            </div>
+            
+            <div className="overflow-x-auto">
+              <table className="w-full bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-200 dark:border-gray-700">
+                <thead>
+                  <tr className="border-b border-gray-200 dark:border-gray-700">
+                    <th className="text-left py-4 px-6 font-bold text-gray-900 dark:text-white">Bundle</th>
+                    <th className="text-center py-4 px-4 font-bold text-gray-900 dark:text-white">Setup Fee</th>
+                    <th className="text-center py-4 px-4 font-bold text-gray-900 dark:text-white">Monthly</th>
+                    <th className="text-center py-4 px-4 font-bold text-green-600 dark:text-green-400">Savings</th>
+                    <th className="text-center py-4 px-4 font-bold text-gray-900 dark:text-white">What's Included</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">
+                      <strong>Foundation + Growth</strong>
+                    </td>
+                    <td className="py-4 px-4 text-center font-semibold text-green-600 dark:text-green-400">
+                      $1,750
+                    </td>
+                    <td className="py-4 px-4 text-center font-semibold text-gray-900 dark:text-white">
+                      $450/mo
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-1 rounded-full text-sm font-semibold">
+                        Save $50/mo
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-sm text-gray-600 dark:text-gray-400">
+                      Website + Automation & AI (AI receptionist, follow-up, booking, lead dashboard)
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">
+                      <strong>Growth + Scaling</strong>
+                    </td>
+                    <td className="py-4 px-4 text-center font-semibold text-green-600 dark:text-green-400">
+                      $4,500
+                    </td>
+                    <td className="py-4 px-4 text-center font-semibold text-gray-900 dark:text-white">
+                      $700/mo
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-1 rounded-full text-sm font-semibold">
+                        Save $100/mo
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-sm text-gray-600 dark:text-gray-400">
+                      Automation + Business Systems Integration (AI + CRM + dashboards + multi-location)
+                    </td>
+                  </tr>
+                  <tr className="border-b border-gray-100 dark:border-gray-800">
+                    <td className="py-4 px-6 font-medium text-gray-900 dark:text-white">
+                      <strong>Foundation + Growth + Scaling (Pro)</strong>
+                    </td>
+                    <td className="py-4 px-4 text-center font-semibold text-green-600 dark:text-green-400">
+                      $4,500
+                    </td>
+                    <td className="py-4 px-4 text-center font-semibold text-gray-900 dark:text-white">
+                      $800/mo
+                    </td>
+                    <td className="py-4 px-4 text-center">
+                      <span className="bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300 px-2 py-1 rounded-full text-sm font-semibold">
+                        Save $200/mo
+                      </span>
+                    </td>
+                    <td className="py-4 px-4 text-sm text-gray-600 dark:text-gray-400">
+                      All 3 layers + Forte Care™ Pro priority support
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            
+            <div className="text-center mt-8">
+              <button
+                onClick={() => setShowContactModal(true)}
+                className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"
+              >
+                Get My Bundle Quote
+              </button>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
       {/* Comparison Table */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
         <div className="container max-w-7xl mx-auto">

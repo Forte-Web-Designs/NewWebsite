@@ -590,6 +590,13 @@ export default function SeoDesignPage() {
                     <div className="text-gray-500 dark:text-gray-400 text-sm">setup fee + monthly</div>
                   </div>
                   
+                  <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-3 mb-4">
+                    <p className="text-sm text-green-700 dark:text-green-300">
+                      💡 <strong>Bundle & Save:</strong> Combine this layer with Foundation or Scaling to save up to $200/month. 
+                      <Link href="/pricing" className="font-semibold underline ml-1">See bundle pricing →</Link>
+                    </p>
+                  </div>
+                  
                   <div className="text-center">
                     <LightButton href="/contact" className="w-full">Start My Growth Layer</LightButton>
                   </div>

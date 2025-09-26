@@ -513,6 +513,13 @@ export default function GooglePPCAdsPage() {
                     </div>
                   </div>
                   
+                  <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg p-3 mb-4">
+                    <p className="text-sm text-green-700 dark:text-green-300">
+                      💡 <strong>Bundle & Save:</strong> Combine this layer with Foundation or Growth to save up to $200/month. 
+                      <Link href="/pricing" className="font-semibold underline ml-1">See bundle pricing →</Link>
+                    </p>
+                  </div>
+                  
                   <LightButton href="/contact" className="w-full">Start My Scaling Layer</LightButton>
                 </div>
 
