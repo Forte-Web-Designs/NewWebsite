@@ -23,7 +23,7 @@ export default function IndustriesPage() {
       name: 'Plumbers',
       icon: '🔧',
       href: '/industries/plumbers',
-      description: 'Emergency-ready websites that convert mobile traffic into service calls',
+      description: 'Smart reception + automated follow-up that turns emergency calls into booked jobs',
       features: ['24/7 Emergency Contact', 'Local SEO', 'Mobile-First Design', 'Review Integration'],
       available: true,
       clients: '8',
@@ -33,7 +33,7 @@ export default function IndustriesPage() {
       name: 'Restaurants',
       icon: '🍕',
       href: '/industries/restaurants',
-      description: 'Restaurant websites that fill tables and drive online orders with mobile-first design',
+      description: 'Mobile-first menus, online ordering, and automated reminders that keep tables full',
       features: ['Mobile-Optimized Menus', 'Local SEO & Maps', 'Online Ordering Integration', 'Review Display'],
       available: true,
       clients: '8',
@@ -43,7 +43,7 @@ export default function IndustriesPage() {
       name: 'Landscapers',
       icon: '🌿',
       href: '/industries/landscapers',
-      description: 'Visual websites that turn visitors into local leads with stunning project galleries',
+      description: 'Before/after galleries with booking flows and CRM integration to manage seasonal demand',
       features: ['Before/After Galleries', 'Seasonal Services', 'Local SEO', 'Mobile Booking'],
       available: true,
       clients: '12',
@@ -53,7 +53,7 @@ export default function IndustriesPage() {
       name: 'Handyman Services',
       icon: '🛠️',
       href: '/industries/handyman',
-      description: 'Fast, mobile-ready websites that turn "fix-it" searches into real paying jobs',
+      description: 'Instant tap-to-call buttons, follow-up automations, and dashboards that track every request',
       features: ['Tap-to-Call Optimization', 'Local SEO & Zip Targeting', 'Before/After Galleries', 'Trust Building'],
       available: true,
       clients: '6',
@@ -63,7 +63,7 @@ export default function IndustriesPage() {
       name: 'Painters',
       icon: '🖌️',
       href: '/industries/painters',
-      description: 'Clean, professional painter websites that turn brush strokes into booked jobs',
+      description: 'Dynamic project galleries, mobile quotes, and systems that keep leads warm until they book',
       features: ['Dynamic Project Galleries', 'Service-Specific Pages', 'Mobile Quote CTAs', 'Local SEO'],
       available: true,
       clients: '7',
@@ -73,7 +73,7 @@ export default function IndustriesPage() {
       name: 'Construction',
       icon: '🏗️',
       href: '/industries/construction',
-      description: 'Custom-coded construction websites built to win bids and build trust with project showcases',
+      description: 'Integrated project portfolios, CRM-based bid management, and lead tracking dashboards',
       features: ['Project Portfolio Showcase', 'Mobile Quote Tools', 'Trust Indicators', 'Bid Request Forms'],
       available: true,
       clients: '10',
@@ -83,7 +83,7 @@ export default function IndustriesPage() {
       name: 'Healthcare',
       icon: '⚕️',
       href: '/industries/healthcare',
-      description: 'HIPAA-aware websites that build trust, increase appointments, and comply with regulations',
+      description: 'Appointment booking + automated reminders that reduce no-shows and increase patient flow',
       features: ['HIPAA-Aware Setup', 'Appointment Integration', 'Provider Bios', 'Local SEO'],
       available: true,
       clients: '8',
@@ -93,7 +93,7 @@ export default function IndustriesPage() {
       name: 'HVAC Companies',
       icon: '🌡️',
       href: '/industries/hvac',
-      description: 'Mobile-first websites that bring the heat and cool new leads for heating & cooling contractors',
+      description: '24/7 emergency response automations, seasonal service campaigns, and lead dashboards',
       features: ['Emergency Contact Buttons', 'Seasonal Specials', 'Online Booking', 'Local SEO'],
       available: true,
       clients: '12',
@@ -103,7 +103,7 @@ export default function IndustriesPage() {
       name: 'Electricians',
       icon: '⚡',
       href: '/industries/electricians',
-      description: 'Mobile-first websites that power up lead generation and capture emergency service calls',
+      description: 'Fast-response call optimization + automated intake that prioritizes high-value service calls',
       features: ['Emergency Call Optimization', 'License & Insurance Display', 'Service Area Maps', 'Online Estimates'],
       available: true,
       clients: '18',
@@ -115,22 +115,22 @@ export default function IndustriesPage() {
     {
       icon: '🎯',
       title: 'Industry Expertise',
-      description: 'We understand your specific business challenges, customer behavior, and industry requirements.'
+      description: 'We understand the workflows and lead challenges unique to your trade.'
     },
     {
       icon: '⚡',
       title: 'Faster Results',
-      description: 'No learning curve. We know what works in your industry and implement proven strategies immediately.'
+      description: 'Proven playbooks that start generating leads immediately.'
     },
     {
       icon: '📈',
       title: 'Higher Conversions',
-      description: 'Industry-specific features and messaging that speak directly to your target customers.'
+      description: 'Smart automations that turn inquiries into appointments.'
     },
     {
       icon: '🏆',
       title: 'Competitive Advantage',
-      description: 'Stand out from generic websites with industry-tailored design and functionality.'
+      description: 'Systems built to outperform generic marketing agencies.'
     }
   ];
 
@@ -145,10 +145,10 @@ export default function IndustriesPage() {
                 🏭 Professional Industry Specialization
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Industries We Serve — <span className="text-blue-300">Growth Systems for Real Businesses</span>
+                Industries We Serve — <span className="text-blue-300">Tailored Growth Systems for Every Business</span>
               </h1>
               <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-                We don't just build websites. We design growth systems tailored to the unique challenges of your industry. From capturing more leads to automating follow-up and integrating your operations, Forte helps you scale with predictable, measurable results.
+                Every industry has unique challenges. That's why we don't just build websites — we design complete growth systems. From instant lead capture to automated follow-up and CRM integration, we help you solve industry-specific problems and scale with measurable, predictable results.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -171,10 +171,10 @@ export default function IndustriesPage() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Why <span className="text-blue-600">Professional Industry-Specific</span> Websites Work Better
+                Why <span className="text-blue-600">Industry-Specific Growth Systems</span> Work Better
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                We've learned that one-size-fits-all websites don't convert customers effectively. Each industry has unique customer behaviors, pain points, and conversion triggers that require professional expertise.
+                Generic websites don't solve real business problems. Your industry has specific customer behaviors, lead flow issues, and operational needs. We design systems that address those directly — giving you faster results, higher conversions, and a competitive edge.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -280,10 +280,10 @@ export default function IndustriesPage() {
                   🏆 Featured Industry
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Plumber Websites That Convert Emergency Calls
+                  Plumber Growth Systems That Convert Emergency Calls
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  We've built websites for dozens of plumbing companies and understand exactly what converts emergency calls into customers. Our plumbing clients convert 2–3x more local leads because their websites speak directly to plumbing customers.
+                  We've helped dozens of plumbing companies turn emergency calls into booked jobs. With smart reception, automated reminders, and dashboards to track every lead, our plumber clients see 2–3x more booked jobs within months.
                 </p>
                 
                 <div className="space-y-4 mb-8">
@@ -292,8 +292,8 @@ export default function IndustriesPage() {
                       <span className="text-blue-600">📱</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Mobile-First Emergency Design</div>
-                      <div className="text-gray-600 dark:text-gray-400">73% of plumbing searches happen on mobile during emergencies</div>
+                      <div className="font-semibold text-gray-900 dark:text-white">Mobile-first design optimized for emergency calls</div>
+                      <div className="text-gray-600 dark:text-gray-400">Instant tap-to-call buttons and emergency contact forms</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
@@ -301,17 +301,26 @@ export default function IndustriesPage() {
                       <span className="text-blue-600">🗺️</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Local SEO Domination</div>
+                      <div className="font-semibold text-gray-900 dark:text-white">Local SEO domination with map pack rankings</div>
                       <div className="text-gray-600 dark:text-gray-400">Rank #1 for "emergency plumber [city]" searches</div>
                     </div>
                   </div>
                   <div className="flex items-center gap-3">
                     <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600">💰</span>
+                      <span className="text-blue-600">🤖</span>
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Trust-Building Elements</div>
-                      <div className="text-gray-600 dark:text-gray-400">Transparent pricing, licensing, and customer reviews</div>
+                      <div className="font-semibold text-gray-900 dark:text-white">Smart reception + follow-up sequences to book jobs 24/7</div>
+                      <div className="text-gray-600 dark:text-gray-400">Automated texts and emails that keep prospects warm</div>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center">
+                      <span className="text-blue-600">📊</span>
+                    </div>
+                    <div>
+                      <div className="font-semibold text-gray-900 dark:text-white">Lead dashboards that track calls, jobs, and ROI</div>
+                      <div className="text-gray-600 dark:text-gray-400">See exactly where your best jobs come from</div>
                     </div>
                   </div>
                 </div>
@@ -326,23 +335,23 @@ export default function IndustriesPage() {
             <SimpleScrollReveal direction="right" delay={200}>
               <div className="relative">
                 <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
-                  <h3 className="text-xl font-bold mb-6 text-center">Plumber Website Results</h3>
+                  <h3 className="text-xl font-bold mb-6 text-center">Plumber Growth System Results</h3>
                   <div className="grid grid-cols-2 gap-6">
                     <div className="text-center">
                       <div className="text-3xl font-bold mb-1">67%</div>
-                      <div className="text-sm text-blue-100">More Emergency Calls</div>
+                      <div className="text-sm text-blue-100">More Booked Jobs</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">15+</div>
-                      <div className="text-sm text-blue-100">Plumbing Clients</div>
+                      <div className="text-3xl font-bold mb-1">85%</div>
+                      <div className="text-sm text-blue-100">Faster Response Times</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">2.3x</div>
-                      <div className="text-sm text-blue-100">Higher Rankings</div>
+                      <div className="text-3xl font-bold mb-1">2-3x</div>
+                      <div className="text-sm text-blue-100">Higher Conversion Rates</div>
                     </div>
                     <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">89%</div>
-                      <div className="text-sm text-blue-100">Client Retention</div>
+                      <div className="text-3xl font-bold mb-1">24/7</div>
+                      <div className="text-sm text-blue-100">Lead Capture</div>
                     </div>
                   </div>
                 </div>
@@ -355,7 +364,7 @@ export default function IndustriesPage() {
                     ))}
                   </div>
                   <p className="text-sm text-gray-600 dark:text-gray-400">
-                    "Emergency calls increased 67% in 6 months. Best investment we made."
+                    "Booked jobs increased 67% in 6 months. The automated follow-up system is a game-changer."
                   </p>
                   <div className="text-xs text-gray-500 mt-1">- Dallas Plumbing Pro</div>
                 </div>
@@ -373,7 +382,7 @@ export default function IndustriesPage() {
               Ready to Transform Your Business?
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Ready to see how a growth system could transform your business? Book your free Growth Audit today and let's map out your path to measurable results.
+              Every industry has unique challenges — and we've built systems to solve them. Book your free Growth Audit today and let's map out how we can help your business grow predictably.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
