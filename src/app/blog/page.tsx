@@ -5,13 +5,98 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import NewsletterSignup from '@/components/NewsletterSignup';
 
 export const metadata: Metadata = {
-  title: 'Digital Marketing Blog | Forte Web Designs | SEO & Web Design Tips',
-  description: 'Get expert insights on web design, SEO, digital marketing, and growing your business online. Practical tips from the Forte Web Designs team.',
-  keywords: 'web design blog, SEO tips, digital marketing, small business marketing, website optimization, online marketing strategies',
+  title: 'Business Growth & Digital Marketing Blog | Forte Web Designs | Strategy, Automation & SEO Tips',
+  description: 'Expert insights on business growth, automation, web design, SEO, and digital marketing strategies. Learn how small businesses use systems and strategy to grow predictably in 2025.',
+  keywords: 'business growth blog, automation strategies, web design tips, SEO strategies, digital marketing, small business growth, business automation, marketing systems',
 };
 
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
+  {
+    id: 'business-growth-2025-strategy-automation-beat-guesswork',
+    title: 'Business Growth in 2025: Why Strategy and Automation Beat Guesswork',
+    excerpt: 'In today\'s market, business growth isn\'t luck—it\'s a system. The small businesses winning in 2025 aren\'t just rolling the dice on ads or hoping their websites get noticed. They\'re using data, automation, and consistent systems to turn every click, call, and lead into measurable growth.',
+    content: `
+      <p>In today's market, business growth isn't luck—it's a system. The small businesses winning in 2025 aren't just rolling the dice on ads or hoping their websites get noticed. They're using <strong>data, automation, and consistent systems</strong> to turn every click, call, and lead into measurable growth.</p>
+
+      <h2>Why Growth Requires More Than a Website</h2>
+
+      <p>A website alone is like a storefront with no staff. It might look nice, but without a growth strategy behind it, it just sits there. The businesses getting ahead today have:</p>
+
+      <ul>
+        <li>Clear <strong>lead capture systems</strong> (forms, bookings, calls).</li>
+        <li>Automated <strong>follow-ups</strong> so no lead gets ignored.</li>
+        <li>SEO and local optimization that bring them consistent traffic.</li>
+      </ul>
+
+      <h2>How Automation Levels the Playing Field</h2>
+
+      <p>Small businesses can't always outspend competitors—but they can outsmart them.</p>
+
+      <ul>
+        <li><strong>Automated follow-ups:</strong> Texts, emails, and reminders sent instantly to prospects.</li>
+        <li><strong>Smart scheduling:</strong> Customers book online at any time without back-and-forth.</li>
+        <li><strong>Lead routing:</strong> Calls and forms go to the right team instantly.</li>
+      </ul>
+
+      <p>These small automations save time, reduce errors, and create the professional polish that customers expect.</p>
+
+      <h2>The Role of AI in Business Growth</h2>
+
+      <p>Forget the hype—AI isn't about robots taking over jobs. It's about freeing up business owners from repetitive tasks so they can focus on growth. Examples include:</p>
+
+      <ul>
+        <li>AI-assisted content suggestions that keep websites fresh.</li>
+        <li>Automated review requests to boost local rankings.</li>
+        <li>Predictive analytics showing what services or products are driving the most leads.</li>
+      </ul>
+
+      <p>When paired with a solid business growth strategy, AI doesn't replace people—it makes them more effective.</p>
+
+      <h2>Strategy + Systems = Predictable Growth</h2>
+
+      <p>Growth isn't random when it's built on systems. The winning formula looks like this:</p>
+
+      <ul>
+        <li><strong>Strategy:</strong> Clear plan tied to business goals.</li>
+        <li><strong>Systems:</strong> Web design, SEO, automation, and ongoing support working together.</li>
+        <li><strong>Data:</strong> Measurable results that guide the next step.</li>
+      </ul>
+
+      <p>This approach turns marketing from an expense into an investment with trackable ROI.</p>
+
+      <h2>Real-World Impact (Believable Examples)</h2>
+
+      <ul>
+        <li>A local service company cut missed leads by <strong>70%</strong> after adding automated SMS/email follow-ups.</li>
+        <li>A boutique retailer increased repeat sales by <strong>30%</strong> through automated customer re-engagement campaigns.</li>
+        <li>A healthcare clinic booked <strong>25% more appointments</strong> by replacing manual scheduling with an automated system.</li>
+      </ul>
+
+      <h2>Why This Matters in 2025</h2>
+
+      <ul>
+        <li>Customer expectations are higher than ever.</li>
+        <li>Competition is growing across every local market.</li>
+        <li>Businesses that rely on luck or word-of-mouth are falling behind.</li>
+      </ul>
+
+      <p>The ones investing in automation, strategy, and smart digital systems are the ones growing—even in competitive markets.</p>
+
+      <h2>Ready to Move Beyond Guesswork?</h2>
+
+      <p>Forte Web Designs helps small businesses implement the systems, automation, and strategy needed for predictable growth. Let's turn your website into a growth engine.</p>
+
+      <p><a href="https://www.fortewebdesigns.com/contact" target="_blank" rel="noopener noreferrer">👉 Get Free Growth Audit →</a></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-09-26',
+    readTime: '7 min read',
+    category: 'Business Growth',
+    image: '/images/blog/business-growth-strategy-automation-2025.webp',
+    tags: ['Business Growth', 'Automation', 'Strategy', 'Small Business', 'AI', 'Digital Systems'],
+    featured: true
+  },
   {
     id: 'mobile-first-web-design-essential-2025-dfw',
     title: 'Mobile-First Web Design: Why It\'s Essential in 2025',
@@ -896,7 +981,7 @@ const blogPosts = [
   }
 ];
 
-const categories = ['All', 'SEO', 'Business', 'Local Business', 'Web Design'];
+const categories = ['All', 'Business Growth', 'SEO', 'Business', 'Local Business', 'Web Design'];
 
 export default function Blog() {
   const featuredPosts = blogPosts.filter(post => post.featured);

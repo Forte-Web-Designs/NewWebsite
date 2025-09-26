@@ -14,41 +14,25 @@ type FAQItem = {
 const faqData: FAQItem[] = [
   {
     question: "What is the Forte Ecosystem™?",
-    answer: "The Forte Ecosystem™ is our complete digital presence solution where everything works together seamlessly. Instead of juggling multiple vendors for your website, SEO, PPC, and social media, you get one expert team managing all components as an integrated system for better results and lower total costs."
+    answer: "A bundled Growth System — website, SEO, scaling features, and social media — all managed by one expert team."
   },
   {
-    question: "Can I start with just a website and add more later?",
-    answer: "Absolutely! Most clients start with Forte Foundation™ website design package ($200/month) and add services as they grow. You can upgrade to include SEO, PPC, or social media management at any time. Our ecosystem is designed to scale with your business needs."
+    question: "Can I start small?",
+    answer: "Yes. Begin with Foundation and add layers as your business grows."
   },
   {
-    question: "What's the difference between Foundation and Pro website design packages?",
-    answer: "Foundation includes your custom-coded website, basic analytics, and standard support. Pro adds advanced analytics, priority support, unlimited content updates, conversion optimization, and a dedicated account manager for $100/month more."
-  },
-  {
-    question: "Do you offer one-time websites?",
-    answer: "Yes! We offer one-time builds: 5 pages for $2,500 or 10 pages for $4,300. However, most clients prefer our monthly plans because they include ongoing optimization, updates, security, and support that keep your site performing at its best."
-  },
-  {
-    question: "Why do monthly plans have a 12-month minimum?",
-    answer: "Real results in SEO, PPC, and digital marketing take time. The 12-month commitment allows us to implement proven strategies, track performance, and optimize for meaningful growth rather than quick fixes. This ensures you get the ROI you're investing in."
-  },
-  {
-    question: "Do I need to manage any of the marketing pieces?",
-    answer: "Nope! That's the beauty of the Forte Ecosystem™. We handle everything - from website updates and SEO optimization to PPC campaign management and social media posting. You just focus on running your business while we handle all the digital marketing."
-  },
-  {
-    question: "What's included in Forte Care™?",
-    answer: "Forte Care™ includes 24/7 website monitoring, security updates, performance optimization, backup management, uptime monitoring, and technical support. It's included with all our monthly plans to ensure your digital presence stays secure and fast."
+    question: "Why a 12-month minimum?",
+    answer: "Growth strategies like SEO and ads require consistency to deliver measurable results."
   },
   {
     question: "What results should I expect?",
-    answer: "Results vary by industry and competition, but most clients see improved website speed (under 2 seconds), better search rankings within 3-6 months, increased organic traffic, and more qualified leads. We provide monthly reports showing your specific metrics and ROI."
+    answer: "Realistic improvements in rankings, steady traffic growth, and more qualified leads — not overnight promises."
   }
 ];
 
 export const metadata: Metadata = {
-  title: "Forte Ecosystem™ - Complete Digital Presence Solution",
-  description: "Your entire digital presence, handled. From lightning-fast websites to SEO, PPC, and social media - one team, one system, unlimited growth.",
+  title: "Forte Ecosystem™ | Complete Digital Growth System",
+  description: "The Forte Ecosystem™ combines web design, SEO, PPC, social media, and support into one integrated system. One team, one strategy, faster results.",
 };
 
 export default function ForteEcosystemPage() {
@@ -65,13 +49,11 @@ export default function ForteEcosystemPage() {
           </span>
           
           <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-gray-100 mb-6 leading-tight">
-            The Forte Ecosystem™
-            <br />
-            <span className="text-blue-600">Your Entire Digital Presence, Handled</span>
+            The Forte Ecosystem™ — Your Complete Growth System
           </h1>
           
           <p className="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-8 sm:mb-10 max-w-4xl mx-auto leading-relaxed">
-            One expert team. One powerful system. Everything you need to build, grow, and scale online - without juggling vendors or chasing down results.
+            One team. One system. Every digital growth layer your business needs — working together seamlessly.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
@@ -79,7 +61,7 @@ export default function ForteEcosystemPage() {
               Start My Ecosystem
             </LightButton>
             <DarkButton href="/checkup" className="text-lg px-8 py-4">
-              Get Free Website Analysis
+              Book Free Growth Audit
             </DarkButton>
           </div>
 
@@ -91,25 +73,25 @@ export default function ForteEcosystemPage() {
                   <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/50 rounded-xl flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">🏗️</span>
                   </div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Foundation</p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Foundation — Your Website</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-green-100 dark:bg-green-900/50 rounded-xl flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">📈</span>
                   </div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">SEO/PPC</p>
-                </div>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center mx-auto mb-3">
-                    <span className="text-2xl">📱</span>
-                  </div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Social Media</p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Growth — SEO & PPC</p>
                 </div>
                 <div className="text-center">
                   <div className="w-16 h-16 bg-orange-100 dark:bg-orange-900/50 rounded-xl flex items-center justify-center mx-auto mb-3">
                     <span className="text-2xl">⚡</span>
                   </div>
-                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Pro Features</p>
+                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Scaling — Pro Features</p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900/50 rounded-xl flex items-center justify-center mx-auto mb-3">
+                    <span className="text-2xl">📱</span>
+                  </div>
+                  <p className="text-sm font-medium text-gray-900 dark:text-gray-100">Ecosystem Complete — Social Media</p>
                 </div>
               </div>
               <div className="mt-6 pt-6 border-t border-gray-200 dark:border-gray-600">
@@ -122,15 +104,15 @@ export default function ForteEcosystemPage() {
         </div>
       </section>
 
-      {/* How It Works - 4 Steps */}
+      {/* Ecosystem Layers Overview */}
       <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-              How the Ecosystem Works
+              Growth System Layers
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Start small, grow smart. Add services as your business scales - everything integrates perfectly.
+              Four integrated layers that work together to build, grow, and scale your business online.
             </p>
           </div>
           
@@ -138,49 +120,57 @@ export default function ForteEcosystemPage() {
             <div className="text-center">
               <div className="relative mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-3xl font-bold text-white">1</span>
+                  <span className="text-3xl">🏗️</span>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Foundation</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                Start with a lightning-fast, custom-coded website that converts visitors into customers.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <div className="relative mb-6">
-                <div className="w-20 h-20 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-3xl font-bold text-white">2</span>
-                </div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Pro Features</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                Upgrade to advanced analytics, priority support, and conversion optimization tools.
-              </p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Foundation — Your Website</h3>
+              <ul className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed space-y-2">
+                <li>• Custom-coded, lightning-fast site</li>
+                <li>• Hosting, SSL, analytics setup</li>
+                <li>• Mobile-first design</li>
+              </ul>
             </div>
             
             <div className="text-center">
               <div className="relative mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-3xl font-bold text-white">3</span>
+                  <span className="text-3xl">📈</span>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">SEO & PPC</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                Add search engine optimization and Google Ads to drive targeted traffic and leads.
-              </p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Growth — SEO & PPC</h3>
+              <ul className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed space-y-2">
+                <li>• Full SEO strategy & optimization</li>
+                <li>• Google Ads management</li>
+                <li>• Local SEO + directory listings</li>
+              </ul>
+            </div>
+            
+            <div className="text-center">
+              <div className="relative mb-6">
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-full flex items-center justify-center mx-auto">
+                  <span className="text-3xl">⚡</span>
+                </div>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Scaling — Pro Features</h3>
+              <ul className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed space-y-2">
+                <li>• Unlimited content updates</li>
+                <li>• Advanced analytics + A/B testing</li>
+                <li>• Dedicated account manager</li>
+              </ul>
             </div>
             
             <div className="text-center">
               <div className="relative mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto">
-                  <span className="text-3xl font-bold text-white">4</span>
+                  <span className="text-3xl">📱</span>
                 </div>
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Social Media</h3>
-              <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
-                Complete the ecosystem with professional social media management and engagement.
-              </p>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-3">Ecosystem Complete — Social Media</h3>
+              <ul className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed space-y-2">
+                <li>• Posting + engagement</li>
+                <li>• Custom graphics + campaigns</li>
+                <li>• Social media advertising</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -211,23 +201,19 @@ export default function ForteEcosystemPage() {
               <ul className="space-y-4 text-red-700 dark:text-red-300">
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">❌</span>
-                  <span>Multiple vendors who don't talk to each other</span>
+                  <span>Multiple vendors with conflicting strategies</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">❌</span>
-                  <span>Conflicting strategies and mixed messages</span>
+                  <span>Higher costs across scattered contracts</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">❌</span>
-                  <span>You become the project manager for everything</span>
+                  <span>No accountability, slower results</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-red-500 mt-1">❌</span>
-                  <span>Higher total costs from multiple contracts</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-red-500 mt-1">❌</span>
-                  <span>Slower results and unclear accountability</span>
+                  <span>You become the project manager</span>
                 </li>
               </ul>
             </div>
@@ -244,23 +230,19 @@ export default function ForteEcosystemPage() {
               <ul className="space-y-4 text-green-700 dark:text-green-300">
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">✅</span>
-                  <span>One team managing everything in coordination</span>
+                  <span>One coordinated team, unified system</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">✅</span>
-                  <span>Unified strategy across all digital channels</span>
+                  <span>Lower bundled cost vs separate vendors</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">✅</span>
-                  <span>You focus on your business, we handle the tech</span>
+                  <span>Clear reporting + accountability</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="text-green-500 mt-1">✅</span>
-                  <span>Bundle pricing saves money vs separate vendors</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="text-green-500 mt-1">✅</span>
-                  <span>Faster results with clear monthly reporting</span>
+                  <span>Faster results from integrated strategy</span>
                 </li>
               </ul>
             </div>
@@ -286,35 +268,22 @@ export default function ForteEcosystemPage() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-3xl">🏗️</span>
                 <div>
-                  <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300">Forte Foundation™</h3>
-                  <p className="text-sm text-blue-600 dark:text-blue-400">Website Design Package</p>
+                  <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300">Forte Foundation™ (Website)</h3>
                 </div>
               </div>
               
               <ul className="space-y-3 text-blue-700 dark:text-blue-300">
                 <li className="flex items-center gap-3">
                   <span>⚡</span>
-                  <span>Custom-coded website (no WordPress)</span>
+                  <span>Custom-coded (no WordPress)</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>📱</span>
-                  <span>Mobile-first responsive design</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>🔒</span>
-                  <span>SSL certificate and security monitoring</span>
+                  <span>Mobile-first + SSL security</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>📊</span>
-                  <span>Google Analytics and tracking setup</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>🌐</span>
-                  <span>Domain management and hosting</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>💬</span>
-                  <span>Basic support and monthly check-ins</span>
+                  <span>Analytics & performance tracking</span>
                 </li>
               </ul>
             </div>
@@ -324,35 +293,22 @@ export default function ForteEcosystemPage() {
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-3xl">⚡</span>
                 <div>
-                  <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">Forte Pro™</h3>
-                  <p className="text-sm text-purple-600 dark:text-purple-400">Website Design Package</p>
+                  <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300">Forte Pro™ (Scaling Layer)</h3>
                 </div>
               </div>
               
               <ul className="space-y-3 text-purple-700 dark:text-purple-300">
                 <li className="flex items-center gap-3">
-                  <span>🎯</span>
-                  <span>Advanced conversion optimization</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>📈</span>
-                  <span>Enhanced analytics and reporting</span>
-                </li>
-                <li className="flex items-center gap-3">
                   <span>🔄</span>
                   <span>Unlimited content updates</span>
                 </li>
                 <li className="flex items-center gap-3">
-                  <span>⚡</span>
-                  <span>Priority support and response</span>
+                  <span>📈</span>
+                  <span>Advanced analytics + A/B testing</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>👤</span>
-                  <span>Dedicated account manager</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>🧪</span>
-                  <span>A/B testing and optimization</span>
+                  <span>Priority support + dedicated account manager</span>
                 </li>
               </ul>
             </div>
@@ -361,33 +317,25 @@ export default function ForteEcosystemPage() {
             <div className="bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-800 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-3xl">📈</span>
-                <h3 className="text-2xl font-bold text-green-800 dark:text-green-300">Forte SEO™ & PPC</h3>
+                <h3 className="text-2xl font-bold text-green-800 dark:text-green-300">Forte SEO™ & PPC (Growth Layer)</h3>
               </div>
               
               <ul className="space-y-3 text-green-700 dark:text-green-300">
                 <li className="flex items-center gap-3">
                   <span>🔍</span>
-                  <span>Keyword research and strategy</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>📝</span>
-                  <span>Content optimization and creation</span>
+                  <span>Keyword research + content optimization</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>🔗</span>
-                  <span>Link building and local SEO</span>
+                  <span>Local SEO + link building</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>💰</span>
-                  <span>Google Ads management and optimization</span>
+                  <span>Google Ads setup + management</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>📊</span>
-                  <span>Monthly ranking and traffic reports</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>🎯</span>
-                  <span>Lead tracking and conversion analysis</span>
+                  <span>Monthly reports + lead tracking</span>
                 </li>
               </ul>
             </div>
@@ -396,33 +344,25 @@ export default function ForteEcosystemPage() {
             <div className="bg-orange-50 dark:bg-orange-900/20 border border-orange-200 dark:border-orange-800 rounded-2xl p-8">
               <div className="flex items-center gap-3 mb-6">
                 <span className="text-3xl">📱</span>
-                <h3 className="text-2xl font-bold text-orange-800 dark:text-orange-300">Forte Social™</h3>
+                <h3 className="text-2xl font-bold text-orange-800 dark:text-orange-300">Forte Social™ (Ecosystem Layer)</h3>
               </div>
               
               <ul className="space-y-3 text-orange-700 dark:text-orange-300">
                 <li className="flex items-center gap-3">
-                  <span>📅</span>
-                  <span>Content calendar and strategy</span>
-                </li>
-                <li className="flex items-center gap-3">
                   <span>🎨</span>
-                  <span>Custom graphics and post design</span>
+                  <span>Custom graphics + content calendar</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>📱</span>
-                  <span>Multi-platform management</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>💬</span>
-                  <span>Community management and responses</span>
-                </li>
-                <li className="flex items-center gap-3">
-                  <span>📊</span>
-                  <span>Engagement analytics and reporting</span>
+                  <span>Multi-platform posting & engagement</span>
                 </li>
                 <li className="flex items-center gap-3">
                   <span>🎯</span>
-                  <span>Social media advertising campaigns</span>
+                  <span>Social ad campaigns</span>
+                </li>
+                <li className="flex items-center gap-3">
+                  <span>📊</span>
+                  <span>Performance reporting</span>
                 </li>
               </ul>
             </div>
@@ -435,10 +375,10 @@ export default function ForteEcosystemPage() {
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-              Your Forte Ecosystem™ Journey
+              Ecosystem Journey
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Start where you are, grow when you're ready. Every step builds on the last.
+              A step-by-step visual of how to build your complete Growth System.
             </p>
           </div>
           
@@ -452,41 +392,35 @@ export default function ForteEcosystemPage() {
                     <span className="text-white font-bold">1</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Foundation</h3>
-                  <p className="text-3xl font-bold text-blue-600 mb-2">$200</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">per month</p>
                 </div>
                 <p className="text-sm text-center text-gray-600 dark:text-gray-400">
-                  Lightning-fast website with hosting, security, and basic analytics
+                  Launch with custom website
                 </p>
               </div>
               
               {/* Step 2 */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border-2 border-purple-200 dark:border-purple-700">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border-2 border-green-200 dark:border-green-700">
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">2</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">+ Pro Features</h3>
-                  <p className="text-3xl font-bold text-purple-600 mb-2">$300</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">per month total</p>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Growth</h3>
                 </div>
                 <p className="text-sm text-center text-gray-600 dark:text-gray-400">
-                  Advanced analytics, unlimited updates, and priority support
+                  Add SEO & PPC to drive traffic
                 </p>
               </div>
               
               {/* Step 3 */}
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border-2 border-green-200 dark:border-green-700">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 border-2 border-purple-200 dark:border-purple-700">
                 <div className="text-center mb-4">
-                  <div className="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center mx-auto mb-3">
+                  <div className="w-12 h-12 bg-purple-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">3</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">+ SEO & PPC</h3>
-                  <p className="text-3xl font-bold text-green-600 mb-2">$800</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">per month total</p>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Scaling</h3>
                 </div>
                 <p className="text-sm text-center text-gray-600 dark:text-gray-400">
-                  Search optimization and Google Ads to drive targeted traffic
+                  Unlock Pro Features & analytics
                 </p>
               </div>
               
@@ -496,12 +430,10 @@ export default function ForteEcosystemPage() {
                   <div className="w-12 h-12 bg-orange-500 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-white font-bold">4</span>
                   </div>
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">+ Social Media</h3>
-                  <p className="text-3xl font-bold text-orange-600 mb-2">$1,100</p>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">per month total</p>
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-gray-100">Ecosystem</h3>
                 </div>
                 <p className="text-sm text-center text-gray-600 dark:text-gray-400">
-                  Complete ecosystem with social media management and engagement
+                  Complete system with Social Media
                 </p>
               </div>
             </div>
@@ -518,15 +450,15 @@ export default function ForteEcosystemPage() {
         </div>
       </section>
 
-      {/* Bundle Pricing */}
+      {/* Pricing & Bundles */}
       <section className="py-12 sm:py-16 md:py-20 bg-white dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-100 mb-6">
-              Save Money with Ecosystem Bundles
+              Pricing & Bundles
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-              Get everything you need at a lower total cost than separate services.
+              Realistic pricing tiers with bundle highlights showing your savings.
             </p>
           </div>
           
@@ -534,24 +466,22 @@ export default function ForteEcosystemPage() {
             {/* Starter Bundle */}
             <div className="bg-blue-50 dark:bg-blue-900/20 border-2 border-blue-200 dark:border-blue-700 rounded-2xl p-8 text-center">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-2">Starter Bundle</h3>
-                <p className="text-4xl font-bold text-blue-600 mb-2">$450</p>
-                <p className="text-sm text-blue-600 dark:text-blue-400">per month</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Save $50/month vs separate</p>
+                <h3 className="text-2xl font-bold text-blue-800 dark:text-blue-300 mb-2">Starter Bundle — $450/mo</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Save $50 vs separate</p>
               </div>
               
               <div className="space-y-3 text-left text-blue-700 dark:text-blue-300 mb-8">
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Forte Foundation™</span>
+                  <span>Foundation + Pro</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Forte Pro™</span>
+                  <span>Basic SEO setup</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Basic SEO optimization</span>
+                  <span>Save $50 vs separate</span>
                 </div>
               </div>
               
@@ -567,10 +497,8 @@ export default function ForteEcosystemPage() {
               </div>
               
               <div className="mb-6 mt-2">
-                <h3 className="text-2xl font-bold text-green-800 dark:text-green-300 mb-2">Growth Bundle</h3>
-                <p className="text-4xl font-bold text-green-600 mb-2">$750</p>
-                <p className="text-sm text-green-600 dark:text-green-400">per month</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Save $100/month vs separate</p>
+                <h3 className="text-2xl font-bold text-green-800 dark:text-green-300 mb-2">Growth Bundle — $750/mo</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Save $100 vs separate</p>
               </div>
               
               <div className="space-y-3 text-left text-green-700 dark:text-green-300 mb-8">
@@ -588,7 +516,11 @@ export default function ForteEcosystemPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Local SEO & directory listings</span>
+                  <span>Local SEO + directory listings</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <span className="text-green-500">✓</span>
+                  <span>Save $100 vs separate</span>
                 </div>
               </div>
               
@@ -600,10 +532,8 @@ export default function ForteEcosystemPage() {
             {/* Dominate Bundle */}
             <div className="bg-purple-50 dark:bg-purple-900/20 border-2 border-purple-200 dark:border-purple-700 rounded-2xl p-8 text-center">
               <div className="mb-6">
-                <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300 mb-2">Dominate Bundle</h3>
-                <p className="text-4xl font-bold text-purple-600 mb-2">$950</p>
-                <p className="text-sm text-purple-600 dark:text-purple-400">per month</p>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Save $150/month vs separate</p>
+                <h3 className="text-2xl font-bold text-purple-800 dark:text-purple-300 mb-2">Dominate Bundle — $950/mo</h3>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-2">Save $150 vs separate</p>
               </div>
               
               <div className="space-y-3 text-left text-purple-700 dark:text-purple-300 mb-8">
@@ -617,11 +547,11 @@ export default function ForteEcosystemPage() {
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Social media advertising</span>
+                  <span>Social media ad campaigns</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <span className="text-green-500">✓</span>
-                  <span>Complete ecosystem integration</span>
+                  <span>Save $150 vs separate</span>
                 </div>
               </div>
               
@@ -633,11 +563,8 @@ export default function ForteEcosystemPage() {
           
           <div className="text-center mt-12">
             <p className="text-gray-600 dark:text-gray-400 mb-4">
-              All plans include Forte Care™ security and support. 12-month commitment required for results you can count on.
+              All plans include Forte Care™ support & security. 12-month commitment required for reliable results.
             </p>
-            <DarkButton href="/contact">
-              Schedule Your Ecosystem Strategy Call
-            </DarkButton>
           </div>
         </div>
       </section>
@@ -662,7 +589,7 @@ export default function ForteEcosystemPage() {
       <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-blue-600 via-purple-600 to-indigo-700 text-white px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">
-            Skip the Juggling Act. Get One Team That Does It All.
+            Stop Juggling Vendors. Start Growing with One Complete System.
           </h2>
           <p className="text-xl mb-8 opacity-90 leading-relaxed max-w-3xl mx-auto">
             Stop wasting time with scattered services and unclear results. With Forte Web Designs, everything works together - beautifully.
@@ -673,7 +600,7 @@ export default function ForteEcosystemPage() {
               Start My Ecosystem
             </LightButton>
             <DarkButton href="/checkup" className="border-2 border-white/30 text-lg px-8 py-4">
-              Get a Free Strategy Call
+              Book a Free Strategy Call
             </DarkButton>
           </div>
           

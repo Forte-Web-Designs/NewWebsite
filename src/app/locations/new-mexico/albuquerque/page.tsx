@@ -3,17 +3,17 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Albuquerque Web Design & SEO Services | Forte Web Designs',
-  description: 'Professional web design and SEO services in Albuquerque, New Mexico. Custom websites, local SEO, and digital marketing solutions for Albuquerque businesses.',
+  title: 'Albuquerque Growth Systems & Web Design | Tech & Cultural Business Websites | Forte',
+  description: 'Forte builds Growth Systems for Albuquerque businesses. From tech startups to healthcare to cultural enterprises, we deliver custom-coded websites, SEO automation, and integrations that drive measurable results.',
   openGraph: {
-    title: 'Albuquerque Web Design & SEO Services | Forte Web Designs',
-    description: 'Professional web design and SEO services in Albuquerque, New Mexico. Custom websites, local SEO, and digital marketing solutions for Albuquerque businesses.',
+    title: 'Albuquerque Growth Systems & Web Design | Tech & Cultural Business Websites | Forte',
+    description: 'Forte builds Growth Systems for Albuquerque businesses. From tech startups to healthcare to cultural enterprises, we deliver custom-coded websites, SEO automation, and integrations that drive measurable results.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Forte Web Designs Albuquerque Services',
+        alt: 'Forte Growth Systems Albuquerque Services',
       },
     ],
   },
@@ -31,24 +31,23 @@ export default function AlbuquerquePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              Albuquerque Web Design & SEO
+              Albuquerque Growth Systems — Innovation in the High Desert
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Elevating Albuquerque businesses with innovative web design and SEO solutions. 
-              From high-tech industries to cultural enterprises, we help local businesses thrive digitally.
+              From tech startups to cultural enterprises, we design Growth Systems that help Albuquerque businesses capture more leads, automate operations, and thrive in New Mexico's largest market.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Get Started Today
+                Start My Growth System
               </Link>
               <Link
-                href="/checkup"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
-                Free Website Audit
+                Book Free Growth Audit
               </Link>
             </div>
           </div>
@@ -60,39 +59,31 @@ export default function AlbuquerquePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-              Albuquerque's Dynamic Economy
+              Albuquerque's Innovation Economy
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                  High Desert Innovation
+                  High Desert Innovation Hub
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  As New Mexico's largest city, Albuquerque is a thriving hub of technology, healthcare, 
-                  aerospace, and manufacturing. With over 562,000 residents, it offers diverse opportunities 
-                  for businesses to grow and connect with customers.
+                  Albuquerque isn't just New Mexico's largest city — it's the state's innovation hub. With 562,000+ residents and 38,000+ businesses across technology, healthcare, aerospace, and cultural sectors, success here demands more than a template website. Forte builds Growth Systems that deliver measurable ROI for Albuquerque's diverse economy.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Technology Hub</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Growing tech sector with innovative startups and established companies</p>
-                    </div>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technology Hub</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Albuquerque startups and established firms compete for visibility against larger national brands.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> Foundation websites with custom-coded speed + Growth Layer SEO automation to rank locally and scale nationally.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Healthcare Excellence</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Major medical centers and research facilities</p>
-                    </div>
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Healthcare Excellence</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Medical groups need compliance, trust, and patient-friendly online systems.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> HIPAA-aware design with patient portals, online booking, and secure integrations.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Aerospace & Defense</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Strong aerospace industry requiring advanced digital solutions</p>
-                    </div>
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Aerospace & Defense</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> High-tech industries need credibility and secure digital infrastructure.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> Enterprise-grade Scaling Layer integrations with robust security and performance.</p>
                   </div>
                 </div>
               </div>
@@ -117,6 +108,11 @@ export default function AlbuquerquePage() {
                     <span className="text-gray-600 dark:text-gray-300">Median Income</span>
                     <span className="font-semibold text-gray-900 dark:text-white">$56,000</span>
                   </div>
+                  <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-600">
+                    <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+                      One of the fastest-growing Southwestern markets for startups and cultural enterprises.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,7 +125,7 @@ export default function AlbuquerquePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900 dark:text-white">
-              Our Albuquerque Services
+              Albuquerque Growth Systems
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -139,10 +135,10 @@ export default function AlbuquerquePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  High-Desert Web Design
+                  Foundation Web Design
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Custom websites that capture Albuquerque's innovative spirit and drive business growth.
+                  Custom-coded websites designed for Albuquerque businesses.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -152,10 +148,10 @@ export default function AlbuquerquePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Albuquerque SEO
+                  Growth Layer SEO
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Dominate local search results and connect with Albuquerque's diverse customer base.
+                  SEO automation to dominate Albuquerque search results.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -165,10 +161,10 @@ export default function AlbuquerquePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Digital Marketing
+                  Scaling Layer Marketing
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Comprehensive marketing strategies tailored to Albuquerque's unique market landscape.
+                  Comprehensive digital strategies that integrate CRM, automation, and advanced analytics.
                 </p>
               </div>
             </div>
@@ -194,7 +190,7 @@ export default function AlbuquerquePage() {
                   Desert-Fast Performance
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Lightning-fast websites optimized for Albuquerque's high-altitude, high-speed expectations.
+                  Custom code that thrives at scale, with load times under 2 seconds.
                 </p>
               </div>
               <div className="text-center">
@@ -204,10 +200,10 @@ export default function AlbuquerquePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Cultural Sensitivity
+                  Cultural & Local Sensitivity
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Designs that honor Albuquerque's rich cultural heritage and diverse community.
+                  Designs that honor Albuquerque's cultural mix while performing for tech-driven markets.
                 </p>
               </div>
               <div className="text-center">
@@ -217,10 +213,10 @@ export default function AlbuquerquePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Tech-Savvy Solutions
+                  Tech-Savvy Growth Systems
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Cutting-edge technology that matches Albuquerque's innovative business environment.
+                  Layered systems that evolve with your business — from websites to AI automation.
                 </p>
               </div>
             </div>
@@ -233,23 +229,23 @@ export default function AlbuquerquePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Ready to Elevate Your Albuquerque Business?
+              Ready to Scale in Albuquerque's Innovation Hub?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join innovative Albuquerque businesses that trust Forte Web Designs for digital excellence.
+              Whether you're a tech startup, a healthcare provider, or a cultural business, Forte Growth Systems deliver measurable results tailored to Albuquerque's economy.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Start Your Project
+                Book Free Growth Audit
               </Link>
               <Link
-                href="/checkup"
+                href="/contact"
                 className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Free Website Analysis
+                Start My Growth System
               </Link>
             </div>
           </div>

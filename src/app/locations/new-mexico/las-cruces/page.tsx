@@ -3,17 +3,17 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Las Cruces Web Design & SEO Services | Forte Web Designs',
-  description: 'Professional web design and SEO services in Las Cruces, New Mexico. Custom websites, local SEO, and digital marketing solutions for Las Cruces businesses.',
+  title: 'Las Cruces Growth Systems & Web Design | Education, Agriculture, Bilingual Markets | Forte',
+  description: 'Forte builds Growth Systems for Las Cruces businesses. From NMSU and research to agriculture and manufacturing, we deliver custom-coded websites, SEO automation, and integrations designed to help diverse bilingual markets thrive.',
   openGraph: {
-    title: 'Las Cruces Web Design & SEO Services | Forte Web Designs',
-    description: 'Professional web design and SEO services in Las Cruces, New Mexico. Custom websites, local SEO, and digital marketing solutions for Las Cruces businesses.',
+    title: 'Las Cruces Growth Systems & Web Design | Education, Agriculture, Bilingual Markets | Forte',
+    description: 'Forte builds Growth Systems for Las Cruces businesses. From NMSU and research to agriculture and manufacturing, we deliver custom-coded websites, SEO automation, and integrations designed to help diverse bilingual markets thrive.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Forte Web Designs Las Cruces Services',
+        alt: 'Forte Growth Systems Las Cruces Services',
       },
     ],
   },
@@ -31,24 +31,23 @@ export default function LasCrucesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              Las Cruces Web Design & SEO
+              Las Cruces Growth Systems — Built for Education, Agriculture, and Innovation
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Empowering Las Cruces businesses with innovative web design and SEO solutions. 
-              From agricultural enterprises to tech startups, we help local businesses grow digitally.
+              From New Mexico State University to agricultural leaders, Forte builds Growth Systems that help Las Cruces businesses thrive with custom websites, automation, and integrations that deliver measurable results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Get Started Today
+                Start My Growth System
               </Link>
               <Link
-                href="/checkup"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
-                Free Website Audit
+                Book Free Growth Audit
               </Link>
             </div>
           </div>
@@ -60,39 +59,31 @@ export default function LasCrucesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-              Las Cruces' Growing Economy
+              Las Cruces' Diverse Market
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                  City of the Crosses
+                  Education, Agriculture, and Innovation Hub
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Las Cruces is New Mexico's second-largest city and a growing hub for education, 
-                  agriculture, manufacturing, and research. With over 111,000 residents and home to 
-                  New Mexico State University, it offers diverse opportunities for business growth.
+                  Las Cruces, the City of the Crosses, is New Mexico's second-largest city and home to New Mexico State University. With 111,000+ residents and 14,000+ university students, Las Cruces blends academic innovation with agricultural heritage and growing manufacturing. Forte Growth Systems help businesses stand out in this diverse market with solutions built for performance, scalability, and measurable ROI.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Educational Excellence</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Home to New Mexico State University and growing research sector</p>
-                    </div>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Education & Research</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Universities and research centers need websites that serve students, faculty, and global partners.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> Foundation sites with ADA compliance + Growth Layer integrations for research portals and enrollment funnels.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Agricultural Innovation</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Major agricultural center with modern farming and food processing</p>
-                    </div>
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Agriculture & Food Processing</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Agricultural businesses need to modernize operations and connect with wholesale and consumer markets.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> Scaling Layer marketing + bilingual websites that support farmers, processors, and distributors.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Manufacturing Growth</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Expanding manufacturing sector requiring digital transformation</p>
-                    </div>
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Manufacturing & Industry</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Manufacturers must build credibility and attract contracts in competitive sectors.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> Professional-grade websites with secure integrations, portfolio showcases, and local SEO for visibility.</p>
                   </div>
                 </div>
               </div>
@@ -117,6 +108,11 @@ export default function LasCrucesPage() {
                     <span className="text-gray-600 dark:text-gray-300">Median Income</span>
                     <span className="font-semibold text-gray-900 dark:text-white">$48,000</span>
                   </div>
+                  <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-600">
+                    <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+                      Las Cruces is a bilingual hub where businesses thrive by serving both English and Spanish-speaking communities.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
@@ -129,7 +125,7 @@ export default function LasCrucesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900 dark:text-white">
-              Our Las Cruces Services
+              Las Cruces Growth Systems
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -139,10 +135,10 @@ export default function LasCrucesPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Growth-Focused Web Design
+                  Foundation Web Design
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Modern websites designed to support Las Cruces' growing business community.
+                  Custom-coded websites that blend NMSU innovation with local agricultural roots.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -152,10 +148,10 @@ export default function LasCrucesPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Local SEO Services
+                  Growth Layer SEO
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Dominate Las Cruces search results and connect with local customers and students.
+                  Local SEO + bilingual optimization to dominate searches across Las Cruces and Southern NM.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -165,10 +161,10 @@ export default function LasCrucesPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Agricultural Marketing
+                  Scaling Layer Marketing
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Specialized digital marketing for Las Cruces' agricultural and manufacturing sectors.
+                  Automation, CRMs, and integrated tools that help education, agriculture, and manufacturing scale.
                 </p>
               </div>
             </div>
@@ -194,7 +190,7 @@ export default function LasCrucesPage() {
                   Aggie-Fast Performance
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Lightning-fast websites optimized for Las Cruces' growing digital expectations.
+                  Lightning-fast websites tailored for Las Cruces' university-driven market.
                 </p>
               </div>
               <div className="text-center">
@@ -207,7 +203,7 @@ export default function LasCrucesPage() {
                   Industry Expertise
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Deep understanding of Las Cruces' agricultural, educational, and manufacturing sectors.
+                  Deep knowledge of education, agriculture, and manufacturing sectors.
                 </p>
               </div>
               <div className="text-center">
@@ -217,10 +213,10 @@ export default function LasCrucesPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Community Focus
+                  Community & Culture
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Committed to supporting Las Cruces' growing business community and economic development.
+                  Bilingual, community-first design that connects with Las Cruces' diverse population.
                 </p>
               </div>
             </div>
@@ -233,23 +229,23 @@ export default function LasCrucesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Ready to Grow Your Las Cruces Business?
+              Ready to Scale in the City of the Crosses?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join thriving Las Cruces businesses that trust Forte Web Designs for their digital growth.
+              Whether you serve students, farmers, or manufacturers, Forte Growth Systems help Las Cruces businesses thrive with cultural sensitivity and measurable growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Start Your Project
+                Book Free Growth Audit
               </Link>
               <Link
-                href="/checkup"
+                href="/contact"
                 className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Free Website Analysis
+                Start My Growth System
               </Link>
             </div>
           </div>

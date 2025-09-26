@@ -3,17 +3,17 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Tulsa Web Design & SEO Services | Forte Web Designs',
-  description: 'Professional web design and SEO services in Tulsa, Oklahoma. Custom websites, local SEO, and digital marketing solutions for Tulsa businesses.',
+  title: 'Tulsa Growth Systems & Web Design | Energy, Tech, Manufacturing | Forte',
+  description: 'Forte builds Growth Systems for Tulsa businesses — from energy and healthcare to tech and manufacturing. Custom websites, automation, and integrations designed for measurable growth.',
   openGraph: {
-    title: 'Tulsa Web Design & SEO Services | Forte Web Designs',
-    description: 'Professional web design and SEO services in Tulsa, Oklahoma. Custom websites, local SEO, and digital marketing solutions for Tulsa businesses.',
+    title: 'Tulsa Growth Systems & Web Design | Energy, Tech, Manufacturing',
+    description: 'Growth Systems for Tulsa businesses — from energy and healthcare to tech and manufacturing. Custom websites, automation, and integrations for measurable growth.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Forte Web Designs Tulsa Services',
+        alt: 'Forte Growth Systems - Tulsa Energy, Tech, Manufacturing Solutions',
       },
     ],
   },
@@ -31,24 +31,23 @@ export default function TulsaPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              Tulsa Web Design & SEO Services
+              Tulsa Growth Systems — Built for Energy, Tech & Manufacturing
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Empowering Tulsa businesses with innovative web design and SEO solutions. 
-              From energy giants to tech startups, we help local businesses dominate their digital landscape.
+              From oil & gas giants to fast-growing startups, healthcare leaders to advanced manufacturers, we build Growth Systems for Tulsa businesses — custom websites, automated follow-ups, and integrated business dashboards designed for measurable results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Get Started Today
+                Start My Tulsa Growth System
               </Link>
               <Link
                 href="/checkup"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
-                Free Website Audit
+                Book Free Tulsa Growth Audit
               </Link>
             </div>
           </div>
@@ -65,40 +64,37 @@ export default function TulsaPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                  Oil Capital of the World
+                  Oil Capital Roots. Growth Future.
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Known as the "Oil Capital of the World," Tulsa has evolved into a diverse economic hub 
-                  with thriving energy, technology, healthcare, and manufacturing sectors. With over 413,000 
-                  residents, Tulsa offers tremendous opportunities for digital growth.
+                  Tulsa's legacy as the 'Oil Capital of the World' has evolved into a diverse, innovation-driven economy. Today, Tulsa is home to energy leaders, a thriving startup ecosystem, world-class healthcare, and advanced manufacturing. To compete here, your business needs more than a website — you need a Growth System that adapts to Tulsa's fast-changing business landscape.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Energy Innovation</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Leading energy companies driving technological advancement</p>
-                    </div>
+                <div className="space-y-6">
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Energy Innovation</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Competing with established energy corporations and industry leaders.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Solution:</strong> Foundation websites with enterprise-level performance + Growth Layer SEO to build credibility in a competitive market.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Tech Hub Growth</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Emerging technology sector with growing startup ecosystem</p>
-                    </div>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tech Hub Growth</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Startups need to scale fast while keeping costs manageable.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Solution:</strong> Growth Systems with automation, lead dashboards, and scalable integrations.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Manufacturing Excellence</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Strong manufacturing base requiring modern digital presence</p>
-                    </div>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Healthcare Expansion</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Patients demand secure, seamless booking and trusted communication.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Solution:</strong> HIPAA-aware design, mobile-first scheduling, and Scaling Layer dashboards for patient tracking.</p>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Manufacturing Excellence</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Manufacturers often rely on outdated, brochure-style websites.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Solution:</strong> Modern Growth Systems with service showcases, distributor portals, and lead automation.</p>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
                 <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                  Tulsa Market Overview
+                  Tulsa by the Numbers: Innovation in Action
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
@@ -129,47 +125,70 @@ export default function TulsaPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900 dark:text-white">
-              Our Tulsa Services
+              Growth Systems for Tulsa Businesses
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-12">
+              {/* Foundation Layer */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-8 shadow-lg">
+                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Professional Web Design
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Foundation Websites
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Custom websites that reflect Tulsa's innovative spirit and drive business results.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Custom-coded designs that capture Tulsa's mix of heritage and innovation.
                 </p>
+                <ul className="text-gray-600 dark:text-gray-300 space-y-2">
+                  <li>• Energy sector credibility design</li>
+                  <li>• Startup-friendly scalable platforms</li>
+                  <li>• Manufacturing showcase websites</li>
+                  <li>• Healthcare compliance & security</li>
+                </ul>
               </div>
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+
+              {/* Growth Layer */}
+              <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-lg p-8 shadow-lg">
+                <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Tulsa SEO Services
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Growth Layer SEO & Automation
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Dominate Tulsa search results and capture more local market share.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Local SEO, automated follow-ups, and reputation management designed for Tulsa's competitive industries.
                 </p>
+                <ul className="text-gray-600 dark:text-gray-300 space-y-2">
+                  <li>• Local Tulsa SEO optimization</li>
+                  <li>• Automated inquiry follow-up</li>
+                  <li>• Reputation management systems</li>
+                  <li>• Lead nurturing automation</li>
+                </ul>
               </div>
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+
+              {/* Scaling Layer */}
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-8 shadow-lg">
+                <div className="bg-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Digital Marketing
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Scaling Layer Integrations
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Comprehensive marketing strategies tailored to Tulsa's unique market landscape.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Business dashboards, CRM systems, and workflow automation to scale startups and streamline enterprises.
                 </p>
+                <ul className="text-gray-600 dark:text-gray-300 space-y-2">
+                  <li>• Business intelligence dashboards</li>
+                  <li>• CRM systems & integrations</li>
+                  <li>• Workflow automation tools</li>
+                  <li>• Distributor portals & management</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -191,10 +210,10 @@ export default function TulsaPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Oil Capital Speed
+                  Speed that Competes
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Lightning-fast websites optimized for Tulsa's fast-paced business environment.
+                  Custom-coded sites that load instantly and outperform outdated templates.
                 </p>
               </div>
               <div className="text-center">
@@ -204,10 +223,10 @@ export default function TulsaPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Industry Expertise
+                  Industry-Specific Expertise
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Deep understanding of Tulsa's energy, tech, and manufacturing sectors.
+                  Deep understanding of Tulsa's energy, tech, healthcare, and manufacturing sectors.
                 </p>
               </div>
               <div className="text-center">
@@ -218,10 +237,10 @@ export default function TulsaPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Local Market Focus
+                  Proven Local Results
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Targeted strategies that resonate with Tulsa's diverse business community.
+                  Systems that drive measurable lead growth, stronger conversions, and long-term scalability.
                 </p>
               </div>
             </div>
@@ -234,23 +253,23 @@ export default function TulsaPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Ready to Dominate Tulsa's Digital Market?
+              Ready to Scale in Tulsa?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join innovative Tulsa businesses that trust Forte Web Designs for their digital success.
+              Join Tulsa businesses that trust Forte Growth Systems to transform their online presence into a true growth engine.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Start Your Project
+                Start My Tulsa Growth System
               </Link>
               <Link
                 href="/checkup"
                 className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Free Website Analysis
+                Book Free Growth Analysis
               </Link>
             </div>
           </div>

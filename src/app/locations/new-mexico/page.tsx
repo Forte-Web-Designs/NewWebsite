@@ -4,12 +4,12 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'New Mexico Web Design Services - Albuquerque, Santa Fe, Las Cruces | Forte Web Designs',
-  description: 'Professional web design services throughout New Mexico. Specializing in Albuquerque, Santa Fe, and Las Cruces markets with cultural expertise that understands your Southwest business challenges.',
-  keywords: 'New Mexico web design, Albuquerque web designer, Santa Fe web designer, Las Cruces web design, New Mexico website development, local web design New Mexico',
+  title: 'New Mexico Growth Systems & Web Design | Albuquerque, Santa Fe, Las Cruces | Forte',
+  description: 'Forte builds Growth Systems for New Mexico businesses. From Albuquerque\'s tech to Santa Fe\'s arts to Las Cruces\' bilingual markets — custom websites, automation, and integrations designed for measurable results.',
+  keywords: 'New Mexico Growth Systems, Albuquerque business growth, Santa Fe business systems, Las Cruces automation, New Mexico web design, local business growth New Mexico',
   openGraph: {
-    title: 'New Mexico Web Design Services - Albuquerque, Santa Fe, Las Cruces | Forte Web Designs',
-    description: 'Professional web design services throughout New Mexico. Cultural expertise in Albuquerque, Santa Fe, and Las Cruces markets.',
+    title: 'New Mexico Growth Systems & Web Design | Albuquerque, Santa Fe, Las Cruces | Forte',
+    description: 'Forte builds Growth Systems for New Mexico businesses. From Albuquerque\'s tech to Santa Fe\'s arts to Las Cruces\' bilingual markets — custom websites, automation, and integrations designed for measurable results.',
     url: 'https://fortewebdesigns.com/locations/new-mexico',
     type: 'website',
   },
@@ -24,9 +24,10 @@ const newMexicoCities = [
     href: '/locations/new-mexico/albuquerque',
     population: '562K+',
     businesses: '38,000+',
+    headline: 'Innovation Meets Authentic Southwest',
     description: 'Desert metropolis balances tech innovation with authentic Southwest culture.',
-    keyChallenge: 'Generic corporate websites dominate search results over local businesses',
-    ourApproach: 'Culturally-aware design + Southwest-inspired branding',
+    keyChallenge: 'Local businesses often get overshadowed by generic corporate websites and national chains.',
+    ourApproach: 'Foundation websites infused with Southwest-inspired branding + Growth Layer SEO automation for measurable visibility.',
     featured: true,
   },
   {
@@ -34,9 +35,10 @@ const newMexicoCities = [
     href: '/locations/new-mexico/santa-fe',
     population: '87K+',
     businesses: '6,200+',
+    headline: 'The City Different',
     description: 'The City Different serves 2M+ annual visitors and discerning locals.',
-    keyChallenge: 'Dual market appeal - tourists vs. residents with different needs',
-    ourApproach: 'Adaptive messaging + artistic sophistication',
+    keyChallenge: 'Dual audiences — 2M+ annual visitors and discerning local residents — require different messaging.',
+    ourApproach: 'Adaptive content strategies + Scaling Layer dashboards to capture and segment both tourist and resident leads.',
     featured: true,
   },
   {
@@ -44,9 +46,10 @@ const newMexicoCities = [
     href: '/locations/new-mexico/las-cruces',
     population: '111K+',
     businesses: '7,500+',
+    headline: 'University Town with Heritage',
     description: 'University town with agricultural heritage and growing tech sector.',
-    keyChallenge: 'Balancing student-friendly pricing with professional service messaging',
-    ourApproach: 'Value communication + bilingual optimization',
+    keyChallenge: 'Balancing student-friendly pricing with professional credibility.',
+    ourApproach: 'Growth Layer automation to nurture leads from both cost-conscious students and established businesses.',
     featured: false,
   },
 ];
@@ -70,13 +73,13 @@ export default function NewMexicoPage() {
             <div className="text-center mb-12">
               <span className="text-sm sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-2 text-primary-1000 mb-4 sm:mb-6">
                 <Icon name="location" className="w-4 h-4 sm:w-5 sm:h-5 md:w-6 md:h-6" />
-                New Mexico Web Design
+                New Mexico Growth Systems
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
-                Built for Southwest Business
+                Built for Southwest Businesses
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                Every New Mexico market has unique challenges. From Albuquerque's tech scene to Santa Fe's artistic heritage, we build websites that honor your local culture while driving results.
+                From Albuquerque's tech startups to Santa Fe's arts community and Las Cruces' university town, we design Growth Systems that honor New Mexico's culture while delivering measurable business results.
               </p>
             </div>
             
@@ -110,7 +113,7 @@ export default function NewMexicoPage() {
                 Major New Mexico Markets
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Each New Mexico city has distinct cultural characteristics that require authentic solutions, not generic template websites.
+                New Mexico's business environment is as diverse as its culture. Albuquerque's tech sector, Santa Fe's artistic heritage, and Las Cruces' agricultural and bilingual markets each require more than a generic template website. Forte builds Growth Systems that combine custom websites, automation, and integrated dashboards designed to win in every New Mexico market.
               </p>
             </div>
 
@@ -120,8 +123,8 @@ export default function NewMexicoPage() {
                 <div key={city.city} className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group">
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                        {city.city}
+                      <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-1">
+                        {city.city}: {city.headline}
                       </h3>
                       <div className="flex gap-4 text-sm text-gray-500 dark:text-gray-400">
                         <span>{city.population} people</span>
@@ -205,10 +208,10 @@ export default function NewMexicoPage() {
             <div className="bg-gradient-to-r from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-2xl p-8 mb-16">
               <div className="text-center mb-8">
                 <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Why New Mexico Businesses Choose Forte
+                  Why New Mexico Chooses Forte
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  We understand Southwest culture and bilingual markets. Cultural expertise meets custom development.
+                  We understand Southwest culture and bilingual markets. Growth Systems that honor your heritage while delivering measurable results.
                 </p>
               </div>
 
@@ -216,28 +219,28 @@ export default function NewMexicoPage() {
                 <div className="text-center">
                   <div className="text-4xl mb-4">🌵</div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    Southwest Cultural Expertise
+                    Southwest Market Expertise
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    We understand Albuquerque's tech scene, Santa Fe's arts community, and Las Cruces' bilingual markets.
+                    Deep understanding of Albuquerque's tech sector, Santa Fe's arts market, and Las Cruces' bilingual economy.
                   </p>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl mb-4">⚡</div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    Custom Code Performance
+                    Foundation to Scaling Systems
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    No WordPress templates. Every website is custom-coded for maximum speed, security, and search rankings.
+                    From fast-loading custom-coded websites to automation and CRM integrations, we build layered systems that grow with your business.
                   </p>
                 </div>
                 <div className="text-center">
                   <div className="text-4xl mb-4">🎨</div>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                    Authentic Design Heritage
+                    Authentic Design + Performance
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Websites that honor New Mexico's unique character while delivering modern functionality and performance.
+                    Websites that celebrate New Mexico's culture while delivering lightning speed, security, and measurable results.
                   </p>
                 </div>
               </div>
@@ -250,23 +253,23 @@ export default function NewMexicoPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center text-white">
               <h2 className="text-3xl font-bold mb-4">
-                Ready to Honor Your New Mexico Heritage?
+                Ready to Scale in New Mexico's Unique Markets?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Get a free consultation and discover how cultural expertise can transform your business online.
+                From tech startups in Albuquerque to artists in Santa Fe and local enterprises in Las Cruces, Forte Growth Systems help New Mexico businesses compete, connect, and scale with measurable results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact?utm_source=new-mexico_page&utm_medium=cta_button"
                   className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                 >
-                  Get Free New Mexico Market Analysis
+                  Start My Growth System
                 </Link>
                 <Link
-                  href="tel:8178736655"
+                  href="/contact?utm_source=new-mexico_page&utm_medium=audit_button"
                   className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
                 >
-                  Call (817) 873-6655
+                  Book Free Growth Audit
                 </Link>
               </div>
             </div>

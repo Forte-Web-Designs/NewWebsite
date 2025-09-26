@@ -3,17 +3,17 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Norman Web Design & SEO Services | Forte Web Designs',
-  description: 'Professional web design and SEO services in Norman, Oklahoma. Custom websites, local SEO, and digital marketing solutions for Norman businesses.',
+  title: 'Norman Growth Systems & Web Design | Education, Research, Local Business | Forte',
+  description: 'Forte builds Growth Systems for Norman businesses — from university research and weather technology to healthcare and local enterprises. Custom websites, automation, and integrations designed for measurable growth.',
   openGraph: {
-    title: 'Norman Web Design & SEO Services | Forte Web Designs',
-    description: 'Professional web design and SEO services in Norman, Oklahoma. Custom websites, local SEO, and digital marketing solutions for Norman businesses.',
+    title: 'Norman Growth Systems & Web Design | Education, Research, Local Business',
+    description: 'Growth Systems for Norman businesses — from university research and weather technology to healthcare and local enterprises. Custom websites, automation, and integrations for measurable growth.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Forte Web Designs Norman Services',
+        alt: 'Forte Growth Systems - Norman Education, Research, Local Business Solutions',
       },
     ],
   },
@@ -31,24 +31,23 @@ export default function NormanPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              Norman Web Design & SEO Services
+              Norman Growth Systems — Powered by Education, Research & Innovation
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Empowering Norman businesses with cutting-edge web design and SEO solutions. 
-              From university research to local businesses, we help Norman establish powerful digital presences.
+              From University of Oklahoma research to local small businesses, Forte builds Growth Systems for Norman — combining custom websites, automated follow-ups, and integrated dashboards that deliver measurable results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Get Started Today
+                Start My Norman Growth System
               </Link>
               <Link
                 href="/checkup"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
-                Free Website Audit
+                Book Free Norman Growth Audit
               </Link>
             </div>
           </div>
@@ -65,40 +64,37 @@ export default function NormanPage() {
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                  University Town Excellence
+                  Innovation Rooted in Education
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Home to the University of Oklahoma and the National Weather Center, Norman is a 
-                  thriving hub of education, research, and innovation. With over 128,000 residents, 
-                  Norman combines academic excellence with entrepreneurial spirit.
+                  Norman thrives at the intersection of education, research, and entrepreneurship. Home to the University of Oklahoma and the National Weather Center, Norman is a hub for academic excellence, advanced technology, and a growing small business community. Competing here requires more than just a website — you need a Growth System built to match Norman's standard of innovation.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Education Leadership</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Major university driving research and innovation</p>
-                    </div>
+                <div className="space-y-6">
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Education & Research</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Academic institutions and research centers need credibility and seamless digital communication.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Solution:</strong> Foundation websites + Scaling Layer integrations with portals, dashboards, and secure document access.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Weather Technology</h4>
-                      <p className="text-gray-600 dark:text-gray-300">National Weather Center and meteorological research</p>
-                    </div>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Weather & Technology</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Norman's weather-tech industry requires real-time performance and data-driven communication.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Solution:</strong> Lightning-fast Foundation builds with Growth Layer automation to keep stakeholders informed.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Healthcare Innovation</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Advanced medical facilities and research centers</p>
-                    </div>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Healthcare Expansion</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Local facilities must balance patient trust with modern digital expectations.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Solution:</strong> Mobile-first websites with HIPAA-aware scheduling, automation, and reporting dashboards.</p>
+                  </div>
+                  <div className="bg-gray-50 dark:bg-gray-800 p-4 rounded-lg">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Local Business Community</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Independent businesses risk getting lost in a university-dominated market.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Solution:</strong> Local SEO, Growth Layer follow-up systems, and authentic Norman branding.</p>
                   </div>
                 </div>
               </div>
               <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-8">
                 <h3 className="text-xl font-bold mb-4 text-gray-900 dark:text-white">
-                  Norman Market Insights
+                  Norman by the Numbers: Research Meets Community
                 </h3>
                 <div className="space-y-3">
                   <div className="flex justify-between">
@@ -129,47 +125,70 @@ export default function NormanPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900 dark:text-white">
-              Our Norman Services
+              Growth Systems for Norman Businesses
             </h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+            <div className="grid md:grid-cols-1 lg:grid-cols-3 gap-12">
+              {/* Foundation Layer */}
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 dark:from-blue-900/20 dark:to-blue-800/20 rounded-lg p-8 shadow-lg">
+                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Academic Web Design
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Foundation Websites
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Professional websites that reflect Norman's intellectual excellence and research innovation.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Custom-coded designs that showcase Norman's academic excellence and business innovation.
                 </p>
+                <ul className="text-gray-600 dark:text-gray-300 space-y-2">
+                  <li>• Academic & research institution sites</li>
+                  <li>• Weather & technology platforms</li>
+                  <li>• Healthcare facility websites</li>
+                  <li>• Local business community sites</li>
+                </ul>
               </div>
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+
+              {/* Growth Layer */}
+              <div className="bg-gradient-to-br from-green-50 to-green-100 dark:from-green-900/20 dark:to-green-800/20 rounded-lg p-8 shadow-lg">
+                <div className="bg-green-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Local SEO Excellence
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Growth Layer SEO & Automation
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Dominate Norman search results and connect with the university community and local residents.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Local SEO, automated follow-ups, and lead dashboards tailored for Norman's dual academic and small business communities.
                 </p>
+                <ul className="text-gray-600 dark:text-gray-300 space-y-2">
+                  <li>• Local Norman SEO optimization</li>
+                  <li>• University community targeting</li>
+                  <li>• Automated inquiry follow-up</li>
+                  <li>• Authentic Norman branding</li>
+                </ul>
               </div>
-              <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
-                <div className="bg-blue-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+
+              {/* Scaling Layer */}
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 dark:from-purple-900/20 dark:to-purple-800/20 rounded-lg p-8 shadow-lg">
+                <div className="bg-purple-600 text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
                   <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
                   </svg>
                 </div>
-                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Digital Marketing
+                <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
+                  Scaling Layer Integrations
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Comprehensive marketing strategies tailored to Norman's academic and business community.
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Research-ready dashboards, CRM setups, and workflow automations designed for growth.
                 </p>
+                <ul className="text-gray-600 dark:text-gray-300 space-y-2">
+                  <li>• Research portals & dashboards</li>
+                  <li>• Secure document access systems</li>
+                  <li>• CRM & workflow automation</li>
+                  <li>• Real-time data communication</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -191,10 +210,10 @@ export default function NormanPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Research-Grade Quality
+                  Research-Grade Precision
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Precision-engineered websites that meet Norman's high academic and professional standards.
+                  Custom-coded websites built to meet Norman's academic, professional, and research standards.
                 </p>
               </div>
               <div className="text-center">
@@ -204,10 +223,10 @@ export default function NormanPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Educational Focus
+                  Education Ecosystem Expertise
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Specialized understanding of Norman's educational ecosystem and community needs.
+                  Deep understanding of Norman's university-driven economy and how to engage both students and professionals.
                 </p>
               </div>
               <div className="text-center">
@@ -217,10 +236,10 @@ export default function NormanPage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Innovation Driven
+                  Innovation That Scales
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Cutting-edge solutions that match Norman's spirit of research and innovation.
+                  Growth Systems designed to evolve alongside Norman's research, healthcare, and entrepreneurial initiatives.
                 </p>
               </div>
             </div>
@@ -233,23 +252,23 @@ export default function NormanPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Ready to Lead Norman's Digital Innovation?
+              Ready to Scale Your Norman Business or Institution?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join forward-thinking Norman businesses that trust Forte Web Designs for digital excellence.
+              From startups to research centers, Norman businesses trust Forte Growth Systems to transform digital presence into measurable results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Start Your Project
+                Start My Norman Growth System
               </Link>
               <Link
                 href="/checkup"
                 className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Free Website Analysis
+                Book Free Growth Analysis
               </Link>
             </div>
           </div>

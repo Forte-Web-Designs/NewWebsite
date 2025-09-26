@@ -3,17 +3,17 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Santa Fe Web Design & SEO Services | Forte Web Designs',
-  description: 'Professional web design and SEO services in Santa Fe, New Mexico. Custom websites, local SEO, and digital marketing solutions for Santa Fe businesses.',
+  title: 'Santa Fe Growth Systems & Web Design | Arts, Tourism, Government | Forte',
+  description: 'Forte builds Growth Systems for Santa Fe businesses. From galleries to tourism to government, we deliver custom-coded websites, SEO automation, and integrations that balance cultural sophistication with measurable results.',
   openGraph: {
-    title: 'Santa Fe Web Design & SEO Services | Forte Web Designs',
-    description: 'Professional web design and SEO services in Santa Fe, New Mexico. Custom websites, local SEO, and digital marketing solutions for Santa Fe businesses.',
+    title: 'Santa Fe Growth Systems & Web Design | Arts, Tourism, Government | Forte',
+    description: 'Forte builds Growth Systems for Santa Fe businesses. From galleries to tourism to government, we deliver custom-coded websites, SEO automation, and integrations that balance cultural sophistication with measurable results.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Forte Web Designs Santa Fe Services',
+        alt: 'Forte Growth Systems Santa Fe Services',
       },
     ],
   },
@@ -31,24 +31,23 @@ export default function SantaFePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 text-gray-900 dark:text-white">
-              Santa Fe Web Design & SEO
+              Santa Fe Growth Systems — The City Different, Digitally
             </h1>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
-              Elevating Santa Fe businesses with artistic web design and SEO solutions. 
-              From galleries to government, we help local businesses create compelling digital presences.
+              From galleries and cultural institutions to government and healthcare, Forte builds Growth Systems that honor Santa Fe's artistic heritage while delivering measurable business results.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
               >
-                Get Started Today
+                Start My Growth System
               </Link>
               <Link
-                href="/checkup"
+                href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
-                Free Website Audit
+                Book Free Growth Audit
               </Link>
             </div>
           </div>
@@ -60,39 +59,31 @@ export default function SantaFePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white">
-              Santa Fe's Cultural & Economic Hub
+              Santa Fe's Unique Market
             </h2>
             <div className="grid md:grid-cols-2 gap-12 items-center">
               <div>
                 <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">
-                  The City Different
+                  Cultural Heartbeat of the Southwest
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  As New Mexico's capital and cultural heart, Santa Fe blends historic charm with modern 
-                  innovation. With over 87,000 residents, it's a thriving center for arts, tourism, 
-                  government, and healthcare that demands sophisticated digital solutions.
+                  Santa Fe isn't just New Mexico's capital — it's the cultural heartbeat of the Southwest. With 87,000+ residents and 2M+ annual visitors, businesses here must balance artistic sophistication, government professionalism, and tourism appeal. Forte Growth Systems give Santa Fe businesses the foundation, automation, and integrations they need to thrive in this unique market.
                 </p>
-                <div className="space-y-4">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Arts & Culture</h4>
-                      <p className="text-gray-600 dark:text-gray-300">World-renowned galleries, museums, and cultural institutions</p>
-                    </div>
+                <div className="space-y-6">
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Arts & Culture</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Cultural institutions and galleries need websites that blend beauty with performance.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> Foundation design inspired by Santa Fe's artistic heritage + Growth Layer automation for event promotion and ticketing.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Tourism Excellence</h4>
-                      <p className="text-gray-600 dark:text-gray-300">Major destination requiring strong digital marketing presence</p>
-                    </div>
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Tourism Excellence</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Tourism businesses must capture visitors before they arrive and while they're in-market.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> SEO + Scaling Layer marketing that connects with tourists searching on mobile and builds repeat visitor relationships.</p>
                   </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full mt-2"></div>
-                    <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white">Government Center</h4>
-                      <p className="text-gray-600 dark:text-gray-300">State capital with significant government and healthcare presence</p>
-                    </div>
+                  <div className="border-l-4 border-blue-600 pl-4">
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Government & Healthcare</h4>
+                    <p className="text-sm text-red-600 dark:text-red-400 mb-1"><strong>Challenge:</strong> Government and healthcare organizations need credibility, accessibility, and compliance.</p>
+                    <p className="text-sm text-green-600 dark:text-green-400"><strong>Our Approach:</strong> Professional-grade websites with secure integrations, ADA accessibility, and user-friendly design.</p>
                   </div>
                 </div>
               </div>
@@ -107,7 +98,7 @@ export default function SantaFePage() {
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600 dark:text-gray-300">Annual Visitors</span>
-                    <span className="font-semibold text-gray-900 dark:text-white">2+ million</span>
+                    <span className="font-semibold text-gray-900 dark:text-white">2M+</span>
                   </div>
                   <div className="flex justify-between">
                     <span className="text-gray-600 dark:text-gray-300">Businesses</span>
@@ -116,6 +107,11 @@ export default function SantaFePage() {
                   <div className="flex justify-between">
                     <span className="text-gray-600 dark:text-gray-300">Median Income</span>
                     <span className="font-semibold text-gray-900 dark:text-white">$62,000</span>
+                  </div>
+                  <div className="mt-4 pt-3 border-t border-gray-200 dark:border-gray-600">
+                    <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+                      A global arts destination with one of the highest visitor-to-resident ratios in the U.S.
+                    </p>
                   </div>
                 </div>
               </div>
@@ -129,7 +125,7 @@ export default function SantaFePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-gray-900 dark:text-white">
-              Our Santa Fe Services
+              Santa Fe Growth Systems
             </h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -139,10 +135,10 @@ export default function SantaFePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Artistic Web Design
+                  Foundation Web Design
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Beautiful, culturally-inspired websites that reflect Santa Fe's unique artistic heritage.
+                  Culturally inspired, custom-coded websites that reflect Santa Fe's uniqueness.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -152,10 +148,10 @@ export default function SantaFePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Tourism SEO
+                  Growth Layer SEO
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Specialized SEO strategies to attract visitors and connect with Santa Fe's tourist market.
+                  Tourism-focused SEO and content automation to reach visitors at the right moment.
                 </p>
               </div>
               <div className="bg-white dark:bg-gray-900 rounded-lg p-6 shadow-lg">
@@ -165,10 +161,10 @@ export default function SantaFePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Cultural Marketing
+                  Scaling Layer Marketing
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Digital marketing strategies that honor Santa Fe's cultural richness and heritage.
+                  Integrated systems for event ticketing, online sales, and long-term visitor engagement.
                 </p>
               </div>
             </div>
@@ -191,10 +187,10 @@ export default function SantaFePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Artistic Excellence
+                  Artistic Excellence + Performance
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Designs that capture Santa Fe's unique aesthetic and cultural sophistication.
+                  Websites as beautiful as Santa Fe art — but optimized for speed, SEO, and results.
                 </p>
               </div>
               <div className="text-center">
@@ -207,7 +203,7 @@ export default function SantaFePage() {
                   Cultural Sensitivity
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Deep respect for Santa Fe's multicultural heritage and artistic traditions.
+                  Designs that respect Santa Fe's multicultural traditions while appealing to modern audiences.
                 </p>
               </div>
               <div className="text-center">
@@ -217,10 +213,10 @@ export default function SantaFePage() {
                   </svg>
                 </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">
-                  Tourism Expertise
+                  Tourism + Local Balance
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Specialized knowledge in attracting visitors and supporting Santa Fe's tourism economy.
+                  Systems built to capture both international tourists and long-term local relationships.
                 </p>
               </div>
             </div>
@@ -233,23 +229,23 @@ export default function SantaFePage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Ready to Showcase Your Santa Fe Business?
+              Ready to Thrive in The City Different?
             </h2>
             <p className="text-xl mb-8 opacity-90">
-              Join Santa Fe's artistic and cultural businesses that trust Forte Web Designs for digital excellence.
+              Whether you run a gallery, hotel, or healthcare organization, Forte Growth Systems combine artistic sophistication with measurable business growth.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Start Your Project
+                Book Free Growth Audit
               </Link>
               <Link
-                href="/checkup"
+                href="/contact"
                 className="bg-transparent text-white px-8 py-3 rounded-lg font-semibold border-2 border-white hover:bg-white hover:text-blue-600 transition-colors"
               >
-                Free Website Analysis
+                Start My Growth System
               </Link>
             </div>
           </div>

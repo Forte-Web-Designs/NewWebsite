@@ -4,19 +4,19 @@ import { useEffect, useState, useRef } from "react";
 
 const testimonials = [
   {
-    text: `Seth built our site from scratch! We've already seen a noticeable increase in leads and conversions. Hands down the best investment we've made for our business.`,
+    text: `We started getting more calls within weeks. The website feels professional and finally makes us competitive.`,
     author: "Seth",
     role: "Owner of Carter HVAC",
   },
   {
-    text: `We saw a 2x increase in online leads after working with Forte Web Designs. Their team is incredibly professional and results-driven.`,
-    author: "Forte Web Designs",
-    role: "Founder of Lee & Co. Legal",
+    text: `Our new site instantly gave us credibility. We're showing up higher on Google, and new clients mention finding us online.`,
+    author: "Lee & Co. Legal",
+    role: "Professional Services",
   },
   {
-    text: `Working with Seth was a game changer for our startup. They not only built a stunning website but helped us understand how to convert traffic into sales.`,
-    author: "Seth",
-    role: "CEO of SparkCommerce",
+    text: `Forte didn't just build a site — they built us a system. We now understand where our leads come from and how to grow.`,
+    author: "SparkCommerce",
+    role: "Startup",
   },
 ];
 

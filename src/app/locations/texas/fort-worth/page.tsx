@@ -4,12 +4,12 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Fort Worth Web Design Services - Authentic Texas Business Websites | Forte Web Designs',
-  description: 'Professional web design services in Fort Worth, Texas. Custom websites that capture Cowtown charm while delivering modern functionality for local businesses.',
-  keywords: 'Fort Worth web design, Fort Worth website development, Fort Worth web designer, Cowtown web design, Fort Worth SEO, Fort Worth digital marketing',
+  title: 'Fort Worth Growth Systems & Web Design | Authentic Texas Solutions | Forte',
+  description: 'Forte builds authentic Fort Worth growth systems — custom-coded websites, automation, and SEO that balance Cowtown tradition with modern performance.',
+  keywords: 'Fort Worth growth systems, Fort Worth business automation, Cowtown web design, Fort Worth CRM, Fort Worth local SEO, authentic Texas business solutions',
   openGraph: {
-    title: 'Fort Worth Web Design Services - Authentic Texas Business Websites | Forte Web Designs',
-    description: 'Professional web design services in Fort Worth, Texas. Custom websites that capture Cowtown charm while delivering modern functionality.',
+    title: 'Fort Worth Growth Systems & Web Design | Authentic Texas Solutions | Forte',
+    description: 'Forte builds authentic Fort Worth growth systems — custom-coded websites, automation, and SEO that balance Cowtown tradition with modern performance.',
     url: 'https://fortewebdesigns.com/locations/texas/fort-worth',
     type: 'website',
   },
@@ -29,27 +29,27 @@ const fortWorthStats = {
 const fortWorthChallenges = [
   {
     challenge: 'Overshadowed by Dallas',
-    description: 'Fort Worth businesses struggle to compete with Dallas companies for online visibility',
-    solution: 'Local SEO strategies that emphasize Fort Worth\'s unique character and authentic appeal',
-    impact: 'Dominate "Fort Worth [service]" searches and attract customers who prefer local authenticity'
+    problem: 'Dallas competition overshadows Fort Worth businesses.',
+    solution: 'Local SEO + faster websites + automation to capture leads.',
+    impact: 'Win local "Fort Worth [service]" searches with measurable leads.'
   },
   {
     challenge: 'Balancing Tradition with Innovation',
-    description: 'Cowtown heritage vs. modern business expectations create brand positioning challenges',
-    solution: 'Custom design that honors Fort Worth character while delivering cutting-edge functionality',
-    impact: 'Authentic brand positioning that resonates with both locals and visitors'
+    problem: 'Need to honor Fort Worth character while staying modern.',
+    solution: 'Custom-coded design + CRM + booking systems.',
+    impact: 'Keep authentic identity while providing modern digital experiences.'
   },
   {
     challenge: 'Tourist vs. Local Customer Appeal',
-    description: 'Businesses need to attract both 9M+ annual tourists and loyal local customers',
-    solution: 'Dual-focused content strategy that speaks to both visitor needs and local relationships',
-    impact: 'Increased revenue from both tourist traffic and local customer retention'
+    problem: '9M+ annual tourists vs. loyal local customers.',
+    solution: 'Dual-focused messaging + automated follow-ups.',
+    impact: 'Capture both tourist spending and long-term local loyalty.'
   },
   {
     challenge: 'Generic Corporate Look',
-    description: 'Many Fort Worth businesses use templates that make them look like Dallas suburbs',
-    solution: 'Custom branding that captures Fort Worth\'s distinctive culture and community spirit',
-    impact: 'Stand out from generic competitors with authentic Fort Worth personality'
+    problem: 'Many local sites look like Dallas suburb businesses.',
+    solution: 'Industry-specific branding + authentic Fort Worth visuals.',
+    impact: 'Stand out as Fort Worth-first, not just another template.'
   }
 ];
 
@@ -58,16 +58,16 @@ const fortWorthSuccessStories = [
     business: 'Historic Stockyards Restaurant',
     industry: 'Tourism & Dining',
     challenge: 'Competing with chain restaurants for both tourist and local customers',
-    solution: 'Custom website highlighting Fort Worth history with online reservations and local stories',
-    results: ['55% increase in online reservations', '40% more local repeat customers', '#1 ranking for "Fort Worth authentic dining"'],
+    solution: 'Growth Systems implementation: Online reservations + automated follow-up doubled repeat customers',
+    results: ['55% increase in online reservations', '40% more local repeat customers', 'Automated follow-up system for loyalty'],
     timeframe: '4 months'
   },
   {
     business: 'Fort Worth Construction Company',
     industry: 'Construction',
     challenge: 'Generic website looked like every other contractor, no local connection',
-    solution: 'Custom site showcasing Fort Worth projects with authentic Texas branding',
-    results: ['35% increase in local project inquiries', '60% higher conversion rate', 'Top 3 ranking for target keywords'],
+    solution: 'Growth Systems approach: CRM + project gallery drove 35% more local project inquiries',
+    results: ['35% increase in local project inquiries', '60% higher conversion rate', 'Automated lead tracking and follow-up'],
     timeframe: '6 months'
   }
 ];
@@ -98,10 +98,10 @@ export default function FortWorthPage() {
                 <span className="text-orange-600 font-medium">Fort Worth, Texas</span>
               </div>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
-                Fort Worth Web Design That Honors Cowtown Character
+                Fort Worth Growth Systems That Honor Cowtown Character
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter dark:text-gray-300 text-gray-700 leading-relaxed max-w-4xl mx-auto">
-                Fort Worth customers value authenticity over corporate polish. We build websites that capture Cowtown's unique character while delivering modern functionality that competes with Big D neighbors.
+                We help Fort Worth businesses grow with <strong>custom websites, smart automation, and integrated systems</strong> — all while capturing the authentic Cowtown character customers love.
               </p>
             </div>
             
@@ -129,6 +129,11 @@ export default function FortWorthPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 <strong>Key Districts:</strong> {fortWorthStats.keyDistricts.join(' • ')}
               </p>
+              <div className="bg-orange-50 dark:bg-orange-900/20 rounded-lg p-4 mt-8 max-w-3xl mx-auto">
+                <p className="text-orange-900 dark:text-orange-200 font-medium">
+                  From the Stockyards to Sundance Square, Fort Worth customers value authenticity and results. Our Growth Systems combine local branding, automation, and SEO to help your business compete with Dallas neighbors while keeping your authentic identity.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -138,10 +143,10 @@ export default function FortWorthPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Fort Worth Business Challenges We Solve
+                Fort Worth Growth System Solutions
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Cowtown businesses face unique challenges that require authentic solutions, not generic templates.
+                Cowtown businesses face unique challenges that require authentic Growth Systems, not generic templates.
               </p>
             </div>
 
@@ -153,17 +158,17 @@ export default function FortWorthPage() {
                   </h3>
                   
                   <div className="mb-4 p-3 bg-red-50 dark:bg-red-900/20 rounded-lg">
-                    <h4 className="text-sm font-semibold text-red-900 dark:text-red-400 mb-1">The Challenge:</h4>
-                    <p className="text-sm text-red-700 dark:text-red-300">{item.description}</p>
+                    <h4 className="text-sm font-semibold text-red-900 dark:text-red-400 mb-1">Problem:</h4>
+                    <p className="text-sm text-red-700 dark:text-red-300">{item.problem}</p>
                   </div>
                   
                   <div className="mb-4 p-3 bg-green-50 dark:bg-green-900/20 rounded-lg">
-                    <h4 className="text-sm font-semibold text-green-900 dark:text-green-400 mb-1">Our Solution:</h4>
+                    <h4 className="text-sm font-semibold text-green-900 dark:text-green-400 mb-1">Solution:</h4>
                     <p className="text-sm text-green-700 dark:text-green-300">{item.solution}</p>
                   </div>
                   
                   <div className="p-3 bg-blue-50 dark:bg-blue-900/20 rounded-lg">
-                    <h4 className="text-sm font-semibold text-blue-900 dark:text-blue-400 mb-1">The Impact:</h4>
+                    <h4 className="text-sm font-semibold text-blue-900 dark:text-blue-400 mb-1">Measurable Impact:</h4>
                     <p className="text-sm text-blue-700 dark:text-blue-300">{item.impact}</p>
                   </div>
                 </div>
@@ -177,10 +182,10 @@ export default function FortWorthPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Fort Worth Success Stories
+                Fort Worth Growth Systems Success Stories
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Real Fort Worth businesses using authentic web design to compete and win in both local and tourist markets.
+                Real Fort Worth businesses using authentic Growth Systems to compete and win in both local and tourist markets.
               </p>
             </div>
 
@@ -231,10 +236,10 @@ export default function FortWorthPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Fort Worth Industries We Serve
+                Fort Worth Industries We Build Growth Systems For
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                From Stockyards tourism to Cultural District arts, we understand Fort Worth's diverse business landscape.
+                From Stockyards tourism to Cultural District arts, we build Growth Systems for Fort Worth's diverse business landscape.
               </p>
             </div>
 
@@ -253,10 +258,10 @@ export default function FortWorthPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                Why Fort Worth Businesses Choose Forte
+                Why Fort Worth Businesses Choose Forte Growth Systems
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                We understand Cowtown culture and build websites that honor Fort Worth's authentic character while delivering modern performance.
+                We understand Cowtown culture and build Growth Systems that honor Fort Worth's authentic character while delivering modern performance.
               </p>
             </div>
 
@@ -267,27 +272,27 @@ export default function FortWorthPage() {
                   Authentic Fort Worth Character
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We capture Fort Worth's unique personality in every design. Your website feels genuinely local, not like a Dallas suburb.
+                  We highlight your local culture while delivering modern growth systems. Your business feels genuinely Fort Worth, not generic corporate.
                 </p>
               </div>
               
               <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center">
                 <div className="text-4xl mb-4">🏛️</div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  Cultural District Expertise
+                  District Expertise
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  From Stockyards to Sundance Square, we know Fort Worth's diverse districts and how to position your business in each market.
+                  From the Stockyards to West 7th, we know how to position your business across Fort Worth with targeted Growth Systems.
                 </p>
               </div>
               
               <div className="bg-white dark:bg-gray-800 rounded-xl p-6 text-center">
                 <div className="text-4xl mb-4">🎯</div>
                 <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                  Tourist & Local Appeal
+                  Tourist + Local Revenue
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Websites that attract both 9M+ annual tourists and loyal local customers. Dual-focused strategies that maximize revenue.
+                  Websites, automation, and SEO built to serve both tourists and locals with measurable ROI and automated systems.
                 </p>
               </div>
             </div>
@@ -299,23 +304,23 @@ export default function FortWorthPage() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <div className="text-center text-white">
               <h2 className="text-3xl font-bold mb-4">
-                Ready to Show Fort Worth Your Authentic Brand?
+                Ready to Grow Your Fort Worth Business?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Get a free Fort Worth market analysis and discover how authentic web design can grow your business.
+                Get a free Fort Worth Growth Audit and discover how authentic Growth Systems can scale your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
-                  href="/contact?utm_source=fort_worth_page&utm_medium=cta_button&utm_campaign=fort_worth_local_seo"
+                  href="/contact?utm_source=fort_worth_page&utm_medium=growth_audit"
                   className="inline-flex items-center justify-center bg-white text-orange-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                 >
-                  Get Free Fort Worth Market Analysis
+                  Get Free Fort Worth Growth Audit
                 </Link>
                 <Link
-                  href="tel:8178736655"
+                  href="/contact?utm_source=fort_worth_page&utm_medium=market_analysis"
                   className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-orange-600 transition-colors duration-200"
                 >
-                  Call (817) 873-6655
+                  Book My Local Market Analysis
                 </Link>
               </div>
               <p className="text-sm opacity-80 mt-4">

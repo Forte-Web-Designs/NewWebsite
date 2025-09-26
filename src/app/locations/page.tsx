@@ -4,12 +4,12 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Local Web Design & Growth Systems | Texas • Oklahoma • New Mexico | Forte Web Designs',
-  description: 'Forte builds custom-coded websites and growth systems for Texas, Oklahoma, and New Mexico businesses. Local SEO, automation, and design built to win your market.',
-  keywords: 'local web design Texas Oklahoma New Mexico, growth systems Southwest, Dallas business growth, Oklahoma City marketing automation, Albuquerque custom websites, local SEO Southwest, business automation Texas',
+  title: 'Local Growth Systems for Texas, Oklahoma & New Mexico | Forte',
+  description: 'Forte builds Growth Systems for Texas, Oklahoma, and New Mexico businesses. Custom websites, automation, and SEO designed to dominate local search and scale your business across the Southwest.',
+  keywords: 'local Growth Systems Texas Oklahoma New Mexico, business automation Southwest, Dallas growth systems, Oklahoma City automation, Albuquerque business systems, local SEO Southwest, marketing automation Texas',
   openGraph: {
-    title: 'Local Web Design & Growth Systems | Texas • Oklahoma • New Mexico | Forte Web Designs',
-    description: 'Forte builds custom-coded websites and growth systems for Texas, Oklahoma, and New Mexico businesses. Local SEO, automation, and design built to win your market.',
+    title: 'Local Growth Systems for Texas, Oklahoma & New Mexico | Forte',
+    description: 'Forte builds Growth Systems for Texas, Oklahoma, and New Mexico businesses. Custom websites, automation, and SEO designed to dominate local search and scale your business across the Southwest.',
     url: 'https://fortewebdesigns.com/locations',
     type: 'website',
   },
@@ -24,8 +24,8 @@ const topLocations = [
     state: 'Texas',
     slug: 'texas/dallas',
     description: 'Big D means big competition. Every day, 45,000+ businesses fight for the same customers online. Your website either dominates search results or gets buried on page 10.',
-    problem: 'Corporate giants with million-dollar marketing budgets push small businesses into digital obscurity.',
-    solution: 'Custom-coded websites + local SEO + automated follow-ups that compete against corporate marketing budgets.',
+    problem: 'Corporate giants with million-dollar marketing budgets push small businesses into obscurity.',
+    solution: 'Custom-coded websites + local SEO + automated lead capture systems designed to compete head-to-head.',
     challenges: ['Corporate giants dominating search', 'Template websites looking identical', 'High cost-per-click advertising'],
     solutions: ['Lightning-fast custom code', 'Local SEO that actually works', 'Authentic brand positioning'],
     population: '1.3M+',
@@ -91,7 +91,7 @@ const topLocations = [
     population: '200K+',
     businesses: '12,000+',
     keyAreas: ['The Star', 'Frisco Square', 'Stonebriar', 'Legacy West'],
-    marketInsight: 'Frisco customers are tech-savvy and expect instant, mobile-perfect experiences.',
+    marketInsight: 'Frisco customers are tech-savvy and expect instant, mobile-perfect experiences. Growth Systems ensure you stand out with mobile-first speed and automated follow-up.',
     featured: false,
   },
   {
@@ -131,7 +131,7 @@ const topLocations = [
     slug: 'oklahoma/oklahoma-city',
     description: 'Energy capital of the Southwest. Your website competes with major energy companies while serving diverse local businesses from Bricktown to Midtown.',
     problem: 'Energy boom creates high competition - local businesses struggle to stand out against major corporations.',
-    solution: 'Professional websites with built-in booking, automation, and SEO tuned for Oklahoma authenticity.',
+    solution: 'Growth Systems with professional websites, automated booking, and SEO tuned for Oklahoma authenticity.',
     challenges: ['Energy industry competition', 'Diverse market segments', 'Professional vs. local balance'],
     solutions: ['Industry-specific optimization', 'Local market positioning', 'Professional branding'],
     population: '695K+',
@@ -177,7 +177,7 @@ const topLocations = [
     slug: 'new-mexico/albuquerque',
     description: 'Desert metropolis with unique Southwestern culture. Your website needs to reflect local character while competing with national chains.',
     problem: 'Generic corporate websites dominate search results, making local businesses invisible.',
-    solution: 'Culturally-aware growth systems that showcase New Mexico character while optimizing for Google search.',
+    solution: 'Growth Systems with culturally-aware design that showcase New Mexico character while optimizing for search dominance.',
     challenges: ['Cultural authenticity', 'Corporate competition', 'Tourist vs. local markets'],
     solutions: ['Southwest-inspired design', 'Cultural market positioning', 'Bilingual optimization'],
     population: '565K+',
@@ -198,7 +198,7 @@ const topLocations = [
     population: '87K+',
     businesses: '6,200+',
     keyAreas: ['Plaza District', 'Canyon Road', 'Railyard District', 'Midtown'],
-    marketInsight: 'Santa Fe customers expect artistic sophistication with authentic cultural respect and professionalism.',
+    marketInsight: 'Santa Fe customers expect artistic sophistication with cultural respect. Growth Systems balance design heritage with digital performance.',
     featured: false,
   },
   {
@@ -213,7 +213,7 @@ const topLocations = [
     population: '112K+',
     businesses: '7,800+',
     keyAreas: ['Downtown Las Cruces', 'NMSU area', 'Mesilla', 'East Mesa'],
-    marketInsight: 'Las Cruces customers expect bilingual accessibility and authentic cultural understanding.',
+    marketInsight: 'Las Cruces customers expect bilingual accessibility. Growth Systems integrate bilingual SEO and automation to connect with all markets.',
     featured: false,
   },
 ];
@@ -222,17 +222,17 @@ const whyCustomDevelopment = [
   {
     icon: '🏆',
     title: 'Beyond Templates',
-    description: 'While others use the same WordPress templates for every client, we custom code every website to match your specific market needs.',
+    description: 'No cookie-cutter WordPress sites. Every Growth System is custom-coded for your local market.',
   },
   {
     icon: '⚡',
     title: 'Performance That Wins',
-    description: 'Custom-coded sites load instantly and rank better in search results. No bloated WordPress templates slowing you down.',
+    description: 'Lightning-fast performance and built-in automation that keep you ahead of competitors.',
   },
   {
     icon: '🔒',
     title: 'Built to Last',
-    description: 'No security vulnerabilities, no constant updates eating into your time. Just pure performance that helps you compete and win.',
+    description: 'Secure, scalable, and optimized to grow with your business.',
   },
 ];
 
@@ -349,11 +349,25 @@ export default function LocationsPage() {
                 Top Locations
               </span>
               <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6">
-                Local Growth Systems for Southwest Businesses
+                Growth Systems for Southwest Businesses
               </h1>
               <p className="text-lg sm:text-xl md:text-2xl font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto">
-                From Texas to Oklahoma to New Mexico, every market has unique challenges. We build <strong>custom-coded websites and integrated growth systems</strong> designed to dominate local search, capture leads, and scale your business.
+                From Texas to Oklahoma to New Mexico, every market has unique challenges. Forte builds Growth Systems that combine web design, automation, and SEO to help you dominate local search, capture more leads, and scale across your region.
               </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                <Link
+                  href="/contact?utm_source=locations_hero&utm_medium=cta_button"
+                  className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
+                >
+                  Get My Free Growth Audit
+                </Link>
+                <Link
+                  href="/contact?utm_source=locations_hero&utm_medium=growth_system"
+                  className="inline-flex items-center justify-center border-2 border-blue-600 text-blue-600 dark:text-blue-400 px-8 py-3 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition-colors duration-200"
+                >
+                  Start My Growth System
+                </Link>
+              </div>
             </div>
           </div>
         </section>
@@ -366,7 +380,7 @@ export default function LocationsPage() {
                 Local Markets, Tailored Systems
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Generic templates can't solve local business problems. Our growth systems combine <strong>web design, automation, and SEO</strong> to help you win in Dallas, Oklahoma City, Albuquerque, and beyond.
+                Generic templates can't solve local business challenges. Our Growth Systems combine custom-coded websites, automated follow-ups, and local SEO strategies so you win in Dallas, Oklahoma City, Albuquerque, and beyond.
               </p>
             </div>
 
@@ -532,7 +546,7 @@ export default function LocationsPage() {
                       <div className="space-y-2">
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Custom features for your industry</span>
+                          <span>Custom features per industry & market</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
@@ -540,11 +554,11 @@ export default function LocationsPage() {
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Built to scale across cities/states</span>
+                          <span>Growth-ready systems that scale across cities/states</span>
                         </div>
                         <div className="flex items-center gap-2">
                           <span className="text-green-500">✓</span>
-                          <span>Growth systems integration</span>
+                          <span>CRM & workflow automation integration</span>
                         </div>
                       </div>
                     </div>
@@ -571,20 +585,20 @@ export default function LocationsPage() {
                 Win Local Markets with Custom Growth Systems
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Your competitors are using the same WordPress templates. Dominate with custom-coded Growth Systems that actually work in your local market.
+                Your competitors are using the same WordPress templates. Forte Growth Systems combine web design, automation, and SEO so you dominate your local market with measurable results.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact?utm_source=locations_page&utm_medium=cta_button"
                   className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                 >
-                  Get Local Market Analysis
+                  Book Free Growth Audit
                 </Link>
                 <Link
                   href="/contact?utm_source=locations_page&utm_medium=growth_audit"
                   className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
                 >
-                  Book Free Growth Audit
+                  Start My Growth System
                 </Link>
               </div>
             </div>
