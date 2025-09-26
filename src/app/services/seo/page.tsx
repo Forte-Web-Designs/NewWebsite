@@ -17,28 +17,28 @@ type FAQItem = {
 
 const faqData: FAQItem[] = [
   {
-    question: "How long until I see results?",
-    answer: "Most businesses see movement within 30–60 days and strong results in 90+. We track progress transparently so you can see improvements at every step.",
+    question: "How fast does automation start working?",
+    answer: "Your AI receptionist and booking system go live within 24-48 hours. Most businesses see immediate improvements in response times and start capturing after-hours leads right away.",
   },
   {
-    question: "What's the difference between Essential and Growth?",
-    answer: "Essential focuses on optimizing your site with keyword targeting, technical fixes, and basic local SEO. Growth includes everything in Essential plus blog content creation, link building, and ongoing strategy development.",
+    question: "Can AI handle industry-specific questions?",
+    answer: "Absolutely. We train your AI with your specific services, pricing, and FAQs. It learns your business inside and out to provide accurate, helpful responses to potential customers.",
   },
   {
-    question: "Do you work with non-Forte websites?",
-    answer: "Occasionally, yes - but we recommend rebuilding with Forte if your current site isn't SEO-ready. Our websites are built with clean code and proper technical foundations that make SEO much more effective.",
+    question: "Do I need a new CRM system?",
+    answer: "Not necessarily. Our automation layer integrates with most existing CRMs and booking systems. We can also recommend simple solutions if you don't have one yet.",
   },
   {
-    question: "What industries do you work with?",
-    answer: "We work with all types of local businesses - contractors, healthcare providers, professional services, restaurants, retail stores, and more. Our strategies adapt to your specific industry and local market.",
+    question: "Does this work after hours and weekends?",
+    answer: "That's the whole point! Your AI receptionist works 24/7, capturing leads, answering questions, and booking appointments even when you're sleeping or busy with customers.",
   },
 ];
 
-// SEO metadata for the page
+// Growth Layer: Automation & AI metadata for the page
 const pageMetadata = {
-  title: "Professional SEO Services | Expert Search Engine Optimization Nationwide from DFW | Forte Web Designs",
-  description: "Dominate Google search results with professional SEO services nationwide. DFW-based team delivering expert local SEO, advanced keyword optimization, content strategy, and proven search engine optimization that drives real business results.",
-  keywords: "professional SEO services, search engine optimization, expert local SEO, Google ranking optimization, keyword research, SEO company, search marketing, professional SEO optimization, digital marketing SEO, nationwide SEO services, DFW SEO team"
+  title: "Growth Layer: Automation & AI | 24/7 Lead Capture & Booking System | Forte Web Designs",
+  description: "Transform your website into a 24/7 sales machine. AI receptionists, automated follow-up, and smart booking systems that convert traffic into paying clients. Turn leads into revenue automatically.",
+  keywords: "automation systems, AI receptionist, automated booking, lead capture automation, business automation, AI chat, automated follow-up, smart scheduling, lead conversion, automated sales funnel"
 };
 
 export default function SeoDesignPage() {
@@ -78,25 +78,25 @@ export default function SeoDesignPage() {
         <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container max-w-7xl mx-auto text-center">
             <SimpleScrollReveal direction="up" delay={200}>
-              <div className="inline-flex items-center gap-2 bg-blue-50 dark:bg-blue-900/20 px-4 py-2 rounded-full mb-6 border border-blue-200 dark:border-blue-700">
-                <Icon name="star" className="w-4 h-4 text-blue-600" />
-                <span className="text-blue-600 dark:text-blue-400 text-sm font-medium">
-                  SEO That Actually Works
+              <div className="inline-flex items-center gap-2 bg-green-50 dark:bg-green-900/20 px-4 py-2 rounded-full mb-6 border border-green-200 dark:border-green-700">
+                <Icon name="star" className="w-4 h-4 text-green-600" />
+                <span className="text-green-600 dark:text-green-400 text-sm font-medium">
+                  Growth Layer: Automation & AI
                 </span>
               </div>
             
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold font-roboto leading-tight dark:text-white mb-6 max-w-5xl mx-auto">
-                Get Found. <span className="text-blue-600 dark:text-blue-400">Stay Booked.</span>
+                Growth Layer: <span className="text-green-600 dark:text-green-400">Automation & AI</span>
               </h1>
               
               <p className="text-xl sm:text-2xl font-normal text-gray-600 dark:text-gray-300 leading-relaxed max-w-4xl mx-auto mb-8">
-                Stop being invisible on Google. Our SEO doesn't just boost rankings - it brings in real, qualified leads so you can focus on serving customers, not chasing them.
+                Turn your website into a 24/7 sales rep. AI receptionists, automated follow-up, and booking flows that convert traffic into paying clients.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <LightButton href="/contact">Get My Free Website Analysis</LightButton>
-                <DarkButton href="#pricing" className="bg-blue-600 hover:bg-blue-700 text-white border-blue-600">
-                  Add Forte SEO™ to My Website
+                <LightButton href="/contact">Book My Free Growth Audit</LightButton>
+                <DarkButton href="#pricing" className="bg-green-600 hover:bg-green-700 text-white border-green-600">
+                  Add Growth Layer to My Website
                 </DarkButton>
               </div>
             </SimpleScrollReveal>
@@ -118,26 +118,26 @@ export default function SeoDesignPage() {
                   <div className="grid md:grid-cols-3 gap-6">
                     <div className="text-center">
                       <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">👻</span>
+                        <span className="text-2xl">⏳</span>
                       </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Invisible on Google</h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Your website doesn't show up when people search your service</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Slow Response Time</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Leads slip away when you don't answer fast enough</p>
                     </div>
 
                     <div className="text-center">
                       <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">🏆</span>
+                        <span className="text-2xl">📉</span>
                       </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Competitors Winning</h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Competitors are winning customers that should be yours</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Lost Opportunities</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Competitors call back first and win the job</p>
                     </div>
 
                     <div className="text-center">
                       <div className="bg-red-100 dark:bg-red-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">💰</span>
+                        <span className="text-2xl">🤯</span>
                       </div>
-                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Missing High-Intent Leads</h3>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">You're missing out on high-intent leads ready to buy today</p>
+                      <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Overwhelmed Teams</h3>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Manual follow-ups eat hours every week</p>
                     </div>
                   </div>
                 </div>
@@ -146,16 +146,16 @@ export default function SeoDesignPage() {
           </div>
         </section>
 
-        {/* Forte SEO™ Solution Section */}
+        {/* AI & Automation Solution Section */}
         <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container max-w-7xl mx-auto">
             <SimpleScrollReveal direction="up" delay={400}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  SEO That Works for Real Businesses
+                  AI & Automation That Works for Real Businesses
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
-                  We don't waste time with buzzwords and fluff. We use proven methods that get your website ranking and keep the phone ringing.
+                  No more missed calls or lost leads. Our automation layer captures every opportunity and turns them into paying customers.
                 </p>
               </div>
 
@@ -163,58 +163,58 @@ export default function SeoDesignPage() {
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">🤖</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Local keyword targeting</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Strategic targeting for your local market</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">AI Receptionist</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Answer leads instantly 24/7</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">📲</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technical SEO your developer forgot</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Fix the technical issues holding you back</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Automated Follow-Up</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">SMS & email drips until lead responds</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">📅</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Monthly content strategy</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Fresh, SEO-optimized content every month</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Booking Integration</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Calendar, reminders, reschedules handled automatically</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">📊</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Link building that builds trust</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Quality backlinks from relevant sources</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Lead Dashboard</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Track conversations, appointments, and ROI</p>
                     </div>
                   </div>
 
                   <div className="flex items-start gap-3">
                     <div className="bg-green-100 dark:bg-green-900/30 p-2 rounded-lg">
-                      <span className="text-green-500 text-xl">✅</span>
+                      <span className="text-green-500 text-xl">⭐</span>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Real reports, real growth</h4>
-                      <p className="text-gray-600 dark:text-gray-400 text-sm">Transparent tracking and monthly reporting</p>
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Lead Scoring</h4>
+                      <p className="text-gray-600 dark:text-gray-400 text-sm">Prioritize high-value opportunities automatically</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-xl border border-blue-200 dark:border-blue-700 text-center">
-                  <p className="text-blue-800 dark:text-blue-200 font-semibold text-lg">
-                    Most clients see 30–50% more organic traffic in the first 90 days.
+                <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-xl border border-green-200 dark:border-green-700 text-center">
+                  <p className="text-green-800 dark:text-green-200 font-semibold text-lg">
+                    Most clients see 2x more bookings in the first 60 days.
                   </p>
                 </div>
               </div>
@@ -222,16 +222,16 @@ export default function SeoDesignPage() {
           </div>
         </section>
 
-        {/* Built-in SEO vs Full SEO Package Comparison */}
+        {/* Foundation vs Growth Layer Comparison */}
         <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
           <div className="container max-w-7xl mx-auto">
             <SimpleScrollReveal direction="up" delay={500}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Already Have a Forte Website? Great - You've Got a Head Start.
+                  Already Have a Forte Website? Great — Now Supercharge It.
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  But to actually rank, you need more than a good foundation.
+                  Foundation websites capture leads → Growth Layer converts them into bookings.
                 </p>
               </div>
 
@@ -241,94 +241,98 @@ export default function SeoDesignPage() {
                     <thead className="bg-gray-50 dark:bg-gray-700">
                       <tr>
                         <th className="text-left py-6 px-6 font-bold text-gray-900 dark:text-white text-lg">Feature</th>
-                        <th className="text-center py-6 px-6 font-bold text-blue-600 dark:text-blue-400 text-lg">Built-In SEO (Included)</th>
-                        <th className="text-center py-6 px-6 font-bold text-green-600 dark:text-green-400 text-lg">Forte SEO™ Add-On</th>
+                        <th className="text-center py-6 px-6 font-bold text-blue-600 dark:text-blue-400 text-lg">Foundation Only</th>
+                        <th className="text-center py-6 px-6 font-bold text-green-600 dark:text-green-400 text-lg">Growth Layer Added</th>
                       </tr>
                     </thead>
                     <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                       <tr>
-                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Technical Setup</td>
+                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Lead Response</td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-green-500 text-xl">✅</span>
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold">Initial setup</span>
+                            <span className="text-yellow-500 text-xl">⚠️</span>
+                            <span className="text-blue-600 dark:text-blue-400 font-semibold">Email notifications</span>
                           </div>
                         </td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-green-500 text-xl">✅</span>
-                            <span className="text-green-600 dark:text-green-400 font-semibold">Ongoing audits & fixes</span>
+                            <span className="text-green-500 text-xl">🤖</span>
+                            <span className="text-green-600 dark:text-green-400 font-semibold">AI chats with leads instantly</span>
                           </div>
                         </td>
                       </tr>
                       <tr className="bg-gray-50/50 dark:bg-gray-800/50">
-                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Metadata / Alt Tags</td>
+                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Follow-Up</td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-green-500 text-xl">✅</span>
-                            <span className="text-blue-600 dark:text-blue-400 font-semibold">Basic</span>
+                            <span className="text-red-500 text-xl">❌</span>
+                            <span className="text-gray-400 font-semibold">Manual only</span>
                           </div>
                         </td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-green-500 text-xl">✅</span>
-                            <span className="text-green-600 dark:text-green-400 font-semibold">Monthly refinement</span>
+                            <span className="text-green-500 text-xl">📲</span>
+                            <span className="text-green-600 dark:text-green-400 font-semibold">Auto SMS & email sequences</span>
                           </div>
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Keyword Research</td>
+                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Appointment Booking</td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-red-500 text-xl">❌</span>
+                            <span className="text-yellow-500 text-xl">⚠️</span>
+                            <span className="text-blue-600 dark:text-blue-400 font-semibold">Basic contact form</span>
                           </div>
                         </td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-green-500 text-xl">✅</span>
-                            <span className="text-green-600 dark:text-green-400 font-semibold">Monthly & strategic</span>
+                            <span className="text-green-500 text-xl">📅</span>
+                            <span className="text-green-600 dark:text-green-400 font-semibold">Auto-schedules & sends reminders</span>
                           </div>
                         </td>
                       </tr>
                       <tr className="bg-gray-50/50 dark:bg-gray-800/50">
-                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Blog Strategy</td>
+                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Lead Tracking</td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
                             <span className="text-red-500 text-xl">❌</span>
+                            <span className="text-gray-400 font-semibold">None</span>
                           </div>
                         </td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-green-500 text-xl">✅</span>
-                            <span className="text-green-600 dark:text-green-400 font-semibold">SEO-driven content planning</span>
+                            <span className="text-green-500 text-xl">📊</span>
+                            <span className="text-green-600 dark:text-green-400 font-semibold">Full dashboard & analytics</span>
                           </div>
                         </td>
                       </tr>
                       <tr>
-                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Link Building</td>
+                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">After Hours Coverage</td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
                             <span className="text-red-500 text-xl">❌</span>
+                            <span className="text-gray-400 font-semibold">Leads wait until morning</span>
                           </div>
                         </td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-green-500 text-xl">✅</span>
-                            <span className="text-green-600 dark:text-green-400 font-semibold">Authority outreach</span>
+                            <span className="text-green-500 text-xl">🌙</span>
+                            <span className="text-green-600 dark:text-green-400 font-semibold">24/7 AI coverage</span>
                           </div>
                         </td>
                       </tr>
                       <tr className="bg-gray-50/50 dark:bg-gray-800/50">
-                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Analytics & Reporting</td>
+                        <td className="py-6 px-6 font-semibold text-gray-900 dark:text-white">Lead Conversion</td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-red-500 text-xl">❌</span>
+                            <span className="text-yellow-500 text-xl">⚠️</span>
+                            <span className="text-blue-600 dark:text-blue-400 font-semibold">Hope they call back</span>
                           </div>
                         </td>
                         <td className="py-6 px-6 text-center">
                           <div className="flex items-center justify-center gap-2">
-                            <span className="text-green-500 text-xl">✅</span>
-                            <span className="text-green-600 dark:text-green-400 font-semibold">Monthly growth reports</span>
+                            <span className="text-green-500 text-xl">⭐</span>
+                            <span className="text-green-600 dark:text-green-400 font-semibold">Tracks outcomes & ROI</span>
                           </div>
                         </td>
                       </tr>
@@ -340,16 +344,16 @@ export default function SeoDesignPage() {
           </div>
         </section>
 
-        {/* What's Included - Forte SEO™ Services */}
+        {/* What's Included - Growth Layer Package */}
         <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8">
           <div className="container max-w-7xl mx-auto">
             <SimpleScrollReveal direction="up" delay={600}>
               <div className="text-center mb-16">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  What's Included – Forte SEO™ Services
+                  What's Included — Growth Layer Package
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  Comprehensive SEO services that work together to get you found and keep you ranking
+                  Complete automation system that captures leads, nurtures prospects, and books appointments
                 </p>
               </div>
 
@@ -357,48 +361,48 @@ export default function SeoDesignPage() {
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-center mb-6">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">🔧</span>
+                      <span className="text-3xl">🤖</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Rock-Solid Technical Foundation</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">AI Receptionist</h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 text-center">
-                    We fix the crawl errors, broken links, and speed bottlenecks holding your site back.
+                    Answers FAQs and qualifies leads 24/7, so you never miss an opportunity.
                   </p>
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-center mb-6">
                     <div className="bg-green-100 dark:bg-green-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">📝</span>
+                      <span className="text-3xl">📲</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Content That Gets Clicks</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Automated Follow-Up</h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 text-center">
-                    We write helpful blog posts and optimize your service pages so Google and your customers know exactly what you offer.
+                    SMS and email sequences that nurture leads until they respond or book.
                   </p>
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-center mb-6">
                     <div className="bg-purple-100 dark:bg-purple-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">📍</span>
+                      <span className="text-3xl">📅</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Local SEO That Gets You Ranked "Near Me"</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Booking Integration</h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 text-center">
-                    Google Business Profile, local citations, map rankings - we handle it all.
+                    Calendar integration with automated reminders and reschedule handling.
                   </p>
                 </div>
 
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300">
                   <div className="text-center mb-6">
                     <div className="bg-orange-100 dark:bg-orange-900/30 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <span className="text-3xl">🔗</span>
+                      <span className="text-3xl">📊</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Quality Link Building</h3>
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">Lead Dashboard</h3>
                   </div>
                   <p className="text-gray-600 dark:text-gray-400 text-center">
-                    We build trustworthy links from relevant sites. No shady spam. Just credibility.
+                    Track conversations, appointments, and ROI in one clean dashboard.
                   </p>
                 </div>
               </div>
@@ -417,16 +421,16 @@ export default function SeoDesignPage() {
               </div>
               <div className="flex-1">
                 <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                  Your Website's Monthly Checkup
+                  Your Automation System's Ongoing Care
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-4">
-                  Just like you get regular health checkups to catch problems early, your website needs monthly monitoring to stay healthy. Forte Care™ provides ongoing SEO monitoring, performance optimization, and technical maintenance so your rankings stay strong and your site keeps attracting customers.
+                  Just like you service your HVAC system to prevent breakdowns, your automation systems need regular optimization to keep generating leads. Forte Care™ provides ongoing AI fine-tuning, performance monitoring, and system maintenance so your automations stay effective and your business keeps growing.
                 </p>
                 <Link
                   href="/solutions/care"
                   className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors"
                 >
-                  <span>Get Your Website Checkup</span>
+                  <span>Optimize My Automation</span>
                   <span className="text-sm">→</span>
                 </Link>
               </div>
@@ -443,7 +447,7 @@ export default function SeoDesignPage() {
                   Real Client Results
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  See how we helped a local business dominate their market
+                  See how automation transformed this local business
                 </p>
               </div>
 
@@ -453,11 +457,11 @@ export default function SeoDesignPage() {
                   <div>
                     <div className="flex items-center gap-4 mb-8">
                       <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center">
-                        <span className="text-2xl">🏥</span>
+                        <span className="text-2xl">🔧</span>
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Alpine Physical Therapy</h3>
-                        <p className="text-gray-600 dark:text-gray-400">Local healthcare practice</p>
+                        <h3 className="text-2xl font-bold text-gray-900 dark:text-white">Mike's HVAC</h3>
+                        <p className="text-gray-600 dark:text-gray-400">Local HVAC contractor</p>
                       </div>
                     </div>
 
@@ -467,7 +471,7 @@ export default function SeoDesignPage() {
                           Problem
                         </h4>
                         <p className="text-red-700 dark:text-red-300 text-sm">
-                          Not ranking for "physical therapy + city" - competitors getting all the traffic
+                          Missing calls after hours, slow response to leads, competitors booking jobs first
                         </p>
                       </div>
 
@@ -476,7 +480,7 @@ export default function SeoDesignPage() {
                           Solution
                         </h4>
                         <p className="text-blue-700 dark:text-blue-300 text-sm">
-                          Local SEO strategy, 12 optimized service pages, blog content, and Google Business revamp
+                          AI receptionist + auto-booking + reminder system + automated follow-up sequences
                         </p>
                       </div>
                     </div>
@@ -486,48 +490,48 @@ export default function SeoDesignPage() {
                   <div>
                     <div className="bg-green-50 dark:bg-green-900/20 p-6 rounded-lg border border-green-200 dark:border-green-800">
                       <h4 className="font-semibold text-green-800 dark:text-green-200 mb-6 text-center text-xl">
-                        Results in 6 months:
+                        Results in 60 days:
                       </h4>
                       
                       <div className="grid grid-cols-2 gap-6 mb-6">
                         <div className="text-center">
                           <div className="text-3xl font-bold text-green-600 dark:text-green-400">
-                            +287%
+                            2x
                           </div>
                           <div className="text-sm text-green-700 dark:text-green-300">
-                            Organic Traffic
+                            More Service Calls
                           </div>
                         </div>
                         <div className="text-center">
                           <div className="text-3xl font-bold text-green-600 dark:text-green-400">
-                            +450%
+                            24/7
                           </div>
                           <div className="text-sm text-green-700 dark:text-green-300">
-                            Qualified Leads
+                            Lead Capture
                           </div>
                         </div>
                         <div className="text-center">
                           <div className="text-3xl font-bold text-green-600 dark:text-green-400">
-                            #1
+                            85%
                           </div>
                           <div className="text-sm text-green-700 dark:text-green-300">
-                            Ranking for "Physical Therapy [City]"
+                            Booking Rate
                           </div>
                         </div>
                         <div className="text-center">
                           <div className="text-3xl font-bold text-green-600 dark:text-green-400">
-                            12+
+                            0
                           </div>
                           <div className="text-sm text-green-700 dark:text-green-300">
-                            Page-1 Keywords
+                            Missed Opportunities
                           </div>
                         </div>
                       </div>
 
                       <blockquote className="border-l-4 border-green-500 pl-4 italic text-green-700 dark:text-green-300 text-center">
-                        "We went from struggling to booked out with a waitlist. The ROI was incredible."
+                        "I never miss a lead now. Even when I'm on a job, the AI is booking the next one."
                         <footer className="text-sm mt-2 not-italic font-semibold">
-                          - Dr. Sarah Chen, Alpine Physical Therapy
+                          - Mike Johnson, Mike's HVAC
                         </footer>
                       </blockquote>
                     </div>
@@ -544,40 +548,40 @@ export default function SeoDesignPage() {
             <SimpleScrollReveal direction="up" delay={800}>
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Choose the Right SEO Plan for Your Goals
+                  Choose the Right Automation Plan for Your Goals
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-                  Requires a Forte Foundation™ or Pro™ website design package. Save with our Growth Bundle or Dominate Bundle.
+                  Requires a Forte Foundation™ or Pro™ website design package. Transform leads into revenue automatically.
                 </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                {/* SEO Essential */}
+                {/* Automation Starter */}
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border border-gray-200 dark:border-gray-700">
                   <div className="text-center mb-6">
                     <div className="bg-blue-100 dark:bg-blue-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Icon name="search" className="w-8 h-8 text-blue-600 dark:text-blue-400" />
+                      <span className="text-3xl">🤖</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">SEO Essential™</h3>
-                    <p className="text-gray-600 dark:text-gray-400">On-page optimization, keyword targeting, basic local SEO</p>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Automation Starter</h3>
+                    <p className="text-gray-600 dark:text-gray-400">AI receptionist setup, automated follow-up, basic booking</p>
                   </div>
                   
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">Keyword research & optimization</span>
+                      <span className="text-gray-700 dark:text-gray-300">AI receptionist setup</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">Technical SEO audits</span>
+                      <span className="text-gray-700 dark:text-gray-300">Automated SMS/email follow-up</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">On-page optimization</span>
+                      <span className="text-gray-700 dark:text-gray-300">Basic booking integration</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">Monthly reporting</span>
+                      <span className="text-gray-700 dark:text-gray-300">Monthly performance reports</span>
                     </li>
                   </ul>
                   
@@ -591,7 +595,7 @@ export default function SeoDesignPage() {
                   </div>
                 </div>
 
-                {/* SEO Growth */}
+                {/* Automation Pro */}
                 <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg border-2 border-green-500 relative">
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <div className="bg-green-500 text-white px-4 py-2 rounded-full text-sm font-semibold">
@@ -603,30 +607,30 @@ export default function SeoDesignPage() {
                     <div className="bg-green-100 dark:bg-green-900/30 p-3 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                       <span className="text-3xl">🚀</span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">SEO Growth™</h3>
-                    <p className="text-gray-600 dark:text-gray-400">Includes blog content, link building, full SEO strategy</p>
+                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Automation Pro</h3>
+                    <p className="text-gray-600 dark:text-gray-400">Advanced workflows, lead scoring, multi-channel automation</p>
                   </div>
                   
                   <ul className="space-y-3 mb-6">
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">Everything in Essential</span>
+                      <span className="text-gray-700 dark:text-gray-300">Everything in Starter</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">4 SEO blog posts monthly</span>
+                      <span className="text-gray-700 dark:text-gray-300">Advanced workflows (lead scoring, multi-channel)</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">Link building campaigns</span>
+                      <span className="text-gray-700 dark:text-gray-300">Dashboard reporting & optimization</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">Competitor analysis</span>
+                      <span className="text-gray-700 dark:text-gray-300">CRM integration & pipeline automation</span>
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="text-green-500 mt-1">✓</span>
-                      <span className="text-gray-700 dark:text-gray-300">Local SEO optimization</span>
+                      <span className="text-gray-700 dark:text-gray-300">Custom workflow optimization</span>
                     </li>
                   </ul>
                   
@@ -686,14 +690,14 @@ export default function SeoDesignPage() {
         </section>
 
         {/* Final CTA Section */}
-        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-blue-600 dark:bg-blue-800">
+        <section className="py-16 md:py-24 px-4 sm:px-6 lg:px-8 bg-green-600 dark:bg-green-800">
           <div className="container max-w-7xl mx-auto text-center">
             <SimpleScrollReveal direction="up" delay={1000}>
               <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-                Let's Put Your Business on the Map
+                Let's Turn Your Website Into a 24/7 Sales Machine
               </h2>
-              <p className="text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                We've helped hundreds of small businesses rank #1 on Google. Yours could be next.
+              <p className="text-xl text-green-100 max-w-3xl mx-auto mb-8">
+                We've helped hundreds of businesses capture more leads and book more appointments. Yours could be next.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
@@ -710,11 +714,11 @@ export default function SeoDesignPage() {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <LightButton href="/contact" className="bg-white text-blue-600 hover:bg-gray-100">
-                  Get My Free Website Analysis
+                <LightButton href="/contact" className="bg-white text-green-600 hover:bg-gray-100">
+                  Book Your Free Growth System Audit
                 </LightButton>
-                <DarkButton href="/pricing" className="bg-blue-800 hover:bg-blue-900 text-white border-blue-800">
-                  Add SEO to My Website
+                <DarkButton href="/pricing" className="bg-green-800 hover:bg-green-900 text-white border-green-800">
+                  Add Growth Layer to My Website
                 </DarkButton>
               </div>
             </SimpleScrollReveal>
@@ -723,12 +727,12 @@ export default function SeoDesignPage() {
 
         {/* Industry-specific CTA functionality */}
         <IndustryLeadCTA 
-          industry="seo"
-          formName="SEO Inquiry"
-          title="Let's Build Your SEO Strategy Right"
-          subtitle="Tell us about your business and we'll get back to you within 1 business day. No pressure - just real help from a team that builds winning SEO strategies."
-          mobileCtaText="Ready to rank higher?"
-          mobileCtaSubtext="Get your SEO strategy today"
+          industry="automation"
+          formName="Growth Layer Automation Inquiry"
+          title="Let's Build Your Automation System Right"
+          subtitle="Tell us about your business and we'll show you exactly how automation can turn more leads into paying customers. No pressure - just real help from a team that builds winning growth systems."
+          mobileCtaText="Ready to automate your growth?"
+          mobileCtaSubtext="Get your automation system today"
           mobileBgGradient="bg-gradient-to-r from-green-600 to-teal-600"
         />
       </div>

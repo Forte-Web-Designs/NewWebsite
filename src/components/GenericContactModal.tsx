@@ -306,6 +306,7 @@ export default function GenericContactModal({
                   <option value="Website Design">Website Design</option>
                   <option value="Website Redesign">Website Redesign</option>
                   <option value="E-commerce">E-commerce</option>
+                  <option value="Automation & AI">Automation & AI</option>
                   <option value="SEO">SEO Services</option>
                   <option value="Website Maintenance">Website Maintenance</option>
                   <option value="Custom Development">Custom Development</option>
