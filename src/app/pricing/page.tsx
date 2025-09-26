@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import { PricingPage } from '@/components/pricing';
+import { PricingPage } from '@/components/pricing-new';
 
 export const metadata: Metadata = {
-  title: 'Professional Website Design Pricing Dallas Fort Worth | Transparent Web Development Costs Texas | Forte Web Designs',
-  description: 'Transparent professional website design pricing for Dallas Fort Worth businesses. No setup fees, no surprises. Professional custom websites, SEO optimization, and digital marketing packages designed to grow your business.',
+  title: 'Simple, Transparent Pricing | Growth System Layers | Forte Web Designs',
+  description: 'Transparent Growth System pricing for Dallas Fort Worth businesses. Start with Foundation, add Growth and Scaling layers. Custom websites, automation & AI, business systems integration.',
 };
 
 export default function Pricing() {

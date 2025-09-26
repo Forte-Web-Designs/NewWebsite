@@ -18,13 +18,13 @@ interface PricingToggleProps {
 function PricingToggle({ isMonthly, onToggle }: PricingToggleProps) {
   return (
     <div className="flex items-center justify-center gap-4 mb-8 px-4 sm:px-0">
-      <span className={`text-base sm:text-lg font-medium ${isMonthly ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}>
+      <span className={`text-base sm:text-lg font-medium ${isMonthly ? 'text-green-600 dark:text-green-400' : 'text-gray-600 dark:text-gray-400'}`}>
         Monthly
       </span>
       <button
         onClick={() => onToggle(!isMonthly)}
         className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors ${
-          isMonthly ? 'bg-blue-600' : 'bg-gray-600'
+          isMonthly ? 'bg-green-600' : 'bg-gray-600'
         }`}
         aria-label={`Switch to ${isMonthly ? 'one-time' : 'monthly'} pricing`}
       >
@@ -34,7 +34,7 @@ function PricingToggle({ isMonthly, onToggle }: PricingToggleProps) {
           }`}
         />
       </button>
-      <span className={`text-base sm:text-lg font-medium ${!isMonthly ? 'text-blue-600 dark:text-blue-400' : 'text-gray-600 dark:text-gray-400'}`}>
+      <span className={`text-base sm:text-lg font-medium ${!isMonthly ? 'text-green-600 dark:text-green-400' : 'text-gray-600 dark:text-gray-400'}`}>
         One-Time
       </span>
     </div>
@@ -223,20 +223,20 @@ export default function WebDesignPageClient() {
                       <th className="text-left py-4 sm:py-6 px-3 sm:px-6 font-bold text-gray-900 dark:text-white text-sm sm:text-lg">Feature</th>
                       <th className="text-center py-4 sm:py-6 px-3 sm:px-6 font-bold text-gray-900 dark:text-white text-sm sm:text-lg">
                         Foundation<br/>
-                        <span className="text-blue-600 dark:text-blue-400 text-lg sm:text-2xl font-bold">
-                          {isMonthly ? '$200/mo' : '$2,500'}
+                        <span className="text-green-600 dark:text-green-400 text-lg sm:text-2xl font-bold">
+                          {isMonthly ? '$2,500 + $200/mo' : '$4,500'}
                         </span><br/>
                         <span className="text-xs text-gray-500 dark:text-gray-400">
-                          {isMonthly ? '12-month minimum' : 'one-time'}
+                          {isMonthly ? 'setup + monthly' : 'one-time'}
                         </span>
                       </th>
                       <th className="text-center py-4 sm:py-6 px-3 sm:px-6 font-bold text-gray-900 dark:text-white text-sm sm:text-lg">
                         Pro ⭐<br/>
-                        <span className="text-blue-600 dark:text-blue-400 text-lg sm:text-2xl font-bold">
-                          {isMonthly ? '$350/mo' : '$4,300'}
+                        <span className="text-green-600 dark:text-green-400 text-lg sm:text-2xl font-bold">
+                          {isMonthly ? '$4,500 + $350/mo' : '$7,500'}
                         </span><br/>
                         <span className="text-xs text-gray-500 dark:text-gray-400">
-                          {isMonthly ? '12-month minimum' : 'one-time'}
+                          {isMonthly ? 'setup + monthly' : 'one-time'}
                         </span>
                       </th>
                     </tr>
@@ -320,20 +320,19 @@ export default function WebDesignPageClient() {
               <div className="p-4 sm:p-6 bg-gray-50 dark:bg-gray-700">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-4 sm:mb-6">
                   <div className="text-center">
-                    <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition-colors inline-block w-full text-sm sm:text-base">
-                      Choose Foundation
+                    <Link href="/contact" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition-colors inline-block w-full text-sm sm:text-base">
+                      Start My Foundation
                     </Link>
                   </div>
                   <div className="text-center">
-                    <Link href="/contact" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition-colors inline-block w-full text-sm sm:text-base">
-                      Choose Pro
+                    <Link href="/contact" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 sm:px-8 rounded-lg transition-colors inline-block w-full text-sm sm:text-base">
+                      Start My Pro Website
                     </Link>
                   </div>
                 </div>
-                <div className="text-center">
-                  <Link href="/pricing" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold text-sm sm:text-base">
-                    View Complete Pricing Details & One-Time Options
-                  </Link>
+                <div className="text-center">                <Link href="/pricing" className="text-green-600 dark:text-green-400 hover:underline font-semibold text-sm sm:text-base">
+                  View Complete Growth System Pricing
+                </Link>
                 </div>
               </div>
             </div>
@@ -371,14 +370,14 @@ export default function WebDesignPageClient() {
                     {selectedPlan === 'foundation' ? 'Forte Foundation™' : 'Forte Pro™'}
                     {selectedPlan === 'pro' && ' ⭐'}
                   </h3>
-                  <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-1">
+                  <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-1">
                     {selectedPlan === 'foundation' 
-                      ? (isMonthly ? '$200/mo' : '$2,500')
-                      : (isMonthly ? '$350/mo' : '$4,300')
+                      ? (isMonthly ? '$2,500 + $200/mo' : '$4,500')
+                      : (isMonthly ? '$4,500 + $350/mo' : '$7,500')
                     }
                   </div>
                   <div className="text-xs text-gray-500 dark:text-gray-400">
-                    {isMonthly ? '12-month minimum' : 'one-time'}
+                    {isMonthly ? 'setup + monthly' : 'one-time'}
                   </div>
                 </div>
 
@@ -433,17 +432,17 @@ export default function WebDesignPageClient() {
                 <div className="text-center">
                   <Link 
                     href="/contact" 
-                    className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block w-full"
+                    className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors inline-block w-full"
                   >
-                    Choose {selectedPlan === 'foundation' ? 'Foundation' : 'Pro'}
+                    Start My {selectedPlan === 'foundation' ? 'Foundation' : 'Pro'} Website
                   </Link>
                 </div>
               </div>
               
               {/* Compare All Plans Link */}
               <div className="text-center">
-                <Link href="/pricing" className="text-blue-600 dark:text-blue-400 hover:underline font-semibold">
-                  View Complete Pricing Details & One-Time Options
+                <Link href="/pricing" className="text-green-600 dark:text-green-400 hover:underline font-semibold">
+                  View Complete Growth System Pricing
                 </Link>
               </div>
             </div>
@@ -476,8 +475,8 @@ export default function WebDesignPageClient() {
                 <p className="text-base sm:text-lg font-semibold text-blue-800 dark:text-blue-200 mb-3 sm:mb-4">
                   Want to attract more traffic and rank higher? Our SEO services plug directly into your Forte site.
                 </p>
-                <Link href="/services/seo" className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 sm:px-6 rounded-lg transition-colors inline-block text-sm sm:text-base">
-                  Learn More About SEO
+                <Link href="/services/seo" className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 sm:px-6 rounded-lg transition-colors inline-block text-sm sm:text-base">
+                  Add Growth Layer: Automation & AI
                 </Link>
               </div>
             </div>

@@ -551,7 +551,7 @@ export default function SeoDesignPage() {
                   Choose the Right Automation Plan for Your Goals
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-                  Requires a Forte Foundation™ or Pro™ website design package. Transform leads into revenue automatically.
+                  Add the Growth Layer to your Foundation website. Transform visitors into leads with AI automation and smart booking systems.
                 </p>
               </div>
 
@@ -586,12 +586,12 @@ export default function SeoDesignPage() {
                   </ul>
                   
                   <div className="text-center mb-6">
-                    <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">$300</div>
-                    <div className="text-gray-500 dark:text-gray-400 text-sm">per month</div>
+                    <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">$1,500 + $300/mo</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">setup fee + monthly</div>
                   </div>
                   
                   <div className="text-center">
-                    <LightButton href="/contact" className="w-full">Get Started</LightButton>
+                    <LightButton href="/contact" className="w-full">Start My Growth Layer</LightButton>
                   </div>
                 </div>
 
@@ -635,12 +635,12 @@ export default function SeoDesignPage() {
                   </ul>
                   
                   <div className="text-center mb-6">
-                    <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">$500</div>
-                    <div className="text-gray-500 dark:text-gray-400 text-sm">per month</div>
+                    <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">$2,500 + $500/mo</div>
+                    <div className="text-gray-500 dark:text-gray-400 text-sm">setup fee + monthly</div>
                   </div>
                   
                   <div className="text-center">
-                    <DarkButton href="/contact" className="w-full bg-green-600 hover:bg-green-700 text-white border-green-600">Get Started</DarkButton>
+                    <DarkButton href="/contact" className="w-full bg-green-600 hover:bg-green-700 text-white border-green-600">Start My Growth Layer</DarkButton>
                   </div>
                 </div>
               </div>

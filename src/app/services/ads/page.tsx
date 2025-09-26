@@ -475,7 +475,7 @@ export default function GooglePPCAdsPage() {
                   Scaling Layer Pricing
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-                  Business systems integration that scales with your growth
+                  Add the Scaling Layer to your Growth System. Complete business integration that connects all your tools and maximizes ROI.
                 </p>
               </div>
 
@@ -489,8 +489,8 @@ export default function GooglePPCAdsPage() {
                   <p className="text-gray-600 dark:text-gray-400 mb-6">CRM setup + automation basics</p>
                   
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$500</div>
-                    <div className="text-gray-500 dark:text-gray-400 mb-1">/month</div>
+                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$3,500 + $500/mo</div>
+                    <div className="text-gray-500 dark:text-gray-400 mb-1">setup fee + monthly</div>
                     <div className="text-gray-500 dark:text-gray-400 text-sm">(12-month minimum)</div>
                   </div>
                   
@@ -513,7 +513,7 @@ export default function GooglePPCAdsPage() {
                     </div>
                   </div>
                   
-                  <LightButton href="/contact" className="w-full">Start with Systems Starter</LightButton>
+                  <LightButton href="/contact" className="w-full">Start My Scaling Layer</LightButton>
                 </div>
 
                 {/* Systems Pro */}
@@ -529,8 +529,8 @@ export default function GooglePPCAdsPage() {
                   <p className="text-gray-600 dark:text-gray-400 mb-6">Everything in Starter + advanced automation</p>
                   
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$1,000</div>
-                    <div className="text-gray-500 dark:text-gray-400 mb-1">/month</div>
+                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$5,500 + $750/mo</div>
+                    <div className="text-gray-500 dark:text-gray-400 mb-1">setup fee + monthly</div>
                     <div className="text-gray-500 dark:text-gray-400 text-sm">(12-month minimum)</div>
                   </div>
                   
@@ -557,7 +557,7 @@ export default function GooglePPCAdsPage() {
                     </div>
                   </div>
                   
-                  <LightButton href="/contact" className="w-full">Get Systems Pro</LightButton>
+                  <LightButton href="/contact" className="w-full">Start My Scaling Layer</LightButton>
                 </div>
               </div>
             </SimpleScrollReveal>
