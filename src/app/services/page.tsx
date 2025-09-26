@@ -30,14 +30,14 @@ const growthSystems = [
   {
     id: "growth",
     title: "Growth Layer: Automation & AI",
-    desc: "Turn website traffic into booked appointments, not just clicks. AI receptionists, automated lead follow-up, and smart booking systems that capture leads even when you're not available. No more missed opportunities.",
+    desc: "Your growth system doesn't stop at a website. With AI and automation, every lead is followed up instantly and booked without human effort.",
     features: [
-      "AI chat assistants that qualify leads and book appointments 24/7",
-      "Automated email and SMS follow-up sequences for lead nurturing",
-      "Smart appointment booking with calendar integration and reminders", 
-      "Lead scoring and routing to ensure hot prospects get immediate attention"
+      "AI receptionist/chatbot to qualify leads 24/7",
+      "Automated text & email follow-up sequences",
+      "Instant calendar booking integration",
+      "Smart reminders to reduce no-shows"
     ],
-    pricing: "Starting at $300/month",
+    pricing: "Starting at $1,500 setup + $300/month",
     linkText: "Automate My Lead Capture",
     href: "/services/seo",
     caseStudy: {
@@ -49,14 +49,14 @@ const growthSystems = [
   {
     id: "scaling",
     title: "Scaling Layer: Business Systems Integration",
-    desc: "Make all your tools talk to each other so leads never fall through the cracks. CRM setup, dashboards, and reporting that give you complete visibility into your growth system's performance and ROI.",
+    desc: "A growth system only works if all your tools work together. We connect your website, CRM, booking, and reporting into one seamless operating system.",
     features: [
-      "CRM integration and automated lead management workflows",
-      "Custom dashboards showing leads, bookings, and revenue in real-time",
-      "Advanced analytics and reporting to optimize system performance",
-      "Integration with your existing tools (Google Ads, Facebook, scheduling apps)"
+      "CRM setup and pipeline automation",
+      "Lead tracking dashboards and reporting",
+      "Integration with booking + payment systems",
+      "Custom workflows to prevent lost leads"
     ],
-    pricing: "Starting at $400/month",
+    pricing: "Starting at $2,500 setup + $500/month",
     linkText: "Scale My Growth System",
     href: "/services/ads",
     caseStudy: {
@@ -68,14 +68,14 @@ const growthSystems = [
   {
     id: "optimization",
     title: "Ongoing Forte Care™",
-    desc: "Continuous optimization, updates, and AI fine-tuning that keeps your growth system performing at peak efficiency. We monitor, adjust, and improve everything so you can focus on running your business.",
+    desc: "Growth systems need ongoing optimization to keep generating results. Forte Care™ isn't just maintenance — it's proactive growth support.",
     features: [
-      "24/7 system monitoring and performance optimization",
-      "Regular A/B testing and conversion rate improvements",
-      "Monthly strategy calls and growth system refinements",
-      "Unlimited updates, security patches, and technical support"
+      "24/7 system monitoring and support",
+      "AI fine-tuning and A/B testing for conversions",
+      "Monthly optimization of automations & flows",
+      "Growth insights and reporting delivered monthly"
     ],
-    pricing: "Included with all systems",
+    pricing: "Starting at $300/month",
     linkText: "Learn About Forte Care™",
     href: "/services/socialMedia",
     caseStudy: {

@@ -114,13 +114,14 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Restructured Services dropdown - clean without prices
+  // Growth Systems Partner dropdown structure
   const servicesDropdownItems = [
-    { label: 'Website Design', href: '/services/webDesign' },
-    { label: 'SEO Services', href: '/services/seo' },
-    { label: 'PPC Advertising', href: '/services/ads' },
-    { label: 'Social Media Management', href: '/services/socialMedia' },
-    { label: 'White Label Partnerships', href: '/services/white-label' },
+    { label: 'Foundation: Custom Website Design', href: '/services/webDesign' },
+    { label: 'Growth Layer: Automation & AI', href: '/services/seo' },
+    { label: 'Scaling Layer: Business Systems Integration', href: '/services/ads' },
+    { label: 'Ongoing Forte Care™', href: '/services/socialMedia' },
+    { label: 'Agency Partnership Program', href: '/services/white-label' },
+    { label: 'Free Growth System Audit', href: '/checkup' },
     { label: 'View All Services', href: '/services' }
   ];
 
