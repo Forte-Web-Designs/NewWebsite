@@ -7,125 +7,125 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import { useState } from 'react';
 import IndustryLeadCTA from '@/components/IndustryLeadCTA';
 
-const coreServices = [
+const growthSystems = [
   {
-    id: "websites",
-    title: "Professional Website Design & Development",
-    desc: "Hand-coded professional websites that work as hard as you do. No templates, no cookie-cutters - just custom-built digital powerhouses optimized for search engine rankings, conversion optimization, and mobile performance that turn visitors into paying customers 24/7.",
+    id: "foundation",
+    title: "Foundation: Custom Website Design",
+    desc: "Your digital storefront where the growth system starts. Hand-coded websites built for speed, SEO, and conversions - not just pretty pictures, but lead-generating machines that work 24/7 to capture customers while you sleep.",
     features: [
-      "Professional custom coding for lightning-fast speed & SEO dominance",
-      "Mobile-first responsive web design with conversion optimization", 
-      "Forte Care™ ongoing support, maintenance & SEO monitoring included",
-      "Built for maximum lead generation & business growth results"
+      "Custom-coded for lightning-fast loading and SEO dominance",
+      "Mobile-first design optimized for local search and conversions", 
+      "Built-in lead capture systems and appointment booking integration",
+      "Strategic user experience designed to turn visitors into customers"
     ],
     pricing: "Starting at $200/month",
-    linkText: "Get My Professional Converting Website",
+    linkText: "Build My Growth Foundation",
     href: "/services/webDesign",
     caseStudy: {
       client: "Mike's HVAC",
       result: "2x more service calls in 60 days",
-      icon: "🔧"
+      icon: "🏗️"
     }
   },
   {
-    id: "seo",
-    title: "Professional SEO & Search Engine Optimization",
-    desc: "Get discovered by customers who are actively searching for your services. Our comprehensive SEO optimization services don't just improve search rankings - they drive qualified leads and increase online visibility through proven search engine optimization strategies that deliver real business results.",
+    id: "growth",
+    title: "Growth Layer: Automation & AI",
+    desc: "Turn website traffic into booked appointments, not just clicks. AI receptionists, automated lead follow-up, and smart booking systems that capture leads even when you're not available. No more missed opportunities.",
     features: [
-      "Professional local & national SEO optimization services",
-      "Advanced content strategy & keyword research that converts visitors",
-      "Technical SEO optimization & website performance enhancement", 
-      "Monthly SEO performance analytics & ROI tracking reports"
+      "AI chat assistants that qualify leads and book appointments 24/7",
+      "Automated email and SMS follow-up sequences for lead nurturing",
+      "Smart appointment booking with calendar integration and reminders", 
+      "Lead scoring and routing to ensure hot prospects get immediate attention"
     ],
     pricing: "Starting at $300/month",
-    linkText: "Dominate Google Search Rankings",
+    linkText: "Automate My Lead Capture",
     href: "/services/seo",
     caseStudy: {
       client: "Local Law Firm",
-      result: "Ranking #2 for main keywords",
-      icon: "⚖️"
+      result: "85% of leads now book consultations automatically",
+      icon: "🤖"
     }
   },
   {
-    id: "ppc",
-    title: "Professional Google Ads & PPC Management",
-    desc: "Google Ads campaigns that actually generate revenue and ROI. Stop wasting marketing budget on keywords that don't convert - get professional PPC campaigns optimized for your bottom line with proven conversion tracking, landing page optimization, and ROI-focused digital advertising management.",
+    id: "scaling",
+    title: "Scaling Layer: Business Systems Integration",
+    desc: "Make all your tools talk to each other so leads never fall through the cracks. CRM setup, dashboards, and reporting that give you complete visibility into your growth system's performance and ROI.",
     features: [
-      "Strategic Google Ads campaign setup, optimization & management",
-      "Professional landing page conversion optimization & A/B testing",
-      "Advanced conversion tracking, analytics & performance analysis",
-      "Continuous ROI improvement & marketing budget optimization"
+      "CRM integration and automated lead management workflows",
+      "Custom dashboards showing leads, bookings, and revenue in real-time",
+      "Advanced analytics and reporting to optimize system performance",
+      "Integration with your existing tools (Google Ads, Facebook, scheduling apps)"
     ],
     pricing: "Starting at $400/month",
-    linkText: "Stop Wasting Marketing Budget",
+    linkText: "Scale My Growth System",
     href: "/services/ads",
     caseStudy: {
       client: "Local Restaurant",
-      result: "50% lower cost per customer",
-      icon: "🍕"
+      result: "Increased table bookings by 200% with automated system",
+      icon: "📊"
     }
   },
   {
-    id: "social",
-    title: "Professional Social Media Marketing & Management",
-    desc: "Stop posting into the void with ineffective social media. Our professional social media marketing strategies build genuine relationships that convert followers into loyal customers. Every post, story, and interaction designed to grow your business and increase brand awareness across all platforms.",
+    id: "optimization",
+    title: "Ongoing Forte Care™",
+    desc: "Continuous optimization, updates, and AI fine-tuning that keeps your growth system performing at peak efficiency. We monitor, adjust, and improve everything so you can focus on running your business.",
     features: [
-      "Professional platform-specific content strategy & marketing planning",
-      "Expert content creation, graphic design & brand messaging",
-      "Professional community management & audience engagement services",
-      "Advanced social media analytics, tracking & performance optimization"
+      "24/7 system monitoring and performance optimization",
+      "Regular A/B testing and conversion rate improvements",
+      "Monthly strategy calls and growth system refinements",
+      "Unlimited updates, security patches, and technical support"
     ],
-    pricing: "Starting at $500/month",
-    linkText: "Build My Professional Social Media Presence",
+    pricing: "Included with all systems",
+    linkText: "Learn About Forte Care™",
     href: "/services/socialMedia",
     caseStudy: {
       client: "Local Fitness Studio",
-      result: "3x more class bookings from social",
-      icon: "💪"
+      result: "Consistent 15% month-over-month growth",
+      icon: "🛡️"
     }
   },
   {
-    id: "white-label",
-    title: "Professional White Label Web Design Partnerships",
-    desc: "Power Your Agency with Professional Custom Websites - Built by Forte. We partner with marketing agencies, SEO companies, and digital consultants to deliver high-performance, professional websites under your brand. Custom-coded, lightning-fast, 100% U.S.-based development team.",
+    id: "partnerships",
+    title: "Agency Partnership Program",
+    desc: "Power your agency with Forte-built growth systems under your brand. We handle the technical complexity while you focus on client relationships. Perfect for marketing agencies ready to offer complete solutions.",
     features: [
-      "Professional custom-coded websites delivered under your agency brand",
-      "100% U.S.-based professional development & support team",
-      "Flexible workflow integration & white-label communication protocols",
-      "Optional Forte Care™ professional maintenance & support included"
+      "White-label growth systems delivered under your agency brand",
+      "100% U.S.-based development team with direct communication",
+      "Flexible workflow integration and client handoff protocols",
+      "Ongoing training and support to help you sell and deliver systems"
     ],
     pricing: "Partner Pricing Available",
     linkText: "Partner With Forte",
     href: "/services/white-label",
     caseStudy: {
       client: "Blueprint Creative Co.",
-      result: "Seamless white-label partnership",
+      result: "Expanded service offering, 3x revenue growth",
       icon: "🤝"
     }
   },
   {
     id: "audit",
-    title: "Free Website Audit",
-    desc: "Discover exactly what's costing you customers with our comprehensive website analysis. Get a detailed report showing every issue holding your site back from peak performance.",
+    title: "Free Growth System Audit",
+    desc: "Discover exactly what's costing you leads and customers. Get a detailed analysis of your current digital presence and a custom roadmap for building a growth system that actually drives results.",
     features: [
-      "Complete SEO analysis",
-      "Speed & performance testing",
-      "Mobile responsiveness check",
-      "Conversion optimization review"
+      "Complete lead generation system analysis",
+      "Conversion optimization opportunities assessment",
+      "Mobile and local search performance review",
+      "Custom growth system roadmap and implementation plan"
     ],
     pricing: "100% Free",
-    linkText: "Get My Free Audit",
+    linkText: "Get My Free Growth Audit",
     href: "/checkup",
     caseStudy: {
       client: "Local Contractor",
-      result: "Found 12 critical issues costing leads",
+      result: "Identified $50k in missed revenue opportunities",
       icon: "🔍"
     }
   }
 ];
 
 export default function ServicePage() {
-  const [activeTab, setActiveTab] = useState('websites');
+  const [activeTab, setActiveTab] = useState('foundation');
 
   return (
     <div className="relative">
@@ -137,13 +137,13 @@ export default function ServicePage() {
             <div className="text-center">
               <div className="flex items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
                 <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">Complete Digital Solutions</span>
+                <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">Business Growth Systems Partner</span>
               </div>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight mb-4 sm:mb-6">
-                Complete Digital Marketing Solutions
+                Growth Systems That Actually Drive Clients
               </h1>
               <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
-                From stunning websites to powerful SEO, strategic advertising to social media management - get everything you need to dominate your market. One DFW-based team, nationwide reach, comprehensive solutions, guaranteed results.
+                Stop throwing money at marketing that doesn't work. Get a complete growth system engineered to generate leads, book appointments, and drive revenue. Four integrated layers that work together to turn your website into a client-generating machine.
               </p>
             </div>
           </div>
@@ -155,7 +155,7 @@ export default function ServicePage() {
             
             {/* Tab Navigation */}
             <div className="flex flex-wrap justify-center gap-2 mb-12 bg-gray-100 dark:bg-gray-800 rounded-xl p-2">
-              {coreServices.map((service) => (
+              {growthSystems.map((service) => (
                 <button
                   key={service.id}
                   onClick={() => setActiveTab(service.id)}
@@ -171,7 +171,7 @@ export default function ServicePage() {
             </div>
 
             {/* Active Service Display */}
-            {coreServices.map((service) => (
+            {growthSystems.map((service) => (
               activeTab === service.id && (
                 <div key={service.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                   {/* Service Details */}
@@ -241,24 +241,24 @@ export default function ServicePage() {
                     {/* Service Benefits */}
                     <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
                       <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                        Why Choose Forte™?
+                        Your Growth Systems Partner
                       </h3>
                       <div className="space-y-3 text-sm">
                         <div className="flex items-center gap-3">
                           <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                          <span className="text-gray-600 dark:text-gray-400">Direct access to the developer</span>
+                          <span className="text-gray-600 dark:text-gray-400">Systems engineered for measurable results</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                          <span className="text-gray-600 dark:text-gray-400">All services work together seamlessly</span>
+                          <span className="text-gray-600 dark:text-gray-400">All layers integrate seamlessly for maximum ROI</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                          <span className="text-gray-600 dark:text-gray-400">Same-day response guarantee</span>
+                          <span className="text-gray-600 dark:text-gray-400">Continuous optimization via Forte Care™</span>
                         </div>
                         <div className="flex items-center gap-3">
                           <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                          <span className="text-gray-600 dark:text-gray-400">100% satisfaction guarantee</span>
+                          <span className="text-gray-600 dark:text-gray-400">Lead generation & revenue growth guarantee</span>
                         </div>
                       </div>
                     </div>
@@ -269,15 +269,15 @@ export default function ServicePage() {
           </div>
         </section>
 
-        {/* Additional Services */}
+        {/* Growth System Extensions */}
         <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
           <div className="container mx-auto max-w-6xl">
             <div className="text-center mb-12">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Additional Services
+                Growth System Extensions
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400">
-                Specialized solutions for unique business needs
+                Advanced solutions that supercharge your growth system performance
               </p>
             </div>
 
@@ -286,11 +286,11 @@ export default function ServicePage() {
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-3xl">🛡️</span>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    Forte Care™ Support
+                    Forte Care™ Optimization
                   </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  24/7 monitoring, unlimited updates, and continuous optimization. Your website's personal bodyguard.
+                  24/7 growth system monitoring, A/B testing, and continuous optimization to maximize leads and conversions.
                 </p>
                 <Link href="/forte-care" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
                   Learn More →
@@ -301,11 +301,11 @@ export default function ServicePage() {
                 <div className="flex items-center gap-4 mb-4">
                   <span className="text-3xl">🏢</span>
                   <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    Enterprise Solutions
+                    Enterprise Growth Systems
                   </h3>
                 </div>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Custom digital solutions for large businesses and organizations with complex needs.
+                  Custom multi-location growth systems for franchises and large organizations with complex lead routing needs.
                 </p>
                 <Link href="/contact" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
                   Contact Us →
@@ -318,11 +318,11 @@ export default function ServicePage() {
         {/* Industry Lead CTA */}
         <IndustryLeadCTA 
           industry="services"
-          formName="Digital Marketing Services Inquiry"
-          mobileCtaText="Ready to grow your business?"
+          formName="Growth System Strategy Session"
+          mobileCtaText="Ready to build your growth system?"
           mobileBgGradient="bg-gradient-to-r from-blue-600 to-purple-600"
-          title="Let's Build Your Digital Marketing Strategy"
-          subtitle="Get a custom strategy designed to grow your business with our complete digital solutions."
+          title="Let's Engineer Your Growth System"
+          subtitle="Get a custom growth system roadmap designed to generate leads, book appointments, and drive measurable revenue growth."
         />
       </div>
     </div>
