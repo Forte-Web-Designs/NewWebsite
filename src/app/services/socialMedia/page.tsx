@@ -623,6 +623,17 @@ export default function SocialMediaPage() {
         </div>
       </section>
 
+      {/* Disclaimer Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <div className="container max-w-4xl mx-auto">
+          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800 text-center">
+            <p className="text-blue-800 dark:text-blue-200 text-sm">
+              <strong>Note:</strong> This service requires ongoing management and is available only as a monthly plan. One-time pricing is available for Foundation websites only.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* Industry-specific CTA functionality */}
       <IndustryLeadCTA 
         industry="social-media"

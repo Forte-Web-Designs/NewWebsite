@@ -536,7 +536,7 @@ export default function GooglePPCAdsPage() {
                   <p className="text-gray-600 dark:text-gray-400 mb-6">Everything in Starter + advanced automation</p>
                   
                   <div className="text-center mb-6">
-                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$5,500 + $750/mo</div>
+                    <div className="text-4xl font-bold text-green-600 dark:text-green-400 mb-2">$4,500 + $800/mo</div>
                     <div className="text-gray-500 dark:text-gray-400 mb-1">setup fee + monthly</div>
                     <div className="text-gray-500 dark:text-gray-400 text-sm">(12-month minimum)</div>
                   </div>
@@ -645,6 +645,17 @@ export default function GooglePPCAdsPage() {
                 </DarkButton>
               </div>
             </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Disclaimer Section */}
+        <section className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+          <div className="container max-w-4xl mx-auto">
+            <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800 text-center">
+              <p className="text-blue-800 dark:text-blue-200 text-sm">
+                <strong>Note:</strong> This service requires ongoing optimization and is available only as setup fee + monthly plan. One-time pricing is available for Foundation websites only.
+              </p>
+            </div>
           </div>
         </section>
 

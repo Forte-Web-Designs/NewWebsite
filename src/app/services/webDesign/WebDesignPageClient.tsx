@@ -224,7 +224,7 @@ export default function WebDesignPageClient() {
                       <th className="text-center py-4 sm:py-6 px-3 sm:px-6 font-bold text-gray-900 dark:text-white text-sm sm:text-lg">
                         Foundation<br/>
                         <span className="text-green-600 dark:text-green-400 text-lg sm:text-2xl font-bold">
-                          {isMonthly ? '$2,500 + $200/mo' : '$4,500'}
+                          {isMonthly ? '$500 + $200/mo' : '$4,500'}
                         </span><br/>
                         <span className="text-xs text-gray-500 dark:text-gray-400">
                           {isMonthly ? 'setup + monthly' : 'one-time'}
@@ -233,7 +233,7 @@ export default function WebDesignPageClient() {
                       <th className="text-center py-4 sm:py-6 px-3 sm:px-6 font-bold text-gray-900 dark:text-white text-sm sm:text-lg">
                         Pro ⭐<br/>
                         <span className="text-green-600 dark:text-green-400 text-lg sm:text-2xl font-bold">
-                          {isMonthly ? '$4,500 + $350/mo' : '$7,500'}
+                          {isMonthly ? '$1,000 + $350/mo' : '$7,500'}
                         </span><br/>
                         <span className="text-xs text-gray-500 dark:text-gray-400">
                           {isMonthly ? 'setup + monthly' : 'one-time'}
@@ -795,6 +795,17 @@ export default function WebDesignPageClient() {
               </Link>
             </div>
           </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Disclaimer Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
+        <div className="container max-w-4xl mx-auto">
+          <div className="bg-blue-50 dark:bg-blue-900/20 p-6 rounded-lg border border-blue-200 dark:border-blue-800 text-center">
+            <p className="text-blue-800 dark:text-blue-200 text-sm">
+              <strong>Note:</strong> Website design services are available one-time or monthly. Growth and Scaling layers require ongoing optimization and are available only as setup fee + monthly plans for best results.
+            </p>
+          </div>
         </div>
       </section>
 

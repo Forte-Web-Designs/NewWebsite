@@ -211,6 +211,10 @@ const faqData = [
     answer: 'Yes! You own your website, content, and data. However, advanced integrations and automations require ongoing maintenance to function properly. We provide transition assistance and can export your data when needed.'
   },
   {
+    question: 'Why is One-Time Pricing only available for websites?',
+    answer: 'A website is a finished product that can be delivered and owned outright. Growth and Scaling layers are living systems — they include automations, CRM workflows, and integrations that require continuous optimization. That\'s why these layers are only available as setup fee + monthly plans. This ensures your systems stay updated, optimized, and continue generating measurable results.'
+  },
+  {
     question: 'Can I pay one-time instead of monthly?',
     answer: 'Foundation websites are available for $4,500 one-time payment with optional Forte Care™ maintenance ($150/month). Growth, Scaling, and Pro Systems require ongoing optimization and are only available as monthly services for best results.'
   }
@@ -332,7 +336,7 @@ export function PricingPage() {
                       </div>
                     ) : (
                       <div className="mb-6">
-                        {plan.oneTimePrice ? (
+                        {plan.id === 'foundation' ? (
                           <>
                             <div className="text-3xl font-bold text-green-600 dark:text-green-400">
                               {plan.oneTimePrice}
@@ -342,14 +346,11 @@ export function PricingPage() {
                             </div>
                           </>
                         ) : (
-                          <>
-                            <div className="text-lg font-semibold text-gray-600 dark:text-gray-400">
-                              Custom Pricing
-                            </div>
-                            <div className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                              Contact for quote
-                            </div>
-                          </>
+                          <div className="text-center p-4 bg-blue-50 dark:bg-blue-900/20 rounded-lg border border-blue-200 dark:border-blue-800">
+                            <p className="text-sm text-blue-800 dark:text-blue-200 leading-relaxed">
+                              Growth and Scaling layers require continuous optimization and are only available as setup + monthly plans. Only Foundation websites may be purchased one-time.
+                            </p>
+                          </div>
                         )}
                       </div>
                     )}
@@ -474,6 +475,11 @@ export function PricingPage() {
             </div>
             
             <div className="text-center mt-8">
+              <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg border border-yellow-200 dark:border-yellow-800 max-w-2xl mx-auto mb-6">
+                <p className="text-yellow-800 dark:text-yellow-200 text-sm">
+                  <strong>Note:</strong> Bundles require ongoing optimization and are billed as setup + monthly plans. Only Foundation websites may be purchased one-time.
+                </p>
+              </div>
               <button
                 onClick={() => setShowContactModal(true)}
                 className="bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-8 rounded-lg transition-colors"

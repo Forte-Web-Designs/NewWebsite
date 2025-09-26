@@ -18,7 +18,7 @@ const growthSystems = [
       "Built-in lead capture systems and appointment booking integration",
       "Strategic user experience designed to turn visitors into customers"
     ],
-    pricing: "Starting at $200/month",
+    pricing: "Setup $500 + $200/month",
     linkText: "Build My Growth Foundation",
     href: "/services/webDesign",
     caseStudy: {
@@ -37,7 +37,7 @@ const growthSystems = [
       "Instant calendar booking integration",
       "Smart reminders to reduce no-shows"
     ],
-    pricing: "Starting at $1,500 setup + $300/month",
+    pricing: "Setup $1,500 + $300/month",
     linkText: "Automate My Lead Capture",
     href: "/services/seo",
     caseStudy: {
@@ -56,13 +56,32 @@ const growthSystems = [
       "Integration with booking + payment systems",
       "Custom workflows to prevent lost leads"
     ],
-    pricing: "Starting at $2,500 setup + $500/month",
+    pricing: "Setup $3,500 + $500/month",
     linkText: "Scale My Growth System",
     href: "/services/ads",
     caseStudy: {
       client: "Local Restaurant",
       result: "Increased table bookings by 200% with automated system",
       icon: "📊"
+    }
+  },
+  {
+    id: "prosystems",
+    title: "Pro Systems: All Layers",
+    desc: "Get Foundation + Growth + Scaling layers bundled together for maximum ROI. Complete growth system that turns your business into a lead-generating machine with priority Forte Care™ support.",
+    features: [
+      "Foundation website + Growth automation + Scaling integration",
+      "Priority Forte Care™ Pro support included",
+      "Fastest path to results with best ROI",
+      "Complete business growth system in one package"
+    ],
+    pricing: "Setup $4,500 + $800/month",
+    linkText: "Get My Pro System",
+    href: "/pricing",
+    caseStudy: {
+      client: "Local Dental Practice",
+      result: "3x appointment bookings, 40% revenue increase in 4 months",
+      icon: "🚀"
     }
   },
   {
