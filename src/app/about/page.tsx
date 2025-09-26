@@ -30,61 +30,34 @@ export default function AboutUs() {
     }
   ];
 
-  const differentiators = [
+  const growthLayers = [
+    {
+      icon: "🏗️",
+      title: "Foundation",
+      subtitle: "Custom Website Design",
+      description: "Your conversion-optimized website that captures leads and showcases your expertise."
+    },
+    {
+      icon: "�", 
+      title: "Growth Layer",
+      subtitle: "Smart Automation & Follow-Up",
+      description: "Automated systems that follow up instantly and nurture leads while you focus on your business."
+    },
     {
       icon: "⚡",
-      title: "Built for Speed & SEO",
-      description: "Faster websites don't just load better - they rank higher in search results, convert more visitors, and reduce advertising costs through better user experience."
+      title: "Scaling Layer", 
+      subtitle: "Business Systems Integration",
+      description: "Advanced integrations and dashboards that give you complete visibility and control."
     },
     {
-      icon: "🔐", 
-      title: "Stable and Secure",
-      description: "No WordPress plugins to manage, no surprise security issues. Just clean, hand-coded websites built to run reliably and securely for years."
-    },
-    {
-      icon: "🧭",
-      title: "Designed for Your Industry", 
-      description: "Whether you're a Dallas plumber, Fort Worth pediatrician, or any business nationwide, we build with your target audience in mind - not a generic template approach."
-    },
-    {
-      icon: "🎯",
-      title: "Focused on Business Results",
-      description: "Every website is mapped to real business goals - phone calls, online bookings, sales inquiries. Not just traffic and vanity metrics."
+      icon: "🔧",
+      title: "Ongoing Forte Care™",
+      subtitle: "Continuous Optimization & Support",
+      description: "Regular updates, performance monitoring, and strategic improvements to maximize results."
     }
   ];
 
-  const methodSteps = [
-    {
-      step: "1",
-      title: "Business Foundation Analysis",
-      description: "We learn about your business, your customers, your local market, and your competitors before we ever write a line of code or design a single page.",
-      example: "Mike's HVAC discovered key competitor gaps we used to shape his messaging and service positioning."
-    },
-    {
-      step: "2", 
-      title: "Strategic Content Outline",
-      description: "We map out content strategy, site structure, and user experience flows to match your business goals and customer behavior patterns.",
-      example: "Bella's Boutique restructured her homepage navigation to boost online sales conversions by 40%."
-    },
-    {
-      step: "3",
-      title: "Design & Development Review", 
-      description: "You review a live homepage design and we fine-tune the entire website together during collaborative video calls until it's perfect.",
-      example: "A local tech firm dropped page load times by 80% after moving away from their previous WordPress setup."
-    },
-    {
-      step: "4",
-      title: "Custom Code Implementation",
-      description: "We hand-code every page and feature - optimized for mobile responsiveness, page speed, search engine optimization, and smooth user experience.",
-      example: "Sunrise Veterinary went live with a fully mobile-optimized site and built-in appointment booking system."
-    },
-    {
-      step: "5",
-      title: "Launch & Growth Optimization",
-      description: "After launch, we track website performance and evolve your site as your business grows, adding new features and optimizations.", 
-      example: "A local law firm expanded their practice area pages after strong SEO gains in the first 3 months brought 5x more leads."
-    }
-  ];
+
 
   const industries = [
     {
@@ -125,10 +98,10 @@ export default function AboutUs() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-black dark:text-white mb-6">
-                Websites That Actually <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Fit Your Business</span>
+                About Forte — Your <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">Business Growth Systems Partner</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                We don't build generic sites for "everyone." Forte Web Designs specializes in crafting websites with purpose - tailored to your specific industry, your customers, and your growth goals.
+                Forte Web Designs started as a custom web design agency in Grapevine, Texas. Today, we've evolved into a Business Growth Systems Partner — helping service-based businesses nationwide capture more leads, book more appointments, and scale operations with predictable, measurable results.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -141,12 +114,18 @@ export default function AboutUs() {
           <div className="max-w-6xl mx-auto">
             <SimpleScrollReveal direction="up" delay={200}>
               <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  About Forte Web Designs
+                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                  Our Mission
                 </h2>
-                <h3 className="text-xl text-gray-600 dark:text-gray-300 font-medium">
-                  Hi, I'm Seth - founder of Forte Web Designs.
+                <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-12">
+                  We believe business growth isn't luck — it's a system. That's why we build more than websites. We create complete growth systems: websites that convert, automated follow-up that never sleeps, and integrated dashboards that give you clarity and control.
+                </p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  About Forte Web Designs
                 </h3>
+                <h4 className="text-xl text-gray-600 dark:text-gray-300 font-medium">
+                  Hi, I'm Seth - founder of Forte Web Designs.
+                </h4>
               </div>
             </SimpleScrollReveal>
 
@@ -233,21 +212,78 @@ export default function AboutUs() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                What Makes Us Different
+                How We're Different
               </h2>
             </div>
           </SimpleScrollReveal>
 
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={200}>
+              <div className="text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="text-4xl mb-4">🔧</div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  Systems, Not Siloed Services
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  We don't sell one-off campaigns. Every layer is designed to work together for predictable growth.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+            
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="text-4xl mb-4">🎯</div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  Outcome-Focused
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Our promise is simple: more booked jobs, more appointments, more revenue.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+            
+            <SimpleScrollReveal direction="up" delay={400}>
+              <div className="text-center p-8 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                <div className="text-4xl mb-4">🌎</div>
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                  Local Roots, National Reach
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  DFW-based, serving clients across the country with same-day responses and U.S.-based support.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </div>
+      </section>
+
+      {/* Growth System Layers Section */}
+      <section className="py-16 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="text-center mb-16">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                4 Growth System Layers
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+                Each layer builds on the last, giving you a clear path from launch to long-term growth. Start where you are and scale when you're ready.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
-            {differentiators.map((item, index) => (
+            {growthLayers.map((layer, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={200 + (index * 100)}>
-                <div className="text-center p-6 bg-white dark:bg-gray-800 rounded-xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105">
-                  <div className="text-4xl mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
-                    {item.title}
+                <div className="text-center p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-all duration-300 hover:scale-105">
+                  <div className="text-4xl mb-4">{layer.icon}</div>
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    {layer.title}
                   </h3>
+                  <h4 className="text-sm font-semibold text-blue-600 dark:text-blue-400 mb-4">
+                    {layer.subtitle}
+                  </h4>
                   <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                    {item.description}
+                    {layer.description}
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -256,43 +292,19 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* The Forte Method Section */}
-      <section className="py-16 sm:py-24">
+      {/* Client Results Section */}
+      <section className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                The Forte Method™
+            <div className="text-center max-w-4xl mx-auto">
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                Client Results That Matter
               </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
+                Our clients don't just get new websites — they get measurable results. From doubling service calls in 60 days, to cutting lead response times by 40%, to eliminating no-shows with smart automation — we help small businesses grow with confidence.
+              </p>
             </div>
           </SimpleScrollReveal>
-
-          <div className="max-w-5xl mx-auto space-y-12">
-            {methodSteps.map((step, index) => (
-              <SimpleScrollReveal key={index} direction="up" delay={200 + (index * 100)}>
-                <div className="flex flex-col md:flex-row items-start gap-8 p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                      {step.step}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-700 dark:text-gray-300 mb-4 leading-relaxed">
-                      {step.description}
-                    </p>
-                    <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 border-l-4 border-blue-500">
-                      <p className="text-blue-800 dark:text-blue-200 font-medium text-sm">
-                        <span className="font-semibold">Example:</span> {step.example}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </SimpleScrollReveal>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -331,17 +343,17 @@ export default function AboutUs() {
           <SimpleScrollReveal direction="up" delay={200}>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                Let's Build You a Website That Works Like It Should
+                Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                We'll audit your current site or map out what's possible from scratch - no pressure, just honest advice.
+                Ready to see how a growth system could transform your business? Book your free Growth Audit today and let's map out your path to measurable results.
               </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-blue-600 font-semibold px-12 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
               >
-                <span>📞</span>
-                Schedule a Free Strategy Call
+                <span>�</span>
+                Book My Free Growth Audit
               </Link>
             </div>
           </SimpleScrollReveal>
