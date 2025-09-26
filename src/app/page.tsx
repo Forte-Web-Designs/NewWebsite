@@ -27,6 +27,19 @@ export default function Home() {
   const [overlayTimeout, setOverlayTimeout] = useState<NodeJS.Timeout | null>(null);
   const [showContactModal, setShowContactModal] = useState(false);
   const [showReviewsModal, setShowReviewsModal] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  
+  // Rotating words for the hero
+  const rotatingWords = ["a System.", "Data.", "Measurable.", "Results."];
+
+  // Rotating words animation
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
+    }, 2000); // Change word every 2 seconds
+
+    return () => clearInterval(interval);
+  }, [rotatingWords.length]);
 
   // Real Google Reviews Data - Your actual reviews
   const googleReviews = [
@@ -350,35 +363,37 @@ export default function Home() {
                   </div>
                   
                   <h1 className="font-display font-medium text-[28px] sm:text-[36px] leading-[32px] sm:leading-[40px] tracking-[-0.04em] text-black dark:text-white px-4">
-                    <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Websites Were Just the Start. We Build Growth Systems.</span>
+                    Business Growth Isn't Luck. It's{" "}
+                    <span className="inline-block min-w-[140px] sm:min-w-[160px] text-left">
+                      <span 
+                        key={currentWordIndex}
+                        className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent"
+                        style={{
+                          animation: 'fadeInOut 2s ease-in-out infinite',
+                          animationDelay: '0s'
+                        }}
+                      >
+                        {rotatingWords[currentWordIndex]}
+                      </span>
+                    </span>
                   </h1>
                   
                   <div className="px-4 max-w-4xl mx-auto">
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-3">
-                        <div className="w-6 h-6 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-sm">⚡</span>
-                        </div>
-                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Get found on Google & convert more visitors
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="w-6 h-6 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-sm">🛡️</span>
-                        </div>
-                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Rock-solid security & zero headaches
-                        </span>
-                      </div>
-                      <div className="flex items-center gap-3">
-                        <div className="w-6 h-6 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center flex-shrink-0">
-                          <span className="text-sm">📈</span>
-                        </div>
-                        <span className="font-display font-medium text-[14px] sm:text-[16px] leading-[18px] sm:leading-[20px] text-gray-700 dark:text-gray-200">
-                          Smart systems that capture leads 24/7
-                        </span>
-                      </div>
+                    <p className="font-display font-medium text-[16px] sm:text-[18px] leading-[22px] sm:leading-[24px] text-gray-600 dark:text-gray-300 mb-6">
+                      Custom websites, automated systems, and integrated solutions that capture leads, follow up instantly, and turn opportunities into paying clients.
+                    </p>
+                    
+                    {/* CTA Buttons */}
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                      <button
+                        onClick={() => setShowContactModal(true)}
+                        className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg"
+                      >
+                        Book My Free Growth Audit
+                      </button>
+                      <Link href="/about/work" className="bg-white dark:bg-gray-800 border border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 font-semibold py-3 px-6 rounded-lg transition-colors text-center">
+                        View Our Work
+                      </Link>
                     </div>
                   </div>
                 </div>
@@ -517,36 +532,40 @@ export default function Home() {
                       
                       <SimpleScrollReveal direction="up" delay={100}>
                         <h1 className="font-display font-medium text-[70px] leading-[74px] tracking-[-0.04em] text-black dark:text-white">
-                          <span className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent">Websites Were Just the Start. We Build Growth Systems.</span>
+                          Business Growth Isn't Luck. It's{" "}
+                          <span className="inline-block min-w-[320px] text-left">
+                            <span 
+                              key={currentWordIndex}
+                              className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent"
+                              style={{
+                                animation: 'fadeInOut 2s ease-in-out infinite',
+                                animationDelay: '0s'
+                              }}
+                            >
+                              {rotatingWords[currentWordIndex]}
+                            </span>
+                          </span>
                         </h1>
                       </SimpleScrollReveal>
                       
                       <SimpleScrollReveal direction="up" delay={150}>
-                        <div className="space-y-3 max-w-2xl">
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span className="text-lg">⚡</span>
-                            </div>
-                            <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Get found on Google & convert more visitors
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-green-100 dark:bg-green-900/20 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span className="text-lg">🛡️</span>
-                            </div>
-                            <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Rock-solid security & zero headaches
-                            </span>
-                          </div>
-                          <div className="flex items-center gap-3">
-                            <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center flex-shrink-0">
-                              <span className="text-lg">📈</span>
-                            </div>
-                            <span className="font-display font-medium text-[18px] leading-[24px] text-gray-700 dark:text-gray-200">
-                              Smart systems that capture leads 24/7
-                            </span>
-                          </div>
+                        <div className="max-w-2xl mb-8">
+                          <p className="font-display font-medium text-[20px] leading-[28px] text-gray-600 dark:text-gray-300">
+                            Custom websites, automated systems, and integrated solutions that capture leads, follow up instantly, and turn opportunities into paying clients.
+                          </p>
+                        </div>
+                        
+                        {/* CTA Buttons */}
+                        <div className="flex flex-col sm:flex-row gap-6">
+                          <button
+                            onClick={() => setShowContactModal(true)}
+                            className="bg-gradient-to-r from-green-600 to-blue-600 hover:from-green-700 hover:to-blue-700 text-white font-semibold py-4 px-8 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg text-lg"
+                          >
+                            Book My Free Growth Audit
+                          </button>
+                          <Link href="/about/work" className="bg-white dark:bg-gray-800 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-700 font-semibold py-4 px-8 rounded-lg transition-colors text-center text-lg">
+                            View Our Work
+                          </Link>
                         </div>
                       </SimpleScrollReveal>
                     </div>
