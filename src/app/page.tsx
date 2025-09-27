@@ -19,6 +19,7 @@ const ContactForm = lazy(() => import("@/components/ContactForm"));
 const CalendlyWidget = lazy(() => import("@/components/CalendlyWidget"));
 const LazySliderCSS = lazy(() => import("@/components/performance/LazySliderCSS"));
 const InstantMiniAudit = lazy(() => import("@/components/InstantMiniAudit"));
+const TrustedCompaniesCarousel = lazy(() => import("@/components/TrustedCompaniesCarousel"));
 
 export default function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -639,6 +640,11 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Trusted Companies Carousel */}
+      <Suspense fallback={<div className="h-32 bg-white dark:bg-gray-800" />}>
+        <TrustedCompaniesCarousel />
+      </Suspense>
 
       {/* Combined Google Reviews & Social Proof Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-900">

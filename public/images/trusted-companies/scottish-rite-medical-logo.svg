@@ -1,0 +1,9 @@
+<!-- Placeholder SVG for Scottish Rite Medical Center Logo -->
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="80" rx="8" fill="#000000"/>
+  <circle cx="30" r="6" cy="25" fill="white"/>
+  <circle cx="40" r="8" cy="35" fill="white"/>
+  <circle cx="50" r="10" cy="40" fill="white"/>
+  <text x="80" y="35" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="11" font-weight="bold">Scottish Rite</text>
+  <text x="80" y="50" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">Children's Medical Center</text>
+</svg>
