@@ -364,7 +364,7 @@ export default function Home() {
                   
                   <h1 className="font-display font-medium text-[28px] sm:text-[36px] leading-[32px] sm:leading-[40px] tracking-[-0.04em] text-black dark:text-white px-4">
                     Business Growth Isn't Luck. It's{" "}
-                    <span className="inline-block min-w-[140px] sm:min-w-[160px] text-center">
+                    <span className="inline-block text-left">
                       <span 
                         key={currentWordIndex}
                         className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent"
@@ -533,7 +533,7 @@ export default function Home() {
                       <SimpleScrollReveal direction="up" delay={100}>
                         <h1 className="font-display font-medium text-[70px] leading-[74px] tracking-[-0.04em] text-black dark:text-white">
                           Business Growth Isn't Luck. It's{" "}
-                          <span className="inline-block min-w-[320px] text-left">
+                          <span className="inline-block text-left">
                             <span 
                               key={currentWordIndex}
                               className="bg-gradient-to-r from-primary-500 to-primary-700 bg-clip-text text-transparent"
