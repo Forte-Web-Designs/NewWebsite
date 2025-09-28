@@ -4,7 +4,7 @@ import { PricingPage } from '@/components/pricing-updated';
 
 export const metadata: Metadata = {
   title: 'Simple, Transparent Pricing | Growth System Layers | Forte Web Designs',
-  description: 'Transparent Growth System pricing for Dallas Fort Worth businesses. Start with Foundation, add Growth and Scaling layers. Custom websites, automation & AI, business systems integration.',
+  description: 'Transparent Growth System pricing for Dallas Fort Worth businesses. Start with Foundation, add Growth and Scaling layers. Custom websites, smart automation, business systems integration.',
 };
 
 export default function Pricing() {

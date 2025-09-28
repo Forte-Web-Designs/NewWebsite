@@ -1,9 +1,0 @@
-<!-- Placeholder SVG for Texas Alliance Energy Logo -->
-<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <rect width="160" height="80" rx="8" fill="#dc2626"/>
-  <path d="M20 15 L35 15 L30 25 L45 25 L30 40 L25 30 L15 30 Z" fill="white"/>
-  <circle cx="120" cy="40" r="12" fill="white"/>
-  <path d="M115 40 L125 35 L125 45 Z" fill="#dc2626"/>
-  <text x="80" y="25" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="10" font-weight="bold">TEXAS ALLIANCE</text>
-  <text x="80" y="40" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="9">of Energy Producers</text>
-</svg>

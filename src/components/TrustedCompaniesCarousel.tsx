@@ -6,51 +6,78 @@ import { OptimizedImage } from '@/components/images/OptimizedImage';
 const trustedCompanies = [
   {
     id: 1,
-    name: 'UTSW',
-    logo: '/images/trusted-companies/utsw-logo.svg',
-    alt: 'University of Texas Southwestern Medical Center'
+    name: 'AliExpress',
+    logo: '/images/trusted-companies/aliexpress-logo.svg',
+    alt: 'AliExpress'
   },
   {
     id: 2,
-    name: 'Vista Bank',
-    logo: '/images/trusted-companies/vista-bank-logo.svg',
-    alt: 'Vista Bank'
+    name: 'Amerus Life Holdings',
+    logo: '/images/trusted-companies/amerus-life-holdings-41617.svg',
+    alt: 'Amerus Life Holdings'
   },
   {
     id: 3,
-    name: 'Scottish Rite Hospital',
-    logo: '/images/trusted-companies/scottish-rite-logo.svg',
-    alt: 'Scottish Rite Hospital for Children'
+    name: 'Arai',
+    logo: '/images/trusted-companies/arai-1.svg',
+    alt: 'Arai'
   },
   {
     id: 4,
-    name: 'Scottish Rite Children\'s Medical Center',
-    logo: '/images/trusted-companies/scottish-rite-medical-logo.svg',
-    alt: 'Scottish Rite Children\'s Medical Center'
+    name: 'Bristol Myers Squibb',
+    logo: '/images/trusted-companies/bristol-myers-squibb-logo-2020--1.svg',
+    alt: 'Bristol Myers Squibb'
   },
   {
     id: 5,
-    name: 'Texas Health Presbyterian Hospital',
-    logo: '/images/trusted-companies/texas-health-logo.svg',
-    alt: 'Texas Health Presbyterian Hospital'
+    name: 'DHL',
+    logo: '/images/trusted-companies/dhl-logo-1.svg',
+    alt: 'DHL'
   },
   {
     id: 6,
-    name: 'Texas Alliance of Energy Producers',
-    logo: '/images/trusted-companies/texas-alliance-energy-logo.svg',
-    alt: 'Texas Alliance of Energy Producers'
+    name: 'Diners Club',
+    logo: '/images/trusted-companies/diners-club-logo3.svg',
+    alt: 'Diners Club'
+  },
+  {
+    id: 7,
+    name: 'Moncler',
+    logo: '/images/trusted-companies/moncler.svg',
+    alt: 'Moncler'
+  },
+  {
+    id: 8,
+    name: 'MRW',
+    logo: '/images/trusted-companies/mrw-1.svg',
+    alt: 'MRW'
+  },
+  {
+    id: 9,
+    name: 'Philip Treacy London',
+    logo: '/images/trusted-companies/philip-treacy-london.svg',
+    alt: 'Philip Treacy London'
+  },
+  {
+    id: 10,
+    name: 'Pirelli',
+    logo: '/images/trusted-companies/pirelli-2.svg',
+    alt: 'Pirelli'
   }
 ];
 
 export default function TrustedCompaniesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const itemWidth = 240; // Width of each logo container including gap
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        (prevIndex + 1) % (trustedCompanies.length - 2) // Show 3 at a time, so scroll through pairs
-      );
-    }, 3000); // Change every 3 seconds
+      setCurrentIndex((prevIndex) => {
+        const nextIndex = prevIndex + 1;
+        // Reset to 0 when we reach the end of the first set (seamless loop)
+        return nextIndex >= trustedCompanies.length ? 0 : nextIndex;
+      });
+    }, 2500); // Continuous scroll every 2.5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -67,65 +94,33 @@ export default function TrustedCompaniesCarousel() {
           </p>
         </div>
 
-        {/* Desktop: Show 3 logos at a time */}
-        <div className="hidden md:block">
-          <div className="flex items-center justify-center gap-8 lg:gap-12">
-            {trustedCompanies.slice(currentIndex, currentIndex + 3).map((company, index) => (
+        {/* Continuous scrolling carousel */}
+        <div className="overflow-hidden relative">
+          <div 
+            className="flex items-center gap-8 lg:gap-12 transition-transform duration-1000 ease-in-out"
+            style={{
+              transform: `translateX(-${currentIndex * itemWidth}px)`,
+              width: `${trustedCompanies.length * 2 * itemWidth}px`,
+            }}
+          >
+            {/* Duplicate logos for seamless infinite scroll */}
+            {[...trustedCompanies, ...trustedCompanies].map((company, index) => (
               <div
-                key={`${company.id}-${currentIndex}`}
-                className="flex items-center justify-center h-20 w-32 lg:w-40 transition-all duration-500 opacity-80 hover:opacity-100 grayscale hover:grayscale-0"
-                style={{
-                  transform: `translateY(${Math.sin((currentIndex + index) * 0.5) * 10}px)`,
-                }}
+                key={`${company.id}-${index}`}
+                className="flex items-center justify-center h-28 w-52 lg:w-56 flex-shrink-0 opacity-90 hover:opacity-100 transition-all duration-300 p-4"
+                style={{ minWidth: `${itemWidth - 24}px` }}
               >
                 <OptimizedImage
                   src={company.logo}
                   alt={company.alt}
-                  width={160}
-                  height={80}
-                  className="max-w-full max-h-full object-contain filter dark:brightness-0 dark:invert"
+                  width={224}
+                  height={112}
+                  className="w-full h-full object-contain"
                   loading="lazy"
                 />
               </div>
             ))}
           </div>
-        </div>
-
-        {/* Mobile: Show 2 logos at a time */}
-        <div className="md:hidden">
-          <div className="flex items-center justify-center gap-6">
-            {trustedCompanies.slice(currentIndex, currentIndex + 2).map((company, index) => (
-              <div
-                key={`mobile-${company.id}-${currentIndex}`}
-                className="flex items-center justify-center h-16 w-24 transition-all duration-500 opacity-80 grayscale"
-              >
-                <OptimizedImage
-                  src={company.logo}
-                  alt={company.alt}
-                  width={120}
-                  height={64}
-                  className="max-w-full max-h-full object-contain filter dark:brightness-0 dark:invert"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* Progress indicators */}
-        <div className="flex items-center justify-center mt-6 gap-2">
-          {Array.from({ length: Math.ceil(trustedCompanies.length / 3) }).map((_, index) => (
-            <button
-              key={index}
-              className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                Math.floor(currentIndex / 3) === index
-                  ? 'bg-primary-600 dark:bg-primary-400'
-                  : 'bg-gray-300 dark:bg-gray-600'
-              }`}
-              onClick={() => setCurrentIndex(index * 3)}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
         </div>
       </div>
     </div>
