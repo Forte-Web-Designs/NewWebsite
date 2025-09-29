@@ -192,12 +192,10 @@ export default function Home() {
                   <span 
                     className={`inline-block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
                     style={{ 
-                      minWidth: '120px',
-                      maxWidth: '200px',
+                      minWidth: '160px',
+                      width: 'fit-content',
                       display: 'inline-block',
-                      textAlign: 'left',
-                      overflow: 'hidden',
-                      whiteSpace: 'nowrap'
+                      textAlign: 'left'
                     }}
                     aria-live="polite"
                   >
