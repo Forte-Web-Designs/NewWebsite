@@ -140,22 +140,34 @@ export default function TrustedCompaniesCarousel() {
             }}
           >
             {/* Duplicate logos for seamless infinite scroll */}
-            {[...trustedCompanies, ...trustedCompanies].map((company, index) => (
-              <div
-                key={`${company.id}-${index}`}
-                className="flex items-center justify-center h-24 w-48 lg:h-28 lg:w-56 flex-shrink-0 opacity-90 hover:opacity-100 transition-all duration-300 p-3"
-                style={{ minWidth: `${itemWidth - 28}px` }}
-              >
-                <OptimizedImage
-                  src={company.logo}
-                  alt={company.alt}
-                  width={200}
-                  height={96}
-                  className="max-w-full max-h-full object-contain"
-                  loading="lazy"
-                />
-              </div>
-            ))}
+            {[...trustedCompanies, ...trustedCompanies].map((company, index) => {
+              const isSecondSet = index >= trustedCompanies.length;
+              return (
+                <div
+                  key={`logo-${company.id}-${isSecondSet ? 'duplicate' : 'original'}`}
+                  className="flex items-center justify-center flex-shrink-0 opacity-90 hover:opacity-100 transition-opacity duration-300"
+                  style={{ 
+                    width: `${itemWidth - 28}px`,
+                    height: '96px',
+                    padding: '12px',
+                    minWidth: `${itemWidth - 28}px`,
+                    maxWidth: `${itemWidth - 28}px`
+                  }}
+                >
+                  <img
+                    src={company.logo}
+                    alt={company.alt}
+                    className="max-w-full max-h-full object-contain"
+                    style={{
+                      width: 'auto',
+                      height: 'auto',
+                      maxWidth: '100%',
+                      maxHeight: '100%'
+                    }}
+                  />
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
