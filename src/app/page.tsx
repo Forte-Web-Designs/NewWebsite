@@ -45,49 +45,43 @@ export default function Home() {
     }
   };
 
-  // Outcome tiles data
-  const outcomeTiles = [
+  // Core features data
+  const coreFeatures = [
     {
-      icon: "target",
-      title: "Lead & Intake",
-      subtitle: "Fewer missed opportunities. Instant first touch.",
-      kpis: ["Response time ↓", "Missed-lead loss ↓", "First-touch rate ↑"],
-      link: "/services/lead-intake"
+      icon: "cpu",
+      title: "Custom AI & Automation Engineering",
+      subtitle: "We design, deploy, and maintain automations and AI assistants specifically tailored to your business growth goals.",
+      link: "/services/ai-automation"
     },
     {
-      icon: "file-text",
-      title: "Faster Quotes & Sales Ops",
-      subtitle: "Same-day quotes that get answered.",
-      kpis: ["Quote turnaround ↓", "Reply rate ↑", "Close rate ↑"],
-      link: "/services/quotes-sales"
+      icon: "zap",
+      title: "Fully Managed Automation Pipelines",
+      subtitle: "Robust workflows that connect your CRM, scheduling, invoicing, and communication tools into one system that saves you hours every week.",
+      link: "/services/automation-pipelines"
     },
     {
-      icon: "repeat",
-      title: "Follow-Ups & Retention", 
-      subtitle: "Win-backs, reminders, and steady reviews.",
-      kpis: ["No-show rate ↓", "Win-back revenue ↑", "Review velocity ↑"],
-      link: "/services/follow-ups"
+      icon: "bar-chart-3",
+      title: "Performance & Analytics Dashboards",
+      subtitle: "Track ROI, conversion rates, and pipeline metrics in a clear, owner-friendly dashboard — no spreadsheets required.",
+      link: "/services/analytics-dashboards"
     },
     {
-      icon: "monitor",
-      title: "Data & Owner Dashboards",
-      subtitle: "One view of leads, quotes, and stuck points.",
-      kpis: ["Time-to-next-step ↓", "Forecast clarity ↑", "Accountability ↑"],
-      link: "/services/dashboards"
+      icon: "globe",
+      title: "Web Design (Foundation Layer)",
+      subtitle: "Custom-coded websites (no WordPress) built for speed, clarity, and lead capture. A strong foundation for every growth system.",
+      link: "/services/web-design"
     },
     {
-      icon: "search",
-      title: "Marketing & SEO Automations",
-      subtitle: "Local visibility that turns into jobs.",
-      kpis: ["Service-keyword lift ↑", "Organic inquiries ↑", "CPL ↓"],
-      link: "/services/marketing-seo"
+      icon: "link",
+      title: "Integrations & Access Control",
+      subtitle: "We connect the tools you already use and ensure smooth, secure handoffs between teams. Control access and permissions with confidence.",
+      link: "/services/integrations"
     },
     {
-      icon: "settings",
-      title: "Integrations & Operations",
-      subtitle: "Fewer manual steps. Cleaner handoffs.",
-      kpis: ["Manual steps ↓", "Handoff delays ↓", "Data accuracy ↑"],
-      link: "/services/ops-integrations"
+      icon: "shield-check",
+      title: "Secure & Compliant Infrastructure",
+      subtitle: "Your growth system is hosted in the cloud with best-practice security and compliance standards — built to scale as you grow.",
+      link: "/services/infrastructure"
     }
   ];
 
@@ -268,43 +262,34 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Where We Move The Needle - 6 Outcome Tiles */}
+        {/* Everything You Need In One Place - 6 Core Features */}
         <section id="how-it-works" className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-16">
                 <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                  Where we move the needle
+                  Everything You Need In One Place
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Six outcome areas where small changes create measurable growth
+                  Powerful systems designed to help your business grow seamlessly.
                 </p>
               </div>
             </SimpleScrollReveal>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {outcomeTiles.map((tile, index) => (
+              {coreFeatures.map((feature, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <Link href={tile.link}>
+                  <Link href={feature.link}>
                     <div className="bg-white dark:bg-gray-700 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full group">
-                      <Icon name={tile.icon} className="w-12 h-12 text-primary-600 mb-6 group-hover:scale-110 transition-transform" />
+                      <Icon name={feature.icon} className="w-12 h-12 text-primary-600 mb-6 group-hover:scale-110 transition-transform" />
                       
-                      <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-3">
-                        {tile.title}
+                      <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
+                        {feature.title}
                       </h3>
                       
-                      <p className="text-gray-600 dark:text-gray-300 font-medium mb-4">
-                        {tile.subtitle}
+                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                        {feature.subtitle}
                       </p>
-                      
-                      <div className="mb-6">
-                        {tile.kpis.map((kpi, kpiIndex) => (
-                          <div key={kpiIndex} className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400 mb-1">
-                            <div className="w-1 h-1 bg-primary-600 rounded-full"></div>
-                            <span>{kpi}</span>
-                          </div>
-                        ))}
-                      </div>
                       
                       <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300">
                         Learn more →
@@ -379,21 +364,21 @@ export default function Home() {
                     Curious where you're leaking opportunities?
                   </h2>
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                    Get a 1-page Growth Snapshot: we check missed calls, reply time, quote delays, and follow-up gaps—then show two quick fixes.
+                    Get a 1-page Growth Snapshot: we check response times, quote delays, and follow-up gaps — then show you two quick fixes you can apply immediately.
                   </p>
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-3">
-                      <Icon name="check-circle" className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <Icon name="check-circle" className="w-5 h-5 text-primary-500 flex-shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300">100% free. No meeting required.</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Icon name="file-text" className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">1-page PDF + 2-min Loom.</span>
+                      <Icon name="file-text" className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">Delivered as a 1-page PDF + short Loom video.</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Icon name="settings" className="w-5 h-5 text-green-500 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">Works with your tools (no rip-and-replace).</span>
+                      <Icon name="settings" className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">Works with your current tools — no rip-and-replace.</span>
                     </div>
                   </div>
 
@@ -459,8 +444,11 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12">
                 <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                  Recent outcomes
+                  Real Businesses. Real Results.
                 </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300">
+                  See how our growth systems deliver measurable outcomes across industries.
+                </p>
               </div>
             </SimpleScrollReveal>
 
@@ -564,15 +552,15 @@ export default function Home() {
                 
                 <div className="grid md:grid-cols-3 gap-6 mb-12">
                   <div className="flex items-center gap-3">
-                    <Icon name="check-circle" className="w-6 h-6 text-green-500 flex-shrink-0" />
+                    <Icon name="check-circle" className="w-6 h-6 text-primary-500 flex-shrink-0" />
                     <span className="text-gray-700 dark:text-gray-300">Starter, Growth, Partner tiers (setup + monthly)</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Icon name="check-circle" className="w-6 h-6 text-green-500 flex-shrink-0" />
+                    <Icon name="check-circle" className="w-6 h-6 text-primary-500 flex-shrink-0" />
                     <span className="text-gray-700 dark:text-gray-300">Cancel anytime; no surprise bills</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Icon name="check-circle" className="w-6 h-6 text-green-500 flex-shrink-0" />
+                    <Icon name="check-circle" className="w-6 h-6 text-primary-500 flex-shrink-0" />
                     <span className="text-gray-700 dark:text-gray-300">Plain-math ROI on your weekly scorecard</span>
                   </div>
                 </div>
