@@ -361,45 +361,51 @@ export default function Home() {
               <SimpleScrollReveal direction="left">
                 <div>
                   <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
-                    Curious where you're leaking opportunities?
+                    Ready to see where you're losing time and money?
                   </h2>
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                    Get a <strong>1-page Growth Snapshot</strong>: we identify the 3–4 biggest gaps holding your business back, then show two quick fixes you can apply immediately.
+                    Your <strong>Growth Snapshot</strong> reveals the 3–4 biggest leaks in your business and gives you two quick fixes you can apply immediately.
                   </p>
 
                   <h3 className="font-display font-semibold text-xl text-gray-900 dark:text-white mb-6">
                     What we check depends on your industry:
                   </h3>
 
-                  <div className="grid md:grid-cols-3 gap-6 mb-8">
+                  <div className="grid md:grid-cols-3 gap-6 mb-6">
                     <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
                       <Icon name="services" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Service Businesses</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">Contractors, healthcare, real estate</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Missed calls, quote delays, follow-up gaps, review flow</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">Contractors, healthcare, real estate</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">We check missed calls, slow quotes, and weak follow-ups that cost you booked jobs.</p>
                     </div>
                     <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
                       <Icon name="bag" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-3">E-commerce & Retail</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">Online stores, retail shops</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Cart abandonment, checkout speed, repeat purchases, ad ROI</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">Online stores, retail shops</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">We check cart abandonment, slow checkouts, and weak repeat-purchase systems that cost you sales.</p>
                     </div>
                     <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
                       <Icon name="company" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
                       <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Professional Services</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-300">Legal, consulting, finance</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Intake speed, scheduling gaps, client retention</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">Legal, consulting, finance</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">We check intake speed, scheduling gaps, and retention drops that cost you clients.</p>
                     </div>
                   </div>
 
+                  <div className="text-center mb-8">
+                    <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                      We also work with gyms, education, nonprofits, and more — the Growth Snapshot adapts to any business model.
+                    </p>
+                  </div>
+
                   <h3 className="font-display font-semibold text-xl text-gray-900 dark:text-white mb-4">
-                    📊 Results you'll get:
+                    📊 Results You'll Get:
                   </h3>
 
                   <div className="space-y-3 mb-8">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700 dark:text-gray-300">Clear view of where money/time is leaking</span>
+                      <span className="text-gray-700 dark:text-gray-300">Clear view of where money & time are leaking</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
