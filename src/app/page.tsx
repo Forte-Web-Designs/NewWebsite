@@ -48,37 +48,37 @@ export default function Home() {
   // Core features data
   const coreFeatures = [
     {
-      icon: "cpu",
+      icon: "code",
       title: "Custom AI & Automation Engineering",
       subtitle: "We design, deploy, and maintain automations and AI assistants specifically tailored to your business growth goals.",
       link: "/services/ai-automation"
     },
     {
-      icon: "zap",
+      icon: "flash",
       title: "Fully Managed Automation Pipelines",
       subtitle: "Robust workflows that connect your CRM, scheduling, invoicing, and communication tools into one system that saves you hours every week.",
       link: "/services/automation-pipelines"
     },
     {
-      icon: "bar-chart-3",
+      icon: "pricing",
       title: "Performance & Analytics Dashboards",
       subtitle: "Track ROI, conversion rates, and pipeline metrics in a clear, owner-friendly dashboard — no spreadsheets required.",
       link: "/services/analytics-dashboards"
     },
     {
-      icon: "globe",
+      icon: "services",
       title: "Web Design (Foundation Layer)",
       subtitle: "Custom-coded websites (no WordPress) built for speed, clarity, and lead capture. A strong foundation for every growth system.",
       link: "/services/web-design"
     },
     {
-      icon: "link",
+      icon: "puzzle",
       title: "Integrations & Access Control",
       subtitle: "We connect the tools you already use and ensure smooth, secure handoffs between teams. Control access and permissions with confidence.",
       link: "/services/integrations"
     },
     {
-      icon: "shield-check",
+      icon: "clean",
       title: "Secure & Compliant Infrastructure",
       subtitle: "Your growth system is hosted in the cloud with best-practice security and compliance standards — built to scale as you grow.",
       link: "/services/infrastructure"
@@ -201,11 +201,11 @@ export default function Home() {
                 {/* Badges Row */}
                 <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600 dark:text-gray-400 mb-8">
                   <div className="flex items-center gap-2">
-                    <Icon name="map-pin" className="w-4 h-4 text-primary-600" />
+                    <Icon name="location" className="w-4 h-4 text-primary-600" />
                     <span>DFW-based</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Icon name="zap" className="w-4 h-4 text-primary-600" />
+                    <Icon name="flash" className="w-4 h-4 text-primary-600" />
                     <span>24-hr response</span>
                   </div>
                   <div className="flex items-center gap-2">
@@ -369,15 +369,15 @@ export default function Home() {
 
                   <div className="space-y-4 mb-8">
                     <div className="flex items-center gap-3">
-                      <Icon name="check-circle" className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                      <Icon name="check" className="w-5 h-5 text-primary-500 flex-shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300">100% free. No meeting required.</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Icon name="file-text" className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                      <Icon name="download" className="w-5 h-5 text-primary-500 flex-shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300">Delivered as a 1-page PDF + short Loom video.</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <Icon name="settings" className="w-5 h-5 text-primary-500 flex-shrink-0" />
+                      <Icon name="puzzle" className="w-5 h-5 text-primary-500 flex-shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300">Works with your current tools — no rip-and-replace.</span>
                     </div>
                   </div>
@@ -496,7 +496,7 @@ export default function Home() {
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <SimpleAnimatedCard>
                 <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center">
-                  <Icon name="globe" className="w-12 h-12 text-primary-600 mx-auto mb-6" />
+                  <Icon name="services" className="w-12 h-12 text-primary-600 mx-auto mb-6" />
                   <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
                     Web Design (Foundation)
                   </h3>
@@ -520,7 +520,7 @@ export default function Home() {
 
               <SimpleAnimatedCard>
                 <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center">
-                  <Icon name="shield-check" className="w-12 h-12 text-primary-600 mx-auto mb-6" />
+                  <Icon name="clean" className="w-12 h-12 text-primary-600 mx-auto mb-6" />
                   <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
                     Forte Care™ (Upkeep)
                   </h3>
@@ -552,15 +552,15 @@ export default function Home() {
                 
                 <div className="grid md:grid-cols-3 gap-6 mb-12">
                   <div className="flex items-center gap-3">
-                    <Icon name="check-circle" className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                    <Icon name="check" className="w-6 h-6 text-primary-500 flex-shrink-0" />
                     <span className="text-gray-700 dark:text-gray-300">Starter, Growth, Partner tiers (setup + monthly)</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Icon name="check-circle" className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                    <Icon name="check" className="w-6 h-6 text-primary-500 flex-shrink-0" />
                     <span className="text-gray-700 dark:text-gray-300">Cancel anytime; no surprise bills</span>
                   </div>
                   <div className="flex items-center gap-3">
-                    <Icon name="check-circle" className="w-6 h-6 text-primary-500 flex-shrink-0" />
+                    <Icon name="check" className="w-6 h-6 text-primary-500 flex-shrink-0" />
                     <span className="text-gray-700 dark:text-gray-300">Plain-math ROI on your weekly scorecard</span>
                   </div>
                 </div>
