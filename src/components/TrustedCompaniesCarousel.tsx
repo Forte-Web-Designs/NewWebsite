@@ -91,11 +91,11 @@ export default function TrustedCompaniesCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
-        const nextIndex = prevIndex + 0.5; // Smooth continuous scroll
-        // Reset when we've scrolled through one complete set
+        const nextIndex = prevIndex + 1;
+        // Reset to 0 when we reach the end of the first set (seamless loop)
         return nextIndex >= trustedCompanies.length ? 0 : nextIndex;
       });
-    }, 50); // Much faster interval for smooth animation
+    }, 2500); // Continuous scroll every 2.5 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -115,7 +115,7 @@ export default function TrustedCompaniesCarousel() {
         {/* Continuous scrolling carousel */}
         <div className="overflow-hidden relative">
           <div 
-            className="flex items-center gap-6 lg:gap-8 transition-transform duration-75 ease-linear"
+            className="flex items-center gap-6 lg:gap-8 transition-transform duration-1000 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * itemWidth}px)`,
               width: `${trustedCompanies.length * 2 * itemWidth}px`,
@@ -139,7 +139,7 @@ export default function TrustedCompaniesCarousel() {
                   <img
                     src={company.logo}
                     alt={company.alt}
-                    className="max-w-full max-h-full object-contain transition-all duration-300 grayscale opacity-70 dark:brightness-0 dark:invert"
+                    className="max-w-full max-h-full object-contain"
                     style={{
                       width: 'auto',
                       height: 'auto',
