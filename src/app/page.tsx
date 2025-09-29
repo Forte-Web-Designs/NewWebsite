@@ -373,23 +373,32 @@ export default function Home() {
               </SimpleScrollReveal>
 
               <SimpleScrollReveal direction="right">
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg text-center">
-                  <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-6">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-10 shadow-lg text-center h-full flex flex-col justify-center">
+                  <h3 className="font-display font-bold text-3xl text-gray-900 dark:text-white mb-8">
                     Ready to see your gaps?
                   </h3>
                   
-                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-lg p-8 mb-6">
-                    <div className="text-4xl mb-4">📊</div>
-                    <h4 className="font-semibold text-lg text-gray-900 dark:text-white mb-3">
+                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-lg p-10 mb-8 flex-grow flex flex-col justify-center">
+                    <div className="text-6xl mb-6">📊</div>
+                    <h4 className="font-semibold text-2xl text-gray-900 dark:text-white mb-6">
                       Your Growth Snapshot
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                    <p className="text-gray-600 dark:text-gray-300 text-base mb-8 leading-relaxed">
                       We analyze your current systems and identify the 3-4 biggest opportunities for growth.
                     </p>
-                    <div className="text-xs text-gray-500 dark:text-gray-400">
-                      ✓ Industry-specific analysis<br/>
-                      ✓ Actionable recommendations<br/>
-                      ✓ Quick-win implementation guide
+                    <div className="text-sm text-gray-500 dark:text-gray-400 space-y-2">
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                        <span>Industry-specific analysis</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                        <span>Actionable recommendations</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                        <span>Quick-win implementation guide</span>
+                      </div>
                     </div>
                   </div>
 
@@ -398,7 +407,7 @@ export default function Home() {
                       handleCTAClick('primary', 'snapshot-preview');
                       setShowGrowthSnapshotForm(true);
                     }}
-                    className="w-full px-6 py-3"
+                    className="w-full px-8 py-4 text-lg"
                   >
                     Get My Free Growth Snapshot →
                   </DarkButton>
@@ -559,43 +568,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Pricing Teaser */}
-        <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <SimpleScrollReveal direction="up">
-                <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
-                  Simple, transparent pricing
-                </h2>
-                
-                <div className="grid md:grid-cols-3 gap-6 mb-12">
-                  <div className="flex items-center gap-3">
-                    <Icon name="check" className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">Starter, Growth, Partner tiers (setup + monthly)</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="check" className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">Cancel anytime; no surprise bills</span>
-                  </div>
-                  <div className="flex items-center gap-3">
-                    <Icon name="check" className="w-6 h-6 text-primary-500 flex-shrink-0" />
-                    <span className="text-gray-700 dark:text-gray-300">Plain-math ROI on your weekly scorecard</span>
-                  </div>
-                </div>
 
-                <a 
-                  href="/pricing"
-                  className="inline-flex items-center px-8 py-4 text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
-                >
-                  See Pricing
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </SimpleScrollReveal>
-            </div>
-          </div>
-        </section>
 
         {/* Closing CTA */}
         <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700">
