@@ -66,18 +66,12 @@ const trustedCompanies = [
   },
   {
     id: 11,
-    name: 'Hard Hitting Bail Bonds',
-    logo: '/images/trusted-companies/hard-hitting-bail-bonds-logo.svg',
-    alt: 'Hard Hitting New Britain Bail Bonds'
-  },
-  {
-    id: 12,
     name: 'Easy Exit Homes',
     logo: '/images/trusted-companies/easy-exit-homes-logo.svg',
     alt: 'Easy Exit Homes - Sell Your Home in a Flash'
   },
   {
-    id: 13,
+    id: 12,
     name: 'MusicGym',
     logo: '/images/trusted-companies/music-gym-logo.svg',
     alt: 'MusicGym - Let\'s Be Funfit'
@@ -95,7 +89,7 @@ export default function TrustedCompaniesCarousel() {
         // Reset to 0 when we reach the end of the first set (seamless loop)
         return nextIndex >= trustedCompanies.length ? 0 : nextIndex;
       });
-    }, 2500); // Continuous scroll every 2.5 seconds
+    }, 1500); // Continuous scroll every 1.5 seconds
 
     return () => clearInterval(interval);
   }, []);
