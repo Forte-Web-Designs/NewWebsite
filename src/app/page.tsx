@@ -9,6 +9,7 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import SimpleAnimatedCounter from '@/components/animations/SimpleAnimatedCounter';
 import LightButton from "@/components/LightButton";
 import DarkButton from "@/components/DarkButton";
+import TrustedCompaniesCarousel from "@/components/TrustedCompaniesCarousel";
 
 // Lazy load non-critical components for better performance
 const GrowthSnapshotForm = lazy(() => import("@/components/GrowthSnapshotForm"));
@@ -364,6 +365,9 @@ export default function Home() {
             </SimpleScrollReveal>
           </div>
         </section>
+
+        {/* Trusted Companies Carousel */}
+        <TrustedCompaniesCarousel />
 
         {/* Growth Snapshot CTA */}
         <section className="py-16 lg:py-24 bg-primary-50 dark:bg-primary-900/20">
