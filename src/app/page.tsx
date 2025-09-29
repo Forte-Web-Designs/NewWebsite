@@ -364,10 +364,54 @@ export default function Home() {
                     Curious where you're leaking opportunities?
                   </h2>
                   <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                    Get a 1-page Growth Snapshot: we check response times, quote delays, and follow-up gaps — then show you two quick fixes you can apply immediately.
+                    Get a <strong>1-page Growth Snapshot</strong>: we identify the 3–4 biggest gaps holding your business back, then show two quick fixes you can apply immediately.
                   </p>
 
-                  <div className="space-y-4 mb-8">
+                  <h3 className="font-display font-semibold text-xl text-gray-900 dark:text-white mb-6">
+                    What we check depends on your industry:
+                  </h3>
+
+                  <div className="grid md:grid-cols-3 gap-6 mb-8">
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
+                      <Icon name="services" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Service Businesses</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">Contractors, healthcare, real estate</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Missed calls, quote delays, follow-up gaps, review flow</p>
+                    </div>
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
+                      <Icon name="bag" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">E-commerce & Retail</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">Online stores, retail shops</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Cart abandonment, checkout speed, repeat purchases, ad ROI</p>
+                    </div>
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
+                      <Icon name="company" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
+                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Professional Services</h4>
+                      <p className="text-sm text-gray-600 dark:text-gray-300">Legal, consulting, finance</p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">Intake speed, scheduling gaps, client retention</p>
+                    </div>
+                  </div>
+
+                  <h3 className="font-display font-semibold text-xl text-gray-900 dark:text-white mb-4">
+                    📊 Results you'll get:
+                  </h3>
+
+                  <div className="space-y-3 mb-8">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-700 dark:text-gray-300">Clear view of where money/time is leaking</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-700 dark:text-gray-300">Two quick fixes to start closing the gap</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-gray-700 dark:text-gray-300">Confidence in what to prioritize next</span>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-gray-200 dark:border-gray-600 pt-6 space-y-4 mb-8">
                     <div className="flex items-center gap-3">
                       <Icon name="check" className="w-5 h-5 text-primary-500 flex-shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300">100% free. No meeting required.</span>
@@ -399,39 +443,35 @@ export default function Home() {
               </SimpleScrollReveal>
 
               <SimpleScrollReveal direction="right">
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-6 text-center">
-                    Snapshot Preview
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg text-center">
+                  <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-6">
+                    Ready to see your gaps?
                   </h3>
                   
-                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-lg p-6">
-                    <h4 className="font-semibold text-lg text-gray-900 dark:text-white mb-4">
-                      ProHome Services
+                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-lg p-8 mb-6">
+                    <div className="text-4xl mb-4">📊</div>
+                    <h4 className="font-semibold text-lg text-gray-900 dark:text-white mb-3">
+                      Your Growth Snapshot
                     </h4>
-                    
-                    <div className="space-y-3 mb-6">
-                      <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Response Time:</span>
-                        <span className="font-semibold text-red-600">4.2 hrs</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Quote Turnaround:</span>
-                        <span className="font-semibold text-red-600">3.1 days</span>
-                      </div>
-                      <div className="flex justify-between">
-                        <span className="text-gray-600 dark:text-gray-300">Follow-up Rate:</span>
-                        <span className="font-semibold text-red-600">23%</span>
-                      </div>
-                    </div>
-                    
-                    <div className="border-t pt-4">
-                      <h5 className="font-semibold text-gray-900 dark:text-white mb-2">Quick Fixes:</h5>
-                      <ul className="text-sm text-gray-600 dark:text-gray-300 space-y-1">
-                        <li>• Auto-reply setup (30 min)</li>
-                        <li>• Quote template (1 hr)</li>
-                      </ul>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">
+                      We analyze your current systems and identify the 3-4 biggest opportunities for growth.
+                    </p>
+                    <div className="text-xs text-gray-500 dark:text-gray-400">
+                      ✓ Industry-specific analysis<br/>
+                      ✓ Actionable recommendations<br/>
+                      ✓ Quick-win implementation guide
                     </div>
                   </div>
+
+                  <DarkButton 
+                    onClick={() => {
+                      handleCTAClick('primary', 'snapshot-preview');
+                      setShowGrowthSnapshotForm(true);
+                    }}
+                    className="w-full px-6 py-3"
+                  >
+                    Get My Free Growth Snapshot →
+                  </DarkButton>
                 </div>
               </SimpleScrollReveal>
             </div>
