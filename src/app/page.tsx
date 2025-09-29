@@ -162,38 +162,42 @@ export default function Home() {
 
       <div className="min-h-screen bg-white dark:bg-gray-900">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 lg:pt-32 lg:pb-24">
-          <div className="container mx-auto px-4">
+        <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
             <SimpleScrollReveal direction="up">
-              <div className="text-center max-w-5xl mx-auto">
+              <div className="text-center max-w-5xl mx-auto w-full">
                 {/* Badges Row */}
-                <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-600 dark:text-gray-400 mb-8">
-                  <div className="flex items-center gap-2">
-                    <Icon name="location" className="w-4 h-4 text-primary-600" />
-                    <span>DFW-based</span>
+                <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-full px-2">
+                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+                    <Icon name="location" className="w-3 sm:w-4 h-3 sm:h-4 text-primary-600 flex-shrink-0" />
+                    <span className="whitespace-nowrap text-xs sm:text-sm">DFW-based</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="flash" className="w-4 h-4 text-primary-600" />
-                    <span>24-hr response</span>
+                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+                    <Icon name="flash" className="w-3 sm:w-4 h-3 sm:h-4 text-primary-600 flex-shrink-0" />
+                    <span className="whitespace-nowrap text-xs sm:text-sm">24-hr response</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Icon name="star" className="w-4 h-4 text-yellow-400 fill-current" />
-                    <span>4.9★ Google reviews</span>
+                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+                    <Icon name="star" className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current flex-shrink-0" />
+                    <span className="whitespace-nowrap text-xs sm:text-sm">4.9★ Google reviews</span>
                   </div>
                 </div>
 
                 {/* Rotating Headline */}
                 <h1 
-                  className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white mb-6"
-                  style={{ contain: 'layout' }}
+                  className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full"
+                  style={{ contain: 'layout', wordWrap: 'break-word' }}
                 >
-                  Business Growth Isn't Luck. It's{" "}
+                  <span className="block sm:inline">Business Growth Isn't Luck.</span>{" "}
+                  <span className="block sm:inline">It's{" "}</span>
                   <span 
                     className={`inline-block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
                     style={{ 
-                      minWidth: '180px',
+                      minWidth: '120px',
+                      maxWidth: '200px',
                       display: 'inline-block',
-                      textAlign: 'left'
+                      textAlign: 'left',
+                      overflow: 'hidden',
+                      whiteSpace: 'nowrap'
                     }}
                     aria-live="polite"
                   >
@@ -202,28 +206,28 @@ export default function Home() {
                 </h1>
 
                 {/* Subheadline */}
-                <h2 className="text-xl md:text-2xl leading-relaxed text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+                <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-2 max-w-full">
                   Catch every opportunity. Respond faster. Win more jobs.
                 </h2>
 
                 {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 max-w-full">
                   <DarkButton 
                     onClick={() => {
                       handleCTAClick('primary', 'hero');
                       setShowGrowthSnapshotForm(true);
                     }}
-                    className="px-8 py-4 text-lg"
+                    className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg w-full sm:w-auto max-w-full min-w-0"
                   >
                     Get My Free Growth Snapshot →
                   </DarkButton>
                   <a 
                     href="#how-it-works"
                     onClick={() => handleCTAClick('secondary', 'hero')}
-                    className="inline-flex items-center px-8 py-4 text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    className="inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0"
                   >
-                    See How It Works
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <span className="truncate">See How It Works</span>
+                    <svg className="ml-2 w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </a>
@@ -234,35 +238,35 @@ export default function Home() {
         </section>
 
         {/* Everything You Need In One Place - 6 Core Features */}
-        <section id="how-it-works" className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4">
+        <section id="how-it-works" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-16">
-                <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
                   Everything You Need In One Place
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-2">
                   Powerful systems designed to help your business grow seamlessly.
                 </p>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-full overflow-hidden">
               {coreFeatures.map((feature, index) => (
                 <SimpleAnimatedCard key={index}>
                   <Link href={feature.link}>
-                    <div className="bg-white dark:bg-gray-700 rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full group">
-                      <Icon name={feature.icon} className="w-12 h-12 text-primary-600 mb-6 group-hover:scale-110 transition-transform" />
+                    <div className="bg-white dark:bg-gray-700 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full group">
+                      <Icon name={feature.icon} className="w-10 sm:w-12 h-10 sm:h-12 text-primary-600 mb-4 sm:mb-6 group-hover:scale-110 transition-transform" />
                       
-                      <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
+                      <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
                         {feature.title}
                       </h3>
                       
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4 sm:mb-6">
                         {feature.subtitle}
                       </p>
                       
-                      <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300">
+                      <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300 text-sm sm:text-base">
                         Learn more →
                       </div>
                     </div>
@@ -279,80 +283,80 @@ export default function Home() {
         <TrustedCompaniesCarousel />
 
         {/* Growth Snapshot CTA */}
-        <section className="py-16 lg:py-24 bg-primary-50 dark:bg-primary-900/20">
-          <div className="container mx-auto px-4">
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <section className="py-12 sm:py-16 lg:py-24 bg-primary-50 dark:bg-primary-900/20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
               <SimpleScrollReveal direction="left">
                 <div>
-                  <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                     Ready to see where you're losing time and money?
                   </h2>
-                  <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
                     Your <strong>Growth Snapshot</strong> reveals the 3–4 biggest leaks in your business and gives you two quick fixes you can apply immediately.
                   </p>
 
-                  <h3 className="font-display font-semibold text-xl text-gray-900 dark:text-white mb-6">
+                  <h3 className="font-display font-semibold text-lg sm:text-xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                     What we check depends on your industry:
                   </h3>
 
-                  <div className="grid md:grid-cols-3 gap-6 mb-6">
-                    <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-                      <Icon name="services" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Service Businesses</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">Contractors, healthcare, real estate</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">We check missed calls, slow quotes, and weak follow-ups that cost you booked jobs.</p>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 max-w-full overflow-hidden">
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center max-w-full">
+                      <Icon name="services" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
+                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">Service Businesses</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Contractors, healthcare, real estate</p>
+                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check missed calls, slow quotes, and weak follow-ups that cost you booked jobs.</p>
                     </div>
-                    <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-                      <Icon name="bag" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">E-commerce & Retail</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">Online stores, retail shops</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">We check cart abandonment, slow checkouts, and weak repeat-purchase systems that cost you sales.</p>
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center max-w-full">
+                      <Icon name="bag" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
+                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">E-commerce & Retail</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Online stores, retail shops</p>
+                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check cart abandonment, slow checkouts, and weak repeat-purchase systems that cost you sales.</p>
                     </div>
-                    <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-                      <Icon name="company" className="w-8 h-8 text-primary-600 mx-auto mb-4" />
-                      <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Professional Services</h4>
-                      <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">Legal, consulting, finance</p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">We check intake speed, scheduling gaps, and retention drops that cost you clients.</p>
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center sm:col-span-2 lg:col-span-1 max-w-full">
+                      <Icon name="company" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
+                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">Professional Services</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Legal, consulting, finance</p>
+                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check intake speed, scheduling gaps, and retention drops that cost you clients.</p>
                     </div>
                   </div>
 
-                  <div className="text-center mb-8">
-                    <p className="text-sm text-gray-500 dark:text-gray-400 italic">
+                  <div className="text-center mb-6 sm:mb-8">
+                    <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 italic">
                       We also work with gyms, education, nonprofits, and more — the Growth Snapshot adapts to any business model.
                     </p>
                   </div>
 
-                  <h3 className="font-display font-semibold text-xl text-gray-900 dark:text-white mb-4">
+                  <h3 className="font-display font-semibold text-lg sm:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
                     📊 Results You'll Get:
                   </h3>
 
-                  <div className="space-y-3 mb-8">
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700 dark:text-gray-300">Clear view of where money & time are leaking</span>
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Clear view of where money & time are leaking</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700 dark:text-gray-300">Two quick fixes to start closing the gap</span>
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Two quick fixes to start closing the gap</span>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-gray-700 dark:text-gray-300">Confidence in what to prioritize next</span>
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Confidence in what to prioritize next</span>
                     </div>
                   </div>
 
-                  <div className="border-t border-gray-200 dark:border-gray-600 pt-6 space-y-4 mb-8">
-                    <div className="flex items-center gap-3">
-                      <Icon name="check" className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">100% free. No meeting required.</span>
+                  <div className="border-t border-gray-200 dark:border-gray-600 pt-4 sm:pt-6 space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                    <div className="flex items-start sm:items-center gap-3">
+                      <Icon name="check" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 flex-shrink-0 mt-1 sm:mt-0" />
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">100% free. No meeting required.</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Icon name="download" className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">Delivered as a 1-page PDF + short Loom video.</span>
+                    <div className="flex items-start sm:items-center gap-3">
+                      <Icon name="download" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 flex-shrink-0 mt-1 sm:mt-0" />
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Delivered as a 1-page PDF + short Loom video.</span>
                     </div>
-                    <div className="flex items-center gap-3">
-                      <Icon name="puzzle" className="w-5 h-5 text-primary-500 flex-shrink-0" />
-                      <span className="text-gray-700 dark:text-gray-300">Works with your current tools — no rip-and-replace.</span>
+                    <div className="flex items-start sm:items-center gap-3">
+                      <Icon name="puzzle" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 flex-shrink-0 mt-1 sm:mt-0" />
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Works with your current tools — no rip-and-replace.</span>
                     </div>
                   </div>
 
@@ -361,42 +365,42 @@ export default function Home() {
                       handleCTAClick('primary', 'snapshot-section');
                       setShowGrowthSnapshotForm(true);
                     }}
-                    className="px-8 py-4 text-lg"
+                    className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
                   >
                     Get my Free Growth Snapshot →
                   </DarkButton>
 
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mt-4">
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-3 sm:mt-4 text-center sm:text-left">
                     We'll only use your info to prepare your snapshot. No spam.
                   </p>
                 </div>
               </SimpleScrollReveal>
 
               <SimpleScrollReveal direction="right">
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-10 shadow-lg text-center h-full flex flex-col justify-center">
-                  <h3 className="font-display font-bold text-3xl text-gray-900 dark:text-white mb-8">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 lg:p-10 shadow-lg text-center h-full flex flex-col justify-center mt-8 lg:mt-0">
+                  <h3 className="font-display font-bold text-xl sm:text-2xl lg:text-3xl text-gray-900 dark:text-white mb-6 sm:mb-8">
                     Ready to see your gaps?
                   </h3>
                   
-                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-lg p-10 mb-8 flex-grow flex flex-col justify-center">
-                    <div className="text-6xl mb-6">📊</div>
-                    <h4 className="font-semibold text-2xl text-gray-900 dark:text-white mb-6">
+                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-lg p-6 sm:p-8 lg:p-10 mb-6 sm:mb-8 flex-grow flex flex-col justify-center">
+                    <div className="text-4xl sm:text-5xl lg:text-6xl mb-4 sm:mb-6">📊</div>
+                    <h4 className="font-semibold text-lg sm:text-xl lg:text-2xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                       Your Growth Snapshot
                     </h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-base mb-8 leading-relaxed">
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
                       We analyze your current systems and identify the 3-4 biggest opportunities for growth.
                     </p>
-                    <div className="text-sm text-gray-500 dark:text-gray-400 space-y-2">
+                    <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 space-y-2">
                       <div className="flex items-center justify-center gap-2">
-                        <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
                         <span>Industry-specific analysis</span>
                       </div>
                       <div className="flex items-center justify-center gap-2">
-                        <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
                         <span>Actionable recommendations</span>
                       </div>
                       <div className="flex items-center justify-center gap-2">
-                        <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
+                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
                         <span>Quick-win implementation guide</span>
                       </div>
                     </div>
@@ -407,7 +411,7 @@ export default function Home() {
                       handleCTAClick('primary', 'snapshot-preview');
                       setShowGrowthSnapshotForm(true);
                     }}
-                    className="w-full px-8 py-4 text-lg"
+                    className="w-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
                   >
                     Get My Free Growth Snapshot →
                   </DarkButton>
@@ -418,31 +422,31 @@ export default function Home() {
         </section>
 
         {/* Recent Outcomes */}
-        <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-4">
+        <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12">
-                <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
                   Real Businesses. Real Results.
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 px-2">
                   See how our growth systems deliver measurable outcomes across industries.
                 </p>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full overflow-hidden">
               {recentOutcomes.map((outcome, index) => (
                 <SimpleAnimatedCard key={index}>
                   <Link href={`/results#${outcome.anchor}`}>
-                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-xl p-8 text-center hover:shadow-lg transition-shadow group h-full">
-                      <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
+                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-xl p-6 sm:p-8 text-center hover:shadow-lg transition-shadow group h-full">
+                      <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
                         {outcome.company}
                       </h3>
-                      <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2 group-hover:scale-105 transition-transform">
+                      <div className="text-2xl sm:text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2 group-hover:scale-105 transition-transform">
                         {outcome.outcome}
                       </div>
-                      <p className="text-gray-600 dark:text-gray-300">
+                      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
                         {outcome.description}
                       </p>
                     </div>
@@ -452,10 +456,10 @@ export default function Home() {
             </div>
 
             <SimpleScrollReveal direction="up">
-              <div className="text-center">
+              <div className="text-center px-2">
                 <a 
                   href="/results"
-                  className="inline-flex items-center px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="inline-flex items-center px-6 sm:px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base"
                 >
                   See All Results
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -468,84 +472,84 @@ export default function Home() {
         </section>
 
         {/* Core Systems That Power Your Growth */}
-        <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4">
+        <section className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-16">
-                <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6 sm:mb-8 px-2">
                   Core Systems That Power Your Growth
                 </h2>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full overflow-hidden">
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
-                  <div className="text-3xl mb-4">🌐</div>
-                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center h-full">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🌐</div>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                     Web Design (Foundation)
                   </h3>
-                  <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                     Give customers a reason to say yes.
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
                     Your site isn't just a brochure — it's the entry point of your growth system. A fast, custom-coded website builds trust instantly and converts clicks into calls.
                   </p>
-                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
                     📈 <strong>Outcome:</strong> More inquiries, higher trust, stronger first impressions.
                   </p>
                 </div>
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
-                  <div className="text-3xl mb-4">🤖</div>
-                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center h-full">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🤖</div>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                     Automation & AI (Efficiency)
                   </h3>
-                  <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                     Work smarter, not harder.
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
                     From instant replies to follow-up reminders, automation ensures no lead slips through the cracks. AI systems handle the busywork so you can focus on growth.
                   </p>
-                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
                     📈 <strong>Outcome:</strong> Faster responses, more booked jobs, hours of time saved every week.
                   </p>
                 </div>
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
-                  <div className="text-3xl mb-4">📊</div>
-                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center h-full">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">📊</div>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                     Dashboards & Scaling (Clarity)
                   </h3>
-                  <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                     Know exactly what's working — and what's not.
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
                     One clear view of leads, quotes, and performance helps you scale without chaos. Spot bottlenecks and fix them before they cost you money.
                   </p>
-                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
                     📈 <strong>Outcome:</strong> Clearer decisions, accountability, and steady growth at scale.
                   </p>
                 </div>
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
-                  <div className="text-3xl mb-4">⚙️</div>
-                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center h-full">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">⚙️</div>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                     Forte Care™ (Upkeep)
                   </h3>
-                  <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                     Stay fast, secure, and ahead of competitors.
                   </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
                     Your system doesn't stall — it compounds. With Forte Care™, we keep your site and automations optimized, secure, and updated so they continue driving revenue month after month.
                   </p>
-                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
                     📈 <strong>Outcome:</strong> Zero downtime, steady improvements, and peace of mind while you grow.
                   </p>
                 </div>
@@ -553,10 +557,10 @@ export default function Home() {
             </div>
 
             <SimpleScrollReveal direction="up">
-              <div className="text-center">
+              <div className="text-center px-2">
                 <a 
                   href="/pricing"
-                  className="inline-flex items-center px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="inline-flex items-center px-6 sm:px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base"
                 >
                   See Pricing
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -571,30 +575,30 @@ export default function Home() {
 
 
         {/* Closing CTA */}
-        <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700">
-          <div className="container mx-auto px-4 text-center">
+        <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700 overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-full">
             <SimpleScrollReveal direction="up">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-white mb-8">
+              <h2 className="font-display font-bold text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-white mb-6 sm:mb-8 px-2 max-w-full">
                 Ready to stop losing opportunities?
               </h2>
               
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 max-w-full">
                 <button
                   onClick={() => {
                     handleCTAClick('primary', 'closing-cta');
                     setShowGrowthSnapshotForm(true);
                   }}
-                  className="bg-white text-primary-600 hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+                  className="bg-white text-primary-600 hover:bg-gray-50 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-colors w-full sm:w-auto max-w-full min-w-0"
                 >
-                  Get a Free Growth Snapshot
+                  <span className="truncate">Get a Free Growth Snapshot</span>
                 </button>
                 <a 
                   href="/contact"
                   onClick={() => handleCTAClick('secondary', 'closing-cta')}
-                  className="inline-flex items-center px-8 py-4 text-lg border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0"
                 >
-                  Talk to Us
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <span className="truncate">Talk to Us</span>
+                  <svg className="ml-2 w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </a>
@@ -606,25 +610,25 @@ export default function Home() {
         {/* Growth Snapshot Form Modal */}
         {showGrowthSnapshotForm && (
           <Suspense fallback={
-            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-8">
-                <div className="animate-spin w-8 h-8 border-4 border-primary-600 border-t-transparent rounded-full mx-auto"></div>
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-hidden">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 mx-auto">
+                <div className="animate-spin w-6 sm:w-8 h-6 sm:h-8 border-4 border-primary-600 border-t-transparent rounded-full mx-auto"></div>
               </div>
             </div>
           }>
-            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
-              <div className="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
-                <div className="p-6">
-                  <div className="flex justify-between items-center mb-6">
-                    <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white">
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-hidden">
+              <div className="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto mx-auto">
+                <div className="p-4 sm:p-6 w-full">
+                  <div className="flex justify-between items-start mb-4 sm:mb-6 w-full">
+                    <h3 className="font-display font-bold text-lg sm:text-2xl text-gray-900 dark:text-white pr-4 flex-1 min-w-0">
                       Get Your Free Growth Snapshot
                     </h3>
                     <button
                       onClick={() => setShowGrowthSnapshotForm(false)}
-                      className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+                      className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 flex-shrink-0 ml-2"
                       aria-label="Close modal"
                     >
-                      <Icon name="x" className="w-6 h-6" />
+                      <Icon name="x" className="w-5 sm:w-6 h-5 sm:h-6" />
                     </button>
                   </div>
                   

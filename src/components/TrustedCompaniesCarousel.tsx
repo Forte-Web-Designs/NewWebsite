@@ -80,7 +80,25 @@ const trustedCompanies = [
 
 export default function TrustedCompaniesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemWidth = 220; // Width of each logo container including gap
+  const [itemWidth, setItemWidth] = useState(220); // Width of each logo container including gap
+
+  useEffect(() => {
+    const updateItemWidth = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth < 640) {
+        setItemWidth(160); // Mobile
+      } else if (screenWidth < 1024) {
+        setItemWidth(180); // Tablet
+      } else {
+        setItemWidth(220); // Desktop
+      }
+    };
+
+    updateItemWidth();
+    window.addEventListener('resize', updateItemWidth);
+    
+    return () => window.removeEventListener('resize', updateItemWidth);
+  }, []);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -95,21 +113,22 @@ export default function TrustedCompaniesCarousel() {
   }, []);
 
   return (
-    <div className="bg-white dark:bg-gray-800 py-12">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="bg-white dark:bg-gray-800 py-12 overflow-hidden">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
         <div className="text-center mb-8">
-          <h3 className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text mb-2">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text mb-2 max-w-full px-2">
             Trusted by 25+ Growing Businesses Nationwide
           </h3>
         </div>
 
         {/* Continuous scrolling carousel */}
-        <div className="overflow-hidden relative">
+        <div className="overflow-hidden relative max-w-full">
           <div 
-            className="flex items-center gap-6 lg:gap-8 transition-transform duration-1000 ease-in-out"
+            className="flex items-center gap-4 sm:gap-6 lg:gap-8 transition-transform duration-1000 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * itemWidth}px)`,
               width: `${trustedCompanies.length * 2 * itemWidth}px`,
+              maxWidth: 'none'
             }}
           >
             {/* Duplicate logos for seamless infinite scroll */}

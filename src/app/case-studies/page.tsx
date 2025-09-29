@@ -15,38 +15,38 @@ interface CaseStudy {
 
 const caseStudies: CaseStudy[] = [
   {
-    id: 'tabletop-board-game-club',
-    title: 'TableTop Board Game Club',
+    id: 'summit-gaming-lounge',
+    title: 'Summit Gaming Lounge',
     subtitle: 'AI-Powered Omnichannel Concierge System',
-    description: 'Custom AI automation system for streamlined member communications, reservations, and group coordination across SMS, Discord, and Telegram platforms',
+    description: 'We partnered with Summit Gaming Lounge, a modern gaming café and social venue, to design and deploy a custom AI automation system that transforms how they manage operations and customer experiences. This solution streamlines customer communications, reservation management, and group coordination—allowing the venue to focus on delivering exceptional experiences while scaling operations efficiently. The automation system is built in three modular phases: starting with intelligent user recognition across multiple platforms, advancing into sophisticated reservation and group-forming automation, and culminating in comprehensive memory management with personalized customer experiences across SMS, Discord, and Telegram.',
     readTime: '8 min read'
   },
   {
-    id: 'qupons',
-    title: 'Qupons',
-    subtitle: 'AI-Powered Lead Discovery System',
-    description: 'Automated restaurant lead discovery and enrichment system with web crawling, API integration, and user-friendly interface, enabling efficient partner acquisition and global scaling',
+    id: 'metroeats',
+    title: 'MetroEats',
+    subtitle: 'AI-Powered Restaurant Partner Discovery System',
+    description: 'We partnered with MetroEats, a fast-scaling Dallas–Fort Worth food delivery startup, to build an AI-powered partner discovery system that automates restaurant identification and onboarding. By integrating advanced web crawling, API-driven search, and a user-friendly dashboard, the solution provides a live pipeline of high-quality leads with actionable contact details—reducing restaurant partner research time from days to under 1 hour, providing contact info for over 85% of leads, and enabling a 40% increase in monthly restaurant sign-ups while scaling from Dallas to multi-city rollout within 6 months.',
     readTime: '6 min read'
   },
   {
+    id: 'summit-supply-chain',
+    title: 'Summit Supply Chain Partners',
+    subtitle: 'AI-Powered Procurement Analytics',
+    description: 'We partnered with Summit Supply Chain Partners to design and deploy SummitProcure™, an AI-powered procurement analytics system. The platform uses intelligent agents to identify revenue risks, streamline procurement data queries, and generate detailed supplier reports in minutes instead of days. By integrating with their existing SQL databases and external data sources, SummitProcure™ empowers procurement teams with real-time intelligence and dramatically reduces manual overhead—cutting query response time by 85%, reducing supplier risk assessment from days to under 30 minutes, and enabling 40% faster procurement decision-making across their entire supply chain network.',
+    readTime: '8 min read'
+  },
+  {
+    id: 'clearwater-systems',
+    title: 'ClearWater Systems',
+    subtitle: 'AI-Powered Quoting & CRM Automation',
+    description: 'We partnered with ClearWater Systems, a growing water treatment supplier, to design and deploy an AI-driven quoting and CRM automation system. Their challenge was clear: too much time lost on repetitive email replies, manual quotes, and disorganized lead tracking. The system now automates customer communication, generates accurate quotes in minutes, and keeps the CRM clean and up to date—freeing the ClearWater team to focus on high-value client relationships instead of admin work. This automation system reduces manual quoting time by 80%, delivers same-day quotes that win more deals, and operates 24/7 while scaling seamlessly as new leads grow.',
+    readTime: '8 min read'
+  },
+  {
     id: 'barkbox',
-    title: 'Barkbox',
-    subtitle: 'Executive Assistant',
-    description: 'AI assistant that freed up 15 hours per week of executive time',
-    readTime: '4 min read'
-  },
-  {
-    id: 'pierpont-holdings',
-    title: 'Pierpont Holdings AI',
-    subtitle: 'AI-Enabled Procurement Analytics Platform',
-    description: 'Transformative procurement analytics solution with three specialized AI agents for real-time insights and automation',
-    readTime: '10 min read'
-  },
-  {
-    id: 'advanced-water-treatment',
-    title: 'Advanced Water Treatment Technologies',
-    subtitle: 'AI-Driven Quoting & CRM Automation',
-    description: 'Custom AI automation system for streamlined customer communications and quote generation',
+    title: 'BarkBox',
+    subtitle: 'AI-Powered Executive Assistant in Slack',
+    description: 'BarkBox\'s leadership team was buried in repetitive admin tasks—managing email, scheduling, sorting contacts, and pulling daily updates from different tools. We designed an AI-powered executive assistant that lives directly in Slack, where the team already works. Now, routine tasks like drafting emails, scheduling meetings, and summarizing the day\'s priorities happen automatically—giving executives back 10–15 hours a week. This AI assistant works like a digital Chief of Staff: saving 15 hours/week in manual admin, delivering faster response times across email and Slack, ensuring zero drop-offs in scheduling or follow-ups, and scaling endlessly without hiring more staff.',
     readTime: '7 min read'
   }
 ];
