@@ -66,36 +66,18 @@ const trustedCompanies = [
   },
   {
     id: 11,
-    name: 'Gibbon',
-    logo: '/images/trusted-companies/gibbon-logo.svg',
-    alt: 'Gibbon - Born to Rock Force to Work'
-  },
-  {
-    id: 12,
-    name: 'Laurelwood Public House',
-    logo: '/images/trusted-companies/laurelwood-logo.svg',
-    alt: 'Laurelwood Public House & Brewery'
-  },
-  {
-    id: 13,
     name: 'Hard Hitting Bail Bonds',
     logo: '/images/trusted-companies/hard-hitting-bail-bonds-logo.svg',
     alt: 'Hard Hitting New Britain Bail Bonds'
   },
   {
-    id: 14,
-    name: 'Healthy Parenting',
-    logo: '/images/trusted-companies/healthy-parenting-logo.svg',
-    alt: 'Healthy Parenting'
-  },
-  {
-    id: 15,
+    id: 12,
     name: 'Easy Exit Homes',
     logo: '/images/trusted-companies/easy-exit-homes-logo.svg',
     alt: 'Easy Exit Homes - Sell Your Home in a Flash'
   },
   {
-    id: 16,
+    id: 13,
     name: 'MusicGym',
     logo: '/images/trusted-companies/music-gym-logo.svg',
     alt: 'MusicGym - Let\'s Be Funfit'
@@ -109,11 +91,11 @@ export default function TrustedCompaniesCarousel() {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
-        const nextIndex = prevIndex + 1;
-        // Reset to 0 when we reach the end of the first set (seamless loop)
+        const nextIndex = prevIndex + 0.5; // Smooth continuous scroll
+        // Reset when we've scrolled through one complete set
         return nextIndex >= trustedCompanies.length ? 0 : nextIndex;
       });
-    }, 2500); // Continuous scroll every 2.5 seconds
+    }, 50); // Much faster interval for smooth animation
 
     return () => clearInterval(interval);
   }, []);
@@ -133,7 +115,7 @@ export default function TrustedCompaniesCarousel() {
         {/* Continuous scrolling carousel */}
         <div className="overflow-hidden relative">
           <div 
-            className="flex items-center gap-6 lg:gap-8 transition-transform duration-1000 ease-in-out"
+            className="flex items-center gap-6 lg:gap-8 transition-transform duration-75 ease-linear"
             style={{
               transform: `translateX(-${currentIndex * itemWidth}px)`,
               width: `${trustedCompanies.length * 2 * itemWidth}px`,
@@ -157,7 +139,7 @@ export default function TrustedCompaniesCarousel() {
                   <img
                     src={company.logo}
                     alt={company.alt}
-                    className="max-w-full max-h-full object-contain"
+                    className="max-w-full max-h-full object-contain transition-all duration-300 grayscale opacity-70 dark:brightness-0 dark:invert"
                     style={{
                       width: 'auto',
                       height: 'auto',
