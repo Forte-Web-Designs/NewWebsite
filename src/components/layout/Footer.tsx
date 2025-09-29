@@ -155,7 +155,17 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-16">
+        {/* Service Areas for SEO */}
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
+          <div className="text-center mb-4">
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Service Areas</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400">
+              DFW-based, serving Dallas–Fort Worth and clients nationwide.
+            </p>
+          </div>
+        </div>
+
+        <div className="mt-8">
           <p className="dark:text-gray-400 text-gray-700 text-sm md:block hidden">
             © {new Date().getFullYear()} Forte Web Designs - Professional Web Design & Digital Marketing Services Dallas Fort Worth Texas. All rights reserved.
           </p>

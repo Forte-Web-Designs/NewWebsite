@@ -1,401 +1,345 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
-import { OptimizedImage } from '@/components/images/OptimizedImage';
+"use client";
+
+import { useState } from "react";
 import { Icon } from '@/components/images/Icon';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import DarkButton from '@/components/DarkButton';
 
-export const metadata: Metadata = {
-  title: 'Professional Industry-Specific Website Design | Specialized Business Websites | Nationwide from DFW | Forte Web Designs',
-  description: 'Professional websites designed for specific industries and business sectors. DFW-based team serving businesses nationwide, understanding the unique challenges, requirements, and conversion optimization needs of your business sector and target market.',
-  keywords: 'professional industry websites, specialized website design, business sector websites, industry-specific web design, professional business websites, targeted website development nationwide',
-  openGraph: {
-    title: 'Professional Industry-Specific Website Design | Specialized Business Websites | Nationwide from DFW',
-    description: 'Professional websites designed for specific industries and business sectors. DFW-based team serving businesses nationwide with specialized expertise.',
-    type: 'website',
-  },
-};
-
 export default function IndustriesPage() {
+  const [showGrowthSnapshotForm, setShowGrowthSnapshotForm] = useState(false);
+
+  // Handle CTA clicks with tracking
+  const handleCTAClick = (buttonType: string, placement: string) => {
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'cta_click', {
+        button_type: buttonType,
+        placement: placement
+      });
+    }
+  };
+
+  // Industries data
   const industries = [
     {
-      name: 'Plumbers',
-      icon: '🔧',
-      href: '/industries/plumbers',
-      description: 'Smart reception + automated follow-up that turns emergency calls into booked jobs',
-      features: ['24/7 Emergency Contact', 'Local SEO', 'Mobile-First Design', 'Review Integration'],
-      available: true,
-      clients: '8',
-      avgIncrease: '67%'
+      icon: "🏠",
+      title: "Home Services",
+      subtitle: "Roofing, HVAC, Plumbing, Electrical, Landscaping",
+      points: [
+        "Auto-reply to every missed call and form",
+        "Same-day quoting for faster closes", 
+        "Review flows that boost local rankings"
+      ],
+      impact: "More booked jobs, less admin time, and steady 5★ reviews.",
+      bgColor: "bg-white dark:bg-gray-700"
     },
     {
-      name: 'Restaurants',
-      icon: '🍕',
-      href: '/industries/restaurants',
-      description: 'Mobile-first menus, online ordering, and automated reminders that keep tables full',
-      features: ['Mobile-Optimized Menus', 'Local SEO & Maps', 'Online Ordering Integration', 'Review Display'],
-      available: true,
-      clients: '8',
-      avgIncrease: '63%'
+      icon: "🏥", 
+      title: "Healthcare & Clinics",
+      subtitle: "Medical, Dental, Therapy Practices",
+      points: [
+        "Intake automation for new patients",
+        "Faster replies to appointment requests",
+        "Follow-up reminders to reduce no-shows"
+      ],
+      impact: "More patient inquiries, fewer gaps in your schedule, higher retention.",
+      bgColor: "bg-gray-50 dark:bg-gray-800"
     },
     {
-      name: 'Landscapers',
-      icon: '🌿',
-      href: '/industries/landscapers',
-      description: 'Before/after galleries with booking flows and CRM integration to manage seasonal demand',
-      features: ['Before/After Galleries', 'Seasonal Services', 'Local SEO', 'Mobile Booking'],
-      available: true,
-      clients: '12',
-      avgIncrease: '54%'
+      icon: "🛠",
+      title: "Contractors & Renovation", 
+      subtitle: "General Contracting, Remodeling, Specialty Trades",
+      points: [
+        "Pre-loaded quote templates for complex jobs",
+        "Automatic reminders on open estimates",
+        "Centralized dashboard for owners & teams"
+      ],
+      impact: "Shorter sales cycles, higher win rates, and clarity on every project lead.",
+      bgColor: "bg-white dark:bg-gray-700"
     },
     {
-      name: 'Handyman Services',
-      icon: '🛠️',
-      href: '/industries/handyman',
-      description: 'Instant tap-to-call buttons, follow-up automations, and dashboards that track every request',
-      features: ['Tap-to-Call Optimization', 'Local SEO & Zip Targeting', 'Before/After Galleries', 'Trust Building'],
-      available: true,
-      clients: '6',
-      avgIncrease: '212%'
+      icon: "🛍",
+      title: "Retail & Boutiques",
+      subtitle: "Local Shops, Salons, Service Retail", 
+      points: [
+        "Follow-up campaigns for one-time customers",
+        "Review collection on autopilot",
+        "Dashboard to track repeat visits & spend"
+      ],
+      impact: "More repeat sales, better reviews, and steady customer flow.",
+      bgColor: "bg-gray-50 dark:bg-gray-800"
     },
     {
-      name: 'Painters',
-      icon: '🖌️',
-      href: '/industries/painters',
-      description: 'Dynamic project galleries, mobile quotes, and systems that keep leads warm until they book',
-      features: ['Dynamic Project Galleries', 'Service-Specific Pages', 'Mobile Quote CTAs', 'Local SEO'],
-      available: true,
-      clients: '7',
-      avgIncrease: '143%'
-    },
-    {
-      name: 'Construction',
-      icon: '🏗️',
-      href: '/industries/construction',
-      description: 'Integrated project portfolios, CRM-based bid management, and lead tracking dashboards',
-      features: ['Project Portfolio Showcase', 'Mobile Quote Tools', 'Trust Indicators', 'Bid Request Forms'],
-      available: true,
-      clients: '10',
-      avgIncrease: '160%'
-    },
-    {
-      name: 'Healthcare',
-      icon: '⚕️',
-      href: '/industries/healthcare',
-      description: 'Appointment booking + automated reminders that reduce no-shows and increase patient flow',
-      features: ['HIPAA-Aware Setup', 'Appointment Integration', 'Provider Bios', 'Local SEO'],
-      available: true,
-      clients: '8',
-      avgIncrease: '340%'
-    },
-    {
-      name: 'HVAC Companies',
-      icon: '🌡️',
-      href: '/industries/hvac',
-      description: '24/7 emergency response automations, seasonal service campaigns, and lead dashboards',
-      features: ['Emergency Contact Buttons', 'Seasonal Specials', 'Online Booking', 'Local SEO'],
-      available: true,
-      clients: '12',
-      avgIncrease: '220%'
-    },
-    {
-      name: 'Electricians',
-      icon: '⚡',
-      href: '/industries/electricians',
-      description: 'Fast-response call optimization + automated intake that prioritizes high-value service calls',
-      features: ['Emergency Call Optimization', 'License & Insurance Display', 'Service Area Maps', 'Online Estimates'],
-      available: true,
-      clients: '18',
-      avgIncrease: '59%'
-    }
-  ];
-
-  const whyIndustrySpecific = [
-    {
-      icon: '🎯',
-      title: 'Industry Expertise',
-      description: 'We understand the workflows and lead challenges unique to your trade.'
-    },
-    {
-      icon: '⚡',
-      title: 'Faster Results',
-      description: 'Proven playbooks that start generating leads immediately.'
-    },
-    {
-      icon: '📈',
-      title: 'Higher Conversions',
-      description: 'Smart automations that turn inquiries into appointments.'
-    },
-    {
-      icon: '🏆',
-      title: 'Competitive Advantage',
-      description: 'Systems built to outperform generic marketing agencies.'
+      icon: "📑",
+      title: "Professional Services",
+      subtitle: "Legal, Finance, Real Estate, Consulting",
+      points: [
+        "Auto-responses that build trust with inquiries", 
+        "Proposal workflows that send faster",
+        "CRM integration for full pipeline visibility"
+      ],
+      impact: "Stronger client relationships, faster closes, and better accountability.",
+      bgColor: "bg-white dark:bg-gray-700"
     }
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-900 via-slate-800 to-blue-900 text-white py-20 md:py-28">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-4xl mx-auto">
-            <SimpleScrollReveal direction="up" delay={100}>
-              <div className="inline-flex items-center gap-2 bg-blue-800/50 text-blue-200 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                🏭 Professional Industry Specialization
-              </div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-                Industries We Serve — <span className="text-blue-300">Tailored Growth Systems for Every Business</span>
-              </h1>
-              <p className="text-xl text-blue-100 mb-8 leading-relaxed max-w-3xl mx-auto">
-                Every industry has unique challenges. That's why we don't just build websites — we design complete growth systems. From instant lead capture to automated follow-up and CRM integration, we help you solve industry-specific problems and scale with measurable, predictable results.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <DarkButton href="/contact" className="bg-orange-600 hover:bg-orange-700">
-                  Discuss My Professional Industry Needs
-                </DarkButton>
-                <Link href="#industries" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                  Browse Industries
-                  <span>↓</span>
-                </Link>
+    <>
+      {/* Schema Markup */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            "name": "Growth Systems by Industry",
+            "description": "Industry-specific growth systems tailored to your business bottlenecks. Forte adapts proven systems to fit the way your business works.",
+            "url": "https://fortewebdesigns.com/industries",
+            "mainEntity": {
+              "@type": "Service", 
+              "name": "Industry-Specific Growth Systems",
+              "provider": {
+                "@type": "Organization",
+                "name": "Forte Web Designs"
+              },
+              "areaServed": ["US", "DFW", "Dallas", "Fort Worth"],
+              "serviceType": "Business Growth Consulting"
+            }
+          })
+        }}
+      />
+
+      <div className="min-h-screen bg-white dark:bg-gray-900">
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 lg:pt-32 lg:pb-24">
+          <div className="container mx-auto px-4">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center max-w-4xl mx-auto">
+                {/* Headline */}
+                <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white mb-6">
+                  Your Industry. Your{" "}
+                  <span className="bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">
+                    Bottlenecks.
+                  </span>{" "}
+                  Our Systems.
+                </h1>
+
+                {/* Intro */}
+                <p className="text-xl md:text-2xl leading-relaxed text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto">
+                  Every industry has its own version of missed calls, slow quotes, and lost follow-ups. Forte adapts proven growth systems to fit the way your business works.
+                </p>
               </div>
             </SimpleScrollReveal>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Why Industry-Specific Section */}
-      <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Why <span className="text-blue-600">Industry-Specific Growth Systems</span> Work Better
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Generic websites don't solve real business problems. Your industry has specific customer behaviors, lead flow issues, and operational needs. We design systems that address those directly — giving you faster results, higher conversions, and a competitive edge.
-              </p>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {whyIndustrySpecific.map((reason, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="text-center">
-                  <div className="text-4xl mb-4">{reason.icon}</div>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                    {reason.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400">
-                    {reason.description}
-                  </p>
-                </div>
-              </SimpleAnimatedCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Industries Grid */}
-      <section id="industries" className="py-16 md:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Industries We <span className="text-blue-600">Specialize In</span>
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
-                Each industry page includes proven strategies, specific features, and real case studies from businesses just like yours.
-              </p>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {industries.map((industry, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className={`bg-white dark:bg-gray-900 rounded-xl p-6 h-full shadow-md hover:shadow-lg transition-all duration-300 ${
-                  industry.available ? 'border-l-4 border-blue-600' : 'border-l-4 border-gray-300'
-                }`}>
-                  <div className="flex items-start justify-between mb-4">
-                    <div className="text-4xl">{industry.icon}</div>
-                    <div className="text-right">
-                      {industry.available ? (
-                        <div>
-                          <div className="text-sm font-semibold text-blue-600">{industry.clients} Clients</div>
-                          <div className="text-xs text-gray-500">Avg +{industry.avgIncrease} leads</div>
+        {/* Industries Sections */}
+        <section className="py-16 lg:py-24">
+          <div className="container mx-auto px-4">
+            <div className="space-y-16">
+              {industries.map((industry, index) => (
+                <SimpleScrollReveal key={index} direction={index % 2 === 0 ? "left" : "right"}>
+                  <div className={`rounded-2xl p-8 lg:p-12 ${industry.bgColor}`}>
+                    <div className="grid lg:grid-cols-2 gap-12 items-center">
+                      <div className={index % 2 === 1 ? "lg:order-2" : ""}>
+                        {/* Icon and Title */}
+                        <div className="flex items-start gap-6 mb-6">
+                          <div className="text-6xl">{industry.icon}</div>
+                          <div>
+                            <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-2">
+                              {industry.title}
+                            </h2>
+                            <p className="text-lg text-gray-600 dark:text-gray-300 italic">
+                              {industry.subtitle}
+                            </p>
+                          </div>
                         </div>
-                      ) : (
-                        <span className="text-xs bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-400 px-2 py-1 rounded">
-                          {industry.clients}
-                        </span>
-                      )}
+
+                        {/* Points */}
+                        <ul className="space-y-4 mb-8">
+                          {industry.points.map((point, pointIndex) => (
+                            <li key={pointIndex} className="flex items-start gap-3">
+                              <div className="w-2 h-2 bg-primary-600 rounded-full mt-3 flex-shrink-0"></div>
+                              <span className="text-lg text-gray-700 dark:text-gray-300">{point}</span>
+                            </li>
+                          ))}
+                        </ul>
+
+                        {/* Impact */}
+                        <div className="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6">
+                          <div className="flex items-start gap-3">
+                            <Icon name="trending-up" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                            <div>
+                              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                                📈 Impact:
+                              </h3>
+                              <p className="text-gray-700 dark:text-gray-300">
+                                {industry.impact}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Visual placeholder */}
+                      <div className={index % 2 === 1 ? "lg:order-1" : ""}>
+                        <div className="bg-gray-200 dark:bg-gray-600 rounded-xl p-12 aspect-square flex items-center justify-center">
+                          <div className="text-center">
+                            <div className="text-8xl mb-4">{industry.icon}</div>
+                            <p className="text-gray-500 dark:text-gray-400 text-lg">
+                              {industry.title} Growth System
+                            </p>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                  
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
-                    {industry.name}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    {industry.description}
-                  </p>
-                  
-                  <div className="space-y-2 mb-6">
-                    {industry.features.map((feature, idx) => (
-                      <div key={idx} className="flex items-center gap-2 text-sm">
-                        <span className="text-green-500">✓</span>
-                        <span className="text-gray-600 dark:text-gray-400">{feature}</span>
-                      </div>
-                    ))}
-                  </div>
-                  
-                  <div className="mt-auto">
-                    {industry.available ? (
-                      <Link 
-                        href={industry.href}
-                        className="block w-full bg-blue-600 hover:bg-blue-700 text-white text-center py-3 rounded-lg font-semibold transition-colors"
-                      >
-                        View {industry.name} Websites
-                      </Link>
-                    ) : (
-                      <div className="w-full bg-gray-200 dark:bg-gray-700 text-gray-500 dark:text-gray-400 text-center py-3 rounded-lg font-semibold">
-                        Coming Soon
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </SimpleAnimatedCard>
-            ))}
+                </SimpleScrollReveal>
+              ))}
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
 
-      {/* Featured Industry Spotlight */}
-      <section className="py-16 md:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <SimpleScrollReveal direction="left" delay={100}>
-              <div>
-                <div className="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/20 text-blue-800 dark:text-blue-400 px-4 py-2 rounded-full text-sm font-semibold mb-6">
-                  🏆 Featured Industry
+        {/* Other Local Businesses Section */}
+        <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center max-w-4xl mx-auto">
+                <div className="flex justify-center mb-8">
+                  <div className="text-6xl">🌎</div>
                 </div>
-                <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                  Plumber Growth Systems That Convert Emergency Calls
+                
+                <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  Other Local Businesses
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                  We've helped dozens of plumbing companies turn emergency calls into booked jobs. With smart reception, automated reminders, and dashboards to track every lead, our plumber clients see 2–3x more booked jobs within months.
+                
+                <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+                  Don't see your industry listed? Growth systems work across the board. If you rely on leads, quotes, or repeat customers — Forte can make it easier to catch every opportunity.
+                </p>
+
+                <DarkButton 
+                  onClick={() => {
+                    handleCTAClick('primary', 'other-industries');
+                    setShowGrowthSnapshotForm(true);
+                  }}
+                  className="px-8 py-4 text-lg"
+                >
+                  Get My Free Growth Snapshot
+                </DarkButton>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Growth Snapshot CTA */}
+        <section className="py-16 lg:py-24 bg-primary-50 dark:bg-primary-900/20">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <SimpleScrollReveal direction="up">
+                <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  Want to see how these systems look in your industry?
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                  Start with a <strong>free Growth Snapshot</strong> — tailored to your business.
+                </p>
+
+                <DarkButton 
+                  onClick={() => {
+                    handleCTAClick('primary', 'industries-cta');
+                    setShowGrowthSnapshotForm(true);
+                  }}
+                  className="px-8 py-4 text-lg"
+                >
+                  👉 Get My Free Growth Snapshot
+                </DarkButton>
+              </SimpleScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Growth Snapshot Form Modal */}
+        {showGrowthSnapshotForm && (
+          <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
+            <div className="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+              <div className="p-6">
+                <div className="flex justify-between items-center mb-6">
+                  <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white">
+                    Get Your Free Growth Snapshot
+                  </h3>
+                  <button
+                    onClick={() => setShowGrowthSnapshotForm(false)}
+                    className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+                    aria-label="Close modal"
+                  >
+                    <Icon name="x" className="w-6 h-6" />
+                  </button>
+                </div>
+                
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  We'll analyze your industry-specific bottlenecks and show you exactly where opportunities are slipping through the cracks.
                 </p>
                 
-                <div className="space-y-4 mb-8">
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600">📱</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Mobile-first design optimized for emergency calls</div>
-                      <div className="text-gray-600 dark:text-gray-400">Instant tap-to-call buttons and emergency contact forms</div>
-                    </div>
+                {/* Form */}
+                <div className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Industry
+                    </label>
+                    <select className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white">
+                      <option value="">Select your industry</option>
+                      <option value="home-services">Home Services</option>
+                      <option value="healthcare">Healthcare & Clinics</option>
+                      <option value="contractors">Contractors & Renovation</option>
+                      <option value="retail">Retail & Boutiques</option>
+                      <option value="professional">Professional Services</option>
+                      <option value="other">Other</option>
+                    </select>
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600">🗺️</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Local SEO domination with map pack rankings</div>
-                      <div className="text-gray-600 dark:text-gray-400">Rank #1 for "emergency plumber [city]" searches</div>
-                    </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Website URL
+                    </label>
+                    <input 
+                      type="url" 
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
+                      placeholder="https://yourbusiness.com"
+                    />
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600">🤖</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Smart reception + follow-up sequences to book jobs 24/7</div>
-                      <div className="text-gray-600 dark:text-gray-400">Automated texts and emails that keep prospects warm</div>
-                    </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Email
+                    </label>
+                    <input 
+                      type="email" 
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
+                      placeholder="your@email.com"
+                    />
                   </div>
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 bg-blue-100 dark:bg-blue-900/20 rounded-full flex items-center justify-center">
-                      <span className="text-blue-600">📊</span>
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900 dark:text-white">Lead dashboards that track calls, jobs, and ROI</div>
-                      <div className="text-gray-600 dark:text-gray-400">See exactly where your best jobs come from</div>
-                    </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                      Phone
+                    </label>
+                    <input 
+                      type="tel" 
+                      className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-primary-500 dark:bg-gray-700 dark:text-white"
+                      placeholder="(555) 123-4567"
+                    />
                   </div>
-                </div>
-
-                <Link href="/industries/plumbers" className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                  See Plumber Website Details
-                  <span>→</span>
-                </Link>
-              </div>
-            </SimpleScrollReveal>
-
-            <SimpleScrollReveal direction="right" delay={200}>
-              <div className="relative">
-                <div className="bg-gradient-to-br from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
-                  <h3 className="text-xl font-bold mb-6 text-center">Plumber Growth System Results</h3>
-                  <div className="grid grid-cols-2 gap-6">
-                    <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">67%</div>
-                      <div className="text-sm text-blue-100">More Booked Jobs</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">85%</div>
-                      <div className="text-sm text-blue-100">Faster Response Times</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">2-3x</div>
-                      <div className="text-sm text-blue-100">Higher Conversion Rates</div>
-                    </div>
-                    <div className="text-center">
-                      <div className="text-3xl font-bold mb-1">24/7</div>
-                      <div className="text-sm text-blue-100">Lead Capture</div>
-                    </div>
-                  </div>
-                </div>
-                
-                {/* Floating testimonial */}
-                <div className="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 rounded-lg p-4 shadow-lg max-w-xs">
-                  <div className="flex items-center gap-1 mb-2">
-                    {[1,2,3,4,5].map((star) => (
-                      <span key={star} className="text-yellow-400">⭐</span>
-                    ))}
-                  </div>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
-                    "Booked jobs increased 67% in 6 months. The automated follow-up system is a game-changer."
+                  <button 
+                    className="w-full bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors"
+                    onClick={() => setShowGrowthSnapshotForm(false)}
+                  >
+                    Get My Free Growth Snapshot →
+                  </button>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
+                    We'll only use your info to prepare your snapshot. No spam.
                   </p>
-                  <div className="text-xs text-gray-500 mt-1">- Dallas Plumbing Pro</div>
                 </div>
               </div>
-            </SimpleScrollReveal>
-          </div>
-        </div>
-      </section>
-
-      {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-br from-blue-900 to-slate-800 text-white">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              Ready to Transform Your Business?
-            </h2>
-            <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Every industry has unique challenges — and we've built systems to solve them. Book your free Growth Audit today and let's map out how we can help your business grow predictably.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <DarkButton href="/contact" className="bg-orange-600 hover:bg-orange-700">
-                Book My Free Growth Audit
-              </DarkButton>
-              <Link href="/checkup" className="inline-flex items-center gap-2 bg-white/10 hover:bg-white/20 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
-                View Our Work
-              </Link>
             </div>
           </div>
-        </div>
-      </section>
-    </div>
+        )}
+      </div>
+    </>
   );
 }

@@ -249,6 +249,8 @@ export default function Header() {
                 }
               />
 
+              <HeaderLink href="/solutions">Solutions</HeaderLink>
+
               <Dropdown
                 items={industriesDropdownItems}
                 width="250px"
@@ -487,6 +489,20 @@ export default function Header() {
                       ))}
                     </div>
                   </MobileExpandableMenu>
+
+                  {/* Solutions */}
+                  <div className="flex items-center justify-between w-full">
+                    <Link
+                      href="/solutions"
+                      className={`text-2xl block py-4 ${pathname === '/solutions' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Solutions
+                    </Link>
+                    {pathname === '/solutions' && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
 
                   {/* Industries */}
                   <MobileExpandableMenu

@@ -68,20 +68,18 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     template: '%s | Forte Web Designs',
-    default: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
+    default: 'Business Growth Systems (Lead Capture, Faster Quotes, Follow-ups) | Forte',
   },
-  description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, automation & AI, business systems integration, and growth systems for DFW businesses. Scale your business online today.",
+  description: "Buy outcomes, not AI. Forte installs simple systems—Lead Catcher™, Quote Builder™, Owner's Console™—that catch more opportunities, speed up quotes, and keep follow-ups on track. DFW-based, serving the U.S.",
   keywords: [
-    'web design DFW', 'web design Dallas', 'custom websites Dallas', 'Fort Worth web design', 'Dallas web development',
-    'SEO services Dallas', 'SEO optimization DFW', 'search engine optimization Dallas', 'local SEO Texas',
-    'Google Ads DFW', 'PPC advertising Dallas', 'pay per click marketing', 'digital advertising Texas',
-    'social media management Dallas', 'social media marketing DFW', 'Facebook advertising Dallas',
-    'responsive web design', 'mobile-friendly websites', 'fast loading websites', 'website optimization',
-    'ecommerce websites Dallas', 'online stores DFW', 'business websites Texas', 'professional web design',
-    'website redesign Dallas', 'web design agency DFW', 'digital marketing Dallas', 'online marketing Texas',
-    'website maintenance Dallas', 'web hosting Texas', 'domain registration DFW', 'SSL certificates Dallas',
-    'conversion optimization', 'lead generation websites', 'sales funnel design', 'landing page optimization',
-    'forte web designs', 'small business websites Dallas', 'startup web design DFW', 'nonprofit websites Texas'
+    'business growth systems', 'lead capture system', 'quote builder software', 'lead management DFW',
+    'business automation Dallas', 'lead tracking system', 'quote management software', 'pipeline management',
+    'missed call recovery', 'lead follow up automation', 'business systems integration', 'growth tracking',
+    'lead catcher software', 'quote builder tool', 'owners console dashboard', 'business growth tools',
+    'DFW business systems', 'Dallas lead generation', 'Fort Worth business automation', 'Texas growth systems',
+    'small business automation', 'contractor lead system', 'service business growth', 'lead nurturing automation',
+    'quote tracking software', 'business pipeline management', 'growth snapshot analysis', 'forte web designs',
+    'business growth consulting DFW', 'lead conversion optimization', 'sales process automation', 'customer follow-up system'
   ],
   creator: 'Forte Web Designs',
   publisher: 'Forte Web Designs',
@@ -97,14 +95,14 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://fortewebdesigns.com',
-    title: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
-    description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, automation & AI, business systems integration, and growth systems for DFW businesses. Scale your business online today.",
+    title: 'Business Growth Systems (Lead Capture, Faster Quotes, Follow-ups) | Forte',
+    description: "Buy outcomes, not AI. Forte installs simple systems—Lead Catcher™, Quote Builder™, Owner's Console™—that catch more opportunities, speed up quotes, and keep follow-ups on track. DFW-based, serving the U.S.",
     siteName: 'Forte Web Designs',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Professional Web Design DFW | Custom Websites Dallas Fort Worth | Forte Web Designs',
-    description: "Leading web design company serving Dallas Fort Worth metroplex. Custom-coded websites, automation & AI, business systems integration, and growth systems for DFW businesses. Scale your business online today.",
+    title: 'Business Growth Systems (Lead Capture, Faster Quotes, Follow-ups) | Forte',
+    description: "Buy outcomes, not AI. Forte installs simple systems—Lead Catcher™, Quote Builder™, Owner's Console™—that catch more opportunities, speed up quotes, and keep follow-ups on track. DFW-based, serving the U.S.",
   },
 };
 
