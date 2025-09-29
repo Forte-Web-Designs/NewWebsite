@@ -528,50 +528,86 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Support Layers */}
+        {/* Core Systems That Power Your Growth */}
         <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-16">
                 <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
-                  These keep your system humming
+                  Core Systems That Power Your Growth
                 </h2>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center">
-                  <Icon name="services" className="w-12 h-12 text-primary-600 mx-auto mb-6" />
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
+                  <div className="text-3xl mb-4">🌐</div>
+                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
                     Web Design (Foundation)
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Give customers something to say yes to.
+                  <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                    Give customers a reason to say yes.
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                    Your site isn't just a brochure — it's the entry point of your growth system. A fast, custom-coded website builds trust instantly and converts clicks into calls.
+                  </p>
+                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    📈 <strong>Outcome:</strong> More inquiries, higher trust, stronger first impressions.
                   </p>
                 </div>
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center">
-                  <Icon name="search" className="w-12 h-12 text-primary-600 mx-auto mb-6" />
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
-                    SEO (Demand)
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
+                  <div className="text-3xl mb-4">🤖</div>
+                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                    Automation & AI (Efficiency)
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Win searches that bring real jobs.
+                  <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                    Work smarter, not harder.
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                    From instant replies to follow-up reminders, automation ensures no lead slips through the cracks. AI systems handle the busywork so you can focus on growth.
+                  </p>
+                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    📈 <strong>Outcome:</strong> Faster responses, more booked jobs, hours of time saved every week.
                   </p>
                 </div>
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center">
-                  <Icon name="clean" className="w-12 h-12 text-primary-600 mx-auto mb-6" />
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
+                  <div className="text-3xl mb-4">📊</div>
+                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                    Dashboards & Scaling (Clarity)
+                  </h3>
+                  <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                    Know exactly what's working — and what's not.
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                    One clear view of leads, quotes, and performance helps you scale without chaos. Spot bottlenecks and fix them before they cost you money.
+                  </p>
+                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    📈 <strong>Outcome:</strong> Clearer decisions, accountability, and steady growth at scale.
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
+                  <div className="text-3xl mb-4">⚙️</div>
+                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
                     Forte Care™ (Upkeep)
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    Stay updated, secure, and competitive.
+                  <h4 className="font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                    Stay fast, secure, and ahead of competitors.
+                  </h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                    Your system doesn't stall — it compounds. With Forte Care™, we keep your site and automations optimized, secure, and updated so they continue driving revenue month after month.
+                  </p>
+                  <p className="text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    📈 <strong>Outcome:</strong> Zero downtime, steady improvements, and peace of mind while you grow.
                   </p>
                 </div>
               </SimpleAnimatedCard>
