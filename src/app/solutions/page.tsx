@@ -22,19 +22,19 @@ export default function SolutionsPage() {
   // Solutions data
   const solutions = [
     {
-      icon: "target",
+      emoji: "🎯",
       title: "Lead & Intake",
       subtitle: "Turn missed calls and form fills into booked jobs.",
       description: "Most businesses lose work not because of skill — but because opportunities slip through the cracks.",
       bullets: [
         "Instant text-back for missed calls",
-        "Auto-responses for web forms & chat", 
+        "Auto-responses for web forms & chat",
         "Smart routing to the right team member"
       ],
       results: "Faster response times, fewer missed leads, and a first-touch rate that builds trust immediately."
     },
     {
-      icon: "file-text",
+      emoji: "📑",
       title: "Faster Quotes & Sales Ops",
       subtitle: "Send quotes same-day. Get answers faster.",
       description: "Waiting days to get back with a quote kills momentum. We help you speed it up.",
@@ -46,9 +46,9 @@ export default function SolutionsPage() {
       results: "Faster turnaround, more replies, and higher close rates."
     },
     {
-      icon: "repeat",
+      emoji: "🔁",
       title: "Follow-Ups & Retention",
-      subtitle: "Stay top-of-mind, win back lost revenue.",
+      subtitle: "Stay top-of-mind. Win back lost revenue.",
       description: "Most businesses stop following up after one attempt. That's where opportunities get wasted.",
       bullets: [
         "Automated reminders for no-shows",
@@ -58,10 +58,10 @@ export default function SolutionsPage() {
       results: "Lower no-show rates, more reviews, and repeat customers without chasing."
     },
     {
-      icon: "monitor",
+      emoji: "📊",
       title: "Data & Owner Dashboards",
       subtitle: "Clarity on what's working — and what's stuck.",
-      description: "Business owners don't need more spreadsheets, they need answers at a glance.",
+      description: "Business owners don't need more spreadsheets. They need answers at a glance.",
       bullets: [
         "One dashboard for leads, quotes, and pipeline",
         "Weekly scorecards with key metrics",
@@ -70,7 +70,7 @@ export default function SolutionsPage() {
       results: "Clearer forecasting, faster decisions, and accountability without micromanaging."
     },
     {
-      icon: "search",
+      emoji: "🔍",
       title: "Marketing & SEO Automations",
       subtitle: "Local visibility that turns into booked jobs.",
       description: "Your growth system works best when people can actually find you.",
@@ -82,7 +82,7 @@ export default function SolutionsPage() {
       results: "Higher search visibility, lower cost per lead, and more inbound inquiries."
     },
     {
-      icon: "settings",
+      emoji: "⚙️",
       title: "Integrations & Operations",
       subtitle: "Fewer manual steps. Smoother handoffs.",
       description: "Every dropped ball between staff, systems, or software is lost time and lost revenue.",
@@ -141,9 +141,17 @@ export default function SolutionsPage() {
                   <p className="mb-4">
                     At Forte, we help small service businesses stop losing opportunities and start growing steadily.
                   </p>
-                  <p>
-                    Our solutions focus on six outcome areas — each designed to fix a bottleneck, free up your time, and drive measurable results.
+                  <p className="mb-6 font-medium text-gray-700 dark:text-gray-300">
+                    Catch every opportunity. Respond faster. Win more jobs.
                   </p>
+                  <div className="text-center mb-8">
+                    <DarkButton 
+                      onClick={() => setShowGrowthSnapshotForm(true)}
+                      className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold"
+                    >
+                      👉 Get My Free Growth Snapshot →
+                    </DarkButton>
+                  </div>
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -153,13 +161,24 @@ export default function SolutionsPage() {
         {/* Solutions Grid */}
         <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4">
+            <SimpleScrollReveal>
+              <div className="text-center max-w-4xl mx-auto mb-16">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                  Our Solutions: Fix the Bottlenecks That Cost You Growth
+                </h2>
+                <p className="text-xl md:text-2xl text-gray-600 dark:text-gray-300">
+                  Growth doesn't come from working harder. It comes from eliminating the gaps where opportunities leak out.
+                  Forte's Growth Systems focus on six outcome areas — each designed to free up your time, remove friction, and drive measurable results.
+                </p>
+              </div>
+            </SimpleScrollReveal>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {solutions.map((solution, index) => (
                 <SimpleAnimatedCard key={index}>
                   <div className="bg-white dark:bg-gray-700 rounded-xl p-8 shadow-lg hover:shadow-xl transition-shadow h-full">
-                    {/* Icon */}
+                    {/* Emoji Icon */}
                     <div className="mb-6">
-                      <Icon name={solution.icon} className="w-16 h-16 text-primary-600" />
+                      <span className="text-5xl">{solution.emoji}</span>
                     </div>
                     
                     {/* Title */}
@@ -189,22 +208,50 @@ export default function SolutionsPage() {
                     
                     {/* Results */}
                     <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-4">
-                      <div className="flex items-start gap-3">
-                        <Icon name="trending-up" className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
-                        <div>
-                          <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-1">
-                            📈 Results:
-                          </h4>
-                          <p className="text-sm text-gray-700 dark:text-gray-300">
-                            {solution.results}
-                          </p>
-                        </div>
+                      <div>
+                        <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
+                          📈 Results:
+                        </h4>
+                        <p className="text-sm text-gray-700 dark:text-gray-300">
+                          {solution.results}
+                        </p>
                       </div>
                     </div>
                   </div>
                 </SimpleAnimatedCard>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Why It Works Section */}
+        <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4">
+            <SimpleScrollReveal>
+              <div className="text-center max-w-4xl mx-auto">
+                <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-8">
+                  Why It Works
+                </h2>
+                <div className="grid md:grid-cols-2 gap-12 text-left">
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-semibold text-red-600 dark:text-red-400">
+                      The old way =
+                    </h3>
+                    <p className="text-lg text-gray-600 dark:text-gray-300">
+                      multiple vendors, disconnected tools, endless spreadsheets.
+                    </p>
+                  </div>
+                  <div className="space-y-4">
+                    <h3 className="text-xl font-semibold text-green-600 dark:text-green-400">
+                      The Forte way =
+                    </h3>
+                    <p className="text-lg text-gray-600 dark:text-gray-300">
+                      one connected system, one dashboard, one team making it all work together.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </SimpleScrollReveal>
           </div>
         </section>
 
@@ -216,9 +263,15 @@ export default function SolutionsPage() {
                 <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
                   Ready to see where your biggest opportunities are slipping?
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
-                  Start with a <strong>free Growth Snapshot</strong> — we'll review your missed calls, quote delays, and follow-up gaps, then show you two quick fixes.
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                  Start with a free Growth Snapshot — we'll review your missed calls, quote delays, and follow-up gaps, then show you two quick fixes.
                 </p>
+                
+                <div className="space-y-2 mb-8">
+                  <p className="text-sm text-gray-600 dark:text-gray-400">✅ 100% free. No meeting required.</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">✅ 1-page PDF + 2-min Loom.</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">✅ Works with your tools (no rip-and-replace).</p>
+                </div>
 
                 <DarkButton 
                   onClick={() => {
@@ -227,7 +280,7 @@ export default function SolutionsPage() {
                   }}
                   className="px-8 py-4 text-lg"
                 >
-                  👉 Get My Free Growth Snapshot
+                  👉 Get My Free Growth Snapshot →
                 </DarkButton>
               </SimpleScrollReveal>
             </div>
@@ -245,10 +298,10 @@ export default function SolutionsPage() {
                   </h3>
                   <button
                     onClick={() => setShowGrowthSnapshotForm(false)}
-                    className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200"
+                    className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 text-2xl"
                     aria-label="Close modal"
                   >
-                    <Icon name="x" className="w-6 h-6" />
+                    ✕
                   </button>
                 </div>
                 
