@@ -91,20 +91,29 @@ export default function Home() {
   const recentOutcomes = [
     {
       company: "Riverside Clinic",
-      outcome: "2.5× more inquiries",
-      description: "after faster replies",
+      subtitle: "Faster Patient Inquiries",
+      challenge: "New patient requests were being missed or delayed.",
+      solution: "Automated intake replies + booking reminders.",
+      outcome: "2.5× more patient inquiries",
+      details: "per month after faster replies and easier scheduling.",
       anchor: "riverside-clinic"
     },
     {
       company: "ProHome Services", 
-      outcome: "3-day → same-day",
-      description: "quotes; +12% close rate",
+      subtitle: "Faster Quotes, More Deals",
+      challenge: "Quotes took 3+ days, losing momentum.",
+      solution: "Same-day quote automation with follow-up nudges.",
+      outcome: "3-day → same-day turnaround",
+      details: "with a +12% higher close rate in 90 days.",
       anchor: "prohome-services"
     },
     {
       company: "Elite Boutique",
-      outcome: "$18k in 6 months",
-      description: "from follow-ups",
+      subtitle: "Revenue From Follow-Ups", 
+      challenge: "Customers browsed but didn't return.",
+      solution: "Automated follow-ups + review requests.",
+      outcome: "$18k in additional revenue",
+      details: "in 6 months, plus a steady stream of new reviews.",
       anchor: "elite-boutique"
     }
   ];
@@ -437,16 +446,37 @@ export default function Home() {
               {recentOutcomes.map((outcome, index) => (
                 <SimpleAnimatedCard key={index}>
                   <Link href={`/results#${outcome.anchor}`}>
-                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-xl p-6 sm:p-8 text-center hover:shadow-lg transition-shadow group h-full">
-                      <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
-                        {outcome.company}
-                      </h3>
-                      <div className="text-2xl sm:text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2 group-hover:scale-105 transition-transform">
-                        {outcome.outcome}
+                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow group h-full text-left">
+                      <div className="mb-4">
+                        <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-1">
+                          {outcome.company}
+                        </h3>
+                        <p className="text-sm font-medium text-primary-600 dark:text-primary-400">
+                          {outcome.subtitle}
+                        </p>
                       </div>
-                      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
-                        {outcome.description}
-                      </p>
+                      
+                      <div className="space-y-3 text-sm">
+                        <div>
+                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Challenge:</span>
+                          <p className="text-gray-600 dark:text-gray-400 mt-1">{outcome.challenge}</p>
+                        </div>
+                        
+                        <div>
+                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Solution:</span>
+                          <p className="text-gray-600 dark:text-gray-400 mt-1">{outcome.solution}</p>
+                        </div>
+                        
+                        <div>
+                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Outcome:</span>
+                          <p className="text-gray-900 dark:text-white mt-1">
+                            <span className="font-bold text-primary-600 dark:text-primary-400 group-hover:scale-105 transition-transform inline-block">
+                              {outcome.outcome}
+                            </span>{" "}
+                            {outcome.details}
+                          </p>
+                        </div>
+                      </div>
                     </div>
                   </Link>
                 </SimpleAnimatedCard>
@@ -480,9 +510,9 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full">
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center h-full">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🌐</div>
                   <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                     Web Design (Foundation)
@@ -500,7 +530,7 @@ export default function Home() {
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center h-full">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🤖</div>
                   <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                     Automation & AI (Efficiency)
@@ -518,7 +548,7 @@ export default function Home() {
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center h-full">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">📊</div>
                   <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                     Dashboards & Scaling (Clarity)
@@ -536,7 +566,7 @@ export default function Home() {
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center h-full">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">⚙️</div>
                   <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                     Forte Care™ (Upkeep)
