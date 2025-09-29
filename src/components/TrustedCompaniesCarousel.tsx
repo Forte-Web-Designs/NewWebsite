@@ -104,7 +104,7 @@ const trustedCompanies = [
 
 export default function TrustedCompaniesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemWidth = 240; // Width of each logo container including gap
+  const itemWidth = 220; // Width of each logo container including gap
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -133,7 +133,7 @@ export default function TrustedCompaniesCarousel() {
         {/* Continuous scrolling carousel */}
         <div className="overflow-hidden relative">
           <div 
-            className="flex items-center gap-8 lg:gap-12 transition-transform duration-1000 ease-in-out"
+            className="flex items-center gap-6 lg:gap-8 transition-transform duration-1000 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * itemWidth}px)`,
               width: `${trustedCompanies.length * 2 * itemWidth}px`,
@@ -143,15 +143,15 @@ export default function TrustedCompaniesCarousel() {
             {[...trustedCompanies, ...trustedCompanies].map((company, index) => (
               <div
                 key={`${company.id}-${index}`}
-                className="flex items-center justify-center h-28 w-52 lg:w-56 flex-shrink-0 opacity-90 hover:opacity-100 transition-all duration-300 p-4"
-                style={{ minWidth: `${itemWidth - 24}px` }}
+                className="flex items-center justify-center h-24 w-48 lg:h-28 lg:w-56 flex-shrink-0 opacity-90 hover:opacity-100 transition-all duration-300 p-3"
+                style={{ minWidth: `${itemWidth - 28}px` }}
               >
                 <OptimizedImage
                   src={company.logo}
                   alt={company.alt}
-                  width={224}
-                  height={112}
-                  className="w-full h-full object-contain"
+                  width={200}
+                  height={96}
+                  className="max-w-full max-h-full object-contain"
                   loading="lazy"
                 />
               </div>
