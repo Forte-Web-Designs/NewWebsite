@@ -98,7 +98,7 @@ export default function TrustedCompaniesCarousel() {
     <div className="bg-white dark:bg-gray-800 py-12">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+          <h3 className="text-3xl lg:text-4xl font-bold text-transparent bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 bg-clip-text mb-2">
             Trusted by 25+ Growing Businesses Nationwide
           </h3>
         </div>

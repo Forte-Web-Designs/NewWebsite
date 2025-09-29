@@ -126,19 +126,7 @@ export default function Header() {
     { label: 'View All Services', href: '/services' }
   ];
 
-  // Industry-specific navigation
-  const industriesDropdownItems = [
-    { label: 'Plumber Websites', href: '/industries/plumbers' },
-    { label: 'Restaurant Websites', href: '/industries/restaurants' },
-    { label: 'Healthcare Websites', href: '/industries/healthcare' },
-    { label: 'Landscaper Websites', href: '/industries/landscapers' },
-    { label: 'Handyman Services', href: '/industries/handyman' },
-    { label: 'Painter Websites', href: '/industries/painters' },
-    { label: 'Construction Websites', href: '/industries/construction' },
-    { label: 'HVAC Websites', href: '/industries/hvac' },
-    { label: 'Electrician Websites', href: '/industries/electricians' },
-    { label: 'All Industries', href: '/industries' }
-  ];
+
 
   // Locations dropdown - Multi-level hierarchical structure
   const locationsDropdownItems = [
@@ -182,7 +170,6 @@ export default function Header() {
   const aboutDropdownItems = [
     { label: 'About Us', href: '/about' },
     { label: 'Our Work', href: '/about/work' },
-    { label: 'Case Studies', href: '/case-studies' },
     { label: 'Blog', href: '/blog' }
   ];
 
@@ -251,15 +238,7 @@ export default function Header() {
 
               <HeaderLink href="/solutions">Solutions</HeaderLink>
 
-              <Dropdown
-                items={industriesDropdownItems}
-                width="250px"
-                trigger={
-                  <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/industries" showIcon={true}>Industries</HeaderLink>
-                  </div>
-                }
-              />
+              <HeaderLink href="/case-studies">Case Studies</HeaderLink>
 
               {/* Locations Dropdown */}
               <MultiLevelDropdown
@@ -504,29 +483,21 @@ export default function Header() {
                     )}
                   </div>
 
-                  {/* Industries */}
-                  <MobileExpandableMenu
-                    title="Industries"
-                    isActive={pathname.startsWith('/industries')}
-                  >
-                    <div className="pl-6 space-y-3">
-                      {industriesDropdownItems.map((item) => (
-                        <div key={item.href} className="flex items-center justify-between w-full">
-                          <Link
-                            href={item.href}
-                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
-                              }`}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {item.label}
-                          </Link>
-                          {pathname === item.href && (
-                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </MobileExpandableMenu>
+                  {/* Case Studies */}
+                  <div className="flex items-center justify-between w-full">
+                    <Link
+                      href="/case-studies"
+                      className={`text-2xl block py-4 ${pathname === '/case-studies' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Case Studies
+                    </Link>
+                    {pathname === '/case-studies' && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
+
+
 
                   {/* Locations */}
                   <MobileExpandableMenu
@@ -784,7 +755,7 @@ export default function Header() {
                   {/* About Us */}
                   <MobileExpandableMenu
                     title="About Us"
-                    isActive={pathname.startsWith('/about') || pathname.startsWith('/case-studies') || pathname.startsWith('/blog')}
+                    isActive={pathname.startsWith('/about') || pathname.startsWith('/blog')}
                   >
                     <div className="pl-6 space-y-3">
                       {aboutDropdownItems.map((item) => (
