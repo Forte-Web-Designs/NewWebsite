@@ -99,11 +99,8 @@ export default function TrustedCompaniesCarousel() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8">
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-            Trusted by Leading Organizations
+            Trusted by 25+ Growing Businesses Nationwide
           </h3>
-          <p className="text-sm text-gray-600 dark:text-gray-400">
-            Proud to serve businesses and organizations across Texas and beyond
-          </p>
         </div>
 
         {/* Continuous scrolling carousel */}

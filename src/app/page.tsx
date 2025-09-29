@@ -60,7 +60,7 @@ export default function Home() {
       link: "/services/automation-pipelines"
     },
     {
-      icon: "pricing",
+      icon: "dollar",
       title: "Performance & Analytics Dashboards",
       subtitle: "Track ROI, conversion rates, and pipeline metrics in a clear, owner-friendly dashboard — no spreadsheets required.",
       link: "/services/analytics-dashboards"
@@ -85,39 +85,7 @@ export default function Home() {
     }
   ];
 
-  // Testimonials data
-  const testimonials = [
-    {
-      quote: "Cut response time from 4 hours to 15 minutes",
-      industry: "Home Services",
-      company: "DFW Roofing"
-    },
-    {
-      quote: "Same-day quotes increased our close rate 15%",
-      industry: "HVAC",
-      company: "Climate Pro"
-    },
-    {
-      quote: "Finally see where every lead stands",
-      industry: "Plumbing",
-      company: "Lone Star Plumbing"
-    },
-    {
-      quote: "Automated follow-ups recovered $18k in 6 months",
-      industry: "Retail",
-      company: "Elite Boutique"
-    },
-    {
-      quote: "No more missed opportunities from busy phones",
-      industry: "Healthcare",
-      company: "Riverside Clinic"
-    },
-    {
-      quote: "Our Google reviews finally started flowing",
-      industry: "Home Services",
-      company: "ProHome Services"
-    }
-  ];
+
 
   // Recent outcomes data
   const recentOutcomes = [
@@ -249,13 +217,16 @@ export default function Home() {
                   >
                     Get My Free Growth Snapshot →
                   </DarkButton>
-                  <LightButton 
+                  <a 
                     href="#how-it-works"
                     onClick={() => handleCTAClick('secondary', 'hero')}
-                    className="px-8 py-4 text-lg"
+                    className="inline-flex items-center px-8 py-4 text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
                     See How It Works
-                  </LightButton>
+                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -302,54 +273,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Social Proof Band */}
-        <section className="py-16 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-4">
-            <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12">
-                <h2 className="font-display font-bold text-2xl lg:text-3xl text-gray-900 dark:text-white mb-4">
-                  Trusted by 25+ Growing Businesses Nationwide
-                </h2>
-                <div className="flex items-center justify-center gap-4 text-yellow-400 mb-8">
-                  <div className="flex">
-                    {[...Array(5)].map((_, i) => (
-                      <Icon key={i} name="star" className="w-5 h-5 fill-current" />
-                    ))}
-                  </div>
-                  <span className="text-gray-600 dark:text-gray-400 font-semibold">
-                    4.9 ★ on Google • Verified Reviews
-                  </span>
-                </div>
-              </div>
-            </SimpleScrollReveal>
 
-            {/* Rotating Testimonials */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-              {testimonials.map((testimonial, index) => (
-                <SimpleAnimatedCard key={index}>
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center">
-                    <p className="text-gray-700 dark:text-gray-300 font-medium mb-3">
-                      "{testimonial.quote}"
-                    </p>
-                    <div className="text-sm text-gray-500 dark:text-gray-400">
-                      <span className="font-semibold">{testimonial.company}</span>
-                      <span className="mx-2">•</span>
-                      <span>{testimonial.industry}</span>
-                    </div>
-                  </div>
-                </SimpleAnimatedCard>
-              ))}
-            </div>
-
-            <SimpleScrollReveal direction="up">
-              <div className="text-center">
-                <LightButton href="/results" className="px-6 py-3">
-                  See all reviews →
-                </LightButton>
-              </div>
-            </SimpleScrollReveal>
-          </div>
-        </section>
 
         {/* Trusted Companies Carousel */}
         <TrustedCompaniesCarousel />
@@ -520,9 +444,15 @@ export default function Home() {
 
             <SimpleScrollReveal direction="up">
               <div className="text-center">
-                <LightButton href="/results" className="px-8 py-3">
-                  See All Results →
-                </LightButton>
+                <a 
+                  href="/results"
+                  className="inline-flex items-center px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  See All Results
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </SimpleScrollReveal>
           </div>
@@ -615,9 +545,15 @@ export default function Home() {
 
             <SimpleScrollReveal direction="up">
               <div className="text-center">
-                <LightButton href="/pricing" className="px-8 py-3">
-                  See Pricing →
-                </LightButton>
+                <a 
+                  href="/pricing"
+                  className="inline-flex items-center px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  See Pricing
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </SimpleScrollReveal>
           </div>
@@ -647,9 +583,15 @@ export default function Home() {
                   </div>
                 </div>
 
-                <LightButton href="/pricing" className="px-8 py-4 text-lg">
-                  See Pricing →
-                </LightButton>
+                <a 
+                  href="/pricing"
+                  className="inline-flex items-center px-8 py-4 text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  See Pricing
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </SimpleScrollReveal>
             </div>
           </div>
@@ -673,13 +615,16 @@ export default function Home() {
                 >
                   Get a Free Growth Snapshot
                 </button>
-                <LightButton 
+                <a 
                   href="/contact"
                   onClick={() => handleCTAClick('secondary', 'closing-cta')}
-                  className="px-8 py-4 text-lg border-white text-white hover:bg-white hover:text-primary-600"
+                  className="inline-flex items-center px-8 py-4 text-lg border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 >
                   Talk to Us
-                </LightButton>
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
               </div>
             </SimpleScrollReveal>
           </div>
