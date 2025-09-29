@@ -1,0 +1,48 @@
+<svg viewBox="0 0 600 300" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="600" height="300" fill="#FFFFFF"/>
+  
+  <!-- Circular logo -->
+  <g transform="translate(150, 150)">
+    <!-- Outer circle -->
+    <circle cx="0" cy="0" r="80" fill="none" stroke="#4285F4" stroke-width="4"/>
+    
+    <!-- Inner figures -->
+    <g transform="translate(0, 0)">
+      <!-- Green figure -->
+      <g transform="translate(-20, 0)">
+        <circle cx="0" cy="-15" r="8" fill="#34A853"/>
+        <path d="M-8 -5 Q0 -10 8 -5 L8 15 Q0 20 -8 15 Z" fill="#34A853"/>
+        <line x1="-15" y1="5" x2="-25" y2="-5" stroke="#34A853" stroke-width="3" stroke-linecap="round"/>
+        <line x1="15" y1="5" x2="25" y2="-5" stroke="#34A853" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      
+      <!-- Blue figure -->
+      <g transform="translate(20, 0)">
+        <circle cx="0" cy="-15" r="8" fill="#4285F4"/>
+        <path d="M-8 -5 Q0 -10 8 -5 L8 15 Q0 20 -8 15 Z" fill="#4285F4"/>
+        <line x1="-15" y1="5" x2="-25" y2="-5" stroke="#4285F4" stroke-width="3" stroke-linecap="round"/>
+        <line x1="15" y1="5" x2="25" y2="-5" stroke="#4285F4" stroke-width="3" stroke-linecap="round"/>
+      </g>
+      
+      <!-- Pink figure (smaller, child) -->
+      <g transform="translate(0, 25)">
+        <circle cx="0" cy="-10" r="6" fill="#EA4335"/>
+        <path d="M-6 -2 Q0 -6 6 -2 L6 10 Q0 14 -6 10 Z" fill="#EA4335"/>
+        <line x1="-10" y1="2" x2="-15" y2="-3" stroke="#EA4335" stroke-width="2" stroke-linecap="round"/>
+        <line x1="10" y1="2" x2="15" y2="-3" stroke="#EA4335" stroke-width="2" stroke-linecap="round"/>
+      </g>
+    </g>
+    
+    <!-- Star above -->
+    <path d="M0 -60 L5 -45 L20 -45 L8 -35 L13 -20 L0 -30 L-13 -20 L-8 -35 L-20 -45 L-5 -45 Z" fill="#FBBC04"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="350" y="130" font-family="Arial, sans-serif" font-size="36" fill="#4285F4" font-weight="bold">
+    HEALTHY
+  </text>
+  <text x="350" y="170" font-family="Arial, sans-serif" font-size="36" fill="#EA4335" font-weight="bold">
+    PARENTING
+  </text>
+</svg>

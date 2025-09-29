@@ -1,0 +1,39 @@
+<svg viewBox="0 0 500 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Orange background -->
+  <rect width="500" height="400" fill="#FFD700"/>
+  
+  <!-- Kettlebell design -->
+  <g transform="translate(250, 200)">
+    <!-- Main kettlebell body -->
+    <circle cx="0" cy="20" r="60" fill="#000"/>
+    
+    <!-- Handle -->
+    <path d="M-25 -30 Q-25 -50 0 -50 Q25 -50 25 -30" 
+          fill="none" stroke="#000" stroke-width="15" stroke-linecap="round"/>
+    
+    <!-- Musical note integration -->
+    <g transform="translate(0, 20)">
+      <!-- Note stem -->
+      <line x1="20" y1="-10" x2="20" y2="-40" stroke="#FFD700" stroke-width="4"/>
+      <!-- Note head -->
+      <ellipse cx="15" cy="-10" rx="8" ry="6" fill="#FFD700"/>
+      <!-- Musical symbol -->
+      <path d="M20 -40 Q30 -35 25 -25" fill="none" stroke="#FFD700" stroke-width="3"/>
+    </g>
+    
+    <!-- Decorative elements -->
+    <circle cx="-35" cy="0" r="8" fill="#FFD700"/>
+    <circle cx="35" cy="10" r="6" fill="#FFD700"/>
+    <circle cx="-20" cy="40" r="5" fill="#FFD700"/>
+  </g>
+  
+  <!-- Company name -->
+  <text x="250" y="320" font-family="Arial Black, sans-serif" font-size="42" fill="#000" text-anchor="middle" font-weight="900">
+    MusicGym
+  </text>
+  
+  <!-- Tagline -->
+  <text x="250" y="350" font-family="Arial, sans-serif" font-size="16" fill="#000" text-anchor="middle">
+    LET'S BE FUNFIT
+  </text>
+</svg>

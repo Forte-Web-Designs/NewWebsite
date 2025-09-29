@@ -63,6 +63,42 @@ const trustedCompanies = [
     name: 'Pirelli',
     logo: '/images/trusted-companies/pirelli-2.svg',
     alt: 'Pirelli'
+  },
+  {
+    id: 11,
+    name: 'Gibbon',
+    logo: '/images/trusted-companies/gibbon-logo.svg',
+    alt: 'Gibbon - Born to Rock Force to Work'
+  },
+  {
+    id: 12,
+    name: 'Laurelwood Public House',
+    logo: '/images/trusted-companies/laurelwood-logo.svg',
+    alt: 'Laurelwood Public House & Brewery'
+  },
+  {
+    id: 13,
+    name: 'Hard Hitting Bail Bonds',
+    logo: '/images/trusted-companies/hard-hitting-bail-bonds-logo.svg',
+    alt: 'Hard Hitting New Britain Bail Bonds'
+  },
+  {
+    id: 14,
+    name: 'Healthy Parenting',
+    logo: '/images/trusted-companies/healthy-parenting-logo.svg',
+    alt: 'Healthy Parenting'
+  },
+  {
+    id: 15,
+    name: 'Easy Exit Homes',
+    logo: '/images/trusted-companies/easy-exit-homes-logo.svg',
+    alt: 'Easy Exit Homes - Sell Your Home in a Flash'
+  },
+  {
+    id: 16,
+    name: 'MusicGym',
+    logo: '/images/trusted-companies/music-gym-logo.svg',
+    alt: 'MusicGym - Let\'s Be Funfit'
   }
 ];
 
