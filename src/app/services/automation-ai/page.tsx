@@ -111,28 +111,28 @@ export default function AutomationAIPage() {
       step: "1",
       title: "Snapshot & Plan",
       subtitle: "(free)",
-      description: "We map the 3–4 biggest leaks and give you two quick wins.",
+      description: "Identify 3–4 leaks + 2 quick fixes",
       lift: "Immediate visibility into lost opportunities"
     },
     {
       step: "2", 
       title: "Pilot & Prove",
       subtitle: "(2–4 weeks)",
-      description: "We deploy a focused pilot and measure the lift.",
+      description: "Deploy focused pilot, measure lift",
       lift: "Faster response times; more booked consultations"
     },
     {
       step: "3",
       title: "Scale & Instrument", 
       subtitle: "(4–8 weeks)",
-      description: "We extend automations across your entire pipeline.",
+      description: "Expand across intake, quotes, retention, dashboards",
       lift: "Same-day quotes; clearer pipeline visibility"
     },
     {
       step: "4",
       title: "Operate & Improve",
       subtitle: "(ongoing)",
-      description: "Forte Care™ keeps everything optimized as you grow.",
+      description: "Forte Care™ keeps systems secure, tuned, and evolving",
       lift: "Continuous improvement; steady growth at scale"
     }
   ];
@@ -205,7 +205,11 @@ export default function AutomationAIPage() {
     },
     {
       question: "Who owns what?",
-      answer: "You own your data and your website. Custom automations and workflows transfer to you after 12 months of service."
+      answer: "Clients own systems after 12 months minimum. You always own your data and website."
+    },
+    {
+      question: "Are unlimited site edits included?",
+      answer: "Yes, with Forte Care™ you get unlimited site edits, monitoring, updates, and ongoing improvements."
     }
   ];
 
@@ -217,38 +221,31 @@ export default function AutomationAIPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center max-w-5xl mx-auto">
               <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white mb-6">
-                Automation & AI — Systems that save time and drive revenue
+                Automation & AI — Systems that Save Time and Drive Revenue
               </h1>
-              
-              <h2 className="text-2xl md:text-3xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 font-semibold">
-                We don't sell bots. We fix bottlenecks.
-              </h2>
 
               <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto">
-                Most businesses don't lose deals for lack of skill—they lose them to slow replies, manual steps, and unclear handoffs. Our Automation & AI systems fix those failure points so you respond faster, follow up consistently, and keep your pipeline moving.
+                Most businesses don't lose deals because of skill. They lose them to slow replies, manual steps, and unclear handoffs. Our systems fix those failure points so you respond faster, follow up consistently, and keep your pipeline moving.
               </p>
 
               {/* CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
                 <DarkButton href="/growth-snapshot" className="px-8 py-4 text-lg">
-                  Get My Free Growth Snapshot →
+                  Free Growth Snapshot →
                 </DarkButton>
-                <LightButton href="/pricing" className="px-8 py-4 text-lg">
-                  See Pricing →
-                </LightButton>
               </div>
             </div>
           </SimpleScrollReveal>
         </div>
       </section>
 
-      {/* Outcomes Section */}
+      {/* Expected Outcomes Section */}
       <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <SimpleScrollReveal direction="up">
             <div className="text-center max-w-3xl mx-auto mb-16">
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
-                Outcomes you can expect
+                Expected outcomes (quick wins)
               </h2>
               
               <div className="grid md:grid-cols-2 gap-6 text-left">
@@ -269,19 +266,13 @@ export default function AutomationAIPage() {
                 <div className="space-y-4">
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700 dark:text-gray-300">Clean pipeline visibility and fewer manual steps</span>
+                    <span className="text-gray-700 dark:text-gray-300">Clear pipeline visibility</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
                     <span className="text-gray-700 dark:text-gray-300">Hours saved weekly across your team</span>
                   </div>
                 </div>
-              </div>
-              
-              <div className="mt-8">
-                <LightButton href="/growth-snapshot" className="px-6 py-3">
-                  Start with a free Growth Snapshot →
-                </LightButton>
               </div>
             </div>
           </SimpleScrollReveal>
@@ -294,7 +285,7 @@ export default function AutomationAIPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                What we build (in plain English)
+                What we build (plain English, with results)
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -325,53 +316,61 @@ export default function AutomationAIPage() {
         </div>
       </section>
 
-      {/* AI Agents Section */}
+      {/* Technology Deep Dive Section */}
       <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
-                AI Agents — Practical building blocks for real work
+                Technology deep dive (optional)
               </h2>
               
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
-                Autonomous but guided, context-aware, secure, and scalable. Our AI agents handle specific workflows so your team can focus on growth and client relationships.
+                Curious about the technical details? Explore our technology stack and AI agent capabilities.
               </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            {aiAgents.map((agent, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-3">
-                    {agent.name}
-                  </h3>
-                  
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                    {agent.useCase}
-                  </p>
-                  
-                  <p className="text-sm font-semibold text-primary-600 dark:text-primary-400">
-                    Outcome: {agent.outcome}
-                  </p>
-                </div>
-              </SimpleAnimatedCard>
-            ))}
-          </div>
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <SimpleAnimatedCard>
+              <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center h-full">
+                <Icon name="puzzle" className="w-16 h-16 text-primary-600 mx-auto mb-6" />
+                <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-4">
+                  Technology Stack
+                </h3>
+                
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  Infrastructure (AWS, Supabase, Postgres, vector DBs), programming tools (Python, JS, n8n/Zapier), AI model-agnostic approach (RAG, embeddings, agent frameworks, evaluation).
+                </p>
+                
+                <LightButton href="/services/automation-ai/technology-stack" className="px-6 py-3">
+                  Explore Technology Stack →
+                </LightButton>
+              </div>
+            </SimpleAnimatedCard>
 
-          <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <DarkButton href="/services/automation-ai/ai-agents" className="px-8 py-4 text-lg">
-                Request an Agent Demo →
-              </DarkButton>
-            </div>
-          </SimpleScrollReveal>
+            <SimpleAnimatedCard>
+              <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center h-full">
+                <Icon name="star" className="w-16 h-16 text-primary-600 mx-auto mb-6" />
+                <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-4">
+                  AI Agents
+                </h3>
+                
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  Autonomous yet collaborative, context-aware, secure, and scalable. Available templates: Ultimate Assistant, Research Agent, Newsletter, RAG Pipeline, Faceless Shorts.
+                </p>
+                
+                <DarkButton href="/services/automation-ai/ai-agents" className="px-6 py-3">
+                  Request Agent Demo →
+                </DarkButton>
+              </div>
+            </SimpleAnimatedCard>
+          </div>
         </div>
       </section>
 
       {/* Built for Your Business Section */}
-      <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
+      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -423,7 +422,7 @@ export default function AutomationAIPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                How it works (fast, practical, no fluff)
+                How it works (phases)
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -485,7 +484,7 @@ export default function AutomationAIPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                Proof in practice
+                Case study highlights (proof in practice)
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -521,8 +520,14 @@ export default function AutomationAIPage() {
 
           <SimpleScrollReveal direction="up">
             <div className="text-center">
-              <LightButton href="/case-studies" className="px-6 py-3">
-                View all case studies →
+              <p className="text-gray-500 dark:text-gray-400 mb-4">
+                <strong>Summit Gaming Lounge</strong> — Faster reservations, deeper engagement, no extra staff<br />
+                <strong>DineEase</strong> — Faster outreach, higher-quality leads, scalable expansion<br />
+                <strong>Fetchly</strong> — 15+ hours/week saved, faster decisions, streamlined productivity<br />
+                <strong>ClearFlow Water Systems</strong> — Same-day quotes, cleaner pipeline, higher close rates
+              </p>
+              <LightButton href="/work" className="px-6 py-3">
+                View All Case Studies →
               </LightButton>
             </div>
           </SimpleScrollReveal>
@@ -539,10 +544,6 @@ export default function AutomationAIPage() {
               </h2>
               
               <div className="max-w-3xl mx-auto text-left space-y-6">
-                <p className="text-lg text-gray-600 dark:text-gray-300">
-                  We price by <strong>system scope and measurable outcomes</strong>, not by the number of zaps or bots.
-                </p>
-                
                 <div className="bg-white dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-600">
                   <div className="space-y-4">
                     <div className="flex items-start gap-3">
@@ -551,25 +552,25 @@ export default function AutomationAIPage() {
                         <strong className="text-gray-900 dark:text-white">Website Foundation:</strong>
                         <span className="text-gray-600 dark:text-gray-300"> from </span>
                         <strong className="text-primary-600 dark:text-primary-400">$2,000+</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> build (more for e-commerce), </span>
+                        <span className="text-gray-600 dark:text-gray-300"> build (</span>
                         <strong className="text-primary-600 dark:text-primary-400">$200/mo</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> Forte Care™</span>
+                        <span className="text-gray-600 dark:text-gray-300"> Forte Care™). Note: e-commerce higher.</span>
                       </div>
                     </div>
                     
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
                       <div>
-                        <strong className="text-gray-900 dark:text-white">Automation & AI Systems:</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> scoped to outcomes (intake speed, quote turnaround, follow-up rate, owner visibility) with clear milestones and reporting</span>
+                        <strong className="text-gray-900 dark:text-white">Automation & AI:</strong>
+                        <span className="text-gray-600 dark:text-gray-300"> scoped to outcomes, priced by system scope and milestones—not # of zaps.</span>
                       </div>
                     </div>
                     
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
                       <div>
-                        <strong className="text-gray-900 dark:text-white">Ongoing Forte Care™:</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> monitoring, updates, unlimited site edits, and iterative improvements</span>
+                        <strong className="text-gray-900 dark:text-white">Forte Care™:</strong>
+                        <span className="text-gray-600 dark:text-gray-300"> ongoing support, unlimited site edits, monitoring, updates.</span>
                       </div>
                     </div>
                   </div>
@@ -592,7 +593,7 @@ export default function AutomationAIPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                FAQs (short and direct)
+                FAQs (short & clear)
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -639,15 +640,12 @@ export default function AutomationAIPage() {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-primary-600 hover:bg-gray-50 px-8 py-4 rounded-lg font-semibold text-lg transition-colors">
-                Get My Free Growth Snapshot →
-              </button>
-              <LightButton 
-                href="/contact"
-                className="px-8 py-4 text-lg border-white text-white hover:bg-white hover:text-primary-600"
+              <DarkButton 
+                href="/growth-snapshot"
+                className="bg-white text-primary-600 hover:bg-gray-50 px-8 py-4 text-lg"
               >
-                Talk to Us →
-              </LightButton>
+                Get My Free Growth Snapshot →
+              </DarkButton>
             </div>
           </SimpleScrollReveal>
         </div>
