@@ -295,7 +295,7 @@ export default function Header() {
             {/* Mobile Header */}
             <div className="md:hidden flex items-center justify-between w-full relative z-[101]">
               {/* Mobile Menu Button and Small Logo */}
-              <div className="flex items-center w-full gap-[10px]">
+              <div className="flex items-center gap-[10px]">
                 <button
                   className="text-gray-700 dark:text-gray-300 transition-all duration-300 hover:text-blue-600 dark:hover:text-blue-400 hover:scale-110 cursor-pointer z-[99998] relative"
                   onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -342,7 +342,7 @@ export default function Header() {
               </div>
 
               {/* Mobile Right Side - Theme Toggle and Contact Button */}
-              <div className="flex items-center w-full gap-[16px] justify-end">
+              <div className="flex items-center gap-[16px]">
                 <ThemeToggle />
                 <Link
                   href="/contact"

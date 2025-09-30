@@ -116,21 +116,8 @@ export default function TrustedCompaniesCarousel() {
           </h3>
         </div>
 
-        {/* Mobile company list */}
-        {isMobile ? (
-          <div className="max-w-lg mx-auto">
-            <div className="grid grid-cols-2 gap-3 text-center">
-              {trustedCompanies.map((company) => (
-                <div
-                  key={company.id}
-                  className="py-2 px-3 bg-gray-50 dark:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 text-sm font-medium"
-                >
-                  {company.name}
-                </div>
-              ))}
-            </div>
-          </div>
-        ) : (
+        {/* Mobile - no company list, just keep the heading */}
+        {!isMobile && (
           /* Desktop carousel */
           <div className="overflow-hidden relative max-w-full">
             <div 

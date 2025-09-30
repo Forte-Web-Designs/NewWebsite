@@ -45,7 +45,7 @@ export default function BackToTopButton() {
       aria-label="Back to top"
     >
       <svg 
-        className="w-4 h-4 md:w-6 md:h-6 transform group-hover:-translate-y-0.5 transition-transform duration-200" 
+        className="w-5 h-5 lg:w-6 lg:h-6 transform group-hover:-translate-y-0.5 transition-transform duration-200" 
         fill="none" 
         stroke="currentColor" 
         viewBox="0 0 24 24"
