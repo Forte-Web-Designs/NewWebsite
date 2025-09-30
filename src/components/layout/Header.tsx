@@ -174,11 +174,9 @@ export default function Header() {
     { label: 'Blog', href: '/blog' }
   ];
 
-  // Pricing dropdown - Combined with ecosystem
+  // Pricing dropdown
   const pricingDropdownItems = [
-    { label: 'View All Plans', href: '/pricing' },
-    { label: 'Forte Ecosystem™', href: '/ecosystem' },
-    { label: 'Contact Us', href: '/contact' }
+    { label: 'View All Plans', href: '/pricing' }
   ];
 
   // Don't render theme-dependent content until mounted

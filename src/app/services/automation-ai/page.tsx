@@ -235,35 +235,78 @@ export default function AutomationAIPage() {
 
       {/* What You Can Expect */}
       <section id="what-to-expect" className="bg-gray-50 dark:bg-gray-800 py-16">
-        <div className="max-w-6xl mx-auto px-6">
+        <div className="max-w-4xl mx-auto px-6">
           <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
             What you can expect in 30–90 days
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-            <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">First response time</h3>
-              <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">hours → minutes</p>
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Response latency</strong>
+                  <p className="text-gray-600 dark:text-gray-300">Hours → minutes across calls, forms, chat, and email.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Cycle time for key work</strong>
+                  <p className="text-gray-600 dark:text-gray-300">Proposals/approvals/fulfillment shortened by <strong>30–60%</strong> (fewer stalls, clearer next steps).</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Follow-through reliability</strong>
+                  <p className="text-gray-600 dark:text-gray-300">Ad-hoc → <strong>90–100%</strong> of required follow-ups completed on time (with light human oversight).</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Owner/ops visibility</strong>
+                  <p className="text-gray-600 dark:text-gray-300"><strong>One dashboard</strong> for pipeline and operations + alerts for stuck items—no spreadsheet chasing.</p>
+                </div>
+              </div>
             </div>
             
-            <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Quote turnaround</h3>
-              <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">2–3 days → same-day</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Follow-up coverage</h3>
-              <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">ad-hoc → 90–100%</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Owner visibility</h3>
-              <p className="text-lg font-bold text-primary-600 dark:text-primary-400">one dashboard of leads/quotes/stuck points</p>
-            </div>
-            
-            <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Time saved</h3>
-              <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">~5–20 hours/week</p>
+            <div className="space-y-4">
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Manual work removed</strong>
+                  <p className="text-gray-600 dark:text-gray-300"><strong>30–70%</strong> of repetitive tasks automated (routing, reminders, data entry, status updates).</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Time savings</strong>
+                  <p className="text-gray-600 dark:text-gray-300"><strong>~5–20 hours/week</strong> reclaimed across the team for higher-value work.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Fewer handoff errors</strong>
+                  <p className="text-gray-600 dark:text-gray-300">Duplicate entry and misrouted items reduced with cleaner, permissioned handoffs.</p>
+                </div>
+              </div>
+              
+              <div className="flex items-start gap-3">
+                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                <div>
+                  <strong className="text-gray-900 dark:text-white">Quality & consistency</strong>
+                  <p className="text-gray-600 dark:text-gray-300">More consistent customer and internal communications; fewer do-overs and "just checking in" messages.</p>
+                </div>
+              </div>
             </div>
           </div>
           
@@ -282,7 +325,7 @@ export default function AutomationAIPage() {
             What We Build (in plain English)
           </h2>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
               <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-4">
                 <span className="text-primary-600 dark:text-primary-400 font-bold">1</span>
@@ -321,7 +364,7 @@ export default function AutomationAIPage() {
                 Retention & Review Loops
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                No-show reminders, win-back campaigns, steady review requests that actually post.
+                No-show reminders, win-back campaigns, and steady review requests that actually post.
               </p>
               <p className="text-primary-600 dark:text-primary-400 font-semibold">
                 Result: More repeat revenue; a review engine that compounds.
@@ -351,7 +394,7 @@ export default function AutomationAIPage() {
                 Integrations & Clean Handoffs
               </h3>
               <p className="text-gray-600 dark:text-gray-300 mb-4">
-                Connect the tools you already use (CRM, invoicing, phones, calendars) and kill duplicate entry.
+                Connect the tools you already use (CRM, invoicing, phones, calendars) and eliminate duplicate entry.
               </p>
               <p className="text-primary-600 dark:text-primary-400 font-semibold">
                 Result: Fewer manual steps; fewer dropped balls.
@@ -372,6 +415,36 @@ export default function AutomationAIPage() {
                 Result: Reliable, safe, and future-proof.
               </p>
             </div>
+            
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+              <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-primary-600 dark:text-primary-400 font-bold">7</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                Team Enablement & SOPs
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                Light training, quick-start playbooks, and adoption check-ins so the system sticks.
+              </p>
+              <p className="text-primary-600 dark:text-primary-400 font-semibold">
+                Result: Faster ramp-up, fewer mistakes, and consistent use across the team.
+              </p>
+            </div>
+            
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
+              <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900 rounded-lg flex items-center justify-center mb-4">
+                <span className="text-primary-600 dark:text-primary-400 font-bold">8</span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                Custom Workflows & Special Cases
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 mb-4">
+                We tailor automations and AI agents around your unique processes, data, and approvals—no forced tool changes.
+              </p>
+              <p className="text-primary-600 dark:text-primary-400 font-semibold">
+                Result: Your way of working, but faster—measurable ROI without disruption.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -387,9 +460,14 @@ export default function AutomationAIPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 How we integrate with your tools and scale safely.
               </p>
-              <LightButton href="/services/automation-ai/technology-stack" className="px-6 py-3">
-                View Stack →
-              </LightButton>
+              <div className="text-center">
+                <LightButton href="/services/automation-ai/technology-stack" className="px-6 py-3 inline-flex items-center justify-center gap-2">
+                  View Stack
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </LightButton>
+              </div>
             </div>
             
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center">
@@ -399,9 +477,14 @@ export default function AutomationAIPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Patterns and templates we customize to your workflows.
               </p>
-              <DarkButton href="/services/automation-ai/ai-agents" className="px-6 py-3">
-                Explore Agents →
-              </DarkButton>
+              <div className="text-center">
+                <DarkButton href="/services/automation-ai/ai-agents" className="px-6 py-3 inline-flex items-center justify-center gap-2">
+                  Explore Agents
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </DarkButton>
+              </div>
             </div>
             
             <div className="bg-gray-50 dark:bg-gray-800 rounded-lg p-6 text-center">
@@ -411,9 +494,14 @@ export default function AutomationAIPage() {
               <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Guides, checklists, and field notes to make adoption easier.
               </p>
-              <LightButton href="/resources" className="px-6 py-3">
-                Browse Resources →
-              </LightButton>
+              <div className="text-center">
+                <LightButton href="/resources" className="px-6 py-3 inline-flex items-center justify-center gap-2">
+                  Browse Resources
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </LightButton>
+              </div>
             </div>
           </div>
         </div>
@@ -505,52 +593,7 @@ export default function AutomationAIPage() {
         </div>
       </section>
 
-      {/* Industry Fit */}
-      <section className="bg-white dark:bg-gray-900 py-16">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Service Businesses
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                What we fix: missed calls, slow quotes, weak follow-ups.
-              </p>
-              <p className="text-primary-600 dark:text-primary-400 font-semibold">
-                Outcome: More booked jobs with less chasing.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                E-commerce & Retail
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                What we fix: cart abandonment, slow checkout, weak repeat flows.
-              </p>
-              <p className="text-primary-600 dark:text-primary-400 font-semibold">
-                Outcome: More completed orders and higher repeat rate.
-              </p>
-            </div>
-            
-            <div className="text-center">
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">
-                Professional Services
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-4">
-                What we fix: intake lag, scheduling gaps, unclear status.
-              </p>
-              <p className="text-primary-600 dark:text-primary-400 font-semibold">
-                Outcome: Faster onboarding and better client retention.
-              </p>
-            </div>
-          </div>
-          
-          <p className="text-center text-gray-500 dark:text-gray-400 italic">
-            We also support gyms, education, nonprofits, and more—the system adapts to your tools and workflows.
-          </p>
-        </div>
-      </section>
+
 
       {/* Process Block */}
       <section className="bg-white dark:bg-gray-900 py-16">
@@ -590,9 +633,6 @@ export default function AutomationAIPage() {
           
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-gray-200 dark:bg-gray-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 font-semibold text-sm">SGL</span>
-              </div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 Summit Gaming Lounge — AI Concierge
               </h3>
@@ -602,9 +642,6 @@ export default function AutomationAIPage() {
             </div>
             
             <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-gray-200 dark:bg-gray-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 font-semibold text-sm">DE</span>
-              </div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 DineEase — Lead Discovery
               </h3>
@@ -614,9 +651,6 @@ export default function AutomationAIPage() {
             </div>
             
             <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-gray-200 dark:bg-gray-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 font-semibold text-sm">F</span>
-              </div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 Fetchly — Executive Assistant in Slack
               </h3>
@@ -626,9 +660,6 @@ export default function AutomationAIPage() {
             </div>
             
             <div className="bg-white dark:bg-gray-700 rounded-lg p-6 text-center">
-              <div className="w-16 h-16 bg-gray-200 dark:bg-gray-600 rounded-lg mx-auto mb-4 flex items-center justify-center">
-                <span className="text-gray-500 dark:text-gray-400 font-semibold text-sm">CWS</span>
-              </div>
               <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
                 ClearFlow Water Systems — Quotes & CRM
               </h3>
