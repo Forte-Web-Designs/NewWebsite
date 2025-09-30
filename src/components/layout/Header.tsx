@@ -216,9 +216,9 @@ export default function Header() {
           : 'py-4'
       }`}>
         <div className="container-fluid mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center">
+          <div className="flex items-center justify-between">
             {/* Desktop Logo - Hidden on mobile */}
-            <Link href="/" prefetch={true} className="hidden md:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer mr-8">
+            <Link href="/" prefetch={true} className="hidden md:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
               <img
                 src="/images/home/logo2.png"
                 alt="Forte Logo (Light Mode)"
@@ -234,7 +234,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8 flex-1">
+            <nav className="hidden md:flex items-center space-x-8">
               <HeaderLink href="/">Home</HeaderLink>
               
               <Dropdown
@@ -285,7 +285,7 @@ export default function Header() {
             </nav>
 
             {/* Desktop Right Side - Theme Toggle and Contact Button */}
-            <nav className="hidden md:flex items-center space-x-4 ml-auto">
+            <nav className="hidden md:flex items-center space-x-4">
               <ThemeToggle />
               <DarkButton href="/contact">
                 Contact Us
