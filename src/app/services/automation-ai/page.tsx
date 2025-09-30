@@ -11,43 +11,72 @@ import DarkButton from "@/components/DarkButton";
 export default function AutomationAIPage() {
   const [expandedFAQ, setExpandedFAQ] = useState<number | null>(null);
 
-  // What we build data
+  // What we build data (simplified to one-line feature + outcome)
   const automationServices = [
     {
       title: "Smart Intake & First Touch",
-      description: "Instant text-back on missed calls, web form auto-replies, and channel handoff (SMS/Email/Chat) so no inquiry sits cold.",
+      description: "Instant text-back on missed calls and web form auto-replies.",
       result: "Response time down; booked calls up.",
       icon: "phone"
     },
     {
       title: "Quote & Sales Follow-Through", 
-      description: "Guided quote templates, auto-nudges until answered, and \"next best step\" reminders.",
+      description: "Guided templates and auto-nudges until answered.",
       result: "Same-day quotes; higher close rates.",
       icon: "dollar"
     },
     {
       title: "Retention & Review Loops",
-      description: "No-show reminders, win-back campaigns, and steady review requests that actually post.",
-      result: "More repeat revenue; a review engine that compounds.",
+      description: "No-show reminders and steady review requests that post.",
+      result: "More repeat revenue; review engine that compounds.",
       icon: "star"
     },
     {
       title: "Owner Dashboards & Alerts",
-      description: "One view of leads, quotes, and stuck points. Weekly scorecards and alerts when something needs attention.",
+      description: "One view of leads, quotes, and stuck points.",
       result: "Clarity and accountability without spreadsheets.",
       icon: "pricing"
     },
     {
       title: "Integrations & Clean Handoffs",
-      description: "We connect the tools you already use (CRM, calendars, invoicing, phones, forms) and remove duplicate data entry.",
+      description: "Connect your existing tools and remove duplicate data entry.",
       result: "Fewer manual steps; fewer dropped balls.",
       icon: "puzzle"
     },
     {
       title: "Secure, Managed Infrastructure",
-      description: "Cloud-hosted, permissioned, and monitored. Built to scale as you grow.",
+      description: "Cloud-hosted, permissioned, and monitored.",
       result: "Reliable, safe, and future-proof.",
       icon: "clean"
+    }
+  ];
+
+  // AI Agents data
+  const aiAgents = [
+    {
+      name: "Ultimate Assistant",
+      useCase: "Email, calendar, and task management across platforms",
+      outcome: "15+ hours saved weekly; faster decisions"
+    },
+    {
+      name: "Deep Research PDF Report",
+      useCase: "Comprehensive market research and competitive analysis", 
+      outcome: "Professional insights in minutes, not days"
+    },
+    {
+      name: "Newsletter Creation",
+      useCase: "Content generation from data sources and brand voice",
+      outcome: "Consistent content; higher engagement rates"
+    },
+    {
+      name: "RAG Pipeline",
+      useCase: "Document search and knowledge base queries",
+      outcome: "Instant answers from company knowledge"
+    },
+    {
+      name: "Faceless Shorts",
+      useCase: "Automated video content creation and publishing",
+      outcome: "Consistent social presence; more visibility"
     }
   ];
 
@@ -76,31 +105,35 @@ export default function AutomationAIPage() {
     }
   ];
 
-  // Process steps
+  // Process steps with measurable lifts
   const processSteps = [
     {
       step: "1",
       title: "Snapshot & Plan",
       subtitle: "(free)",
-      description: "We map the 3–4 biggest leaks (speed, follow-through, handoffs) and give you two quick wins."
+      description: "We map the 3–4 biggest leaks and give you two quick wins.",
+      lift: "Immediate visibility into lost opportunities"
     },
     {
       step: "2", 
       title: "Pilot & Prove",
       subtitle: "(2–4 weeks)",
-      description: "We deploy a focused pilot (e.g., instant replies + follow-ups) and measure the lift."
+      description: "We deploy a focused pilot and measure the lift.",
+      lift: "Faster response times; more booked consultations"
     },
     {
       step: "3",
       title: "Scale & Instrument", 
       subtitle: "(4–8 weeks)",
-      description: "We extend automations across intake, quotes, retention, and dashboards—tied to your KPIs."
+      description: "We extend automations across your entire pipeline.",
+      lift: "Same-day quotes; clearer pipeline visibility"
     },
     {
       step: "4",
       title: "Operate & Improve",
       subtitle: "(ongoing)",
-      description: "Forte Care™ keeps everything updated, secured, and tuned as you grow."
+      description: "Forte Care™ keeps everything optimized as you grow.",
+      lift: "Continuous improvement; steady growth at scale"
     }
   ];
 
@@ -109,25 +142,25 @@ export default function AutomationAIPage() {
     {
       name: "Summit Gaming Lounge",
       project: "AI Concierge",
-      description: "Omnichannel assistant across SMS, Discord, Telegram.",
+      challenge: "Managing reservations across multiple platforms manually",
       outcome: "Faster reservations, deeper engagement, no extra headcount."
     },
     {
       name: "DineEase",
       project: "Lead Discovery", 
-      description: "Automated restaurant partner sourcing with enrichment.",
+      challenge: "Time-intensive restaurant partner sourcing and research",
       outcome: "Faster, higher-quality outreach; expansion into new cities."
     },
     {
       name: "Fetchly",
       project: "Exec Assistant in Slack",
-      description: "Gmail, Calendar, and monday.com managed in-Slack.",
+      challenge: "Executive overwhelmed by email, calendar, and task management",
       outcome: "~15 hours/week saved; faster decisions, clearer days."
     },
     {
       name: "ClearFlow Water Systems",
       project: "Quotes & CRM",
-      description: "Email-to-quote automation with CRM sync and shipping lookup.", 
+      challenge: "Slow quote turnaround and disconnected pipeline tracking", 
       outcome: "Same-day quotes, cleaner pipeline, higher close rates."
     }
   ];
@@ -172,7 +205,7 @@ export default function AutomationAIPage() {
     },
     {
       question: "Who owns what?",
-      answer: "You own your data and your website. Custom automations and workflows transfer after the minimum term in your agreement."
+      answer: "You own your data and your website. Custom automations and workflows transfer to you after 12 months of service."
     }
   ];
 
@@ -188,7 +221,7 @@ export default function AutomationAIPage() {
               </h1>
               
               <h2 className="text-2xl md:text-3xl leading-relaxed text-gray-700 dark:text-gray-300 mb-8 font-semibold">
-                We don't sell bots. We remove bottlenecks.
+                We don't sell bots. We fix bottlenecks.
               </h2>
 
               <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto">
@@ -292,8 +325,53 @@ export default function AutomationAIPage() {
         </div>
       </section>
 
-      {/* Built for Your Business Section */}
+      {/* AI Agents Section */}
       <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
+                AI Agents — Practical building blocks for real work
+              </h2>
+              
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
+                Autonomous but guided, context-aware, secure, and scalable. Our AI agents handle specific workflows so your team can focus on growth and client relationships.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+            {aiAgents.map((agent, index) => (
+              <SimpleAnimatedCard key={index}>
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
+                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-3">
+                    {agent.name}
+                  </h3>
+                  
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
+                    {agent.useCase}
+                  </p>
+                  
+                  <p className="text-sm font-semibold text-primary-600 dark:text-primary-400">
+                    Outcome: {agent.outcome}
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+            ))}
+          </div>
+
+          <SimpleScrollReveal direction="up">
+            <div className="text-center">
+              <DarkButton href="/services/automation-ai/ai-agents" className="px-8 py-4 text-lg">
+                Request an Agent Demo →
+              </DarkButton>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Built for Your Business Section */}
+      <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -332,7 +410,7 @@ export default function AutomationAIPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                We also support gyms, education, nonprofits, and more—the system adapts to your workflows and tools.
+                We adapt to your workflows and tools.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -366,8 +444,12 @@ export default function AutomationAIPage() {
                     {step.subtitle}
                   </p>
                   
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
                     {step.description}
+                  </p>
+                  
+                  <p className="text-xs font-semibold text-primary-600 dark:text-primary-400">
+                    Lift: {step.lift}
                   </p>
                 </div>
               </SimpleAnimatedCard>
@@ -376,32 +458,24 @@ export default function AutomationAIPage() {
         </div>
       </section>
 
-      {/* What It's Made Of Section */}
+      {/* Technology Stack CTA Section */}
       <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                What it's made of (behind the scenes, without the jargon)
+                Curious about the technical details?
               </h2>
+              
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+                Our technology stack includes modern infrastructure, AI frameworks, and integration tools designed for reliability and scale.
+              </p>
+              
+              <LightButton href="/services/automation-ai/technology-stack" className="px-8 py-4 text-lg">
+                Explore Technology Stack →
+              </LightButton>
             </div>
           </SimpleScrollReveal>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            {technicalComponents.map((component, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
-                    {component.name}:
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
-                    {component.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
@@ -420,17 +494,26 @@ export default function AutomationAIPage() {
             {caseStudies.map((study, index) => (
               <SimpleAnimatedCard key={index}>
                 <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
-                    {study.name} — {study.project}
+                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
+                    {study.name}
                   </h3>
                   
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    {study.description}
-                  </p>
-                  
-                  <p className="text-sm font-semibold text-primary-600 dark:text-primary-400">
-                    Outcome: {study.outcome}
-                  </p>
+                  <div className="space-y-3 text-sm">
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Challenge:</span>
+                      <span className="text-gray-600 dark:text-gray-300 ml-2">{study.challenge}</span>
+                    </div>
+                    
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Solution:</span>
+                      <span className="text-gray-600 dark:text-gray-300 ml-2">{study.project}</span>
+                    </div>
+                    
+                    <div>
+                      <span className="font-semibold text-primary-600 dark:text-primary-400">Outcome:</span>
+                      <span className="text-gray-700 dark:text-gray-300 ml-2">{study.outcome}</span>
+                    </div>
+                  </div>
                 </div>
               </SimpleAnimatedCard>
             ))}
