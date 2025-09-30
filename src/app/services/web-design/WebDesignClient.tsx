@@ -56,7 +56,7 @@ const websiteFeatures = [
   {
     title: "Mobile-First Design", 
     description: "Built for phones first, then scaled up. Perfect experience on any device.",
-    icon: "smartphone"
+    icon: "cursor"
   },
   {
     title: "SEO-Ready Foundation",
@@ -66,17 +66,17 @@ const websiteFeatures = [
   {
     title: "Lead Capture Focus",
     description: "Designed to turn visitors into customers with clear CTAs and conversion optimization.",
-    icon: "target"
+    icon: "cursor1"
   },
   {
     title: "Ongoing Care Included",
     description: "Unlimited edits, updates, and optimization with Forte Care™ maintenance plans.",
-    icon: "heart"
+    icon: "star"
   },
   {
     title: "Local DFW Focus",
     description: "Built for Dallas-Fort Worth businesses with local SEO and market understanding.",
-    icon: "map-pin"
+    icon: "gps"
   }
 ];
 
@@ -266,7 +266,7 @@ export default function WebDesignClient() {
               )}
 
               <p className="mt-8 text-sm text-primary-200">
-                <Icon name="map-pin" className="inline w-4 h-4 mr-2" />
+                <Icon name="gps" className="inline w-4 h-4 mr-2" />
                 Serving Dallas-Fort Worth & surrounding areas • Based in Grapevine, TX
               </p>
             </div>

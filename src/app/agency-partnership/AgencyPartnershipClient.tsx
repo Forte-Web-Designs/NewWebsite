@@ -11,7 +11,7 @@ const targetAgencies = [
   {
     title: "Marketing Agencies",
     description: "Needing reliable fulfillment beyond ads & creative",
-    icon: "chart"
+    icon: "s1"
   },
   {
     title: "Web Studios", 
@@ -44,7 +44,7 @@ const partnershipModels = [
       "Direct client communication through you",
       "You set pricing and manage relationship"
     ],
-    icon: "eye-off"
+    icon: "cursor"
   },
   {
     title: "Co-Branded", 
@@ -55,7 +55,7 @@ const partnershipModels = [
       "Technical expertise under our name",
       "Strategy and account management under yours"
     ],
-    icon: "handshake"
+    icon: "users"
   },
   {
     title: "Referral Only",
@@ -66,7 +66,7 @@ const partnershipModels = [
       "You maintain the client relationship", 
       "Ongoing MRR sharing available"
     ],
-    icon: "share"
+    icon: "rightarrow"
   }
 ];
 
@@ -321,7 +321,7 @@ export default function AgencyPartnershipClient() {
                 onClick={() => setShowPricingTooltip(!showPricingTooltip)}
                 className="flex items-center gap-2 text-primary-700 dark:text-primary-300 font-semibold"
               >
-                <Icon name="info" className="w-5 h-5" />
+                <Icon name="warning" className="w-5 h-5" />
                 See Sample Project Pricing →
               </button>
               
@@ -360,7 +360,7 @@ export default function AgencyPartnershipClient() {
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <Icon name="clock" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                <Icon name="calendar" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-2">
                     Reliable Delivery
@@ -372,7 +372,7 @@ export default function AgencyPartnershipClient() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Icon name="shield" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                <Icon name="warning" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-2">
                     Quality Assurance
@@ -398,7 +398,7 @@ export default function AgencyPartnershipClient() {
 
             <div className="space-y-6">
               <div className="flex items-start gap-4">
-                <Icon name="trending-up" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                <Icon name="up" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-2">
                     Scalable Partnership
@@ -410,7 +410,7 @@ export default function AgencyPartnershipClient() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Icon name="book" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                <Icon name="education" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-2">
                     Knowledge Transfer
@@ -422,7 +422,7 @@ export default function AgencyPartnershipClient() {
               </div>
 
               <div className="flex items-start gap-4">
-                <Icon name="dollar-sign" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                <Icon name="dollar" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
                 <div>
                   <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-2">
                     Transparent Pricing
@@ -464,7 +464,7 @@ export default function AgencyPartnershipClient() {
               </div>
 
               <p className="mt-8 text-sm text-primary-200">
-                <Icon name="map-pin" className="inline w-4 h-4 mr-2" />
+                <Icon name="gps" className="inline w-4 h-4 mr-2" />
                 Based in Grapevine, TX • Serving partners nationwide
               </p>
             </div>
