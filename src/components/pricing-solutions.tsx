@@ -137,27 +137,27 @@ const comparisonFeatures = [
 const faqData = [
   {
     question: 'Can I start with just a website?',
-    answer: 'Absolutely! Many clients start with our Website Foundation and add Growth Systems or End-to-End capabilities as their business grows and needs evolve.'
+    answer: 'Yes. Many clients begin with the Website Foundation as a starting point. From there, you can add automation, dashboards, and integrations over time as your business grows.'
   },
   {
     question: 'Why is there a setup fee?',
-    answer: 'Setup fees cover the intensive work of building your custom system - from website development to automation configuration and integration setup. This ensures you get a fully customized solution rather than a cookie-cutter template.'
+    answer: 'The setup fee covers the heavy lifting at the start—design, development, integrations, and system configuration. It\'s a one-time investment that ensures your foundation is solid before ongoing optimization begins.'
   },
   {
     question: 'What happens after the 12-month minimum?',
-    answer: 'After your initial 12 months, your plan continues month-to-month with no long-term commitment. You can cancel, upgrade, or continue as-is. The 12-month minimum allows us to provide premium ongoing support at affordable monthly rates.'
+    answer: 'After 12 months, you own your website and systems. The monthly fee continues as a retainer for hosting, Forte Care™ updates, and ongoing improvements. If you\'d like to pause, downgrade, or upgrade, you have full flexibility.'
   },
   {
     question: 'Do I own my system if I cancel?',
-    answer: 'Yes! You own your website, content, and data. However, advanced integrations and automations may require ongoing maintenance to function properly. We provide transition assistance and can export your data when needed.'
+    answer: 'Ownership transfers only after the 12-month minimum has been fulfilled. Before that period, you are leasing access to the system while we manage, optimize, and maintain it. This ensures we can deliver on the upfront investment we make in custom workflows and integrations.'
   },
   {
-    question: 'Can I upgrade from Foundation to Growth later?',
-    answer: 'Absolutely! Our systems are designed to scale with your business. We credit previous investments when upgrading, so you only pay the difference for additional capabilities.'
+    question: 'Can I upgrade from Foundation to Growth or End-to-End later?',
+    answer: 'Absolutely. Many clients start small and expand as they see results. Since everything we build is modular, upgrades are seamless without redoing your foundation.'
   },
   {
-    question: 'Why are Growth and End-to-End pricing ranges?',
-    answer: 'Every business has unique processes, goals, and integration needs. Pricing reflects the scope and complexity of what\'s required to achieve your specific outcomes, not a one-size-fits-all package.'
+    question: 'Why does pricing show ranges?',
+    answer: 'Because every business has different processes, goals, and tools. Some require deeper integrations or more advanced automations than others. The range reflects the scope of work needed to deliver measurable outcomes, not cookie-cutter services.'
   }
 ];
 
@@ -206,7 +206,7 @@ export function PricingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
               <DarkButton 
                 onClick={() => setShowGrowthSnapshotForm(true)}
-                className="bg-primary-600 hover:bg-primary-700 text-white px-8 py-4 text-lg font-semibold"
+                className="bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white px-8 py-4 text-lg font-semibold"
               >
                 👉 Book My Free Growth Audit
               </DarkButton>
@@ -296,7 +296,7 @@ export function PricingPage() {
                       <ul className="space-y-3 mb-6">
                         {solution.features.map((feature, idx) => (
                           <li key={idx} className="flex items-start gap-3">
-                            <Icon name="check" className="w-5 h-5 text-primary-500 mt-0.5 flex-shrink-0" />
+                            <Icon name="check" className="w-5 h-5 text-primary-500 dark:text-primary-400 mt-0.5 flex-shrink-0" />
                             <span className="text-gray-600 dark:text-gray-300">{feature}</span>
                           </li>
                         ))}
@@ -386,23 +386,23 @@ export function PricingPage() {
                         </td>
                         <td className="text-center p-6">
                           {feature.foundation ? (
-                            <Icon name="check" className="w-5 h-5 text-primary-500 mx-auto" />
+                            <Icon name="check" className="w-5 h-5 text-primary-500 dark:text-primary-400 mx-auto" />
                           ) : (
-                            <span className="text-gray-400">—</span>
+                            <span className="text-gray-400 dark:text-gray-500">—</span>
                           )}
                         </td>
                         <td className="text-center p-6 bg-primary-50 dark:bg-primary-900/20">
                           {feature.growth ? (
-                            <Icon name="check" className="w-5 h-5 text-primary-500 mx-auto" />
+                            <Icon name="check" className="w-5 h-5 text-primary-500 dark:text-primary-400 mx-auto" />
                           ) : (
-                            <span className="text-gray-400">—</span>
+                            <span className="text-gray-400 dark:text-gray-500">—</span>
                           )}
                         </td>
                         <td className="text-center p-6">
                           {feature.endtoend ? (
-                            <Icon name="check" className="w-5 h-5 text-primary-500 mx-auto" />
+                            <Icon name="check" className="w-5 h-5 text-primary-500 dark:text-primary-400 mx-auto" />
                           ) : (
-                            <span className="text-gray-400">—</span>
+                            <span className="text-gray-400 dark:text-gray-500">—</span>
                           )}
                         </td>
                       </tr>
@@ -458,7 +458,7 @@ export function PricingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <DarkButton 
                 onClick={() => setShowGrowthSnapshotForm(true)}
-                className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+                className="bg-white dark:bg-gray-100 text-primary-600 dark:text-primary-700 hover:bg-gray-100 dark:hover:bg-gray-200 px-8 py-4 text-lg font-semibold"
               >
                 👉 Book My Free Growth Audit
               </DarkButton>

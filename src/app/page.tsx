@@ -363,15 +363,15 @@ export default function Home() {
 
                   <div className="border-t border-gray-200 dark:border-gray-600 pt-4 sm:pt-6 space-y-3 sm:space-y-4 mb-6 sm:mb-8">
                     <div className="flex items-start sm:items-center gap-3">
-                      <Icon name="check" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 flex-shrink-0 mt-1 sm:mt-0" />
+                      <Icon name="check" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
                       <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">100% free. No meeting required.</span>
                     </div>
                     <div className="flex items-start sm:items-center gap-3">
-                      <Icon name="download" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 flex-shrink-0 mt-1 sm:mt-0" />
+                      <Icon name="download" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
                       <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Delivered as a 1-page PDF + short Loom video.</span>
                     </div>
                     <div className="flex items-start sm:items-center gap-3">
-                      <Icon name="puzzle" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 flex-shrink-0 mt-1 sm:mt-0" />
+                      <Icon name="puzzle" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
                       <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Works with your current tools — no rip-and-replace.</span>
                     </div>
                   </div>

@@ -152,11 +152,11 @@ const faqData = [
   },
   {
     question: 'Do I own my system if I cancel?',
-    answer: 'Yes, 100%. Everything we build for you is yours to keep, no lock-in.'
+    answer: 'Ownership transfers only after the 12-month minimum has been fulfilled. Before that period, you are leasing access to the system while we manage, optimize, and maintain it. This ensures we can deliver on the upfront investment we make in custom workflows and integrations.'
   },
   {
     question: 'What happens after the 12-month minimum?',
-    answer: 'Your plan continues month-to-month with Forte Care™ included. Cancel anytime after the first year.'
+    answer: 'After 12 months, you own your website and systems. The monthly fee continues as a retainer for hosting, Forte Care™ updates, and ongoing improvements. If you\'d like to pause, downgrade, or upgrade, you have full flexibility.'
   },
   {
     question: 'Do you offer one-time projects?',

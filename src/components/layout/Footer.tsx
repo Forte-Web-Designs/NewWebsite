@@ -39,40 +39,38 @@ export default function Footer() {
 
   const data = [
     {
-      heading: "Growth System Layers",
+      heading: "Services",
       points: [
-        { text: "Foundation: Custom Website Design", href: "/services/webDesign" },
-        { text: "Growth Layer: Automation & AI", href: "/services/seo" },
-        { text: "Scaling Layer: Business Systems Integration", href: "/services/ads" },
-        { text: "Ongoing Forte Care™", href: "/solutions/care" },
-        { text: "Agency Partnership Program", href: "/services/white-label" },
-        { text: "Free Growth System Audit", href: "/solutions/seotool" },
+        { text: "Website Design", href: "/services/webDesign" },
+        { text: "SEO Services", href: "/services/seo" },
+        { text: "Google Ads Management", href: "/services/ads" },
+        { text: "Forte Care™ Support", href: "/services/forte-care" }
       ]
     },
     {
-      heading: "About Forte",
+      heading: "Company",
       points: [
-        { text: "Our Story & Mission", href: "/about" },
-        { text: "Portfolio & Case Studies", href: "/about/work" },
-        { text: "Client Success Stories", href: "/case-studies" },
-        { text: "Frequently Asked Questions", href: "/about/faqs" },
-        { text: "Get In Touch", href: "/contact" }
+        { text: "About Us", href: "/about" },
+        { text: "Our Work", href: "/about/work" },
+        { text: "Case Studies", href: "/case-studies" },
+        { text: "Contact", href: "/contact" }
       ]
     },
     {
-      heading: "Connect With Us",
+      heading: "Resources",
       points: [
-        { text: "Facebook - Digital Marketing Tips", href: "https://www.facebook.com/people/Forte-Web-Designs/61576746767359/" },
-        { text: "Instagram - Behind the Scenes", href: "https://www.instagram.com/fortewebdesigns/" },
-        { text: "LinkedIn - Business Insights", href: "https://www.linkedin.com/company/forte-web-designs/?viewAsMember=true" },
+        { text: "Free Website Checkup", href: "/checkup" },
+        { text: "Pricing", href: "/pricing" },
+        { text: "FAQs", href: "/about/faqs" },
+        { text: "Blog", href: "/blog" }
       ]
     },
     {
-      heading: "Free Resources",
+      heading: "Connect",
       points: [
-        { text: "Free Website Analysis Tool", href: "/solutions/seotool" },
-        { text: "Website Design Blog", href: "/blog" },
-        { text: "Digital Marketing Resources", href: "/resources" }
+        { text: "Facebook", href: "https://www.facebook.com/people/Forte-Web-Designs/61576746767359/" },
+        { text: "Instagram", href: "https://www.instagram.com/fortewebdesigns/" },
+        { text: "LinkedIn", href: "https://www.linkedin.com/company/forte-web-designs/?viewAsMember=true" }
       ]
     }
   ];

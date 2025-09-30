@@ -17,7 +17,7 @@ type FAQItem = {
 const faqData: FAQItem[] = [
   {
     question: "What's included in Forte Care™?",
-    answer: "Forte Care™ includes unlimited content updates, security monitoring, performance optimization, monthly backups, broken link checks, uptime monitoring, and technical support. Think of it as professional maintenance for your digital storefront."
+    answer: "Forte Care™ includes unlimited website edits (content, images, pages, design tweaks), 24/7 security monitoring, performance optimization, automated backups, uptime monitoring, and priority technical support. The key value-add is unlimited edits – need to add a new service page, update your hours, or refresh your content? It's all included with no extra fees. Think of it as having your own dedicated web team on retainer."
   },
   {
     question: "How quickly do you make updates?",

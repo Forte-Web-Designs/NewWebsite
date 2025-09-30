@@ -170,7 +170,7 @@ const faqData = [
   },
   {
     question: "What's included in Forte Care™?",
-    answer: 'Forte Care™ includes security monitoring, performance optimization, software updates, analytics reporting, technical support, and regular backups. Growth and Scaling layers include advanced features like system optimization, automation improvements, and CRM management.'
+    answer: 'Forte Care™ includes unlimited website edits (content, images, pages, design tweaks), 24/7 security monitoring, performance optimization, automated backups, uptime monitoring, and priority technical support. The key value-add is unlimited edits – need to add a new service page, update your hours, or refresh your content? It\'s all included with no extra fees. Growth and Scaling layers include advanced features like system optimization, automation improvements, and CRM management.'
   },
   {
     question: 'Do I own my system if I cancel?',
