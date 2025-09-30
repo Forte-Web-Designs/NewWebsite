@@ -1,10 +1,6 @@
 "use client";
 
 import { useState } from 'react';
-import Link from 'next/link';
-import { Icon } from "@/components/images/Icon";
-import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
-import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import LightButton from "@/components/LightButton";
 import DarkButton from "@/components/DarkButton";
 
@@ -215,407 +211,206 @@ export default function AutomationAIPage() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 lg:pt-32 lg:pb-24">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center max-w-5xl mx-auto">
-              <h1 className="font-display font-bold text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white mb-6">
-                Automation & AI — Systems that Save Time and Drive Revenue
-              </h1>
+      {/* Hero / Welcome Block */}
+      <section className="bg-white dark:bg-gray-900 pt-24 pb-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">
+            Automation & AI — Systems That Save Time and Drive Revenue
+          </h1>
+          
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
+            Most businesses don't lose deals because of skill. They lose them to slow replies, manual steps, and unclear handoffs. Our systems fix those failure points so you respond faster, follow up consistently, and keep your pipeline moving.
+          </p>
 
-              <p className="text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-300 mb-12 max-w-4xl mx-auto">
-                Most businesses don't lose deals because of skill. They lose them to slow replies, manual steps, and unclear handoffs. Our systems fix those failure points so you respond faster, follow up consistently, and keep your pipeline moving.
-              </p>
-
-              {/* CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-                <DarkButton href="/growth-snapshot" className="px-8 py-4 text-lg">
-                  Free Growth Snapshot →
-                </DarkButton>
-              </div>
-            </div>
-          </SimpleScrollReveal>
+          <DarkButton href="/growth-snapshot" className="inline-block px-6 py-3">
+            Get My Free Growth Snapshot
+          </DarkButton>
         </div>
       </section>
 
-      {/* Expected Outcomes Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center max-w-3xl mx-auto mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
-                Expected outcomes (quick wins)
-              </h2>
-              
-              <div className="grid md:grid-cols-2 gap-6 text-left">
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700 dark:text-gray-300">Faster first-touch on every inquiry</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700 dark:text-gray-300">Same-day quotes and fewer stalls</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700 dark:text-gray-300">Higher show-up and reply rates</span>
-                  </div>
-                </div>
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700 dark:text-gray-300">Clear pipeline visibility</span>
-                  </div>
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <span className="text-gray-700 dark:text-gray-300">Hours saved weekly across your team</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SimpleScrollReveal>
+      {/* Outcomes Block */}
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            What You Gain
+          </h2>
+          
+          <ul className="space-y-3 text-lg text-gray-700 dark:text-gray-300">
+            <li>• Faster first-touch on every inquiry</li>
+            <li>• Same-day quotes and fewer stalls</li>
+            <li>• Higher show-up and reply rates</li>
+            <li>• Clear pipeline visibility</li>
+            <li>• Hours saved weekly across your team</li>
+          </ul>
         </div>
       </section>
 
-      {/* What We Build Section */}
-      <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                What we build (plain English, with results)
-              </h2>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {/* Core Capabilities Block */}
+      <section className="bg-white dark:bg-gray-900 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            What We Build (In Plain English)
+          </h2>
+          
+          <div className="space-y-8">
             {automationServices.map((service, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 h-full">
-                  <Icon name={service.icon} className="w-12 h-12 text-primary-600 mb-6" />
-                  
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
-                    {index + 1}) {service.title}
-                  </h3>
-                  
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                    {service.description}
-                  </p>
-                  
-                  <div className="mt-auto">
-                    <p className="text-sm font-semibold text-primary-600 dark:text-primary-400">
-                      Result: <strong>{service.result}</strong>
-                    </p>
-                  </div>
-                </div>
-              </SimpleAnimatedCard>
+              <div key={index}>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-3">
+                  {index + 1}. {service.title}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-2">
+                  {service.description}
+                </p>
+                <p className="text-primary-600 dark:text-primary-400 italic">
+                  {service.result}
+                </p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Technology Deep Dive Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
-                Technology deep dive (optional)
-              </h2>
-              
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12">
-                Curious about the technical details? Explore our technology stack and AI agent capabilities.
-              </p>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <SimpleAnimatedCard>
-              <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center h-full">
-                <Icon name="puzzle" className="w-16 h-16 text-primary-600 mx-auto mb-6" />
-                <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-4">
-                  Technology Stack
-                </h3>
-                
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Infrastructure (AWS, Supabase, Postgres, vector DBs), programming tools (Python, JS, n8n/Zapier), AI model-agnostic approach (RAG, embeddings, agent frameworks, evaluation).
-                </p>
-                
-                <LightButton href="/services/automation-ai/technology-stack" className="px-6 py-3">
-                  Explore Technology Stack →
-                </LightButton>
-              </div>
-            </SimpleAnimatedCard>
-
-            <SimpleAnimatedCard>
-              <div className="bg-white dark:bg-gray-700 rounded-xl p-8 text-center h-full">
-                <Icon name="star" className="w-16 h-16 text-primary-600 mx-auto mb-6" />
-                <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-4">
-                  AI Agents
-                </h3>
-                
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Autonomous yet collaborative, context-aware, secure, and scalable. Available templates: Ultimate Assistant, Research Agent, Newsletter, RAG Pipeline, Faceless Shorts.
-                </p>
-                
-                <DarkButton href="/services/automation-ai/ai-agents" className="px-6 py-3">
-                  Request Agent Demo →
-                </DarkButton>
-              </div>
-            </SimpleAnimatedCard>
+      {/* Deep Dive Block */}
+      <section className="bg-white dark:bg-gray-900 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <div className="flex gap-6">
+            <LightButton href="/services/automation-ai/technology-stack" className="px-6 py-3">
+              Technology Stack
+            </LightButton>
+            <DarkButton href="/services/automation-ai/ai-agents" className="px-6 py-3">
+              AI Agents
+            </DarkButton>
           </div>
         </div>
       </section>
 
-      {/* Built for Your Business Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
-                Built for your kind of business
-              </h2>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="grid md:grid-cols-3 gap-8 mb-8">
+      {/* Industries Block */}
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            Built For Your Kind of Business
+          </h2>
+          
+          <div className="space-y-8">
             {industries.map((industry, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
-                  <Icon name={industry.icon} className="w-12 h-12 text-primary-600 mx-auto mb-6" />
-                  
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-2">
-                    {industry.title}
-                  </h3>
-                  
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                    {industry.subtitle}
-                  </p>
-                  
-                  <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    {industry.description}
-                  </p>
-                  
-                  <p className="text-sm font-semibold text-primary-600 dark:text-primary-400">
-                    Outcome: <strong>{industry.outcome}</strong>
-                  </p>
-                </div>
-              </SimpleAnimatedCard>
+              <div key={index}>
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                  {industry.title} <span className="text-gray-500 dark:text-gray-400 font-normal">({industry.subtitle})</span>
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-1">
+                  {industry.description}
+                </p>
+                <p className="text-primary-600 dark:text-primary-400 italic">
+                  → {industry.outcome}
+                </p>
+              </div>
             ))}
           </div>
-
-          <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <p className="text-sm text-gray-500 dark:text-gray-400 italic">
-                We adapt to your workflows and tools.
-              </p>
-            </div>
-          </SimpleScrollReveal>
         </div>
       </section>
 
-      {/* How It Works Process */}
-      <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                How it works (phases)
-              </h2>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {/* Process Block */}
+      <section className="bg-white dark:bg-gray-900 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            How It Works
+          </h2>
+          
+          <ol className="space-y-6">
             {processSteps.map((step, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-primary-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mb-4 mx-auto">
-                    {step.step}
-                  </div>
-                  
-                  <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-2">
-                    {step.title}
+              <li key={index} className="flex gap-4">
+                <span className="flex-shrink-0 w-8 h-8 bg-primary-600 text-white rounded-full flex items-center justify-center text-sm font-semibold">
+                  {step.step}
+                </span>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    {step.title} <span className="text-gray-500 dark:text-gray-400 font-normal">{step.subtitle}</span>
                   </h3>
-                  
-                  <p className="text-sm text-primary-600 dark:text-primary-400 font-medium mb-4">
-                    {step.subtitle}
-                  </p>
-                  
-                  <p className="text-sm text-gray-600 dark:text-gray-300 mb-3">
+                  <p className="text-gray-600 dark:text-gray-300">
                     {step.description}
                   </p>
-                  
-                  <p className="text-xs font-semibold text-primary-600 dark:text-primary-400">
-                    Lift: {step.lift}
-                  </p>
                 </div>
-              </SimpleAnimatedCard>
+              </li>
             ))}
+          </ol>
+        </div>
+      </section>
+
+
+
+      {/* Case Studies Block */}
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            Proof in Practice
+          </h2>
+          
+          <div className="space-y-6 mb-8">
+            <div>
+              <strong className="text-gray-900 dark:text-white">Summit Gaming Lounge</strong>
+              <p className="text-gray-600 dark:text-gray-300">Managing reservations across multiple platforms manually → Faster reservations, deeper engagement, no extra headcount.</p>
+            </div>
+            
+            <div>
+              <strong className="text-gray-900 dark:text-white">Fetchly</strong>
+              <p className="text-gray-600 dark:text-gray-300">Executive overwhelmed by email, calendar, and task management → 15+ hours/week saved, faster decisions, clearer days.</p>
+            </div>
+            
+            <div>
+              <strong className="text-gray-900 dark:text-white">ClearFlow Water Systems</strong>
+              <p className="text-gray-600 dark:text-gray-300">Slow quote turnaround and disconnected pipeline tracking → Same-day quotes, cleaner pipeline, higher close rates.</p>
+            </div>
           </div>
+          
+          <LightButton href="/work" className="inline-block px-6 py-3">
+            View All Case Studies →
+          </LightButton>
         </div>
       </section>
 
-      {/* Technology Stack CTA Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                Curious about the technical details?
-              </h2>
-              
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-                Our technology stack includes modern infrastructure, AI frameworks, and integration tools designed for reliability and scale.
-              </p>
-              
-              <LightButton href="/services/automation-ai/technology-stack" className="px-8 py-4 text-lg">
-                Explore Technology Stack →
-              </LightButton>
-            </div>
-          </SimpleScrollReveal>
+      {/* Pricing Preview Block */}
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            Pricing & Engagement
+          </h2>
+          
+          <ul className="space-y-3 text-gray-600 dark:text-gray-300 mb-8">
+            <li>• <strong className="text-gray-900 dark:text-white">Website Foundation:</strong> from $2,000+ build + $200/mo</li>
+            <li>• <strong className="text-gray-900 dark:text-white">Automation & AI:</strong> scoped to outcomes (not per zap)</li>
+            <li>• <strong className="text-gray-900 dark:text-white">Forte Care™:</strong> unlimited site edits, monitoring, updates</li>
+          </ul>
+          
+          <LightButton href="/pricing" className="inline-block px-6 py-3">
+            See Pricing →
+          </LightButton>
         </div>
       </section>
 
-      {/* Case Studies Section */}
-      <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                Case study highlights (proof in practice)
-              </h2>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="grid md:grid-cols-2 gap-8 mb-12">
-            {caseStudies.map((study, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                  <h3 className="font-display font-bold text-xl text-gray-900 dark:text-white mb-4">
-                    {study.name}
-                  </h3>
-                  
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <span className="font-semibold text-gray-900 dark:text-white">Challenge:</span>
-                      <span className="text-gray-600 dark:text-gray-300 ml-2">{study.challenge}</span>
-                    </div>
-                    
-                    <div>
-                      <span className="font-semibold text-gray-900 dark:text-white">Solution:</span>
-                      <span className="text-gray-600 dark:text-gray-300 ml-2">{study.project}</span>
-                    </div>
-                    
-                    <div>
-                      <span className="font-semibold text-primary-600 dark:text-primary-400">Outcome:</span>
-                      <span className="text-gray-700 dark:text-gray-300 ml-2">{study.outcome}</span>
-                    </div>
-                  </div>
-                </div>
-              </SimpleAnimatedCard>
-            ))}
-          </div>
-
-          <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <p className="text-gray-500 dark:text-gray-400 mb-4">
-                <strong>Summit Gaming Lounge</strong> — Faster reservations, deeper engagement, no extra staff<br />
-                <strong>DineEase</strong> — Faster outreach, higher-quality leads, scalable expansion<br />
-                <strong>Fetchly</strong> — 15+ hours/week saved, faster decisions, streamlined productivity<br />
-                <strong>ClearFlow Water Systems</strong> — Same-day quotes, cleaner pipeline, higher close rates
-              </p>
-              <LightButton href="/work" className="px-6 py-3">
-                View All Case Studies →
-              </LightButton>
-            </div>
-          </SimpleScrollReveal>
-        </div>
-      </section>
-
-      {/* Pricing Section */}
-      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-8">
-                Pricing & engagement
-              </h2>
-              
-              <div className="max-w-3xl mx-auto text-left space-y-6">
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 border border-gray-200 dark:border-gray-600">
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <strong className="text-gray-900 dark:text-white">Website Foundation:</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> from </span>
-                        <strong className="text-primary-600 dark:text-primary-400">$2,000+</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> build (</span>
-                        <strong className="text-primary-600 dark:text-primary-400">$200/mo</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> Forte Care™). Note: e-commerce higher.</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <strong className="text-gray-900 dark:text-white">Automation & AI:</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> scoped to outcomes, priced by system scope and milestones—not # of zaps.</span>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <div>
-                        <strong className="text-gray-900 dark:text-white">Forte Care™:</strong>
-                        <span className="text-gray-600 dark:text-gray-300"> ongoing support, unlimited site edits, monitoring, updates.</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                
-                <div className="text-center">
-                  <LightButton href="/pricing" className="px-8 py-4 text-lg">
-                    See Pricing →
-                  </LightButton>
-                </div>
-              </div>
-            </div>
-          </SimpleScrollReveal>
-        </div>
-      </section>
-
-      {/* FAQs Section */}
-      <section className="py-16 lg:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                FAQs (short & clear)
-              </h2>
-            </div>
-          </SimpleScrollReveal>
-
-          <div className="max-w-3xl mx-auto space-y-4">
+      {/* FAQs Block */}
+      <section className="bg-white dark:bg-gray-900 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8">
+            Frequently Asked Questions
+          </h2>
+          
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+              <div key={index} className="border-b border-gray-200 dark:border-gray-700 pb-4">
                 <button
                   onClick={() => setExpandedFAQ(expandedFAQ === index ? null : index)}
-                  className="w-full px-6 py-4 text-left flex items-center justify-between hover:bg-gray-100 dark:hover:bg-gray-700 rounded-xl transition-colors"
+                  className="w-full text-left flex items-center justify-between py-2 hover:text-primary-600 transition-colors"
                 >
-                  <h3 className="font-semibold text-gray-900 dark:text-white">
+                  <h3 className="font-medium text-gray-900 dark:text-white">
                     {faq.question}
                   </h3>
-                  <Icon 
-                    name={expandedFAQ === index ? "up" : "down"} 
-                    className="w-5 h-5 text-gray-500 dark:text-gray-400 flex-shrink-0 ml-4"
-                  />
+                  <span className="text-gray-400 ml-4">
+                    {expandedFAQ === index ? '−' : '+'}
+                  </span>
                 </button>
                 
                 {expandedFAQ === index && (
-                  <div className="px-6 pb-4">
+                  <div className="pt-2">
                     <p className="text-gray-600 dark:text-gray-300">
                       {faq.answer}
                     </p>
@@ -627,27 +422,20 @@ export default function AutomationAIPage() {
         </div>
       </section>
 
-      {/* Final CTA Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700">
-        <div className="container mx-auto px-4 text-center">
-          <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-3xl lg:text-4xl text-white mb-8">
-              Ready to stop losing opportunities?
-            </h2>
-            
-            <p className="text-xl text-primary-100 mb-8 max-w-2xl mx-auto">
-              Start with the free Growth Snapshot. We'll show you exactly where time and money are leaking—and what to fix first.
-            </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <DarkButton 
-                href="/growth-snapshot"
-                className="bg-white text-primary-600 hover:bg-gray-50 px-8 py-4 text-lg"
-              >
-                Get My Free Growth Snapshot →
-              </DarkButton>
-            </div>
-          </SimpleScrollReveal>
+      {/* Closing CTA */}
+      <section className="bg-gray-50 dark:bg-gray-800 py-16">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+            Ready to stop losing opportunities?
+          </h2>
+          
+          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
+            Start with a free Growth Snapshot. We'll show you where time and money are leaking — and what to fix first.
+          </p>
+          
+          <DarkButton href="/growth-snapshot" className="inline-block px-6 py-3">
+            Get My Free Growth Snapshot
+          </DarkButton>
         </div>
       </section>
     </div>
