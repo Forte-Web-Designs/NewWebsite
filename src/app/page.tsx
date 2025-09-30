@@ -90,31 +90,40 @@ export default function Home() {
   // Recent outcomes data
   const recentOutcomes = [
     {
-      company: "Riverside Clinic",
-      subtitle: "Faster Patient Inquiries",
-      challenge: "New patient requests were being missed or delayed.",
-      solution: "Automated intake replies + booking reminders.",
-      outcome: "2.5× more patient inquiries",
-      details: "per month after faster replies and easier scheduling.",
-      anchor: "riverside-clinic"
+      company: "Summit Gaming Lounge",
+      subtitle: "AI-Powered Concierge System",
+      challenge: "Manual game reservations and group coordination slowed operations.",
+      solution: "Omnichannel AI concierge across SMS, Discord & Telegram.",
+      outcome: "Faster reservations, deeper member engagement,",
+      details: "and scalable growth without extra staff.",
+      anchor: "summit-gaming-lounge"
     },
     {
-      company: "ProHome Services", 
-      subtitle: "Faster Quotes, More Deals",
-      challenge: "Quotes took 3+ days, losing momentum.",
-      solution: "Same-day quote automation with follow-up nudges.",
-      outcome: "3-day → same-day turnaround",
-      details: "with a +12% higher close rate in 90 days.",
-      anchor: "prohome-services"
+      company: "DineEase", 
+      subtitle: "AI-Powered Lead Discovery",
+      challenge: "Partner restaurant outreach was slow and manual.",
+      solution: "Automated lead discovery + web crawl enrichment.",
+      outcome: "Accelerated partner onboarding, higher-quality leads,",
+      details: "and scalability into new cities.",
+      anchor: "dinease"
     },
     {
-      company: "Elite Boutique",
-      subtitle: "Revenue From Follow-Ups", 
-      challenge: "Customers browsed but didn't return.",
-      solution: "Automated follow-ups + review requests.",
-      outcome: "$18k in additional revenue",
-      details: "in 6 months, plus a steady stream of new reviews.",
-      anchor: "elite-boutique"
+      company: "Fetchly",
+      subtitle: "Executive Assistant in Slack", 
+      challenge: "Leadership drowning in emails, scheduling, and project updates.",
+      solution: "Slack-native AI assistant integrated with Gmail, Calendar, and monday.com.",
+      outcome: "15+ hours/week saved, faster decisions,",
+      details: "and streamlined team productivity.",
+      anchor: "fetchly"
+    },
+    {
+      company: "ClearFlow Water Systems",
+      subtitle: "AI-Driven Quoting & CRM Automation", 
+      challenge: "Manual quotes caused long delays and lost deals.",
+      solution: "Smart email agent, automated quoting, and CRM sync.",
+      outcome: "Faster quotes, cleaner CRM data,",
+      details: "and higher close rates.",
+      anchor: "clearflow-water-systems"
     }
   ];
 
@@ -436,13 +445,22 @@ export default function Home() {
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
                   Real Businesses. Real Results.
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 px-2">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 px-2 mb-6">
                   See how our growth systems deliver measurable outcomes across industries.
                 </p>
+                <Link 
+                  href="/case-studies"
+                  className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors group"
+                >
+                  See Our Results
+                  <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full overflow-hidden">
               {recentOutcomes.map((outcome, index) => (
                 <SimpleAnimatedCard key={index}>
                   <Link href={`/results#${outcome.anchor}`}>
@@ -485,15 +503,15 @@ export default function Home() {
 
             <SimpleScrollReveal direction="up">
               <div className="text-center px-2">
-                <a 
-                  href="/results"
+                <Link 
+                  href="/case-studies"
                   className="inline-flex items-center px-6 sm:px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base"
                 >
-                  See All Results
+                  View All Case Studies
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </SimpleScrollReveal>
           </div>
