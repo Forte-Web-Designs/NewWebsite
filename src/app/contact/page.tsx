@@ -9,8 +9,8 @@ import InteractiveMap from '@/components/InteractiveMap';
 const CalendlyWidget = lazy(() => import("@/components/CalendlyWidget"));
 
 export const metadata: Metadata = {
-  title: 'Contact Professional Web Design Team | Get Your Free Website Consultation | DFW-Based, Nationwide Service | Forte Web Designs',
-  description: 'Contact Forte Web Designs for professional web design services nationwide from our DFW headquarters. Get your free consultation, website quote, and discover how our professional website design can grow your business.',
+  title: 'Business Growth Systems Partner | Strategic Consultation | Nationwide Service | Forte Web Designs',
+  description: 'Partner with Forte Web Designs for comprehensive business growth systems. From strategic planning to digital transformation, we help businesses scale nationwide from our DFW headquarters.',
 };
 
 export default function Contact() {
@@ -43,67 +43,84 @@ export default function Contact() {
         <div className="container max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-wrap justify-center items-center gap-4 sm:gap-8 text-sm font-medium text-blue-800 dark:text-blue-200">
             <div className="flex items-center gap-2">
-              <span className="text-blue-600">🇺🇸</span>
-              USA-based Team
+              <span className="text-blue-600">🏢</span>
+              Business Growth Partner
             </div>
             <div className="flex items-center gap-2">
               <span className="text-blue-600">⚡</span>
-              24-hr Response
+              Strategic Implementation
             </div>
             <div className="flex items-center gap-2">
-              <span className="text-blue-600">✅</span>
-              100% Satisfaction Guarantee
+              <span className="text-blue-600">📈</span>
+              Measurable ROI
             </div>
           </div>
         </div>
       </section>
 
-      {/* Enhanced Trust Badge Strip */}
-      <section className="py-6 bg-gradient-to-r from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20">
+      {/* Business Growth Systems Overview */}
+      <section className="py-8 bg-gradient-to-r from-primary-50 to-blue-50 dark:from-primary-900/20 dark:to-blue-900/20">
         <div className="container max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
-              Why 25+ Growing Businesses Nationwide Trust Forte Web Designs
+          <div className="text-center mb-6">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+              Your Complete Business Growth Systems Partner
             </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 max-w-3xl mx-auto">
+              We don't just build websites—we implement comprehensive growth systems that transform how you attract, convert, and retain customers.
+            </p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
-              <div className="text-2xl mb-2">🏆</div>
-              <div className="text-sm font-semibold text-gray-900 dark:text-white">Award-Winning</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Hand-coded websites</div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-3">🎯</div>
+              <div className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Strategic Foundation</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mb-3">Market positioning • Brand strategy • Competitive analysis</div>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
-              <div className="text-2xl mb-2">🔒</div>
-              <div className="text-sm font-semibold text-gray-900 dark:text-white">Secure & Fast</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">&lt;2 second load times</div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-3">⚡</div>
+              <div className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Digital Systems</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mb-3">Website development • Lead generation • Automation</div>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
-              <div className="text-2xl mb-2">📈</div>
-              <div className="text-sm font-semibold text-gray-900 dark:text-white">Proven Results</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">2x more leads average</div>
+            <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+              <div className="text-3xl mb-3">📈</div>
+              <div className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Growth Optimization</div>
+              <div className="text-sm text-gray-600 dark:text-gray-400 mb-3">Performance tracking • ROI optimization • Scaling systems</div>
             </div>
-            <div className="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-200 dark:border-gray-700 text-center">
-              <div className="text-2xl mb-2">🤝</div>
-              <div className="text-sm font-semibold text-gray-900 dark:text-white">DFW-Based Team</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Serving Nationwide</div>
+          </div>
+          <div className="text-center">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary-100 dark:bg-primary-900/30 rounded-full text-sm font-medium text-primary-800 dark:text-primary-200">
+              <span className="text-primary-600">🚀</span>
+              Serving ambitious businesses nationwide from Dallas-Fort Worth
             </div>
           </div>
         </div>
       </section>
 
       <section className="py-12 sm:py-16 md:py-20 pb-24 sm:pb-32 relative z-10 px-4 sm:px-6 lg:px-8">
-        {/* Hero Section - Mobile Optimized */}
+        {/* Hero Section - Business Growth Focus */}
         <div className="text-center mb-8 sm:mb-12">
           <span className="text-xs sm:text-base md:text-lg lg:text-xl font-normal font-roboto flex items-center justify-center gap-1 sm:gap-2 text-primary-1000 mb-4 sm:mb-6">
             <Icon name="star" className="w-3 h-3 sm:w-4 sm:h-4 md:w-6 md:h-6" />
-            Ready to Get Started?
+            Ready to Scale Your Business?
           </span>
           <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium font-roboto leading-tight dark:text-secondary-1000 mb-4 sm:mb-6 max-w-4xl mx-auto">
-            Let's Build Something Amazing Together
+            Let's Build Your Growth Systems
           </h1>
           <p className="text-sm sm:text-base md:text-lg font-normal font-inter text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-            Ready to transform your online presence? Get started with a free 5-point website audit or schedule a strategy call.
+            Ready to implement systems that drive real business growth? Start with a strategic consultation or comprehensive business audit.
           </p>
+          
+          {/* Dual CTA Options */}
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
+            <div className="text-center">
+              <div className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Need Immediate Results?</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Strategic consultation • Growth audit • Implementation plan</div>
+            </div>
+            <div className="hidden sm:block w-px h-12 bg-gray-300 dark:bg-gray-600"></div>
+            <div className="text-center">
+              <div className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Planning a Major Project?</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Complete rebrand • System overhaul • Multi-phase implementation</div>
+            </div>
+          </div>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
@@ -114,28 +131,52 @@ export default function Contact() {
 
           {/* Booking Widget & Engaging Map */}
           <div className="space-y-8">
-            {/* Calendly Booking Widget */}
+            {/* Strategic Consultation Booking */}
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
-              <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-                Prefer to Schedule a Call?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Book a free 15-minute strategy session to discuss your project and see if we're a good fit.
-              </p>
-              <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div></div>}>
+              <div className="flex items-start gap-3 mb-4">
+                <div className="w-10 h-10 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                  <span className="text-lg">🎯</span>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
+                    Strategic Growth Consultation
+                  </h3>
+                  <p className="text-sm text-primary-600 dark:text-primary-400 font-medium">Complimentary 30-minute session</p>
+                </div>
+              </div>
+              <div className="mb-6">
+                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                  Book a strategic consultation to analyze your current systems and identify growth opportunities.
+                </p>
+                <div className="space-y-2 text-sm text-gray-600 dark:text-gray-300">
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span>
+                    Business growth assessment
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span>
+                    Custom strategy recommendations
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="text-green-600">✓</span>
+                    Implementation roadmap
+                  </div>
+                </div>
+              </div>
+              <Suspense fallback={<div className="h-96 flex items-center justify-center"><div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary-600"></div></div>}>
                 <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
               </Suspense>
             </div>
 
-            {/* Interactive Location Map */}
+            {/* Business Growth Hub */}
             <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
               <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/40 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <span className="text-2xl">🚀</span>
+                <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/40 rounded-xl flex items-center justify-center flex-shrink-0">
+                  <span className="text-2xl">🏢</span>
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-                    Serving from Grapevine, TX
+                    Business Growth Hub - Grapevine, TX
                   </h3>
                   
                   {/* Location Information */}
@@ -145,26 +186,35 @@ export default function Contact() {
                       <div>Grapevine, TX 76051</div>
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                      Supporting businesses throughout Dallas-Fort Worth and nationwide with cutting-edge web solutions.
+                      Your strategic partner for comprehensive business growth systems. Serving ambitious businesses nationwide from the heart of Dallas-Fort Worth.
                     </div>
                   </div>
                   
                   {/* Interactive Google Map */}
                   <InteractiveMap />
                   
-                  {/* Tech stats */}
+                  {/* Growth Performance Stats */}
                   <div className="mt-4 grid grid-cols-3 gap-4 text-center">
                     <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
-                      <div className="text-lg font-bold text-blue-600 dark:text-blue-400">25+</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Businesses Growing with Forte</div>
+                      <div className="text-lg font-bold text-primary-600 dark:text-primary-400">25+</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Growth Partners</div>
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
-                      <div className="text-lg font-bold text-green-600 dark:text-green-400">24hr</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Response Time</div>
+                      <div className="text-lg font-bold text-green-600 dark:text-green-400">2.5x</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Avg ROI Increase</div>
                     </div>
                     <div className="bg-gray-50 dark:bg-gray-700/50 rounded-lg p-3">
-                      <div className="text-lg font-bold text-purple-600 dark:text-purple-400">5★</div>
-                      <div className="text-xs text-gray-600 dark:text-gray-400">Client Rating</div>
+                      <div className="text-lg font-bold text-blue-600 dark:text-blue-400">90d</div>
+                      <div className="text-xs text-gray-600 dark:text-gray-400">Implementation</div>
+                    </div>
+                  </div>
+                  
+                  {/* Service Areas */}
+                  <div className="mt-4 p-3 bg-primary-50 dark:bg-primary-900/20 rounded-lg">
+                    <div className="text-sm font-medium text-gray-900 dark:text-white mb-2">🌎 Service Coverage</div>
+                    <div className="text-xs text-gray-600 dark:text-gray-400">
+                      <strong>Primary:</strong> Dallas-Fort Worth Metroplex<br/>
+                      <strong>Nationwide:</strong> Remote strategic partnerships & implementation
                     </div>
                   </div>
                 </div>
