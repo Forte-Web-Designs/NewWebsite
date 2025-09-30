@@ -1,349 +1,376 @@
-"use client";
-
-import { Icon } from "@/components/images/Icon";
+import { Metadata } from 'next';
+import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
+import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
+import DarkButton from '@/components/DarkButton';
 import Link from 'next/link';
-import Image from 'next/image';
-import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import { useState } from 'react';
-import IndustryLeadCTA from '@/components/IndustryLeadCTA';
+import { Icon } from '@/components/images/Icon';
 
-const growthSystems = [
+export const metadata: Metadata = {
+  title: 'Growth Systems That Drive Clients | Forte Web Designs',
+  description: 'Complete growth systems that turn visits into booked work—website, automation, integrations, and dashboards working together.',
+};
+
+const fourLayers = [
   {
-    id: "foundation",
-    title: "Foundation: Custom Website Design",
-    desc: "Your digital storefront where the growth system starts. Hand-coded websites built for speed, SEO, and conversions - not just pretty pictures, but lead-generating machines that work 24/7 to capture customers while you sleep.",
-    features: [
-      "Custom-coded for lightning-fast loading and SEO dominance",
-      "Mobile-first design optimized for local search and conversions", 
-      "Built-in lead capture systems and appointment booking integration",
-      "Strategic user experience designed to turn visitors into customers"
-    ],
-    pricing: "Setup $500 + $200/month",
-    linkText: "Build My Growth Foundation",
-    href: "/services/webDesign",
-    caseStudy: {
-      client: "Mike's HVAC",
-      result: "2x more service calls in 60 days",
-      icon: "🏗️"
-    }
+    id: "website-design",
+    title: "Website Design (Foundation)",
+    description: "Your digital storefront—built to convert. Hand-coded for speed, clarity, and trust so visitors become inquiries.",
+    youGet: ["fast load times", "clear messaging", "strong calls-to-action", "lead forms/booking", "analytics baseline"],
+    outcome: "more inquiries, stronger first impression, higher conversion",
+    href: "/services/web-design"
   },
   {
-    id: "growth",
-    title: "Growth Layer: Smart Automation",
-    desc: "Your growth system doesn't stop at a website. With smart automation systems, every lead is followed up instantly and booked without human effort.",
-    features: [
-      "Smart reception system to qualify leads 24/7",
-      "Automated text & email follow-up sequences",
-      "Instant calendar booking integration",
-      "Smart reminders to reduce no-shows"
-    ],
-    pricing: "Setup $1,500 + $300/month",
-    linkText: "Automate My Lead Capture",
-    href: "/services/seo",
-    caseStudy: {
-      client: "Local Law Firm",
-      result: "85% of leads now book consultations automatically",
-      icon: "🤖"
-    }
+    id: "automation",
+    title: "Smart Automation (Growth)", 
+    description: "No more slow replies or forgotten follow-ups. We add instant missed-call texts, web-form auto-responses, and quote/demo reminders that keep deals moving.",
+    youGet: ["first-touch automations", "follow-up cadences", "simple owner scorecards"],
+    outcome: "hours saved weekly, faster responses, higher show-up and reply rates",
+    href: "/services/automation-ai"
   },
   {
-    id: "scaling",
-    title: "Scaling Layer: Business Systems Integration",
-    desc: "A growth system only works if all your tools work together. We connect your website, CRM, booking, and reporting into one seamless operating system.",
-    features: [
-      "CRM setup and pipeline automation",
-      "Lead tracking dashboards and reporting",
-      "Integration with booking + payment systems",
-      "Custom workflows to prevent lost leads"
-    ],
-    pricing: "Setup $3,500 + $500/month",
-    linkText: "Scale My Growth System",
-    href: "/services/ads",
-    caseStudy: {
-      client: "Local Restaurant",
-      result: "Increased table bookings by 200% with automated system",
-      icon: "📊"
-    }
+    id: "integrations",
+    title: "Systems Integration (Scaling)",
+    description: "Connect CRM, scheduling, invoicing, phones, and forms so data flows—no double entry, no dropped balls. Add owner dashboards so you see bottlenecks at a glance.",
+    youGet: ["clean handoffs", "fewer manual steps", "one place to see leads/quotes/stuck"],
+    outcome: "fewer errors, faster cycle times, better forecasting",
+    href: "/solutions"
   },
   {
-    id: "endtoend",
+    id: "end-to-end", 
     title: "End-to-End System",
-    desc: "Complete growth system that combines website foundation, automation, integrations, and scaling capabilities. Everything you need to capture, convert, and scale your business growth.",
-    features: [
-      "Website foundation + automation + integrations + dashboards",
-      "Custom workflow development",
-      "Advanced CRM and lead management", 
-      "Priority Forte Care™ Pro support included"
-    ],
-    pricing: "Setup $7,500–$15,000+ + $800–$1,500/month",
-    linkText: "Build My End-to-End System",
-    href: "/pricing",
-    caseStudy: {
-      client: "Local Dental Practice",
-      result: "3x appointment bookings, 40% revenue increase in 4 months",
-      icon: "🚀"
-    }
-  },
-  {
-    id: "optimization",
-    title: "Ongoing Forte Care™",
-    desc: "Growth systems need ongoing optimization to keep generating results. Forte Care™ isn't just maintenance — it's proactive growth support.",
-    features: [
-      "24/7 system monitoring and support",
-      "System optimization and A/B testing for conversions",
-      "Monthly optimization of automations & flows",
-      "Growth insights and reporting delivered monthly"
-    ],
-    pricing: "Starting at $300/month",
-    linkText: "Learn About Forte Care™",
-    href: "/services/socialMedia",
-    caseStudy: {
-      client: "Local Fitness Studio",
-      result: "Consistent 15% month-over-month growth",
-      icon: "🛡️"
-    }
-  },
-  {
-    id: "partnerships",
-    title: "Agency Partnership Program",
-    desc: "Power your agency with Forte-built growth systems under your brand. We handle the technical complexity while you focus on client relationships. Perfect for marketing agencies ready to offer complete solutions.",
-    features: [
-      "White-label growth systems delivered under your agency brand",
-      "100% U.S.-based development team with direct communication",
-      "Flexible workflow integration and client handoff protocols",
-      "Ongoing training and support to help you sell and deliver systems"
-    ],
-    pricing: "Partner Pricing Available",
-    linkText: "Partner With Forte",
-    href: "/services/white-label",
-    caseStudy: {
-      client: "Blueprint Creative Co.",
-      result: "Expanded service offering, 3x revenue growth",
-      icon: "🤝"
-    }
-  },
-  {
-    id: "audit",
-    title: "Free Growth System Audit",
-    desc: "Discover exactly what's costing you leads and customers. Get a detailed analysis of your current digital presence and a custom roadmap for building a growth system that actually drives results.",
-    features: [
-      "Complete lead generation system analysis",
-      "Conversion optimization opportunities assessment",
-      "Mobile and local search performance review",
-      "Custom growth system roadmap and implementation plan"
-    ],
-    pricing: "100% Free",
-    linkText: "Get My Free Growth Audit",
-    href: "/checkup",
-    caseStudy: {
-      client: "Local Contractor",
-      result: "Identified $50k in missed revenue opportunities",
-      icon: "🔍"
-    }
+    description: "All layers planned and implemented as one growth engine with clear KPIs and weekly scorecards.",
+    youGet: ["foundation + automation + integrations + dashboards", "delivered in phases"],
+    outcome: "measurable lift across intake speed, quote turnaround, follow-through, and revenue",
+    href: "/contact?type=end-to-end"
   }
 ];
 
-export default function ServicePage() {
-  const [activeTab, setActiveTab] = useState('foundation');
+const outcomes = [
+  "First response time: hours → minutes",
+  "Quote/checkout speed: multi-day → same-day (or fewer steps)", 
+  "Follow-up coverage: ad-hoc → 90–100%",
+  "Owner visibility: one dashboard for leads, quotes, and stuck items",
+  "Time saved: ~5–20 hours/week across the team"
+];
 
+const processSteps = [
+  {
+    step: "1",
+    title: "Audit (free)",
+    description: "we identify 3–4 biggest leaks and give you two quick wins."
+  },
+  {
+    step: "2",
+    title: "Pilot (2–4 weeks)", 
+    description: "instant replies + follow-ups or a focused integration."
+  },
+  {
+    step: "3",
+    title: "Scale (4–8 weeks)",
+    description: "extend to quotes, handoffs, dashboards tied to KPIs."
+  },
+  {
+    step: "4", 
+    title: "Operate",
+    description: "Forte Care™ maintains and improves the system as you grow."
+  }
+];
+
+const extensions = [
+  {
+    title: "Forte Care™ Optimization",
+    description: "ongoing monitoring, updates, and improvements (site + automations)",
+    href: "/forte-care"
+  },
+  {
+    title: "Agency Partnership",
+    description: "white-label/partner builds for agencies with client delivery needs",
+    href: "/agency-partnership"
+  },
+  {
+    title: "Multi-Location/Franchise",
+    description: "routing, tagging, and roll-up dashboards at org level",
+    href: "/contact"
+  }
+];
+
+const proofCases = [
+  {
+    client: "Summit Gaming Lounge",
+    outcome: "Omnichannel concierge → faster reservations, deeper engagement",
+    href: "/case-studies/summit-gaming-lounge"
+  },
+  {
+    client: "MetroEats", 
+    outcome: "Automated partner sourcing → faster outreach, higher lead quality",
+    href: "/case-studies/metroeats"
+  },
+  {
+    client: "Fetchly",
+    outcome: "Slack exec assistant → ~15 hrs/week saved, faster decisions", 
+    href: "/case-studies/fetchly"
+  },
+  {
+    client: "ClearWater Systems",
+    outcome: "Email-to-quote + CRM sync → same-day quotes, higher close rate",
+    href: "/case-studies/clearwater-systems"
+  }
+];
+
+export default function ServicesPage() {
   return (
-    <div className="relative">
-      <SectionBackgroundAnimation />
-      <div className="relative z-10">
-        {/* Hero Section */}
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-6xl">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      {/* Hero Section */}
+      <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <SimpleScrollReveal direction="up">
             <div className="text-center">
-              <div className="flex items-center justify-center gap-1 sm:gap-2 mb-4 sm:mb-6">
-                <Image src="/images/shared/icons/star.svg" alt="" width={16} height={16} className="w-3 h-3 sm:w-4 sm:h-4" />
-                <span className="text-[#8D9DFF] text-xs sm:text-sm md:text-base lg:text-lg font-normal">25 Business growing with Forte</span>
-              </div>
-              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight text-gray-900 dark:text-white leading-tight mb-4 sm:mb-6">
-                Growth Systems That Actually Drive Clients
+              <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white mb-6">
+                Growth Systems That Give You Time *and* Clients
               </h1>
-              <p className="text-sm sm:text-base md:text-lg leading-relaxed text-gray-600 dark:text-gray-400 max-w-4xl mx-auto">
-                Stop throwing money at marketing that doesn't work. Get a complete growth system engineered to generate leads, book appointments, and drive revenue. Four integrated layers that work together to turn your website into a client-generating machine.
+              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
+                Stop gambling on one-off tactics. We design complete, measurable systems that capture leads, book appointments, and turn work into revenue—without adding busywork to your day.
+              </p>
+              
+              {/* Primary CTAs */}
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                <Link href="/growth-audit">
+                  <DarkButton className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto">
+                    Get My Free Growth Audit →
+                  </DarkButton>
+                </Link>
+                <a 
+                  href="#how-it-works"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto"
+                >
+                  See How It Works →
+                </a>
+              </div>
+              
+              {/* Trust band */}
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                25+ businesses growing with Forte • DFW-based • 24-hr response • 4.9★ reviews
               </p>
             </div>
-          </div>
-        </section>
+          </SimpleScrollReveal>
+        </div>
+      </section>
 
-        {/* Tabbed Services Section */}
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-7xl">
-            
-            {/* Tab Navigation */}
-            <div className="flex flex-wrap justify-center gap-2 mb-12 bg-gray-100 dark:bg-gray-800 rounded-xl p-2">
-              {growthSystems.map((service) => (
-                <button
-                  key={service.id}
-                  onClick={() => setActiveTab(service.id)}
-                  className={`px-4 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    activeTab === service.id
-                      ? 'bg-white dark:bg-gray-700 text-primary-700 dark:text-primary-300 shadow-md'
-                      : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200'
-                  }`}
-                >
-                  {service.title}
-                </button>
-              ))}
-            </div>
-
-            {/* Active Service Display */}
-            {growthSystems.map((service) => (
-              activeTab === service.id && (
-                <div key={service.id} className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-                  {/* Service Details */}
-                  <div className="space-y-6">
+      {/* The Four Layers */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-4">
+              The Four Layers (work together, or choose where to start)
+            </h2>
+          </SimpleScrollReveal>
+          
+          <div className="grid md:grid-cols-2 gap-8 mt-12">
+            {fourLayers.map((layer, index) => (
+              <SimpleAnimatedCard key={index}>
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 sm:p-8 shadow-lg h-full">
+                  <h3 className="font-display font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-4">
+                    {index + 1}) {layer.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                    {layer.description}
+                  </p>
+                  
+                  <div className="space-y-4 mb-6">
                     <div>
-                      <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
-                        {service.title}
-                      </h2>
-                      <p className="text-lg text-gray-600 dark:text-gray-400 leading-relaxed">
-                        {service.desc}
-                      </p>
+                      <span className="font-semibold text-gray-900 dark:text-white">You get:</span>
+                      <span className="text-gray-700 dark:text-gray-300 ml-2">
+                        {layer.youGet.join(", ")}.
+                      </span>
                     </div>
-
-                    {/* Features List */}
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
-                      <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4">What's Included:</h3>
-                      <ul className="space-y-3">
-                        {service.features.map((feature, index) => (
-                          <li key={index} className="flex items-start gap-3">
-                            <span className="text-green-500 mt-1">✓</span>
-                            <span className="text-gray-700 dark:text-gray-300">{feature}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Pricing & CTA */}
-                    <div className="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 border border-primary-200 dark:border-primary-800">
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-2xl font-bold text-primary-700 dark:text-primary-300">
-                          {service.pricing}
-                        </span>
-                        <span className="text-sm text-primary-600 dark:text-primary-400 bg-primary-100 dark:bg-primary-800 px-3 py-1 rounded-full">
-                          No setup fees
-                        </span>
-                      </div>
-                      <Link
-                        href={service.href}
-                        className="inline-flex items-center gap-3 bg-primary-600 hover:bg-primary-700 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-200 w-full justify-center"
-                      >
-                        {service.linkText}
-                        <Icon name="rightarrow" alt="right arrow icon" className="w-2 h-3" />
-                      </Link>
+                    <div>
+                      <span className="font-semibold text-gray-900 dark:text-white">Outcome:</span>
+                      <span className="text-gray-700 dark:text-gray-300 ml-2">
+                        {layer.outcome}.
+                      </span>
                     </div>
                   </div>
-
-                  {/* Case Study & Visual */}
-                  <div className="space-y-6">
-                    {/* Case Study */}
-                    <div className="bg-gradient-to-br from-green-50 to-blue-50 dark:from-green-900/20 dark:to-blue-900/20 rounded-xl p-8 border border-green-200 dark:border-green-800">
-                      <div className="text-center mb-6">
-                        <div className="text-6xl mb-4">{service.caseStudy.icon}</div>
-                        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-                          Real Results
-                        </h3>
-                      </div>
-                      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 text-center">
-                        <div className="text-lg font-medium text-gray-700 dark:text-gray-300 mb-2">
-                          {service.caseStudy.client}
-                        </div>
-                        <div className="text-2xl font-bold text-green-600 dark:text-green-400">
-                          {service.caseStudy.result}
-                        </div>
-                      </div>
-                    </div>
-
-                    {/* Service Benefits */}
-                    <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                      <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                        Your Growth Systems Partner
-                      </h3>
-                      <div className="space-y-3 text-sm">
-                        <div className="flex items-center gap-3">
-                          <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                          <span className="text-gray-600 dark:text-gray-400">Systems engineered for measurable results</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                          <span className="text-gray-600 dark:text-gray-400">All layers integrate seamlessly for maximum ROI</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                          <span className="text-gray-600 dark:text-gray-400">Continuous optimization via Forte Care™</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                          <span className="w-2 h-2 bg-primary-500 rounded-full"></span>
-                          <span className="text-gray-600 dark:text-gray-400">Lead generation & revenue growth guarantee</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  
+                  <Link 
+                    href={layer.href}
+                    className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
+                  >
+                    {layer.id === 'website-design' && 'Explore Website Design →'}
+                    {layer.id === 'automation' && 'Explore Automation →'}
+                    {layer.id === 'integrations' && 'Explore Integrations →'}
+                    {layer.id === 'end-to-end' && 'Talk About an End-to-End Build →'}
+                  </Link>
                 </div>
-              )
+              </SimpleAnimatedCard>
             ))}
           </div>
-        </section>
+        </div>
+      </section>
 
-        {/* Growth System Extensions */}
-        <section className="py-12 sm:py-16 md:py-20 bg-gray-50 dark:bg-gray-900 px-4 sm:px-6 lg:px-8">
-          <div className="container mx-auto max-w-6xl">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Growth System Extensions
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-400">
-                Advanced solutions that supercharge your growth system performance
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-3xl">🛡️</span>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    Forte Care™ Optimization
-                  </h3>
+      {/* What You Can Expect */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
+              What You Can Expect (30–90 days)
+            </h2>
+          </SimpleScrollReveal>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
+            {outcomes.map((outcome, index) => (
+              <SimpleAnimatedCard key={index}>
+                <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-6 text-center h-full">
+                  <div className="flex items-start gap-3 text-left">
+                    <Icon name="check" className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
+                    <span className="text-gray-800 dark:text-gray-200 text-sm sm:text-base">{outcome}</span>
+                  </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  24/7 growth system monitoring, A/B testing, and continuous optimization to maximize leads and conversions.
-                </p>
-                <Link href="/forte-care" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
-                  Learn More →
-                </Link>
-              </div>
-
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700">
-                <div className="flex items-center gap-4 mb-4">
-                  <span className="text-3xl">🏢</span>
-                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                    Enterprise Growth Systems
-                  </h3>
-                </div>
-                <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Custom multi-location growth systems for franchises and large organizations with complex lead routing needs.
-                </p>
-                <Link href="/contact" className="text-primary-600 dark:text-primary-400 hover:underline font-medium">
-                  Contact Us →
-                </Link>
-              </div>
-            </div>
+              </SimpleAnimatedCard>
+            ))}
           </div>
-        </section>
 
-        {/* Industry Lead CTA */}
-        <IndustryLeadCTA 
-          industry="services"
-          formName="Growth System Strategy Session"
-          mobileCtaText="Ready to build your growth system?"
-          mobileBgGradient="bg-gradient-to-r from-blue-600 to-purple-600"
-          title="Let's Engineer Your Growth System"
-          subtitle="Get a custom growth system roadmap designed to generate leads, book appointments, and drive measurable revenue growth."
-        />
-      </div>
+          <SimpleScrollReveal direction="up">
+            <div className="text-center">
+              <Link href="/growth-audit">
+                <DarkButton className="px-6 py-3">
+                  Get My Free Growth Audit →
+                </DarkButton>
+              </Link>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* How We Work */}
+      <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <SimpleScrollReveal direction="up">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
+              How We Work (simple, fast, practical)
+            </h2>
+          </SimpleScrollReveal>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+            {processSteps.map((step, index) => (
+              <SimpleAnimatedCard key={index}>
+                <div className="text-center">
+                  <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
+                    {step.step}
+                  </div>
+                  <h3 className="font-display font-semibold text-lg text-gray-900 dark:text-white mb-3">
+                    {step.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    {step.description}
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Growth System Extensions */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <SimpleScrollReveal direction="up">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
+              Growth System Extensions
+            </h2>
+          </SimpleScrollReveal>
+          
+          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {extensions.map((extension, index) => (
+              <SimpleAnimatedCard key={index}>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center h-full">
+                  <h3 className="font-display font-semibold text-lg text-gray-900 dark:text-white mb-4">
+                    {extension.title}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+                    {extension.description}
+                  </p>
+                  <Link 
+                    href={extension.href}
+                    className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold text-sm"
+                  >
+                    {extension.title === 'Forte Care™ Optimization' && 'Learn About Forte Care™ →'}
+                    {extension.title === 'Agency Partnership' && 'Agency Partnership →'}
+                    {extension.title === 'Multi-Location/Franchise' && 'Contact Us →'}
+                  </Link>
+                </div>
+              </SimpleAnimatedCard>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Proof in Practice */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <SimpleScrollReveal direction="up">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
+              Proof in Practice
+            </h2>
+          </SimpleScrollReveal>
+          
+          <div className="space-y-4 mb-8">
+            {proofCases.map((case_, index) => (
+              <SimpleAnimatedCard key={index}>
+                <Link href={case_.href}>
+                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow group">
+                    <div className="flex items-start gap-4">
+                      <div className="flex-1">
+                        <h3 className="font-display font-semibold text-lg text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                          {case_.client}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-300">
+                          {case_.outcome}
+                        </p>
+                      </div>
+                      <Icon name="arrow-right" className="w-5 h-5 text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors" />
+                    </div>
+                  </div>
+                </Link>
+              </SimpleAnimatedCard>
+            ))}
+          </div>
+
+          <SimpleScrollReveal direction="up">
+            <div className="text-center">
+              <Link 
+                href="/case-studies"
+                className="inline-flex items-center px-6 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              >
+                See All Case Studies →
+              </Link>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+          <SimpleScrollReveal direction="up">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-white mb-8">
+              Ready to turn your site into a client-generating system?
+            </h2>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link href="/growth-audit">
+                <button className="bg-white text-primary-600 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors w-full sm:w-auto">
+                  Get My Free Growth Audit →
+                </button>
+              </Link>
+              <a 
+                href="/contact"
+                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto"
+              >
+                Talk to Us →
+              </a>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
     </div>
   );
 }

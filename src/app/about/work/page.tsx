@@ -62,15 +62,15 @@ export default function WorkPage() {
                 Omnichannel Message Processing Flow
               </h3>
               <p className="text-gray-600 dark:text-gray-300">
-                This diagram shows the sophisticated AI routing system that handles member communications across SMS, Discord, and Telegram platforms with intelligent user recognition and automated responses.
+                This comprehensive flow diagram shows the complete omnichannel message processing pipeline, from multi-platform input through intelligent user recognition, MCP database operations, and contextual response generation across SMS, Discord, and Telegram.
               </p>
             </div>
             
             {/* Flow Chart Image */}
             <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 overflow-x-auto">
               <img 
-                src="/images/case-studies/omnichannel-message-flow.png"
-                alt="TableTop AI Concierge - Omnichannel Message Processing Flow"
+                src="/images/case-studies/summit-gaming-omnichannel-flow.png"
+                alt="TableTop AI Concierge - Omnichannel Message Processing Flow with SMS, Discord, and Telegram Integration"
                 className="w-full h-auto mx-auto"
                 style={{ minWidth: '1200px' }}
               />

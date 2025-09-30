@@ -95,6 +95,106 @@ export default function ClearWaterSystemsCaseStudy() {
         </div>
       </section>
 
+      {/* AI System Architecture Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              AI Automation System Architecture
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              The system integrates vector knowledge bases, intelligent email processing, and real-time CRM automation 
+              through a sophisticated n8n workflow architecture.
+            </p>
+
+            <div className="grid lg:grid-cols-2 gap-12 mb-12">
+              {/* Vector Knowledge Base & Processing */}
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  Vector Knowledge Base Processing
+                </h3>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+                  <img 
+                    src="/images/case-studies/Screenshot 2025-09-30 122730.png"
+                    alt="ClearWater Systems Vector Knowledge Base Architecture with n8n and Supabase"
+                    className="w-full h-auto mx-auto"
+                    style={{ minWidth: '600px' }}
+                  />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  n8n native node architecture processing files through AWS EC2, aggregating data, and storing 
+                  in Supabase Vector Knowledge Store for intelligent retrieval.
+                </p>
+              </div>
+
+              {/* Central Agent System */}
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  Central Agent & Quote Automation
+                </h3>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+                  <img 
+                    src="/images/case-studies/tabletop (1).webp"
+                    alt="ClearWater Systems Central Agent with LLM Text Classifier and Quote Generation"
+                    className="w-full h-auto mx-auto"
+                    style={{ minWidth: '600px' }}
+                  />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  Central Agent system with LLM Text Classifier routing emails to specialized quote generation, 
+                  CRM integration, and automated customer communications.
+                </p>
+              </div>
+            </div>
+
+            {/* System Integration Features */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-cyan-100 dark:bg-cyan-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-cyan-600 dark:text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Vector Knowledge Store
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  RAG-enabled retrieval system with Supabase vector storage for intelligent product and pricing information access
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Intelligent Classification
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  LLM-powered email classification automatically routes inquiries to appropriate response workflows
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Real-Time CRM Integration
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Automated quote generation with live shipping data integration and CRM record creation and updates
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Project Overview Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

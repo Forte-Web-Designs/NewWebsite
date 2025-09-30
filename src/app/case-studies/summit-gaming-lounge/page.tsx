@@ -55,6 +55,82 @@ export default function SummitGamingLoungeCaseStudy() {
         </div>
       </section>
 
+      {/* Omnichannel Message Processing Architecture */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              Omnichannel Message Processing Flow
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              The system processes messages from SMS, Discord, and Telegram through intelligent routing, 
+              user recognition, and automated response generation with full conversation context.
+            </p>
+
+            {/* Main Flow Diagram */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 mb-12">
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-6 overflow-x-auto">
+                <img 
+                  src="/images/case-studies/summit-gaming-omnichannel-flow.png"
+                  alt="Summit Gaming Lounge TableTop AI Concierge - Complete Omnichannel Message Processing Flow"
+                  className="w-full h-auto mx-auto"
+                  style={{ minWidth: '1200px' }}
+                />
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-6">
+                Complete message processing pipeline from multi-platform input through intelligent routing, 
+                MCP database operations, and contextual response generation.
+              </p>
+            </div>
+
+            {/* Flow Components */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Multi-Platform Intake
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Unified processing of SMS, Discord, and Telegram messages with platform-specific optimizations and formatting
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Intelligent User Recognition
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  AI-powered identification of existing members vs. new users with cross-platform profile linking and routing
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  MCP-Powered Operations
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Dynamic database operations through Model Context Protocol with real-time reservations and group coordination
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Project Overview Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

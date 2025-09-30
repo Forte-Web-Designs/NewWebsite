@@ -117,6 +117,139 @@ export default function FetchlyCaseStudy() {
         </div>
       </section>
 
+      {/* AI Workflow Architecture Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              AI Workflow Architecture
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              The system operates through multiple specialized AI workflows that handle different aspects of executive assistance, 
+              all integrated seamlessly within Slack.
+            </p>
+
+            <div className="grid lg:grid-cols-2 gap-12 mb-12">
+              {/* Morning Briefing Workflow */}
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  Morning Briefing System
+                </h3>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+                  <img 
+                    src="/images/case-studies/fetchly-morning-briefing.png"
+                    alt="Fetchly Morning Briefing AI Workflow - 5am Trigger with Google Calendar, Monday.com, LLM and Slack"
+                    className="w-full h-auto mx-auto"
+                    style={{ minWidth: '500px' }}
+                  />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  Simple 5:00 AM triggered workflow that fetches calendar events and Monday.com tasks, 
+                  processes them through LLM for summarization, and delivers to Slack.
+                </p>
+              </div>
+
+              {/* Personal Assistant Workflow */}
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  Personal Assistant Agent
+                </h3>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+                  <img 
+                    src="/images/case-studies/fetchly-personal-assistant.png"
+                    alt="Fetchly Personal Assistant Main Agent with Calendar, Monday.com and Google Contacts Subworkflows"
+                    className="w-full h-auto mx-auto"
+                    style={{ minWidth: '500px' }}
+                  />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  Main Agent orchestrates three specialized subworkflows: Calendar Agent for event management, 
+                  Monday.com Agent for task coordination, and Google Contacts Agent for relationship management.
+                </p>
+              </div>
+            </div>
+
+            {/* Inbox Manager Workflow */}
+            <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6 mb-12">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                Intelligent Inbox Management System
+              </h3>
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+                <img 
+                  src="/images/case-studies/fetchly-inbox-manager.png"
+                  alt="Fetchly Inbox Manager Complex Email Processing Workflow with Multiple Decision Paths"
+                  className="w-full h-auto mx-auto"
+                  style={{ minWidth: '800px' }}
+                />
+              </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center mb-4">
+                  Complex email processing workflow with intelligent classification, multiple decision paths, 
+                  automated response generation, and sophisticated routing based on email content and context.
+                </p>              {/* Email Labeling Component */}
+              <div className="flex justify-center">
+                <div className="bg-blue-50 dark:bg-blue-900/20 rounded-lg p-4 max-w-xs">
+                  <div className="text-center">
+                    <img 
+                      src="/images/case-studies/Screenshot 2025-09-30 122608.png"
+                      alt="Email Labeling as Billing Component"
+                      className="w-full h-auto mx-auto mb-2"
+                    />
+                    <p className="text-xs text-gray-600 dark:text-gray-400">
+                      Automated email categorization with intelligent labeling system
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Workflow Features Grid */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Proactive Intelligence
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Daily briefings and automated insights delivered before the workday begins
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Multi-Agent Coordination
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Specialized AI agents work together to handle complex administrative tasks
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Intelligent Automation
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Smart email processing, categorization, and response generation with context awareness
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Implementation Phases Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

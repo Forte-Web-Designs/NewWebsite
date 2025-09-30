@@ -97,6 +97,121 @@ export default function SummitSupplyChainCaseStudy() {
         </div>
       </section>
 
+      {/* EP2 Platform Architecture Section */}
+      <section className="py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+              EP2 Platform Architecture
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+              The AI-Enabled Procurement Analytics Platform consists of three specialized agents working together to provide comprehensive supplier intelligence and risk management.
+            </p>
+
+            <div className="grid lg:grid-cols-3 gap-8 mb-12">
+              {/* Revenue at Risk Agent */}
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  Revenue at Risk Agent
+                </h3>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+                  <img 
+                    src="/images/case-studies/ph1.png"
+                    alt="EP2 Revenue at Risk Agent Architecture"
+                    className="w-full h-auto mx-auto"
+                    style={{ minWidth: '400px' }}
+                  />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  Monitors critical supplier metrics and automatically escalates revenue-threatening issues to stakeholders.
+                </p>
+              </div>
+
+              {/* Database Chat Agent */}
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  Database Chat Agent
+                </h3>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+                  <img 
+                    src="/images/case-studies/ph2.png"
+                    alt="EP2 Database Chat Agent Architecture"
+                    className="w-full h-auto mx-auto"
+                    style={{ minWidth: '400px' }}
+                  />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  Enables natural language queries against procurement databases with intelligent SQL generation and result interpretation.
+                </p>
+              </div>
+
+              {/* Company Report Agent */}
+              <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-6">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  Company Report Agent
+                </h3>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 overflow-x-auto mb-4">
+                  <img 
+                    src="/images/case-studies/ph3.png"
+                    alt="EP2 Company Report Agent Architecture"
+                    className="w-full h-auto mx-auto"
+                    style={{ minWidth: '400px' }}
+                  />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center">
+                  Generates comprehensive supplier performance reports with automated analysis and actionable recommendations.
+                </p>
+              </div>
+            </div>
+
+            {/* Integration Features */}
+            <div className="grid md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v3m0 0v3m0-3h3m-3 0H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Proactive Monitoring
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Continuous supplier risk assessment with automated alerts and escalation protocols
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Natural Language Interface
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Query complex procurement data using conversational language instead of technical SQL commands
+                </p>
+              </div>
+              
+              <div className="text-center">
+                <div className="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mx-auto mb-4">
+                  <svg className="w-8 h-8 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 002-2z" />
+                  </svg>
+                </div>
+                <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Intelligent Reporting
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-300">
+                  Automated generation of comprehensive supplier reports with predictive insights and recommendations
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Project Overview Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">

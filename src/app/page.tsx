@@ -99,13 +99,13 @@ export default function Home() {
       anchor: "summit-gaming-lounge"
     },
     {
-      company: "DineEase", 
+      company: "MetroEats", 
       subtitle: "AI-Powered Lead Discovery",
       challenge: "Partner restaurant outreach was slow and manual.",
       solution: "Automated lead discovery + web crawl enrichment.",
       outcome: "Accelerated partner onboarding, higher-quality leads,",
       details: "and scalability into new cities.",
-      anchor: "dinease"
+      anchor: "metroeats"
     },
     {
       company: "Fetchly",
@@ -117,13 +117,13 @@ export default function Home() {
       anchor: "fetchly"
     },
     {
-      company: "ClearFlow Water Systems",
+      company: "ClearWater Systems",
       subtitle: "AI-Driven Quoting & CRM Automation", 
       challenge: "Manual quotes caused long delays and lost deals.",
       solution: "Smart email agent, automated quoting, and CRM sync.",
       outcome: "Faster quotes, cleaner CRM data,",
       details: "and higher close rates.",
-      anchor: "clearflow-water-systems"
+      anchor: "clearwater-systems"
     }
   ];
 

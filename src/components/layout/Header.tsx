@@ -119,7 +119,6 @@ export default function Header() {
   const servicesDropdownItems = [
     { label: 'Website Design', href: '/services/web-design' },
     { label: 'Automation & AI', href: '/services/automation-ai' },
-    { label: 'Business Systems', href: '/services/business-systems' },
     { label: 'Forte Care™', href: '/services/forte-care' },
     { label: 'Agency Partnership', href: '/services/agency-partnership' },
     { label: 'Free Growth Audit', href: '/growth-audit' },
@@ -170,14 +169,10 @@ export default function Header() {
   // About Us dropdown (renamed from Company) - Combined with additional info
   const aboutDropdownItems = [
     { label: 'About Us', href: '/about' },
-    { label: 'Our Work', href: '/about/work' },
     { label: 'Blog', href: '/blog' }
   ];
 
-  // Pricing dropdown
-  const pricingDropdownItems = [
-    { label: 'View All Plans', href: '/pricing' }
-  ];
+
 
   // Don't render theme-dependent content until mounted
   if (!mounted) {
@@ -250,16 +245,7 @@ export default function Header() {
                 }
               />
 
-              {/* Pricing Dropdown */}
-              <Dropdown
-                items={pricingDropdownItems}
-                width="200px"
-                trigger={
-                  <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/pricing" showIcon={true}>Pricing</HeaderLink>
-                  </div>
-                }
-              />
+              <HeaderLink href="/pricing">Pricing</HeaderLink>
               
               <Dropdown
                 items={aboutDropdownItems}
@@ -728,28 +714,18 @@ export default function Header() {
                   </MobileExpandableMenu>
 
                   {/* Pricing */}
-                  <MobileExpandableMenu
-                    title="Pricing"
-                    isActive={pathname.startsWith('/pricing') || pathname.startsWith('/ecosystem') || pathname.startsWith('/contact')}
-                  >
-                    <div className="pl-6 space-y-3">
-                      {pricingDropdownItems.map((item) => (
-                        <div key={item.href} className="flex items-center justify-between w-full">
-                          <Link
-                            href={item.href}
-                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
-                              }`}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {item.label}
-                          </Link>
-                          {pathname === item.href && (
-                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
-                          )}
-                        </div>
-                      ))}
-                    </div>
-                  </MobileExpandableMenu>
+                  <div className="flex items-center justify-between w-full">
+                    <Link
+                      href="/pricing"
+                      className={`text-2xl block py-4 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      Pricing
+                    </Link>
+                    {pathname === '/pricing' && (
+                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                    )}
+                  </div>
 
                   {/* About Us */}
                   <MobileExpandableMenu

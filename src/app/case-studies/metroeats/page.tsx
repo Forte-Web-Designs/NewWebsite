@@ -73,13 +73,13 @@ export default function MetroEatsCaseStudy() {
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 overflow-x-auto">
                   <img 
                     src="/images/case-studies/metroeats-architecture.png"
-                    alt="MetroEats Lead Discovery System Architecture - 3 Phase Integration"
+                    alt="MetroEats 3-Phase Lead Discovery System - Google Search API, FireCrawl, and React Frontend with n8n Backend"
                     className="w-full h-auto mx-auto"
                     style={{ minWidth: '800px' }}
                   />
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-4">
-                  The system integrates three phases: Lead Discovery (Google Search API), FireCrawl enrichment, and React frontend - all connected through a central n8n backend with Google Sheets database.
+                  The 3-phase architecture: Phase 1 (Google Search API) discovers restaurant leads, Phase 2 (Self-hosted FireCrawl) enriches contact data, and Phase 3 (React TS Frontend with Qupons User) provides the interface - all orchestrated by the central n8n backend with Google Sheets database.
                 </p>
               </div>
               
