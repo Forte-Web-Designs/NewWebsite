@@ -1,10 +1,10 @@
 import { Metadata } from 'next';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import { PricingPage } from '@/components/pricing-updated';
+import { PricingPage } from '@/components/pricing-solutions';
 
 export const metadata: Metadata = {
-  title: 'Simple, Transparent Pricing | Growth System Layers | Forte Web Designs',
-  description: 'Transparent Growth System pricing for Dallas Fort Worth businesses. Start with Foundation, add Growth and Scaling layers. Custom websites, smart automation, business systems integration.',
+  title: 'Simple, Transparent Pricing Built for Growth | Forte Web Designs',
+  description: 'Solutions-based pricing that scales with your business. Website Foundation from $2,000. Growth Systems $3.5K-$7.5K. End-to-End Systems $7.5K-$15K+. Pricing reflects project scope and outcomes.',
 };
 
 export default function Pricing() {

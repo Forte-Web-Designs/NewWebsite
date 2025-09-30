@@ -66,17 +66,17 @@ const growthSystems = [
     }
   },
   {
-    id: "prosystems",
-    title: "Pro Systems: All Layers",
-    desc: "Get Foundation + Growth + Scaling layers bundled together for maximum ROI. Complete growth system that turns your business into a lead-generating machine with priority Forte Care™ support.",
+    id: "endtoend",
+    title: "End-to-End System",
+    desc: "Complete growth system that combines website foundation, automation, integrations, and scaling capabilities. Everything you need to capture, convert, and scale your business growth.",
     features: [
-      "Foundation website + Growth automation + Scaling integration",
-      "Priority Forte Care™ Pro support included",
-      "Fastest path to results with best ROI",
-      "Complete business growth system in one package"
+      "Website foundation + automation + integrations + dashboards",
+      "Custom workflow development",
+      "Advanced CRM and lead management", 
+      "Priority Forte Care™ Pro support included"
     ],
-    pricing: "Setup $4,500 + $800/month",
-    linkText: "Get My Pro System",
+    pricing: "Setup $7,500–$15,000+ + $800–$1,500/month",
+    linkText: "Build My End-to-End System",
     href: "/pricing",
     caseStudy: {
       client: "Local Dental Practice",

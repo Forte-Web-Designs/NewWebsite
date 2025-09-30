@@ -528,12 +528,12 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 overflow-hidden">
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🌐</div>
                   <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
-                    Web Design (Foundation)
+                    Web Design<br /><span className="whitespace-nowrap">(Foundation)</span>
                   </h3>
                   <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                     Give customers a reason to say yes.
@@ -548,10 +548,10 @@ export default function Home() {
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🤖</div>
                   <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
-                    Automation & AI (Efficiency)
+                    Smart Automation<br /><span className="whitespace-nowrap">(Efficiency)</span>
                   </h3>
                   <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                     Work smarter, not harder.
@@ -566,10 +566,10 @@ export default function Home() {
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">📊</div>
                   <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
-                    Dashboards & Scaling (Clarity)
+                    Dashboards & Scaling<br /><span className="whitespace-nowrap">(Clarity)</span>
                   </h3>
                   <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                     Know exactly what's working — and what's not.
@@ -584,10 +584,10 @@ export default function Home() {
               </SimpleAnimatedCard>
 
               <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col">
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">⚙️</div>
                   <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
-                    Forte Care™ (Upkeep)
+                    Forte Care™<br /><span className="whitespace-nowrap">(Upkeep)</span>
                   </h3>
                   <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                     Stay fast, secure, and ahead of competitors.
