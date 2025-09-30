@@ -153,7 +153,7 @@ export default function TrustedCompaniesCarousel() {
                     style={{
                       width: 'auto',
                       height: 'auto',
-                      maxWidth: '100%',
+                      maxWidth: company.name === 'AliExpress' && itemWidth < 180 ? '85%' : '100%',
                       maxHeight: '100%'
                     }}
                   />
