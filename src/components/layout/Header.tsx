@@ -117,8 +117,8 @@ export default function Header() {
 
   // Growth Systems Partner dropdown structure
   const servicesDropdownItems = [
+    { label: 'AI Automation', href: '/services/automation-ai' },
     { label: 'Website Design', href: '/services/web-design' },
-    { label: 'Automation & AI', href: '/services/automation-ai' },
     { label: 'Forte Care™', href: '/services/forte-care' },
     { label: 'Agency Partnership', href: '/services/agency-partnership' },
     { label: 'Free Growth Audit', href: '/growth-audit' },
@@ -141,6 +141,15 @@ export default function Header() {
         { label: 'Frisco', href: '/locations/texas/frisco' },
         { label: 'Arlington', href: '/locations/texas/arlington' },
         { label: 'Irving', href: '/locations/texas/irving' }
+      ]
+    },
+    {
+      label: 'DFW Services',
+      href: '/dfw',
+      children: [
+        { label: 'AI Consulting', href: '/dfw/ai-consulting' },
+        { label: 'Automation Consulting', href: '/dfw/automation-consulting' },
+        { label: 'Business Growth Systems', href: '/dfw/business-growth-systems' }
       ]
     },
     {
@@ -170,6 +179,14 @@ export default function Header() {
   const aboutDropdownItems = [
     { label: 'About Us', href: '/about' },
     { label: 'Blog', href: '/blog' }
+  ];
+
+  // Resources dropdown for documentation and technical info
+  const resourcesDropdownItems = [
+    { label: 'Technology Stack', href: '/docs/technology-stack' },
+    { label: 'AI Agents', href: '/docs/ai-agents' },
+    { label: 'Growth Audit', href: '/growth-audit' },
+    { label: 'Case Studies', href: '/case-studies' }
   ];
 
 
@@ -232,7 +249,16 @@ export default function Header() {
 
               <HeaderLink href="/solutions">Solutions</HeaderLink>
 
-              <HeaderLink href="/case-studies">Case Studies</HeaderLink>
+              {/* Resources Dropdown */}
+              <Dropdown
+                items={resourcesDropdownItems}
+                width="200px"
+                trigger={
+                  <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
+                    <HeaderLink href="/case-studies" showIcon={true}>Resources</HeaderLink>
+                  </div>
+                }
+              />
 
               {/* Locations Dropdown */}
               <MultiLevelDropdown
@@ -468,19 +494,29 @@ export default function Header() {
                     )}
                   </div>
 
-                  {/* Case Studies */}
-                  <div className="flex items-center justify-between w-full">
-                    <Link
-                      href="/case-studies"
-                      className={`text-2xl block py-4 ${pathname === '/case-studies' ? 'text-[#8D9DFF]' : 'text-white'}`}
-                      onClick={() => setMobileMenuOpen(false)}
-                    >
-                      Case Studies
-                    </Link>
-                    {pathname === '/case-studies' && (
-                      <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
-                    )}
-                  </div>
+                  {/* Resources */}
+                  <MobileExpandableMenu
+                    title="Resources"
+                    isActive={pathname.startsWith('/docs') || pathname.startsWith('/case-studies') || pathname.startsWith('/growth-audit')}
+                  >
+                    <div className="pl-6 space-y-3">
+                      {resourcesDropdownItems.map((item) => (
+                        <div key={item.href} className="flex items-center justify-between w-full">
+                          <Link
+                            href={item.href}
+                            className={`text-2xl block py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                              }`}
+                            onClick={() => setMobileMenuOpen(false)}
+                          >
+                            {item.label}
+                          </Link>
+                          {pathname === item.href && (
+                            <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </MobileExpandableMenu>
 
 
 
@@ -691,6 +727,51 @@ export default function Header() {
                               Las Cruces
                             </Link>
                             {pathname === '/locations/new-mexico/las-cruces' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                        </div>
+                      </MobileExpandableMenu>
+                      
+                      {/* DFW Services */}
+                      <MobileExpandableMenu
+                        title="DFW Services"
+                        isActive={pathname.startsWith('/dfw')}
+                      >
+                        <div className="pl-6 space-y-3">
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/dfw/ai-consulting"
+                              className={`text-xl block py-2 ${pathname === '/dfw/ai-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              AI Consulting
+                            </Link>
+                            {pathname === '/dfw/ai-consulting' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/dfw/automation-consulting"
+                              className={`text-xl block py-2 ${pathname === '/dfw/automation-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Automation Consulting
+                            </Link>
+                            {pathname === '/dfw/automation-consulting' && (
+                              <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
+                            )}
+                          </div>
+                          <div className="flex items-center justify-between w-full">
+                            <Link
+                              href="/dfw/business-growth-systems"
+                              className={`text-xl block py-2 ${pathname === '/dfw/business-growth-systems' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              onClick={() => setMobileMenuOpen(false)}
+                            >
+                              Business Growth Systems
+                            </Link>
+                            {pathname === '/dfw/business-growth-systems' && (
                               <Icon name="star-m.svg" alt="star" size={18} className="ml-2" />
                             )}
                           </div>

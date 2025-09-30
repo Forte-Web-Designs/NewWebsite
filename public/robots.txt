@@ -6,7 +6,15 @@ Allow: /
 Allow: /about
 Allow: /pricing
 Allow: /solutions
-Allow: /about/work
+Allow: /services/automation-ai
+Allow: /services/web-design
+Allow: /growth-audit
+Allow: /dfw/ai-consulting
+Allow: /dfw/automation-consulting
+Allow: /dfw/business-growth-systems
+Allow: /docs/technology-stack
+Allow: /docs/ai-agents
+Allow: /case-studies
 Allow: /blog
 Allow: /contact
 
@@ -17,6 +25,9 @@ Allow: /services/*
 Allow: /industries/*
 Allow: /solutions/*
 Allow: /blog/*
+Allow: /dfw/*
+Allow: /docs/*
+Allow: /case-studies/*
 
 # Disallow sensitive areas
 Disallow: /admin/

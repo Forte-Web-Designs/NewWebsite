@@ -1,6 +1,28 @@
-"use client";
-
+import type { Metadata } from "next";
+import Link from 'next/link';
 import { useState } from 'react';
+
+export const metadata: Metadata = {
+  title: "AI Automation Services & Systems Integration | Forte",
+  description: "Stop manual work, start measurable growth. We build AI agents, automation pipelines, and owner dashboards—scoped to outcomes in 30–90 days.",
+  keywords: [
+    "AI automation services", "business process automation", "AI implementation partner", 
+    "AI agents", "automation pipelines", "owner dashboards", "AI systems integration",
+    "business automation Dallas", "AI consulting DFW", "automation consulting",
+    "AI technology stack", "custom AI assistants", "RAG pipelines", "n8n automations"
+  ],
+  openGraph: {
+    title: "AI Automation Services & Systems Integration | Forte",
+    description: "Stop manual work, start measurable growth. We build AI agents, automation pipelines, and owner dashboards—scoped to outcomes in 30–90 days.",
+    url: "https://fortewebdesigns.com/services/automation-ai/",
+    type: "website"
+  },
+  alternates: {
+    canonical: "https://fortewebdesigns.com/services/automation-ai/"
+  }
+};
+
+"use client";
 import LightButton from "@/components/LightButton";
 import DarkButton from "@/components/DarkButton";
 
@@ -215,7 +237,7 @@ export default function AutomationAIPage() {
       <section className="bg-white dark:bg-gray-900 pt-24 pb-16">
         <div className="max-w-4xl mx-auto px-6">
           <h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8">
-            Automation & AI — Systems that save time and drive revenue
+            Automation & AI — Time Back. Revenue Up.
           </h1>
           
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
@@ -673,6 +695,39 @@ export default function AutomationAIPage() {
             <LightButton href="/work" className="inline-block px-6 py-3">
               View all case studies →
             </LightButton>
+          </div>
+        </div>
+      </section>
+
+      {/* Serving Dallas–Fort Worth */}
+      <section className="bg-white dark:bg-gray-900 py-16">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            Serving Dallas–Fort Worth
+          </h2>
+          
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-12 text-center">
+            Local AI automation and business growth systems for the DFW market
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <Link href="/dfw/ai-consulting" className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-3">AI Consulting</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Practical AI systems that return time and increase throughput for Dallas-Fort Worth businesses</p>
+              <span className="text-primary-600 dark:text-primary-400 font-medium text-sm">Learn more →</span>
+            </Link>
+            
+            <Link href="/dfw/automation-consulting" className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-3">Automation Consulting</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Done-for-you systems that remove manual work and unlock capacity across DFW</p>
+              <span className="text-primary-600 dark:text-primary-400 font-medium text-sm">Learn more →</span>
+            </Link>
+            
+            <Link href="/dfw/business-growth-systems" className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-3">Business Growth Systems</h3>
+              <p className="text-gray-600 dark:text-gray-300 text-sm mb-4">Complete growth systems—websites, AI automation, and dashboards for DFW companies</p>
+              <span className="text-primary-600 dark:text-primary-400 font-medium text-sm">Learn more →</span>
+            </Link>
           </div>
         </div>
       </section>

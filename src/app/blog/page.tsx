@@ -978,6 +978,78 @@ const blogPosts = [
     image: '/images/blog/online-presence-business.webp',
     tags: ['Online Presence', 'Small Business', 'Digital Marketing', 'Website'],
     featured: true
+  },
+  {
+    id: '30-90-day-ai-playbook-small-service-businesses',
+    title: 'The 30–90 Day AI Playbook for Small Service Businesses',
+    excerpt: 'A practical, non-technical plan to cut response times, send quotes same-day, and reclaim 5–20 hours/week using light-touch automation and AI.',
+    author: 'Seth Forte',
+    date: '2025-09-30',
+    readTime: '8 min read',
+    category: 'Business Growth',
+    image: '/images/blog/ai-playbook-service-businesses.webp',
+    tags: ['AI', 'Automation', 'Service Businesses', 'Business Growth'],
+    featured: true
+  },
+  {
+    id: 'owner-dashboards-metrics-that-predict-cash-flow',
+    title: 'Owner Dashboards: 12 Metrics That Actually Predict Cash Flow',
+    excerpt: 'Stop staring at vanity metrics. Track these 12 signals—response speed, quote time, follow-through, throughput—to predict revenue and act early.',
+    author: 'Seth Forte',
+    date: '2025-09-30',
+    readTime: '6 min read',
+    category: 'Business Growth',
+    image: '/images/blog/owner-dashboards-metrics.webp',
+    tags: ['Analytics', 'Business Metrics', 'Dashboards', 'Cash Flow'],
+    featured: false
+  },
+  {
+    id: 'automating-first-touch-without-new-software',
+    title: 'From Missed Calls to Booked Jobs: Automating First Touch (Without New Software)',
+    excerpt: 'You can cut first response to minutes using the tools you already have. Here is a no-rip-and-replace approach to automate first touch.',
+    author: 'Seth Forte',
+    date: '2025-09-30',
+    readTime: '7 min read',
+    category: 'Business Growth',
+    image: '/images/blog/automating-first-touch.webp',
+    tags: ['Automation', 'Lead Management', 'Customer Service', 'Business Systems'],
+    featured: false
+  },
+  {
+    id: '7-lightweight-automations-that-pay-for-themselves',
+    title: '7 Lightweight Automations That Pay for Themselves',
+    excerpt: 'Quick wins you can launch without ripping out your tools. Automate first touch, quotes, follow-ups, scheduling, and reporting to reclaim 5–20 hours/week.',
+    author: 'Seth Forte',
+    date: '2025-09-30',
+    readTime: '8 min read',
+    category: 'Business Growth',
+    image: '/images/blog/lightweight-automations.webp',
+    tags: ['Lightweight Automation', 'Business Automation ROI', 'Automation Quick Wins', 'Small Business Automation'],
+    featured: false
+  },
+  {
+    id: 'ai-agents-vs-chatbots-what-small-businesses-actually-need',
+    title: 'AI Agents vs. Chatbots: What Small Businesses Actually Need',
+    excerpt: 'Choose the right AI tool for your business. Chatbots handle FAQ responses while AI agents manage complex workflows. Learn costs, benefits, and implementation without platform replacement.',
+    author: 'Seth Forte',
+    date: '2025-10-15',
+    readTime: '9 min read',
+    category: 'Business Growth',
+    image: '/images/blog/ai-agents-vs-chatbots.webp',
+    tags: ['AI Agents vs Chatbots', 'Small Business AI', 'Business Automation Comparison', 'AI Implementation'],
+    featured: false
+  },
+  {
+    id: 'how-to-measure-roi-of-automation-in-90-days',
+    title: 'How to Measure the ROI of Automation in 90 Days',
+    excerpt: 'Track automation success with time saved, revenue impact, and cost reduction metrics. Get a simple 4-step framework for measuring automation ROI in your first 90 days.',
+    author: 'Seth Forte',
+    date: '2025-11-01',
+    readTime: '10 min read',
+    category: 'Business Growth',
+    image: '/images/blog/measure-automation-roi.webp',
+    tags: ['Automation ROI Measurement', 'Automation Metrics', 'Business Automation Tracking', 'ROI Calculation'],
+    featured: false
   }
 ];
 

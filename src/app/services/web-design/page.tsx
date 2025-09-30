@@ -1,6 +1,26 @@
-"use client";
-
+import type { Metadata } from "next";
 import { useState } from "react";
+
+export const metadata: Metadata = {
+  title: "Custom Website Design & Hand-Coded Websites | Forte (DFW)",
+  description: "Custom-coded websites built for speed, clarity, and lead capture. No WordPress—just clean, fast sites that convert visitors into customers.",
+  keywords: [
+    "custom website design", "DFW web design", "hand-coded websites", "custom web development",
+    "Dallas web designer", "Fort Worth web design", "responsive web design", "business website design",
+    "professional website design", "SEO-optimized websites", "conversion-focused design"
+  ],
+  openGraph: {
+    title: "Custom Website Design & Hand-Coded Websites | Forte (DFW)",
+    description: "Custom-coded websites built for speed, clarity, and lead capture. No WordPress—just clean, fast sites that convert visitors into customers.",
+    url: "https://fortewebdesigns.com/services/web-design/",
+    type: "website"
+  },
+  alternates: {
+    canonical: "https://fortewebdesigns.com/services/web-design/"
+  }
+};
+
+"use client";
 import Link from "next/link";
 import { Icon } from "@/components/images/Icon";
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';

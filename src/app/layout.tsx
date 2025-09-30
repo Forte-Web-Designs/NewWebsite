@@ -68,18 +68,19 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     template: '%s | Forte Web Designs',
-    default: 'Business Growth Systems (Lead Capture, Faster Quotes, Follow-ups) | Forte',
+    default: 'Business Growth Systems & AI Automation | Forte (DFW)',
   },
-  description: "Buy outcomes, not AI. Forte installs simple systems—Lead Catcher™, Quote Builder™, Owner's Console™—that catch more opportunities, speed up quotes, and keep follow-ups on track. DFW-based, serving the U.S.",
+  description: "Forte builds outcome-driven systems—custom websites, AI automation, and dashboards—that give you time back and grow revenue. DFW-based, serving nationwide.",
   keywords: [
-    'business growth systems', 'lead capture system', 'quote builder software', 'lead management DFW',
-    'business automation Dallas', 'lead tracking system', 'quote management software', 'pipeline management',
-    'missed call recovery', 'lead follow up automation', 'business systems integration', 'growth tracking',
-    'lead catcher software', 'quote builder tool', 'owners console dashboard', 'business growth tools',
-    'DFW business systems', 'Dallas lead generation', 'Fort Worth business automation', 'Texas growth systems',
-    'small business automation', 'contractor lead system', 'service business growth', 'lead nurturing automation',
-    'quote tracking software', 'business pipeline management', 'growth snapshot analysis', 'forte web designs',
-    'business growth consulting DFW', 'lead conversion optimization', 'sales process automation', 'customer follow-up system'
+    'business growth systems', 'AI automation for small business', 'DFW AI consultants', 'automation consulting',
+    'AI systems integration', 'custom website design', 'DFW web design', 'hand-coded websites',
+    'AI automation services', 'business process automation', 'AI implementation partner', 'AI agents',
+    'automation pipelines', 'owner dashboards', 'business growth solutions', 'growth systems partner',
+    'AI automation pricing', 'business growth systems pricing', 'website pricing', 'business growth audit',
+    'AI readiness assessment', 'automation audit', 'AI technology stack', 'AI infrastructure',
+    'n8n automations', 'AWS AI stack', 'custom AI assistants', 'RAG pipelines', 'AI case studies',
+    'automation case studies', 'AI consulting Dallas', 'AI consultant Fort Worth', 'automation consulting Dallas',
+    'business growth Dallas', 'DFW AI', 'DFW business growth', 'AI automation DFW', 'forte web designs'
   ],
   creator: 'Forte Web Designs',
   publisher: 'Forte Web Designs',
@@ -95,14 +96,21 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://fortewebdesigns.com',
-    title: 'Business Growth Systems (Lead Capture, Faster Quotes, Follow-ups) | Forte',
-    description: "Buy outcomes, not AI. Forte installs simple systems—Lead Catcher™, Quote Builder™, Owner's Console™—that catch more opportunities, speed up quotes, and keep follow-ups on track. DFW-based, serving the U.S.",
+    title: 'Business Growth Systems & AI Automation | Forte (DFW)',
+    description: "Forte builds outcome-driven systems—custom websites, AI automation, and dashboards—that give you time back and grow revenue. DFW-based, serving nationwide.",
     siteName: 'Forte Web Designs',
+    images: [{
+      url: 'https://fortewebdesigns.com/images/og-image.jpg',
+      width: 1200,
+      height: 630,
+      alt: 'Forte Web Designs - Business Growth Systems & AI Automation'
+    }]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Business Growth Systems (Lead Capture, Faster Quotes, Follow-ups) | Forte',
-    description: "Buy outcomes, not AI. Forte installs simple systems—Lead Catcher™, Quote Builder™, Owner's Console™—that catch more opportunities, speed up quotes, and keep follow-ups on track. DFW-based, serving the U.S.",
+    title: 'Business Growth Systems & AI Automation | Forte (DFW)',
+    description: "Forte builds outcome-driven systems—custom websites, AI automation, and dashboards—that give you time back and grow revenue. DFW-based, serving nationwide.",
+    images: ['https://fortewebdesigns.com/images/og-image.jpg']
   },
 };
 
@@ -127,6 +135,9 @@ export default function RootLayout({
         
         {/* Google Search Console Verification */}
         <meta name="google-site-verification" content={process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE || ''} />
+        
+        {/* Canonical URL */}
+        <link rel="canonical" href="https://fortewebdesigns.com/" />
         
         {/* Enhanced Local SEO Meta Tags */}
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />

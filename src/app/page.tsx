@@ -205,7 +205,7 @@ export default function Home() {
                   className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full"
                   style={{ contain: 'layout', wordWrap: 'break-word' }}
                 >
-                  <span className="block sm:inline">Business Growth Isn't Luck.</span>{" "}
+                  <span className="block sm:inline">Business Growth Isn't Guesswork.</span>{" "}
                   <span className="block sm:inline">It's{" "}</span>
                   <span 
                     className={`inline-block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
@@ -259,10 +259,10 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12 sm:mb-16">
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
-                  Everything You Need In One Place
+                  Outcomes in 30–90 Days
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-2">
-                  Powerful systems designed to help your business grow seamlessly.
+                  Reclaim 5–20 hours per week, respond in minutes not days, and get 90–100% follow-up coverage without manual chasing.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -305,7 +305,7 @@ export default function Home() {
               <SimpleScrollReveal direction="left">
                 <div>
                   <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
-                    Ready to see where you're losing time and money?
+                    Get Your Growth Snapshot
                   </h2>
                   <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
                     Your <strong>Growth Snapshot</strong> reveals the 3–4 biggest leaks in your business and gives you two quick fixes you can apply immediately.
@@ -447,7 +447,7 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
-                  Real Businesses. Real Results.
+                  Proof in Practice
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 px-2 mb-6">
                   See how our growth systems deliver measurable outcomes across industries.
@@ -527,7 +527,7 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12 sm:mb-16">
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6 sm:mb-8 px-2">
-                  Core Systems That Power Your Growth
+                  What We Build
                 </h2>
               </div>
             </SimpleScrollReveal>
@@ -561,7 +561,7 @@ export default function Home() {
                     Work smarter, not harder.
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                    From instant replies to follow-up reminders, automation ensures no lead slips through the cracks. AI systems handle the busywork so you can focus on growth.
+                    From instant replies to follow-up reminders, <Link href="/services/automation-ai" className="text-primary-600 dark:text-primary-400 hover:underline">AI automation</Link> ensures no lead slips through the cracks. <Link href="/docs/ai-agents" className="text-primary-600 dark:text-primary-400 hover:underline">AI systems</Link> handle the busywork so you can focus on growth.
                   </p>
                   <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
                     📈 <strong>Outcome:</strong> Faster responses, more booked jobs, hours of time saved every week.
@@ -579,7 +579,7 @@ export default function Home() {
                     Know exactly what's working — and what's not.
                   </h4>
                   <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                    One clear view of leads, quotes, and performance helps you scale without chaos. Spot bottlenecks and fix them before they cost you money.
+                    One clear view of leads, quotes, and performance helps you scale without chaos. Our <Link href="/docs/technology-stack" className="text-primary-600 dark:text-primary-400 hover:underline">advanced technology stack</Link> spots bottlenecks and fixes them before they cost you money.
                   </p>
                   <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
                     📈 <strong>Outcome:</strong> Clearer decisions, accountability, and steady growth at scale.
@@ -628,6 +628,9 @@ export default function Home() {
         <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-full">
             <SimpleScrollReveal direction="up">
+              <p className="text-white/90 text-sm sm:text-base mb-4">
+                Serving Dallas-Fort Worth with comprehensive <Link href="/dfw/business-growth-systems" className="text-white hover:underline font-semibold">business growth systems</Link>
+              </p>
               <h2 className="font-display font-bold text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-white mb-6 sm:mb-8 px-2 max-w-full">
                 Ready to stop losing opportunities?
               </h2>
