@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import { OptimizedImage } from '@/components/images/OptimizedImage';
 
 const trustedCompanies = [
   {
@@ -94,6 +93,9 @@ export default function TrustedCompaniesCarousel() {
   }, []);
 
   useEffect(() => {
+    // Only run carousel animation on desktop
+    if (isMobile) return;
+    
     const interval = setInterval(() => {
       setCurrentIndex((prevIndex) => {
         const nextIndex = prevIndex + 1;
@@ -103,23 +105,7 @@ export default function TrustedCompaniesCarousel() {
     }, 1500); // Continuous scroll every 1.5 seconds
 
     return () => clearInterval(interval);
-  }, []);
-
-  // Function to get mobile-optimized logo dimensions
-  const getMobileLogoStyle = (companyName: string) => {
-    if (!isMobile) return { maxWidth: '100%', maxHeight: '100%' };
-    
-    // Mobile-specific sizing for problematic logos
-    const mobileConstraints: Record<string, { maxWidth: string; maxHeight: string }> = {
-      'AliExpress': { maxWidth: '75%', maxHeight: '60%' },
-      'DHL': { maxWidth: '80%', maxHeight: '70%' },
-      'Bristol Myers Squibb': { maxWidth: '70%', maxHeight: '65%' },
-      'Philip Treacy London': { maxWidth: '85%', maxHeight: '75%' },
-      'Amerus Life Holdings': { maxWidth: '80%', maxHeight: '70%' }
-    };
-
-    return mobileConstraints[companyName] || { maxWidth: '90%', maxHeight: '80%' };
-  };
+  }, [isMobile]);
 
   return (
     <div className="bg-white dark:bg-gray-800 py-12 overflow-hidden">
@@ -130,45 +116,18 @@ export default function TrustedCompaniesCarousel() {
           </h3>
         </div>
 
-        {/* Mobile-optimized carousel */}
+        {/* Mobile company list */}
         {isMobile ? (
-          <div className="overflow-hidden relative">
-            <div 
-              className="flex items-center gap-4 transition-transform duration-1000 ease-in-out"
-              style={{
-                transform: `translateX(-${currentIndex * 120}px)`,
-                width: `${trustedCompanies.length * 2 * 120}px`
-              }}
-            >
-              {/* Duplicate logos for seamless infinite scroll */}
-              {[...trustedCompanies, ...trustedCompanies].map((company, index) => {
-                const isSecondSet = index >= trustedCompanies.length;
-                const logoStyle = getMobileLogoStyle(company.name);
-                
-                return (
-                  <div
-                    key={`logo-${company.id}-${isSecondSet ? 'duplicate' : 'original'}`}
-                    className="flex items-center justify-center flex-shrink-0 opacity-90"
-                    style={{ 
-                      width: '100px',
-                      height: '60px',
-                      minWidth: '100px',
-                      maxWidth: '100px'
-                    }}
-                  >
-                    <img
-                      src={company.logo}
-                      alt={company.alt}
-                      className="object-contain"
-                      style={{
-                        width: 'auto',
-                        height: 'auto',
-                        ...logoStyle
-                      }}
-                    />
-                  </div>
-                );
-              })}
+          <div className="max-w-lg mx-auto">
+            <div className="grid grid-cols-2 gap-3 text-center">
+              {trustedCompanies.map((company) => (
+                <div
+                  key={company.id}
+                  className="py-2 px-3 bg-gray-50 dark:bg-gray-700 rounded-lg text-gray-700 dark:text-gray-300 text-sm font-medium"
+                >
+                  {company.name}
+                </div>
+              ))}
             </div>
           </div>
         ) : (
