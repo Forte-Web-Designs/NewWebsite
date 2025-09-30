@@ -86,7 +86,7 @@ export default function TrustedCompaniesCarousel() {
     const updateItemWidth = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth < 640) {
-        setItemWidth(140); // Mobile - reduced from 160 to give more spacing
+        setItemWidth(160); // Mobile - increased spacing between logos
       } else if (screenWidth < 1024) {
         setItemWidth(180); // Tablet
       } else {
@@ -124,7 +124,7 @@ export default function TrustedCompaniesCarousel() {
         {/* Continuous scrolling carousel */}
         <div className="overflow-hidden relative max-w-full">
           <div 
-            className="flex items-center gap-6 sm:gap-8 lg:gap-10 transition-transform duration-1000 ease-in-out"
+            className="flex items-center gap-8 sm:gap-10 lg:gap-12 transition-transform duration-1000 ease-in-out"
             style={{
               transform: `translateX(-${currentIndex * itemWidth}px)`,
               width: `${trustedCompanies.length * 2 * itemWidth}px`,

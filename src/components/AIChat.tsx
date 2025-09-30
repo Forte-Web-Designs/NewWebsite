@@ -213,7 +213,7 @@ const AIChat = () => {
       setMessages([{
         id: '1',
         type: 'bot',
-        content: "👋 Hey there! I'm Sophia - Seth's digital assistant.\n\nI'm here to make sure you have a smooth experience. At Forte Web Designs, we help small businesses grow with custom websites tailored to their specific industry that actually bring in customers - not just sit there looking pretty.\n\nWhat brings you here today? Looking to grow your business online?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
+        content: "👋 Hey there! I'm Sophia - Seth's AI assistant.\n\nI'm here to help you discover how to scale your business with automation and AI systems. At Forte Web Designs, we help small businesses grow by building intelligent systems that work 24/7 - from AI-powered websites to automated customer acquisition systems.\n\nWhat brings you here today? Ready to automate your business growth?\n\nTip: If you want to get in touch, just click 'Get in contact with us' and I'll walk you through sharing your details right here in the chat!",
         timestamp: new Date()
       }]);
     }
@@ -262,7 +262,7 @@ const AIChat = () => {
 
     // Pricing questions
     if (msg.includes('price') || msg.includes('cost') || msg.includes('how much') || msg.includes('pricing') || msg.includes('expensive') || msg.includes('cheap') || msg.includes('affordable')) {
-      return "Great question! 💰 Here's the thing - most clients actually SAVE money working with us.\n\nWebsites start at just $200/month (no upfront costs) and include everything:\n• Custom website that loads lightning fast\n• Hosting, security, and maintenance\n• Unlimited changes whenever you need them\n• Mobile optimization\n• SEO setup to get found on Google\n\nMost other agencies charge $5k+ upfront. We keep it simple and affordable.\n\n[💬 Want to discuss pricing for your specific needs? Contact us here](/contact)";
+      return "Great question! 💰 Here's the thing - our automation systems typically PAY FOR THEMSELVES within 30-60 days.\n\nOur growth systems start at $200/month and include:\n• AI-powered website that converts 24/7\n• Automated lead generation systems\n• Smart customer acquisition funnels\n• Performance tracking and optimization\n• Ongoing system improvements\n\nMost businesses see 2-3x ROI within the first quarter. No huge upfront costs - just results-driven growth.\n\n[💬 Want to see how much you could save with automation? Contact us here](/contact)";
     }
 
     // Timeline/process questions  
@@ -272,12 +272,12 @@ const AIChat = () => {
 
     // Services questions
     if (msg.includes('service') || msg.includes('what do you do') || msg.includes('help') || msg.includes('offer') || msg.includes('seo') || msg.includes('google') || msg.includes('ranking')) {
-      return "We're basically your one-stop shop for getting more customers online! 🎯\n\nHere's how we help businesses like yours:\n• Custom websites that convert visitors into customers\n• SEO to get you found on Google (our specialty!)\n• Google Ads to bring in leads fast\n• Social media management\n• Ongoing support so you never feel stuck\n\nMost clients see more leads within the first month.\n\n[📋 See all our services here](/services)\n[💬 Let's discuss your biggest challenge - contact us here](/contact)";
+      return "We're your business growth automation specialists! 🎯\n\nHere's how we help businesses scale intelligently:\n• AI-powered websites that work while you sleep\n• Automated lead generation & nurturing systems\n• Smart customer acquisition funnels\n• Performance analytics & optimization\n• Business process automation\n• 24/7 customer engagement systems\n\nMost clients see automated lead flow within 30 days.\n\n[📋 See all our automation services here](/services)\n[💬 Let's discuss automating your growth - contact us here](/contact)";
     }
 
     // ROI/Results questions
     if (msg.includes('results') || msg.includes('roi') || msg.includes('return') || msg.includes('worth it') || msg.includes('effective')) {
-      return "Love that you're asking about results! 📈 That's exactly how we think too.\n\nHere's what our clients typically see:\n• 30-50% more website traffic in 3 months\n• 2x more leads from their website\n• Better Google rankings\n• Faster loading sites that keep visitors around\n\nOne client went from 5 leads/month to 18+ leads/month in just 4 months. Another increased their revenue by 85% in 6 months.\n\nThe key? Websites that actually work for your business goals, not just look pretty.\n\n[📞 Ready to discuss your goals? Contact us here](/contact)";
+      return "Love that you're asking about results! 📈 That's exactly how we measure success.\n\nHere's what our automation systems typically deliver:\n• 3-5x more qualified leads (automated 24/7)\n• 40-60% reduction in manual tasks\n• 2-3x faster customer response times\n• 300%+ improvement in lead conversion rates\n• 24/7 business operations without hiring staff\n\nOne client automated their entire lead process and went from 5 leads/month to 47 leads/month. Another reduced their admin time by 15 hours/week while doubling revenue.\n\nThe key? Systems that work smarter, not harder.\n\n[📞 Ready to see your automation ROI projection? Contact us here](/contact)";
     }
 
     // Contact/meeting questions
@@ -287,17 +287,17 @@ const AIChat = () => {
 
     // Business growth questions
     if (msg.includes('business') || msg.includes('grow') || msg.includes('more customers') || msg.includes('sales') || msg.includes('leads') || msg.includes('traffic') || msg.includes('forte web designs')) {
-      return "Now we're talking! 🚀 Growing businesses online is exactly what we do.\n\nMost small businesses struggle because:\n• Their website doesn't show up on Google\n• Visitors leave without calling or buying\n• They're not sure what's working and what isn't\n\nWe fix all of that. Our websites are built to:\n• Get found on Google (SEO built-in)\n• Convert visitors into customers\n• Give you clear data on what's working\n\n[📞 Let's talk about your growth goals - contact us here](/contact)";
+      return "Now we're talking! 🚀 Scaling businesses with intelligent automation is exactly what we do.\n\nMost small businesses hit growth plateaus because:\n• They're doing everything manually\n• They can't respond to leads fast enough\n• They're working IN the business, not ON it\n• Growth requires hiring more people\n\nWe solve this with smart automation systems:\n• AI-powered lead generation that never sleeps\n• Automated customer nurturing sequences\n• Smart business process automation\n• Real-time performance optimization\n• Systems that scale without adding staff\n\n[📞 Let's discuss automating your growth - contact us here](/contact)";
     }
 
     // Website questions
     if (msg.includes('website') || msg.includes('site') || msg.includes('web') || msg.includes('design') || msg.includes('redesign') || msg.includes('new site') || msg.includes('forte web designs')) {
-      return "Perfect! 🎨 Here's why our websites are different:\n\n• 100% custom-coded (no cheap templates)\n• Lightning fast (Google loves this)\n• Mobile-first design\n• Built-in SEO optimization\n• Easy for you to update\n\nBut here's the real difference - we don't just build pretty websites. We build websites that get you customers.\n\nEvery element is designed to guide visitors toward calling you, buying from you, or filling out your contact form.\n\n[🎯 See examples of our work here](/about/work)\n[📞 Ready to get started? Contact us here](/contact)";
+      return "Perfect! 🎨 Here's why our AI-powered websites are different:\n\n• Intelligent lead capture systems\n• Automated visitor engagement\n• Smart conversion optimization\n• Real-time performance tracking\n• Self-optimizing content\n• 24/7 customer interaction systems\n\nBut here's the real game-changer - we don't just build websites. We build intelligent business growth systems.\n\nEvery element uses AI to automatically optimize for more leads, better conversions, and higher revenue while you focus on running your business.\n\n[🎯 See examples of our AI systems here](/case-studies)\n[📞 Ready to automate your growth? Contact us here](/contact)";
     }
 
     // Examples/work questions
     if (msg.includes('example') || msg.includes('work') || msg.includes('portfolio') || msg.includes('case stud') || msg.includes('see your') || msg.includes('show me')) {
-      return "I'd love to show you! 🎨 Here are some real websites we've built that are driving results:\n\n• The Southern Landscape Firm - Custom landscaping site with lead generation\n• Local HVAC company - Went from 3 to 30+ leads per month\n• Law firm - Doubled their client inquiries in 4 months\n• Landscaping business - Increased revenue 150% in 6 months\n• Accounting firm - Got to page 1 of Google for main keywords\n\n[🎯 See our complete portfolio here](/about/work)\n\nEach website is completely custom-built for the specific business and their goals. No templates, no shortcuts.\n\n[📞 Want to discuss your project? Contact us here](/contact)";
+      return "I'd love to show you! 🎨 Here are some real automation systems we've built that are driving results:\n\n• HVAC company - Automated lead system generating 47 leads/month\n• Law firm - AI chatbot converts 40% more website visitors\n• Restaurant chain - Automated ordering increased revenue 300%\n• Landscaping business - Smart scheduling system reduced admin by 20 hours/week\n• Medical practice - Automated patient flow increased capacity 150%\n\n[🎯 See our complete case studies here](/case-studies)\n\nEach system is custom-built with AI and automation to solve specific business challenges. No generic solutions.\n\n[📞 Want to discuss automating your business? Contact us here](/contact)";
     }
 
     // Location/local questions
@@ -305,19 +305,24 @@ const AIChat = () => {
       return "We're based in Texas but work with businesses nationwide! 🏠\n\nHonestly, some of our best clients are hundreds of miles away. Everything happens through video calls, screen shares, and email.\n\nThe beauty of web design? Distance doesn't matter. Results do.\n\nPlus, we specialize in local SEO, so whether you're in Texas, New York, or anywhere in between, we can help you dominate your local market.\n\n[📞 Let's discuss your local market - contact us here](/contact)";
     }
 
+    // AI/Automation specific questions
+    if (msg.includes('ai') || msg.includes('artificial intelligence') || msg.includes('automation') || msg.includes('automate') || msg.includes('systems') || msg.includes('process') || msg.includes('workflow')) {
+      return "Perfect! AI and automation are exactly what we specialize in! 🤖\n\nHere's how we use intelligent systems to scale businesses:\n• AI chatbots that convert visitors 24/7\n• Automated lead nurturing sequences\n• Smart scheduling and booking systems\n• Automated customer service workflows\n• AI-powered content optimization\n• Intelligent performance tracking\n\nThe best part? These systems learn and improve automatically, getting better results over time without any extra work from you.\n\n[🤖 Let's discuss automating your specific processes - contact us here](/contact)";
+    }
+
     // Industry-specific questions
     if (msg.includes('industry') || msg.includes('type of business') || msg.includes('niche') || msg.includes('sector') || msg.includes('hvac') || msg.includes('restaurant') || msg.includes('law') || msg.includes('medical') || msg.includes('contractor') || msg.includes('retail')) {
-      return "Great question! 🏢 We work with all kinds of businesses, and honestly, that's our strength.\n\nSome recent successes:\n• HVAC contractors getting 20+ leads/month\n• Restaurants increasing online orders 3x\n• Law firms dominating local search\n• Medical practices filling schedules\n• Retail stores boosting online sales\n\nEvery industry has different needs, but the fundamentals are the same: get found on Google, look professional, convert visitors into customers.\n\n[💼 Let's discuss strategies for your specific industry - contact us here](/contact)";
+      return "Great question! 🏢 We build custom automation systems for all kinds of businesses.\n\nSome recent automation successes:\n• HVAC contractors with automated lead systems getting 47 leads/month\n• Restaurants with AI ordering systems increasing revenue 300%\n• Law firms with automated client intake doubling consultations\n• Medical practices with smart scheduling increasing capacity 150%\n• Retail stores with automated inventory/customer systems\n\nEvery industry has unique processes, but automation principles are universal: reduce manual work, increase efficiency, scale without adding staff.\n\n[💼 Let's discuss automation for your specific industry - contact us here](/contact)";
     }
 
     // Competitor/comparison questions
     if (msg.includes('different') || msg.includes('better') || msg.includes('why you') || msg.includes('why us') || msg.includes('why forte') || msg.includes('competitors') || msg.includes('other') || msg.includes('comparison') || msg.includes('choose forte')) {
-      return "Great question! 🤔 Here's what makes us different:\n\nMost web designers:\n• Charge $5k+ upfront\n• Use templates\n• Disappear after launch\n• Don't understand marketing\n\nUs?\n• $0 down, affordable monthly payments\n• 100% custom-coded websites\n• Ongoing support and unlimited changes\n• 10+ years of marketing experience\n\nWe're not just designers - we're business owners who understand what it takes to get customers online.\n\n[🏆 Ready to see the difference? Contact us here](/contact)";
+      return "Great question! 🤔 Here's what makes us different:\n\nMost agencies:\n• Build static websites that just sit there\n• Charge huge upfront fees\n• Don't understand business automation\n• Leave you to figure out growth yourself\n\nUs?\n• Build intelligent systems that work 24/7\n• Affordable monthly investments with ROI tracking\n• Specialize in business process automation\n• Provide ongoing optimization and scaling\n• Focus on measurable business results\n\nWe're not just developers - we're automation specialists who understand how to scale businesses intelligently.\n\n[🏆 Ready to see the automation advantage? Contact us here](/contact)";
     }
 
     // Simple greetings
     if (msg.includes('hello') || msg.includes('hi') || msg.includes('hey') || msg === 'good morning' || msg === 'good afternoon') {
-      return "Hey! 👋 Great to meet you! \n\nI'm Sophia, your AI assistant for Forte Web Designs. Seth and the team help small businesses get more customers through websites that actually work.\n\nI can help you learn about our services, see examples of our work, or get you connected with Seth for a free consultation.\n\n[📞 Ready to chat with Seth? Contact us here](/contact)";
+      return "Hey! 👋 Great to meet you! \n\nI'm Sophia, your AI assistant for Forte Web Designs. Seth and the team help small businesses scale with intelligent automation systems that work around the clock.\n\nI can help you learn about our automation services, see examples of our AI systems, or get you connected with Seth for a free automation audit.\n\n[📞 Ready to chat with Seth about automation? Contact us here](/contact)";
     }
 
     // Thank you responses
@@ -326,7 +331,7 @@ const AIChat = () => {
     }
 
     // Default helpful response
-    return "I love chatting with business owners! 💬\n\nWe can help you with:\n• Getting more customers from your website\n• Ranking higher on Google\n• Building a website that actually converts\n• Growing your business online\n\n[🎯 See examples of our work](/about/work)\n[📋 Learn about all our services](/services)\n[📞 Ready to discuss your project? Contact us here](/contact)";
+    return "I love chatting with business owners! 💬\n\nWe can help you automate and scale:\n• Lead generation systems that work 24/7\n• Customer acquisition processes\n• Business operations and workflows\n• Performance tracking and optimization\n• AI-powered growth systems\n\n[🎯 See examples of our automation systems](/case-studies)\n[📋 Learn about all our services](/services)\n[📞 Ready to discuss automating your growth? Contact us here](/contact)";
   };
 
   const sendMessage = async (messageContent: string) => {
@@ -674,12 +679,12 @@ const AIChat = () => {
                       required
                     >
                       <option value="" disabled>Select a Service*</option>
-                      <option value="Custom Website Design">Custom Website Design</option>
-                      <option value="SEO Services">SEO Services</option>
-                      <option value="Social Media Management">Social Media Management</option>
-                      <option value="Google PPC Ads">Google PPC Ads</option>
-                      <option value="Website Maintenance">Website Maintenance</option>
-                      <option value="Forte Care™">Forte Care™</option>
+                      <option value="Business Automation Systems">Business Automation Systems</option>
+                      <option value="AI-Powered Website Development">AI-Powered Website Development</option>
+                      <option value="Lead Generation Automation">Lead Generation Automation</option>
+                      <option value="Customer Acquisition Systems">Customer Acquisition Systems</option>
+                      <option value="Process Automation Consulting">Process Automation Consulting</option>
+                      <option value="Forte Care™ Automation Support">Forte Care™ Automation Support</option>
                       <option value="Other">Other</option>
                     </select>
                     
@@ -755,19 +760,19 @@ const AIChat = () => {
                   💰 Pricing
                 </button>
                 <button
-                  onClick={() => sendMessage("How can you help grow my business?")}
+                  onClick={() => sendMessage("How can you help automate my business growth?")}
                   className="text-xs bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white px-2 py-1.5 lg:px-2.5 lg:py-2 rounded-md transition-all duration-200 font-semibold shadow-md hover:shadow-lg hover:scale-105 transform"
                 >
-                  🚀 Grow
+                  🤖 Automate
                 </button>
               </div>
               
               <div className="grid grid-cols-4 gap-1">
                 <button
-                  onClick={() => sendMessage("What kind of results do clients get?")}
+                  onClick={() => sendMessage("What kind of ROI do automation systems deliver?")}
                   className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-1.5 py-1 lg:px-2 lg:py-1.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-orange-300 dark:hover:border-orange-500 font-medium"
                 >
-                  📈 Results
+                  📈 ROI
                 </button>
                 <button
                   onClick={() => sendMessage("How long does the process take?")}
@@ -776,16 +781,16 @@ const AIChat = () => {
                   ⏱️ Time
                 </button>
                 <button
-                  onClick={() => sendMessage("What makes you different from other web designers?")}
+                  onClick={() => sendMessage("What makes you different from other automation agencies?")}
                   className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-1.5 py-1 lg:px-2 lg:py-1.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-blue-300 dark:hover:border-blue-500 font-medium"
                 >
                   🤔 Why Us?
                 </button>
                 <button
-                  onClick={() => sendMessage("Can I see examples of your work?")}
+                  onClick={() => sendMessage("Can I see examples of your automation systems?")}
                   className="text-xs bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 text-gray-700 dark:text-gray-300 px-1.5 py-1 lg:px-2 lg:py-1.5 rounded-md transition-all duration-200 border border-gray-200 dark:border-gray-600 hover:border-emerald-300 dark:hover:border-emerald-500 font-medium"
                 >
-                  🎨 Work
+                  🎨 Systems
                 </button>
               </div>
               

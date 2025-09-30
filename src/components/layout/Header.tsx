@@ -117,12 +117,13 @@ export default function Header() {
 
   // Growth Systems Partner dropdown structure
   const servicesDropdownItems = [
-    { label: 'Foundation: Custom Website Design', href: '/services/webDesign' },
-    { label: 'Growth Layer: Automation & AI', href: '/services/seo' },
-    { label: 'Scaling Layer: Business Systems Integration', href: '/services/ads' },
-    { label: 'Ongoing Forte Care™', href: '/services/socialMedia' },
-    { label: 'Agency Partnership Program', href: '/services/white-label' },
-    { label: 'Free Growth System Audit', href: '/checkup' },
+    { label: 'Website Design', href: '/services/web-design' },
+    { label: 'Automation & AI', href: '/services/automation-ai' },
+    { label: 'Business Systems', href: '/services/business-systems' },
+    { label: 'Forte Care™', href: '/services/forte-care' },
+    { label: 'Agency Partnership', href: '/services/agency-partnership' },
+    { label: 'Free Growth Audit', href: '/growth-audit' },
+    { label: 'Free Website Checkup', href: 'https://www.fortewebdesigns.com/checkup/' },
     { label: 'View All Services', href: '/services' }
   ];
 

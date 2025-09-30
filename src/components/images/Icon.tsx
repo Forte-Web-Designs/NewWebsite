@@ -33,8 +33,8 @@ export function Icon({
       alt={alt || `${name} icon`}
       width={size}
       height={size}
-      className={className}
-      style={style}
+      className={`${className}`}
+      style={{ ...style, color: 'inherit' }}
     />
   );
 }
