@@ -1,7 +1,4 @@
-'use client';
-
 import Image from 'next/image';
-import { useState } from 'react';
 
 interface IconProps {
   name: string;
@@ -58,8 +55,6 @@ export function Icon({
   alt = '',
   folder = 'shared/icons',
 }: IconProps) {
-  const [hasError, setHasError] = useState(false);
-  
   // Check if name already has an extension
   const hasExtension = name.includes('.');
   
@@ -67,19 +62,15 @@ export function Icon({
   const iconName = iconFallbacks[name] || name;
   const fileName = hasExtension ? iconName : `${iconName}.svg`;
   const imagePath = `/images/${folder}/${fileName}`;
-  
-  // If we've tried the fallback and it still fails, use a default icon
-  const fallbackPath = hasError ? `/images/shared/icons/warning.svg` : imagePath;
 
   return (
     <Image
-      src={fallbackPath}
+      src={imagePath}
       alt={alt || `${name} icon`}
       width={size}
       height={size}
       className={`${className}`}
       style={{ ...style, color: 'inherit' }}
-      onError={() => setHasError(true)}
     />
   );
 }
