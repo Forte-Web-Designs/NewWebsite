@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Summit Gaming Lounge Case Study | AI Omnichannel Concierge System | Forte Web Designs',
-  description: 'Learn how we built an AI-powered omnichannel concierge system for Summit Gaming Lounge that manages customer communications across SMS, Discord, and Telegram.',
+  title: 'Summit Gaming Lounge Case Study | AI-Powered Omnichannel Concierge System | Forte Web Designs',
+  description: 'Discover how we partnered with Summit Gaming Lounge to build a custom AI automation system that streamlines member communications, reservation management, and group coordination across SMS, Discord, and Telegram.',
 };
 
 export default function SummitGamingLoungeCaseStudy() {
@@ -31,10 +31,10 @@ export default function SummitGamingLoungeCaseStudy() {
                 Case Study
               </span>
               <h1 className="font-display font-bold text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
-                Summit Gaming Lounge: AI-Powered Omnichannel Concierge System
+                Summit Gaming Lounge | AI-Powered Omnichannel Concierge System
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-                How we transformed customer experience management for a modern gaming café with intelligent automation across SMS, Discord, and Telegram.
+                We partnered with Summit Gaming Lounge to design and deploy a custom AI automation system for their community-focused gaming business. This solution streamlines member communications, reservation management, and group coordination—allowing the lounge to focus on creating memorable experiences instead of getting bogged down in repetitive administrative workflows.
               </p>
               <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
                 <div>📅 <strong>Timeline:</strong> 12 weeks</div>
@@ -47,65 +47,50 @@ export default function SummitGamingLoungeCaseStudy() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-16">
               <div className="bg-gradient-to-br from-purple-50 to-blue-50 dark:from-purple-900/20 dark:to-blue-900/20 p-12 text-center">
                 <div className="text-6xl mb-4">🎮</div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Gaming Café Concierge</h3>
-                <p className="text-gray-600 dark:text-gray-400">AI automation across SMS, Discord & Telegram</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Summit Gaming Lounge</h3>
+                <p className="text-gray-600 dark:text-gray-400">AI-Powered Omnichannel Concierge System</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Challenge Section */}
+      {/* Project Overview Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">The Challenge</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Project Overview</h2>
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Summit Gaming Lounge, a modern gaming café and social venue, struggled with managing customer communications across multiple platforms. Their growing community used different channels—some preferred SMS, others Discord, and many used Telegram—creating fragmented conversations and missed opportunities.
+                The automation system was built in <strong>three modular phases</strong>: starting with intelligent user recognition across multiple platforms, advancing into smart reservation and group-forming automation, and culminating in comprehensive memory management with personalized member experiences across SMS, Discord, and Telegram.
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Challenges:</h4>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Fragmented customer conversations across platforms
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Manual reservation management
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Difficulty coordinating group events
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      No unified customer recognition system
-                    </li>
-                  </ul>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">1</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">User Recognition</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Omnichannel identity management and unified member profiles
+                  </p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Business Impact:</h4>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Inconsistent customer experience
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Lost bookings due to slow response times
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Staff overwhelmed by communication volume
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Missed opportunities for group bookings
-                    </li>
-                  </ul>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">2</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Smart Automation</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    MCP-powered reservation engine and group formation
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">3</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Personalization</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Conversational memory and adaptive member services
+                  </p>
                 </div>
               </div>
             </div>
@@ -128,33 +113,25 @@ export default function SummitGamingLoungeCaseStudy() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Intelligent User Recognition
+                      Omnichannel User Recognition & Identity Management
                     </h3>
                     <p className="text-blue-700 dark:text-blue-300 font-medium mb-4">
-                      Foundation: Cross-platform customer identification and unified profiles
+                      <strong>Trigger:</strong> Activated by incoming messages across SMS (Twilio), Discord, or Telegram platforms.
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Core Features:</h4>
-                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Unified customer profiles across SMS, Discord, Telegram
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Capabilities:</h4>
+                    <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Universal Member Identification</div>
+                        <p className="text-sm ml-4">Links phone numbers, Discord usernames, and Telegram handles into unified member profiles stored in Airtable. Performs instant cross-platform lookup to determine member status and route conversations appropriately.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Intelligent user matching and deduplication
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Preference tracking and history management
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Real-time conversation context switching
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Dynamic Conversation Routing</div>
+                        <p className="text-sm ml-4">Existing members connect to the full-service User Agent with complete access to reservations, preferences, and lounge history. New visitors are guided through the specialized Non-User Agent for streamlined profile creation.</p>
                       </li>
                     </ul>
                   </div>
@@ -162,7 +139,7 @@ export default function SummitGamingLoungeCaseStudy() {
                     <div className="text-center">
                       <div className="text-3xl mb-2">🔗</div>
                       <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                        "One customer profile, three communication channels"
+                        "Platform-optimized onboarding flows leverage each channel's unique capabilities"
                       </p>
                     </div>
                   </div>
@@ -177,42 +154,38 @@ export default function SummitGamingLoungeCaseStudy() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Smart Reservation & Group Management
+                      MCP-Powered Reservation & Group Formation Engine
                     </h3>
                     <p className="text-emerald-700 dark:text-emerald-300 font-medium mb-4">
-                      Automation: Intelligent booking coordination and group formation
+                      <strong>Trigger:</strong> Activated when members request assistance with bookings, game matching, or lounge services.
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Advanced Capabilities:</h4>
-                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Automated reservation scheduling across all platforms
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Functionality:</h4>
+                    <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Model Context Protocol Integration</div>
+                        <p className="text-sm ml-4">Custom MCP server enables AI agents to dynamically select and execute database operations in real time. Context-aware tool selection where agents autonomously choose optimal actions based on conversation flow.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Intelligent group formation for events and tournaments
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Intelligent Table & Game Matching</div>
+                        <p className="text-sm ml-4">Analyzes game size requirements and automatically pairs them with optimal table configurations. Handles complex scenarios requiring multiple table combinations for large groups.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Real-time availability checking and suggestions
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Automated reminders and confirmation management
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Looking For Group (LFG) Coordination</div>
+                        <p className="text-sm ml-4">Smart member matching based on gaming preferences, skill levels, and availability patterns. Privacy-protected outreach campaigns coordinate group formation without revealing identities until confirmation.</p>
                       </li>
                     </ul>
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">📅</div>
-                      <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-1">Result:</p>
+                      <div className="text-3xl mb-2">🎯</div>
+                      <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-1">Dynamic Operations:</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        90% reduction in manual booking coordination
+                        AI agents autonomously choose optimal database actions using $fromAI() expressions
                       </p>
                     </div>
                   </div>
@@ -227,42 +200,38 @@ export default function SummitGamingLoungeCaseStudy() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Personalized Experience Engine
+                      Conversational Memory & Personalized Member Services
                     </h3>
                     <p className="text-purple-700 dark:text-purple-300 font-medium mb-4">
-                      Intelligence: Memory management and personalized customer experiences
+                      <strong>Trigger:</strong> Operates continuously to maintain context and deliver increasingly personalized experiences.
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Personalization Features:</h4>
-                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Long-term customer preference memory
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Functionality:</h4>
+                    <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Cross-Platform Memory Architecture</div>
+                        <p className="text-sm ml-4">PostgreSQL conversation storage maintains complete interaction history across all platforms with unified member identification. Google Gemini vector embeddings create semantic understanding that enables context-aware responses regardless of communication channel.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Behavioral pattern recognition and suggestions
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Comprehensive Service Automation</div>
+                        <p className="text-sm ml-4">24/7 natural language interface for reservations, cancellations, preference updates, and game library management. Platform-specific optimizations leverage Discord rich embeds, Telegram interactive buttons, and SMS concise responses.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Proactive event and promotion recommendations
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Cross-platform conversation continuity
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Adaptive Member Experience</div>
+                        <p className="text-sm ml-4">Learning system adapts to individual communication preferences and platform usage patterns. Smart notification routing delivers updates via members' preferred channels.</p>
                       </li>
                     </ul>
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
                     <div className="text-center">
                       <div className="text-3xl mb-2">🧠</div>
-                      <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Result:</p>
+                      <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Conversation Continuity:</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Truly personalized experiences that increase customer loyalty
+                        Members can switch platforms mid-interaction while maintaining full context
                       </p>
                     </div>
                   </div>
@@ -273,61 +242,53 @@ export default function SummitGamingLoungeCaseStudy() {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Return on Investment Section */}
       <section className="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-12">Transformational Results</h2>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Return on Investment</h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">3</div>
-                <div className="text-white/80 text-sm">Unified Platforms</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">90%</div>
-                <div className="text-white/80 text-sm">Booking Automation</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">24/7</div>
-                <div className="text-white/80 text-sm">Customer Service</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">60%</div>
-                <div className="text-white/80 text-sm">Faster Response</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+              <p className="text-lg text-white/95 leading-relaxed text-center mb-8">
+                This AI-powered omnichannel system acts as an intelligent <strong>community manager</strong> for Summit Gaming Lounge—one that:
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90">Understands member preferences and social patterns across all communication platforms.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90">Automates complex reservation workflows from initial inquiry to confirmed table assignments.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90">Facilitates organic group formation through intelligent matching and privacy-protected coordination.</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90">Maintains comprehensive member relationship data for increasingly personalized service delivery.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90">Operates around the clock and scales effortlessly as the lounge community grows.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90">Eliminates administrative overhead while enhancing the personal touch that makes Summit Gaming Lounge unique.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Business Impact:</h3>
-              <div className="grid md:grid-cols-2 gap-6 text-left">
-                <div>
-                  <h4 className="font-semibold text-white mb-3">Operational Excellence:</h4>
-                  <ul className="space-y-2 text-white/90">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Eliminated double bookings and scheduling conflicts
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Reduced staff workload by 70% for customer communications
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white mb-3">Customer Experience:</h4>
-                  <ul className="space-y-2 text-white/90">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Consistent experience across all communication channels
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Increased group event participation by 45%
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+              <p className="text-lg text-white/95 leading-relaxed">
+                The <strong>modular architecture</strong> ensures Summit Gaming Lounge can expand features—adding tournament management, event coordination, or additional communication channels—as their community evolves. The result is <strong>faster service delivery, deeper member engagement, and a scalable foundation</strong> that supports unlimited growth without sacrificing the personal connections that make the gaming experience special.
+              </p>
             </div>
           </div>
         </div>
@@ -338,10 +299,10 @@ export default function SummitGamingLoungeCaseStudy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Ready to Transform Your Customer Experience?
+              Ready to Build Your AI-Powered Community Manager?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Build an omnichannel AI system that unifies your customer communications and automates your operations.
+              Create an intelligent omnichannel system that manages member communications, automates complex workflows, and delivers personalized experiences that scale with your growing community.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

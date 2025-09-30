@@ -2,8 +2,8 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'MetroEats Case Study | AI Restaurant Partner Discovery System | Forte Web Designs',
-  description: 'Discover how we built an AI-powered partner discovery system for MetroEats that automated restaurant identification and onboarding, leading to 40% increase in monthly sign-ups.',
+  title: 'MetroEats Case Study | AI-Powered Lead Discovery System | Forte Web Designs',
+  description: 'Learn how we partnered with MetroEats to build an AI-powered lead discovery system that automates restaurant identification, validates information, and enriches contact details for scalable business growth.',
 };
 
 export default function MetroEatsCaseStudy() {
@@ -31,15 +31,15 @@ export default function MetroEatsCaseStudy() {
                 Case Study
               </span>
               <h1 className="font-display font-bold text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
-                MetroEats: AI-Powered Restaurant Partner Discovery System
+                MetroEats | AI-Powered Lead Discovery System
               </h1>
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto mb-8">
-                How we accelerated restaurant onboarding for a fast-scaling DFW food delivery startup with intelligent partner discovery and automated lead generation.
+                We partnered with MetroEats, a fast-growing food delivery and restaurant promotion platform, to design and deploy an AI-powered lead discovery system. MetroEats needed a scalable way to identify and onboard partner restaurants quickly while maintaining high-quality data for outreach. This system automates the discovery of optimal restaurant partners, validates their information, and enriches contact details—allowing MetroEats to expand efficiently across new markets while keeping sales teams focused on closing deals.
               </p>
               <div className="flex flex-wrap justify-center items-center gap-6 text-sm text-gray-500 dark:text-gray-400">
-                <div>📅 <strong>Timeline:</strong> 8 weeks</div>
+                <div>📅 <strong>Timeline:</strong> 3 phases</div>
                 <div>🍕 <strong>Industry:</strong> Food Delivery/Tech</div>
-                <div>⚡ <strong>Result:</strong> 40% increase in sign-ups</div>
+                <div>⚡ <strong>Result:</strong> AI-powered lead discovery</div>
               </div>
             </div>
 
@@ -47,65 +47,50 @@ export default function MetroEatsCaseStudy() {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl mb-16">
               <div className="bg-gradient-to-br from-orange-50 to-red-50 dark:from-orange-900/20 dark:to-red-900/20 p-12 text-center">
                 <div className="text-6xl mb-4">🍕</div>
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">Restaurant Discovery AI</h3>
-                <p className="text-gray-600 dark:text-gray-400">Web crawling, API search & intelligent lead generation</p>
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">MetroEats Lead Discovery</h3>
+                <p className="text-gray-600 dark:text-gray-400">AI-Powered Lead Discovery System</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Challenge Section */}
+      {/* Project Overview Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">The Challenge</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Project Overview</h2>
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                MetroEats, a rapidly growing Dallas-Fort Worth food delivery platform, was struggling to scale their restaurant partner acquisition. Their team was spending days manually researching potential restaurant partners, trying to find contact information, and qualifying leads—creating a major bottleneck in their expansion plans.
+                By integrating advanced <strong>web crawling, API-driven search, and a user-friendly interface</strong>, the system creates a dynamic database of restaurant leads with actionable insights, helping MetroEats accelerate growth and stay competitive against larger platforms.
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Growth Bottlenecks:</h4>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Manual restaurant research taking 2-3 days per lead
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Low contact information success rate (under 30%)
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Inconsistent lead qualification criteria
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Scaling challenges as they expanded to new cities
-                    </li>
-                  </ul>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">1</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Lead Discovery Backend</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Google Search API integration and dynamic database storage
+                  </p>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Business Impact:</h4>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Slow market entry in new cities
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      High cost per acquisition due to manual processes
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Limited scalability of growth team
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Missed opportunities due to slow response times
-                    </li>
-                  </ul>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-emerald-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">2</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Automated Enrichment</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Web crawling with FireCrawl for contact information
+                  </p>
+                </div>
+                <div className="text-center">
+                  <div className="w-16 h-16 bg-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
+                    <span className="text-white font-bold text-xl">3</span>
+                  </div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Frontend Interface</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    React + TypeScript user-friendly search interface
+                  </p>
                 </div>
               </div>
             </div>
@@ -117,46 +102,40 @@ export default function MetroEatsCaseStudy() {
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Our AI-Powered Solution</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Our 3-Phase Solution</h2>
             
             <div className="space-y-12">
-              {/* Component 1 */}
+              {/* Phase 1 */}
               <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 bg-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                    </svg>
+                    <span className="text-white font-bold">1</span>
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Intelligent Web Crawling Engine
+                      Lead Discovery Backend & Database
                     </h3>
                     <p className="text-blue-700 dark:text-blue-300 font-medium mb-4">
-                      Automated restaurant discovery across multiple data sources
+                      <strong>Trigger:</strong> Initiated when MetroEats submits lead criteria (e.g., location, cuisine type, price bracket) into the backend.
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Discovery Capabilities:</h4>
-                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Google Maps API integration for restaurant identification
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Functionality:</h4>
+                    <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Google Search API Integration</div>
+                        <p className="text-sm ml-4">Retrieves lists of 10–100+ restaurants based on custom criteria (location, cuisine, price range). Results include restaurant names, addresses, Google ratings, review counts, and descriptions.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Yelp, DoorDash, and Uber Eats data scraping
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Dynamic Database Storage</div>
+                        <p className="text-sm ml-4">Stores lead data in Google Sheets, serving as a living database. Captures restaurant name, address, average rating, review totals, and category details.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Social media profile discovery and analysis
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Real-time menu and pricing intelligence
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Data Validation</div>
+                        <p className="text-sm ml-4">Cross-references API data to ensure accuracy and consistency for every lead.</p>
                       </li>
                     </ul>
                   </div>
@@ -164,111 +143,99 @@ export default function MetroEatsCaseStudy() {
                     <div className="text-center">
                       <div className="text-3xl mb-2">🔍</div>
                       <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                        "Discovers 200+ qualified restaurants per city in under 2 hours"
+                        "Core backend infrastructure for reliable and scalable restaurant discovery pipeline"
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Component 2 */}
+              {/* Phase 2 */}
               <div className="bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 bg-emerald-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                    </svg>
+                    <span className="text-white font-bold">2</span>
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Contact Intelligence System
+                      Automated Web Crawling & Enrichment
                     </h3>
                     <p className="text-emerald-700 dark:text-emerald-300 font-medium mb-4">
-                      Automated contact discovery and qualification scoring
+                      <strong>Trigger:</strong> Activated automatically to enrich restaurants stored in the lead database.
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Contact Discovery:</h4>
-                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Owner/manager contact information extraction
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Functionality:</h4>
+                    <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Web Crawling with FireCrawl</div>
+                        <p className="text-sm ml-4">Scrapes each restaurant's website to extract detailed contact information, including emails, phone numbers, and decision-maker names (where available).</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Phone number validation and verification
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Lead Enrichment</div>
+                        <p className="text-sm ml-4">Appends crawled data to existing records, giving sales teams complete contact profiles.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Email address discovery through multiple sources
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Lead scoring based on partner fit criteria
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Scalable Crawling</div>
+                        <p className="text-sm ml-4">Supports high-volume enrichment, enabling thousands of restaurants to be processed at scale.</p>
                       </li>
                     </ul>
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">📞</div>
-                      <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-1">Success Rate:</p>
+                      <div className="text-3xl mb-2">🕷️</div>
+                      <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-1">Improved Quality:</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        85% contact info coverage vs. 30% manual
+                        Significantly improved quality and depth of restaurant lead data
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              {/* Component 3 */}
+              {/* Phase 3 */}
               <div className="bg-purple-50 dark:bg-purple-900/20 rounded-2xl p-8">
                 <div className="flex items-start gap-4 mb-6">
                   <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                    </svg>
+                    <span className="text-white font-bold">3</span>
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Partnership Management Dashboard
+                      Lead Discovery Frontend
                     </h3>
                     <p className="text-purple-700 dark:text-purple-300 font-medium mb-4">
-                      Real-time pipeline management and team coordination
+                      <strong>Trigger:</strong> Activated when a MetroEats team member inputs search criteria via the custom frontend.
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Dashboard Features:</h4>
-                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Live pipeline with qualification scoring
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Key Capabilities:</h4>
+                    <ul className="space-y-3 text-gray-700 dark:text-gray-300">
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• User-Friendly Interface</div>
+                        <p className="text-sm ml-4">A React + TypeScript frontend allows non-technical users to search for restaurants by location, cuisine, or custom filters.</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Automated task assignment and follow-up reminders
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Natural Language Input</div>
+                        <p className="text-sm ml-4">Supports conversational queries (e.g., "Italian restaurants in downtown Dallas under $25 signs").</p>
                       </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Performance analytics and conversion tracking
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Territory management for multi-city expansion
+                      <li>
+                        <div className="font-medium text-gray-900 dark:text-white mb-1">• Real-Time Feedback</div>
+                        <p className="text-sm ml-4">Displays search progress and results instantly, ensuring clarity and ease of use.</p>
                       </li>
                     </ul>
                   </div>
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
                     <div className="text-center">
-                      <div className="text-3xl mb-2">📊</div>
-                      <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Result:</p>
+                      <div className="text-3xl mb-2">💻</div>
+                      <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Complete System:</p>
                       <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Complete visibility into partnership funnel
+                        Seamless, intuitive interface for lead discovery pipeline
                       </p>
                     </div>
                   </div>
@@ -279,61 +246,49 @@ export default function MetroEatsCaseStudy() {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Return on Investment Section */}
       <section className="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-12">Explosive Growth Results</h2>
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-bold text-white mb-12 text-center">Return on Investment</h2>
             
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">&lt; 1hr</div>
-                <div className="text-white/80 text-sm">Research Time</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">85%</div>
-                <div className="text-white/80 text-sm">Contact Success</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">40%</div>
-                <div className="text-white/80 text-sm">More Sign-ups</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">6mo</div>
-                <div className="text-white/80 text-sm">Multi-city Scale</div>
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
+              <p className="text-lg text-white/95 leading-relaxed text-center mb-8">
+                By implementing this AI-powered lead discovery system, MetroEats gained a <strong>transformative tool</strong> that:
+              </p>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90"><strong>Automates</strong> restaurant identification, saving hours of manual research each week.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90"><strong>Delivers</strong> actionable contact details, making outreach faster and more effective.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90"><strong>Scales</strong> effortlessly, supporting rapid expansion into new cities and regions.</p>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90"><strong>Simplifies</strong> adoption, requiring minimal training for team members.</p>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+                    <p className="text-white/90"><strong>Extends</strong> functionality with modular design—ready for new features like automated outreach or integration with CRM systems.</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-white mb-6">Business Transformation:</h3>
-              <div className="grid md:grid-cols-2 gap-6 text-left">
-                <div>
-                  <h4 className="font-semibold text-white mb-3">Operational Efficiency:</h4>
-                  <ul className="space-y-2 text-white/90">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Reduced research time from days to under 1 hour
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Automated discovery of 200+ restaurants per city
-                    </li>
-                  </ul>
-                </div>
-                <div>
-                  <h4 className="font-semibold text-white mb-3">Growth Acceleration:</h4>
-                  <ul className="space-y-2 text-white/90">
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      40% increase in monthly restaurant sign-ups
-                    </li>
-                    <li className="flex items-start">
-                      <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Scaled from Dallas to multi-city rollout in 6 months
-                    </li>
-                  </ul>
-                </div>
-              </div>
+            <div className="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+              <p className="text-lg text-white/95 leading-relaxed">
+                The result: <strong>faster restaurant acquisition, higher-quality partnerships, and a scalable AI-driven system</strong> that powers MetroEats' mission to connect more customers with local dining options.
+              </p>
             </div>
           </div>
         </div>
@@ -344,10 +299,10 @@ export default function MetroEatsCaseStudy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
-              Ready to Accelerate Your Business Development?
+              Ready to Build Your AI-Powered Lead Discovery System?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-              Build an AI-powered discovery and qualification system that scales your business development efforts automatically.
+              Create an intelligent lead discovery system that automates prospect identification, enriches contact data, and delivers actionable insights that drive rapid business growth across multiple markets.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link

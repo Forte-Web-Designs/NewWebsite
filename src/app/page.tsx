@@ -267,7 +267,7 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-full overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-full">
               {coreFeatures.map((feature, index) => (
                 <SimpleAnimatedCard key={index}>
                   <Link href={feature.link}>
@@ -315,7 +315,7 @@ export default function Home() {
                     What we check depends on your industry:
                   </h3>
 
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 max-w-full overflow-hidden">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 max-w-full">
                     <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center max-w-full">
                       <Icon name="services" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
                       <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">Service Businesses</h4>
@@ -460,7 +460,7 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full">
               {recentOutcomes.map((outcome, index) => (
                 <SimpleAnimatedCard key={index}>
                   <Link href={`/results#${outcome.anchor}`}>
@@ -528,7 +528,7 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 overflow-hidden">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
               <SimpleAnimatedCard>
                 <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
                   <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🌐</div>

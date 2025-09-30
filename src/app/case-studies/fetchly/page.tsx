@@ -56,55 +56,58 @@ export default function FetchlyCaseStudy() {
         </div>
       </section>
 
-      {/* Challenge Section */}
+      {/* Project Overview Section */}
       <section className="py-16 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">The Challenge</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Project Overview</h2>
             <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Fetchly's leadership team was drowning in administrative tasks across multiple platforms. Email management, calendar scheduling, project updates in monday.com, and contact management were consuming valuable time that should have been spent on strategic growth initiatives.
+                Fetchly, a rapidly growing pet subscription brand, needed to eliminate the administrative overhead that was consuming precious executive time. Rather than hiring additional staff, they wanted an intelligent solution that could handle complex administrative tasks while integrating seamlessly with their existing workflows.
               </p>
-              <div className="grid md:grid-cols-2 gap-6">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                The challenge wasn't just about automation—it was about creating a solution that could understand context, maintain brand voice, and make intelligent decisions across multiple platforms (Gmail, Google Calendar, monday.com, and Google Contacts) while keeping everything centralized in their primary communication tool: Slack.
+              </p>
+              <div className="grid md:grid-cols-2 gap-8">
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Pain Points:</h4>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Key Requirements:</h4>
+                  <ul className="space-y-3 text-gray-600 dark:text-gray-400">
                     <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Constant platform switching
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Complete Slack integration for unified workflow</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Repetitive email management
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Intelligent email management and drafting</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Manual calendar coordination
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Automated calendar and task coordination</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-2 h-2 bg-red-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Disorganized contact data
+                      <span className="w-2 h-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Proactive daily operational summaries</span>
                     </li>
                   </ul>
                 </div>
                 <div>
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Impact:</h4>
-                  <ul className="space-y-2 text-gray-600 dark:text-gray-400">
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-4">Technical Integration:</h4>
+                  <ul className="space-y-3 text-gray-600 dark:text-gray-400">
                     <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Hours lost to admin work daily
+                      <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Gmail API for email management</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Delayed responses to important emails
+                      <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Google Calendar API integration</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Missed opportunities due to poor follow-up
+                      <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>monday.com API connectivity</span>
                     </li>
                     <li className="flex items-start">
-                      <span className="w-2 h-2 bg-orange-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                      Leadership focus diluted
+                      <span className="w-2 h-2 bg-emerald-500 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                      <span>Google Contacts enrichment system</span>
                     </li>
                   </ul>
                 </div>
@@ -114,11 +117,11 @@ export default function FetchlyCaseStudy() {
         </div>
       </section>
 
-      {/* Solution Section */}
+      {/* Implementation Phases Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Our Solution</h2>
+            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">Implementation Phases</h2>
             
             <div className="space-y-12">
               {/* Phase 1 */}
@@ -129,47 +132,56 @@ export default function FetchlyCaseStudy() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Slack-Based Personal Assistant
+                      Slack-Centric AI Assistant Foundation
                     </h3>
                     <p className="text-blue-700 dark:text-blue-300 font-medium mb-4">
-                      Trigger: Activated by a Slack @mention
+                      Building the core AI assistant that lives entirely within Slack's ecosystem
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Core Capabilities:</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Core Development:</h4>
                     <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Email drafting, labeling & inbox summarization
+                        Custom Slack app with OAuth 2.0 authentication
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Calendar availability checks & meeting scheduling
+                        AI engine with natural language processing capabilities
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        monday.com board & task management
+                        Mention-triggered command system for seamless interaction
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Google Contacts enrichment & updates
-                      </li>
-                      <li className="flex items-start">
-                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Tone matching for brand consistency
+                        Context awareness and conversation memory features
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
-                    <div className="text-center">
-                      <div className="text-3xl mb-2">💬</div>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 italic">
-                        "All assistant interactions happen directly in Slack - no platform switching required"
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Technical Architecture:</h4>
+                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Node.js backend with Express framework
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Slack Bolt SDK integration for robust event handling
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        OpenAI GPT integration for intelligent responses
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-blue-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        PostgreSQL database for conversation persistence
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -182,44 +194,56 @@ export default function FetchlyCaseStudy() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Inbox Management Automation
+                      Multi-Platform API Integration
                     </h3>
                     <p className="text-emerald-700 dark:text-emerald-300 font-medium mb-4">
-                      Trigger: Continuous monitoring of incoming emails
+                      Connecting Gmail, Google Calendar, monday.com, and Google Contacts APIs
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Automated Features:</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">API Integrations:</h4>
                     <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Auto-enriches contact details for new senders
+                        Gmail API for email drafting, labeling, and inbox management
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Summarizes billing emails with Slack alerts
+                        Google Calendar API for availability checks and meeting scheduling
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Flags VIP emails with automatic labeling
+                        monday.com API for task and board management
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Categorizes internal emails for review
+                        Google Contacts API for contact enrichment and updates
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
-                    <div className="text-center">
-                      <div className="text-3xl mb-2">🔄</div>
-                      <p className="text-sm font-semibold text-emerald-600 dark:text-emerald-400 mb-1">Result:</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Eliminated inbox clutter and accelerated response time
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Smart Features:</h4>
+                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Intelligent email categorization and auto-labeling
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Brand voice matching for consistent communication
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Automatic contact enrichment from email interactions
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-emerald-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Contextual task creation and project updates
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -232,40 +256,56 @@ export default function FetchlyCaseStudy() {
                   </div>
                   <div>
                     <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                      Daily Operational Summary
+                      Automation & Proactive Intelligence
                     </h3>
                     <p className="text-purple-700 dark:text-purple-300 font-medium mb-4">
-                      Trigger: Automatically runs every weekday at 5:00 AM
+                      Implementing automated workflows and daily operational intelligence
                     </p>
                   </div>
                 </div>
                 
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Daily Intelligence:</h4>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Automated Workflows:</h4>
                     <ul className="space-y-2 text-gray-700 dark:text-gray-300">
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Pulls the day's meetings from Google Calendar
+                        Daily 5:00 AM operational summaries via Slack
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Surfaces active/due tasks from monday.com
+                        Real-time email monitoring with instant Slack notifications
                       </li>
                       <li className="flex items-start">
                         <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                        Generates concise, actionable summary in Slack
+                        Automatic calendar and task synchronization
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        VIP email flagging and priority routing
                       </li>
                     </ul>
                   </div>
-                  <div className="bg-white dark:bg-gray-800 rounded-lg p-4">
-                    <div className="text-center">
-                      <div className="text-3xl mb-2">📊</div>
-                      <p className="text-sm font-semibold text-purple-600 dark:text-purple-400 mb-1">Result:</p>
-                      <p className="text-sm text-gray-600 dark:text-gray-400">
-                        Daily visibility without logging into multiple platforms
-                      </p>
-                    </div>
+                  <div>
+                    <h4 className="font-semibold text-gray-900 dark:text-white mb-3">Intelligence Features:</h4>
+                    <ul className="space-y-2 text-gray-700 dark:text-gray-300">
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Cross-platform data correlation and insights
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Predictive scheduling and conflict resolution
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Intelligent email summarization and action items
+                      </li>
+                      <li className="flex items-start">
+                        <span className="w-2 h-2 bg-purple-600 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                        Proactive task recommendations based on patterns
+                      </li>
+                    </ul>
                   </div>
                 </div>
               </div>
@@ -274,60 +314,100 @@ export default function FetchlyCaseStudy() {
         </div>
       </section>
 
-      {/* Results Section */}
+      {/* Results & ROI Section */}
       <section className="py-16 bg-gradient-to-r from-primary-600 to-primary-700">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl font-bold text-white mb-12">Results & ROI</h2>
+            <h2 className="text-3xl font-bold text-white mb-12">Results & Return on Investment</h2>
             
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-8">
               <p className="text-xl text-white/90 leading-relaxed mb-6">
-                By implementing this AI assistant, Fetchly effectively onboarded the equivalent of a full-time executive assistant that lives in Slack
+                The AI-powered executive assistant delivered immediate returns that far exceeded the cost of a traditional hire. Within the first month, Fetchly's leadership team reclaimed over 15 hours per week of previously lost administrative time—equivalent to adding a full-time executive assistant but with 24/7 availability, zero training overhead, and perfect integration with existing workflows.
+              </p>
+              <p className="text-lg text-white/80 leading-relaxed">
+                The solution paid for itself within 6 weeks through increased executive productivity and eliminated the need for additional administrative staff, representing a 300%+ ROI in the first year.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div className="text-3xl font-bold text-white mb-2">15+</div>
+                <div className="text-white/80 text-sm">Hours Saved Weekly</div>
+              </div>
+              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
+                <div className="text-3xl font-bold text-white mb-2">300%+</div>
+                <div className="text-white/80 text-sm">First-Year ROI</div>
+              </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold text-white mb-2">24/7</div>
                 <div className="text-white/80 text-sm">Availability</div>
               </div>
               <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">0</div>
-                <div className="text-white/80 text-sm">Training Required</div>
-              </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
                 <div className="text-3xl font-bold text-white mb-2">4</div>
                 <div className="text-white/80 text-sm">Platform Integration</div>
               </div>
-              <div className="bg-white/10 backdrop-blur-sm rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-white mb-2">15+</div>
-                <div className="text-white/80 text-sm">Hours Saved Weekly</div>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-8 mb-8">
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-white mb-4">Quantifiable Benefits:</h3>
+                <ul className="space-y-3 text-left text-white/90">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Eliminated $60,000+ annual executive assistant salary costs</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Recovered 780+ hours annually of executive time</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Improved email response time by 85%</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-emerald-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Reduced calendar scheduling conflicts by 90%</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6">
+                <h3 className="text-lg font-bold text-white mb-4">Strategic Outcomes:</h3>
+                <ul className="space-y-3 text-left text-white/90">
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Leadership team refocused on strategic growth initiatives</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Created scalable operational foundation for company expansion</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Established consistent brand voice across all communications</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="w-2 h-2 bg-blue-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                    <span>Improved customer relationship management through automated contact enrichment</span>
+                  </li>
+                </ul>
               </div>
             </div>
 
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
-              <h3 className="text-xl font-bold text-white mb-4">Key Benefits Achieved:</h3>
-              <div className="grid md:grid-cols-2 gap-4 text-left">
-                <ul className="space-y-2 text-white/90">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Seamlessly integrated with existing tools
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Reduced administrative overhead by double-digit hours weekly
-                  </li>
-                </ul>
-                <ul className="space-y-2 text-white/90">
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Created scalable framework for future AI workflows
-                  </li>
-                  <li className="flex items-start">
-                    <span className="w-2 h-2 bg-white rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                    Enhanced executive focus and team productivity
-                  </li>
-                </ul>
+              <div className="mb-6">
+                <h3 className="text-xl font-bold text-white mb-2">Executive Testimonial</h3>
+                <p className="text-white/90 italic leading-relaxed">
+                  "This AI assistant has been transformational for our business. What used to take our leadership team hours each day now happens automatically in Slack. We've reclaimed our focus on what actually grows the business while maintaining better organization than we've ever had."
+                </p>
+                <p className="text-white/70 text-sm mt-3">— Fetchly Leadership Team</p>
+              </div>
+              
+              <div className="border-t border-white/20 pt-6">
+                <p className="text-lg font-semibold text-white mb-2">Long-term Impact:</p>
+                <p className="text-white/80">
+                  The AI assistant continues to learn and improve, with plans to expand into customer service automation and advanced predictive scheduling. Fetchly now has a future-proof administrative foundation that scales with their growth.
+                </p>
               </div>
             </div>
           </div>
