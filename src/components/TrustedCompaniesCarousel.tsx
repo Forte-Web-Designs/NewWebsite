@@ -80,24 +80,17 @@ const trustedCompanies = [
 
 export default function TrustedCompaniesCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemWidth, setItemWidth] = useState(220); // Width of each logo container including gap
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    const updateItemWidth = () => {
-      const screenWidth = window.innerWidth;
-      if (screenWidth < 640) {
-        setItemWidth(160); // Mobile - increased spacing between logos
-      } else if (screenWidth < 1024) {
-        setItemWidth(180); // Tablet
-      } else {
-        setItemWidth(220); // Desktop
-      }
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
     };
 
-    updateItemWidth();
-    window.addEventListener('resize', updateItemWidth);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
     
-    return () => window.removeEventListener('resize', updateItemWidth);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
 
   useEffect(() => {
@@ -112,6 +105,22 @@ export default function TrustedCompaniesCarousel() {
     return () => clearInterval(interval);
   }, []);
 
+  // Function to get mobile-optimized logo dimensions
+  const getMobileLogoStyle = (companyName: string) => {
+    if (!isMobile) return { maxWidth: '100%', maxHeight: '100%' };
+    
+    // Mobile-specific sizing for problematic logos
+    const mobileConstraints: Record<string, { maxWidth: string; maxHeight: string }> = {
+      'AliExpress': { maxWidth: '75%', maxHeight: '60%' },
+      'DHL': { maxWidth: '80%', maxHeight: '70%' },
+      'Bristol Myers Squibb': { maxWidth: '70%', maxHeight: '65%' },
+      'Philip Treacy London': { maxWidth: '85%', maxHeight: '75%' },
+      'Amerus Life Holdings': { maxWidth: '80%', maxHeight: '70%' }
+    };
+
+    return mobileConstraints[companyName] || { maxWidth: '90%', maxHeight: '80%' };
+  };
+
   return (
     <div className="bg-white dark:bg-gray-800 py-12 overflow-hidden">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
@@ -121,47 +130,90 @@ export default function TrustedCompaniesCarousel() {
           </h3>
         </div>
 
-        {/* Continuous scrolling carousel */}
-        <div className="overflow-hidden relative max-w-full">
-          <div 
-            className="flex items-center gap-8 sm:gap-10 lg:gap-12 transition-transform duration-1000 ease-in-out"
-            style={{
-              transform: `translateX(-${currentIndex * itemWidth}px)`,
-              width: `${trustedCompanies.length * 2 * itemWidth}px`,
-              maxWidth: 'none'
-            }}
-          >
-            {/* Duplicate logos for seamless infinite scroll */}
-            {[...trustedCompanies, ...trustedCompanies].map((company, index) => {
-              const isSecondSet = index >= trustedCompanies.length;
-              return (
-                <div
-                  key={`logo-${company.id}-${isSecondSet ? 'duplicate' : 'original'}`}
-                  className="flex items-center justify-center flex-shrink-0 opacity-90 hover:opacity-100 transition-opacity duration-300"
-                  style={{ 
-                    width: `${itemWidth - 20}px`,
-                    height: '96px',
-                    padding: '16px',
-                    minWidth: `${itemWidth - 20}px`,
-                    maxWidth: `${itemWidth - 20}px`
-                  }}
-                >
-                  <img
-                    src={company.logo}
-                    alt={company.alt}
-                    className="max-w-full max-h-full object-contain"
-                    style={{
-                      width: 'auto',
-                      height: 'auto',
-                      maxWidth: company.name === 'AliExpress' && itemWidth < 180 ? '85%' : '100%',
-                      maxHeight: '100%'
+        {/* Mobile-optimized carousel */}
+        {isMobile ? (
+          <div className="overflow-hidden relative">
+            <div 
+              className="flex items-center gap-4 transition-transform duration-1000 ease-in-out"
+              style={{
+                transform: `translateX(-${currentIndex * 120}px)`,
+                width: `${trustedCompanies.length * 2 * 120}px`
+              }}
+            >
+              {/* Duplicate logos for seamless infinite scroll */}
+              {[...trustedCompanies, ...trustedCompanies].map((company, index) => {
+                const isSecondSet = index >= trustedCompanies.length;
+                const logoStyle = getMobileLogoStyle(company.name);
+                
+                return (
+                  <div
+                    key={`logo-${company.id}-${isSecondSet ? 'duplicate' : 'original'}`}
+                    className="flex items-center justify-center flex-shrink-0 opacity-90"
+                    style={{ 
+                      width: '100px',
+                      height: '60px',
+                      minWidth: '100px',
+                      maxWidth: '100px'
                     }}
-                  />
-                </div>
-              );
-            })}
+                  >
+                    <img
+                      src={company.logo}
+                      alt={company.alt}
+                      className="object-contain"
+                      style={{
+                        width: 'auto',
+                        height: 'auto',
+                        ...logoStyle
+                      }}
+                    />
+                  </div>
+                );
+              })}
+            </div>
           </div>
-        </div>
+        ) : (
+          /* Desktop carousel */
+          <div className="overflow-hidden relative max-w-full">
+            <div 
+              className="flex items-center gap-8 sm:gap-10 lg:gap-12 transition-transform duration-1000 ease-in-out"
+              style={{
+                transform: `translateX(-${currentIndex * 200}px)`,
+                width: `${trustedCompanies.length * 2 * 200}px`,
+                maxWidth: 'none'
+              }}
+            >
+              {/* Duplicate logos for seamless infinite scroll */}
+              {[...trustedCompanies, ...trustedCompanies].map((company, index) => {
+                const isSecondSet = index >= trustedCompanies.length;
+                return (
+                  <div
+                    key={`logo-${company.id}-${isSecondSet ? 'duplicate' : 'original'}`}
+                    className="flex items-center justify-center flex-shrink-0 opacity-90 hover:opacity-100 transition-opacity duration-300"
+                    style={{ 
+                      width: '180px',
+                      height: '96px',
+                      padding: '16px',
+                      minWidth: '180px',
+                      maxWidth: '180px'
+                    }}
+                  >
+                    <img
+                      src={company.logo}
+                      alt={company.alt}
+                      className="max-w-full max-h-full object-contain"
+                      style={{
+                        width: 'auto',
+                        height: 'auto',
+                        maxWidth: '100%',
+                        maxHeight: '100%'
+                      }}
+                    />
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
     </div>
   );

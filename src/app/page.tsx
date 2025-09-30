@@ -233,16 +233,16 @@ export default function Home() {
                       handleCTAClick('primary', 'hero');
                       setShowGrowthSnapshotForm(true);
                     }}
-                    className="px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg w-full sm:w-auto max-w-full min-w-0"
+                    className="px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg w-full sm:w-auto max-w-full min-w-0 text-center"
                   >
                     Get My Free Growth Snapshot →
                   </DarkButton>
                   <a 
                     href="#how-it-works"
                     onClick={() => handleCTAClick('secondary', 'hero')}
-                    className="inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0"
+                    className="inline-flex items-center justify-center px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0 min-h-[44px] text-center"
                   >
-                    <span className="truncate">See How It Works</span>
+                    <span className="truncate text-center">See How It Works</span>
                     <svg className="ml-2 w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -382,7 +382,7 @@ export default function Home() {
                         handleCTAClick('primary', 'snapshot-section');
                         setShowGrowthSnapshotForm(true);
                       }}
-                      className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+                      className="px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-lg w-full sm:w-auto text-center"
                     >
                       Get my Free Growth Snapshot →
                     </DarkButton>
@@ -430,7 +430,7 @@ export default function Home() {
                         handleCTAClick('primary', 'snapshot-preview');
                         setShowGrowthSnapshotForm(true);
                       }}
-                      className="w-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
+                      className="w-full px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-lg text-center"
                     >
                       Get My Free Growth Snapshot →
                     </DarkButton>
@@ -509,7 +509,7 @@ export default function Home() {
               <div className="flex justify-center px-2">
                 <Link 
                   href="/case-studies"
-                  className="inline-flex items-center px-6 sm:px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base min-h-[44px] text-center"
                 >
                   View All Case Studies
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -610,7 +610,7 @@ export default function Home() {
               <div className="flex justify-center px-2">
                 <a 
                   href="/pricing"
-                  className="inline-flex items-center px-6 sm:px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base min-h-[44px] text-center"
                 >
                   See Pricing
                   <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -641,16 +641,16 @@ export default function Home() {
                     handleCTAClick('primary', 'closing-cta');
                     setShowGrowthSnapshotForm(true);
                   }}
-                  className="bg-white text-primary-600 hover:bg-gray-50 px-4 sm:px-6 lg:px-8 py-3 sm:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-colors w-full sm:w-auto max-w-full min-w-0"
+                  className="bg-white text-primary-600 hover:bg-gray-50 px-6 sm:px-6 lg:px-8 py-4 sm:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-colors w-full sm:w-auto max-w-full min-w-0 min-h-[44px] text-center"
                 >
-                  <span className="truncate">Get a Free Growth Snapshot</span>
+                  <span className="truncate text-center">Get a Free Growth Snapshot</span>
                 </button>
                 <a 
                   href="/contact"
                   onClick={() => handleCTAClick('secondary', 'closing-cta')}
-                  className="inline-flex items-center justify-center px-4 sm:px-6 lg:px-8 py-3 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0"
+                  className="inline-flex items-center justify-center px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0 min-h-[44px] text-center"
                 >
-                  <span className="truncate">Talk to Us</span>
+                  <span className="truncate text-center">Talk to Us</span>
                   <svg className="ml-2 w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

@@ -403,10 +403,131 @@ a:hover,
   }
 }
 
+/* Enhanced mobile button and text responsiveness fixes */
+@media (max-width: 768px) {
+  /* CTA Button Mobile Optimization */
+  button[class*="bg-"]:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]),
+  a[class*="bg-"]:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]),
+  .button:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]) {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 20px !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Button Text Centering */
+  button span:not([class*="sr-only"]):not([class*="hidden"]),
+  a span:not([class*="sr-only"]):not([class*="hidden"]),
+  .button span:not([class*="sr-only"]):not([class*="hidden"]) {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+    line-height: 1.2 !important;
+  }
+  
+  /* CTA Container Centering */
+  .flex[class*="gap-"]:has(button),
+  .flex[class*="gap-"]:has(a[class*="bg-"]) {
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+  }
+  
+  /* Hero CTA Section Specific */
+  .flex.flex-col.sm\\:flex-row {
+    align-items: center !important;
+    width: 100% !important;
+  }
+  
+  /* Secondary Button Mobile Fix */
+  a[class*="border-2"]:not([class*="theme"]):not([class*="close"]) {
+    min-height: 44px !important;
+    padding: 12px 20px !important;
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    max-width: 280px !important;
+    margin: 0 auto !important;
+  }
+  
+  /* Text Truncation Fix */
+  .truncate {
+    text-align: center !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    white-space: normal !important;
+  }
+  
+  /* Heading Centering */
+  h1, h2, h3 {
+    text-align: center !important;
+  }
+}
+
+/* Enhanced mobile button and text responsiveness */
+@media (max-width: 768px) {
+  /* Ensure all buttons have proper centering and touch targets */
+  button, 
+  .button, 
+  [role="button"], 
+  a[class*="button"],
+  a[class*="btn"] {
+    min-height: 44px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px 16px !important;
+  }
+  
+  /* Fix text centering in buttons */
+  button span,
+  .button span,
+  a span {
+    text-align: center !important;
+    display: block !important;
+    width: 100% !important;
+  }
+  
+  /* Ensure proper text alignment for headings on mobile */
+  h1, h2, h3, h4, h5, h6 {
+    text-align: center !important;
+  }
+  
+  /* Fix flex containers that might cause centering issues */
+  .flex {
+    align-items: center !important;
+  }
+  
+  /* Ensure CTA sections are properly centered */
+  .flex.flex-col,
+  .flex.flex-col.sm\\:flex-row {
+    align-items: center !important;
+    text-align: center !important;
+  }
+  
+  /* Fix grid layouts on mobile */
+  .grid {
+    place-items: center !important;
+  }
+  
+  /* Ensure proper button spacing */
+  .gap-3 > *, .gap-4 > * {
+    margin: 0 auto !important;
+  }
+}
+
 /* Line clamp utility for truncating text */
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
 }

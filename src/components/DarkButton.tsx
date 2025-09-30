@@ -26,7 +26,7 @@ export default function DarkButton({
     large: "h-5 w-4"
   };
 
-  const buttonClasses = `bg-black dark:bg-white px-5 py-3 text-white dark:text-black rounded-3xl flex items-center justify-center gap-2 whitespace-nowrap transition-all duration-300 hover:bg-gray-800 dark:hover:bg-gray-100 hover:scale-105 hover:shadow-lg cursor-pointer ${className}`;
+  const buttonClasses = `bg-black dark:bg-white px-4 sm:px-5 py-3 sm:py-3 text-white dark:text-black rounded-3xl flex items-center justify-center gap-2 text-center min-h-[44px] transition-all duration-300 hover:bg-gray-800 dark:hover:bg-gray-100 hover:scale-105 hover:shadow-lg cursor-pointer ${className}`;
   const buttonStyle = {
     boxShadow: "0px 4px 40px 0px #203FFC",
   };
