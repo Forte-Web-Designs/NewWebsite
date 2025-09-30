@@ -60,10 +60,29 @@ export default function MetroEatsCaseStudy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center">Project Overview</h2>
-            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+            <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg mb-12">
+              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
                 By integrating advanced <strong>web crawling, API-driven search, and a user-friendly interface</strong>, the system creates a dynamic database of restaurant leads with actionable insights, helping MetroEats accelerate growth and stay competitive against larger platforms.
               </p>
+              
+              {/* System Architecture Diagram */}
+              <div className="mb-8">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+                  System Architecture Overview
+                </h3>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 overflow-x-auto">
+                  <img 
+                    src="/images/case-studies/metroeats-architecture.png"
+                    alt="MetroEats Lead Discovery System Architecture - 3 Phase Integration"
+                    className="w-full h-auto mx-auto"
+                    style={{ minWidth: '800px' }}
+                  />
+                </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400 text-center mt-4">
+                  The system integrates three phases: Lead Discovery (Google Search API), FireCrawl enrichment, and React frontend - all connected through a central n8n backend with Google Sheets database.
+                </p>
+              </div>
+              
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
