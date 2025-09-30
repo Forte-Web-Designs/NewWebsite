@@ -1,3 +1,5 @@
+'use client';
+
 import type { Metadata } from "next";
 import { useState } from "react";
 
@@ -20,7 +22,6 @@ export const metadata: Metadata = {
   }
 };
 
-"use client";
 import Link from "next/link";
 import { Icon } from "@/components/images/Icon";
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
