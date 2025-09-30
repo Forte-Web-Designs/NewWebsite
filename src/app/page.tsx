@@ -213,7 +213,7 @@ export default function Home() {
                       minWidth: '160px',
                       width: 'fit-content',
                       display: 'inline-block',
-                      textAlign: 'left'
+                      textAlign: 'center'
                     }}
                     aria-live="polite"
                   >
@@ -227,7 +227,7 @@ export default function Home() {
                 </h2>
 
                 {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 max-w-full">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2 max-w-full">
                   <DarkButton 
                     onClick={() => {
                       handleCTAClick('primary', 'hero');
@@ -376,15 +376,17 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <DarkButton 
-                    onClick={() => {
-                      handleCTAClick('primary', 'snapshot-section');
-                      setShowGrowthSnapshotForm(true);
-                    }}
-                    className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
-                  >
-                    Get my Free Growth Snapshot →
-                  </DarkButton>
+                  <div className="flex justify-center sm:justify-start">
+                    <DarkButton 
+                      onClick={() => {
+                        handleCTAClick('primary', 'snapshot-section');
+                        setShowGrowthSnapshotForm(true);
+                      }}
+                      className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto"
+                    >
+                      Get my Free Growth Snapshot →
+                    </DarkButton>
+                  </div>
 
                   <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-3 sm:mt-4 text-center sm:text-left">
                     We'll only use your info to prepare your snapshot. No spam.
@@ -422,15 +424,17 @@ export default function Home() {
                     </div>
                   </div>
 
-                  <DarkButton 
-                    onClick={() => {
-                      handleCTAClick('primary', 'snapshot-preview');
-                      setShowGrowthSnapshotForm(true);
-                    }}
-                    className="w-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
-                  >
-                    Get My Free Growth Snapshot →
-                  </DarkButton>
+                  <div className="flex justify-center">
+                    <DarkButton 
+                      onClick={() => {
+                        handleCTAClick('primary', 'snapshot-preview');
+                        setShowGrowthSnapshotForm(true);
+                      }}
+                      className="w-full px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg"
+                    >
+                      Get My Free Growth Snapshot →
+                    </DarkButton>
+                  </div>
                 </div>
               </SimpleScrollReveal>
             </div>
@@ -502,7 +506,7 @@ export default function Home() {
             </div>
 
             <SimpleScrollReveal direction="up">
-              <div className="text-center px-2">
+              <div className="flex justify-center px-2">
                 <Link 
                   href="/case-studies"
                   className="inline-flex items-center px-6 sm:px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base"
@@ -603,7 +607,7 @@ export default function Home() {
             </div>
 
             <SimpleScrollReveal direction="up">
-              <div className="text-center px-2">
+              <div className="flex justify-center px-2">
                 <a 
                   href="/pricing"
                   className="inline-flex items-center px-6 sm:px-8 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base"
@@ -628,7 +632,7 @@ export default function Home() {
                 Ready to stop losing opportunities?
               </h2>
               
-              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-2 max-w-full">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2 max-w-full">
                 <button
                   onClick={() => {
                     handleCTAClick('primary', 'closing-cta');
