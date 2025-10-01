@@ -56,11 +56,11 @@ const MobileExpandableMenu = ({ title, children, defaultExpanded = false, isActi
     <div className="flex flex-col">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center justify-between py-4 w-full text-white"
+        className="flex items-center justify-between py-2 w-full text-white"
       >
-        <div className="flex items-center gap-3"
+        <div className="flex items-center gap-2"
           style={
-            isExpanded ? { gap: '20px' } : {}
+            isExpanded ? { gap: '12px' } : {}
           }
         >
           <Icon
@@ -72,11 +72,11 @@ const MobileExpandableMenu = ({ title, children, defaultExpanded = false, isActi
               isExpanded ? { transform: 'rotate(90deg)', transition: 'transform 0.3s ease' } : { transition: 'transform 0.3s ease' }
             }
           />
-          <span className={`text-3xl font-medium ${isActive ? "text-primary-1000" : ""}`}>{title}</span>
+          <span className={`text-xl sm:text-2xl font-medium ${isActive ? "text-primary-1000" : ""}`}>{title}</span>
         </div>
       </button>
       {isExpanded && (
-        <div className="pb-4">
+        <div className="pb-2">
           {children}
         </div>
       )}
@@ -409,7 +409,7 @@ export default function Header() {
               ></div>
 
               {/* Mobile Header repeated in overlay for consistency */}
-              <div className="flex items-center justify-between p-4 sm:p-6 border-b border-white/20 bg-black/10 backdrop-blur-sm">
+              <div className="flex items-center justify-between p-3 sm:p-4 border-b border-white/20 bg-black/10 backdrop-blur-sm">
                 <div className="flex items-center gap-4">
                   <button
                     className="text-white transition-all duration-300 hover:text-blue-300 hover:scale-110 z-[9999999]"
@@ -434,24 +434,24 @@ export default function Header() {
                 </div>
               </div>
 
-              <div className="flex-1 p-4 sm:p-6 overflow-y-auto min-h-0 bg-black/5 backdrop-blur-sm"
+              <div className="flex-1 p-3 sm:p-4 overflow-y-auto min-h-0 bg-black/5 backdrop-blur-sm"
                 style={{
-                  paddingTop: '2rem',
-                  height: 'calc(100vh - 80px)'
+                  paddingTop: '1rem',
+                  height: 'calc(100vh - 70px)'
                 }}
               >
-                <nav className="flex flex-col space-y-4">
+                <nav className="flex flex-col space-y-2">
                   {/* Home */}
-                  <div className="flex items-center py-4">
+                  <div className="flex items-center py-2">
                     <Link
                       href="/"
-                      className={`text-3xl font-medium flex items-center gap-3 ps-5 ${pathname === '/' ? 'text-[#8D9DFF]' : 'text-white'
+                      className={`text-xl sm:text-2xl font-medium flex items-center gap-2 ps-3 ${pathname === '/' ? 'text-[#8D9DFF]' : 'text-white'
                         }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Home
                       {pathname === '/' && (
-                        <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" className="ml-2" />
+                        <Icon name="star-m.svg" alt="star" size={16} folder="shared/icons" />
                       )}
                     </Link>
                   </div>
@@ -461,18 +461,18 @@ export default function Header() {
                     title="Services"
                     isActive={pathname.startsWith('/services') || pathname.startsWith('/checkup')}
                   >
-                    <div className="pl-6 space-y-3">
+                    <div className="pl-4 space-y-1">
                       {servicesDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center w-full">
                           <Link
                             href={item.href}
-                            className={`text-2xl flex items-center gap-2 py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
                               }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {item.label}
                             {pathname === item.href && (
-                              <Icon name="star-m.svg" alt="star" size={18} />
+                              <Icon name="star-m.svg" alt="star" size={14} />
                             )}
                           </Link>
                         </div>
@@ -484,12 +484,12 @@ export default function Header() {
                   <div className="flex items-center w-full">
                     <Link
                       href="/solutions"
-                      className={`text-2xl flex items-center gap-2 py-4 ps-5 ${pathname === '/solutions' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      className={`text-xl sm:text-2xl flex items-center gap-2 py-2 ps-3 ${pathname === '/solutions' ? 'text-[#8D9DFF]' : 'text-white'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Solutions
                       {pathname === '/solutions' && (
-                        <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                        <Icon name="star-m.svg" alt="star" size={16} folder="shared/icons" />
                       )}
                     </Link>
                   </div>
@@ -499,18 +499,18 @@ export default function Header() {
                     title="Resources"
                     isActive={pathname.startsWith('/docs') || pathname.startsWith('/case-studies') || pathname.startsWith('/growth-audit')}
                   >
-                    <div className="pl-6 space-y-3">
+                    <div className="pl-4 space-y-1">
                       {resourcesDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center w-full">
                           <Link
                             href={item.href}
-                            className={`text-2xl flex items-center gap-2 py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
                               }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {item.label}
                             {pathname === item.href && (
-                              <Icon name="star-m.svg" alt="star" size={18} />
+                              <Icon name="star-m.svg" alt="star" size={14} />
                             )}
                           </Link>
                         </div>
@@ -525,94 +525,94 @@ export default function Header() {
                     title="Locations"
                     isActive={pathname.startsWith('/locations')}
                   >
-                    <div className="pl-6 space-y-3">
+                    <div className="pl-4 space-y-1">
                       {/* Texas */}
                       <MobileExpandableMenu
                         title="Texas"
                         isActive={pathname.startsWith('/locations/texas')}
                       >
-                        <div className="pl-6 space-y-3">
+                        <div className="pl-4 space-y-1">
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/texas"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/texas' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Texas
                               {pathname === '/locations/texas' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/texas/dallas"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/texas/dallas' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/dallas' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Dallas
                               {pathname === '/locations/texas/dallas' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/texas/fort-worth"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/texas/fort-worth' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/fort-worth' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Fort Worth
                               {pathname === '/locations/texas/fort-worth' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/texas/plano"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/texas/plano' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/plano' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Plano
                               {pathname === '/locations/texas/plano' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/texas/frisco"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/texas/frisco' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/frisco' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Frisco
                               {pathname === '/locations/texas/frisco' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/texas/arlington"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/texas/arlington' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/arlington' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Arlington
                               {pathname === '/locations/texas/arlington' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/texas/irving"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/texas/irving' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/irving' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Irving
                               {pathname === '/locations/texas/irving' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
@@ -624,52 +624,52 @@ export default function Header() {
                         title="Oklahoma"
                         isActive={pathname.startsWith('/locations/oklahoma')}
                       >
-                        <div className="pl-6 space-y-3">
+                        <div className="pl-4 space-y-1">
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/oklahoma"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/oklahoma' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/oklahoma' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Oklahoma
                               {pathname === '/locations/oklahoma' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/oklahoma/oklahoma-city"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/oklahoma/oklahoma-city' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/oklahoma/oklahoma-city' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Oklahoma City
                               {pathname === '/locations/oklahoma/oklahoma-city' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/oklahoma/tulsa"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/oklahoma/tulsa' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/oklahoma/tulsa' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Tulsa
                               {pathname === '/locations/oklahoma/tulsa' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/oklahoma/norman"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/oklahoma/norman' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/oklahoma/norman' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Norman
                               {pathname === '/locations/oklahoma/norman' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
@@ -681,52 +681,52 @@ export default function Header() {
                         title="New Mexico"
                         isActive={pathname.startsWith('/locations/new-mexico')}
                       >
-                        <div className="pl-6 space-y-3">
+                        <div className="pl-4 space-y-1">
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/new-mexico"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/new-mexico' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/new-mexico' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               New Mexico
                               {pathname === '/locations/new-mexico' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/new-mexico/albuquerque"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/new-mexico/albuquerque' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/new-mexico/albuquerque' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Albuquerque
                               {pathname === '/locations/new-mexico/albuquerque' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/new-mexico/santa-fe"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/new-mexico/santa-fe' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/new-mexico/santa-fe' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Santa Fe
                               {pathname === '/locations/new-mexico/santa-fe' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/locations/new-mexico/las-cruces"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/locations/new-mexico/las-cruces' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/new-mexico/las-cruces' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Las Cruces
                               {pathname === '/locations/new-mexico/las-cruces' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
@@ -738,40 +738,40 @@ export default function Header() {
                         title="DFW Services"
                         isActive={pathname.startsWith('/dfw')}
                       >
-                        <div className="pl-6 space-y-3">
+                        <div className="pl-4 space-y-1">
                           <div className="flex items-center w-full">
                             <Link
                               href="/dfw/ai-consulting"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/dfw/ai-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/dfw/ai-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               AI Consulting
                               {pathname === '/dfw/ai-consulting' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/dfw/automation-consulting"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/dfw/automation-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/dfw/automation-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Automation Consulting
                               {pathname === '/dfw/automation-consulting' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
                           <div className="flex items-center w-full">
                             <Link
                               href="/dfw/business-growth-systems"
-                              className={`text-xl flex items-center gap-2 py-2 ${pathname === '/dfw/business-growth-systems' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/dfw/business-growth-systems' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Business Growth Systems
                               {pathname === '/dfw/business-growth-systems' && (
-                                <Icon name="star-m.svg" alt="star" size={18} />
+                                <Icon name="star-m.svg" alt="star" size={12} />
                               )}
                             </Link>
                           </div>
@@ -782,12 +782,12 @@ export default function Header() {
                       <div className="flex items-center w-full">
                         <Link
                           href="/locations"
-                          className={`text-2xl flex items-center gap-2 py-2 ${pathname === '/locations' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                          className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === '/locations' ? 'text-[#8D9DFF]' : 'text-white'}`}
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           All Locations
                           {pathname === '/locations' && (
-                            <Icon name="star-m.svg" alt="star" size={18} />
+                            <Icon name="star-m.svg" alt="star" size={14} />
                           )}
                         </Link>
                       </div>
@@ -798,12 +798,12 @@ export default function Header() {
                   <div className="flex items-center w-full">
                     <Link
                       href="/pricing"
-                      className={`text-2xl flex items-center gap-2 py-4 ps-5 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      className={`text-xl sm:text-2xl flex items-center gap-2 py-2 ps-3 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-white'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Pricing
                       {pathname === '/pricing' && (
-                        <Icon name="star-m.svg" alt="star" size={18} folder="shared/icons" />
+                        <Icon name="star-m.svg" alt="star" size={16} folder="shared/icons" />
                       )}
                     </Link>
                   </div>
@@ -813,18 +813,18 @@ export default function Header() {
                     title="About Us"
                     isActive={pathname.startsWith('/about') || pathname.startsWith('/blog')}
                   >
-                    <div className="pl-6 space-y-3">
+                    <div className="pl-4 space-y-1">
                       {aboutDropdownItems.map((item) => (
                         <div key={item.href} className="flex items-center w-full">
                           <Link
                             href={item.href}
-                            className={`text-2xl flex items-center gap-2 py-2 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
                               }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
                             {item.label}
                             {pathname === item.href && (
-                              <Icon name="star-m.svg" alt="star" size={18} />
+                              <Icon name="star-m.svg" alt="star" size={14} />
                             )}
                           </Link>
                         </div>
@@ -833,15 +833,15 @@ export default function Header() {
                   </MobileExpandableMenu>
 
                   {/* Contact CTA */}
-                  <div className="pt-8 pb-4">
+                  <div className="pt-4 pb-3">
                     <Link
                       href="/contact"
-                      className="block w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white text-center py-4 px-6 rounded-xl font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                      className="block w-full bg-gradient-to-r from-primary-600 to-primary-700 text-white text-center py-3 px-4 rounded-lg font-semibold text-base shadow-lg hover:shadow-xl transition-all duration-300"
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Get Started Today
                     </Link>
-                    <p className="text-center text-white/80 text-sm mt-3">
+                    <p className="text-center text-white/80 text-xs mt-2">
                       📞 (817) 873-6655 • Same day response
                     </p>
                   </div>
