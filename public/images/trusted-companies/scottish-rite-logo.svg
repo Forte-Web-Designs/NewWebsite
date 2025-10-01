@@ -1,0 +1,25 @@
+<!-- Scottish Rite Hospital Logo -->
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Hospital building icon -->
+    <rect x="10" y="25" width="25" height="30" fill="#1e40af" rx="2"/>
+    <rect x="12" y="27" width="3" height="8" fill="white"/>
+    <rect x="17" y="27" width="3" height="8" fill="white"/>
+    <rect x="22" y="27" width="3" height="8" fill="white"/>
+    <rect x="27" y="27" width="3" height="8" fill="white"/>
+    <rect x="12" y="37" width="3" height="8" fill="white"/>
+    <rect x="17" y="37" width="3" height="8" fill="white"/>
+    <rect x="22" y="37" width="3" height="8" fill="white"/>
+    <rect x="27" y="37" width="3" height="8" fill="white"/>
+    <rect x="12" y="47" width="21" height="8" fill="white"/>
+    
+    <!-- Medical cross -->
+    <rect x="20" y="15" width="2" height="8" fill="#dc2626"/>
+    <rect x="17" y="18" width="8" height="2" fill="#dc2626"/>
+    
+    <!-- Text -->
+    <text x="45" y="25" fill="#1e40af" font-family="Arial, sans-serif" font-size="12" font-weight="bold">SCOTTISH RITE</text>
+    <text x="45" y="40" fill="#1e40af" font-family="Arial, sans-serif" font-size="12" font-weight="bold">HOSPITAL</text>
+    <text x="45" y="55" fill="#dc2626" font-family="Arial, sans-serif" font-size="10" font-weight="600">for Children</text>
+  </g>
+</svg>

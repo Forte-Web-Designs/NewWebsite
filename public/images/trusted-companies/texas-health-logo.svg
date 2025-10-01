@@ -1,0 +1,28 @@
+<!-- Texas Health Presbyterian Hospital Logo -->
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Texas outline -->
+    <path d="M15 25 L20 20 L30 22 L35 18 L40 20 L45 25 L42 35 L38 40 L35 45 L30 48 L25 45 L20 40 L18 35 L15 30 Z" fill="#1e40af" stroke="#1d4ed8" stroke-width="0.5"/>
+    
+    <!-- Medical cross inside Texas -->
+    <rect x="28" y="30" width="2" height="8" fill="white"/>
+    <rect x="25" y="32" width="8" height="2" fill="white"/>
+    
+    <!-- Hospital building -->
+    <rect x="55" y="25" width="20" height="25" fill="#1e40af" rx="1"/>
+    <rect x="57" y="27" width="2" height="6" fill="white"/>
+    <rect x="61" y="27" width="2" height="6" fill="white"/>
+    <rect x="65" y="27" width="2" height="6" fill="white"/>
+    <rect x="69" y="27" width="2" height="6" fill="white"/>
+    <rect x="57" y="35" width="2" height="6" fill="white"/>
+    <rect x="61" y="35" width="2" height="6" fill="white"/>
+    <rect x="65" y="35" width="2" height="6" fill="white"/>
+    <rect x="69" y="35" width="2" height="6" fill="white"/>
+    <rect x="59" y="43" width="10" height="7" fill="white"/>
+    
+    <!-- Text -->
+    <text x="80" y="25" fill="#1e40af" font-family="Arial, sans-serif" font-size="12" font-weight="bold">TEXAS</text>
+    <text x="80" y="40" fill="#1e40af" font-family="Arial, sans-serif" font-size="12" font-weight="bold">HEALTH</text>
+    <text x="80" y="55" fill="#64748b" font-family="Arial, sans-serif" font-size="9">Presbyterian Hospital</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<!-- Vista Bank Logo -->
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Bank building icon -->
+    <rect x="15" y="25" width="30" height="25" fill="#1e40af" stroke="#1d4ed8" stroke-width="1"/>
+    <rect x="18" y="28" width="3" height="19" fill="white"/>
+    <rect x="23" y="28" width="3" height="19" fill="white"/>
+    <rect x="28" y="28" width="3" height="19" fill="white"/>
+    <rect x="33" y="28" width="3" height="19" fill="white"/>
+    <rect x="38" y="28" width="3" height="19" fill="white"/>
+    <!-- Bank roof -->
+    <polygon points="15,25 30,15 45,25" fill="#1e40af"/>
+    
+    <!-- Vista Bank text -->
+    <text x="55" y="35" fill="#1e40af" font-family="Arial, sans-serif" font-size="16" font-weight="bold">VISTA</text>
+    <text x="55" y="50" fill="#64748b" font-family="Arial, sans-serif" font-size="12" font-weight="600">BANK</text>
+    
+    <!-- Dollar sign accent -->
+    <circle cx="135" cy="40" r="12" fill="#10b981" opacity="0.1"/>
+    <text x="135" y="45" text-anchor="middle" fill="#10b981" font-family="Arial, sans-serif" font-size="16" font-weight="bold">$</text>
+  </g>
+</svg>ta Bank Logo -->
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="160" height="80" fill="white"/>
+  <text x="45" y="40" text-anchor="middle" fill="#e91e63" font-family="Arial, sans-serif" font-size="18" font-weight="bold">VISTA</text>
+  <rect x="85" y="25" width="20" height="20" fill="#e91e63" transform="rotate(45 95 35)"/>
+  <rect x="100" y="35" width="15" height="15" fill="#e91e63" transform="rotate(45 107.5 42.5)"/>
+  <text x="125" y="55" text-anchor="middle" fill="#e91e63" font-family="Arial, sans-serif" font-size="12" font-weight="bold">BANK</text>
+</svg>
