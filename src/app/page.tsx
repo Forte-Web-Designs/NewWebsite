@@ -223,260 +223,195 @@ export default function Home() {
       />
 
       <div className="min-h-screen bg-white dark:bg-gray-900">
-        {/* Hero Section */}
-        <section id="hero" className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
-            <SimpleScrollReveal direction="up">
-              <div className="text-center max-w-5xl mx-auto w-full">
-                {/* Rotating Headline */}
-                <h1 
-                  className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full"
-                  style={{ contain: 'layout', wordWrap: 'break-word' }}
-                >
-                  <span className="block sm:inline">Business Growth Isn't Guesswork.</span>{" "}
-                  <span className="block sm:inline">It's{" "}</span>
-                  <span 
-                    className={`inline-block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
-                    style={{ 
-                      minWidth: '160px',
-                      width: 'fit-content',
-                      display: 'inline-block',
-                      textAlign: 'center'
-                    }}
-                    aria-live="polite"
-                  >
-                    {rotatingWords[currentWordIndex]}
+        {/* Hero Section - Clean AI Landing Style */}
+        <section id="hero" className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 pt-32 pb-24 sm:pt-40 sm:pb-32 lg:pt-48 lg:pb-40">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-6xl">
+            <div className="text-center space-y-12">
+              {/* Main Headline - Simplified */}
+              <div className="space-y-6">
+                <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-gray-900 dark:text-white tracking-tight">
+                  Business Growth Isn't Guesswork.
+                  <br />
+                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+                    It's{" "}
+                    <span 
+                      className={`transition-opacity duration-300 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
+                    >
+                      {rotatingWords[currentWordIndex]}
+                    </span>
                   </span>
                 </h1>
-
-                {/* Subheadline */}
-                <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-2 max-w-full">
+                
+                <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
                   Catch every opportunity. Respond faster. Win more jobs.
-                </h2>
+                </p>
+              </div>
 
-                {/* Primary CTA */}
-                <div className="mb-6 sm:mb-8">
-                  <DarkButton 
-                    onClick={() => {
-                      handleCTAClick('primary', 'hero');
-                      window.location.href = '/growth-audit';
-                    }}
-                    className="px-8 py-4 text-lg font-semibold"
-                  >
-                    Get My Free Growth Snapshot
-                  </DarkButton>
-                </div>
-
-                {/* Secondary CTA */}
-                <div className="mb-8">
+              {/* CTA Section */}
+              <div className="space-y-6">
+                <button 
+                  onClick={() => {
+                    handleCTAClick('primary', 'hero');
+                    window.location.href = '/growth-audit';
+                  }}
+                  className="inline-flex items-center justify-center px-10 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium text-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
+                >
+                  Get My Free Growth Snapshot
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+                
+                <div>
                   <a 
                     href="#how-it-works"
                     onClick={() => handleCTAClick('secondary', 'hero')}
-                    className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
+                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors underline underline-offset-4 decoration-1 hover:decoration-2"
                   >
                     See How It Works
                   </a>
                 </div>
-
-                {/* Trust strip - single line */}
-                <div className="text-sm text-gray-600 dark:text-gray-400">
-                  <span className="inline-flex items-center gap-1">
-                    Trusted by 25+ growing businesses
-                  </span>
-                  <span className="mx-2">•</span>
-                  <span className="inline-flex items-center gap-1">
-                    <Icon name="star" className="w-4 h-4 text-yellow-400 fill-current" />
-                    4.9★ Google reviews
-                  </span>
-                </div>
-
-                {/* Compact badges line */}
-                <div className="flex justify-center items-center gap-4 text-xs text-gray-500 dark:text-gray-500 mt-4">
-                  <span className="flex items-center gap-1">
-                    <Icon name="location" className="w-3 h-3 text-primary-600" />
-                    DFW-based
-                  </span>
-                  <span className="flex items-center gap-1">
-                    <Icon name="flash" className="w-3 h-3 text-primary-600" />
-                    24-hr response
-                  </span>
-                </div>
               </div>
-            </SimpleScrollReveal>
-          </div>
-        </section>
 
-        {/* Outcomes + Four Pillars Combined */}
-        <section id="outcomes-pillars" className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            {/* Row A - Outcomes bullets */}
-            <div className="outcomes mb-16">
-              <div className="text-center mb-12">
-                <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-8">
-                  Your Outcomes
-                </h2>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">5–20 hrs/week</div>
-                    <div className="text-gray-600 dark:text-gray-300">Reclaimed</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">Minutes</div>
-                    <div className="text-gray-600 dark:text-gray-300">Response time</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">90–100%</div>
-                    <div className="text-gray-600 dark:text-gray-300">Follow-up coverage</div>
-                  </div>
-                  <div className="text-center">
-                    <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">One</div>
-                    <div className="text-gray-600 dark:text-gray-300">Owner-friendly dashboard</div>
-                  </div>
+              {/* Social Proof - Minimal */}
+              <div className="pt-8 space-y-4">
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Trusted by 25+ growing businesses • 4.9★ Google reviews
+                </p>
+                <div className="flex justify-center items-center gap-6 text-xs text-gray-400">
+                  <span>DFW-based</span>
+                  <span>•</span>
+                  <span>24-hr response</span>
                 </div>
-              </div>
-            </div>
-
-            {/* Row B - 4 equal feature cards */}
-            <div className="pillars">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                {whatWeBuild.map((item, index) => (
-                  <SimpleAnimatedCard key={index}>
-                    <article className="card bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full flex flex-col" id={`pillar-${index}`}>
-                      <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
-                        {item.title}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 flex-grow">
-                        {item.description}
-                      </p>
-                      <Link 
-                        href={item.link}
-                        className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
-                      >
-                        {item.linkText}
-                      </Link>
-                    </article>
-                  </SimpleAnimatedCard>
-                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Free Growth Snapshot - lead capture block */}
-        <section id="snapshot-form" className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <SimpleScrollReveal direction="up">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Left column */}
-                <div>
-                  <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-6">
-                    Get a Free Growth Snapshot
-                  </h2>
-                  <ul className="space-y-4 text-lg">
-                    <li className="flex items-start gap-3">
-                      <Icon name="check" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
-                      <span className="text-gray-700 dark:text-gray-300">Industry-specific checkup</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Icon name="check" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
-                      <span className="text-gray-700 dark:text-gray-300">1-page summary + Loom walkthrough</span>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <Icon name="check" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
-                      <span className="text-gray-700 dark:text-gray-300">Works with your current tools</span>
-                    </li>
-                  </ul>
+        {/* Outcomes + Services - Clean Card Design */}
+        <section id="outcomes-pillars" className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl">
+            {/* Outcomes Stats */}
+            <div className="text-center mb-20">
+              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 tracking-tight">
+                Your Outcomes
+              </h2>
+              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                <div className="text-center">
+                  <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">5–20</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">Hours reclaimed weekly</div>
                 </div>
-
-                {/* Right column - inline mini form */}
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
-                  <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-6">Get Started Now</h3>
-                  <form className="space-y-4" action="/growth-audit" method="GET">
-                    <div>
-                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Name
-                      </label>
-                      <input
-                        type="text"
-                        id="name"
-                        name="name"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                        placeholder="Your name"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Email
-                      </label>
-                      <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        required
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                        placeholder="your@email.com"
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="website" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                        Website URL
-                      </label>
-                      <input
-                        type="url"
-                        id="website"
-                        name="website"
-                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
-                        placeholder="https://yoursite.com"
-                      />
-                    </div>
-                    <DarkButton 
-                      type="submit"
-                      onClick={() => handleCTAClick('primary', 'snapshot-form')}
-                      className="w-full py-3 text-lg font-semibold"
-                    >
-                      Get My Free Snapshot
-                    </DarkButton>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                      No meeting required.
-                    </p>
-                  </form>
+                <div className="text-center">
+                  <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">Minutes</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">Response time</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">90–100%</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">Follow-up coverage</div>
+                </div>
+                <div className="text-center">
+                  <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">One</div>
+                  <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">Dashboard</div>
                 </div>
               </div>
-            </SimpleScrollReveal>
-          </div>
-        </section>
+            </div>
 
-        {/* Case Studies - tight */}
-        <section id="case-studies" className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <h2 className="font-display font-bold text-3xl sm:text-4xl text-center text-gray-900 dark:text-white mb-12">
-              Success Stories
-            </h2>
-            
-            {/* Desktop: 3 cards in row, Mobile: swipeable carousel */}
-            <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8">
-              {caseStudies.map((study, index) => (
-                <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full flex flex-col">
-                    <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
-                      {study.title}
+            {/* Services Cards */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {whatWeBuild.map((item, index) => (
+                <div key={index} className="group">
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 h-full border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-gray-100 dark:hover:shadow-gray-900/20">
+                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-4">
+                      {item.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
-                      {study.description}
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                      {item.description}
                     </p>
+                    <Link 
+                      href={item.link}
+                      className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+                    >
+                      Learn more
+                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
                   </div>
-                </SimpleAnimatedCard>
+                </div>
               ))}
             </div>
-            
-            {/* Mobile: Swipeable carousel */}
-            <div className="md:hidden relative mb-8">
-              <div className="flex space-x-4 overflow-x-auto snap-x snap-mandatory pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+          </div>
+        </section>
+
+        {/* Growth Snapshot - Minimal Form */}
+        <section id="snapshot-form" className="py-24 sm:py-32 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-4xl">
+            <div className="text-center space-y-12">
+              {/* Header */}
+              <div className="space-y-6">
+                <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white tracking-tight">
+                  Get Your Free Growth Snapshot
+                </h2>
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                  Industry-specific checkup • 1-page summary + Loom walkthrough • Works with your current tools
+                </p>
+              </div>
+
+              {/* Clean Form */}
+              <div className="max-w-lg mx-auto">
+                <form className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl shadow-gray-100 dark:shadow-gray-900/20 border border-gray-100 dark:border-gray-700" action="/growth-audit" method="GET">
+                  <div className="space-y-6">
+                    <input
+                      type="text"
+                      name="name"
+                      required
+                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all"
+                      placeholder="Your name"
+                    />
+                    <input
+                      type="email"
+                      name="email"
+                      required
+                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all"
+                      placeholder="your@email.com"
+                    />
+                    <input
+                      type="url"
+                      name="website"
+                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all"
+                      placeholder="https://yoursite.com (optional)"
+                    />
+                    <button 
+                      type="submit"
+                      onClick={() => handleCTAClick('primary', 'snapshot-form')}
+                      className="w-full py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
+                    >
+                      Get My Free Snapshot
+                    </button>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+                      No meeting required • Takes 2 minutes
+                    </p>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies - Clean Minimal */}
+        <section id="case-studies" className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-6xl">
+            <div className="text-center space-y-16">
+              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white tracking-tight">
+                Success Stories
+              </h2>
+              
+              {/* Clean Cards */}
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                 {caseStudies.map((study, index) => (
-                  <div key={index} className="flex-none w-80 snap-center">
-                    <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
-                      <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                  <div key={index} className="group">
+                    <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-gray-100 dark:hover:shadow-gray-900/20 h-full">
+                      <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-4">
                         {study.title}
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -486,73 +421,88 @@ export default function Home() {
                   </div>
                 ))}
               </div>
-              {/* Dot indicators */}
-              <div className="flex justify-center space-x-2 mt-4">
-                {caseStudies.map((_, index) => (
-                  <div key={index} className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600"></div>
-                ))}
+              
+              <div>
+                <Link 
+                  href="/case-studies"
+                  className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+                >
+                  View all success stories
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
               </div>
             </div>
-            
-            <div className="text-center">
-              <Link 
-                href="/case-studies"
-                className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
+          </div>
+        </section>
+
+        {/* How It Works - Minimal Steps */}
+        <section id="how-it-works" className="py-24 sm:py-32 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-5xl">
+            <div className="text-center space-y-16">
+              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white tracking-tight">
+                How It Works
+              </h2>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div className="text-center space-y-6">
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mx-auto">
+                    <span className="text-xl font-semibold">1</span>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white">Snapshot</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Free analysis of your current systems and growth opportunities</p>
+                  </div>
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mx-auto">
+                    <span className="text-xl font-semibold">2</span>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white">Quick Wins</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Implement immediate improvements while planning bigger systems</p>
+                  </div>
+                </div>
+                
+                <div className="text-center space-y-6">
+                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mx-auto">
+                    <span className="text-xl font-semibold">3</span>
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white">Build & Measure</h3>
+                    <p className="text-gray-600 dark:text-gray-300">Deploy complete growth systems and track your ROI</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA - Clean & Minimal */}
+        <section id="final-cta" className="py-20 sm:py-24 bg-gray-900 dark:bg-gray-800">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-4xl text-center">
+            <div className="space-y-8">
+              <h2 className="font-display font-semibold text-3xl sm:text-4xl text-white tracking-tight">
+                Ready to accelerate your growth?
+              </h2>
+              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                Get your free growth snapshot and see exactly where to focus first.
+              </p>
+              <button 
+                onClick={() => {
+                  handleCTAClick('primary', 'final-cta');
+                  window.location.href = '/growth-audit';
+                }}
+                className="inline-flex items-center justify-center px-10 py-4 bg-white text-gray-900 rounded-lg font-medium text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
               >
-                See all case studies →
-              </Link>
+                Get My Free Growth Snapshot
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
-          </div>
-        </section>
-
-        {/* (Optional) How It Works - 3 simple steps */}
-        <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
-            <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-12">
-              How It Works
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">1</span>
-                </div>
-                <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-3">Snapshot</h3>
-                <p className="text-gray-600 dark:text-gray-300">Free analysis of your current systems and growth opportunities</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">2</span>
-                </div>
-                <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-3">Quick Wins</h3>
-                <p className="text-gray-600 dark:text-gray-300">Implement immediate improvements while planning bigger systems</p>
-              </div>
-              <div className="text-center">
-                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">3</span>
-                </div>
-                <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-3">Build & Measure</h3>
-                <p className="text-gray-600 dark:text-gray-300">Deploy complete growth systems and track your ROI</p>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Final CTA */}
-        <section id="final-cta" className="py-12 bg-primary-600 dark:bg-primary-700">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl text-white mb-4">
-              Ready to accelerate your growth?
-            </h2>
-            <p className="text-xl text-primary-100 mb-6">
-              Get your free growth snapshot and see exactly where to focus first.
-            </p>
-            <DarkButton 
-              href="/growth-audit"
-              onClick={() => handleCTAClick('primary', 'final-cta')}
-              className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
-            >
-              Get My Free Growth Snapshot
-            </DarkButton>
           </div>
         </section>
 
