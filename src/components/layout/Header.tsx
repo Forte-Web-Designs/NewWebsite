@@ -56,9 +56,9 @@ const MobileExpandableMenu = ({ title, children, defaultExpanded = false, isActi
     <div className="flex flex-col">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center justify-between py-2 w-full text-white"
+        className="flex items-center py-2 w-full text-white text-left"
       >
-        <div className="flex items-center gap-2"
+        <div className="flex items-center gap-2 ps-3"
           style={
             isExpanded ? { gap: '12px' } : {}
           }
@@ -72,7 +72,7 @@ const MobileExpandableMenu = ({ title, children, defaultExpanded = false, isActi
               isExpanded ? { transform: 'rotate(90deg)', transition: 'transform 0.3s ease' } : { transition: 'transform 0.3s ease' }
             }
           />
-          <span className={`text-xl sm:text-2xl font-medium ${isActive ? "text-primary-1000" : ""}`}>{title}</span>
+          <span className={`text-xl sm:text-2xl font-normal ${isActive ? "text-[#8D9DFF]" : "text-white"}`}>{title}</span>
         </div>
       </button>
       {isExpanded && (
@@ -445,7 +445,7 @@ export default function Header() {
                   <div className="flex items-center py-2">
                     <Link
                       href="/"
-                      className={`text-xl sm:text-2xl font-medium flex items-center gap-2 ps-3 ${pathname === '/' ? 'text-[#8D9DFF]' : 'text-white'
+                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 ps-3 ${pathname === '/' ? 'text-[#8D9DFF]' : 'text-white'
                         }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -484,7 +484,7 @@ export default function Header() {
                   <div className="flex items-center w-full">
                     <Link
                       href="/solutions"
-                      className={`text-xl sm:text-2xl flex items-center gap-2 py-2 ps-3 ${pathname === '/solutions' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 py-2 ps-3 ${pathname === '/solutions' ? 'text-[#8D9DFF]' : 'text-white'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Solutions
@@ -798,7 +798,7 @@ export default function Header() {
                   <div className="flex items-center w-full">
                     <Link
                       href="/pricing"
-                      className={`text-xl sm:text-2xl flex items-center gap-2 py-2 ps-3 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 py-2 ps-3 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-white'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Pricing
