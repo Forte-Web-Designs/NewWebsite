@@ -288,14 +288,24 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Trusted Companies - Clean Minimal */}
+        <section className="py-16 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
+          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+            <TrustedCompaniesCarousel />
+          </div>
+        </section>
+
         {/* Outcomes + Services - Clean Card Design */}
         <section id="outcomes-pillars" className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl">
             {/* Outcomes Stats */}
             <div className="text-center mb-20">
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 tracking-tight">
-                Your Outcomes
+              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-8 tracking-tight">
+                Your Outcomes in 30-90 Days
               </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
+                Reclaim 5–20 hours per week, respond in minutes not days, get 90–100% follow-up coverage without manual chasing, and maintain complete visibility into your business pipeline through one owner-friendly dashboard.
+              </p>
               <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
                 <div className="text-center">
                   <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">5–20</div>
@@ -350,11 +360,25 @@ export default function Home() {
               {/* Header */}
               <div className="space-y-6">
                 <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white tracking-tight">
-                  Get Your Free Growth Snapshot
+                  Get a Free Growth Snapshot
                 </h2>
-                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  Industry-specific checkup • 1-page summary + Loom walkthrough • Works with your current tools
+                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
+                  We find the 3–4 biggest leaks costing you time and money, then give you two quick wins you can implement now—no meeting required.
                 </p>
+                <div className="flex flex-wrap justify-center items-center gap-8 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <span>Industry-specific checkup</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <span>1-page summary + Loom walkthrough</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
+                    <span>Works with your current tools</span>
+                  </div>
+                </div>
               </div>
 
               {/* Clean Form */}
@@ -386,7 +410,7 @@ export default function Home() {
                       onClick={() => handleCTAClick('primary', 'snapshot-form')}
                       className="w-full py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
                     >
-                      Get My Free Snapshot
+                      Get my Free Growth Snapshot
                     </button>
                     <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
                       No meeting required • Takes 2 minutes
@@ -427,10 +451,7 @@ export default function Home() {
                   href="/case-studies"
                   className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
                 >
-                  View all success stories
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
+                  See all case studies →
                 </Link>
               </div>
             </div>
