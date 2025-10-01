@@ -224,26 +224,10 @@ export default function Home() {
 
       <div className="min-h-screen bg-white dark:bg-gray-900">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
+        <section id="hero" className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
             <SimpleScrollReveal direction="up">
               <div className="text-center max-w-5xl mx-auto w-full">
-                {/* Badges Row */}
-                <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-full px-2">
-                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-                    <Icon name="location" className="w-3 sm:w-4 h-3 sm:h-4 text-primary-600 flex-shrink-0" />
-                    <span className="whitespace-nowrap text-xs sm:text-sm">DFW-based</span>
-                  </div>
-                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-                    <Icon name="flash" className="w-3 sm:w-4 h-3 sm:h-4 text-primary-600 flex-shrink-0" />
-                    <span className="whitespace-nowrap text-xs sm:text-sm">24-hr response</span>
-                  </div>
-                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-                    <Icon name="star" className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current flex-shrink-0" />
-                    <span className="whitespace-nowrap text-xs sm:text-sm">4.9★ Google reviews</span>
-                  </div>
-                </div>
-
                 {/* Rotating Headline */}
                 <h1 
                   className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full"
@@ -270,134 +254,208 @@ export default function Home() {
                   Catch every opportunity. Respond faster. Win more jobs.
                 </h2>
 
-                {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2 max-w-full">
+                {/* Primary CTA */}
+                <div className="mb-6 sm:mb-8">
                   <DarkButton 
                     onClick={() => {
                       handleCTAClick('primary', 'hero');
-                      setShowGrowthSnapshotForm(true);
+                      window.location.href = '/growth-audit';
                     }}
-                    className="px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg w-full sm:w-auto max-w-full min-w-0 text-center"
+                    className="px-8 py-4 text-lg font-semibold"
                   >
-                    Get My Free Growth Snapshot →
+                    Get My Free Growth Snapshot
                   </DarkButton>
+                </div>
+
+                {/* Secondary CTA */}
+                <div className="mb-8">
                   <a 
                     href="#how-it-works"
                     onClick={() => handleCTAClick('secondary', 'hero')}
-                    className="inline-flex items-center justify-center px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0 min-h-[44px] text-center"
+                    className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
                   >
-                    <span className="truncate text-center">See How It Works</span>
-                    <svg className="ml-2 w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    See How It Works
                   </a>
+                </div>
+
+                {/* Trust strip - single line */}
+                <div className="text-sm text-gray-600 dark:text-gray-400">
+                  <span className="inline-flex items-center gap-1">
+                    Trusted by 25+ growing businesses
+                  </span>
+                  <span className="mx-2">•</span>
+                  <span className="inline-flex items-center gap-1">
+                    <Icon name="star" className="w-4 h-4 text-yellow-400 fill-current" />
+                    4.9★ Google reviews
+                  </span>
+                </div>
+
+                {/* Compact badges line */}
+                <div className="flex justify-center items-center gap-4 text-xs text-gray-500 dark:text-gray-500 mt-4">
+                  <span className="flex items-center gap-1">
+                    <Icon name="location" className="w-3 h-3 text-primary-600" />
+                    DFW-based
+                  </span>
+                  <span className="flex items-center gap-1">
+                    <Icon name="flash" className="w-3 h-3 text-primary-600" />
+                    24-hr response
+                  </span>
                 </div>
               </div>
             </SimpleScrollReveal>
           </div>
         </section>
 
-        {/* Trusted by strip */}
-        <section className="py-12 bg-gray-50 dark:bg-gray-800">
+        {/* Outcomes + Four Pillars Combined */}
+        <section id="outcomes-pillars" className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="text-center">
-              <p className="text-sm text-gray-600 dark:text-gray-400 mb-8">
-                Trusted by 25+ growing businesses
-              </p>
-              <div className="flex justify-center items-center flex-wrap gap-8 sm:gap-12 opacity-60 hover:opacity-100 transition-opacity">
-                {/* Logo placeholders - these would be actual company logos */}
-                <div className="w-24 h-12 bg-gray-300 dark:bg-gray-600 rounded opacity-40 hover:opacity-100 transition-opacity"></div>
-                <div className="w-24 h-12 bg-gray-300 dark:bg-gray-600 rounded opacity-40 hover:opacity-100 transition-opacity"></div>
-                <div className="w-24 h-12 bg-gray-300 dark:bg-gray-600 rounded opacity-40 hover:opacity-100 transition-opacity"></div>
-                <div className="w-24 h-12 bg-gray-300 dark:bg-gray-600 rounded opacity-40 hover:opacity-100 transition-opacity"></div>
-                <div className="w-24 h-12 bg-gray-300 dark:bg-gray-600 rounded opacity-40 hover:opacity-100 transition-opacity"></div>
-                <div className="w-24 h-12 bg-gray-300 dark:bg-gray-600 rounded opacity-40 hover:opacity-100 transition-opacity"></div>
+            {/* Row A - Outcomes bullets */}
+            <div className="outcomes mb-16">
+              <div className="text-center mb-12">
+                <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-8">
+                  Your Outcomes
+                </h2>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">5–20 hrs/week</div>
+                    <div className="text-gray-600 dark:text-gray-300">Reclaimed</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">Minutes</div>
+                    <div className="text-gray-600 dark:text-gray-300">Response time</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">90–100%</div>
+                    <div className="text-gray-600 dark:text-gray-300">Follow-up coverage</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">One</div>
+                    <div className="text-gray-600 dark:text-gray-300">Owner-friendly dashboard</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row B - 4 equal feature cards */}
+            <div className="pillars">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                {whatWeBuild.map((item, index) => (
+                  <SimpleAnimatedCard key={index}>
+                    <article className="card bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full flex flex-col" id={`pillar-${index}`}>
+                      <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                        {item.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 flex-grow">
+                        {item.description}
+                      </p>
+                      <Link 
+                        href={item.link}
+                        className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
+                      >
+                        {item.linkText}
+                      </Link>
+                    </article>
+                  </SimpleAnimatedCard>
+                ))}
               </div>
             </div>
           </div>
         </section>
 
-        {/* Outcomes Summary */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <div className="text-center">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
-                Your Outcomes in 30-90 Days
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Reclaim 5–20 hours per week, respond in minutes not days, get 90–100% follow-up coverage without manual chasing, and maintain complete visibility into your business pipeline through one owner-friendly dashboard.
-              </p>
-            </div>
-          </div>
-        </section>        {/* What We Build */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {whatWeBuild.map((item, index) => (
-                <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full flex flex-col">
-                    <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-4 flex-grow">
-                      {item.description}
-                    </p>
-                    <Link 
-                      href={item.link}
-                      className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-medium transition-colors"
-                    >
-                      {item.linkText}
-                    </Link>
-                  </div>
-                </SimpleAnimatedCard>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Growth Snapshot */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl text-center">
+        {/* Free Growth Snapshot - lead capture block */}
+        <section id="snapshot-form" className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <SimpleScrollReveal direction="up">
-              <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-6">
-                Get a Free Growth Snapshot
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 max-w-2xl mx-auto">
-                We find the 3–4 biggest leaks costing you time and money, then give you two quick wins you can implement now—no meeting required.
-              </p>
-              
-              <ul className="space-y-3 mb-8 text-left max-w-lg mx-auto">
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 dark:text-gray-300">Industry-specific checkup</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 dark:text-gray-300">1-page summary + Loom walkthrough</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <span className="text-gray-700 dark:text-gray-300">Works with your current tools</span>
-                </li>
-              </ul>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                {/* Left column */}
+                <div>
+                  <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-6">
+                    Get a Free Growth Snapshot
+                  </h2>
+                  <ul className="space-y-4 text-lg">
+                    <li className="flex items-start gap-3">
+                      <Icon name="check" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                      <span className="text-gray-700 dark:text-gray-300">Industry-specific checkup</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="check" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                      <span className="text-gray-700 dark:text-gray-300">1-page summary + Loom walkthrough</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <Icon name="check" className="w-6 h-6 text-primary-600 flex-shrink-0 mt-1" />
+                      <span className="text-gray-700 dark:text-gray-300">Works with your current tools</span>
+                    </li>
+                  </ul>
+                </div>
 
-              <DarkButton 
-                onClick={() => {
-                  handleCTAClick('primary', 'snapshot-section');
-                  window.location.href = '/checkup/';
-                }}
-                className="px-8 py-4 text-lg"
-              >
-                Get my Free Growth Snapshot
-              </DarkButton>
+                {/* Right column - inline mini form */}
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8">
+                  <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-6">Get Started Now</h3>
+                  <form className="space-y-4" action="/growth-audit" method="GET">
+                    <div>
+                      <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Name
+                      </label>
+                      <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                        placeholder="Your name"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Email
+                      </label>
+                      <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        required
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                        placeholder="your@email.com"
+                      />
+                    </div>
+                    <div>
+                      <label htmlFor="website" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                        Website URL
+                      </label>
+                      <input
+                        type="url"
+                        id="website"
+                        name="website"
+                        className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent bg-white dark:bg-gray-700 text-gray-900 dark:text-white"
+                        placeholder="https://yoursite.com"
+                      />
+                    </div>
+                    <DarkButton 
+                      type="submit"
+                      onClick={() => handleCTAClick('primary', 'snapshot-form')}
+                      className="w-full py-3 text-lg font-semibold"
+                    >
+                      Get My Free Snapshot
+                    </DarkButton>
+                    <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
+                      No meeting required.
+                    </p>
+                  </form>
+                </div>
+              </div>
             </SimpleScrollReveal>
           </div>
         </section>
 
-        {/* Case Studies */}
-        <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        {/* Case Studies - tight */}
+        <section id="case-studies" className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-center text-gray-900 dark:text-white mb-12">
+              Success Stories
+            </h2>
+            
+            {/* Desktop: 3 cards in row, Mobile: swipeable carousel */}
+            <div className="hidden md:grid md:grid-cols-3 gap-8 mb-8">
               {caseStudies.map((study, index) => (
                 <SimpleAnimatedCard key={index}>
                   <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full flex flex-col">
@@ -412,6 +470,30 @@ export default function Home() {
               ))}
             </div>
             
+            {/* Mobile: Swipeable carousel */}
+            <div className="md:hidden relative mb-8">
+              <div className="flex space-x-4 overflow-x-auto snap-x snap-mandatory pb-4" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+                {caseStudies.map((study, index) => (
+                  <div key={index} className="flex-none w-80 snap-center">
+                    <div className="bg-white dark:bg-gray-700 rounded-xl p-6 text-center h-full">
+                      <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                        {study.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                        {study.description}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              {/* Dot indicators */}
+              <div className="flex justify-center space-x-2 mt-4">
+                {caseStudies.map((_, index) => (
+                  <div key={index} className="w-2 h-2 rounded-full bg-gray-300 dark:bg-gray-600"></div>
+                ))}
+              </div>
+            </div>
+            
             <div className="text-center">
               <Link 
                 href="/case-studies"
@@ -420,6 +502,57 @@ export default function Home() {
                 See all case studies →
               </Link>
             </div>
+          </div>
+        </section>
+
+        {/* (Optional) How It Works - 3 simple steps */}
+        <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-12">
+              How It Works
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">1</span>
+                </div>
+                <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-3">Snapshot</h3>
+                <p className="text-gray-600 dark:text-gray-300">Free analysis of your current systems and growth opportunities</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">2</span>
+                </div>
+                <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-3">Quick Wins</h3>
+                <p className="text-gray-600 dark:text-gray-300">Implement immediate improvements while planning bigger systems</p>
+              </div>
+              <div className="text-center">
+                <div className="w-16 h-16 bg-primary-100 dark:bg-primary-900 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-primary-600 dark:text-primary-400">3</span>
+                </div>
+                <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-3">Build & Measure</h3>
+                <p className="text-gray-600 dark:text-gray-300">Deploy complete growth systems and track your ROI</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Final CTA */}
+        <section id="final-cta" className="py-12 bg-primary-600 dark:bg-primary-700">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl text-white mb-4">
+              Ready to accelerate your growth?
+            </h2>
+            <p className="text-xl text-primary-100 mb-6">
+              Get your free growth snapshot and see exactly where to focus first.
+            </p>
+            <DarkButton 
+              href="/growth-audit"
+              onClick={() => handleCTAClick('primary', 'final-cta')}
+              className="bg-white text-primary-600 hover:bg-gray-100 px-8 py-4 text-lg font-semibold"
+            >
+              Get My Free Growth Snapshot
+            </DarkButton>
           </div>
         </section>
 
