@@ -406,9 +406,9 @@ a:hover,
 /* Enhanced mobile button and text responsiveness fixes */
 @media (max-width: 768px) {
   /* CTA Button Mobile Optimization */
-  button[class*="bg-"]:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]):not([class*="rounded-full"]),
-  a[class*="bg-"]:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]):not([class*="rounded-full"]),
-  .button:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]):not([class*="rounded-full"]) {
+  button[class*="bg-"]:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]),
+  a[class*="bg-"]:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]),
+  .button:not([class*="theme"]):not([class*="close"]):not([class*="nav"]):not([class*="menu"]) {
     min-height: 44px !important;
     display: flex !important;
     align-items: center !important;
