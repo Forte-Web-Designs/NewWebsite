@@ -53,10 +53,10 @@ const MobileExpandableMenu = ({ title, children, defaultExpanded = false, isActi
   const [isExpanded, setIsExpanded] = useState(defaultExpanded);
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col w-full">
       <button
         onClick={() => setIsExpanded(!isExpanded)}
-        className="flex items-center py-2 w-full text-white text-left"
+        className="flex items-start justify-start py-2 w-full text-white text-left"
       >
         <div className="flex items-center gap-2 ps-3"
           style={
@@ -440,12 +440,12 @@ export default function Header() {
                   height: 'calc(100vh - 70px)'
                 }}
               >
-                <nav className="flex flex-col space-y-2">
+                <nav className="flex flex-col space-y-2 items-start w-full">
                   {/* Home */}
-                  <div className="flex items-center py-2">
+                  <div className="flex items-start w-full py-2">
                     <Link
                       href="/"
-                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 ps-3 ${pathname === '/' ? 'text-[#8D9DFF]' : 'text-white'
+                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 ps-3 text-left ${pathname === '/' ? 'text-[#8D9DFF]' : 'text-white'
                         }`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
@@ -461,12 +461,12 @@ export default function Header() {
                     title="Services"
                     isActive={pathname.startsWith('/services') || pathname.startsWith('/checkup')}
                   >
-                    <div className="pl-4 space-y-1">
+                    <div className="pl-4 space-y-1 w-full">
                       {servicesDropdownItems.map((item) => (
-                        <div key={item.href} className="flex items-center w-full">
+                        <div key={item.href} className="flex items-start w-full">
                           <Link
                             href={item.href}
-                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 text-left ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
                               }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
@@ -481,10 +481,10 @@ export default function Header() {
                   </MobileExpandableMenu>
 
                   {/* Solutions */}
-                  <div className="flex items-center w-full">
+                  <div className="flex items-start w-full">
                     <Link
                       href="/solutions"
-                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 py-2 ps-3 ${pathname === '/solutions' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 py-2 ps-3 text-left ${pathname === '/solutions' ? 'text-[#8D9DFF]' : 'text-white'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Solutions
@@ -499,12 +499,12 @@ export default function Header() {
                     title="Resources"
                     isActive={pathname.startsWith('/docs') || pathname.startsWith('/case-studies') || pathname.startsWith('/growth-audit')}
                   >
-                    <div className="pl-4 space-y-1">
+                    <div className="pl-4 space-y-1 w-full">
                       {resourcesDropdownItems.map((item) => (
-                        <div key={item.href} className="flex items-center w-full">
+                        <div key={item.href} className="flex items-start w-full">
                           <Link
                             href={item.href}
-                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 text-left ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
                               }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
@@ -531,11 +531,11 @@ export default function Header() {
                         title="Texas"
                         isActive={pathname.startsWith('/locations/texas')}
                       >
-                        <div className="pl-4 space-y-1">
-                          <div className="flex items-center w-full">
+                        <div className="pl-4 space-y-1 w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/texas"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/texas' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Texas
@@ -544,10 +544,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/texas/dallas"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/dallas' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/texas/dallas' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Dallas
@@ -556,10 +556,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/texas/fort-worth"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/fort-worth' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/texas/fort-worth' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Fort Worth
@@ -568,10 +568,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/texas/plano"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/plano' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/texas/plano' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Plano
@@ -580,10 +580,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/texas/frisco"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/frisco' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/texas/frisco' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Frisco
@@ -592,10 +592,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/texas/arlington"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/arlington' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/texas/arlington' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Arlington
@@ -604,10 +604,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/texas/irving"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/texas/irving' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/texas/irving' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Irving
@@ -624,11 +624,11 @@ export default function Header() {
                         title="Oklahoma"
                         isActive={pathname.startsWith('/locations/oklahoma')}
                       >
-                        <div className="pl-4 space-y-1">
-                          <div className="flex items-center w-full">
+                        <div className="pl-4 space-y-1 w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/oklahoma"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/oklahoma' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/oklahoma' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Oklahoma
@@ -637,10 +637,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/oklahoma/oklahoma-city"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/oklahoma/oklahoma-city' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/oklahoma/oklahoma-city' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Oklahoma City
@@ -649,10 +649,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/oklahoma/tulsa"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/oklahoma/tulsa' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/oklahoma/tulsa' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Tulsa
@@ -661,10 +661,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/oklahoma/norman"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/oklahoma/norman' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/oklahoma/norman' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Norman
@@ -681,11 +681,11 @@ export default function Header() {
                         title="New Mexico"
                         isActive={pathname.startsWith('/locations/new-mexico')}
                       >
-                        <div className="pl-4 space-y-1">
-                          <div className="flex items-center w-full">
+                        <div className="pl-4 space-y-1 w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/new-mexico"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/new-mexico' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/new-mexico' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               New Mexico
@@ -694,10 +694,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/new-mexico/albuquerque"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/new-mexico/albuquerque' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/new-mexico/albuquerque' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Albuquerque
@@ -706,10 +706,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/new-mexico/santa-fe"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/new-mexico/santa-fe' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/new-mexico/santa-fe' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Santa Fe
@@ -718,10 +718,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/locations/new-mexico/las-cruces"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/locations/new-mexico/las-cruces' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/locations/new-mexico/las-cruces' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Las Cruces
@@ -738,11 +738,11 @@ export default function Header() {
                         title="DFW Services"
                         isActive={pathname.startsWith('/dfw')}
                       >
-                        <div className="pl-4 space-y-1">
-                          <div className="flex items-center w-full">
+                        <div className="pl-4 space-y-1 w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/dfw/ai-consulting"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/dfw/ai-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/dfw/ai-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               AI Consulting
@@ -751,10 +751,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/dfw/automation-consulting"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/dfw/automation-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/dfw/automation-consulting' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Automation Consulting
@@ -763,10 +763,10 @@ export default function Header() {
                               )}
                             </Link>
                           </div>
-                          <div className="flex items-center w-full">
+                          <div className="flex items-start w-full">
                             <Link
                               href="/dfw/business-growth-systems"
-                              className={`text-base sm:text-lg flex items-center gap-2 py-1 ${pathname === '/dfw/business-growth-systems' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                              className={`text-base sm:text-lg flex items-center gap-2 py-1 text-left ${pathname === '/dfw/business-growth-systems' ? 'text-[#8D9DFF]' : 'text-white'}`}
                               onClick={() => setMobileMenuOpen(false)}
                             >
                               Business Growth Systems
@@ -779,10 +779,10 @@ export default function Header() {
                       </MobileExpandableMenu>
                       
                       {/* All Locations */}
-                      <div className="flex items-center w-full">
+                      <div className="flex items-start w-full">
                         <Link
                           href="/locations"
-                          className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === '/locations' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                          className={`text-lg sm:text-xl flex items-center gap-2 py-1 text-left ${pathname === '/locations' ? 'text-[#8D9DFF]' : 'text-white'}`}
                           onClick={() => setMobileMenuOpen(false)}
                         >
                           All Locations
@@ -795,10 +795,10 @@ export default function Header() {
                   </MobileExpandableMenu>
 
                   {/* Pricing */}
-                  <div className="flex items-center w-full">
+                  <div className="flex items-start w-full">
                     <Link
                       href="/pricing"
-                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 py-2 ps-3 ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 py-2 ps-3 text-left ${pathname === '/pricing' ? 'text-[#8D9DFF]' : 'text-white'}`}
                       onClick={() => setMobileMenuOpen(false)}
                     >
                       Pricing
@@ -813,12 +813,12 @@ export default function Header() {
                     title="About Us"
                     isActive={pathname.startsWith('/about') || pathname.startsWith('/blog')}
                   >
-                    <div className="pl-4 space-y-1">
+                    <div className="pl-4 space-y-1 w-full">
                       {aboutDropdownItems.map((item) => (
-                        <div key={item.href} className="flex items-center w-full">
+                        <div key={item.href} className="flex items-start w-full">
                           <Link
                             href={item.href}
-                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
+                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 text-left ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
                               }`}
                             onClick={() => setMobileMenuOpen(false)}
                           >
