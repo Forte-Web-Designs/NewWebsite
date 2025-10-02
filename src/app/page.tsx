@@ -445,11 +445,107 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            {/* Integration logos would go here - placeholder for now */}
+            {/* Integration logos */}
             <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-8 sm:p-12">
-              <div className="text-center text-gray-500 dark:text-gray-400">
-                <p className="text-lg mb-4">Integration logos coming soon</p>
-                <p className="text-sm">Pipedrive • Airtable • HubSpot • Make • Zapier • Salesforce • GA4 • Sheets</p>
+              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
+                {/* n8n */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/n8n.svg"
+                    alt="n8n"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 dark:invert"
+                  />
+                </div>
+
+                {/* Pipedrive */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/pipedrive.svg"
+                    alt="Pipedrive"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12"
+                  />
+                </div>
+
+                {/* Airtable */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/airtable.svg"
+                    alt="Airtable"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12"
+                  />
+                </div>
+
+                {/* HubSpot */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/hubspot.svg"
+                    alt="HubSpot"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12"
+                  />
+                </div>
+
+                {/* Make (formerly Integromat) */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/make.svg"
+                    alt="Make"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12 dark:invert"
+                  />
+                </div>
+
+                {/* Zapier */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/zapier.svg"
+                    alt="Zapier"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12"
+                  />
+                </div>
+
+                {/* Salesforce */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/salesforce.svg"
+                    alt="Salesforce"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12"
+                  />
+                </div>
+
+                {/* Google Analytics 4 */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/googleanalytics.svg"
+                    alt="Google Analytics"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12"
+                  />
+                </div>
+
+                {/* Google Sheets */}
+                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
+                  <OptimizedImage
+                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/googlesheets.svg"
+                    alt="Google Sheets"
+                    width={48}
+                    height={48}
+                    className="w-12 h-12"
+                  />
+                </div>
               </div>
             </div>
           </div>
