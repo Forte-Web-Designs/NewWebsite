@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, lazy, Suspense } from "react";
+import { useState, lazy, Suspense } from "react";
 import Link from "next/link";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { Icon } from "@/components/images/Icon";
@@ -16,24 +16,6 @@ const GrowthSnapshotForm = lazy(() => import("@/components/GrowthSnapshotForm"))
 
 export default function Home() {
   const [showGrowthSnapshotForm, setShowGrowthSnapshotForm] = useState(false);
-  const [currentWordIndex, setCurrentWordIndex] = useState(0);
-  const [fadeInOut, setFadeInOut] = useState(true);
-  
-  // Rotating words for the hero
-  const rotatingWords = ["Data.", "Measurable.", "A System.", "Results."];
-
-  // Rotating words animation with fade effect and no layout shift
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setFadeInOut(false);
-      setTimeout(() => {
-        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
-        setFadeInOut(true);
-      }, 250); // Half-second fade out, then change word and fade in
-    }, 2500); // Change word every 2.5 seconds
-
-    return () => clearInterval(interval);
-  }, [rotatingWords.length]);
 
   // Handle CTA clicks with tracking
   const handleCTAClick = (buttonType: string, placement: string) => {
@@ -45,105 +27,97 @@ export default function Home() {
     }
   };
 
-  // Core features data
-  const coreFeatures = [
+  // Service lanes data (4 tiles matching Automaly structure)
+  const serviceLanes = [
     {
-      icon: "code",
-      title: "Custom AI & Automation Engineering",
-      subtitle: "We design, deploy, and maintain automations and AI assistants specifically tailored to your business growth goals.",
-      link: "/services/ai-automation"
+      icon: "puzzle",
+      title: "CRM Automation Consultants",
+      subtitle: "Supercharge your CRM with AI-powered automations",
+      description: "Turn your CRM into a revenue engine. We route leads instantly, keep data clean, and trigger follow-ups automatically—so your team focuses on high-value, revenue-driving work. Certified across Airtable and Pipedrive; skilled with HubSpot and all major CRMs.",
+      link: "/services/crm-automation"
     },
     {
       icon: "flash",
-      title: "Fully Managed Automation Pipelines",
-      subtitle: "Robust workflows that connect your CRM, scheduling, invoicing, and communication tools into one system that saves you hours every week.",
-      link: "/services/automation-pipelines"
+      title: "AI & Process Automation Consultants", 
+      subtitle: "Better results with AI & marketing automation",
+      description: "Stop losing time to disconnected tools. We connect ads, forms, and email to your CRM and sales stack, add AI-assisted segmentation, and ship repeatable campaigns that lift ROI without manual overhead.",
+      link: "/services/process-automation"
     },
     {
       icon: "dollar",
-      title: "Performance & Analytics Dashboards",
-      subtitle: "Track ROI, conversion rates, and pipeline metrics in a clear, owner-friendly dashboard — no spreadsheets required.",
-      link: "/services/analytics-dashboards"
+      title: "Increase Revenue with AI & Automation",
+      subtitle: "Increase revenue with AI & sales automation", 
+      description: "Reps spend too little time selling and too much time clicking. We automate replies, reminders, guided quotes, and scheduling—covering 90–100% of follow-up so your team can close more with less effort.",
+      link: "/services/revenue-automation"
     },
     {
       icon: "services",
-      title: "Web Design (Foundation Layer)",
-      subtitle: "Custom-coded websites (no WordPress) built for speed, clarity, and lead capture. A strong foundation for every growth system.",
-      link: "/services/web-design"
-    },
-    {
-      icon: "puzzle",
-      title: "Integrations & Access Control",
-      subtitle: "We connect the tools you already use and ensure smooth, secure handoffs between teams. Control access and permissions with confidence.",
+      title: "Software Integration & Automation",
+      subtitle: "Software integration and automation",
+      description: "Make, Zapier, n8n, and custom connectors—wired into a single, dependable system. We optimize your stack for clean handoffs, reliable data, and clear reporting, so tools never get in the way of growth.",
       link: "/services/integrations"
-    },
-    {
-      icon: "clean",
-      title: "Secure & Compliant Infrastructure",
-      subtitle: "Your growth system is hosted in the cloud with best-practice security and compliance standards — built to scale as you grow.",
-      link: "/services/infrastructure"
     }
   ];
 
-
-
-  // Recent outcomes data
-  const recentOutcomes = [
+  // 4-step process data
+  const processSteps = [
     {
-      company: "Summit Gaming Lounge",
-      subtitle: "AI-Powered Concierge System",
-      challenge: "Manual game reservations and group coordination slowed operations.",
-      solution: "Omnichannel AI concierge across SMS, Discord & Telegram.",
-      outcome: "Faster reservations, deeper member engagement,",
-      details: "and scalable growth without extra staff.",
-      anchor: "summit-gaming-lounge"
+      number: "1",
+      title: "Free Growth Snapshot",
+      description: "We review one manual process, surface bottlenecks, and identify where AI & automation can boost productivity and reduce costs."
     },
     {
-      company: "MetroEats", 
-      subtitle: "AI-Powered Lead Discovery",
-      challenge: "Partner restaurant outreach was slow and manual.",
-      solution: "Automated lead discovery + web crawl enrichment.",
-      outcome: "Accelerated partner onboarding, higher-quality leads,",
-      details: "and scalability into new cities.",
-      anchor: "metroeats"
+      number: "2", 
+      title: "Personalized AI & Automation Roadmap",
+      description: "You receive a tailored plan with recommended automations and estimated time/cost savings at every step—ready to implement."
     },
     {
-      company: "Fetchly",
-      subtitle: "Executive Assistant in Slack", 
-      challenge: "Leadership drowning in emails, scheduling, and project updates.",
-      solution: "Slack-native AI assistant integrated with Gmail, Calendar, and monday.com.",
-      outcome: "15+ hours/week saved, faster decisions,",
-      details: "and streamlined team productivity.",
-      anchor: "fetchly"
+      number: "3",
+      title: "Implementation, Setup & Testing", 
+      description: "Our engineers connect your tools, configure workflows, and validate edge cases so everything runs reliably in the real world."
     },
     {
-      company: "ClearWater Systems",
-      subtitle: "AI-Driven Quoting & CRM Automation", 
-      challenge: "Manual quotes caused long delays and lost deals.",
-      solution: "Smart email agent, automated quoting, and CRM sync.",
-      outcome: "Faster quotes, cleaner CRM data,",
-      details: "and higher close rates.",
-      anchor: "clearwater-systems"
+      number: "4",
+      title: "Ongoing Support & Updates (Forte Care™)",
+      description: "We monitor, improve, and support your automations so they stay fast, secure, and aligned to your goals."
     }
   ];
 
-  // Outcomes data for the simplified section
-  const outcomes = [
+  // Trust pillars data
+  const trustPillars = [
     {
-      title: "Time back",
-      description: "Reclaim hours each week across intake, quoting, and follow-up."
+      icon: "star",
+      title: "Unmatched Industry Expertise",
+      description: "Our team spans growth, sales, marketing, and engineering. Recommendations are researched, tested, and practical."
     },
     {
-      title: "Faster response", 
-      description: "Minutes, not days—across forms, calls, and chat."
+      icon: "shield",
+      title: "Control Your Business Growth", 
+      description: "We simplify AI & automation so you can focus on high-value outcomes and full visibility. Take back control."
     },
     {
-      title: "Reliable follow-through",
-      description: "Consistent nudges until conversations resolve."
+      icon: "support",
+      title: "Ongoing Training & Support",
+      description: "We enable your team with onboarding, documentation, and support. Forte Care™ keeps your systems fast and improving."
+    }
+  ];
+
+  // Resources preview data
+  const resourcesPreview = [
+    {
+      type: "BLOG POST",
+      title: "Automated Lead Management: What It Is and Why It Matters",
+      link: "/blog/automated-lead-management"
     },
     {
-      title: "Owner visibility",
-      description: "One dashboard of leads, quotes, and stuck points."
+      type: "BLOG POST", 
+      title: "Sales Automation: The Essential Guide",
+      link: "/blog/sales-automation-guide"
+    },
+    {
+      type: "BLOG POST",
+      title: "How to Automate Customer Engagement to Reduce Churn", 
+      link: "/blog/automate-customer-engagement"
     }
   ];
 
@@ -200,45 +174,26 @@ export default function Home() {
 
       <div className="min-h-screen bg-white dark:bg-gray-900">
         {/* Hero Section */}
-        <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
+        <section id="hero" className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
             <SimpleScrollReveal direction="up">
               <div className="text-center max-w-5xl mx-auto w-full">
-                {/* Badges Row */}
+                {/* Proof Strip */}
                 <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-full px-2">
                   <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-                    <Icon name="location" className="w-3 sm:w-4 h-3 sm:h-4 text-primary-600 flex-shrink-0" />
-                    <span className="whitespace-nowrap text-xs sm:text-sm">DFW-based</span>
+                    <Icon name="star" className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current flex-shrink-0" />
+                    <span className="whitespace-nowrap text-xs sm:text-sm">Trusted by 25+ growing businesses</span>
                   </div>
-                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
-                    <Icon name="flash" className="w-3 sm:w-4 h-3 sm:h-4 text-primary-600 flex-shrink-0" />
-                    <span className="whitespace-nowrap text-xs sm:text-sm">24-hr response</span>
-                  </div>
+                  <span className="text-gray-300 dark:text-gray-600">·</span>
                   <div className="flex items-center gap-1 sm:gap-2 min-w-0">
                     <Icon name="star" className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current flex-shrink-0" />
                     <span className="whitespace-nowrap text-xs sm:text-sm">4.9★ Google reviews</span>
                   </div>
                 </div>
 
-                {/* Rotating Headline */}
-                <h1 
-                  className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full"
-                  style={{ contain: 'layout', wordWrap: 'break-word' }}
-                >
-                  <span className="block sm:inline">Business Growth Isn't Guesswork.</span>{" "}
-                  <span className="block sm:inline">It's{" "}</span>
-                  <span 
-                    className={`inline-block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
-                    style={{ 
-                      minWidth: '160px',
-                      width: 'fit-content',
-                      display: 'inline-block',
-                      textAlign: 'center'
-                    }}
-                    aria-live="polite"
-                  >
-                    {rotatingWords[currentWordIndex]}
-                  </span>
+                {/* Hero Headline */}
+                <h1 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full">
+                  Business Growth Isn't Guesswork. It's <span className="bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">Results.</span>
                 </h1>
 
                 {/* Subheadline */}
@@ -255,14 +210,14 @@ export default function Home() {
                     }}
                     className="px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg w-full sm:w-auto max-w-full min-w-0 text-center"
                   >
-                    Get My Free Growth Snapshot →
+                    Get My Free Growth Snapshot
                   </DarkButton>
                   <a 
-                    href="#how-it-works"
+                    href="#service-lanes"
                     onClick={() => handleCTAClick('secondary', 'hero')}
                     className="inline-flex items-center justify-center px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0 min-h-[44px] text-center"
                   >
-                    <span className="truncate text-center">See How It Works</span>
+                    <span className="truncate text-center">See Use Cases</span>
                     <svg className="ml-2 w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -273,376 +228,411 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Everything You Need In One Place - 6 Core Features */}
-        <section id="how-it-works" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        {/* Positioning Block */}
+        <section id="positioning" className="py-12 sm:py-16 lg:py-20 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
-                  Outcomes in 30–90 Days
+              <div className="text-center max-w-4xl mx-auto">
+                <div className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-4">
+                  AI & Automation Process Consultants
+                </div>
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  AI & Automation Consultants
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-2">
-                  Reclaim 5–20 hours per week, respond in minutes not days, and get 90–100% follow-up coverage without manual chasing.
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+                  At Forte, we help teams grow faster while spending less time on busywork. Our services cover automation consulting, digital transformation, and custom AI development.
+                </p>
+                <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
+                  If you want clear next steps on where AI fits in your operations, request a <strong>Free Growth Snapshot</strong> and we'll show you where to start.
+                </p>
+                <DarkButton 
+                  onClick={() => {
+                    handleCTAClick('primary', 'positioning');
+                    setShowGrowthSnapshotForm(true);
+                  }}
+                  className="px-6 py-3 text-base"
+                >
+                  Get Started
+                </DarkButton>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+
+
+        {/* Partners Strip */}
+        <section id="partners" className="py-8 sm:py-12 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-8">
+                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
+                  Proud to officially partner:
                 </p>
               </div>
             </SimpleScrollReveal>
+            <TrustedCompaniesCarousel />
+          </div>
+        </section>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-full">
-              {coreFeatures.map((feature, index) => (
+        {/* Service Lanes */}
+        <section id="service-lanes" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 sm:mb-16">
+                <div className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-4">
+                  Harness the Power of AI & Automation
+                </div>
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  How we grow your business with AI & Automation
+                </h2>
+              </div>
+            </SimpleScrollReveal>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+              {serviceLanes.map((service, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <Link href={feature.link}>
-                    <div className="bg-white dark:bg-gray-700 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full group">
-                      <Icon name={feature.icon} className="w-10 sm:w-12 h-10 sm:h-12 text-primary-600 mb-4 sm:mb-6 group-hover:scale-110 transition-transform" />
-                      
-                      <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
-                        {feature.title}
-                      </h3>
-                      
-                      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4 sm:mb-6">
-                        {feature.subtitle}
-                      </p>
-                      
-                      <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300 text-sm sm:text-base">
-                        Learn more →
+                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 h-full">
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="flex-shrink-0">
+                        <Icon name={service.icon} className="w-8 h-8 text-primary-600" />
+                      </div>
+                      <div className="flex-1">
+                        <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-2">
+                          {service.title}
+                        </h3>
+                        <h4 className="text-base font-semibold text-primary-600 dark:text-primary-400 mb-4">
+                          {service.subtitle}
+                        </h4>
                       </div>
                     </div>
-                  </Link>
+                    
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                      {service.description}
+                    </p>
+                    
+                    <Link 
+                      href={service.link}
+                      className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
+                    >
+                      Learn more →
+                    </Link>
+                  </div>
                 </SimpleAnimatedCard>
               ))}
             </div>
           </div>
         </section>
 
-
-
-        {/* Trusted Companies Carousel */}
-        <TrustedCompaniesCarousel />
-
-        {/* Growth Snapshot CTA */}
-        <section className="py-12 sm:py-16 lg:py-24 bg-primary-50 dark:bg-primary-900/20">
+        {/* 4-Step Process */}
+        <section id="snapshot-process" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
-              <SimpleScrollReveal direction="left">
-                <div>
-                  <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
-                    Get Your Growth Snapshot
-                  </h2>
-                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
-                    Your <strong>Growth Snapshot</strong> reveals the 3–4 biggest leaks in your business and gives you two quick fixes you can apply immediately.
-                  </p>
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
+                  Your 4-Steps to AI & Automation Success
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300">
+                  Implementing AI and automation has never been easier with Forte.
+                </p>
+              </div>
+            </SimpleScrollReveal>
 
-                  <h3 className="font-display font-semibold text-lg sm:text-xl text-gray-900 dark:text-white mb-4 sm:mb-6">
-                    What we check depends on your industry:
-                  </h3>
-
-                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 max-w-full">
-                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center max-w-full">
-                      <Icon name="services" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
-                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">Service Businesses</h4>
-                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Contractors, healthcare, real estate</p>
-                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check missed calls, slow quotes, and weak follow-ups that cost you booked jobs.</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+              {processSteps.map((step, index) => (
+                <SimpleAnimatedCard key={index}>
+                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 h-full text-center">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-full mb-4">
+                      <span className="text-lg font-bold text-primary-600 dark:text-primary-400">
+                        {step.number}
+                      </span>
                     </div>
-                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center max-w-full">
-                      <Icon name="bag" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
-                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">E-commerce & Retail</h4>
-                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Online stores, retail shops</p>
-                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check cart abandonment, slow checkouts, and weak repeat-purchase systems that cost you sales.</p>
-                    </div>
-                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center sm:col-span-2 lg:col-span-1 max-w-full">
-                      <Icon name="company" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
-                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">Professional Services</h4>
-                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Legal, consulting, finance</p>
-                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check intake speed, scheduling gaps, and retention drops that cost you clients.</p>
-                    </div>
-                  </div>
-
-                  <div className="text-center mb-6 sm:mb-8">
-                    <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 italic">
-                      We also work with gyms, education, nonprofits, and more — the Growth Snapshot adapts to any business model.
+                    
+                    <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                      {step.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      {step.description}
                     </p>
                   </div>
-
-                  <h3 className="font-display font-semibold text-lg sm:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
-                    📊 Results You'll Get:
-                  </h3>
-
-                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Clear view of where money & time are leaking</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Two quick fixes to start closing the gap</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
-                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Confidence in what to prioritize next</span>
-                    </div>
-                  </div>
-
-                  <div className="border-t border-gray-200 dark:border-gray-600 pt-4 sm:pt-6 space-y-3 sm:space-y-4 mb-6 sm:mb-8">
-                    <div className="flex items-start sm:items-center gap-3">
-                      <Icon name="check" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
-                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">100% free. No meeting required.</span>
-                    </div>
-                    <div className="flex items-start sm:items-center gap-3">
-                      <Icon name="download" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
-                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Delivered as a 1-page PDF + short Loom video.</span>
-                    </div>
-                    <div className="flex items-start sm:items-center gap-3">
-                      <Icon name="puzzle" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
-                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Works with your current tools — no rip-and-replace.</span>
-                    </div>
-                  </div>
-
-                  <div className="flex justify-center sm:justify-start">
-                    <DarkButton 
-                      onClick={() => {
-                        handleCTAClick('primary', 'snapshot-section');
-                        setShowGrowthSnapshotForm(true);
-                      }}
-                      className="px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-lg w-full sm:w-auto text-center"
-                    >
-                      Get my Free Growth Snapshot →
-                    </DarkButton>
-                  </div>
-
-                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-3 sm:mt-4 text-center sm:text-left">
-                    We'll only use your info to prepare your snapshot. No spam.
-                  </p>
-                </div>
-              </SimpleScrollReveal>
-
-              <SimpleScrollReveal direction="right">
-                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 lg:p-10 shadow-lg text-center h-full flex flex-col justify-center mt-8 lg:mt-0">
-                  <h3 className="font-display font-bold text-xl sm:text-2xl lg:text-3xl text-gray-900 dark:text-white mb-6 sm:mb-8">
-                    Ready to see your gaps?
-                  </h3>
-                  
-                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-lg p-6 sm:p-8 lg:p-10 mb-6 sm:mb-8 flex-grow flex flex-col justify-center">
-                    <div className="text-4xl sm:text-5xl lg:text-6xl mb-4 sm:mb-6">📊</div>
-                    <h4 className="font-semibold text-lg sm:text-xl lg:text-2xl text-gray-900 dark:text-white mb-4 sm:mb-6">
-                      Your Growth Snapshot
-                    </h4>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
-                      We analyze your current systems and identify the 3-4 biggest opportunities for growth.
-                    </p>
-                    <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 space-y-2">
-                      <div className="flex items-center justify-center gap-2">
-                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
-                        <span>Industry-specific analysis</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-2">
-                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
-                        <span>Actionable recommendations</span>
-                      </div>
-                      <div className="flex items-center justify-center gap-2">
-                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
-                        <span>Quick-win implementation guide</span>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="flex justify-center">
-                    <DarkButton 
-                      onClick={() => {
-                        handleCTAClick('primary', 'snapshot-preview');
-                        setShowGrowthSnapshotForm(true);
-                      }}
-                      className="w-full px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-lg text-center"
-                    >
-                      Get My Free Growth Snapshot →
-                    </DarkButton>
-                  </div>
-                </div>
-              </SimpleScrollReveal>
+                </SimpleAnimatedCard>
+              ))}
             </div>
           </div>
         </section>
 
-        {/* Recent Outcomes */}
-        <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+        {/* Mid-Page CTA */}
+        <section id="mid-cta" className="py-8 sm:py-12 bg-white dark:bg-gray-900 border-t border-b border-gray-200 dark:border-gray-700">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center max-w-2xl mx-auto">
+                <h3 className="font-display font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-2">
+                  Win the technology race
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 mb-6">
+                  Schedule a call today
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                  <input
+                    type="email"
+                    placeholder="Email address*"
+                    className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    style={{ fontSize: '16px' }}
+                  />
+                  <DarkButton className="px-6 py-3 whitespace-nowrap">
+                    Start
+                  </DarkButton>
+                </div>
+                
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">
+                  This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Trust Section */}
+        <section id="trust" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  Trusted AI & Automation Consultants
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                  Forte is a trusted automation partner for growth-minded teams. We learn your goals and commit to a plan that moves the numbers that matter. Your success is our success.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+              {trustPillars.map((pillar, index) => (
+                <SimpleAnimatedCard key={index}>
+                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8 text-center h-full">
+                    <Icon name={pillar.icon} className="w-12 h-12 text-primary-600 mx-auto mb-6" />
+                    
+                    <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
+                      {pillar.title}
+                    </h3>
+                    
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                      {pillar.description}
+                    </p>
+                  </div>
+                </SimpleAnimatedCard>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Resources Preview */}
+        <section id="resources" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 sm:mb-16">
+                <div className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-4">
+                  Case studies, articles, and resources
+                </div>
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  Learn & Grow
+                </h2>
+              </div>
+            </SimpleScrollReveal>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
+              {resourcesPreview.map((resource, index) => (
+                <SimpleAnimatedCard key={index}>
+                  <Link href={resource.link}>
+                    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 h-full group">
+                      <div className="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                        {resource.type}
+                      </div>
+                      
+                      <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+                        {resource.title}
+                      </h3>
+                      
+                      <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors">
+                        Read blog →
+                      </div>
+                    </div>
+                  </Link>
+                </SimpleAnimatedCard>
+              ))}
+            </div>
+
+            <SimpleScrollReveal direction="up">
+              <div className="text-center">
+                <Link 
+                  href="/blog"
+                  className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
+                >
+                  All articles →
+                </Link>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Integrations */}
+        <section id="integrations" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  Connect your favorite business software
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                  We connect the tools you already rely on so you get more from every license. Experts in Pipedrive, Airtable, HubSpot, Make, Salesforce, GA4, Sheets, and more.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            {/* Integration logos would go here - placeholder for now */}
+            <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-8 sm:p-12">
+              <div className="text-center text-gray-500 dark:text-gray-400">
+                <p className="text-lg mb-4">Integration logos coming soon</p>
+                <p className="text-sm">Pipedrive • Airtable • HubSpot • Make • Zapier • Salesforce • GA4 • Sheets</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+
+
+        {/* Growth Snapshot Lead Magnet */}
+        <section id="growth-snapshot" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-8 sm:mb-12">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
-                  Proof in Practice
+                <div className="text-sm font-semibold text-red-600 dark:text-red-400 mb-4">
+                  Process Health Check 🚑
+                </div>
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  Secure your <strong>Free Growth Snapshot</strong>
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 px-2 mb-6">
-                  See how our growth systems deliver measurable outcomes across industries.
+                
+                <div className="max-w-3xl mx-auto space-y-4 text-lg text-gray-600 dark:text-gray-300 mb-8">
+                  <p>
+                    Curious how AI and automation could streamline your operations? Claim a complimentary <strong>Free Growth Snapshot</strong> 🚑.
+                  </p>
+                  <p>
+                    Our specialists will examine one of your current manual processes in detail.
+                  </p>
+                  <p>
+                    We'll analyze existing costs, pinpoint improvements using AI & automation, and outline potential savings and productivity gains. Insights are delivered in a concise consultation so your team can clearly see the benefits.
+                  </p>
+                </div>
+
+                <p className="text-red-600 dark:text-red-400 font-semibold mb-8">
+                  Availability is limited — reserve now!
                 </p>
-                <Link 
-                  href="/case-studies"
-                  className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors group"
-                >
-                  See Our Results
-                  <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full">
-              {recentOutcomes.map((outcome, index) => (
-                <SimpleAnimatedCard key={index}>
-                  <Link href={`/results#${outcome.anchor}`}>
-                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow group h-full text-left">
-                      <div className="mb-4">
-                        <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-1">
-                          {outcome.company}
-                        </h3>
-                        <p className="text-sm font-medium text-primary-600 dark:text-primary-400">
-                          {outcome.subtitle}
-                        </p>
-                      </div>
-                      
-                      <div className="space-y-3 text-sm">
-                        <div>
-                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Challenge:</span>
-                          <p className="text-gray-600 dark:text-gray-400 mt-1">{outcome.challenge}</p>
-                        </div>
-                        
-                        <div>
-                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Solution:</span>
-                          <p className="text-gray-600 dark:text-gray-400 mt-1">{outcome.solution}</p>
-                        </div>
-                        
-                        <div>
-                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Outcome:</span>
-                          <p className="text-gray-900 dark:text-white mt-1">
-                            <span className="font-bold text-primary-600 dark:text-primary-400 group-hover:scale-105 transition-transform inline-block">
-                              {outcome.outcome}
-                            </span>{" "}
-                            {outcome.details}
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-                  </Link>
-                </SimpleAnimatedCard>
-              ))}
-            </div>
-
-            <SimpleScrollReveal direction="up">
-              <div className="flex justify-center px-2">
-                <Link 
-                  href="/case-studies"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base min-h-[44px] text-center"
-                >
-                  View All Case Studies
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
+                <div className="max-w-md mx-auto">
+                  <DarkButton 
+                    onClick={() => {
+                      handleCTAClick('primary', 'growth-snapshot');
+                      setShowGrowthSnapshotForm(true);
+                    }}
+                    className="w-full px-6 py-4 text-lg mb-4"
+                  >
+                    Reserve Your Slot Now
+                  </DarkButton>
+                  
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
+                  </p>
+                </div>
               </div>
             </SimpleScrollReveal>
           </div>
         </section>
 
-        {/* Core Systems That Power Your Growth */}
-        <section className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        {/* Growth Snapshot FAQ */}
+        <section id="growth-snapshot-faq" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6 sm:mb-8 px-2">
-                  What We Build
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white">
+                  Process Health Check FAQ's
                 </h2>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
-              <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
-                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🌐</div>
-                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
-                    Web Design<br /><span className="whitespace-nowrap">(Foundation)</span>
-                  </h3>
-                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
-                    Give customers a reason to say yes.
-                  </h4>
-                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                    Your site isn't just a brochure — it's the entry point of your growth system. A fast, custom-coded website builds trust instantly and converts clicks into calls.
-                  </p>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    📈 <strong>Outcome:</strong> More inquiries, higher trust, stronger first impressions.
-                  </p>
-                </div>
-              </SimpleAnimatedCard>
+            <div className="max-w-4xl mx-auto space-y-8">
+              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
+                  What is it, and how can it benefit you?
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Our <strong>Free Growth Snapshot</strong> is a customized review designed to show the impact AI and automation can make in your business. We evaluate a specific process, highlight cost-saving and efficiency opportunities, and provide expert recommendations with projected savings and productivity gains.
+                </p>
+              </div>
 
-              <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
-                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🤖</div>
-                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
-                    Smart Automation<br /><span className="whitespace-nowrap">(Efficiency)</span>
-                  </h3>
-                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
-                    Work smarter, not harder.
-                  </h4>
-                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                    From instant replies to follow-up reminders, <Link href="/services/automation-ai" className="text-primary-600 dark:text-primary-400 hover:underline">AI automation</Link> ensures no lead slips through the cracks. <Link href="/docs/ai-agents" className="text-primary-600 dark:text-primary-400 hover:underline">AI systems</Link> handle the busywork so you can focus on growth.
-                  </p>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    📈 <strong>Outcome:</strong> Faster responses, more booked jobs, hours of time saved every week.
-                  </p>
-                </div>
-              </SimpleAnimatedCard>
+              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
+                  Who is the Free Growth Snapshot for?
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Business owners, operations leaders, and revenue teams who want to streamline operational or sales processes, minimize manual tasks, and use data to make better decisions.
+                </p>
+              </div>
 
-              <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
-                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">📊</div>
-                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
-                    Dashboards & Scaling<br /><span className="whitespace-nowrap">(Clarity)</span>
-                  </h3>
-                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
-                    Know exactly what's working — and what's not.
-                  </h4>
-                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                    One clear view of leads, quotes, and performance helps you scale without chaos. Our <Link href="/docs/technology-stack" className="text-primary-600 dark:text-primary-400 hover:underline">advanced technology stack</Link> spots bottlenecks and fixes them before they cost you money.
-                  </p>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    📈 <strong>Outcome:</strong> Clearer decisions, accountability, and steady growth at scale.
-                  </p>
-                </div>
-              </SimpleAnimatedCard>
+              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
+                  What do you need from us?
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  We'll start with a short call to confirm the process you'd like to optimize and schedule your consultation. This ensures our analysis is tailored and actionable for your team.
+                </p>
+              </div>
 
-              <SimpleAnimatedCard>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
-                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">⚙️</div>
-                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
-                    Forte Care™<br /><span className="whitespace-nowrap">(Upkeep)</span>
-                  </h3>
-                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
-                    Stay fast, secure, and ahead of competitors.
-                  </h4>
-                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
-                    Your system doesn't stall — it compounds. With Forte Care™, we keep your site and automations optimized, secure, and updated so they continue driving revenue month after month.
-                  </p>
-                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
-                    📈 <strong>Outcome:</strong> Zero downtime, steady improvements, and peace of mind while you grow.
-                  </p>
-                </div>
-              </SimpleAnimatedCard>
+              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
+                  How much does the Snapshot cost?
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  It's free. If you'd like us to assess additional processes beyond the first, fees may apply.
+                </p>
+              </div>
+
+              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
+                  What's included in the Free Growth Snapshot?
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  A brief scoping call, expert analysis to map the process and find high-impact automation opportunities, and a focused session to share findings, savings potential, and recommended next steps.
+                </p>
+              </div>
+
+              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
+                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
+                  How do I get started?
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  Book your intro call and reserve your slot using the link above. During the one-hour session, we'll dive into your process and outline improvements.
+                </p>
+              </div>
             </div>
 
             <SimpleScrollReveal direction="up">
-              <div className="flex justify-center px-2">
-                <a 
-                  href="/pricing"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base min-h-[44px] text-center"
+              <div className="text-center mt-12">
+                <DarkButton 
+                  onClick={() => {
+                    handleCTAClick('primary', 'faq-cta');
+                    setShowGrowthSnapshotForm(true);
+                  }}
+                  className="px-8 py-4 text-lg"
                 >
-                  See Pricing
-                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </a>
+                  Reserve Your Free Growth Snapshot
+                </DarkButton>
               </div>
             </SimpleScrollReveal>
           </div>
         </section>
-
-
 
         {/* Closing CTA */}
         <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700 overflow-hidden">
