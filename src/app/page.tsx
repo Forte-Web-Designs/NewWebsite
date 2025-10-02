@@ -20,7 +20,7 @@ export default function Home() {
   const [fadeInOut, setFadeInOut] = useState(true);
   
   // Rotating words for the hero
-  const rotatingWords = ["Results", "Measurable", "System", "Data"];
+  const rotatingWords = ["a System", "Measurable", "Results", "Data"];
 
   // Rotating words animation with fade effect and no layout shift
   useEffect(() => {
@@ -227,7 +227,7 @@ export default function Home() {
                       aria-live="polite"
                     >
                       {rotatingWords[currentWordIndex]}
-                    </span><span className="inline-block animate-bounce text-primary-600 ml-1">.</span>
+                    </span>
                   </span>
                 </h1>
 
