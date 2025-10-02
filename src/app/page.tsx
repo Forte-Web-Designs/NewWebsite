@@ -127,47 +127,23 @@ export default function Home() {
     }
   ];
 
-  // What We Build
-  const whatWeBuild = [
+  // Outcomes data for the simplified section
+  const outcomes = [
     {
-      title: "Website Foundation",
-      description: "Fast, credible, built to convert.",
-      link: "/services/web-design",
-      linkText: "Learn more →"
+      title: "Time back",
+      description: "Reclaim hours each week across intake, quoting, and follow-up."
     },
     {
-      title: "Smart Automation",
-      description: "Instant replies, guided quotes, automatic follow-ups.",
-      link: "/services/automation-ai", 
-      linkText: "Learn more →"
+      title: "Faster response", 
+      description: "Minutes, not days—across forms, calls, and chat."
     },
     {
-      title: "Dashboards",
-      description: "Know what's working; fix what isn't.",
-      link: "/solutions",
-      linkText: "Learn more →"
+      title: "Reliable follow-through",
+      description: "Consistent nudges until conversations resolve."
     },
     {
-      title: "Forte Care™",
-      description: "Keep it secure, fast, and improving.",
-      link: "/services/forte-care",
-      linkText: "Learn more →"
-    }
-  ];
-
-  // Case Studies
-  const caseStudies = [
-    {
-      title: "Summit Gaming Lounge",
-      description: "Faster reservations and deeper engagement without extra headcount."
-    },
-    {
-      title: "MetroEats",
-      description: "Faster, higher-quality partner outreach with scalable expansion."
-    },
-    {
-      title: "Fetchly", 
-      description: "~15 hours/week saved; cleaner days and faster decisions."
+      title: "Owner visibility",
+      description: "One dashboard of leads, quotes, and stuck points."
     }
   ];
 
@@ -223,311 +199,520 @@ export default function Home() {
       />
 
       <div className="min-h-screen bg-white dark:bg-gray-900">
-        {/* Hero Section - Clean AI Landing Style */}
-        <section id="hero" className="relative bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-800 pt-32 pb-24 sm:pt-40 sm:pb-32 lg:pt-48 lg:pb-40">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-6xl">
-            <div className="text-center space-y-12">
-              {/* Main Headline - Simplified */}
-              <div className="space-y-6">
-                <h1 className="font-display font-semibold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-gray-900 dark:text-white tracking-tight">
-                  Business Growth Isn't Guesswork.
-                  <br />
-                  <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
-                    It's{" "}
-                    <span 
-                      className={`transition-opacity duration-300 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
-                    >
-                      {rotatingWords[currentWordIndex]}
-                    </span>
+        {/* Hero Section */}
+        <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-full">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center max-w-5xl mx-auto w-full">
+                {/* Badges Row */}
+                <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-full px-2">
+                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+                    <Icon name="location" className="w-3 sm:w-4 h-3 sm:h-4 text-primary-600 flex-shrink-0" />
+                    <span className="whitespace-nowrap text-xs sm:text-sm">DFW-based</span>
+                  </div>
+                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+                    <Icon name="flash" className="w-3 sm:w-4 h-3 sm:h-4 text-primary-600 flex-shrink-0" />
+                    <span className="whitespace-nowrap text-xs sm:text-sm">24-hr response</span>
+                  </div>
+                  <div className="flex items-center gap-1 sm:gap-2 min-w-0">
+                    <Icon name="star" className="w-3 sm:w-4 h-3 sm:h-4 text-yellow-400 fill-current flex-shrink-0" />
+                    <span className="whitespace-nowrap text-xs sm:text-sm">4.9★ Google reviews</span>
+                  </div>
+                </div>
+
+                {/* Rotating Headline */}
+                <h1 
+                  className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full"
+                  style={{ contain: 'layout', wordWrap: 'break-word' }}
+                >
+                  <span className="block sm:inline">Business Growth Isn't Guesswork.</span>{" "}
+                  <span className="block sm:inline">It's{" "}</span>
+                  <span 
+                    className={`inline-block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
+                    style={{ 
+                      minWidth: '160px',
+                      width: 'fit-content',
+                      display: 'inline-block',
+                      textAlign: 'center'
+                    }}
+                    aria-live="polite"
+                  >
+                    {rotatingWords[currentWordIndex]}
                   </span>
                 </h1>
-                
-                <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto font-light leading-relaxed">
-                  Catch every opportunity. Respond faster. Win more jobs.
-                </p>
-              </div>
 
-              {/* CTA Section */}
-              <div className="space-y-6">
-                <button 
-                  onClick={() => {
-                    handleCTAClick('primary', 'hero');
-                    window.location.href = '/growth-audit';
-                  }}
-                  className="inline-flex items-center justify-center px-10 py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-lg font-medium text-lg hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg hover:shadow-xl"
-                >
-                  Get My Free Growth Snapshot
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-                
-                <div>
+                {/* Subheadline */}
+                <h2 className="text-base sm:text-lg md:text-xl lg:text-2xl leading-relaxed text-gray-600 dark:text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto px-2 max-w-full">
+                  Catch every opportunity. Respond faster. Win more jobs.
+                </h2>
+
+                {/* CTAs */}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2 max-w-full">
+                  <DarkButton 
+                    onClick={() => {
+                      handleCTAClick('primary', 'hero');
+                      setShowGrowthSnapshotForm(true);
+                    }}
+                    className="px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg w-full sm:w-auto max-w-full min-w-0 text-center"
+                  >
+                    Get My Free Growth Snapshot →
+                  </DarkButton>
                   <a 
                     href="#how-it-works"
                     onClick={() => handleCTAClick('secondary', 'hero')}
-                    className="text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors underline underline-offset-4 decoration-1 hover:decoration-2"
+                    className="inline-flex items-center justify-center px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0 min-h-[44px] text-center"
                   >
-                    See How It Works
+                    <span className="truncate text-center">See How It Works</span>
+                    <svg className="ml-2 w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
                   </a>
                 </div>
               </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
 
-              {/* Social Proof - Minimal */}
-              <div className="pt-8 space-y-4">
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  Trusted by 25+ growing businesses • 4.9★ Google reviews
+        {/* Everything You Need In One Place - 6 Core Features */}
+        <section id="how-it-works" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
+                  Outcomes in 30–90 Days
+                </h2>
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto px-2">
+                  Reclaim 5–20 hours per week, respond in minutes not days, and get 90–100% follow-up coverage without manual chasing.
                 </p>
-                <div className="flex justify-center items-center gap-6 text-xs text-gray-400">
-                  <span>DFW-based</span>
-                  <span>•</span>
-                  <span>24-hr response</span>
-                </div>
               </div>
-            </div>
-          </div>
-        </section>
+            </SimpleScrollReveal>
 
-        {/* Trusted Companies - Clean Minimal */}
-        <section className="py-16 bg-white dark:bg-gray-900 border-b border-gray-100 dark:border-gray-800">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12">
-            <TrustedCompaniesCarousel />
-          </div>
-        </section>
-
-        {/* Outcomes + Services - Clean Card Design */}
-        <section id="outcomes-pillars" className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-7xl">
-            {/* Outcomes Stats */}
-            <div className="text-center mb-20">
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-8 tracking-tight">
-                Your Outcomes in 30-90 Days
-              </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">
-                Reclaim 5–20 hours per week, respond in minutes not days, get 90–100% follow-up coverage without manual chasing, and maintain complete visibility into your business pipeline through one owner-friendly dashboard.
-              </p>
-              <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 max-w-4xl mx-auto">
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">5–20</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">Hours reclaimed weekly</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">Minutes</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">Response time</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">90–100%</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">Follow-up coverage</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-light text-gray-900 dark:text-white mb-3">One</div>
-                  <div className="text-sm text-gray-500 dark:text-gray-400 uppercase tracking-wide">Dashboard</div>
-                </div>
-              </div>
-            </div>
-            
-
-            {/* Services Cards */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-              {whatWeBuild.map((item, index) => (
-                <div key={index} className="group">
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 h-full border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-gray-100 dark:hover:shadow-gray-900/20">
-                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-4">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
-                      {item.description}
-                    </p>
-                    <Link 
-                      href={item.link}
-                      className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
-                    >
-                      Learn more
-                      <svg className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </Link>
-                  </div>
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 max-w-full">
+              {coreFeatures.map((feature, index) => (
+                <SimpleAnimatedCard key={index}>
+                  <Link href={feature.link}>
+                    <div className="bg-white dark:bg-gray-700 rounded-xl p-6 sm:p-8 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 h-full group">
+                      <Icon name={feature.icon} className="w-10 sm:w-12 h-10 sm:h-12 text-primary-600 mb-4 sm:mb-6 group-hover:scale-110 transition-transform" />
+                      
+                      <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
+                        {feature.title}
+                      </h3>
+                      
+                      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4 sm:mb-6">
+                        {feature.subtitle}
+                      </p>
+                      
+                      <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300 text-sm sm:text-base">
+                        Learn more →
+                      </div>
+                    </div>
+                  </Link>
+                </SimpleAnimatedCard>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Growth Snapshot - Minimal Form */}
-        <section id="snapshot-form" className="py-24 sm:py-32 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-4xl">
-            <div className="text-center space-y-12">
-              {/* Header */}
-              <div className="space-y-6">
-                <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white tracking-tight">
-                  Get a Free Growth Snapshot
-                </h2>
-                <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-                  We find the 3–4 biggest leaks costing you time and money, then give you two quick wins you can implement now—no meeting required.
-                </p>
-                <div className="flex flex-wrap justify-center items-center gap-8 text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Industry-specific checkup</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>1-page summary + Loom walkthrough</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
-                    <span>Works with your current tools</span>
-                  </div>
-                </div>
-              </div>
 
-              {/* Clean Form */}
-              <div className="max-w-lg mx-auto">
-                <form className="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl shadow-gray-100 dark:shadow-gray-900/20 border border-gray-100 dark:border-gray-700" action="/growth-audit" method="GET">
-                  <div className="space-y-6">
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all"
-                      placeholder="Your name"
-                    />
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all"
-                      placeholder="your@email.com"
-                    />
-                    <input
-                      type="url"
-                      name="website"
-                      className="w-full px-6 py-4 bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 transition-all"
-                      placeholder="https://yoursite.com (optional)"
-                    />
-                    <button 
-                      type="submit"
-                      onClick={() => handleCTAClick('primary', 'snapshot-form')}
-                      className="w-full py-4 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
-                    >
-                      Get my Free Growth Snapshot
-                    </button>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-                      No meeting required • Takes 2 minutes
-                    </p>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Case Studies - Clean Minimal */}
-        <section id="case-studies" className="py-24 sm:py-32 bg-white dark:bg-gray-900">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-6xl">
-            <div className="text-center space-y-16">
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white tracking-tight">
-                Success Stories
-              </h2>
-              
-              {/* Clean Cards */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {caseStudies.map((study, index) => (
-                  <div key={index} className="group">
-                    <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 border border-gray-100 dark:border-gray-700 hover:border-gray-200 dark:hover:border-gray-600 transition-all duration-300 hover:shadow-lg hover:shadow-gray-100 dark:hover:shadow-gray-900/20 h-full">
-                      <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-4">
-                        {study.title}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                        {study.description}
-                      </p>
+        {/* Trusted Companies Carousel */}
+        <TrustedCompaniesCarousel />
+
+        {/* Growth Snapshot CTA */}
+        <section className="py-12 sm:py-16 lg:py-24 bg-primary-50 dark:bg-primary-900/20">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid lg:grid-cols-2 gap-8 sm:gap-10 lg:gap-12 items-center">
+              <SimpleScrollReveal direction="left">
+                <div>
+                  <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
+                    Get Your Growth Snapshot
+                  </h2>
+                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 mb-6 sm:mb-8">
+                    Your <strong>Growth Snapshot</strong> reveals the 3–4 biggest leaks in your business and gives you two quick fixes you can apply immediately.
+                  </p>
+
+                  <h3 className="font-display font-semibold text-lg sm:text-xl text-gray-900 dark:text-white mb-4 sm:mb-6">
+                    What we check depends on your industry:
+                  </h3>
+
+                  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-6 max-w-full">
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center max-w-full">
+                      <Icon name="services" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
+                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">Service Businesses</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Contractors, healthcare, real estate</p>
+                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check missed calls, slow quotes, and weak follow-ups that cost you booked jobs.</p>
+                    </div>
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center max-w-full">
+                      <Icon name="bag" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
+                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">E-commerce & Retail</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Online stores, retail shops</p>
+                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check cart abandonment, slow checkouts, and weak repeat-purchase systems that cost you sales.</p>
+                    </div>
+                    <div className="bg-white dark:bg-gray-700 rounded-lg p-4 sm:p-6 text-center sm:col-span-2 lg:col-span-1 max-w-full">
+                      <Icon name="company" className="w-6 sm:w-8 h-6 sm:h-8 text-primary-600 mx-auto mb-3 sm:mb-4" />
+                      <h4 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white mb-2 sm:mb-3">Professional Services</h4>
+                      <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-1 sm:mb-2">Legal, consulting, finance</p>
+                      <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">We check intake speed, scheduling gaps, and retention drops that cost you clients.</p>
                     </div>
                   </div>
-                ))}
-              </div>
-              
-              <div>
+
+                  <div className="text-center mb-6 sm:mb-8">
+                    <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 italic">
+                      We also work with gyms, education, nonprofits, and more — the Growth Snapshot adapts to any business model.
+                    </p>
+                  </div>
+
+                  <h3 className="font-display font-semibold text-lg sm:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
+                    📊 Results You'll Get:
+                  </h3>
+
+                  <div className="space-y-2 sm:space-y-3 mb-6 sm:mb-8">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Clear view of where money & time are leaking</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Two quick fixes to start closing the gap</span>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 bg-primary-600 rounded-full mt-2 flex-shrink-0"></div>
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Confidence in what to prioritize next</span>
+                    </div>
+                  </div>
+
+                  <div className="border-t border-gray-200 dark:border-gray-600 pt-4 sm:pt-6 space-y-3 sm:space-y-4 mb-6 sm:mb-8">
+                    <div className="flex items-start sm:items-center gap-3">
+                      <Icon name="check" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">100% free. No meeting required.</span>
+                    </div>
+                    <div className="flex items-start sm:items-center gap-3">
+                      <Icon name="download" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Delivered as a 1-page PDF + short Loom video.</span>
+                    </div>
+                    <div className="flex items-start sm:items-center gap-3">
+                      <Icon name="puzzle" className="w-4 sm:w-5 h-4 sm:h-5 text-primary-500 dark:text-primary-400 flex-shrink-0 mt-1 sm:mt-0" />
+                      <span className="text-sm sm:text-base text-gray-700 dark:text-gray-300">Works with your current tools — no rip-and-replace.</span>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center sm:justify-start">
+                    <DarkButton 
+                      onClick={() => {
+                        handleCTAClick('primary', 'snapshot-section');
+                        setShowGrowthSnapshotForm(true);
+                      }}
+                      className="px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-lg w-full sm:w-auto text-center"
+                    >
+                      Get my Free Growth Snapshot →
+                    </DarkButton>
+                  </div>
+
+                  <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 mt-3 sm:mt-4 text-center sm:text-left">
+                    We'll only use your info to prepare your snapshot. No spam.
+                  </p>
+                </div>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="right">
+                <div className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 lg:p-10 shadow-lg text-center h-full flex flex-col justify-center mt-8 lg:mt-0">
+                  <h3 className="font-display font-bold text-xl sm:text-2xl lg:text-3xl text-gray-900 dark:text-white mb-6 sm:mb-8">
+                    Ready to see your gaps?
+                  </h3>
+                  
+                  <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-lg p-6 sm:p-8 lg:p-10 mb-6 sm:mb-8 flex-grow flex flex-col justify-center">
+                    <div className="text-4xl sm:text-5xl lg:text-6xl mb-4 sm:mb-6">📊</div>
+                    <h4 className="font-semibold text-lg sm:text-xl lg:text-2xl text-gray-900 dark:text-white mb-4 sm:mb-6">
+                      Your Growth Snapshot
+                    </h4>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base mb-6 sm:mb-8 leading-relaxed">
+                      We analyze your current systems and identify the 3-4 biggest opportunities for growth.
+                    </p>
+                    <div className="text-xs sm:text-sm text-gray-500 dark:text-gray-400 space-y-2">
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
+                        <span>Industry-specific analysis</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
+                        <span>Actionable recommendations</span>
+                      </div>
+                      <div className="flex items-center justify-center gap-2">
+                        <span className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></span>
+                        <span>Quick-win implementation guide</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="flex justify-center">
+                    <DarkButton 
+                      onClick={() => {
+                        handleCTAClick('primary', 'snapshot-preview');
+                        setShowGrowthSnapshotForm(true);
+                      }}
+                      className="w-full px-6 sm:px-8 py-4 sm:py-4 text-base sm:text-lg text-center"
+                    >
+                      Get My Free Growth Snapshot →
+                    </DarkButton>
+                  </div>
+                </div>
+              </SimpleScrollReveal>
+            </div>
+          </div>
+        </section>
+
+        {/* Recent Outcomes */}
+        <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4 px-2">
+                  Proof in Practice
+                </h2>
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 px-2 mb-6">
+                  See how our growth systems deliver measurable outcomes across industries.
+                </p>
                 <Link 
                   href="/case-studies"
-                  className="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors font-medium"
+                  className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors group"
                 >
-                  See all case studies →
+                  See Our Results
+                  <svg className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
+            </SimpleScrollReveal>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12 max-w-full">
+              {recentOutcomes.map((outcome, index) => (
+                <SimpleAnimatedCard key={index}>
+                  <Link href={`/results#${outcome.anchor}`}>
+                    <div className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/30 dark:to-primary-800/30 rounded-xl p-6 sm:p-8 hover:shadow-lg transition-shadow group h-full text-left">
+                      <div className="mb-4">
+                        <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-1">
+                          {outcome.company}
+                        </h3>
+                        <p className="text-sm font-medium text-primary-600 dark:text-primary-400">
+                          {outcome.subtitle}
+                        </p>
+                      </div>
+                      
+                      <div className="space-y-3 text-sm">
+                        <div>
+                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Challenge:</span>
+                          <p className="text-gray-600 dark:text-gray-400 mt-1">{outcome.challenge}</p>
+                        </div>
+                        
+                        <div>
+                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Solution:</span>
+                          <p className="text-gray-600 dark:text-gray-400 mt-1">{outcome.solution}</p>
+                        </div>
+                        
+                        <div>
+                          <span className="font-medium text-gray-700 dark:text-gray-300 italic">Outcome:</span>
+                          <p className="text-gray-900 dark:text-white mt-1">
+                            <span className="font-bold text-primary-600 dark:text-primary-400 group-hover:scale-105 transition-transform inline-block">
+                              {outcome.outcome}
+                            </span>{" "}
+                            {outcome.details}
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </Link>
+                </SimpleAnimatedCard>
+              ))}
             </div>
+
+            <SimpleScrollReveal direction="up">
+              <div className="flex justify-center px-2">
+                <Link 
+                  href="/case-studies"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base min-h-[44px] text-center"
+                >
+                  View All Case Studies
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </SimpleScrollReveal>
           </div>
         </section>
 
-        {/* How It Works - Minimal Steps */}
-        <section id="how-it-works" className="py-24 sm:py-32 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-5xl">
-            <div className="text-center space-y-16">
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white tracking-tight">
-                How It Works
+        {/* Core Systems That Power Your Growth */}
+        <section className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6 sm:mb-8 px-2">
+                  What We Build
+                </h2>
+              </div>
+            </SimpleScrollReveal>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-8 sm:mb-12">
+              <SimpleAnimatedCard>
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🌐</div>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
+                    Web Design<br /><span className="whitespace-nowrap">(Foundation)</span>
+                  </h3>
+                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
+                    Give customers a reason to say yes.
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
+                    Your site isn't just a brochure — it's the entry point of your growth system. A fast, custom-coded website builds trust instantly and converts clicks into calls.
+                  </p>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    📈 <strong>Outcome:</strong> More inquiries, higher trust, stronger first impressions.
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">🤖</div>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
+                    Smart Automation<br /><span className="whitespace-nowrap">(Efficiency)</span>
+                  </h3>
+                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
+                    Work smarter, not harder.
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
+                    From instant replies to follow-up reminders, <Link href="/services/automation-ai" className="text-primary-600 dark:text-primary-400 hover:underline">AI automation</Link> ensures no lead slips through the cracks. <Link href="/docs/ai-agents" className="text-primary-600 dark:text-primary-400 hover:underline">AI systems</Link> handle the busywork so you can focus on growth.
+                  </p>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    📈 <strong>Outcome:</strong> Faster responses, more booked jobs, hours of time saved every week.
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">📊</div>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
+                    Dashboards & Scaling<br /><span className="whitespace-nowrap">(Clarity)</span>
+                  </h3>
+                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
+                    Know exactly what's working — and what's not.
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
+                    One clear view of leads, quotes, and performance helps you scale without chaos. Our <Link href="/docs/technology-stack" className="text-primary-600 dark:text-primary-400 hover:underline">advanced technology stack</Link> spots bottlenecks and fixes them before they cost you money.
+                  </p>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    📈 <strong>Outcome:</strong> Clearer decisions, accountability, and steady growth at scale.
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+
+              <SimpleAnimatedCard>
+                <div className="bg-white dark:bg-gray-700 rounded-xl p-4 sm:p-6 text-center flex flex-col min-h-0">
+                  <div className="text-2xl sm:text-3xl mb-3 sm:mb-4">⚙️</div>
+                  <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
+                    Forte Care™<br /><span className="whitespace-nowrap">(Upkeep)</span>
+                  </h3>
+                  <h4 className="font-semibold text-sm sm:text-base text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
+                    Stay fast, secure, and ahead of competitors.
+                  </h4>
+                  <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mb-3 sm:mb-4 leading-relaxed">
+                    Your system doesn't stall — it compounds. With Forte Care™, we keep your site and automations optimized, secure, and updated so they continue driving revenue month after month.
+                  </p>
+                  <p className="text-xs sm:text-sm font-semibold text-gray-700 dark:text-gray-300">
+                    📈 <strong>Outcome:</strong> Zero downtime, steady improvements, and peace of mind while you grow.
+                  </p>
+                </div>
+              </SimpleAnimatedCard>
+            </div>
+
+            <SimpleScrollReveal direction="up">
+              <div className="flex justify-center px-2">
+                <a 
+                  href="/pricing"
+                  className="inline-flex items-center justify-center px-6 sm:px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg text-sm sm:text-base min-h-[44px] text-center"
+                >
+                  See Pricing
+                  <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+
+
+        {/* Closing CTA */}
+        <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700 overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center max-w-full">
+            <SimpleScrollReveal direction="up">
+              <p className="text-white/90 text-sm sm:text-base mb-4">
+                Serving Dallas-Fort Worth with comprehensive <Link href="/dfw/business-growth-systems" className="text-white hover:underline font-semibold">business growth systems</Link>
+              </p>
+              <h2 className="font-display font-bold text-xl sm:text-2xl lg:text-3xl xl:text-4xl text-white mb-6 sm:mb-8 px-2 max-w-full">
+                Ready to stop losing opportunities?
               </h2>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div className="text-center space-y-6">
-                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mx-auto">
-                    <span className="text-xl font-semibold">1</span>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2 max-w-full">
+                <button
+                  onClick={() => {
+                    handleCTAClick('primary', 'closing-cta');
+                    setShowGrowthSnapshotForm(true);
+                  }}
+                  className="bg-white text-primary-600 hover:bg-gray-50 px-6 sm:px-6 lg:px-8 py-4 sm:py-4 rounded-lg font-semibold text-sm sm:text-base lg:text-lg transition-colors w-full sm:w-auto max-w-full min-w-0 min-h-[44px] text-center"
+                >
+                  <span className="truncate text-center">Get a Free Growth Snapshot</span>
+                </button>
+                <a 
+                  href="/contact"
+                  onClick={() => handleCTAClick('secondary', 'closing-cta')}
+                  className="inline-flex items-center justify-center px-6 sm:px-6 lg:px-8 py-4 sm:py-4 text-sm sm:text-base lg:text-lg border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto max-w-full min-w-0 min-h-[44px] text-center"
+                >
+                  <span className="truncate text-center">Talk to Us</span>
+                  <svg className="ml-2 w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Growth Snapshot Form Modal */}
+        {showGrowthSnapshotForm && (
+          <Suspense fallback={
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-hidden">
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 sm:p-8 mx-auto">
+                <div className="animate-spin w-6 sm:w-8 h-6 sm:h-8 border-4 border-primary-600 border-t-transparent rounded-full mx-auto"></div>
+              </div>
+            </div>
+          }>
+            <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4 overflow-hidden">
+              <div className="bg-white dark:bg-gray-800 rounded-xl max-w-2xl w-full max-h-[90vh] overflow-y-auto mx-auto">
+                <div className="p-4 sm:p-6 w-full">
+                  <div className="flex justify-between items-start mb-4 sm:mb-6 w-full">
+                    <h3 className="font-display font-bold text-lg sm:text-2xl text-gray-900 dark:text-white pr-4 flex-1 min-w-0">
+                      Get Your Free Growth Snapshot
+                    </h3>
+                    <button
+                      onClick={() => setShowGrowthSnapshotForm(false)}
+                      className="text-gray-400 hover:text-gray-600 dark:hover:text-gray-200 flex-shrink-0 ml-2"
+                      aria-label="Close modal"
+                    >
+                      <Icon name="x" className="w-5 sm:w-6 h-5 sm:h-6" />
+                    </button>
                   </div>
-                  <div className="space-y-3">
-                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white">Snapshot</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Free analysis of your current systems and growth opportunities</p>
-                  </div>
-                </div>
-                
-                <div className="text-center space-y-6">
-                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mx-auto">
-                    <span className="text-xl font-semibold">2</span>
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white">Quick Wins</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Implement immediate improvements while planning bigger systems</p>
-                  </div>
-                </div>
-                
-                <div className="text-center space-y-6">
-                  <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mx-auto">
-                    <span className="text-xl font-semibold">3</span>
-                  </div>
-                  <div className="space-y-3">
-                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white">Build & Measure</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Deploy complete growth systems and track your ROI</p>
-                  </div>
+                  
+                  <GrowthSnapshotForm 
+                    onSubmit={() => setShowGrowthSnapshotForm(false)}
+                  />
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        {/* Final CTA - Clean & Minimal */}
-        <section id="final-cta" className="py-20 sm:py-24 bg-gray-900 dark:bg-gray-800">
-          <div className="container mx-auto px-6 sm:px-8 lg:px-12 max-w-4xl text-center">
-            <div className="space-y-8">
-              <h2 className="font-display font-semibold text-3xl sm:text-4xl text-white tracking-tight">
-                Ready to accelerate your growth?
-              </h2>
-              <p className="text-xl text-gray-300 max-w-2xl mx-auto">
-                Get your free growth snapshot and see exactly where to focus first.
-              </p>
-              <button 
-                onClick={() => {
-                  handleCTAClick('primary', 'final-cta');
-                  window.location.href = '/growth-audit';
-                }}
-                className="inline-flex items-center justify-center px-10 py-4 bg-white text-gray-900 rounded-lg font-medium text-lg hover:bg-gray-100 transition-all duration-300 hover:scale-105 shadow-lg"
-              >
-                Get My Free Growth Snapshot
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </button>
-            </div>
-          </div>
-        </section>
-
+          </Suspense>
+        )}
       </div>
     </>
   );
