@@ -9,118 +9,122 @@ import Link from 'next/link';
 import { Icon } from '@/components/images/Icon';
 
 const metadata: Metadata = {
-  title: 'Free Growth Audit (Snapshot) | Forte Web Designs',
-  description: 'Identify where time and money are leaking. Get a free 1-page audit + two quick wins—no tool changes required.',
+  title: 'Free Growth Snapshot | Forte Web Designs',
+  description: 'Get a customized review showing how AI and automation can streamline your operations. Free expert analysis with projected savings and productivity gains.',
 };
 
 const checksWePerform = [
   {
-    title: "Response Speed",
-    description: "Missed calls & first-touch time across phone, web forms, chat, and email",
+    title: "Manual Data Processing",
+    description: "Repetitive tasks that can be automated with AI and smart workflows",
     icon: "flash"
   },
   {
-    title: "Follow-Through Coverage", 
-    description: "% of quotes, demos, or carts that receive timely nudges",
+    title: "Customer Communication", 
+    description: "24/7 response capabilities using AI chatbots and automated systems",
     icon: "check"
   },
   {
-    title: "Handoffs & Duplicate Entry",
-    description: "Where data is retyped or dropped between tools/teams",
+    title: "System Integration",
+    description: "Connecting tools to eliminate duplicate entry and streamline workflows",
     icon: "puzzle"
   },
   {
-    title: "Quote/Checkout Speed",
-    description: "Time from interest → price in hand / clean checkout", 
+    title: "Process Efficiency",
+    description: "Time-consuming workflows that can be optimized with automation", 
     icon: "clock"
   },
   {
-    title: "Owner Visibility",
-    description: "One place to see leads, quotes, stuck items, and aging tasks",
+    title: "Decision Support",
+    description: "AI-powered analytics and reporting for better business insights",
     icon: "chart"
   }
 ];
 
 const deliverables = [
-  "1-page PDF snapshot of bottlenecks and impact",
-  "2 quick-win fixes (step-by-step, 30–90 minutes each)",
-  "Short Loom walk-through explaining what to do next",
-  "Optional checklist to prepare a pilot (if you want us to help)"
+  "Brief scoping call to understand your process",
+  "Expert analysis mapping automation opportunities",
+  "Focused consultation sharing findings and savings potential",
+  "Recommended next steps with projected ROI"
 ];
 
 const sampleMetrics = [
-  { label: "First response time", before: "~3h", after: "<10 min" },
-  { label: "Quote turnaround", before: "2–3 days", after: "same-day" },
-  { label: "Follow-up coverage", before: "28%", after: "90–100%" },
-  { label: "Duplicate entry", before: "CRM + invoicing double-entry found", after: "remove with integration" },
-  { label: "Owner view", before: "No single dashboard", after: "add lead/quote/stuck roll-up" }
+  { label: "Manual data entry", before: "5-8 hours/week", after: "Automated via AI" },
+  { label: "Customer responses", before: "Business hours only", after: "24/7 AI assistance" },
+  { label: "Lead follow-up", before: "Manual tracking", after: "Automated sequences" },
+  { label: "Process efficiency", before: "Multiple disconnected tools", after: "Integrated automation" },
+  { label: "Cost savings", before: "Current overhead", after: "20-40% reduction projected" }
 ];
 
 const quickWins = [
-  "Missed-call auto-text with booking link (30–45 min)",
-  "Quote template + reminder cadence (60–90 min)"
+  "Immediate automation opportunities identified",
+  "Projected savings and efficiency gains calculated"
 ];
 
 const workflowSteps = [
   {
     step: "1",
-    title: "Tell us your goals (2–3 minutes)",
-    description: "Complete the form with your tools and a few examples (recent missed calls, quotes, or orders)."
+    title: "Book Your Call",
+    description: "Reserve your slot and confirm which process you'd like to optimize for maximum impact."
   },
   {
     step: "2", 
-    title: "Read-only access (lightweight)",
-    description: "Grant limited access to phone/CRM/form inbox and calendar so we can measure actual delays."
+    title: "Process Analysis",
+    description: "Our specialists analyze your current workflow to identify the highest-impact automation opportunities."
   },
   {
     step: "3",
-    title: "Get your snapshot",
-    description: "We send a 1-page PDF + Loom walk-through with two quick wins. If you want, we'll scope a pilot."
+    title: "Get Your Insights",
+    description: "Receive expert recommendations with projected savings, efficiency gains, and next steps for implementation."
   }
 ];
 
 const whatWeNeed = [
-  "Which tools you use (phones, CRM, forms, calendar, invoicing)",
-  "3–5 recent examples (inquiries, quotes, or orders)", 
-  "Read-only/shared access so we can verify timings (we'll send a checklist)"
+  "Overview of your current manual processes and tools",
+  "Specific challenges you'd like to streamline with automation", 
+  "Brief walkthrough of your workflow for accurate analysis"
 ];
 
 const commonQuickWins = [
-  "Missed-call → instant text-back with booking link",
-  "Quote templates with auto-reminders until answered",
-  "No-show reminder sequence for consults/demos",
-  "Simple CRM rules to flag stuck items >48 hours",
-  "Owner scorecard (weekly email) with response, quote, and follow-through metrics"
+  "AI chatbots for 24/7 customer service and lead capture",
+  "Automated data entry and CRM integration workflows",
+  "Smart email sequences for follow-up and nurturing",
+  "Process automation to eliminate repetitive manual tasks",
+  "Intelligent dashboards for real-time business insights"
 ];
 
 const expectedResults = [
-  { metric: "Faster responses", change: "hours → minutes" },
-  { metric: "Faster quotes/checkouts", change: "multi-day → same-day (or fewer steps)" },
-  { metric: "Consistent follow-ups", change: "ad-hoc → 90–100% coverage" },
-  { metric: "Team hours saved", change: "5–20 hrs/week via fewer manual steps" },
-  { metric: "Clarity", change: "one dashboard for leads, quotes, stuck items, and aging" }
+  { metric: "Time Savings", change: "5-20 hours/week" },
+  { metric: "Cost Reduction", change: "20-40% operational costs" },
+  { metric: "Response Time", change: "24/7 automated support" },
+  { metric: "Accuracy", change: "Eliminate human error" },
+  { metric: "Scalability", change: "Handle growth without hiring" }
 ];
 
 const faqs = [
   {
-    question: "Is this really free?",
-    answer: "Yes. The audit is free and comes with two actionable quick wins. If you want help implementing, we'll scope a pilot."
+    question: "What is it, and how can it benefit you?",
+    answer: "Our Free Growth Snapshot is a customized review designed to show the impact AI and automation can make in your business. We evaluate a specific process, highlight cost-saving and efficiency opportunities, and provide expert recommendations with projected savings and productivity gains."
   },
   {
-    question: "Do we need to switch tools?",
-    answer: "No. We work with your current stack and only recommend changes when the ROI is obvious."
+    question: "Who is the Free Growth Snapshot for?",
+    answer: "Business owners, operations leaders, and revenue teams who want to streamline operational or sales processes, minimize manual tasks, and use data to make better decisions."
   },
   {
-    question: "How long does it take?",
-    answer: "Usually 2–4 business days after we receive light read-only access."
+    question: "What do you need from us?",
+    answer: "We'll start with a short call to confirm the process you'd like to optimize and schedule your consultation. This ensures our analysis is tailored and actionable for your team."
   },
   {
-    question: "Will you implement the fixes for us?",
-    answer: "We can. The audit includes DIY steps; a pilot is optional if you want us to handle setup."
+    question: "How much does the Snapshot cost?",
+    answer: "It's free. If you'd like us to assess additional processes beyond the first, fees may apply."
   },
   {
-    question: "Who owns the outputs?",
-    answer: "You receive and own the PDF and Loom. If you later engage us for systems work, ownership follows your agreement terms (site/systems transfer after the 12-month minimum)."
+    question: "What's included in the Free Growth Snapshot?",
+    answer: "A brief scoping call, expert analysis to map the process and find high-impact automation opportunities, and a focused session to share findings, savings potential, and recommended next steps."
+  },
+  {
+    question: "How do I get started?",
+    answer: "Book your intro call and reserve your slot using the form below. During the one-hour session, we'll dive into your process and outline improvements."
   }
 ];
 
@@ -158,17 +162,17 @@ export default function GrowthAuditPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white mb-6">
-                Free Growth Audit (Snapshot)
+                Free Growth Snapshot
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
-                Get a clear, actionable view of where time and money are leaking—then fix the biggest issues first. We review your intake speed, follow-through, handoffs, and owner visibility, and give you two quick wins you can implement right away.
+                Curious how AI and automation could streamline your operations? Our specialists will examine one of your current manual processes in detail. We'll analyze existing costs, pinpoint improvements using AI & automation, and outline potential savings and productivity gains.
               </p>
               
               {/* Primary CTAs */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link href="/contact?type=audit">
+                <Link href="/contact?type=snapshot">
                   <DarkButton className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto">
-                    Get My Free Growth Audit →
+                    Get My Free Growth Snapshot →
                   </DarkButton>
                 </Link>
                 <a 
@@ -189,10 +193,10 @@ export default function GrowthAuditPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-12 sm:mb-16">
               <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
-                What We Check (built to fit any business)
+                What We Analyze (AI & Automation Opportunities)
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-                We focus on the universal levers that move outcomes—across service, retail/e-commerce, and professional services.
+                We examine your current manual processes to identify where AI and automation can deliver the biggest impact on efficiency and cost savings.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -216,7 +220,7 @@ export default function GrowthAuditPage() {
           <SimpleScrollReveal direction="up">
             <div className="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 sm:p-8 max-w-4xl mx-auto text-center">
               <p className="text-gray-700 dark:text-gray-300 italic text-lg">
-                We adapt these checks to your industry and stack—no rip-and-replace required.
+                We customize our analysis to your specific business processes and existing tools.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -246,7 +250,7 @@ export default function GrowthAuditPage() {
           <SimpleScrollReveal direction="up">
             <div className="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 sm:p-8 text-center">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Turnaround:</span> typically <strong>2–4 business days</strong> once we have access.
+                <span className="font-semibold">Timeline:</span> One focused session to dive into your process and outline improvements.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -258,7 +262,7 @@ export default function GrowthAuditPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
-              Sample Snapshot Preview (example)
+              What Your Growth Snapshot Reveals
             </h2>
           </SimpleScrollReveal>
           
@@ -267,7 +271,7 @@ export default function GrowthAuditPage() {
             <SimpleAnimatedCard>
               <div className="bg-white dark:bg-gray-700 rounded-xl p-6 sm:p-8 shadow-lg h-full">
                 <h3 className="font-display font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-6">
-                  Current State → Target
+                  Before Automation → After AI Implementation
                 </h3>
                 <div className="space-y-4">
                   {sampleMetrics.map((metric, index) => (
@@ -294,7 +298,7 @@ export default function GrowthAuditPage() {
             <SimpleAnimatedCard>
               <div className="bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 sm:p-8 shadow-lg h-full">
                 <h3 className="font-display font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-6">
-                  Quick Wins Included:
+                  Insights Delivered:
                 </h3>
                 <div className="space-y-4">
                   {quickWins.map((win, index) => (
@@ -346,7 +350,7 @@ export default function GrowthAuditPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
-              What We Need From You (minimal)
+              What We Need From You
             </h2>
           </SimpleScrollReveal>
           
@@ -365,7 +369,7 @@ export default function GrowthAuditPage() {
             <div className="mt-8 bg-primary-50 dark:bg-primary-900/20 rounded-xl p-6 text-center">
               <p className="text-gray-700 dark:text-gray-300 italic">
                 <Icon name="lock" className="w-4 h-4 text-primary-600 inline mr-2" aria-hidden="true" />
-                All access is read-only for verification purposes only.
+                Your information is kept confidential and used only for analysis.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -377,7 +381,7 @@ export default function GrowthAuditPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
-              Example Quick Wins We Commonly Ship
+              Common Automation Opportunities We Identify
             </h2>
           </SimpleScrollReveal>
           
@@ -399,7 +403,7 @@ export default function GrowthAuditPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
-              Results You Can Expect (30–90 days)
+              Potential Benefits You Could Achieve
             </h2>
           </SimpleScrollReveal>
           
@@ -468,12 +472,12 @@ export default function GrowthAuditPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-white mb-8">
-              Ready to get time and money back—without new software?
+              Ready to see how AI & automation can transform your business?
             </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/contact?type=audit">
+              <Link href="/contact?type=snapshot">
                 <button className="bg-white text-primary-600 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors w-full sm:w-auto">
-                  Get My Free Growth Audit →
+                  Get My Free Growth Snapshot →
                 </button>
               </Link>
               <a 

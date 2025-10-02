@@ -451,11 +451,11 @@ export default function Home() {
                 {/* n8n */}
                 <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
                   <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/n8n.svg"
+                    src="https://seeklogo.com/images/N/n8n-logo-40BE7C4E27-seeklogo.com.png"
                     alt="n8n"
                     width={48}
                     height={48}
-                    className="w-12 h-12 dark:invert"
+                    className="w-12 h-12"
                   />
                 </div>
 
@@ -473,7 +473,7 @@ export default function Home() {
                 {/* Airtable */}
                 <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
                   <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/airtable.svg"
+                    src="https://seekvectorlogo.com/wp-content/uploads/2022/02/airtable-vector-logo.svg"
                     alt="Airtable"
                     width={48}
                     height={48}
@@ -484,7 +484,7 @@ export default function Home() {
                 {/* HubSpot */}
                 <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
                   <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/hubspot.svg"
+                    src="https://worldvectorlogo.com/download/hubspot.svg"
                     alt="HubSpot"
                     width={48}
                     height={48}
@@ -495,18 +495,18 @@ export default function Home() {
                 {/* Make (formerly Integromat) */}
                 <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
                   <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/make.svg"
+                    src="https://www.calltrackingmetrics.com/wp-content/uploads/2023/01/make-logo.svg"
                     alt="Make"
                     width={48}
                     height={48}
-                    className="w-12 h-12 dark:invert"
+                    className="w-12 h-12"
                   />
                 </div>
 
                 {/* Zapier */}
                 <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
                   <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/zapier.svg"
+                    src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Zapier_logo.svg"
                     alt="Zapier"
                     width={48}
                     height={48}
@@ -528,7 +528,7 @@ export default function Home() {
                 {/* Google Analytics 4 */}
                 <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
                   <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/googleanalytics.svg"
+                    src="https://upload.wikimedia.org/wikipedia/commons/8/89/Logo_Google_Analytics.svg"
                     alt="Google Analytics"
                     width={48}
                     height={48}
@@ -539,7 +539,7 @@ export default function Home() {
                 {/* Google Sheets */}
                 <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
                   <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/googlesheets.svg"
+                    src="https://worldvectorlogo.com/download/google-sheets-full-logo-1.svg"
                     alt="Google Sheets"
                     width={48}
                     height={48}
@@ -601,88 +601,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Growth Snapshot FAQ */}
-        <section id="growth-snapshot-faq" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white">
-                  Process Health Check FAQ's
-                </h2>
-              </div>
-            </SimpleScrollReveal>
 
-            <div className="max-w-4xl mx-auto space-y-8">
-              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
-                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
-                  What is it, and how can it benefit you?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Our <strong>Free Growth Snapshot</strong> is a customized review designed to show the impact AI and automation can make in your business. We evaluate a specific process, highlight cost-saving and efficiency opportunities, and provide expert recommendations with projected savings and productivity gains.
-                </p>
-              </div>
-
-              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
-                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
-                  Who is the Free Growth Snapshot for?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Business owners, operations leaders, and revenue teams who want to streamline operational or sales processes, minimize manual tasks, and use data to make better decisions.
-                </p>
-              </div>
-
-              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
-                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
-                  What do you need from us?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  We'll start with a short call to confirm the process you'd like to optimize and schedule your consultation. This ensures our analysis is tailored and actionable for your team.
-                </p>
-              </div>
-
-              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
-                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
-                  How much does the Snapshot cost?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  It's free. If you'd like us to assess additional processes beyond the first, fees may apply.
-                </p>
-              </div>
-
-              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
-                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
-                  What's included in the Free Growth Snapshot?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  A brief scoping call, expert analysis to map the process and find high-impact automation opportunities, and a focused session to share findings, savings potential, and recommended next steps.
-                </p>
-              </div>
-
-              <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8">
-                <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
-                  How do I get started?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  Book your intro call and reserve your slot using the link above. During the one-hour session, we'll dive into your process and outline improvements.
-                </p>
-              </div>
-            </div>
-
-            <SimpleScrollReveal direction="up">
-              <div className="text-center mt-12">
-                <DarkButton 
-                  onClick={() => {
-                    handleCTAClick('primary', 'faq-cta');
-                    setShowGrowthSnapshotForm(true);
-                  }}
-                  className="px-8 py-4 text-lg"
-                >
-                  Reserve Your Free Growth Snapshot
-                </DarkButton>
-              </div>
-            </SimpleScrollReveal>
-          </div>
-        </section>
 
         {/* Closing CTA */}
         <section className="py-12 sm:py-16 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700 overflow-hidden">
