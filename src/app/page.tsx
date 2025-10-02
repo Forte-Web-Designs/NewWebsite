@@ -233,14 +233,11 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
               <div className="text-center max-w-4xl mx-auto">
-                <div className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-4">
-                  AI & Automation Process Consultants
-                </div>
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
                   AI & Automation Consultants
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
-                  At Forte, we help teams grow faster while spending less time on busywork. Our services cover automation consulting, digital transformation, and custom AI development.
+                  At Forte Web Designs, we help teams grow faster while spending less time on busywork. Our services cover automation consulting, digital transformation, and custom AI development.
                 </p>
                 <p className="text-lg text-gray-600 dark:text-gray-300 mb-8">
                   If you want clear next steps on where AI fits in your operations, request a <strong>Free Growth Snapshot</strong> and we'll show you where to start.
@@ -264,13 +261,6 @@ export default function Home() {
         {/* Partners Strip */}
         <section id="partners" className="py-8 sm:py-12 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <SimpleScrollReveal direction="up">
-              <div className="text-center mb-8">
-                <p className="text-sm text-gray-600 dark:text-gray-400 mb-6">
-                  Proud to officially partner:
-                </p>
-              </div>
-            </SimpleScrollReveal>
             <TrustedCompaniesCarousel />
           </div>
         </section>
@@ -280,9 +270,6 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12 sm:mb-16">
-                <div className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-4">
-                  Harness the Power of AI & Automation
-                </div>
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
                   How we grow your business with AI & Automation
                 </h2>
@@ -333,7 +320,7 @@ export default function Home() {
                   Your 4-Steps to AI & Automation Success
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300">
-                  Implementing AI and automation has never been easier with Forte.
+                  Implementing AI and automation has never been easier with Forte Web Designs.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -362,37 +349,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Mid-Page CTA */}
-        <section id="mid-cta" className="py-8 sm:py-12 bg-white dark:bg-gray-900 border-t border-b border-gray-200 dark:border-gray-700">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <SimpleScrollReveal direction="up">
-              <div className="text-center max-w-2xl mx-auto">
-                <h3 className="font-display font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-2">
-                  Win the technology race
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Schedule a call today
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
-                  <input
-                    type="email"
-                    placeholder="Email address*"
-                    className="flex-1 px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    style={{ fontSize: '16px' }}
-                  />
-                  <DarkButton className="px-6 py-3 whitespace-nowrap">
-                    Start
-                  </DarkButton>
-                </div>
-                
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">
-                  This site is protected by reCAPTCHA and the Google Privacy Policy and Terms of Service apply.
-                </p>
-              </div>
-            </SimpleScrollReveal>
-          </div>
-        </section>
+
 
         {/* Trust Section */}
         <section id="trust" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
@@ -403,7 +360,7 @@ export default function Home() {
                   Trusted AI & Automation Consultants
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  Forte is a trusted automation partner for growth-minded teams. We learn your goals and commit to a plan that moves the numbers that matter. Your success is our success.
+                  Forte Web Designs is a trusted automation partner for growth-minded teams. We learn your goals and commit to a plan that moves the numbers that matter. Your success is our success.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -433,9 +390,6 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12 sm:mb-16">
-                <div className="text-sm font-semibold text-primary-600 dark:text-primary-400 mb-4">
-                  Case studies, articles, and resources
-                </div>
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
                   Learn & Grow
                 </h2>
@@ -486,7 +440,7 @@ export default function Home() {
                   Connect your favorite business software
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  We connect the tools you already rely on so you get more from every license. Experts in Pipedrive, Airtable, HubSpot, Make, Salesforce, GA4, Sheets, and more.
+                  We connect the tools you already rely on so you get more from every license. Experts in n8n, Pipedrive, Airtable, HubSpot, Make, Salesforce, GA4, Sheets, and more.
                 </p>
               </div>
             </SimpleScrollReveal>
