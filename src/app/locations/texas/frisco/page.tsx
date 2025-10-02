@@ -56,7 +56,7 @@ export default function FriscoWebDesigner() {
                 href="/contact?location=frisco" 
                 className="bg-primary-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-700 transition-colors inline-flex items-center gap-2 justify-center"
               >
-                Get Your Frisco Growth Audit
+                Get Your Frisco Growth Snapshot
                 <Icon name="rightarrow" className="w-4 h-4" />
               </Link>
               <Link 
@@ -238,7 +238,7 @@ export default function FriscoWebDesigner() {
                 href="/contact?location=frisco" 
                 className="bg-white text-primary-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors inline-flex items-center gap-2"
               >
-                Get Your Frisco Growth Audit
+                Get Your Frisco Growth Snapshot
               </Link>
               <Link 
                 href="tel:8178736655" 

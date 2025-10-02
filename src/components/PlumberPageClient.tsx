@@ -214,7 +214,7 @@ export default function PlumberPageClient() {
                     onClick={() => openModal('hero-primary')}
                     className="bg-white text-cyan-700 font-bold py-4 px-8 rounded-lg hover:bg-gray-100 transition-colors text-center shadow-lg cursor-pointer"
                   >
-                    Book My Free Growth Audit
+                    Book My Free Growth Snapshot
                   </button>
                   <button 
                     onClick={() => openModal('hero-secondary')}

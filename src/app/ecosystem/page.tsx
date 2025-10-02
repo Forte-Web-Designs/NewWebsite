@@ -61,7 +61,7 @@ export default function ForteEcosystemPage() {
               Start My Ecosystem
             </LightButton>
             <DarkButton href="/checkup" className="text-lg px-8 py-4">
-              Book Free Growth Audit
+              Book Free Growth Snapshot
             </DarkButton>
           </div>
 

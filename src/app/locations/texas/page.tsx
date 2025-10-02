@@ -319,14 +319,14 @@ export default function TexasPage() {
                 Ready to Win Your Texas Market with a Growth System?
               </h2>
               <p className="text-xl mb-8 opacity-90">
-                Get a free Texas Growth Audit and discover how local expertise can transform your business.
+                Get a free Texas Growth Snapshot and discover how local expertise can transform your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact?utm_source=texas_page&utm_medium=growth_audit"
                   className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                 >
-                  Get Free Texas Growth Audit
+                  Get Free Texas Growth Snapshot
                 </Link>
                 <Link
                   href="/contact?utm_source=texas_page&utm_medium=market_analysis"

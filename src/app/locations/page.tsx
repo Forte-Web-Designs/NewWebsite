@@ -359,7 +359,7 @@ export default function LocationsPage() {
                   href="/contact?utm_source=locations_hero&utm_medium=cta_button"
                   className="inline-flex items-center justify-center bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors duration-200"
                 >
-                  Get My Free Growth Audit
+                  Get My Free Growth Snapshot
                 </Link>
                 <Link
                   href="/contact?utm_source=locations_hero&utm_medium=growth_system"
@@ -592,7 +592,7 @@ export default function LocationsPage() {
                   href="/contact?utm_source=locations_page&utm_medium=cta_button"
                   className="inline-flex items-center justify-center bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                 >
-                  Book Free Growth Audit
+                  Book Free Growth Snapshot
                 </Link>
                 <Link
                   href="/contact?utm_source=locations_page&utm_medium=growth_audit"

@@ -56,7 +56,7 @@ export default function PlanoWebDesigner() {
                 href="/contact?location=plano" 
                 className="bg-primary-600 text-white px-8 py-3 rounded-full font-semibold hover:bg-primary-700 transition-colors inline-flex items-center gap-2 justify-center"
               >
-                Get Your Plano Growth Audit
+                Get Your Plano Growth Snapshot
                 <Icon name="rightarrow" className="w-4 h-4" />
               </Link>
               <Link 

@@ -41,10 +41,13 @@ export default function Footer() {
     {
       heading: "Services",
       points: [
-        { text: "Website Design", href: "/services/webDesign" },
-        { text: "SEO Services", href: "/services/seo" },
-        { text: "Google Ads Management", href: "/services/ads" },
-        { text: "Forte Care™ Support", href: "/services/forte-care" }
+        { text: "AI Automation", href: "/services/automation-ai" },
+        { text: "Website Design", href: "/services/web-design" },
+        { text: "Forte Care™", href: "/services/forte-care" },
+        { text: "Agency Partnership", href: "/services/agency-partnership" },
+        { text: "Free Growth Snapshot", href: "/growth-audit" },
+        { text: "Free Website Checkup", href: "https://www.fortewebdesigns.com/checkup/" },
+        { text: "View All Services", href: "/services" }
       ]
     },
     {
@@ -52,7 +55,7 @@ export default function Footer() {
       points: [
         { text: "View All Solutions", href: "/solutions" },
         { text: "AI Automation", href: "/services/automation-ai" },
-        { text: "Free Growth Audit", href: "/growth-audit" },
+        { text: "Free Growth Snapshot", href: "/growth-audit" },
         { text: "Case Studies", href: "/case-studies" }
       ]
     },

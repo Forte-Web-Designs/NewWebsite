@@ -86,7 +86,7 @@ const blogPosts = [
       <p><strong>Ready to Move Beyond Guesswork?</strong></p>
       <p>Forte Web Designs helps small businesses implement the systems, automation, and strategy needed for predictable growth. Let's turn your website into a growth engine.</p>
 
-      <p><a href="https://www.fortewebdesigns.com/contact" target="_blank" rel="noopener noreferrer">👉 Get Free Growth Audit →</a></p>
+      <p><a href="https://www.fortewebdesigns.com/contact" target="_blank" rel="noopener noreferrer">👉 Get Free Growth Snapshot →</a></p>
     `,
     author: 'Seth Forte',
     date: '2025-09-26',

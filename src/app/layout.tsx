@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     'AI systems integration', 'custom website design', 'DFW web design', 'hand-coded websites',
     'AI automation services', 'business process automation', 'AI implementation partner', 'AI agents',
     'automation pipelines', 'owner dashboards', 'business growth solutions', 'growth systems partner',
-    'AI automation pricing', 'business growth systems pricing', 'website pricing', 'business growth audit',
+    'AI automation pricing', 'business growth systems pricing', 'website pricing', 'business growth snapshot',
     'AI readiness assessment', 'automation audit', 'AI technology stack', 'AI infrastructure',
     'n8n automations', 'AWS AI stack', 'custom AI assistants', 'RAG pipelines', 'AI case studies',
     'automation case studies', 'AI consulting Dallas', 'AI consultant Fort Worth', 'automation consulting Dallas',

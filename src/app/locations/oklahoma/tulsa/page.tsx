@@ -47,7 +47,7 @@ export default function TulsaPage() {
                 href="/checkup"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
-                Book Free Tulsa Growth Audit
+                Book Free Tulsa Growth Snapshot
               </Link>
             </div>
           </div>

@@ -136,7 +136,7 @@ export default function ServicesPage() {
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
                 <Link href="/growth-audit">
                   <DarkButton className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto">
-                    Get My Free Growth Audit →
+                    Get My Free Growth Snapshot →
                   </DarkButton>
                 </Link>
                 <a 
@@ -233,7 +233,7 @@ export default function ServicesPage() {
             <div className="text-center">
               <Link href="/growth-audit">
                 <DarkButton className="px-6 py-3">
-                  Get My Free Growth Audit →
+                  Get My Free Growth Snapshot →
                 </DarkButton>
               </Link>
             </div>
@@ -358,7 +358,7 @@ export default function ServicesPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/growth-audit">
                 <button className="bg-white text-primary-600 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors w-full sm:w-auto">
-                  Get My Free Growth Audit →
+                  Get My Free Growth Snapshot →
                 </button>
               </Link>
               <a 

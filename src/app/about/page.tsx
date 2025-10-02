@@ -602,14 +602,14 @@ export default function AboutUs() {
                 Ready to Transform Your Business?
               </h2>
               <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                Ready to see how a growth system could transform your business? Book your free Growth Audit today and let's map out your path to measurable results.
+                Ready to see how a growth system could transform your business? Book your free Growth Snapshot today and let's map out your path to measurable results.
               </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-blue-600 font-semibold px-12 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
               >
                 <span>�</span>
-                Book My Free Growth Audit
+                Book My Free Growth Snapshot
               </Link>
             </div>
           </SimpleScrollReveal>

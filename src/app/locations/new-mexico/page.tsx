@@ -269,7 +269,7 @@ export default function NewMexicoPage() {
                   href="/contact?utm_source=new-mexico_page&utm_medium=audit_button"
                   className="inline-flex items-center justify-center border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-blue-600 transition-colors duration-200"
                 >
-                  Book Free Growth Audit
+                  Book Free Growth Snapshot
                 </Link>
               </div>
             </div>

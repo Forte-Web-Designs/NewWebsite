@@ -163,7 +163,7 @@ export default function AutomationAIClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/growth-audit">
                 <LightButton className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto">
-                  Get Free Growth Audit →
+                  Get Free Growth Snapshot →
                 </LightButton>
               </Link>
               <Link href="/contact">
@@ -464,7 +464,7 @@ export default function AutomationAIClient() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <Link href="/growth-audit">
                 <button className="bg-white text-blue-600 hover:bg-gray-100 font-bold py-4 px-8 rounded-lg transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                  Get Free Growth Audit →
+                  Get Free Growth Snapshot →
                 </button>
               </Link>
               <Link href="/contact">

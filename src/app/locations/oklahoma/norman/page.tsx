@@ -47,7 +47,7 @@ export default function NormanPage() {
                 href="/checkup"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
-                Book Free Norman Growth Audit
+                Book Free Norman Growth Snapshot
               </Link>
             </div>
           </div>

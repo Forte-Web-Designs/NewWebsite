@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
+import { HeroBackgroundAnimation, SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
@@ -47,7 +47,7 @@ export default function SantaFePage() {
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold border-2 border-blue-600 hover:bg-blue-50 transition-colors"
               >
-                Book Free Growth Audit
+                Book Free Growth Snapshot
               </Link>
             </div>
           </div>
@@ -239,7 +239,7 @@ export default function SantaFePage() {
                 href="/contact"
                 className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Book Free Growth Audit
+                Book Free Growth Snapshot
               </Link>
               <Link
                 href="/contact"

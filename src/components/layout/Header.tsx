@@ -121,7 +121,7 @@ export default function Header() {
     { label: 'Website Design', href: '/services/web-design' },
     { label: 'Forte Care™', href: '/services/forte-care' },
     { label: 'Agency Partnership', href: '/services/agency-partnership' },
-    { label: 'Free Growth Audit', href: '/growth-audit' },
+    { label: 'Free Growth Snapshot', href: '/growth-audit' },
     { label: 'Free Website Checkup', href: 'https://www.fortewebdesigns.com/checkup/' },
     { label: 'View All Services', href: '/services' }
   ];
@@ -183,7 +183,7 @@ export default function Header() {
 
   // Resources dropdown for documentation and technical info
   const resourcesDropdownItems = [
-    { label: 'Growth Audit', href: '/growth-audit' },
+    { label: 'Growth Snapshot', href: '/growth-audit' },
     { label: 'Case Studies', href: '/case-studies' },
     { label: 'FAQs', href: '/about/faqs' },
     { label: 'Blog', href: '/blog' }
@@ -247,17 +247,7 @@ export default function Header() {
                 }
               />
 
-              {/* Resources Dropdown */}
-              <Dropdown
-                items={resourcesDropdownItems}
-                width="200px"
-                trigger={
-                  <div className="relative group text-[#101010] dark:text-[#DFDFDF] font-roboto font-normal text-base leading-6 tracking-normal align-middle flex items-center gap-2">
-                    <HeaderLink href="/case-studies" showIcon={true}>Resources</HeaderLink>
-                  </div>
-                }
-              />
-
+              <HeaderLink href="/about">About Us</HeaderLink>
               <HeaderLink href="/pricing">Pricing</HeaderLink>
             </nav>
 
@@ -459,33 +449,19 @@ export default function Header() {
 
 
 
-                  {/* Resources */}
-                  <MobileExpandableMenu
-                    title="Resources"
-                    isActive={pathname.startsWith('/docs') || pathname.startsWith('/case-studies') || pathname.startsWith('/growth-audit')}
-                  >
-                    <div className="pl-4 space-y-1">
-                      {resourcesDropdownItems.map((item) => (
-                        <div key={item.href} className="flex items-center">
-                          <Link
-                            href={item.href}
-                            className={`text-lg sm:text-xl flex items-center gap-2 py-1 ${pathname === item.href ? 'text-[#8D9DFF]' : 'text-white'
-                              }`}
-                            onClick={() => setMobileMenuOpen(false)}
-                          >
-                            {item.label}
-                            {pathname === item.href && (
-                              <Icon name="star-m.svg" alt="star" size={14} />
-                            )}
-                          </Link>
-                        </div>
-                      ))}
-                    </div>
-                  </MobileExpandableMenu>
-
-
-
-
+                  {/* About Us */}
+                  <div className="flex items-center">
+                    <Link
+                      href="/about"
+                      className={`text-xl sm:text-2xl font-normal flex items-center gap-2 py-2 ps-3 ${pathname === '/about' ? 'text-[#8D9DFF]' : 'text-white'}`}
+                      onClick={() => setMobileMenuOpen(false)}
+                    >
+                      About Us
+                      {pathname === '/about' && (
+                        <Icon name="star-m.svg" alt="star" size={16} folder="shared/icons" />
+                      )}
+                    </Link>
+                  </div>
 
                   {/* Pricing */}
                   <div className="flex items-center">

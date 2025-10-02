@@ -94,7 +94,7 @@ export default function SeoDesignPage() {
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-                <LightButton href="/contact">Book My Free Growth Audit</LightButton>
+                <LightButton href="/contact">Book My Free Growth Snapshot</LightButton>
                 <DarkButton href="#pricing" className="bg-green-600 hover:bg-green-700 text-white border-green-600">
                   Add Growth Layer to My Website
                 </DarkButton>

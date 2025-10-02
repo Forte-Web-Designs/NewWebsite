@@ -167,7 +167,7 @@ export default function OwnerDashboardsBlog() {
               <h3 className="font-semibold text-lg text-gray-900 dark:text-white mb-6">Related Resources</h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <Link href="/growth-audit" className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
-                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Growth Audit</h4>
+                  <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Growth Snapshot</h4>
                   <p className="text-sm text-gray-600 dark:text-gray-300">Free business analysis</p>
                 </Link>
                 <Link href="/pricing" className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">

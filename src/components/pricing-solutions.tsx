@@ -208,7 +208,7 @@ export function PricingPage() {
                 onClick={() => setShowGrowthSnapshotForm(true)}
                 className="bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white px-8 py-4 text-lg font-semibold"
               >
-                👉 Book My Free Growth Audit
+                👉 Book My Free Growth Snapshot
               </DarkButton>
             </div>
           </SimpleScrollReveal>
@@ -460,7 +460,7 @@ export function PricingPage() {
                 onClick={() => setShowGrowthSnapshotForm(true)}
                 className="bg-white dark:bg-gray-100 text-primary-600 dark:text-primary-700 hover:bg-gray-100 dark:hover:bg-gray-200 px-8 py-4 text-lg font-semibold"
               >
-                👉 Book My Free Growth Audit
+                👉 Book My Free Growth Snapshot
               </DarkButton>
               
               <Link 
@@ -481,7 +481,7 @@ export function PricingPage() {
             <div className="p-6">
               <div className="flex justify-between items-center mb-6">
                 <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white">
-                  Book Your Free Growth Audit
+                  Book Your Free Growth Snapshot
                 </h3>
                 <button
                   onClick={() => setShowGrowthSnapshotForm(false)}
@@ -539,7 +539,7 @@ export function PricingPage() {
                   className="w-full bg-primary-600 hover:bg-primary-700 text-white font-semibold py-4 px-8 rounded-lg transition-colors"
                   onClick={() => setShowGrowthSnapshotForm(false)}
                 >
-                  Book My Free Growth Audit →
+                  Book My Free Growth Snapshot →
                 </button>
                 <p className="text-xs text-gray-500 dark:text-gray-400 text-center">
                   We'll only use your info to prepare your audit. No spam, no sales calls unless you ask.
