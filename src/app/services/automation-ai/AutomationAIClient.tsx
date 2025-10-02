@@ -209,8 +209,108 @@ export default function AutomationAIClient() {
         </div>
       </section>
 
-      {/* Implementation Timeline */}
+      {/* Explore Our Solutions Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <div className="text-center mb-16">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+              Explore Our AI & Automation Solutions
+            </h2>
+            <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+              Dive deeper into our specialized offerings to see how we can transform your business operations.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {/* AI Agents Card */}
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border border-blue-200 dark:border-blue-800 hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-blue-600 rounded-2xl flex items-center justify-center">
+                  <span className="text-2xl text-white">🤖</span>
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
+                    AI Agents
+                  </h3>
+                  <p className="text-blue-600 dark:text-blue-400 font-medium">
+                    Intelligent automation that thinks
+                  </p>
+                </div>
+              </div>
+              
+              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                Custom AI agents that handle complex workflows, customer interactions, and business processes. From chatbots to document processing, our agents work 24/7 to grow your business.
+              </p>
+              
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Smart customer service agents</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Document processing & analysis</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-blue-500 rounded-full"></span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Lead qualification & nurturing</span>
+                </div>
+              </div>
+              
+              <Link href="/services/automation-ai/ai-agents">
+                <button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                  Explore AI Agents →
+                </button>
+              </Link>
+            </div>
+
+            {/* Technology Stack Card */}
+            <div className="bg-gradient-to-br from-purple-50 to-violet-100 dark:from-purple-900/20 dark:to-violet-900/20 rounded-2xl p-8 border border-purple-200 dark:border-purple-800 hover:shadow-xl transition-all duration-300 hover:scale-105">
+              <div className="flex items-center gap-4 mb-6">
+                <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center">
+                  <span className="text-2xl text-white">⚙️</span>
+                </div>
+                <div>
+                  <h3 className="font-display font-bold text-2xl text-gray-900 dark:text-white mb-2">
+                    Technology Stack
+                  </h3>
+                  <p className="text-purple-600 dark:text-purple-400 font-medium">
+                    The tech behind the magic
+                  </p>
+                </div>
+              </div>
+              
+              <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                Discover the cutting-edge technologies and frameworks we use to build robust, scalable automation systems. From AI models to integration platforms.
+              </p>
+              
+              <div className="space-y-3 mb-8">
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Modern AI/ML frameworks</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Enterprise integrations</span>
+                </div>
+                <div className="flex items-center gap-3">
+                  <span className="w-2 h-2 bg-purple-500 rounded-full"></span>
+                  <span className="text-sm text-gray-600 dark:text-gray-400">Scalable architecture</span>
+                </div>
+              </div>
+              
+              <Link href="/services/automation-ai/technology-stack">
+                <button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-semibold py-4 px-6 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg">
+                  View Technology Stack →
+                </button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Implementation Timeline */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <div className="text-center mb-16">
             <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">

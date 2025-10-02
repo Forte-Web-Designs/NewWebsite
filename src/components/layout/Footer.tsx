@@ -48,29 +48,30 @@ export default function Footer() {
       ]
     },
     {
-      heading: "Company",
+      heading: "Solutions",
+      points: [
+        { text: "View All Solutions", href: "/solutions" },
+        { text: "AI Automation", href: "/services/automation-ai" },
+        { text: "Free Growth Audit", href: "/growth-audit" },
+        { text: "Case Studies", href: "/case-studies" }
+      ]
+    },
+    {
+      heading: "Locations",
+      points: [
+        { text: "Dallas-Fort Worth", href: "/locations/texas" },
+        { text: "Oklahoma", href: "/locations/oklahoma" },
+        { text: "New Mexico", href: "/locations/new-mexico" },
+        { text: "All Locations", href: "/locations" }
+      ]
+    },
+    {
+      heading: "About Us",
       points: [
         { text: "About Us", href: "/about" },
         { text: "Our Work", href: "/about/work" },
-        { text: "Case Studies", href: "/case-studies" },
+        { text: "Blog", href: "/blog" },
         { text: "Contact", href: "/contact" }
-      ]
-    },
-    {
-      heading: "Resources",
-      points: [
-        { text: "Free Website Checkup", href: "/checkup" },
-        { text: "Pricing", href: "/pricing" },
-        { text: "FAQs", href: "/about/faqs" },
-        { text: "Blog", href: "/blog" }
-      ]
-    },
-    {
-      heading: "Connect",
-      points: [
-        { text: "Facebook", href: "https://www.facebook.com/people/Forte-Web-Designs/61576746767359/" },
-        { text: "Instagram", href: "https://www.instagram.com/fortewebdesigns/" },
-        { text: "LinkedIn", href: "https://www.linkedin.com/company/forte-web-designs/?viewAsMember=true" }
       ]
     }
   ];

@@ -222,7 +222,9 @@ export default function Home() {
                         minWidth: '160px',
                         width: 'fit-content',
                         display: 'inline-block',
-                        textAlign: 'left'
+                        textAlign: 'left',
+                        lineHeight: '1.2',
+                        paddingBottom: '0.1em'
                       }}
                       aria-live="polite"
                     >
