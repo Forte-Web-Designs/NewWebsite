@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, lazy, Suspense } from "react";
+import { useState, useEffect, lazy, Suspense } from "react";
 import Link from "next/link";
 import { OptimizedImage } from "@/components/images/OptimizedImage";
 import { Icon } from "@/components/images/Icon";
@@ -9,13 +9,31 @@ import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
 import SimpleAnimatedCounter from '@/components/animations/SimpleAnimatedCounter';
 import LightButton from "@/components/LightButton";
 import DarkButton from "@/components/DarkButton";
-import TrustedCompaniesCarousel from "@/components/TrustedCompaniesCarousel";
+
 
 // Lazy load non-critical components for better performance
 const GrowthSnapshotForm = lazy(() => import("@/components/GrowthSnapshotForm"));
 
 export default function Home() {
   const [showGrowthSnapshotForm, setShowGrowthSnapshotForm] = useState(false);
+  const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const [fadeInOut, setFadeInOut] = useState(true);
+  
+  // Rotating words for the hero
+  const rotatingWords = ["Results", "Measurable", "System", "Data"];
+
+  // Rotating words animation with fade effect and no layout shift
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setFadeInOut(false);
+      setTimeout(() => {
+        setCurrentWordIndex((prevIndex) => (prevIndex + 1) % rotatingWords.length);
+        setFadeInOut(true);
+      }, 250); // Half-second fade out, then change word and fade in
+    }, 2500); // Change word every 2.5 seconds
+
+    return () => clearInterval(interval);
+  }, [rotatingWords.length]);
 
   // Handle CTA clicks with tracking
   const handleCTAClick = (buttonType: string, placement: string) => {
@@ -192,8 +210,25 @@ export default function Home() {
                 </div>
 
                 {/* Hero Headline */}
-                <h1 className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full">
-                  Business Growth Isn't Guesswork. It's <span className="bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent">Results.</span>
+                <h1 
+                  className="font-display font-bold text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl leading-tight text-gray-900 dark:text-white mb-4 sm:mb-6 px-2 max-w-full"
+                  style={{ contain: 'layout', wordWrap: 'break-word' }}
+                >
+                  <span className="block">Business Growth Isn't Guesswork.</span>
+                  <span className="block">It's{" "}
+                    <span 
+                      className={`inline-block bg-gradient-to-r from-primary-600 to-primary-700 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
+                      style={{ 
+                        minWidth: '160px',
+                        width: 'fit-content',
+                        display: 'inline-block',
+                        textAlign: 'left'
+                      }}
+                      aria-live="polite"
+                    >
+                      {rotatingWords[currentWordIndex]}
+                    </span><span className="inline-block animate-bounce text-primary-600 ml-1">.</span>
+                  </span>
                 </h1>
 
                 {/* Subheadline */}
@@ -258,12 +293,7 @@ export default function Home() {
 
 
 
-        {/* Partners Strip */}
-        <section id="partners" className="py-8 sm:py-12 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <TrustedCompaniesCarousel />
-          </div>
-        </section>
+
 
         {/* Service Lanes */}
         <section id="service-lanes" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
@@ -431,125 +461,7 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Integrations */}
-        <section id="integrations" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
-                  Connect your favorite business software
-                </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  We connect the tools you already rely on so you get more from every license. Experts in n8n, Pipedrive, Airtable, HubSpot, Make, Salesforce, GA4, Sheets, and more.
-                </p>
-              </div>
-            </SimpleScrollReveal>
 
-            {/* Integration logos */}
-            <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-8 sm:p-12">
-              <div className="grid grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-8 items-center justify-items-center">
-                {/* n8n */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://seeklogo.com/images/N/n8n-logo-40BE7C4E27-seeklogo.com.png"
-                    alt="n8n"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-
-                {/* Pipedrive */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/pipedrive.svg"
-                    alt="Pipedrive"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-
-                {/* Airtable */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://seekvectorlogo.com/wp-content/uploads/2022/02/airtable-vector-logo.svg"
-                    alt="Airtable"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-
-                {/* HubSpot */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://worldvectorlogo.com/download/hubspot.svg"
-                    alt="HubSpot"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-
-                {/* Make (formerly Integromat) */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://www.calltrackingmetrics.com/wp-content/uploads/2023/01/make-logo.svg"
-                    alt="Make"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-
-                {/* Zapier */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://upload.wikimedia.org/wikipedia/commons/c/cb/Zapier_logo.svg"
-                    alt="Zapier"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-
-                {/* Salesforce */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons@v9/icons/salesforce.svg"
-                    alt="Salesforce"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-
-                {/* Google Analytics 4 */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://upload.wikimedia.org/wikipedia/commons/8/89/Logo_Google_Analytics.svg"
-                    alt="Google Analytics"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-
-                {/* Google Sheets */}
-                <div className="flex items-center justify-center h-12 w-20 opacity-60 hover:opacity-100 transition-opacity">
-                  <OptimizedImage
-                    src="https://worldvectorlogo.com/download/google-sheets-full-logo-1.svg"
-                    alt="Google Sheets"
-                    width={48}
-                    height={48}
-                    className="w-12 h-12"
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
 
 
 
