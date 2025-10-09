@@ -50,7 +50,7 @@ export default function Footer() {
     {
       heading: "Locations",
       points: [
-        { text: "Dallas-Fort Worth", href: "/locations/dallas-fort-worth" },
+        { text: "Texas", href: "/locations/texas" },
         { text: "Oklahoma", href: "/locations/oklahoma" },
         { text: "New Mexico", href: "/locations/new-mexico" }
       ]

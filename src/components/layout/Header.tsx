@@ -93,7 +93,7 @@ export default function Header() {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-8">
+            <nav className="hidden md:flex items-center space-x-8 flex-1 justify-center">
               <HeaderLink href="/">Home</HeaderLink>
               <HeaderLink href="/services">Services</HeaderLink>
               <HeaderLink href="/pricing">Pricing</HeaderLink>
@@ -103,10 +103,12 @@ export default function Header() {
 
             {/* Desktop Right Side */}
             <div className="hidden md:flex items-center space-x-4">
-              <ThemeToggle />
+              <div className="flex items-center justify-center">
+                <ThemeToggle />
+              </div>
               <Link
                 href="/contact"
-                className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
+                className="px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200 flex items-center justify-center"
               >
                 Contact
               </Link>

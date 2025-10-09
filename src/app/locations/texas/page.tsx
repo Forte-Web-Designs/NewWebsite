@@ -4,17 +4,17 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
-  title: 'Dallas-Fort Worth Web Design & AI Automation | Forte Web Designs',
-  description: 'Professional web design and AI automation services in Dallas-Fort Worth. Custom websites, business automation, and growth systems for DFW businesses. Based in Grapevine, TX.',
-  keywords: 'Dallas web design, Fort Worth web design, DFW web design, Dallas AI automation, Fort Worth automation, Grapevine web design, Dallas website design, DFW digital marketing',
+  title: 'Texas Web Design & AI Automation | Forte Web Designs',
+  description: 'Professional web design and AI automation services in Texas. Custom websites, business automation, and growth systems for Texas businesses. Based in Grapevine, TX.',
+  keywords: 'Texas web design, Dallas web design, Fort Worth web design, DFW web design, Texas AI automation, Austin web design, Houston web design, San Antonio web design, Texas digital marketing',
 };
 
-export default function DallasFortWorth() {
+export default function Texas() {
   const services = [
     {
       icon: "services",
       title: "Custom Web Design",
-      description: "Hand-coded websites that convert DFW visitors into customers"
+      description: "Hand-coded websites that convert Texas visitors into customers"
     },
     {
       icon: "puzzle",
@@ -29,9 +29,9 @@ export default function DallasFortWorth() {
   ];
 
   const cities = [
-    "Dallas", "Fort Worth", "Arlington", "Plano", "Irving", "Garland",
-    "Frisco", "McKinney", "Carrollton", "Denton", "Richardson", "Grapevine",
-    "Lewisville", "Flower Mound", "Mansfield", "Euless", "Bedford", "Hurst"
+    "Dallas", "Fort Worth", "Houston", "Austin", "San Antonio", "Arlington",
+    "Plano", "Irving", "Garland", "Frisco", "McKinney", "Grapevine",
+    "El Paso", "Corpus Christi", "Lubbock", "Amarillo", "Waco", "Denton"
   ];
 
   return (
@@ -42,13 +42,13 @@ export default function DallasFortWorth() {
           <div className="max-w-4xl mx-auto text-center">
             <SimpleScrollReveal direction="up">
               <div className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6">
-                📍 Based in Grapevine, TX
+                📍 Based in Texas
               </div>
               <h1 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-white mb-6">
-                Dallas-Fort Worth Web Design & AI Automation
+                Texas Web Design & AI Automation
               </h1>
               <p className="text-xl lg:text-2xl text-blue-100 mb-8">
-                Professional web design and business automation for growing DFW businesses. 100% USA-based team serving the Dallas-Fort Worth metroplex.
+                Professional web design and business automation for growing Texas businesses. 100% USA-based team serving Texas from our Grapevine headquarters.
               </p>
               <Link
                 href="/contact"
@@ -71,10 +71,10 @@ export default function DallasFortWorth() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12">
                 <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Services for Dallas-Fort Worth Businesses
+                  Services for Texas Businesses
                 </h2>
                 <p className="text-xl text-gray-600 dark:text-gray-300">
-                  We help DFW businesses grow with custom web design and intelligent automation
+                  We help Texas businesses grow with custom web design and intelligent automation
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -106,7 +106,7 @@ export default function DallasFortWorth() {
           <div className="max-w-4xl mx-auto">
             <SimpleScrollReveal direction="up">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-                Why Choose a DFW-Based Web Design Partner?
+                Why Choose a Texas-Based Web Design Partner?
               </h2>
             </SimpleScrollReveal>
 
@@ -117,7 +117,7 @@ export default function DallasFortWorth() {
                     🤝 Local Understanding, National Reach
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Based in Grapevine, we understand the Dallas-Fort Worth business landscape. We know your market, your competitors, and what DFW customers expect. Plus, we're available for in-person meetings when needed.
+                    Based in Grapevine, we understand the Texas business landscape. We know your market, your competitors, and what Texas customers expect. Plus, we're available for in-person meetings when needed.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -139,7 +139,7 @@ export default function DallasFortWorth() {
                     ⚡ Fast Response Times
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    We're in your time zone. When you need support, updates, or have questions—we're here during Dallas business hours. No waiting overnight for responses from another continent.
+                    We're in your time zone. When you need support, updates, or have questions—we're here during Texas business hours. No waiting overnight for responses from another continent.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -154,10 +154,10 @@ export default function DallasFortWorth() {
           <div className="max-w-6xl mx-auto">
             <SimpleScrollReveal direction="up">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-                Serving the Entire Dallas-Fort Worth Metroplex
+                Serving Texas Businesses Statewide
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 text-center mb-12">
-                From our Grapevine headquarters, we proudly serve businesses throughout the DFW area
+                From our Grapevine headquarters, we proudly serve businesses throughout Texas
               </p>
             </SimpleScrollReveal>
 
@@ -180,7 +180,7 @@ export default function DallasFortWorth() {
           <div className="max-w-4xl mx-auto text-center">
             <SimpleScrollReveal direction="up">
               <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-                Ready to Grow Your DFW Business?
+                Ready to Grow Your Texas Business?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
                 Let's talk about how custom web design and AI automation can scale your business—no pressure, no sales pitch.
@@ -199,7 +199,7 @@ export default function DallasFortWorth() {
                   href="/case-studies"
                   className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white/10 rounded-lg font-semibold transition-all duration-200"
                 >
-                  See Our DFW Results
+                  See Our Results
                 </Link>
               </div>
             </SimpleScrollReveal>
