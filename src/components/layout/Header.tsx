@@ -142,10 +142,16 @@ export default function Header() {
           )}
 
           {/* Mobile Menu */}
-          <div className={`md:hidden fixed top-0 right-0 bottom-0 w-3/4 max-w-sm bg-white dark:bg-gray-900 z-50 transform transition-transform duration-300 ease-in-out shadow-2xl ${
-            mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
-          }`}>
-            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+          <div
+            className={`md:hidden fixed top-0 right-0 bottom-0 w-3/4 max-w-sm z-50 transform transition-transform duration-300 ease-in-out shadow-2xl ${
+              mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+            }`}
+            style={{
+              backgroundColor: theme === 'dark' ? 'rgb(17, 24, 39)' : 'rgb(255, 255, 255)',
+              opacity: '1'
+            }}
+          >
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700" style={{backgroundColor: theme === 'dark' ? 'rgb(17, 24, 39)' : 'rgb(255, 255, 255)'}}>
               <span className="font-bold text-lg text-gray-900 dark:text-white">Menu</span>
               <button
                 onClick={() => setMobileMenuOpen(false)}
@@ -157,7 +163,7 @@ export default function Header() {
                 </svg>
               </button>
             </div>
-            <nav className="flex flex-col p-4 space-y-2 overflow-y-auto h-[calc(100vh-73px)]">
+            <nav className="flex flex-col p-4 space-y-2 overflow-y-auto h-[calc(100vh-73px)]" style={{backgroundColor: theme === 'dark' ? 'rgb(17, 24, 39)' : 'rgb(255, 255, 255)'}}>
               <Link
                 href="/"
                 onClick={() => setMobileMenuOpen(false)}
