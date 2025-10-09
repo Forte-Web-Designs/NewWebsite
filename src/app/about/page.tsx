@@ -10,7 +10,7 @@ import { Icon } from '@/components/images/Icon';
 export default function AboutUs() {
   const coreValues = [
     {
-      icon: "rocket",
+      icon: "chart",
       title: "Built for Growth",
       description: "Every system we build is designed to scale with you—not hold you back."
     },
@@ -169,7 +169,9 @@ export default function AboutUs() {
                   className="text-center p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
                 >
                   <div className="flex justify-center mb-4">
-                    <Icon name={value.icon} className="w-12 h-12 text-blue-600" />
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
+                      <Icon name={value.icon} className="w-8 h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                    </div>
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                     {value.title}

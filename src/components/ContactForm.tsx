@@ -431,13 +431,12 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                       required
                     >
                       <option value="" disabled className="text-gray-900">Select a Service</option>
-                      <option value="Custom Website Design" className="text-gray-900">Custom Website Design</option>
-                      <option value="SEO Services" className="text-gray-900">SEO Services</option>
-                      <option value="Social Media Management" className="text-gray-900">Social Media Management</option>
-                      <option value="Google PPC Ads" className="text-gray-900">Google PPC Ads</option>
-                      <option value="Website Maintenance" className="text-gray-900">Website Maintenance</option>
-                      <option value="Forte Care™" className="text-gray-900">Forte Care™</option>
-                      <option value="Other" className="text-gray-900">Other</option>
+                      <option value="Custom Web Design" className="text-gray-900">Custom Web Design</option>
+                      <option value="AI Automation" className="text-gray-900">AI Automation</option>
+                      <option value="Complete Business System" className="text-gray-900">Complete Business System</option>
+                      <option value="Forte Care™ (Maintenance & Support)" className="text-gray-900">Forte Care™ (Maintenance & Support)</option>
+                      <option value="Free Growth Snapshot" className="text-gray-900">Free Growth Snapshot</option>
+                      <option value="Not Sure / Need Consultation" className="text-gray-900">Not Sure / Need Consultation</option>
                     </select>
                     <div className={`absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none ${isDarkMode ? 'text-white/70' : 'text-gray-600'}`}>
                       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

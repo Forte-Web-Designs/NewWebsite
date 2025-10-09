@@ -21,6 +21,8 @@ const pricingTiers = [
     ],
     cta: 'Book Strategy Call',
     href: '/contact',
+    badge: 'Best for New Brands',
+    badgeColor: 'bg-green-600',
     roi: 'Average ROI: 3-5x in first year'
   },
   {
@@ -39,7 +41,8 @@ const pricingTiers = [
     ],
     cta: 'Book Strategy Call',
     href: '/contact',
-    popular: true,
+    badge: 'Biggest Time Saver',
+    badgeColor: 'bg-purple-600',
     roi: 'Typical time savings: 20-40 hrs/week'
   },
   {
@@ -59,6 +62,9 @@ const pricingTiers = [
     ],
     cta: 'Book Strategy Call',
     href: '/contact',
+    popular: true,
+    badge: 'Best Value',
+    badgeColor: 'bg-blue-600',
     roi: 'Typical revenue impact: 2-10x in 12 months'
   }
 ];
@@ -93,10 +99,10 @@ export function PricingPage() {
                     : 'ring-1 ring-gray-200 dark:ring-gray-700'
                 }`}
               >
-                {tier.popular && (
+                {tier.badge && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      Most Popular
+                    <span className={`${tier.badgeColor} text-white px-4 py-1 rounded-full text-sm font-semibold`}>
+                      {tier.badge}
                     </span>
                   </div>
                 )}

@@ -303,14 +303,12 @@ export default function GenericContactModal({
                   className="w-full px-3 py-2.5 text-sm border border-gray-300 dark:border-gray-600 rounded-lg bg-white dark:bg-gray-800 text-gray-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-200"
                   required
                 >
-                  <option value="Website Design">Website Design</option>
-                  <option value="Website Redesign">Website Redesign</option>
-                  <option value="E-commerce">E-commerce</option>
-                  <option value="Automation & AI">Automation & AI</option>
-                  <option value="SEO">SEO Services</option>
-                  <option value="Website Maintenance">Website Maintenance</option>
-                  <option value="Custom Development">Custom Development</option>
-                  <option value="Other">Other</option>
+                  <option value="Custom Web Design">Custom Web Design</option>
+                  <option value="AI Automation">AI Automation</option>
+                  <option value="Complete Business System">Complete Business System</option>
+                  <option value="Forte Care™ (Maintenance & Support)">Forte Care™ (Maintenance & Support)</option>
+                  <option value="Free Growth Snapshot">Free Growth Snapshot</option>
+                  <option value="Not Sure / Need Consultation">Not Sure / Need Consultation</option>
                 </select>
                 {fieldErrors.service && (
                   <p className="text-red-500 text-xs mt-1">{fieldErrors.service}</p>

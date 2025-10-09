@@ -192,12 +192,12 @@ export default function ContactModal({
                     className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-colors"
                   >
                     <option value="">Select a service</option>
-                    <option value="new-website">New Website</option>
-                    <option value="website-redesign">Website Redesign</option>
-                    <option value="seo-services">SEO Services</option>
-                    <option value="website-maintenance">Website Maintenance</option>
-                    <option value="consultation">Free Consultation</option>
-                    <option value="other">Other</option>
+                    <option value="custom-web-design">Custom Web Design</option>
+                    <option value="ai-automation">AI Automation</option>
+                    <option value="complete-system">Complete Business System</option>
+                    <option value="forte-care">Forte Care™ (Maintenance & Support)</option>
+                    <option value="free-snapshot">Free Growth Snapshot</option>
+                    <option value="consultation">Not Sure / Need Consultation</option>
                   </select>
                 </div>
                 

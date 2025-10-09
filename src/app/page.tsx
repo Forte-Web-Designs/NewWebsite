@@ -256,7 +256,7 @@ export default function Home() {
 
 
         {/* Service Lanes */}
-        <section id="service-lanes" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+        <section id="service-lanes" className="py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12 sm:mb-16">

@@ -42,37 +42,24 @@ export default function Footer() {
       heading: "Services",
       points: [
         { text: "AI Automation", href: "/services/automation-ai" },
-        { text: "Website Design", href: "/services/web-design" },
+        { text: "Web Design", href: "/services/web-design" },
         { text: "Forte Care™", href: "/services/forte-care" },
-        { text: "Agency Partnership", href: "/services/agency-partnership" },
-        { text: "Free Growth Snapshot", href: "/growth-audit" },
-        { text: "Free Website Checkup", href: "https://www.fortewebdesigns.com/checkup/" },
-        { text: "View All Services", href: "/services" }
-      ]
-    },
-    {
-      heading: "Solutions",
-      points: [
-        { text: "View All Solutions", href: "/solutions" },
-        { text: "AI Automation", href: "/services/automation-ai" },
-        { text: "Free Growth Snapshot", href: "/growth-audit" },
         { text: "Case Studies", href: "/case-studies" }
       ]
     },
     {
       heading: "Locations",
       points: [
-        { text: "Dallas-Fort Worth", href: "/locations/texas" },
+        { text: "Dallas-Fort Worth", href: "/locations/dallas-fort-worth" },
         { text: "Oklahoma", href: "/locations/oklahoma" },
-        { text: "New Mexico", href: "/locations/new-mexico" },
-        { text: "All Locations", href: "/locations" }
+        { text: "New Mexico", href: "/locations/new-mexico" }
       ]
     },
     {
-      heading: "About Us",
+      heading: "Company",
       points: [
         { text: "About Us", href: "/about" },
-        { text: "Our Work", href: "/about/work" },
+        { text: "FAQ", href: "/faq" },
         { text: "Blog", href: "/blog" },
         { text: "Contact", href: "/contact" }
       ]
@@ -101,7 +88,7 @@ export default function Footer() {
           </div>
         )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Logo and company info */}
           <div className="col-span-2 md:col-span-2 lg:col-span-1">
             <div className="flex items-center mb-4">

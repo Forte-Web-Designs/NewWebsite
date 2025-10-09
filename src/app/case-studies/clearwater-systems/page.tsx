@@ -96,7 +96,7 @@ export default function ClearWaterSystemsCaseStudy() {
               <SimpleScrollReveal direction="up" delay={0}>
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
                   <div className="w-12 h-12 bg-gradient-to-br from-pink-600 to-red-600 rounded-xl flex items-center justify-center mb-6">
-                    <Icon name="puzzle" className="w-6 h-6 text-white" />
+                    <Icon name="puzzle" className="w-6 h-6 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     Vector Knowledge Base
@@ -110,7 +110,7 @@ export default function ClearWaterSystemsCaseStudy() {
               <SimpleScrollReveal direction="up" delay={100}>
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
                   <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-orange-600 rounded-xl flex items-center justify-center mb-6">
-                    <Icon name="check" className="w-6 h-6 text-white" />
+                    <Icon name="check" className="w-6 h-6 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     Smart Quote Automation
@@ -124,7 +124,7 @@ export default function ClearWaterSystemsCaseStudy() {
               <SimpleScrollReveal direction="up" delay={200}>
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
                   <div className="w-12 h-12 bg-gradient-to-br from-orange-600 to-yellow-600 rounded-xl flex items-center justify-center mb-6">
-                    <Icon name="flash" className="w-6 h-6 text-white" />
+                    <Icon name="flash" className="w-6 h-6 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                   </div>
                   <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     Real-Time CRM Integration
