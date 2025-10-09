@@ -31,7 +31,7 @@ export default function AIChat() {
   return (
     <>
       {isOpen && (
-        <div className="fixed bottom-24 right-20 z-50 w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700" style={{maxWidth:'calc(100vw - 3rem)'}}>
+        <div className="fixed bottom-24 right-6 md:right-20 z-50 w-80 bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700" style={{maxWidth:'calc(100vw - 3rem)'}}>
           <div className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 flex justify-between items-center rounded-t-2xl">
             <div className="flex items-center gap-2">
               <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center text-white font-bold text-sm">S</div>
@@ -83,14 +83,14 @@ export default function AIChat() {
           </div>
         </div>
       )}
-      <div className="fixed bottom-6 right-20 z-40" style={{ width: '48px', height: '48px' }}>
+      <div className="fixed bottom-6 right-6 md:bottom-6 md:right-20 z-40" style={{ width: '48px', height: '48px' }}>
         <button
           onClick={() => setIsOpen(!isOpen)}
           className="w-full h-full bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white rounded-full shadow-lg flex items-center justify-center relative group"
           style={{ width: '48px', height: '48px', minWidth: '48px', minHeight: '48px' }}
           aria-label="Chat with Sophia"
         >
-          {!isOpen && <span className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full border-2 border-white animate-pulse"></span>}
+          {!isOpen && <span className="absolute -top-0.5 -right-0.5 w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full border-2 border-white animate-pulse"></span>}
           <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
           </svg>
