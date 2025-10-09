@@ -1,119 +1,105 @@
 import { Metadata } from 'next';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
-import SimpleAnimatedCard from '@/components/animations/SimpleAnimatedCard';
-import DarkButton from '@/components/DarkButton';
 import Link from 'next/link';
 import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
-  title: 'Growth Systems That Drive Clients | Forte Web Designs',
-  description: 'Complete growth systems that turn visits into booked work—website, automation, integrations, and dashboards working together.',
+  title: 'AI Automation & Web Design Services | Forte Web Designs',
+  description: 'Premium AI automation and custom web design services. We build intelligent systems that save time, websites that convert, and integrations that scale your business.',
 };
 
-const fourLayers = [
+const services = [
   {
-    id: "website-design",
-    title: "Website Design (Foundation)",
-    description: "Your digital storefront—built to convert. Hand-coded for speed, clarity, and trust so visitors become inquiries.",
-    youGet: ["fast load times", "clear messaging", "strong calls-to-action", "lead forms/booking", "analytics baseline"],
-    outcome: "more inquiries, stronger first impression, higher conversion",
-    href: "/services/web-design"
+    id: "ai-automation",
+    icon: "puzzle",
+    title: "AI Automation",
+    tagline: "Work smarter, not harder",
+    description: "Automate repetitive tasks, route leads instantly, and trigger follow-ups automatically. Your team focuses on closing deals while intelligent workflows handle everything else.",
+    benefits: [
+      "Save 20+ hours per week on manual tasks",
+      "Instant lead routing and assignment",
+      "Automated email & SMS follow-ups",
+      "CRM integration and data sync",
+      "Real-time notifications and alerts"
+    ],
+    cta: "Explore AI Automation",
+    href: "/services/automation-ai",
+    gradient: "from-blue-600 to-indigo-600"
   },
   {
-    id: "automation",
-    title: "Smart Automation (Growth)", 
-    description: "No more slow replies or forgotten follow-ups. We add instant missed-call texts, web-form auto-responses, and quote/demo reminders that keep deals moving.",
-    youGet: ["first-touch automations", "follow-up cadences", "simple owner scorecards"],
-    outcome: "hours saved weekly, faster responses, higher show-up and reply rates",
-    href: "/services/automation-ai"
+    id: "web-design",
+    icon: "services",
+    title: "Custom Web Design",
+    tagline: "Websites that actually convert",
+    description: "Hand-coded, high-performance websites designed to turn visitors into customers. Fast, SEO-optimized, and built to showcase your brand and drive real results.",
+    benefits: [
+      "Custom design tailored to your brand",
+      "Fast loading speeds (90+ PageSpeed score)",
+      "Mobile-responsive and SEO optimized",
+      "Lead capture and conversion optimization",
+      "Training and ongoing support"
+    ],
+    cta: "View Web Design",
+    href: "/services",
+    gradient: "from-indigo-600 to-purple-600"
   },
   {
     id: "integrations",
-    title: "Systems Integration (Scaling)",
-    description: "Connect CRM, scheduling, invoicing, phones, and forms so data flows—no double entry, no dropped balls. Add owner dashboards so you see bottlenecks at a glance.",
-    youGet: ["clean handoffs", "fewer manual steps", "one place to see leads/quotes/stuck"],
-    outcome: "fewer errors, faster cycle times, better forecasting",
-    href: "/solutions"
-  },
-  {
-    id: "end-to-end", 
-    title: "End-to-End System",
-    description: "All layers planned and implemented as one growth engine with clear KPIs and weekly scorecards.",
-    youGet: ["foundation + automation + integrations + dashboards", "delivered in phases"],
-    outcome: "measurable lift across intake speed, quote turnaround, follow-through, and revenue",
-    href: "/contact?type=end-to-end"
+    icon: "flash",
+    title: "CRM & Integrations",
+    tagline: "Connect your entire stack",
+    description: "Seamlessly integrate your CRM, email, forms, and tools into one unified system. Clean data, automated handoffs, and real-time insights across your entire operation.",
+    benefits: [
+      "Connect CRM, email, forms, and tools",
+      "Automated data sync and handoffs",
+      "Real-time dashboards and reporting",
+      "Eliminate manual data entry",
+      "Custom API integrations"
+    ],
+    cta: "Learn About Integrations",
+    href: "/services/automation-ai",
+    gradient: "from-purple-600 to-pink-600"
   }
-];
-
-const outcomes = [
-  "First response time: hours → minutes",
-  "Quote/checkout speed: multi-day → same-day (or fewer steps)", 
-  "Follow-up coverage: ad-hoc → 90–100%",
-  "Owner visibility: one dashboard for leads, quotes, and stuck items",
-  "Time saved: ~5–20 hours/week across the team"
 ];
 
 const processSteps = [
   {
-    step: "1",
-    title: "Audit (free)",
-    description: "we identify 3–4 biggest leaks and give you two quick wins."
+    number: "1",
+    title: "Discovery Call",
+    description: "We analyze your current workflows, identify bottlenecks, and map out opportunities for automation and optimization."
   },
   {
-    step: "2",
-    title: "Pilot (2–4 weeks)", 
-    description: "instant replies + follow-ups or a focused integration."
+    number: "2",
+    title: "Custom Strategy",
+    description: "Receive a tailored roadmap with clear timelines, expected ROI, and recommended solutions designed specifically for your business."
   },
   {
-    step: "3",
-    title: "Scale (4–8 weeks)",
-    description: "extend to quotes, handoffs, dashboards tied to KPIs."
+    number: "3",
+    title: "Build & Deploy",
+    description: "Our team builds, tests, and deploys your solution. From automation workflows to custom websites—delivered on time and on spec."
   },
   {
-    step: "4", 
-    title: "Operate",
-    description: "Forte Care™ maintains and improves the system as you grow."
+    number: "4",
+    title: "Ongoing Optimization",
+    description: "Continuous monitoring, updates, and improvements. We ensure your systems stay fast, secure, and aligned with your growth."
   }
 ];
 
-const extensions = [
-  {
-    title: "Forte Care™ Optimization",
-    description: "ongoing monitoring, updates, and improvements (site + automations)",
-    href: "/forte-care"
-  },
-  {
-    title: "Agency Partnership",
-    description: "white-label/partner builds for agencies with client delivery needs",
-    href: "/agency-partnership"
-  },
-  {
-    title: "Multi-Location/Franchise",
-    description: "routing, tagging, and roll-up dashboards at org level",
-    href: "/contact"
-  }
-];
-
-const proofCases = [
+const caseStudies = [
   {
     client: "Summit Gaming Lounge",
-    outcome: "Omnichannel concierge → faster reservations, deeper engagement",
+    outcome: "Automated booking system reduced manual work by 15 hours/week",
     href: "/case-studies/summit-gaming-lounge"
   },
   {
-    client: "MetroEats", 
-    outcome: "Automated partner sourcing → faster outreach, higher lead quality",
+    client: "MetroEats",
+    outcome: "Lead generation automation increased qualified leads by 40%",
     href: "/case-studies/metroeats"
   },
   {
     client: "Fetchly",
-    outcome: "Slack exec assistant → ~15 hrs/week saved, faster decisions", 
+    outcome: "Executive assistant AI saved 15 hours/week in admin tasks",
     href: "/case-studies/fetchly"
-  },
-  {
-    client: "ClearWater Systems",
-    outcome: "Email-to-quote + CRM sync → same-day quotes, higher close rate",
-    href: "/case-studies/clearwater-systems"
   }
 ];
 
@@ -121,252 +107,198 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-white dark:bg-gray-900 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-600 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
-              <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-gray-900 dark:text-white mb-6">
-                Growth Systems That Give You Time *and* Clients
+              <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white mb-6">
+                AI Automation & Web Design
               </h1>
-              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto mb-8">
-                Stop gambling on one-off tactics. We design complete, measurable systems that capture leads, book appointments, and turn work into revenue—without adding busywork to your day.
+              <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
+                We build intelligent systems that save time, websites that convert, and integrations that scale your business. Everything custom-built for your unique needs.
               </p>
-              
-              {/* Primary CTAs */}
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
-                <Link href="/growth-audit">
-                  <DarkButton className="px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg w-full sm:w-auto">
-                    Get My Free Growth Audit →
-                  </DarkButton>
-                </Link>
-                <a 
-                  href="#how-it-works"
-                  className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto"
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg"
                 >
-                  See How It Works →
-                </a>
+                  Book a Strategy Call
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <Link
+                  href="/pricing"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-all duration-200"
+                >
+                  View Pricing
+                </Link>
               </div>
-              
-              {/* Trust band */}
-              <p className="text-sm text-gray-500 dark:text-gray-400">
-                25+ businesses growing with Forte • DFW-based • 24-hr response • 4.9★ reviews
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Services Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
+                What We Build For You
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Choose the service that fits your needs—or combine them for maximum impact.
               </p>
             </div>
           </SimpleScrollReveal>
+
+          <div className="space-y-12">
+            {services.map((service, index) => (
+              <SimpleScrollReveal key={service.id} direction="up" delay={index * 100}>
+                <div id={service.id} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 sm:p-10 lg:p-12 hover:shadow-xl transition-all duration-300 scroll-mt-20">
+                  <div className="grid lg:grid-cols-2 gap-8 items-center">
+                    {/* Left: Icon, Title, Description */}
+                    <div>
+                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} mb-6`}>
+                        <Icon name={service.icon} className="w-8 h-8 text-white" />
+                      </div>
+                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
+                        {service.title}
+                      </h3>
+                      <p className="text-lg font-medium text-gray-600 dark:text-gray-400 mb-4">
+                        {service.tagline}
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
+                      <Link
+                        href={service.href}
+                        className={`inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r ${service.gradient} text-white rounded-lg font-semibold hover:scale-105 transition-all duration-200`}
+                      >
+                        {service.cta}
+                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </Link>
+                    </div>
+
+                    {/* Right: Benefits List */}
+                    <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                        What You Get:
+                      </h4>
+                      <ul className="space-y-3">
+                        {service.benefits.map((benefit, idx) => (
+                          <li key={idx} className="flex items-start gap-3">
+                            <Icon name="check" className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                            <span className="text-gray-700 dark:text-gray-300">{benefit}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </SimpleScrollReveal>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* The Four Layers */}
+      {/* Process Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-4">
-              The Four Layers (work together, or choose where to start)
-            </h2>
-          </SimpleScrollReveal>
-          
-          <div className="grid md:grid-cols-2 gap-8 mt-12">
-            {fourLayers.map((layer, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="bg-white dark:bg-gray-700 rounded-xl p-6 sm:p-8 shadow-lg h-full">
-                  <h3 className="font-display font-bold text-xl sm:text-2xl text-gray-900 dark:text-white mb-4">
-                    {index + 1}) {layer.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                    {layer.description}
-                  </p>
-                  
-                  <div className="space-y-4 mb-6">
-                    <div>
-                      <span className="font-semibold text-gray-900 dark:text-white">You get:</span>
-                      <span className="text-gray-700 dark:text-gray-300 ml-2">
-                        {layer.youGet.join(", ")}.
-                      </span>
-                    </div>
-                    <div>
-                      <span className="font-semibold text-gray-900 dark:text-white">Outcome:</span>
-                      <span className="text-gray-700 dark:text-gray-300 ml-2">
-                        {layer.outcome}.
-                      </span>
-                    </div>
-                  </div>
-                  
-                  <Link 
-                    href={layer.href}
-                    className="inline-flex items-center text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
-                  >
-                    {layer.id === 'website-design' && 'Explore Website Design →'}
-                    {layer.id === 'automation' && 'Explore Automation →'}
-                    {layer.id === 'integrations' && 'Explore Integrations →'}
-                    {layer.id === 'end-to-end' && 'Talk About an End-to-End Build →'}
-                  </Link>
-                </div>
-              </SimpleAnimatedCard>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* What You Can Expect */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
-              What You Can Expect (30–90 days)
-            </h2>
-          </SimpleScrollReveal>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
-            {outcomes.map((outcome, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="bg-primary-50 dark:bg-primary-900/20 rounded-lg p-6 text-center h-full">
-                  <div className="flex items-start gap-3 text-left">
-                    <Icon name="check" className="w-5 h-5 text-primary-600 flex-shrink-0 mt-0.5" />
-                    <span className="text-gray-800 dark:text-gray-200 text-sm sm:text-base">{outcome}</span>
-                  </div>
-                </div>
-              </SimpleAnimatedCard>
-            ))}
-          </div>
-
-          <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <Link href="/growth-audit">
-                <DarkButton className="px-6 py-3">
-                  Get My Free Growth Audit →
-                </DarkButton>
-              </Link>
+            <div className="text-center mb-16">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
+                How We Work
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Simple, transparent process from discovery to deployment.
+              </p>
             </div>
           </SimpleScrollReveal>
-        </div>
-      </section>
 
-      {/* How We Work */}
-      <section id="how-it-works" className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-          <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
-              How We Work (simple, fast, practical)
-            </h2>
-          </SimpleScrollReveal>
-          
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {processSteps.map((step, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="text-center">
-                  <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-4">
-                    {step.step}
+              <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-6 text-center border border-gray-200 dark:border-gray-700 hover:shadow-lg transition-all duration-300">
+                  <div className="inline-flex items-center justify-center w-12 h-12 rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-white font-bold text-xl mb-4">
+                    {step.number}
                   </div>
-                  <h3 className="font-display font-semibold text-lg text-gray-900 dark:text-white mb-3">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                     {step.description}
                   </p>
                 </div>
-              </SimpleAnimatedCard>
+              </SimpleScrollReveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Growth System Extensions */}
+      {/* Case Studies Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
-              Growth System Extensions
-            </h2>
+            <div className="text-center mb-16">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
+                Real Results
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                See how we've helped businesses save time and grow revenue.
+              </p>
+            </div>
           </SimpleScrollReveal>
-          
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {extensions.map((extension, index) => (
-              <SimpleAnimatedCard key={index}>
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 text-center h-full">
-                  <h3 className="font-display font-semibold text-lg text-gray-900 dark:text-white mb-4">
-                    {extension.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
-                    {extension.description}
-                  </p>
-                  <Link 
-                    href={extension.href}
-                    className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold text-sm"
-                  >
-                    {extension.title === 'Forte Care™ Optimization' && 'Learn About Forte Care™ →'}
-                    {extension.title === 'Agency Partnership' && 'Agency Partnership →'}
-                    {extension.title === 'Multi-Location/Franchise' && 'Contact Us →'}
-                  </Link>
-                </div>
-              </SimpleAnimatedCard>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Proof in Practice */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-          <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white text-center mb-12">
-              Proof in Practice
-            </h2>
-          </SimpleScrollReveal>
-          
-          <div className="space-y-4 mb-8">
-            {proofCases.map((case_, index) => (
-              <SimpleAnimatedCard key={index}>
-                <Link href={case_.href}>
-                  <div className="bg-white dark:bg-gray-700 rounded-lg p-6 hover:shadow-lg transition-shadow group">
-                    <div className="flex items-start gap-4">
-                      <div className="flex-1">
-                        <h3 className="font-display font-semibold text-lg text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
-                          {case_.client}
-                        </h3>
-                        <p className="text-gray-600 dark:text-gray-300">
-                          {case_.outcome}
-                        </p>
-                      </div>
-                      <Icon name="arrow-right" className="w-5 h-5 text-gray-400 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors" />
+          <div className="grid md:grid-cols-3 gap-8">
+            {caseStudies.map((study, index) => (
+              <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
+                <Link href={study.href} className="block group">
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 hover:shadow-lg transition-all duration-300 h-full border border-gray-200 dark:border-gray-700 group-hover:border-blue-600">
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      {study.client}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 mb-4">
+                      {study.outcome}
+                    </p>
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold">
+                      View Case Study
+                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
                     </div>
                   </div>
                 </Link>
-              </SimpleAnimatedCard>
+              </SimpleScrollReveal>
             ))}
           </div>
-
-          <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <Link 
-                href="/case-studies"
-                className="inline-flex items-center px-6 py-3 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
-              >
-                See All Case Studies →
-              </Link>
-            </div>
-          </SimpleScrollReveal>
         </div>
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-r from-primary-600 to-primary-700">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl text-center">
+      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-600 to-indigo-600">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-white mb-8">
-              Ready to turn your site into a client-generating system?
-            </h2>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Link href="/growth-audit">
-                <button className="bg-white text-primary-600 hover:bg-gray-50 px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg transition-colors w-full sm:w-auto">
-                  Get My Free Growth Audit →
-                </button>
-              </Link>
-              <a 
+            <div className="text-center">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+                Ready to Build Something Great?
+              </h2>
+              <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                Book a free strategy call. We'll analyze your needs, identify opportunities, and show you exactly how we can help—no pressure, no obligation.
+              </p>
+              <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg border-2 border-white text-white hover:bg-white hover:text-primary-600 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg w-full sm:w-auto"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg text-lg"
               >
-                Talk to Us →
-              </a>
+                Book Your Free Strategy Call
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
             </div>
           </SimpleScrollReveal>
         </div>

@@ -3,8 +3,8 @@ import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAn
 import { PricingPage } from '@/components/pricing-solutions';
 
 export const metadata: Metadata = {
-  title: 'Simple, Transparent Pricing Built for Growth | Forte Web Designs',
-  description: 'Solutions-based pricing that scales with your business. Website Foundation from $2,000. Growth Systems $3.5K-$7.5K. End-to-End Systems $7.5K-$15K+. Pricing reflects project scope and outcomes.',
+  title: 'Pricing & Investment | Premium AI Automation & Web Design | Forte Web Designs',
+  description: 'Custom AI automation and web design solutions designed for ROI. Starting at $2,000 for websites, $3,500 for automation, $5,000+ for complete systems. Every project tailored to deliver measurable business growth.',
 };
 
 export default function Pricing() {

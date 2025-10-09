@@ -622,7 +622,7 @@ const blogPosts = [
 
       <p>Page builders come loaded with scripts, plugins, and bloated code that slows your site down. Even a beautiful theme can tank your load time—and speed is a direct SEO ranking factor.</p>
 
-      <p>Hand-coded websites strip out the fluff. They're built lean and fast, with just what your business needs—and nothing it doesn't.</p>
+      <p>Hand-coded websites strip out the bloat. They're built lean and fast, with just what your business needs—and nothing it doesn't.</p>
 
       <h2>2. Security You Can Trust</h2>
 
@@ -665,9 +665,9 @@ const blogPosts = [
   {
     id: 'web-designers-near-me-why-dfw-needs-more-than-templates',
     title: 'Web Designers Near Me? Why DFW Small Businesses Need More Than Just a Template',
-    excerpt: 'If you\'re a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you\'ve probably Googled "web designers near me." Here\'s the truth: most results lead to generic agencies or cookie-cutter platforms.',
+    excerpt: 'If you\'re a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you\'ve probably Googled "web designers near me." Here\'s the truth: most results lead to generic agencies or templated platforms.',
     content: `
-      <p>If you're a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you've probably Googled something like "web designers near me." But here's the truth: most results lead to generic agencies or cookie-cutter platforms that churn out one-size-fits-all sites.</p>
+      <p>If you're a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you've probably Googled something like "web designers near me." But here's the truth: most results lead to generic agencies or templated platforms that churn out one-size-fits-all sites.</p>
 
       <p>Your business isn't generic—and your website shouldn't be either.</p>
 

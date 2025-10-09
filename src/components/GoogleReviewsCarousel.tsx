@@ -94,7 +94,7 @@ export default function GoogleReviewsCarousel({
                 <div className="font-semibold text-gray-900 dark:text-white">Google Reviews</div>
                 <div className="flex items-center space-x-1">
                   {renderStars(5)}
-                  <span className="text-xs text-gray-600 dark:text-gray-400 ml-1">4.9 • 50+ reviews</span>
+                  <span className="text-xs text-gray-600 dark:text-gray-400 ml-1">5.0 • 50+ reviews</span>
                 </div>
               </div>
             </div>

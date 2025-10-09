@@ -802,7 +802,7 @@ const blogPosts = [
 
       <p>Your goal isn't to sound smart. It's to be understood.</p>
 
-      <h3>Cut the fluff</h3>
+      <h3>Cut the filler</h3>
       <p>Every word should earn its place. If you can delete it without changing the meaning, delete it.</p>
 
       <p>"We are pleased to inform you that..." just say "You qualified for..."</p>
@@ -1180,9 +1180,9 @@ const blogPosts = [
   {
     id: 'web-designers-near-me-why-dfw-needs-more-than-templates',
     title: 'Web Designers Near Me? Why DFW Small Businesses Need More Than Just a Template',
-    excerpt: 'If you\'re a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you\'ve probably Googled "web designers near me." Here\'s the truth: most results lead to generic agencies or cookie-cutter platforms.',
+    excerpt: 'If you\'re a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you\'ve probably Googled "web designers near me." Here\'s the truth: most results lead to generic agencies or templated platforms.',
     content: `
-      <p>If you're a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you've probably Googled something like "web designers near me." But here's the truth: most results lead to generic agencies or cookie-cutter platforms that churn out one-size-fits-all sites.</p>
+      <p>If you're a small business owner in Grapevine, Southlake, or anywhere across Dallas-Fort Worth, you've probably Googled something like "web designers near me." But here's the truth: most results lead to generic agencies or templated platforms that churn out one-size-fits-all sites.</p>
 
       <p>Your business isn't generic—and your website shouldn't be either.</p>
 

@@ -30,7 +30,7 @@ export const ElitePlumbingLogo: React.FC<PlumbingLogoProps> = ({ className = "w-
     <text x="75" y="42" textAnchor="middle" className="text-sm font-semibold" fill="#93C5FD">PLUMBING</text>
     <text x="75" y="56" textAnchor="middle" className="text-xs" fill="#DBEAFE">Licensed & Bonded Since 1987</text>
     <text x="75" y="68" textAnchor="middle" className="text-xs font-bold" fill="#FCD34D">(214) 555-ELITE</text>
-    <text x="75" y="78" textAnchor="middle" className="text-xs" fill="#BFDBFE">⭐⭐⭐⭐⭐ 4.9/5 Reviews</text>
+    <text x="75" y="78" textAnchor="middle" className="text-xs" fill="#BFDBFE">⭐⭐⭐⭐⭐ 5.0/5 Reviews</text>
   </svg>
 );
 

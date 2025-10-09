@@ -5,7 +5,7 @@ import "./globals.css";
 import ConditionalHeader from "@/components/layout/ConditionalHeader";
 import Footer from "@/components/layout/Footer";
 import BackToTopButton from "@/components/BackToTopButton";
-import AIChat from "@/components/AIChat";
+// import AIChat from "@/components/AIChat"; // Temporarily disabled due to file corruption
 import MobileStickyCTA from "@/components/MobileStickyCA";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import CriticalCSS from "@/components/performance/CriticalCSS";
@@ -230,7 +230,7 @@ export default function RootLayout({
           </div>
           <Footer />
           <BackToTopButton />
-          <AIChat />
+          {/* <AIChat /> */}
           <MobileStickyCTA />
           <PerformanceMonitor />
         </ThemeProvider>

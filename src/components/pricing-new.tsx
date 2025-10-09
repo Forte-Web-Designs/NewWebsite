@@ -158,7 +158,7 @@ const forteCareOptions = [
 const faqData = [
   {
     question: 'Why do you charge a setup fee?',
-    answer: 'Setup fees cover the intensive work of building your custom system - from website development to CRM configuration and automation setup. This ensures you get a fully customized solution rather than a cookie-cutter template. The monthly fee then covers hosting, maintenance, and ongoing optimization.'
+    answer: 'Setup fees cover the intensive work of building your custom system - from website development to CRM configuration and automation setup. This ensures you get a fully customized solution rather than a generic template. The monthly fee then covers hosting, maintenance, and ongoing optimization.'
   },
   {
     question: 'What happens after the 12-month minimum?',
