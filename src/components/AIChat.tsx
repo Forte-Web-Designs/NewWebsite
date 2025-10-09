@@ -69,20 +69,20 @@ export default function AIChat() {
               </div>
             ))}
 
-            {messages.length === 1 && (
-              <div className="space-y-2 mt-4">
-                <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-2">Quick Questions:</p>
-                {quickQuestions.map((item, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => handleQuestionClick(item.q, item.a)}
-                    className="w-full text-left px-3 py-2 bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 rounded-lg text-sm transition-colors"
-                  >
-                    {item.q}
-                  </button>
-                ))}
-              </div>
-            )}
+            <div className="space-y-2 mt-4">
+              <p className="text-xs text-gray-500 dark:text-gray-400 font-medium mb-2">
+                {messages.length === 1 ? 'Quick Questions:' : 'Have another question?'}
+              </p>
+              {quickQuestions.map((item, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => handleQuestionClick(item.q, item.a)}
+                  className="w-full text-left px-3 py-2 bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 rounded-lg text-sm transition-colors"
+                >
+                  {item.q}
+                </button>
+              ))}
+            </div>
           </div>
 
           <div className="p-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 rounded-b-2xl">
