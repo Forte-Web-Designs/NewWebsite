@@ -133,65 +133,106 @@ export default function Header() {
             </div>
           </div>
 
-          {/* Mobile Menu */}
+          {/* Mobile Menu Overlay */}
           {mobileMenuOpen && (
-            <div className="md:hidden fixed inset-0 z-50 bg-white dark:bg-gray-900 pt-20">
-              <nav className="flex flex-col space-y-4 px-4">
-                <Link
-                  href="/"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg font-medium py-2 ${
-                    pathname === '/' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
-                  }`}
-                >
-                  Home
-                </Link>
-                <Link
-                  href="/services"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg font-medium py-2 ${
-                    pathname === '/services' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
-                  }`}
-                >
-                  Services
-                </Link>
-                <Link
-                  href="/pricing"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg font-medium py-2 ${
-                    pathname === '/pricing' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
-                  }`}
-                >
-                  Pricing
-                </Link>
-                <Link
-                  href="/case-studies"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg font-medium py-2 ${
-                    pathname === '/case-studies' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
-                  }`}
-                >
-                  Case Studies
-                </Link>
-                <Link
-                  href="/about"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className={`text-lg font-medium py-2 ${
-                    pathname === '/about' ? 'text-blue-600 dark:text-blue-400' : 'text-gray-700 dark:text-gray-300'
-                  }`}
-                >
-                  About
-                </Link>
-                <Link
-                  href="/contact"
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-center transition-all duration-200"
-                >
-                  Contact Us
-                </Link>
-              </nav>
-            </div>
+            <div
+              className="md:hidden fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+              onClick={() => setMobileMenuOpen(false)}
+            />
           )}
+
+          {/* Mobile Menu */}
+          <div className={`md:hidden fixed top-0 right-0 bottom-0 w-3/4 max-w-sm bg-white dark:bg-gray-900 z-50 transform transition-transform duration-300 ease-in-out shadow-2xl ${
+            mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
+          }`}>
+            <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
+              <span className="font-bold text-lg text-gray-900 dark:text-white">Menu</span>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg transition-colors"
+                aria-label="Close menu"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <nav className="flex flex-col p-4 space-y-2 overflow-y-auto h-[calc(100vh-73px)]">
+              <Link
+                href="/"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+                  pathname === '/'
+                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                }`}
+              >
+                Home
+              </Link>
+              <Link
+                href="/services"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+                  pathname === '/services'
+                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                }`}
+              >
+                Services
+              </Link>
+              <Link
+                href="/pricing"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+                  pathname === '/pricing'
+                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                }`}
+              >
+                Pricing
+              </Link>
+              <Link
+                href="/case-studies"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+                  pathname === '/case-studies'
+                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                }`}
+              >
+                Case Studies
+              </Link>
+              <Link
+                href="/about"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+                  pathname === '/about'
+                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                }`}
+              >
+                About
+              </Link>
+              <Link
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+                  pathname === '/blog'
+                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                }`}
+              >
+                Blog
+              </Link>
+              <Link
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
+                className="mt-4 px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-center transition-all duration-200"
+              >
+                Contact Us
+              </Link>
+            </nav>
+          </div>
         </div>
       </header>
     </>

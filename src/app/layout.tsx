@@ -4,8 +4,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import ConditionalHeader from "@/components/layout/ConditionalHeader";
 import Footer from "@/components/layout/Footer";
-import BackToTopButton from "@/components/BackToTopButton";
-// import AIChat from "@/components/AIChat"; // Temporarily disabled due to file corruption
+import ScrollToTopButton from "@/components/ScrollToTopButton";
+import AIChat from "@/components/AIChat";
 import MobileStickyCTA from "@/components/MobileStickyCA";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import CriticalCSS from "@/components/performance/CriticalCSS";
@@ -229,8 +229,8 @@ export default function RootLayout({
             </main>
           </div>
           <Footer />
-          <BackToTopButton />
-          {/* <AIChat /> */}
+          <ScrollToTopButton />
+          <AIChat />
           <MobileStickyCTA />
           <PerformanceMonitor />
         </ThemeProvider>
