@@ -41,7 +41,7 @@ img, video {
 h1, h2, h3, h4, h5, h6, p, div {
   word-wrap: break-word;
   overflow-wrap: break-word;
-  hyphens: auto;
+  hyphens: none;
 }
 
 /* Fix for flex containers on mobile */

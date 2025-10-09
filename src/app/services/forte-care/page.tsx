@@ -214,10 +214,12 @@ export default function ForteCare() {
                     {maintenanceFeatures.map((category, idx) => (
                       <div key={idx}>
                         <div className="flex items-center gap-2 mb-3">
-                          <Icon name={category.icon} className="w-5 h-5 text-blue-600" />
+                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                            <Icon name={category.icon} className="w-5 h-5 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                          </div>
                           <h4 className="font-semibold text-gray-900 dark:text-white">{category.title}</h4>
                         </div>
-                        <ul className="space-y-2 ml-7">
+                        <ul className="space-y-2 ml-12">
                           {category.items.map((item, itemIdx) => (
                             <li key={itemIdx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
                               <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -266,10 +268,12 @@ export default function ForteCare() {
                     {growthFeatures.map((category, idx) => (
                       <div key={idx}>
                         <div className="flex items-center gap-2 mb-3">
-                          <Icon name={category.icon} className="w-5 h-5 text-blue-600" />
+                          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center flex-shrink-0">
+                            <Icon name={category.icon} className="w-5 h-5 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                          </div>
                           <h4 className="font-semibold text-gray-900 dark:text-white">{category.title}</h4>
                         </div>
-                        <ul className="space-y-2 ml-7">
+                        <ul className="space-y-2 ml-12">
                           {category.items.map((item, itemIdx) => (
                             <li key={itemIdx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
                               <svg className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">

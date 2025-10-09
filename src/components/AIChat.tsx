@@ -1,5 +1,5 @@
 'use client';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 type Message = {
   type: 'bot' | 'user';
@@ -8,9 +8,18 @@ type Message = {
 
 export default function AIChat() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     { type: 'bot', text: "Hi! I'm Sophia 👋 I help business owners like you grow with custom websites and AI automation. We're booking out fast—but I've got you covered. What's your biggest challenge right now?" }
   ]);
+
+  // Track screen size
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   const quickQuestions = [
     { q: "What makes you different?", a: "We're 100% USA-based and hand-code every project—no templates, no outsourcing. Our clients see an average 40% increase in conversions within 90 days. We've helped 50+ businesses transform their digital presence. Ready to join them? Let's talk about your growth goals!" },
@@ -90,7 +99,20 @@ export default function AIChat() {
           style={{ width: '48px', height: '48px', minWidth: '48px', minHeight: '48px' }}
           aria-label="Chat with Sophia"
         >
-          {!isOpen && <span className="absolute -top-0.5 -right-0.5 w-2 h-2 md:w-3 md:h-3 bg-green-500 rounded-full border-2 border-white animate-pulse"></span>}
+          {!isOpen && (
+            <span
+              className="absolute bg-green-500 rounded-full border-2 border-white animate-pulse"
+              style={{
+                width: isMobile ? '8px' : '12px',
+                height: isMobile ? '8px' : '12px',
+                top: '-2px',
+                right: '-2px',
+                display: 'block',
+                aspectRatio: '1',
+                flex: 'none'
+              }}
+            ></span>
+          )}
           <svg className="w-6 h-6 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
           </svg>

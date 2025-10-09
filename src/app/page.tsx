@@ -269,10 +269,10 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:auto-rows-fr">
               {serviceLanes.map((service, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 h-full group">
+                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 h-full group flex flex-col min-h-[320px]">
                     <div className="flex items-start gap-4 mb-6">
                       <div className="flex-shrink-0">
                         <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
@@ -289,13 +289,13 @@ export default function Home() {
                       </div>
                     </div>
 
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 flex-grow">
                       {service.description}
                     </p>
 
                     <Link
                       href={service.link}
-                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors group-hover:gap-3"
+                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors group-hover:gap-3 mt-auto"
                     >
                       Learn more
                       <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -323,21 +323,21 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:auto-rows-fr">
               {processSteps.map((step, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 h-full text-center">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-full mb-4">
+                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 h-full text-center flex flex-col min-h-[280px]">
+                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-full mb-4 mx-auto">
                       <span className="text-lg font-bold text-primary-600 dark:text-primary-400">
                         {step.number}
                       </span>
                     </div>
-                    
+
                     <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
                       {step.title}
                     </h3>
-                    
-                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed flex-grow" style={{hyphens: 'none', wordBreak: 'normal'}}>
                       {step.description}
                     </p>
                   </div>
@@ -363,17 +363,19 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:auto-rows-fr">
               {trustPillars.map((pillar, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8 text-center h-full">
-                    <Icon name={pillar.icon} className="w-12 h-12 text-primary-600 mx-auto mb-6" />
-                    
+                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8 text-center h-full flex flex-col min-h-[280px]">
+                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mx-auto mb-6 shadow-lg">
+                      <Icon name={pillar.icon} className="w-8 h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                    </div>
+
                     <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
                       {pillar.title}
                     </h3>
-                    
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+
+                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
                       {pillar.description}
                     </p>
                   </div>
@@ -394,20 +396,20 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 md:auto-rows-fr">
               {resourcesPreview.map((resource, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <Link href={resource.link}>
-                    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 h-full group">
+                  <Link href={resource.link} className="h-full block">
+                    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 h-full flex flex-col group min-h-[200px]">
                       <div className="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-3">
                         {resource.type}
                       </div>
-                      
-                      <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">
+
+                      <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors flex-grow">
                         {resource.title}
                       </h3>
-                      
-                      <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors">
+
+                      <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors mt-auto">
                         Read blog →
                       </div>
                     </div>
