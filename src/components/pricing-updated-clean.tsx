@@ -218,7 +218,7 @@ export function PricingPage() {
                 onClick={() => setShowGrowthSnapshotForm(true)}
                 className="bg-orange-600 hover:bg-orange-700 text-white px-8 py-4 text-lg font-semibold"
               >
-                👉 Book My Free Growth Audit
+                👉 Book My Free Growth Snapshot
               </DarkButton>
             </div>
           </SimpleScrollReveal>

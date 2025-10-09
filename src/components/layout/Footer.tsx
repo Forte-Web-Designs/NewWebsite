@@ -41,36 +41,40 @@ export default function Footer() {
     {
       heading: "Services",
       points: [
-        { text: "Website Design", href: "/services/webDesign" },
-        { text: "SEO Services", href: "/services/seo" },
-        { text: "Google Ads Management", href: "/services/ads" },
-        { text: "Forte Care™ Support", href: "/services/forte-care" }
+        { text: "AI Automation", href: "/services/automation-ai" },
+        { text: "Website Design", href: "/services/web-design" },
+        { text: "Forte Care™", href: "/services/forte-care" },
+        { text: "Agency Partnership", href: "/services/agency-partnership" },
+        { text: "Free Growth Snapshot", href: "/growth-audit" },
+        { text: "Free Website Checkup", href: "https://www.fortewebdesigns.com/checkup/" },
+        { text: "View All Services", href: "/services" }
       ]
     },
     {
-      heading: "Company",
+      heading: "Solutions",
+      points: [
+        { text: "View All Solutions", href: "/solutions" },
+        { text: "AI Automation", href: "/services/automation-ai" },
+        { text: "Free Growth Snapshot", href: "/growth-audit" },
+        { text: "Case Studies", href: "/case-studies" }
+      ]
+    },
+    {
+      heading: "Locations",
+      points: [
+        { text: "Dallas-Fort Worth", href: "/locations/texas" },
+        { text: "Oklahoma", href: "/locations/oklahoma" },
+        { text: "New Mexico", href: "/locations/new-mexico" },
+        { text: "All Locations", href: "/locations" }
+      ]
+    },
+    {
+      heading: "About Us",
       points: [
         { text: "About Us", href: "/about" },
         { text: "Our Work", href: "/about/work" },
-        { text: "Case Studies", href: "/case-studies" },
+        { text: "Blog", href: "/blog" },
         { text: "Contact", href: "/contact" }
-      ]
-    },
-    {
-      heading: "Resources",
-      points: [
-        { text: "Free Website Checkup", href: "/checkup" },
-        { text: "Pricing", href: "/pricing" },
-        { text: "FAQs", href: "/about/faqs" },
-        { text: "Blog", href: "/blog" }
-      ]
-    },
-    {
-      heading: "Connect",
-      points: [
-        { text: "Facebook", href: "https://www.facebook.com/people/Forte-Web-Designs/61576746767359/" },
-        { text: "Instagram", href: "https://www.instagram.com/fortewebdesigns/" },
-        { text: "LinkedIn", href: "https://www.linkedin.com/company/forte-web-designs/?viewAsMember=true" }
       ]
     }
   ];

@@ -119,7 +119,7 @@ export default function Contact() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
             <div className="text-center">
               <div className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Need Immediate Results?</div>
-              <div className="text-xs text-gray-600 dark:text-gray-400">Strategic consultation • Growth audit • Implementation plan</div>
+              <div className="text-xs text-gray-600 dark:text-gray-400">Strategic consultation • Growth snapshot • Implementation plan</div>
             </div>
             <div className="hidden sm:block w-px h-12 bg-gray-300 dark:bg-gray-600"></div>
             <div className="text-center">
