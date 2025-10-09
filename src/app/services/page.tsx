@@ -161,8 +161,8 @@ export default function ServicesPage() {
                   <div className="grid lg:grid-cols-2 gap-8 items-center">
                     {/* Left: Icon, Title, Description */}
                     <div>
-                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} mb-6`}>
-                        <Icon name={service.icon} className="w-8 h-8 text-white" />
+                      <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.gradient} mb-6 shadow-lg hover:shadow-xl transition-shadow duration-300`}>
+                        <Icon name={service.icon} className="w-8 h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                       </div>
                       <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2">
                         {service.title}

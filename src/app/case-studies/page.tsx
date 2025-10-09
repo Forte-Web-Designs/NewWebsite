@@ -107,10 +107,10 @@ export default function CaseStudiesPage() {
             {caseStudies.map((study, index) => (
               <SimpleScrollReveal key={study.id} direction="up" delay={index * 100}>
                 <Link href={`/case-studies/${study.id}`} className="block group h-full">
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-2xl transition-all duration-300 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-2xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
                     {/* Header with Gradient */}
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${study.gradient} mb-6`}>
-                      <Icon name="check" className="w-8 h-8 text-white" />
+                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${study.gradient} mb-6 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
+                      <Icon name="check" className="w-8 h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
 
                     {/* Title & Subtitle */}
@@ -148,9 +148,13 @@ export default function CaseStudiesPage() {
                       </h3>
                       <ul className="space-y-2">
                         {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-start gap-2">
-                            <Icon name="check" className="w-4 h-4 text-green-600 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-600 dark:text-gray-300 text-sm">{result}</span>
+                          <li key={idx} className="flex items-start gap-3">
+                            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+                              <svg className="w-3 h-3 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                            <span className="text-gray-700 dark:text-gray-300 text-sm">{result}</span>
                           </li>
                         ))}
                       </ul>

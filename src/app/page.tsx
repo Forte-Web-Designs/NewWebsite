@@ -272,30 +272,35 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8">
               {serviceLanes.map((service, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 sm:p-8 hover:shadow-lg transition-all duration-300 h-full">
+                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 h-full group">
                     <div className="flex items-start gap-4 mb-6">
                       <div className="flex-shrink-0">
-                        <Icon name={service.icon} className="w-8 h-8 text-primary-600" />
+                        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                          <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                        </div>
                       </div>
                       <div className="flex-1">
                         <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-2">
                           {service.title}
                         </h3>
-                        <h4 className="text-base font-semibold text-primary-600 dark:text-primary-400 mb-4">
+                        <h4 className="text-base font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
                           {service.subtitle}
                         </h4>
                       </div>
                     </div>
-                    
+
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6">
                       {service.description}
                     </p>
-                    
-                    <Link 
+
+                    <Link
                       href={service.link}
-                      className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
+                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors group-hover:gap-3"
                     >
-                      Learn more →
+                      Learn more
+                      <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
                     </Link>
                   </div>
                 </SimpleAnimatedCard>
