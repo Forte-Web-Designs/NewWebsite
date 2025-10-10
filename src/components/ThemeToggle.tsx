@@ -34,38 +34,49 @@ export function ThemeToggle() {
           : 'bg-gradient-to-r from-black to-[#666666]'
         } opacity-20 -z-10`}></span>
 
+      {/* Background icons - conditionally render only on desktop */}
+      <div className="hidden md:flex items-center justify-between w-full h-full px-[2.67px] relative z-0">
+        {/* Dark icon - only visible in dark mode (when handle is on left) */}
+        {theme === 'dark' && (
+          <div className="w-[12px] h-[12px] flex items-center justify-center">
+            <Icon
+              name="dark-mode"
+              size={12}
+              className="text-[#C2D7FF]"
+              alt=""
+            />
+          </div>
+        )}
+        {theme === 'light' && <div className="w-[12px] h-[12px]"></div>}
+
+        {/* Light icon - only visible in light mode (when handle is on right) */}
+        {theme === 'light' && (
+          <div className="w-[12px] h-[12px] flex items-center justify-center">
+            <Icon
+              name="dark-icon-sun"
+              size={12}
+              className="text-[#C2D7FF]"
+              alt=""
+            />
+          </div>
+        )}
+        {theme === 'dark' && <div className="w-[12px] h-[12px]"></div>}
+      </div>
+
       {/* Toggle handle - position reversed */}
-      <div className={`absolute w-[20px] h-[20px] rounded-full transition-all duration-300 flex items-center justify-center ${theme === 'light'
+      <div className={`absolute w-[20px] h-[20px] rounded-full transition-all duration-300 flex items-center justify-center z-10 ${theme === 'light'
           ? 'left-[calc(100%-24px)] bg-[#0051EF] border border-[#0047D1]'
           : 'left-[4px] bg-[#0051EF] border border-[#0047D1]'
-        }`}>
+        }`}
+        style={{
+          backgroundColor: '#0051EF'
+        }}
+      >
         {theme === 'light' ? (
           <Icon name="dark-icon-sun" size={12} className="text-white" alt="Dark mode icon" />
         ) : (
           <Icon name="light-mood-1" size={12} className="text-white" alt="Light mode icon" />
         )}
-      </div>
-
-      <div className="flex items-center justify-between w-full h-full px-[2.67px]">
-        {/* Dark icon - visible in light mode */}
-        <div className="w-[12px] h-[12px] flex items-center justify-center">
-          <Icon
-            name="dark-mode"
-            size={12}
-            className={theme === 'dark' ? 'text-[#C2D7FF]' : 'text-transparent'}
-            alt=""
-          />
-        </div>
-
-        {/* Light icon - visible in dark mode */}
-        <div className="w-[12px] h-[12px] flex items-center justify-center">
-          <Icon
-            name="dark-icon-sun"
-            size={12}
-            className={theme === 'light' ? 'text-[#C2D7FF]' : 'text-transparent'}
-            alt=""
-          />
-        </div>
       </div>
     </button>
   );
