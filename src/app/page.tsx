@@ -18,7 +18,7 @@ export default function Home() {
   const [fadeInOut, setFadeInOut] = useState(true);
   
   // Rotating words for the hero
-  const rotatingWords = ["Data", "Systems", "Intelligence", "Results"];
+  const rotatingWords = ["A System", "Using The Right Data", "A Framework", "A Process", "Execution"];
 
   // Rotating words animation with fade effect and no layout shift
   useEffect(() => {
