@@ -100,8 +100,8 @@ export function PricingPage() {
                 }`}
               >
                 {tier.badge && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className={`${tier.badgeColor} text-white px-4 py-1 rounded-full text-sm font-semibold`}>
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                    <span className={`${tier.badgeColor} text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold`}>
                       {tier.badge}
                     </span>
                   </div>

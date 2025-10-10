@@ -1,5 +1,5 @@
 'use client';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 type Message = {
   type: 'bot' | 'user';
@@ -10,8 +10,17 @@ export default function AIChat() {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { type: 'bot', text: "Hi! I'm Sophia 👋 I help business owners like you grow with custom websites and AI automation. We're booking out fast—but I've got you covered. What's your biggest challenge right now?" }
+    { type: 'bot', text: "Hi! I'm Sophia 👋 I help business owners grow with systems that actually work. Business growth isn't luck—it's having the right data, framework, and execution. What's your biggest challenge right now?" }
   ]);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+
+  // Auto-scroll to bottom when messages change with delay
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      messagesEndRef.current?.scrollIntoView({ behavior: 'smooth', block: 'end' });
+    }, 100);
+    return () => clearTimeout(timer);
+  }, [messages]);
 
   // Track screen size
   useEffect(() => {
@@ -22,14 +31,34 @@ export default function AIChat() {
   }, []);
 
   const quickQuestions = [
-    { q: "What makes you different?", a: "We're 100% USA-based and hand-code every project—no templates, no outsourcing. Our clients see an average 40% increase in conversions within 90 days. We've helped 50+ businesses transform their digital presence. Ready to join them? Let's talk about your growth goals!" },
-    { q: "How much does a website cost?", a: "Investment starts at $3,000 for websites that actually convert. Here's the thing: our clients typically see 3-5x ROI in the first year. We're booking out 4 weeks ahead, but I can get you on the schedule this week if you're ready to move forward. Want to lock in your spot?" },
-    { q: "Do you offer AI automation?", a: "YES! 🚀 We've automated workflows that save our clients 20+ hours per week. Imagine having AI handle your repetitive tasks while you focus on growth. We just helped a client save $50K/year in labor costs. This is exactly what's giving businesses the competitive edge right now. Want to see what we can automate for you?" },
-    { q: "How fast can we start?", a: "Great question! We can start in as little as 48 hours for qualified projects. Most builds are completed in 4-6 weeks—faster than industry average. The sooner we start, the sooner you're generating results. I have 2 consultation slots open this week. Can I reserve one for you?" },
-    { q: "What results do clients see?", a: "Our clients typically see: 40% higher conversion rates, 3-5x ROI in year one, and 20+ hours saved weekly with automation. One client went from 2 leads/month to 30+ in 90 days. Another increased revenue by $120K in 6 months. These results are possible when you have a system built for YOUR business. Ready to get started?" }
+    {
+      q: "What makes Forte different?",
+      a: "We don't do templates or cookie-cutter solutions. Every website, every automation, every system is custom-built for YOUR business. We're strategic partners—not just developers. You get a team that spans growth, sales, marketing, and engineering. Plus, our Forte Care™ guarantee means if you're not 100% satisfied, we make it right. Want to see what a custom system could do for you?",
+      followUp: ["Tell me about AI automation", "What's included in Forte Care?", "How much does it cost?"]
+    },
+    {
+      q: "Tell me about AI automation",
+      a: "Imagine saving 20+ hours per week by automating your repetitive tasks—lead management, customer follow-ups, data entry, reporting. That's what our AI automation does. We build intelligent systems that work 24/7, so you can focus on high-value work. One client saved $50K/year in labor costs. Another increased lead response time from 2 hours to 2 minutes. This is the competitive edge businesses are using right now. Ready to automate your workflow?",
+      followUp: ["What results do clients see?", "Can you automate my specific industry?", "Book a consultation"]
+    },
+    {
+      q: "How much does it cost?",
+      a: "Custom websites start at $3,000. Complete business systems (website + AI automation + integrations) start at $8,000. Here's what matters: our clients typically see 3-5x ROI in year one. Plus, every project includes our 100% satisfaction guarantee. We also offer Forte Care™ starting at $250/month—unlimited revisions, 24/7 monitoring, and peace of mind. Want to discuss what makes sense for your business?",
+      followUp: ["What's included in Forte Care?", "Do you offer payment plans?", "Book a free consultation"]
+    },
+    {
+      q: "What results do clients see?",
+      a: "Real results: 40% higher conversion rates, 20+ hours saved weekly with automation, and 3-5x ROI in the first year. One client went from 2 leads/month to 30+ in 90 days. Another increased revenue by $120K in 6 months. These aren't flukes—they're the result of having a system built specifically for your business, backed by data and strategy. Want results like these?",
+      followUp: ["Tell me about AI automation", "Book a free consultation", "What makes Forte different?"]
+    },
+    {
+      q: "What's included in Forte Care?",
+      a: "Forte Care™ is your peace of mind plan. For $250/month, you get: unlimited website revisions, 24/7 uptime monitoring, daily backups, security updates, and priority support. Need more? Our $750/month Growth Partner plan includes 5 dev hours/month, conversion optimization, A/B testing, and strategic consulting. Every plan has our 100% satisfaction guarantee. Want to add Forte Care to your project?",
+      followUp: ["How much does a website cost?", "Book a free consultation", "What results do clients see?"]
+    }
   ];
 
-  const handleQuestionClick = (question: string, answer: string) => {
+  const handleQuestionClick = (question: string, answer: string, followUp?: string[]) => {
     setMessages([
       ...messages,
       { type: 'user', text: question },
@@ -56,7 +85,7 @@ export default function AIChat() {
             </button>
           </div>
 
-          <div className="p-4 h-96 overflow-y-auto bg-gray-50 dark:bg-gray-900 space-y-3">
+          <div className="p-4 h-96 overflow-y-auto bg-gray-50 dark:bg-gray-900 space-y-3" id="chat-messages">
             {messages.map((msg, idx) => (
               <div key={idx} className={`flex ${msg.type === 'user' ? 'justify-end' : 'justify-start'}`}>
                 <div className={`max-w-[85%] rounded-lg p-3 ${
@@ -76,13 +105,16 @@ export default function AIChat() {
               {quickQuestions.map((item, idx) => (
                 <button
                   key={idx}
-                  onClick={() => handleQuestionClick(item.q, item.a)}
+                  onClick={() => handleQuestionClick(item.q, item.a, item.followUp)}
                   className="w-full text-left px-3 py-2 bg-white dark:bg-gray-800 hover:bg-blue-50 dark:hover:bg-blue-900/30 text-gray-700 dark:text-gray-300 border border-gray-200 dark:border-gray-700 rounded-lg text-sm transition-colors"
                 >
                   {item.q}
                 </button>
               ))}
             </div>
+
+            {/* Scroll anchor */}
+            <div ref={messagesEndRef} />
           </div>
 
           <div className="p-3 bg-white dark:bg-gray-800 border-t border-gray-200 dark:border-gray-700 rounded-b-2xl">
