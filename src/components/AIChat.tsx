@@ -101,15 +101,21 @@ export default function AIChat() {
         >
           {!isOpen && (
             <span
-              className="absolute bg-green-500 rounded-full border-2 border-white animate-pulse"
+              className="bg-green-500 border-2 border-white animate-pulse"
               style={{
-                width: isMobile ? '8px' : '12px',
-                height: isMobile ? '8px' : '12px',
+                position: 'absolute',
                 top: '-2px',
                 right: '-2px',
+                width: isMobile ? '8px !important' : '12px !important',
+                height: isMobile ? '8px !important' : '12px !important',
+                minWidth: isMobile ? '8px !important' : '12px !important',
+                minHeight: isMobile ? '8px !important' : '12px !important',
+                maxWidth: isMobile ? '8px !important' : '12px !important',
+                maxHeight: isMobile ? '8px !important' : '12px !important',
+                borderRadius: '50%',
                 display: 'block',
-                aspectRatio: '1',
-                flex: 'none'
+                flex: 'none',
+                overflow: 'hidden'
               }}
             ></span>
           )}
