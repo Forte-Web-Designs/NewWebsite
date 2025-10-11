@@ -353,18 +353,18 @@ export default function AutomationAIClient() {
                 <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 overflow-hidden">
                   <button
                     onClick={() => toggleFAQ(index)}
-                    className="w-full px-6 py-4 text-left flex justify-between items-center hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
+                    className="w-full px-4 sm:px-6 py-4 text-left flex justify-between items-start gap-4 hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors"
                   >
-                    <h3 className="font-semibold text-gray-900 dark:text-white pr-4">
+                    <h3 className="font-semibold text-sm sm:text-base text-gray-900 dark:text-white flex-1">
                       {faq.question}
                     </h3>
-                    <span className="text-gray-500 dark:text-gray-400 flex-shrink-0 text-2xl">
+                    <span className="text-gray-500 dark:text-gray-400 flex-shrink-0 text-xl sm:text-2xl mt-0.5">
                       {expandedFAQ === index ? '−' : '+'}
                     </span>
                   </button>
                   {expandedFAQ === index && (
-                    <div className="px-6 pb-4 border-t border-gray-100 dark:border-gray-800 pt-4">
-                      <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    <div className="px-4 sm:px-6 pb-4 border-t border-gray-100 dark:border-gray-800 pt-4">
+                      <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
                         {faq.answer}
                       </p>
                     </div>
