@@ -202,7 +202,7 @@ export default function Home() {
                   </div>
                   <span className="text-gray-300 dark:text-gray-600">·</span>
                   <a
-                    href="https://g.page/r/YOUR_GOOGLE_BUSINESS_ID/review"
+                    href="https://share.google/btyoifpiN3EEAGh1u"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center gap-1 sm:gap-2 min-w-0 hover:opacity-80 transition-opacity"

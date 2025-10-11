@@ -123,12 +123,11 @@ export function PricingPage() {
                     {tier.description}
                   </p>
                   {tier.roi && (
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 dark:bg-green-900/20 rounded-full">
-                      <Icon
-                        name="check"
-                        className="w-4 h-4 text-green-600"
-                      />
-                      <span className="text-sm font-semibold text-green-700 dark:text-green-400">
+                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 dark:bg-amber-900/20 rounded-full border border-amber-200 dark:border-amber-800">
+                      <svg className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
+                      <span className="text-sm font-semibold text-amber-700 dark:text-amber-400">
                         {tier.roi}
                       </span>
                     </div>
@@ -138,10 +137,9 @@ export function PricingPage() {
                 <ul className="space-y-4 mb-8 flex-grow">
                   {tier.features.map((feature, idx) => (
                     <li key={idx} className="flex items-start gap-3">
-                      <Icon
-                        name="check"
-                        className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0"
-                      />
+                      <svg className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      </svg>
                       <span className="text-gray-600 dark:text-gray-300 text-sm">
                         {feature}
                       </span>
