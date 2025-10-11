@@ -54,8 +54,8 @@ export default function AboutUs() {
       description: "No \"synergistic cloud-native solutions\" or \"AI-powered blockchain paradigms.\" We explain what we're building, why it matters, and how it helps—in plain English."
     },
     {
-      title: "We're Building Alongside You",
-      description: "Right now, we're growing our portfolio and proving our value. That means better pricing for you, more attention on your project, and a team that's genuinely invested in your success becoming our case study."
+      title: "We're Selective About Who We Work With",
+      description: "We take on a limited number of projects each month, which means your success gets our full attention. No account managers juggling 20 clients, just direct access to the team building your solution. You are the priority."
     }
   ];
 

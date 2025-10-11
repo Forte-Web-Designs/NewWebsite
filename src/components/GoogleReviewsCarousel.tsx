@@ -70,7 +70,7 @@ export default function GoogleReviewsCarousel({
         name="star" 
         className={`w-4 h-4 ${
           i < rating 
-            ? 'text-yellow-400' 
+            ? 'text-amber-500' 
             : 'text-gray-300 dark:text-gray-600'
         }`} 
       />

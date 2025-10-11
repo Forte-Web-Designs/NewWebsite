@@ -106,14 +106,14 @@ export const PerformanceMonitor: React.FC = () => {
       <div className="space-y-1 mb-3">
         <div className="flex justify-between">
           <span>FPS:</span>
-          <span className={metrics.fps >= 50 ? 'text-green-400' : metrics.fps >= 30 ? 'text-yellow-400' : 'text-red-400'}>
+          <span className={metrics.fps >= 50 ? 'text-green-400' : metrics.fps >= 30 ? 'text-amber-500' : 'text-red-400'}>
             {metrics.fps}
           </span>
         </div>
         
         <div className="flex justify-between">
           <span>Load Time:</span>
-          <span className={metrics.loadTime <= 1500 ? 'text-green-400' : metrics.loadTime <= 3000 ? 'text-yellow-400' : 'text-red-400'}>
+          <span className={metrics.loadTime <= 1500 ? 'text-green-400' : metrics.loadTime <= 3000 ? 'text-amber-500' : 'text-red-400'}>
             {metrics.loadTime.toFixed(0)}ms
           </span>
         </div>
@@ -121,7 +121,7 @@ export const PerformanceMonitor: React.FC = () => {
         {metrics.memoryUsage > 0 && (
           <div className="flex justify-between">
             <span>Memory:</span>
-            <span className={metrics.memoryUsage <= 30 ? 'text-green-400' : metrics.memoryUsage <= 50 ? 'text-yellow-400' : 'text-red-400'}>
+            <span className={metrics.memoryUsage <= 30 ? 'text-green-400' : metrics.memoryUsage <= 50 ? 'text-amber-500' : 'text-red-400'}>
               {metrics.memoryUsage.toFixed(1)}MB
             </span>
           </div>

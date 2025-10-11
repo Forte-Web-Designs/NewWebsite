@@ -140,7 +140,7 @@ export function PricingPage() {
                     <li key={idx} className="flex items-start gap-3">
                       <Icon
                         name="check"
-                        className="w-5 h-5 text-blue-600 mt-0.5 flex-shrink-0"
+                        className="w-5 h-5 text-green-600 dark:text-green-400 mt-0.5 flex-shrink-0"
                       />
                       <span className="text-gray-600 dark:text-gray-300 text-sm">
                         {feature}
@@ -270,10 +270,10 @@ export function PricingPage() {
             <div className="space-y-8">
               <div>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  Why is your pricing higher than other agencies?
+                  What's included that makes this worth the investment?
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  We build custom solutions designed for ROI, not templates. Every project includes strategic consulting, custom development, optimization, and ongoing support. Our clients typically see 3-10x returns within the first year.
+                  Strategic consulting, custom development (not templates), optimization, training, and ongoing support. Our approach is designed for ROI—clients typically see 3-10x returns within the first year, meaning the investment pays for itself.
                 </p>
               </div>
               <div>

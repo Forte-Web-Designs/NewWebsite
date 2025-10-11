@@ -50,7 +50,7 @@ export const EnhancedTestimonialSlider = () => {
     return Array.from({ length: 5 }, (_, i) => (
       <svg
         key={i}
-        className={`w-5 h-5 ${i < rating ? 'text-yellow-400' : 'text-gray-300'}`}
+        className={`w-5 h-5 ${i < rating ? 'text-amber-500' : 'text-gray-300'}`}
         fill="currentColor"
         viewBox="0 0 20 20"
       >

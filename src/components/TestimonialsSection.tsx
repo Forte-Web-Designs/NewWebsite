@@ -128,11 +128,11 @@ export default function TestimonialsSection({
               <div className="grid md:grid-cols-3 gap-6 items-center">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-1 mb-2">
-                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
-                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
-                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
-                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
-                    <Icon name="star" className="w-5 h-5 text-yellow-400" />
+                    <Icon name="star" className="w-5 h-5 text-amber-500" />
+                    <Icon name="star" className="w-5 h-5 text-amber-500" />
+                    <Icon name="star" className="w-5 h-5 text-amber-500" />
+                    <Icon name="star" className="w-5 h-5 text-amber-500" />
+                    <Icon name="star" className="w-5 h-5 text-amber-500" />
                   </div>
                   <div className="text-2xl font-bold text-gray-900 dark:text-white">100%</div>
                   <div className="text-sm text-gray-600 dark:text-gray-400">Client Retention</div>

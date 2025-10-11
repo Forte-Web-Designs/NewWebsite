@@ -174,7 +174,7 @@ export default function SummitSupplyChainCaseStudy() {
 
               <SimpleScrollReveal direction="up" delay={200}>
                 <div className="text-center">
-                  <div className="text-4xl lg:text-5xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">
+                  <div className="text-4xl lg:text-5xl font-bold text-yellow-600 dark:text-amber-500 mb-2">
                     &lt;30 min
                   </div>
                   <p className="text-lg text-gray-700 dark:text-gray-300">

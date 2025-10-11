@@ -301,7 +301,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
 
   const getScoreColor = (score: number) => {
     if (score >= 8) return 'text-green-600 dark:text-green-400';
-    if (score >= 6) return 'text-yellow-600 dark:text-yellow-400';
+    if (score >= 6) return 'text-yellow-600 dark:text-amber-500';
     if (score >= 4) return 'text-orange-600 dark:text-orange-400';
     return 'text-red-600 dark:text-red-400';
   };
@@ -471,7 +471,7 @@ export default function InstantMiniAudit({ onFullAuditClick, isNavigating = fals
                 
                 <div className="flex items-center justify-between bg-gray-50 dark:bg-white/10 rounded-lg p-2 border border-gray-200 dark:border-white/20">
                   <span className="text-gray-700 dark:text-white/90 font-medium text-xs">⚡ Speed:</span>
-                  <span className={results.loadTime < 3 ? 'text-green-600 dark:text-green-400 font-semibold text-xs' : results.loadTime < 5 ? 'text-yellow-600 dark:text-yellow-400 font-semibold text-xs' : 'text-red-600 dark:text-red-400 font-semibold text-xs'}>
+                  <span className={results.loadTime < 3 ? 'text-green-600 dark:text-green-400 font-semibold text-xs' : results.loadTime < 5 ? 'text-yellow-600 dark:text-amber-500 font-semibold text-xs' : 'text-red-600 dark:text-red-400 font-semibold text-xs'}>
                     {results.loadTime < 3 ? '✅' : results.loadTime < 5 ? '⚠️' : '❌'} {results.loadTime}s
                   </span>
                 </div>
