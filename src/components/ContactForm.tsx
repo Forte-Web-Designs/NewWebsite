@@ -287,11 +287,10 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
               <SimpleScrollReveal direction="up" delay={200}>
                 <div className="text-center mb-8">
                   <h2 className={`text-3xl md:text-4xl font-bold mb-4 ${isDarkMode ? 'text-white' : 'text-black'}`}>
-                    Let&apos;s Build You a Stronger Website
+                    Let&apos;s Discuss Your Project
                   </h2>
                   <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                    We&apos;ll show you how your current site stacks up and how we
-                    can make it way better
+                    Tell us about your business challenges and goals. We&apos;ll show you how intelligent automation and custom development can help.
                   </p>
                 </div>
               </SimpleScrollReveal>
