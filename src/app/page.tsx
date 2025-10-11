@@ -219,12 +219,13 @@ export default function Home() {
                 <h1
                   className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-gray-900 dark:text-white mb-6 px-2"
                 >
-                  Intelligent Systems That<br />
+                  Business Growth Isn't Luck.<br />
+                  It's{" "}
                   <span
                     className={`bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
                     aria-live="polite"
                   >
-                    Scale With Your Business
+                    {rotatingWords[currentWordIndex]}
                   </span>
                 </h1>
 
