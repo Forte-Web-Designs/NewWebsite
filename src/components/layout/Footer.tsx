@@ -100,9 +100,9 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>Professional web design and business growth systems for Dallas Fort Worth businesses. Custom websites, AI automation, and integrated systems designed to scale your business online.</p>
+              <p>Custom AI automation and web design for ambitious businesses. We build intelligent systems that eliminate manual work and scale with your growth.</p>
               <p className="mt-3">
-                <strong>Proudly serving businesses throughout Dallas-Fort Worth</strong> from our Grapevine headquarters with 100% USA-based team and support.
+                <strong>Headquartered in Grapevine, Texas.</strong> Serving clients throughout Dallas-Fort Worth and nationwide with 100% USA-based team and support.
               </p>
             </div>
             <div className="flex gap-2 mt-5 flex-wrap">
@@ -149,7 +149,7 @@ export default function Footer() {
           <div className="text-center mb-4">
             <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Service Areas</h3>
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              DFW-based, serving Dallas–Fort Worth and clients nationwide.
+              Headquartered in Grapevine, Texas, serving clients throughout DFW and nationwide.
             </p>
           </div>
         </div>

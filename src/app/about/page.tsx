@@ -69,10 +69,10 @@ export default function AboutUs() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-black dark:text-white mb-6">
-                We Build Systems That <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Actually Work</span>
+                We Build Systems That <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Scale With You</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                No nonsense. No gimmicks. Just intelligent automation, fast websites, and real results for businesses that want to grow without burning out.
+                Intelligent automation, high-performance websites, and integrated systems designed for modern businesses ready to grow.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -98,22 +98,19 @@ export default function AboutUs() {
               <SimpleScrollReveal direction="left" delay={300}>
                 <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
                   <p>
-                    I started this company because I was tired of watching smart business owners drown in manual work that technology should be handling.
+                    I founded Forte to solve a problem I kept seeing: businesses outgrowing their systems. Manual processes bottleneck growth. Template solutions break under pressure. Teams waste hours on work that technology should handle.
                   </p>
                   <p>
-                    Copying leads from forms into CRMs. Sending the same follow-up emails over and over. Building websites that look pretty but don't actually convert visitors into customers.
+                    The right automation saves 20+ hours per week. The right website converts 3x better. The right integrations surface insights you didn't know existed.
                   </p>
                   <p className="font-semibold text-gray-900 dark:text-white">
-                    It doesn't have to be that way.
+                    But only if it's built for your specific business.
                   </p>
                   <p>
-                    The right automation can save you 20+ hours a week. The right website can 3x your conversions. The right integrations can give you insights you never knew you were missing.
+                    We build custom systems—not templates or one-size-fits-all platforms. We learn how your business operates, identify what's slowing you down, and engineer intelligent solutions that handle the repetitive work automatically.
                   </p>
-                  <p>
-                    But here's the catch: it has to be built for <span className="italic">your</span> business. Not a template. Not a "one-size-fits-all" solution. Custom.
-                  </p>
-                  <p>
-                    That's what we do. We learn how your business works, identify what's slowing you down, and build intelligent systems that handle the repetitive stuff so you can focus on what actually matters: growing your business.
+                  <p className="font-semibold text-gray-900 dark:text-white">
+                    You focus on strategy and growth. The system handles execution.
                   </p>
                 </div>
               </SimpleScrollReveal>

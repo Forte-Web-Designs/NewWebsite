@@ -49,28 +49,28 @@ export default function Home() {
       icon: "puzzle",
       title: "AI Automation",
       subtitle: "Intelligent workflows that work 24/7",
-      description: "We build AI-powered automation that handles repetitive tasks, routes leads instantly, and triggers follow-ups automatically. Your team focuses on closing deals while the system handles everything else.",
+      description: "Automate repetitive tasks, route leads instantly, trigger follow-ups automatically. Your team closes deals. The system handles everything else.",
       link: "/services/automation-ai"
     },
     {
       icon: "services",
       title: "Custom Web Design",
       subtitle: "High-converting websites built for growth",
-      description: "Professional, hand-coded websites designed to turn visitors into customers. Fast, SEO-optimized, and built to showcase your brand and drive conversions.",
+      description: "Hand-coded websites engineered to convert. Fast loading, SEO-optimized, built to showcase your brand and drive measurable results.",
       link: "/services#web-design"
     },
     {
       icon: "flash",
       title: "CRM & Integrations",
       subtitle: "Connect your entire business stack",
-      description: "Seamlessly integrate your CRM, email, forms, and tools into one unified system. Clean data, automated handoffs, and real-time insights across your entire operation.",
+      description: "Integrate your CRM, email, forms, and tools into one unified system. Clean data, automated handoffs, real-time insights across your operation.",
       link: "/services#integrations"
     },
     {
       icon: "dollar",
       title: "Revenue Operations",
       subtitle: "Systems that scale your growth",
-      description: "End-to-end revenue systems that automate lead capture, nurture sequences, and sales workflows. Measure what matters and optimize for maximum ROI.",
+      description: "End-to-end revenue systems: automated lead capture, nurture sequences, and sales workflows. Measure what matters, optimize for maximum ROI.",
       link: "/services/automation-ai"
     }
   ];
@@ -103,18 +103,18 @@ export default function Home() {
   const trustPillars = [
     {
       icon: "star",
-      title: "Unmatched Industry Expertise",
-      description: "Our team spans growth, sales, marketing, and engineering. Recommendations are researched, tested, and practical."
+      title: "Cross-Functional Expertise",
+      description: "Our team spans engineering, automation, and growth strategy. Every recommendation is researched, tested, and built for measurable outcomes."
     },
     {
       icon: "shield",
-      title: "Control Your Business Growth", 
-      description: "We simplify AI & automation so you can focus on high-value outcomes and full visibility. Take back control."
+      title: "Built for Scale",
+      description: "Custom systems designed to handle growth without breaking. No templates, no limitations—just intelligent architecture that evolves with your business."
     },
     {
       icon: "support",
-      title: "Ongoing Training & Support",
-      description: "We enable your team with onboarding, documentation, and support. Forte Care™ keeps your systems fast and improving."
+      title: "Ongoing Optimization",
+      description: "Complete training, documentation, and support. Forte Care™ ensures your systems stay fast, secure, and continuously improving."
     }
   ];
 
@@ -198,7 +198,7 @@ export default function Home() {
                 <div className="flex flex-wrap justify-center items-center gap-2 sm:gap-3 lg:gap-4 text-xs sm:text-sm text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-full px-2">
                   <div className="flex items-center gap-1 sm:gap-2 min-w-0">
                     <Icon name="star" className="w-3 sm:w-4 h-3 sm:h-4 text-amber-500 fill-current flex-shrink-0" />
-                    <span className="whitespace-nowrap text-xs sm:text-sm">Trusted by 25+ growing businesses</span>
+                    <span className="whitespace-nowrap text-xs sm:text-sm">Trusted by growing businesses across DFW and nationwide</span>
                   </div>
                   <span className="text-gray-300 dark:text-gray-600">·</span>
                   <a
@@ -213,7 +213,7 @@ export default function Home() {
                       <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" fill="#FBBC05"/>
                       <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" fill="#EA4335"/>
                     </svg>
-                    <span className="whitespace-nowrap text-xs sm:text-sm">5.0★ Google reviews</span>
+                    <span className="whitespace-nowrap text-xs sm:text-sm">5.0★ rated on Google</span>
                   </a>
                 </div>
 
@@ -221,19 +221,18 @@ export default function Home() {
                 <h1
                   className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-gray-900 dark:text-white mb-6 px-2"
                 >
-                  Business Growth Isn't Luck.<br />
-                  It's{" "}
+                  Intelligent Systems That<br />
                   <span
                     className={`bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
                     aria-live="polite"
                   >
-                    {rotatingWords[currentWordIndex]}
+                    Scale With Your Business
                   </span>
                 </h1>
 
                 {/* Subheadline */}
                 <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                  Premium AI automation and web design for ambitious businesses. We build intelligent systems that scale.
+                  AI automation and custom web design for companies ready to eliminate manual work and accelerate growth.
                 </p>
 
                 {/* CTAs */}
@@ -368,7 +367,7 @@ export default function Home() {
                   Why Choose Forte
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  We're not just developers. We're strategic partners invested in your growth and committed to measurable results.
+                  Strategic partners who build systems designed for scale, not just launch day.
                 </p>
               </div>
             </SimpleScrollReveal>

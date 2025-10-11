@@ -90,10 +90,10 @@ export default function CaseStudiesPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white mb-6">
-                Real Results for Real Businesses
+                Client Success Stories
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                See how we've helped companies save time, automate workflows, and scale their operations with AI automation and custom solutions.
+                See how we've helped companies eliminate manual work, automate operations, and scale with intelligent systems.
               </p>
             </div>
           </SimpleScrollReveal>
