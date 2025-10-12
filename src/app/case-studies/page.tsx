@@ -10,6 +10,20 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+    id: 'modern-bungalow',
+    title: 'Modern Bungalow',
+    subtitle: 'Automated E-commerce Order Processing & Accounting Sync',
+    challenge: 'Manual order processing and QuickBooks sync issues causing 20+ hours/week of repetitive work',
+    solution: 'Custom n8n automation system with intelligent order sync, automated email workflows, and multi-channel inventory management',
+    results: [
+      '95% reduction in manual data entry',
+      '20+ hours per week saved on order processing',
+      '100% order accuracy with zero duplicates'
+    ],
+    tags: ['E-commerce Automation', 'QuickBooks Integration', 'Order Processing'],
+    gradient: 'from-emerald-600 to-teal-600'
+  },
+  {
     id: 'summit-gaming-lounge',
     title: 'Summit Gaming Lounge',
     subtitle: 'Omnichannel AI Concierge System',
