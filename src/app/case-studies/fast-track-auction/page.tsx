@@ -50,22 +50,7 @@ export default function FastTrackAuctionCaseStudy() {
             </div>
           </SimpleScrollReveal>
 
-          <SimpleScrollReveal direction="up" delay={200}>
-            <div className="relative max-w-4xl mx-auto">
-              <div className="aspect-video bg-gradient-to-br from-orange-100 to-red-100 dark:from-gray-800 dark:to-gray-700 rounded-2xl overflow-hidden shadow-2xl">
-                <div className="w-full h-full flex items-center justify-center">
-                  <div className="text-center">
-                    <div className="w-16 h-16 bg-orange-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                      </svg>
-                    </div>
-                    <p className="text-gray-600 dark:text-gray-400">Automated Listing & Analytics System</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </SimpleScrollReveal>
+
         </div>
       </section>
 
