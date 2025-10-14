@@ -4,8 +4,13 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
-  title: 'Modern Bungalow Case Study | E-commerce Automation | Forte Web Designs',
-  description: 'How we automated order processing and QuickBooks sync for Modern Bungalow, saving 20+ hours per week and achieving 100% order accuracy.',
+  title: 'Modern Bungalow Case Study | Home Goods E-commerce Automation | Forte Web Designs',
+  description: 'How we automated order processing and QuickBooks sync for Modern Bungalow home goods retailer, saving 20+ hours per week and achieving 100% order accuracy while maintaining exceptional customer service.',
+  openGraph: {
+    title: 'Modern Bungalow Case Study - E-commerce Automation Success',
+    description: 'Automated order processing system for premium home goods retailer with Shopify-QuickBooks integration.',
+    images: ['/images/case-studies/modern-bungalow-logo.png'],
+  },
 };
 
 export default function ModernBungalowCaseStudy() {
@@ -32,6 +37,22 @@ export default function ModernBungalowCaseStudy() {
               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6">
                 Case Study
               </span>
+              {/* Client Logo */}
+              <div className="mb-8">
+                <div className="inline-flex items-center justify-center w-32 h-16 bg-white rounded-xl shadow-lg mb-4">
+                  <div className="text-emerald-600 font-bold text-lg tracking-wide">
+                    <div className="flex items-center gap-2">
+                      <div className="w-8 h-8 bg-emerald-600 rounded text-white flex items-center justify-center text-sm font-bold">
+                        MB
+                      </div>
+                      <div className="text-sm">
+                        <div className="font-bold">MODERN</div>
+                        <div className="font-bold -mt-1">BUNGALOW</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
               <h1 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-white mb-6">
                 Modern Bungalow
               </h1>
@@ -66,10 +87,10 @@ export default function ModernBungalowCaseStudy() {
                 The Challenge
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Modern Bungalow, a growing Shopify-based home goods retailer, was drowning in manual order processing work. Every order required manual data entry into QuickBooks, email confirmations had to be sent individually, and order fulfillment workflows were completely manual.
+                Modern Bungalow, a premium home goods and furniture retailer specializing in contemporary design, was experiencing rapid growth through their Shopify store. However, their success was creating operational bottlenecks—every order required manual data entry into QuickBooks, customer communications were handled individually, and order fulfillment workflows were completely manual processes consuming entire workdays.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                The native Shopify-QuickBooks integration wasn't working for their business model—it created duplicate entries, couldn't handle their custom pricing structures, and failed to sync properly during high-volume sales periods. Their team was spending 20+ hours per week on repetitive administrative tasks that should have been automated.
+                The native Shopify-QuickBooks integration wasn't suited for their sophisticated business model—it created duplicate entries, couldn't handle their custom pricing structures for trade customers, and failed to sync properly during high-volume sales periods. With their focus on quality home furnishings and exceptional customer experience, their team was spending 20+ hours per week on repetitive administrative tasks instead of growing the business and serving customers.
               </p>
             </SimpleScrollReveal>
 
@@ -272,7 +293,7 @@ export default function ModernBungalowCaseStudy() {
                   The Business Impact
                 </h3>
                 <p className="text-lg lg:text-xl text-gray-700 dark:text-gray-300 text-center leading-relaxed">
-                  This automation system transformed Modern Bungalow's operations. The team went from spending entire days on manual order processing to having everything handled automatically—freeing them to focus on business growth instead of administrative work. The system now processes hundreds of orders weekly with zero manual intervention while maintaining perfect accuracy.
+                  This automation system transformed Modern Bungalow's operations, allowing them to maintain their commitment to exceptional customer service while scaling efficiently. The team went from spending entire days on manual order processing to having everything handled automatically—freeing them to focus on curating beautiful home goods, building customer relationships, and expanding their contemporary furniture collection. The system now processes hundreds of orders weekly with zero manual intervention while maintaining the attention to detail their brand is known for.
                 </p>
               </div>
             </SimpleScrollReveal>

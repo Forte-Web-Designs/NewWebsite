@@ -12,15 +12,15 @@ const caseStudies = [
   {
     id: 'modern-bungalow',
     title: 'Modern Bungalow',
-    subtitle: 'Automated E-commerce Order Processing & Accounting Sync',
-    challenge: 'Manual order processing and QuickBooks sync issues causing 20+ hours/week of repetitive work',
-    solution: 'Custom n8n automation system with intelligent order sync, automated email workflows, and multi-channel inventory management',
+    subtitle: 'Home Goods E-commerce Automation & Accounting Sync',
+    challenge: 'Premium home goods retailer struggling with manual order processing and QuickBooks sync causing 20+ hours/week of repetitive work',
+    solution: 'Custom n8n automation system with intelligent order sync, automated customer communications, and multi-channel inventory management for contemporary furniture business',
     results: [
       '95% reduction in manual data entry',
       '20+ hours per week saved on order processing',
       '100% order accuracy with zero duplicates'
     ],
-    tags: ['E-commerce Automation', 'QuickBooks Integration', 'Order Processing'],
+    tags: ['Home Goods E-commerce', 'QuickBooks Integration', 'Shopify Automation'],
     gradient: 'from-emerald-600 to-teal-600'
   },
   {
@@ -80,18 +80,18 @@ const caseStudies = [
     gradient: 'from-pink-600 to-red-600'
   },
   {
-    id: 'summit-supply-chain',
-    title: 'Summit Supply Chain',
-    subtitle: 'AI-Powered Procurement Analytics',
-    challenge: 'Manual procurement processes slowing decision-making and supplier assessments',
-    solution: 'AI analytics system integrated with SQL databases for real-time intelligence',
+    id: 'hollow-bamboo',
+    title: 'Hollow Bamboo Film Productions',
+    subtitle: 'Custom Google Sheets Inventory Automation System',
+    challenge: 'Manually tracking hundreds of equipment items across multiple film sets with no real-time visibility',
+    solution: 'Custom Google Sheets automation with QR code mobile access and real-time multi-location sync',
     results: [
-      '85% faster query response times',
-      '40% faster procurement decisions',
-      'Supplier assessments in under 30 minutes'
+      '20+ hrs/week saved on manual inventory updates',
+      '6 locations tracked with real-time sync',
+      '100% equipment visibility across all sets'
     ],
-    tags: ['AI Analytics', 'Data Integration', 'Procurement'],
-    gradient: 'from-red-600 to-orange-600'
+    tags: ['Google Sheets Automation', 'Inventory Management', 'Film Production'],
+    gradient: 'from-green-600 to-emerald-600'
   }
 ];
 
