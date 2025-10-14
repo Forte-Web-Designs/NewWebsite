@@ -38,17 +38,17 @@ const caseStudies = [
     gradient: 'from-blue-600 to-indigo-600'
   },
   {
-    id: 'metroeats',
-    title: 'MetroEats',
-    subtitle: 'AI-Powered Restaurant Discovery',
-    challenge: 'Manually sourcing and onboarding restaurant partners was slowing expansion',
-    solution: 'AI-powered partner discovery system with web crawling and automated lead pipeline',
+    id: 'revolut',
+    title: 'Revolut (Fintech)',
+    subtitle: 'AI-Powered Financial Analytics & Automated Insight Generation',
+    challenge: 'Analyzing 200K+ transactions across 90 days to identify profitability drivers and develop £4M growth strategy',
+    solution: 'AI-powered financial analytics automation system with intelligent data cleaning, automated analysis, and executive reporting',
     results: [
-      '85% contact info coverage on all leads',
-      '40% increase in monthly sign-ups',
-      'Multi-city expansion within 6 months'
+      '90% reduction in analysis time through automation',
+      '40 hrs/week saved on manual reporting',
+      '£4M growth pathway identified and quantified'
     ],
-    tags: ['AI Automation', 'Lead Generation', 'Data Pipeline'],
+    tags: ['AI Analytics', 'Financial Automation', 'Data Processing'],
     gradient: 'from-indigo-600 to-purple-600'
   },
   {

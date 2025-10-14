@@ -92,9 +92,9 @@ const caseStudies = [
     href: "/case-studies/summit-gaming-lounge"
   },
   {
-    client: "MetroEats",
-    outcome: "Lead generation automation increased qualified leads by 40%",
-    href: "/case-studies/metroeats"
+    client: "Revolut (Fintech)",
+    outcome: "AI-powered analytics saved 40 hrs/week and identified £4M growth pathway",
+    href: "/case-studies/revolut"
   },
   {
     client: "Fetchly",
