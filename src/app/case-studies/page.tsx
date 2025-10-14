@@ -66,18 +66,18 @@ const caseStudies = [
     gradient: 'from-purple-600 to-pink-600'
   },
   {
-    id: 'clearwater-systems',
-    title: 'ClearWater Systems',
-    subtitle: 'AI-Powered Quoting & CRM Automation',
-    challenge: 'Lost time on manual quotes, email replies, and disorganized lead tracking',
-    solution: 'AI-driven quoting and CRM automation that operates 24/7',
+    id: 'fast-track-auction',
+    title: 'Fast Track Auction',
+    subtitle: 'AI-Powered Marketplace Listing & Social Automation System',
+    challenge: 'Manual product listing creation, market research, and social media posting consuming significant hours weekly',
+    solution: 'AI-driven marketplace automation with intelligent product scoring, automated content generation, and social media posting',
     results: [
-      '80% reduction in manual quoting time',
-      'Same-day quotes that win more deals',
-      'Seamless scaling as leads grow'
+      '24/7 automated operation across all processes',
+      'AI-powered product scoring and market intelligence',
+      'Automated Facebook and Instagram posting with performance tracking'
     ],
-    tags: ['AI Automation', 'CRM', 'Quote Generation'],
-    gradient: 'from-pink-600 to-red-600'
+    tags: ['AI Marketplace Automation', 'Social Media Automation', 'Product Scoring'],
+    gradient: 'from-orange-600 to-red-600'
   },
   {
     id: 'hollow-bamboo',
