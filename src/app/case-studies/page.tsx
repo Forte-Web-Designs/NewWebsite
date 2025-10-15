@@ -20,7 +20,7 @@ const caseStudies = [
       '$52K annual labor cost savings',
       '24/7 autonomous operation processing 3,000 products monthly'
     ],
-    tags: ['🏆 FLAGSHIP PROJECT', 'Enterprise AI Automation', 'Multi-Platform Distribution', 'Market Intelligence'],
+    tags: ['FLAGSHIP PROJECT', 'Enterprise AI Automation', 'Multi-Platform Distribution', 'Market Intelligence'],
     gradient: 'from-blue-600 to-indigo-600',
     featured: true
   },
@@ -126,7 +126,6 @@ export default function CaseStudiesPage() {
                     {/* Featured Flag */}
                     {study.featured && (
                       <div className="inline-flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-white text-xs font-bold mb-4 w-fit shadow-lg">
-                        <span>🏆</span>
                         FLAGSHIP ENTERPRISE PROJECT
                       </div>
                     )}
@@ -189,7 +188,7 @@ export default function CaseStudiesPage() {
                         <span
                           key={idx}
                           className={`px-3 py-1 rounded-full text-xs font-medium ${
-                            tag.includes('🏆 FLAGSHIP') 
+                            tag.includes('FLAGSHIP') 
                               ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-sm' 
                               : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300'
                           }`}

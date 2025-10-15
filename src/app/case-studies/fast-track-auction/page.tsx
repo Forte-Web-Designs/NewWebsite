@@ -24,7 +24,6 @@ export default function CRDealsCaseStudy() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-12">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-white text-sm font-bold mb-6 shadow-lg">
-                <span>🏆</span>
                 FLAGSHIP ENTERPRISE PROJECT
               </div>
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-gray-900 dark:text-white mb-6">
@@ -64,8 +63,7 @@ export default function CRDealsCaseStudy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <div className="mb-16">
-              <div className="flex items-center gap-3 mb-8">
-                <span className="text-4xl">⚠️</span>
+              <div className="mb-8">
                 <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white">
                   The Challenge
                 </h2>
@@ -97,8 +95,7 @@ export default function CRDealsCaseStudy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <div className="mb-16">
-              <div className="flex items-center gap-3 mb-8">
-                <span className="text-4xl">✨</span>
+              <div className="mb-8">
                 <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white">
                   The Solution
                 </h2>
@@ -134,8 +131,7 @@ export default function CRDealsCaseStudy() {
             
             <div className="space-y-8">
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="text-3xl">🎯</span>
+                <div className="mb-4">
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       Enterprise AI Product Scoring & Market Intelligence
@@ -148,8 +144,7 @@ export default function CRDealsCaseStudy() {
               </div>
 
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="text-3xl">✍️</span>
+                <div className="mb-4">
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       High-Volume AI Content Generation
@@ -162,8 +157,7 @@ export default function CRDealsCaseStudy() {
               </div>
 
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="text-3xl">🔗</span>
+                <div className="mb-4">
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       Multi-Source Data Integration
@@ -176,8 +170,7 @@ export default function CRDealsCaseStudy() {
               </div>
 
               <div className="bg-white dark:bg-gray-900 rounded-xl p-6 sm:p-8 border border-gray-200 dark:border-gray-700">
-                <div className="flex items-start gap-4 mb-4">
-                  <span className="text-3xl">📱</span>
+                <div className="mb-4">
                   <div>
                     <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                       Facebook & Instagram Enterprise Automation
@@ -191,8 +184,7 @@ export default function CRDealsCaseStudy() {
 
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                  <div className="flex items-start gap-4 mb-4">
-                    <span className="text-3xl">📊</span>
+                  <div className="mb-4">
                     <div>
                       <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                         Real-Time Performance Dashboard
@@ -205,8 +197,7 @@ export default function CRDealsCaseStudy() {
                 </div>
 
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                  <div className="flex items-start gap-4 mb-4">
-                    <span className="text-3xl">🖼️</span>
+                  <div className="mb-4">
                     <div>
                       <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
                         Professional Image Processing & Branding
