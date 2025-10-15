@@ -87,6 +87,11 @@ const processSteps = [
 
 const caseStudies = [
   {
+    client: "CR Deals Cincinnati",
+    outcome: "Enterprise AI automation saved 1,040+ hours annually with $52K cost savings",
+    href: "/case-studies/fast-track-auction"
+  },
+  {
     client: "Summit Gaming Lounge",
     outcome: "Automated booking system reduced manual work by 15 hours/week",
     href: "/case-studies/summit-gaming-lounge"

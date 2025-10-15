@@ -10,6 +10,21 @@ export const metadata: Metadata = {
 
 const caseStudies = [
   {
+    id: 'fast-track-auction',
+    title: 'CR Deals Cincinnati',
+    subtitle: 'Enterprise AI-Powered Marketplace Automation & Multi-Platform Social Distribution System',
+    challenge: 'Leading Cincinnati auction and resale operation facing critical scaling bottleneck with 1,500-3,000 monthly products overwhelming manual processes',
+    solution: 'Comprehensive enterprise-grade AI automation system with real-time market intelligence, automated content generation for 50-100 products daily, and multi-platform social distribution',
+    results: [
+      '1,040+ hours saved annually',
+      '$52K annual labor cost savings',
+      '24/7 autonomous operation processing 3,000 products monthly'
+    ],
+    tags: ['🏆 FLAGSHIP PROJECT', 'Enterprise AI Automation', 'Multi-Platform Distribution', 'Market Intelligence'],
+    gradient: 'from-blue-600 to-indigo-600',
+    featured: true
+  },
+  {
     id: 'modern-bungalow',
     title: 'Modern Bungalow',
     subtitle: 'Home Goods E-commerce Automation & Accounting Sync',
@@ -66,20 +81,6 @@ const caseStudies = [
     gradient: 'from-purple-600 to-pink-600'
   },
   {
-    id: 'fast-track-auction',
-    title: 'Fast Track Auction',
-    subtitle: 'AI-Powered Marketplace Listing & Social Automation System',
-    challenge: 'Manual product listing creation, market research, and social media posting consuming significant hours weekly',
-    solution: 'AI-driven marketplace automation with intelligent product scoring, automated content generation, and social media posting',
-    results: [
-      '24/7 automated operation across all processes',
-      'AI-powered product scoring and market intelligence',
-      'Automated Facebook and Instagram posting with performance tracking'
-    ],
-    tags: ['AI Marketplace Automation', 'Social Media Automation', 'Product Scoring'],
-    gradient: 'from-orange-600 to-red-600'
-  },
-  {
     id: 'hollow-bamboo',
     title: 'Hollow Bamboo Film Productions',
     subtitle: 'Custom Google Sheets Inventory Automation System',
@@ -121,7 +122,15 @@ export default function CaseStudiesPage() {
             {caseStudies.map((study, index) => (
               <SimpleScrollReveal key={study.id} direction="up" delay={index * 100}>
                 <Link href={`/case-studies/${study.id}`} className="block group h-full">
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-2xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
+                  <div className={`${study.featured ? 'bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-2 border-blue-200 dark:border-blue-700' : 'bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700'} rounded-2xl p-8 hover:shadow-2xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 h-full flex flex-col`}>
+                    {/* Featured Flag */}
+                    {study.featured && (
+                      <div className="inline-flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-white text-xs font-bold mb-4 w-fit shadow-lg">
+                        <span>🏆</span>
+                        FLAGSHIP ENTERPRISE PROJECT
+                      </div>
+                    )}
+
                     {/* Header with Gradient */}
                     <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${study.gradient} mb-6 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
                       <Icon name="check" className="w-8 h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
@@ -179,7 +188,11 @@ export default function CaseStudiesPage() {
                       {study.tags.map((tag, idx) => (
                         <span
                           key={idx}
-                          className="px-3 py-1 bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-full text-xs font-medium text-gray-700 dark:text-gray-300"
+                          className={`px-3 py-1 rounded-full text-xs font-medium ${
+                            tag.includes('🏆 FLAGSHIP') 
+                              ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-sm' 
+                              : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300'
+                          }`}
                         >
                           {tag}
                         </span>
