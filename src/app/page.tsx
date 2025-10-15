@@ -393,8 +393,111 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Featured Case Study */}
+        <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12 sm:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+                  Real Results for Real Businesses
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                  See how we've helped companies transform their operations with enterprise AI automation.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={200}>
+              <Link href="/case-studies/fast-track-auction" className="block group">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 sm:p-12 border-2 border-blue-200 dark:border-blue-700 hover:shadow-2xl transition-all duration-300 group-hover:border-blue-300 dark:group-hover:border-blue-600">
+                  {/* Featured Flag */}
+                  <div className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-white text-sm font-bold mb-6 shadow-lg">
+                    FLAGSHIP ENTERPRISE PROJECT
+                  </div>
+
+                  <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                    {/* Left: Content */}
+                    <div>
+                      <h3 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        CR Deals Cincinnati
+                      </h3>
+                      <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+                        Enterprise AI-Powered Marketplace Automation & Multi-Platform Social Distribution System
+                      </p>
+                      <p className="text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
+                        Leading Cincinnati auction and resale operation transformed their entire workflow with our comprehensive AI automation system, processing 3,000+ products monthly while saving over 1,000 hours annually.
+                      </p>
+                      
+                      <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold text-lg">
+                        Read Full Case Study
+                        <svg className="w-6 h-6 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
+                    </div>
+
+                    {/* Right: Metrics */}
+                    <div className="grid grid-cols-2 gap-6">
+                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+                        <div className="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                          1,040+
+                        </div>
+                        <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                          Hours Saved Annually
+                        </div>
+                      </div>
+                      
+                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+                        <div className="text-3xl sm:text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
+                          $52K
+                        </div>
+                        <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                          Annual Cost Savings
+                        </div>
+                      </div>
+                      
+                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+                        <div className="text-3xl sm:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                          3,000
+                        </div>
+                        <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                          Products/Month Processed
+                        </div>
+                      </div>
+                      
+                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
+                        <div className="text-3xl sm:text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+                          24/7
+                        </div>
+                        <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
+                          Autonomous Operation
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Link>
+            </SimpleScrollReveal>
+
+            {/* See More CTA */}
+            <SimpleScrollReveal direction="up" delay={400}>
+              <div className="text-center mt-8 sm:mt-12">
+                <Link 
+                  href="/case-studies"
+                  className="inline-flex items-center gap-2 px-8 py-4 border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white hover:bg-gray-900 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 rounded-lg font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                >
+                  See More Case Studies
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
         {/* Resources Preview */}
-        <section id="resources" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+        <section id="resources" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12 sm:mb-16">
