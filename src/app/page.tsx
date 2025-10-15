@@ -437,40 +437,40 @@ export default function Home() {
                     </div>
 
                     {/* Right: Metrics */}
-                    <div className="grid grid-cols-2 gap-6">
-                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
-                        <div className="text-3xl sm:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-2">
+                    <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:gap-6">
+                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-3 sm:p-4 lg:p-6 shadow-sm border border-gray-200 dark:border-gray-700 min-h-[90px] sm:min-h-[100px] lg:min-h-[120px] flex flex-col justify-center">
+                        <div className="text-xl sm:text-2xl lg:text-4xl font-bold text-blue-600 dark:text-blue-400 mb-1 leading-none">
                           1,040+
                         </div>
-                        <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                          Hours Saved Annually
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600 dark:text-gray-400 leading-tight px-1">
+                          Hours Saved<br />Annually
                         </div>
                       </div>
                       
-                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
-                        <div className="text-3xl sm:text-4xl font-bold text-green-600 dark:text-green-400 mb-2">
+                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-3 sm:p-4 lg:p-6 shadow-sm border border-gray-200 dark:border-gray-700 min-h-[90px] sm:min-h-[100px] lg:min-h-[120px] flex flex-col justify-center">
+                        <div className="text-xl sm:text-2xl lg:text-4xl font-bold text-green-600 dark:text-green-400 mb-1 leading-none">
                           $52K
                         </div>
-                        <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                          Annual Cost Savings
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600 dark:text-gray-400 leading-tight px-1">
+                          Annual Cost<br />Savings
                         </div>
                       </div>
                       
-                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
-                        <div className="text-3xl sm:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-2">
+                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-3 sm:p-4 lg:p-6 shadow-sm border border-gray-200 dark:border-gray-700 min-h-[90px] sm:min-h-[100px] lg:min-h-[120px] flex flex-col justify-center">
+                        <div className="text-xl sm:text-2xl lg:text-4xl font-bold text-purple-600 dark:text-purple-400 mb-1 leading-none">
                           3,000
                         </div>
-                        <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                          Products/Month Processed
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600 dark:text-gray-400 leading-tight px-1">
+                          Products/Month<br />Processed
                         </div>
                       </div>
                       
-                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm border border-gray-200 dark:border-gray-700">
-                        <div className="text-3xl sm:text-4xl font-bold text-orange-600 dark:text-orange-400 mb-2">
+                      <div className="text-center bg-white dark:bg-gray-800 rounded-xl p-3 sm:p-4 lg:p-6 shadow-sm border border-gray-200 dark:border-gray-700 min-h-[90px] sm:min-h-[100px] lg:min-h-[120px] flex flex-col justify-center">
+                        <div className="text-xl sm:text-2xl lg:text-4xl font-bold text-orange-600 dark:text-orange-400 mb-1 leading-none">
                           24/7
                         </div>
-                        <div className="text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                          Autonomous Operation
+                        <div className="text-xs sm:text-sm lg:text-base text-gray-600 dark:text-gray-400 leading-tight px-1">
+                          Autonomous<br />Operation
                         </div>
                       </div>
                     </div>
