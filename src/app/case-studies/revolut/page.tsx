@@ -289,18 +289,27 @@ export default function RevolutCaseStudy() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
-                Ready to Automate Your Financial Analytics?
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+                Ready to Automate Your Operations?
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
+              <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
                 See how we can build a custom automation solution for your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link href="/contact">
-                  <DarkButton>Book a Strategy Call</DarkButton>
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
+                >
+                  Book a Strategy Call
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
-                <Link href="/case-studies">
-                  <LightButton>View More Case Studies</LightButton>
+                <Link
+                  href="/case-studies"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800 rounded-lg font-semibold transition-all duration-200"
+                >
+                  View More Case Studies
                 </Link>
               </div>
             </div>
