@@ -37,22 +37,6 @@ export default function ModernBungalowCaseStudy() {
               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6">
                 Case Study
               </span>
-              {/* Client Logo */}
-              <div className="mb-8">
-                <div className="inline-flex items-center justify-center w-32 h-16 bg-white rounded-xl shadow-lg mb-4">
-                  <div className="text-emerald-600 font-bold text-lg tracking-wide">
-                    <div className="flex items-center gap-2">
-                      <div className="w-8 h-8 bg-emerald-600 rounded text-white flex items-center justify-center text-sm font-bold">
-                        MB
-                      </div>
-                      <div className="text-sm">
-                        <div className="font-bold">MODERN</div>
-                        <div className="font-bold -mt-1">BUNGALOW</div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
               <h1 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-white mb-6">
                 Modern Bungalow
               </h1>
@@ -96,14 +80,32 @@ export default function ModernBungalowCaseStudy() {
 
             <SimpleScrollReveal direction="up" delay={100}>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                The Solution
+                Client Feedback
               </h2>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                We built a custom automation system that Shopify's native tools simply couldn't provide. Using n8n and strategic API integrations, we created an intelligent order processing pipeline that automatically syncs orders to QuickBooks with proper tax allocation, triggers customized email workflows based on order type and customer history, and manages inventory updates across multiple sales channels in real-time.
-              </p>
-              <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                The system handles everything from order placement to accounting reconciliation without any manual intervention, while maintaining complete accuracy and providing detailed audit trails for compliance.
-              </p>
+              <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-2xl p-8 border-2 border-emerald-200 dark:border-emerald-700">
+                <div className="flex items-start gap-4">
+                  <div className="flex-shrink-0">
+                    <div className="w-12 h-12 bg-gradient-to-br from-emerald-600 to-teal-600 rounded-full flex items-center justify-center">
+                      <Icon name="quote" className="w-6 h-6 text-white" />
+                    </div>
+                  </div>
+                  <div>
+                    <blockquote className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-4 italic">
+                      "Seth is super responsive and very proactive with communication throughout the stages of the project. He's super knowledgeable about automations, n8n, scripting and webhooks. He's very good at thinking through the logic of how to best automate a process, and then executing on that vision. Definitely will work with him again."
+                    </blockquote>
+                    <div className="flex items-center gap-3">
+                      <div className="text-sm font-semibold text-gray-900 dark:text-white">
+                        Modern Bungalow Client
+                      </div>
+                      <div className="flex items-center gap-1">
+                        {[...Array(5)].map((_, i) => (
+                          <Icon key={i} name="star" className="w-4 h-4 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </SimpleScrollReveal>
           </div>
         </div>

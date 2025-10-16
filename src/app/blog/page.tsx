@@ -12,6 +12,18 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'business-automation-roi-guide-2025',
+    title: 'The Complete ROI Guide to Business Automation in 2025',
+    excerpt: 'Real case studies showing $52K+ in annual savings, 1,040+ hours saved, and 340% first-year returns. Complete guide with calculations, implementation strategies, and proven results from enterprise automation systems.',
+    author: 'Seth Forte',
+    date: '2025-10-15',
+    readTime: '12 min read',
+    category: 'ROI & Analytics',
+    tags: ['Business Automation', 'ROI Analysis', 'Cost Savings', 'Process Optimization'],
+    featured: true,
+    gradient: 'from-green-600 to-emerald-600'
+  },
+  {
     id: 'ai-automation-myths-small-business-owners-believe',
     title: '5 AI Automation Myths Small Business Owners Believe (And Why They\'re Wrong)',
     excerpt: 'AI automation isn\'t just for Fortune 500 companies. Small businesses are using intelligent systems to save 15+ hours per week, reduce errors, and scale without hiring. Here\'s what most business owners get wrong about AI—and what it can actually do for you.',
