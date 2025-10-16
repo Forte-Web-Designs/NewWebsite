@@ -24,20 +24,20 @@ const caseStudies = [
     gradient: 'from-blue-600 to-indigo-600',
     featured: true
   },
-  {
-    id: 'modern-bungalow',
-    title: 'Modern Bungalow',
-    subtitle: 'Home Goods E-commerce Automation & Accounting Sync',
-    challenge: 'Premium home goods retailer struggling with manual order processing and QuickBooks sync causing 20+ hours/week of repetitive work',
-    solution: 'Custom n8n automation system with intelligent order sync, automated customer communications, and multi-channel inventory management for contemporary furniture business',
-    results: [
-      '95% reduction in manual data entry',
-      '20+ hours per week saved on order processing',
-      '100% order accuracy with zero duplicates'
-    ],
-    tags: ['Home Goods E-commerce', 'QuickBooks Integration', 'Shopify Automation'],
-    gradient: 'from-emerald-600 to-teal-600'
-  },
+  // {
+  //   id: 'modern-bungalow',
+  //   title: 'Modern Bungalow',
+  //   subtitle: 'Home Goods E-commerce Automation & Accounting Sync',
+  //   challenge: 'Premium home goods retailer struggling with manual order processing and QuickBooks sync causing 20+ hours/week of repetitive work',
+  //   solution: 'Custom n8n automation system with intelligent order sync, automated customer communications, and multi-channel inventory management for contemporary furniture business',
+  //   results: [
+  //     '95% reduction in manual data entry',
+  //     '20+ hours per week saved on order processing',
+  //     '100% order accuracy with zero duplicates'
+  //   ],
+  //   tags: ['Home Goods E-commerce', 'QuickBooks Integration', 'Shopify Automation'],
+  //   gradient: 'from-emerald-600 to-teal-600'
+  // },
   {
     id: 'summit-gaming-lounge',
     title: 'Summit Gaming Lounge',
