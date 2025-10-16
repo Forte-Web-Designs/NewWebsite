@@ -95,7 +95,7 @@ export default function ModernBungalowCaseStudy() {
                     </blockquote>
                     <div className="flex items-center gap-3">
                       <div className="text-sm font-semibold text-gray-900 dark:text-white">
-                        Modern Bungalow Client
+                        Modern Bungalow
                       </div>
                       <div className="flex items-center gap-1">
                         {[...Array(5)].map((_, i) => (
