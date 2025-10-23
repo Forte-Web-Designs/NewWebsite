@@ -240,7 +240,7 @@ export default function ServicesPage() {
                 Build solutions that don't exist off-the-shelf
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
-                We specialize in business automation software and internal tools—custom applications that eliminate manual work and scale your operations.
+                We specialize in business automation software and internal tools. Custom applications that eliminate manual work and scale your operations.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -273,7 +273,7 @@ export default function ServicesPage() {
                     Internal Business Tools
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Custom applications that automate your unique workflows—inventory systems, project management tools, client portals, or specialized operational software.
+                    Custom applications that automate your unique workflows. Inventory systems, project management tools, client portals, or specialized operational software.
                   </p>
                 </div>
 
@@ -359,15 +359,15 @@ export default function ServicesPage() {
               </h4>
               <div className="grid md:grid-cols-3 gap-6">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">20+ hrs/week</div>
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">20+ hrs/week saved</div>
                   <p className="text-sm text-gray-700 dark:text-gray-300">Custom inventory management system for film production company</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">£4M pathway</div>
+                  <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">£4M growth pathway identified</div>
                   <p className="text-sm text-gray-700 dark:text-gray-300">AI-powered financial analytics platform for fintech</p>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">15 hrs/week</div>
+                  <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">15 hrs/week saved</div>
                   <p className="text-sm text-gray-700 dark:text-gray-300">Multi-location booking system with real-time sync</p>
                 </div>
               </div>
@@ -387,10 +387,10 @@ export default function ServicesPage() {
                 </svg>
               </Link>
               <Link
-                href="/case-studies"
+                href="/services/custom-software"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg font-semibold transition-all duration-200"
               >
-                View Case Studies
+                Learn More
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

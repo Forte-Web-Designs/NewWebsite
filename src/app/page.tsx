@@ -60,7 +60,7 @@ export default function Home() {
       title: "Custom Software Development",
       subtitle: "Purpose-built solutions for your unique needs",
       description: "Custom dashboards, internal tools, and specialized applications built from scratch. No templates, no limitations—just intelligent software engineered specifically for how your business operates.",
-      link: "/services#software-development"
+      link: "/services/custom-software"
     },
     {
       icon: "services",
