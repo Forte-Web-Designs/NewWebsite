@@ -38,8 +38,12 @@ export default function FAQ() {
           a: "AI automation projects range from $5,000 for simple workflows (like automated lead routing and follow-ups) to $30,000+ for complete business systems. Most clients save 15-20 hours per week within the first month—that's $50K+ in reclaimed time annually if you value your time at $50/hour. Plus, automated systems work 24/7 without vacation, sick days, or training. We're currently booking 4 weeks out, but we have 2 priority slots open this month for clients ready to move. Interested?"
         },
         {
+          q: "How much does custom software development cost?",
+          a: "Custom software projects typically range from $5,000-$50,000+ depending on complexity and scope. Whether you need custom dashboards, internal tools, API integrations, or data processing systems—we provide detailed project estimates after our discovery call. All projects include source code ownership, comprehensive documentation, training, and ongoing support options. The investment pays for itself through improved efficiency, better data insights, and streamlined operations."
+        },
+        {
           q: "Do you offer payment plans?",
-          a: "Yes! We offer flexible payment plans for projects over $5,000. Typical terms are 50% upfront, 50% at launch—or we can split it into 3-4 monthly installments. We also offer Forte Care™ monthly retainers ($500-$2,000/month) that include ongoing optimization, support, and continuous improvements. Think of it as having a dedicated growth team without the full-time salary. Want to discuss options that work for your budget?"
+          a: "Yes! We offer flexible payment plans for projects over $5,000. Typical terms are 50% upfront, 50% at launch—or we can split it into 3-4 monthly installments. We also offer ongoing retainer plans ($497-$1,997/month) for maintenance, updates, and strategic support—with no long-term contracts required. Think of it as having a dedicated growth team without the full-time salary. Want to discuss options that work for your budget?"
         },
         {
           q: "Is there a money-back guarantee?",
@@ -52,7 +56,7 @@ export default function FAQ() {
       questions: [
         {
           q: "What exactly do you build?",
-          a: "We build three core solutions: (1) Custom Websites that convert visitors into customers—hand-coded, fast, SEO-optimized, and built to showcase YOUR brand. (2) AI Automation that handles repetitive work—lead routing, email responses, CRM updates, data entry, and customer communications. (3) Complete Business Systems that connect your website, CRM, email, calendar, and tools into one intelligent operation. Most clients come to us for one and end up wanting all three because they see the ROI. Which one sounds most valuable to you right now?"
+          a: "We build four core solutions: (1) Custom Websites that convert visitors into customers—hand-coded, fast, SEO-optimized, and built to showcase YOUR brand. (2) AI Automation that handles repetitive work—lead routing, email responses, CRM updates, data entry, and customer communications. (3) Custom Software Development including dashboards, internal tools, API integrations, and data processing systems. (4) Complete Business Systems that connect your website, CRM, email, calendar, and tools into one intelligent operation. Most clients come to us for one and end up wanting all four because they see the ROI. Which one sounds most valuable to you right now?"
         },
         {
           q: "Can you integrate with my existing tools?",
@@ -60,7 +64,7 @@ export default function FAQ() {
         },
         {
           q: "Do you offer ongoing support after launch?",
-          a: "Yes—through Forte Care™, our monthly retainer service ($500-$2,000/month). This includes hosting, security updates, performance monitoring, ongoing optimization, priority support, and continuous improvements based on data. Think of it as having a dedicated growth team that ensures your systems stay fast, secure, and improving. Launch day isn't goodbye—we stick around to make sure you win. Want to see what's included?"
+          a: "Yes—through our retainer plans ($497-$1,997/month) with no long-term contracts required. Choose Essential Care for basic maintenance, Growth Partner for comprehensive support (most popular), or Priority Partner for hands-on strategic partnership. This includes hosting, security updates, performance monitoring, ongoing optimization, priority support, and continuous improvements based on data. Think of it as having a dedicated growth team that ensures your systems stay fast, secure, and improving. Launch day isn't goodbye—we stick around to make sure you win. Want to see what's included?"
         },
         {
           q: "How is this different from hiring a developer or VA?",

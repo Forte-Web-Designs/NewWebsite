@@ -27,10 +27,27 @@ const services = [
     gradient: "from-blue-600 to-indigo-600"
   },
   {
+    id: "software-development",
+    icon: "services",
+    title: "Custom Software Development",
+    tagline: "Purpose-built solutions for your unique needs",
+    description: "Custom dashboards, internal tools, and specialized applications built from scratch. No templates, no limitations—just intelligent software engineered specifically for how your business operates.",
+    benefits: [
+      "Custom-built applications and tools",
+      "Scalable architecture designed for growth",
+      "API integrations with existing systems",
+      "Real-time dashboards and reporting",
+      "Ongoing support and enhancements"
+    ],
+    cta: "Learn More",
+    href: "/services#software-development",
+    gradient: "from-indigo-600 to-purple-600"
+  },
+  {
     id: "web-design",
     icon: "services",
-    title: "Custom Web Design",
-    tagline: "Websites that actually convert",
+    title: "Web Design & Digital Presence",
+    tagline: "Professional websites that showcase your brand",
     description: "Hand-coded, high-performance websites designed to turn visitors into customers. Fast, SEO-optimized, and built to showcase your brand and drive real results.",
     benefits: [
       "Custom design tailored to your brand",
@@ -41,7 +58,7 @@ const services = [
     ],
     cta: "View Web Design",
     href: "/services",
-    gradient: "from-indigo-600 to-purple-600"
+    gradient: "from-purple-600 to-pink-600"
   },
   {
     id: "integrations",
@@ -58,7 +75,7 @@ const services = [
     ],
     cta: "Learn About Integrations",
     href: "/services/automation-ai",
-    gradient: "from-purple-600 to-pink-600"
+    gradient: "from-pink-600 to-red-600"
   }
 ];
 
@@ -117,10 +134,10 @@ export default function ServicesPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white mb-6">
-                AI Automation & Web Design
+                AI Automation & Custom Software
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                We build intelligent systems that save time, websites that convert, and integrations that scale your business. Everything custom-built for your unique needs.
+                We build intelligent automation systems, custom software solutions, and integrations that eliminate manual work and scale your business. Everything custom-built for your unique needs.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -211,8 +228,180 @@ export default function ServicesPage() {
         </div>
       </section>
 
+      {/* Custom Software Development Section */}
+      <section id="software-development" className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
+                Custom Software Development
+              </h2>
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-4">
+                Build solutions that don't exist off-the-shelf
+              </p>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+                We specialize in business automation software and internal tools—custom applications that eliminate manual work and scale your operations.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          {/* What We Build */}
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="mb-16">
+              <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+                What We Build
+              </h3>
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                    <Icon name="trending-up" className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    Custom Dashboards & Analytics
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Real-time visibility into your operations with custom-built dashboards pulling data from multiple sources into one unified view.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-600 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                    <Icon name="services" className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    Internal Business Tools
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Custom applications that automate your unique workflows—inventory systems, project management tools, client portals, or specialized operational software.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-xl flex items-center justify-center mb-6">
+                    <Icon name="flash" className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    API Integrations & Middleware
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Connect systems that weren't designed to talk to each other. Custom middleware that bridges the gap between your existing tools and creates seamless data flow.
+                  </p>
+                </div>
+
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+                  <div className="w-12 h-12 bg-gradient-to-br from-pink-600 to-red-600 rounded-xl flex items-center justify-center mb-6">
+                    <Icon name="puzzle" className="w-6 h-6 text-white" />
+                  </div>
+                  <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-3">
+                    Data Processing & Automation
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    Handle complex data transformations, automated reporting, and intelligent processing that goes beyond what standard automation platforms can do.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+
+          {/* What You Get & Perfect For */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-16">
+            <SimpleScrollReveal direction="up" delay={200}>
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                  What You Get:
+                </h4>
+                <ul className="space-y-3">
+                  {[
+                    "Fully custom-built web applications",
+                    "Scalable architecture designed for growth", 
+                    "Clean, maintainable code",
+                    "Comprehensive documentation & training",
+                    "Ongoing support & enhancements",
+                    "Source code ownership"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <Icon name="check" className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700 dark:text-gray-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+                <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+                  Perfect For:
+                </h4>
+                <ul className="space-y-3">
+                  {[
+                    "Businesses with unique processes that don't fit existing software",
+                    "Companies outgrowing their current systems",
+                    "Teams spending hours on manual work that should be automated",
+                    "Operations that need custom reporting or analytics"
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <Icon name="star" className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
+                      <span className="text-gray-700 dark:text-gray-300">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+
+          {/* Recent Projects */}
+          <SimpleScrollReveal direction="up" delay={400}>
+            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border-2 border-blue-200 dark:border-blue-700 mb-12">
+              <h4 className="text-xl font-bold text-gray-900 dark:text-white mb-6 text-center">
+                Recent Projects:
+              </h4>
+              <div className="grid md:grid-cols-3 gap-6">
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-blue-600 dark:text-blue-400 mb-2">20+ hrs/week</div>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">Custom inventory management system for film production company</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-green-600 dark:text-green-400 mb-2">£4M pathway</div>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">AI-powered financial analytics platform for fintech</p>
+                </div>
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-purple-600 dark:text-purple-400 mb-2">15 hrs/week</div>
+                  <p className="text-sm text-gray-700 dark:text-gray-300">Multi-location booking system with real-time sync</p>
+                </div>
+              </div>
+            </div>
+          </SimpleScrollReveal>
+
+          {/* CTAs */}
+          <SimpleScrollReveal direction="up" delay={500}>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 rounded-lg font-semibold transition-all duration-200 shadow-lg"
+              >
+                Book a Strategy Call
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg font-semibold transition-all duration-200"
+              >
+                View Case Studies
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
       {/* Process Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
+      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">

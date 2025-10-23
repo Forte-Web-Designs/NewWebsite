@@ -42,6 +42,7 @@ export default function Footer() {
       heading: "Services",
       points: [
         { text: "AI Automation", href: "/services/automation-ai" },
+        { text: "Custom Software", href: "/services#software-development" },
         { text: "Web Design", href: "/services/web-design" },
         { text: "Forte Care™", href: "/services/forte-care" },
         { text: "Case Studies", href: "/case-studies" }
@@ -100,7 +101,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>Custom AI automation and web design for ambitious businesses. We build intelligent systems that eliminate manual work and scale with your growth.</p>
+              <p>Custom AI automation and software development for ambitious businesses. We build intelligent systems that eliminate manual work and scale with your growth.</p>
               <p className="mt-3">
                 <strong>Headquartered in Grapevine, Texas.</strong> Serving clients throughout Dallas-Fort Worth and nationwide with 100% USA-based team and support.
               </p>
@@ -156,7 +157,7 @@ export default function Footer() {
 
         <div className="mt-8">
           <p className="dark:text-gray-400 text-gray-700 text-sm md:block hidden text-center">
-            © {new Date().getFullYear()} Forte Web Designs - Professional Web Design & Digital Marketing Services Dallas Fort Worth Texas. All rights reserved.
+            © {new Date().getFullYear()} Forte Web Designs - AI Automation & Custom Software Solutions Dallas Fort Worth Texas. All rights reserved.
           </p>
         </div>
       </div>

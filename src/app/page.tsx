@@ -57,8 +57,15 @@ export default function Home() {
     },
     {
       icon: "services",
-      title: "Custom Web Design",
-      subtitle: "High-converting websites built for growth",
+      title: "Custom Software Development",
+      subtitle: "Purpose-built solutions for your unique needs",
+      description: "Custom dashboards, internal tools, and specialized applications built from scratch. No templates, no limitations—just intelligent software engineered specifically for how your business operates.",
+      link: "/services#software-development"
+    },
+    {
+      icon: "services",
+      title: "Web Design & Digital Presence",
+      subtitle: "Professional websites that showcase your brand",
       description: "Hand-coded websites engineered to convert. Fast loading, SEO-optimized, built to showcase your brand and drive measurable results.",
       link: "/services#web-design"
     },
@@ -68,13 +75,6 @@ export default function Home() {
       subtitle: "Connect your entire business stack",
       description: "Integrate your CRM, email, forms, and tools into one unified system. Clean data, automated handoffs, real-time insights across your operation.",
       link: "/services#integrations"
-    },
-    {
-      icon: "dollar",
-      title: "Revenue Operations",
-      subtitle: "Systems that scale your growth",
-      description: "End-to-end revenue systems: automated lead capture, nurture sequences, and sales workflows. Measure what matters, optimize for maximum ROI.",
-      link: "/services/automation-ai"
     }
   ];
 
@@ -231,7 +231,7 @@ export default function Home() {
 
                 {/* Subheadline */}
                 <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                  AI automation and custom web design for companies ready to eliminate manual work and accelerate growth.
+                  AI automation and custom software solutions for companies ready to eliminate manual work and accelerate growth.
                 </p>
 
                 {/* CTAs */}

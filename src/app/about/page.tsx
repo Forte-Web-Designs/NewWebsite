@@ -72,7 +72,7 @@ export default function AboutUs() {
                 We Build Systems That <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Scale With You</span>
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                Intelligent automation, high-performance websites, and integrated systems designed for modern businesses ready to grow.
+                Intelligent automation, custom software solutions, and integrated systems designed for modern businesses ready to grow.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -101,7 +101,7 @@ export default function AboutUs() {
                     I founded Forte to solve a problem I kept seeing: businesses outgrowing their systems. Manual processes bottleneck growth. Template solutions break under pressure. Teams waste hours on work that technology should handle.
                   </p>
                   <p>
-                    The right automation saves 20+ hours per week. The right website converts 3x better. The right integrations surface insights you didn't know existed.
+                    The right automation saves 20+ hours per week. The right software solution scales with your growth. The right integrations surface insights you didn't know existed.
                   </p>
                   <p className="font-semibold text-gray-900 dark:text-white">
                     But only if it's built for your specific business.
