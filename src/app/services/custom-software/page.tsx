@@ -234,7 +234,7 @@ export default function CustomSoftware() {
                 What We Build
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Real software for real business problems. No templates, no cookie-cutter solutions. Just custom-built applications designed for how you actually operate.
+                We build software that actually fits how your business works. No generic templates forcing you to adapt your workflows. No limitations from platforms built for everyone else. Just custom applications designed for your operations.
               </p>
             </div>
           </SimpleScrollReveal>

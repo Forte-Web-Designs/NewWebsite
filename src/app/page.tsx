@@ -58,8 +58,8 @@ export default function Home() {
     {
       icon: "services",
       title: "Custom Software Development",
-      subtitle: "Purpose-built solutions for your unique needs",
-      description: "Custom dashboards, internal tools, and specialized applications built from scratch. No templates, no limitations—just intelligent software engineered specifically for how your business operates.",
+      subtitle: "We build software that actually fits how your business works.",
+      description: "Custom dashboards, internal tools, and specialized applications built from scratch. No generic templates forcing you to adapt your workflows. No limitations from platforms built for everyone else. You get software engineered specifically for your operations, solving your exact problems the way they need to be solved.",
       link: "/services/custom-software"
     },
     {
