@@ -93,6 +93,66 @@ const caseStudies = [
     ],
     tags: ['Google Sheets Automation', 'Inventory Management', 'Film Production'],
     gradient: 'from-green-600 to-emerald-600'
+  },
+  {
+    id: 'emi-kirschner-activecampaign',
+    title: 'Emi Kirschner Coaching',
+    subtitle: 'Strategic ActiveCampaign CRM Setup & Marketing Automation',
+    challenge: 'High-touch coaching business needed strategic CRM and automation to scale without sacrificing personal touch—8-12 hours/week lost to manual client management',
+    solution: 'Built complete ActiveCampaign ecosystem with 5 specialized pipelines, lifecycle automations (check-ins, referrals, birthdays), and multi-tool integrations (Kajabi, WordPress, ClickUp)',
+    results: [
+      'Projected 8-12 hrs/week saved on manual CRM tasks',
+      'Estimated 20-30% increase in referral generation',
+      '15-25% improvement in lead conversion',
+      '$20K-$30K annual value in recovered time'
+    ],
+    tags: ['CRM Strategy', 'ActiveCampaign', 'Coaching Business', 'Marketing Automation'],
+    gradient: 'from-purple-600 to-pink-600'
+  },
+  {
+    id: 'kingfisher-ads-automation',
+    title: 'Kingfisher Ads',
+    subtitle: 'Agency Operations Automation with AI-Powered Reporting',
+    challenge: 'Irish ad agency growth constrained by manual reporting, invoicing, and data analysis—19-25 hours/week spent on repetitive operations instead of client strategy',
+    solution: 'Built n8n automation system with GPT-4 integration for automated reporting (Meta, Google, Shopify, BigCommerce), ad spend-based invoicing with Xero, and unified dashboards with AI insights',
+    results: [
+      'Projected 19-25 hrs/week saved on operations',
+      '3-5x capacity increase without adding staff',
+      '30-40% reduction in support inquiries',
+      '$49K-$65K annual value in recovered time'
+    ],
+    tags: ['Agency Automation', 'n8n', 'GPT-4', 'API Integration', 'Marketing Agency'],
+    gradient: 'from-cyan-600 to-blue-600'
+  },
+  {
+    id: 'compass-real-estate-ai-automation',
+    title: 'Compass Real Estate',
+    subtitle: 'AI Email & Drive Automation',
+    challenge: 'Real estate agents needed AI-powered email drafting and intelligent file organization to reclaim hours and improve client response times',
+    solution: 'Proposed hybrid automation system: ChatGPT-powered email drafts appearing in Gmail within 10 seconds, intelligent Google Drive organization, and showing workflow automation',
+    results: [
+      'Projected 11-17 hours/week saved on admin work',
+      '50-60x faster email drafting (10 seconds vs 5-10 minutes)',
+      '$28K-$44K annual value in recovered time',
+      'Capacity to handle 20-30% more clients'
+    ],
+    tags: ['PROPOSED SOLUTION', 'Real Estate', 'ChatGPT API', 'Gmail Automation', 'Google Drive'],
+    gradient: 'from-orange-600 to-amber-600'
+  },
+  {
+    id: 'digital-marketing-agency-automation',
+    title: 'Digital Marketing Agency',
+    subtitle: 'Three-Tier Operations Automation',
+    challenge: 'Marketing agency growth limited by operational overhead: email management, meeting coordination, and invoice processing consuming 15-24 hours weekly',
+    solution: 'Proposed three-tier system: (1) AI email responder with approval workflow, (2) Automated meeting follow-up using Fathom transcripts, (3) Invoice processing automation with FreeAgent integration',
+    results: [
+      'Projected 15-24 hours/week saved across three tiers',
+      'Tier 1: 5-8 hrs/week ($13K-$20K annually)',
+      'Tier 2: 4-6 hrs/week ($10K-$15K annually)',
+      'Tier 3: 6-10 hrs/week ($15K-$26K annually)'
+    ],
+    tags: ['PROPOSED SOLUTION', 'Marketing Agency', 'GPT-4', 'Three-Tier System', 'Modular Automation'],
+    gradient: 'from-violet-600 to-fuchsia-600'
   }
 ];
 
