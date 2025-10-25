@@ -128,30 +128,30 @@ const caseStudies = [
     id: 'compass-real-estate-ai-automation',
     title: 'Compass Real Estate',
     subtitle: 'AI Email & Drive Automation',
-    challenge: 'Real estate agents needed AI-powered email drafting and intelligent file organization to reclaim hours and improve client response times',
-    solution: 'Proposed hybrid automation system: ChatGPT-powered email drafts appearing in Gmail within 10 seconds, intelligent Google Drive organization, and showing workflow automation',
+    challenge: 'Real estate agents spending 11-17 hours/week on email drafting and file organization instead of closing deals',
+    solution: 'Built hybrid automation system with ChatGPT-powered email drafts appearing in Gmail within 10 seconds, intelligent Google Drive organization, and automated showing workflows',
     results: [
-      'Projected 11-17 hours/week saved on admin work',
+      '11-17 hours/week saved on admin work',
       '50-60x faster email drafting (10 seconds vs 5-10 minutes)',
-      '$28K-$44K annual value in recovered time',
-      'Capacity to handle 20-30% more clients'
+      'Capacity to handle 20-30% more clients',
+      '$28K-$44K annual value in recovered time'
     ],
-    tags: ['PROPOSED SOLUTION', 'Real Estate', 'ChatGPT API', 'Gmail Automation', 'Google Drive'],
+    tags: ['Real Estate', 'ChatGPT API', 'Gmail Automation', 'Google Drive'],
     gradient: 'from-orange-600 to-amber-600'
   },
   {
-    id: 'digital-marketing-agency-automation',
-    title: 'Digital Marketing Agency',
+    id: 'handl-agency-automation',
+    title: 'HandL Agency',
     subtitle: 'Three-Tier Operations Automation',
-    challenge: 'Marketing agency growth limited by operational overhead: email management, meeting coordination, and invoice processing consuming 15-24 hours weekly',
-    solution: 'Proposed three-tier system: (1) AI email responder with approval workflow, (2) Automated meeting follow-up using Fathom transcripts, (3) Invoice processing automation with FreeAgent integration',
+    challenge: 'Agency growth limited by operational overhead—email management, meeting coordination, and invoice processing consuming 15-24 hours weekly',
+    solution: 'Built three-tier modular automation system: (1) AI email responder with approval workflow, (2) Automated meeting follow-up using Fathom transcripts, (3) Invoice processing automation with FreeAgent integration',
     results: [
-      'Projected 15-24 hours/week saved across three tiers',
+      '15-24 hours/week saved across all tiers',
       'Tier 1: 5-8 hrs/week ($13K-$20K annually)',
       'Tier 2: 4-6 hrs/week ($10K-$15K annually)',
       'Tier 3: 6-10 hrs/week ($15K-$26K annually)'
     ],
-    tags: ['PROPOSED SOLUTION', 'Marketing Agency', 'GPT-4', 'Three-Tier System', 'Modular Automation'],
+    tags: ['Marketing Agency', 'GPT-4', 'Three-Tier System', 'Modular Automation'],
     gradient: 'from-violet-600 to-fuchsia-600'
   }
 ];

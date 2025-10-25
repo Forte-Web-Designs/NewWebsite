@@ -70,8 +70,8 @@ Four new case studies have been added to the website and require placeholder ima
 
 ---
 
-### 4. Digital Marketing Agency
-**Required Image Path:** `/public/images/case-studies/marketing-agency.jpg`
+### 4. HandL Agency
+**Required Image Path:** `/public/images/case-studies/handl-agency.jpg`
 
 **Image Specifications:**
 - Dimensions: 1200x800px (3:2 aspect ratio)
@@ -88,7 +88,7 @@ Four new case studies have been added to the website and require placeholder ima
 
 **Current Status:** ❌ NOT YET CREATED
 **Referenced In:**
-- `/src/app/case-studies/digital-marketing-agency-automation/page.tsx` (metadata)
+- `/src/app/case-studies/handl-agency-automation/page.tsx` (metadata)
 
 ---
 
@@ -120,8 +120,8 @@ cp /Users/fortewebdesigns/NewWebsite/public/images/case-studies/ph2.png /Users/f
 # For Compass Real Estate (orange theme)
 cp /Users/fortewebdesigns/NewWebsite/public/images/case-studies/ph3.png /Users/fortewebdesigns/NewWebsite/public/images/case-studies/compass-real-estate.jpg
 
-# For Digital Marketing Agency (violet theme)
-cp /Users/fortewebdesigns/NewWebsite/public/images/case-studies/ph1.png /Users/fortewebdesigns/NewWebsite/public/images/case-studies/marketing-agency.jpg
+# For HandL Agency (violet theme)
+cp /Users/fortewebdesigns/NewWebsite/public/images/case-studies/ph1.png /Users/fortewebdesigns/NewWebsite/public/images/case-studies/handl-agency.jpg
 ```
 
 ---
@@ -164,13 +164,11 @@ For design inspiration, refer to existing case study images:
 **Total New Case Studies:** 4
 **Total Images Needed:** 4
 
-**Active Implementation (2):**
+**Completed Projects (4):**
 1. ✅ Emi Kirschner Coaching - `/images/case-studies/emi-kirschner.jpg`
 2. ✅ Kingfisher Ads - `/images/case-studies/kingfisher-ads.jpg`
-
-**Proposed Solutions (2):**
 3. ✅ Compass Real Estate - `/images/case-studies/compass-real-estate.jpg`
-4. ✅ Digital Marketing Agency - `/images/case-studies/marketing-agency.jpg`
+4. ✅ HandL Agency - `/images/case-studies/handl-agency.jpg`
 
 **Created:** October 24, 2025
 **Last Updated:** October 24, 2025

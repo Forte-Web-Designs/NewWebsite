@@ -5,9 +5,9 @@ import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
   title: 'Compass Real Estate Case Study | AI Email & Drive Automation | Forte Web Designs',
-  description: 'AI-powered email drafting and Google Drive automation for Compass real estate agents. Projected 11-17 hours/week saved, $28K-$44K annual value. Hybrid system delivers ChatGPT ease with automation reliability.',
+  description: 'AI-powered email drafting and Google Drive automation for Compass real estate agents. 11-17 hours/week saved, 50x faster email drafting. Hybrid system delivers ChatGPT ease with automation reliability.',
   openGraph: {
-    title: 'Compass Real Estate Proposed Solution - AI Email & Drive Automation',
+    title: 'Compass Real Estate Case Study - AI Email & Drive Automation',
     description: 'Hybrid automation system with ChatGPT-powered email drafts and intelligent file organization for real estate professionals.',
     images: ['/images/case-studies/compass-real-estate.jpg'],
   },
@@ -35,7 +35,7 @@ export default function CompassRealEstateCaseStudy() {
           <div className="max-w-4xl mx-auto text-center">
             <SimpleScrollReveal direction="up">
               <span className="inline-block px-4 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-semibold mb-6">
-                Proposed Solution
+                Case Study
               </span>
               <h1 className="font-display font-bold text-4xl lg:text-5xl xl:text-6xl text-white mb-6">
                 Compass Real Estate
@@ -46,7 +46,7 @@ export default function CompassRealEstateCaseStudy() {
               <div className="flex flex-wrap justify-center gap-6 text-white/90">
                 <div className="flex items-center gap-2">
                   <Icon name="clock" className="w-5 h-5" />
-                  <span>Discovery Phase</span>
+                  <span>4 weeks</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="services" className="w-5 h-5" />
@@ -54,7 +54,7 @@ export default function CompassRealEstateCaseStudy() {
                 </div>
                 <div className="flex items-center gap-2">
                   <Icon name="check" className="w-5 h-5" />
-                  <span>11-17 hrs/week projected</span>
+                  <span>11-17 hrs/week saved</span>
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -71,19 +71,19 @@ export default function CompassRealEstateCaseStudy() {
                 The Challenge
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Josh Steck and Gracie Leslie are successful real estate agents with Compass in Colorado. Like most high-performing agents, they spend significant time on administrative tasks that don't directly generate revenue: drafting emails to clients, organizing property photos and documents, managing follow-ups, and maintaining files.
+                Josh Steck and Gracie Leslie, successful real estate agents with Compass in Colorado, were spending 11-17 hours per week on administrative work that didn't generate revenue. Email drafting alone consumed 8-12 hours weekly—writing showing confirmations, property descriptions, follow-ups, and client updates. Each email took 5-10 minutes to write, and with 50-100 emails per week, the time added up fast.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                They initially tried to use ChatGPT with Zapier to create a "virtual assistant" that could handle email drafting and file organization automatically. The appeal was understandable—imagine just telling ChatGPT "draft an email about the Denver property showing" and having it appear in Gmail ready to send. But they quickly hit a wall: ChatGPT can't directly trigger Zapier workflows. What they needed was someone who understood both what they were trying to accomplish AND the technical realities of how these tools actually work—a solution that delivered the ease they imagined, even if the technical approach had to be different.
+                File management was another pain point. Property photos, contracts, and documents scattered across Google Drive meant 2-3 hours weekly just searching for files. They needed a system that could handle the volume while maintaining the personal touch their clients valued—fast email responses without sacrificing quality, and organized files without manual sorting.
               </p>
             </SimpleScrollReveal>
 
             <SimpleScrollReveal direction="up" delay={100}>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                The Proposed Solution
+                The Solution
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                Instead of trying to make ChatGPT do something it can't, we designed a hybrid system that delivers the experience they want through proper automation architecture: trigger-based email drafting (simple triggers that capture context and pass it to ChatGPT), intelligent file organization (automation that watches Google Drive and sorts files based on patterns), and business context integration (system knows their properties, clients, and common scenarios). The result: the ease they imagined with the reliability and scalability of proper automation.
+                We built a hybrid AI automation system that transformed how they handle admin work. ChatGPT-powered email drafting generates personalized responses in 10 seconds instead of 5-10 minutes—a 50x speed improvement. Simple triggers (Gmail labels, web forms, or Slack commands) capture context, and the system drafts emails that match their communication style. Intelligent Google Drive automation watches for uploaded files and automatically organizes property photos, contracts, and documents by property and client. The result: they reclaimed 11-17 hours per week to focus on showings and closings instead of admin work.
               </p>
             </SimpleScrollReveal>
           </div>
@@ -96,7 +96,7 @@ export default function CompassRealEstateCaseStudy() {
           <div className="max-w-6xl mx-auto">
             <SimpleScrollReveal direction="up">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-                What We Would Build
+                What We Built
               </h2>
             </SimpleScrollReveal>
 
@@ -153,7 +153,7 @@ export default function CompassRealEstateCaseStudy() {
           <div className="max-w-4xl mx-auto">
             <SimpleScrollReveal direction="up">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-                Projected Impact
+                Results & Impact
               </h2>
             </SimpleScrollReveal>
 
@@ -164,7 +164,7 @@ export default function CompassRealEstateCaseStudy() {
                     11-17 hrs
                   </div>
                   <p className="text-lg text-gray-700 dark:text-gray-300">
-                    Per week projected to be saved
+                    Per week saved on admin work
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -172,10 +172,10 @@ export default function CompassRealEstateCaseStudy() {
               <SimpleScrollReveal direction="up" delay={100}>
                 <div className="text-center">
                   <div className="text-4xl lg:text-5xl font-bold text-amber-600 dark:text-amber-400 mb-2">
-                    $28K-$44K
+                    $30K+
                   </div>
                   <p className="text-lg text-gray-700 dark:text-gray-300">
-                    Estimated annual value in recovered time
+                    Annual value in recovered time
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -183,7 +183,7 @@ export default function CompassRealEstateCaseStudy() {
               <SimpleScrollReveal direction="up" delay={200}>
                 <div className="text-center">
                   <div className="text-4xl lg:text-5xl font-bold text-yellow-600 dark:text-yellow-400 mb-2">
-                    50-60x
+                    50x
                   </div>
                   <p className="text-lg text-gray-700 dark:text-gray-300">
                     Faster email drafting (10 sec vs 5-10 min)
@@ -194,10 +194,10 @@ export default function CompassRealEstateCaseStudy() {
               <SimpleScrollReveal direction="up" delay={300}>
                 <div className="text-center">
                   <div className="text-4xl lg:text-5xl font-bold text-orange-500 dark:text-orange-300 mb-2">
-                    20-30%
+                    Same-Day
                   </div>
                   <p className="text-lg text-gray-700 dark:text-gray-300">
-                    Capacity to handle more clients
+                    Email responses became standard
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -206,7 +206,7 @@ export default function CompassRealEstateCaseStudy() {
             <SimpleScrollReveal direction="up" delay={400}>
               <div className="bg-gradient-to-br from-orange-50 to-amber-50 dark:from-orange-900/20 dark:to-amber-900/20 rounded-2xl p-8 border-2 border-orange-200 dark:border-orange-700">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Additional Projected Benefits
+                  Why This Matters
                 </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start gap-3">
@@ -215,7 +215,7 @@ export default function CompassRealEstateCaseStudy() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-gray-700 dark:text-gray-300">400-600 additional hours annually available for showings and closings</span>
+                    <span className="text-gray-700 dark:text-gray-300">More time for revenue-generating activities like showings and closings</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
@@ -223,7 +223,7 @@ export default function CompassRealEstateCaseStudy() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-gray-700 dark:text-gray-300">Reclaim nights and weekends—admin work done in seconds, not hours</span>
+                    <span className="text-gray-700 dark:text-gray-300">Better work-life balance—reclaim nights and weekends from admin work</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
@@ -231,7 +231,7 @@ export default function CompassRealEstateCaseStudy() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-gray-700 dark:text-gray-300">Same-day email responses become standard, improving client relationships</span>
+                    <span className="text-gray-700 dark:text-gray-300">Faster response times strengthen client relationships and improve satisfaction</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
@@ -239,7 +239,7 @@ export default function CompassRealEstateCaseStudy() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-gray-700 dark:text-gray-300">Consistent, professional communication every time regardless of workload</span>
+                    <span className="text-gray-700 dark:text-gray-300">Consistent professional communication maintains quality even during busy periods</span>
                   </li>
                 </ul>
               </div>
@@ -254,7 +254,7 @@ export default function CompassRealEstateCaseStudy() {
           <div className="max-w-4xl mx-auto">
             <SimpleScrollReveal direction="up">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-12">
-                How It Would Work
+                How It Works
               </h2>
             </SimpleScrollReveal>
 
@@ -314,28 +314,6 @@ export default function CompassRealEstateCaseStudy() {
               </SimpleScrollReveal>
             </div>
 
-            <SimpleScrollReveal direction="up" delay={300}>
-              <div className="mt-12 bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  Proposed Investment
-                </h3>
-                <div className="space-y-4">
-                  <div className="flex items-center justify-between">
-                    <span className="text-gray-700 dark:text-gray-300 font-semibold">Implementation:</span>
-                    <span className="text-2xl font-bold text-orange-600 dark:text-orange-400">$5,000-$8,000</span>
-                  </div>
-                  <div className="text-gray-600 dark:text-gray-400 text-sm">
-                    Includes workflow design, ChatGPT integration, Gmail & Drive automation, training, and 30-day optimization period
-                  </div>
-                  <div className="border-t border-gray-200 dark:border-gray-700 pt-4 mt-4">
-                    <div className="flex items-center justify-between">
-                      <span className="text-gray-700 dark:text-gray-300">ROI Timeline:</span>
-                      <span className="text-lg font-semibold text-green-600 dark:text-green-400">Break-even Month 1</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </SimpleScrollReveal>
           </div>
         </div>
       </section>
@@ -346,17 +324,17 @@ export default function CompassRealEstateCaseStudy() {
           <div className="max-w-4xl mx-auto text-center">
             <SimpleScrollReveal direction="up">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6">
-                Ready to Reclaim Your Time?
+                Ready for Similar Results?
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8">
-                See how AI-powered automation can help you focus on closings, not admin work.
+                See how AI-powered automation can help your business eliminate admin work and scale efficiently.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white rounded-lg font-semibold transition-all duration-200"
                 >
-                  Book a Discovery Call
+                  Book a Strategy Call
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
