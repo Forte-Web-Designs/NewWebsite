@@ -39,20 +39,6 @@ const caseStudies = [
     gradient: 'from-emerald-600 to-teal-600'
   },
   {
-    id: 'summit-gaming-lounge',
-    title: 'Summit Gaming Lounge',
-    subtitle: 'Omnichannel AI Concierge System',
-    challenge: 'Managing customer communications across SMS, Discord, and Telegram while scaling operations',
-    solution: 'Built AI-powered automation with intelligent user recognition and reservation management',
-    results: [
-      'Automated 80% of customer communications',
-      'Reduced manual booking time by 15 hours/week',
-      'Improved customer experience across all channels'
-    ],
-    tags: ['AI Automation', 'CRM Integration', 'Multi-Platform'],
-    gradient: 'from-blue-600 to-indigo-600'
-  },
-  {
     id: 'revolut',
     title: 'Revolut (Fintech)',
     subtitle: 'AI-Powered Financial Analytics & Automated Insight Generation',
@@ -65,20 +51,6 @@ const caseStudies = [
     ],
     tags: ['AI Analytics', 'Financial Automation', 'Data Processing'],
     gradient: 'from-indigo-600 to-purple-600'
-  },
-  {
-    id: 'fetchly',
-    title: 'Fetchly',
-    subtitle: 'AI Executive Assistant in Slack',
-    challenge: 'Leadership team overwhelmed by repetitive admin tasks across multiple platforms',
-    solution: 'Custom AI assistant integrated with Gmail, Calendar, monday.com, and Contacts',
-    results: [
-      'Saved 15+ hours per week in admin work',
-      '24/7 availability without training or PTO',
-      'Eliminated context-switching between platforms'
-    ],
-    tags: ['AI Assistant', 'Workflow Automation', 'Slack Integration'],
-    gradient: 'from-purple-600 to-pink-600'
   },
   {
     id: 'hollow-bamboo',
