@@ -87,6 +87,47 @@ export function PricingPage() {
         </SimpleScrollReveal>
       </div>
 
+      {/* Pricing Context Section */}
+      <div className="max-w-6xl mx-auto mb-20">
+        <SimpleScrollReveal direction="up">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            Why We Show Our Pricing
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            Most consultants hide their pricing because they're optimizing for the transaction. We don't. We believe in transparency because we're optimizing for relationships.
+          </p>
+
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                ROI-Focused Pricing
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Every investment should pay for itself. Our clients typically see 3-10x returns within 12 months, with most projects paying for themselves in 1-3 months. We're not cheap—but we're profitable.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                Custom Work, Not Templates
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                You'll never get a WordPress template or a generic Zapier flow from us. Everything is custom-built for your specific business. That costs more upfront, but it's the difference between software that breaks and software that scales.
+              </p>
+            </div>
+
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
+                No Hidden Costs
+              </h3>
+              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                Every proposal includes the gotchas, the hidden costs, the potential roadblocks—free, no contract required. We prove value before asking for commitment.
+              </p>
+            </div>
+          </div>
+        </SimpleScrollReveal>
+      </div>
+
       {/* Pricing Cards */}
       <div className="max-w-7xl mx-auto">
         <div className="grid md:grid-cols-3 gap-8 mb-16">
@@ -455,6 +496,22 @@ export function PricingPage() {
                 <p className="text-gray-600 dark:text-gray-300">
                   Yes. We typically split projects into 50% upfront and 50% on completion. For larger projects ($20K+), we offer milestone-based payment schedules to align with deliverables. No long-term contracts required for retainer services.
                 </p>
+              </div>
+              <div>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  Why should I pay you instead of an offshore developer at $25/hour?
+                </h3>
+                <div className="space-y-3 text-gray-600 dark:text-gray-300">
+                  <p>
+                    Because cheap usually costs more in the long run. Offshore teams often lack business context, require extensive management, and build systems that break or don't scale. You'll spend months going back and forth, end up with something that doesn't work, and hire someone like us to rebuild it anyway.
+                  </p>
+                  <p>
+                    We're not selling cheap labor. We're selling strategic partnership. We understand your business, identify opportunities you're missing, and build systems that work after we're gone. Our clients see 3-10x ROI within 12 months because we're focused on outcomes, not hourly rates.
+                  </p>
+                  <p>
+                    If you just need code written to spec and you have the expertise to manage it, offshore makes sense. But if you want someone thinking strategically about your business and building systems that scale? That's us.
+                  </p>
+                </div>
               </div>
             </div>
           </div>

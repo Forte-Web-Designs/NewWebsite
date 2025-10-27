@@ -4,7 +4,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
-  title: 'Sales Automation: The Essential Guide for 2025 | Forte Web Designs',
+  title: 'The Sales Automation That Actually Closes Deals (Not Generic Zapier Workflows) | Forte Web Designs',
   description: 'Complete guide to sales automation for small businesses. Learn how to automate repetitive tasks, close deals faster, and grow revenue without hiring more salespeople.',
   keywords: 'sales automation, sales process automation, CRM automation, automated sales funnel, sales productivity',
 };
@@ -35,7 +35,7 @@ export default function SalesAutomationGuideBlogPost() {
                 <span className="text-white font-semibold">Sales Guide</span>
               </div>
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
-                Sales Automation: The Essential Guide
+                The Sales Automation That Actually Closes Deals (Not Generic Zapier Workflows)
               </h1>
               <div className="flex items-center justify-center gap-6 text-white/90 text-sm mb-8">
                 <span>Seth Forte</span>

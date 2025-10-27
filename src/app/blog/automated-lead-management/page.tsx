@@ -4,7 +4,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
-  title: 'Automated Lead Management: What It Is and Why It Matters | Forte Web Designs',
+  title: 'Why Your Lead Routing Is Costing You $50K Annually (And How to Fix It) | Forte Web Designs',
   description: 'Learn how automated lead management systems help businesses capture, qualify, and convert leads faster—saving 15+ hours per week and increasing conversion rates by 40%.',
   keywords: 'automated lead management, lead automation, CRM automation, sales automation, lead nurturing',
 };
@@ -35,7 +35,7 @@ export default function AutomatedLeadManagementBlogPost() {
                 <span className="text-white font-semibold">Lead Management</span>
               </div>
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
-                Automated Lead Management: What It Is and Why It Matters
+                Why Your Lead Routing Is Costing You $50K Annually (And How to Fix It)
               </h1>
               <div className="flex items-center justify-center gap-6 text-white/90 text-sm mb-8">
                 <span>Seth Forte</span>

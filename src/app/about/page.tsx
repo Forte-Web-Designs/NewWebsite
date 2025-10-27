@@ -2,63 +2,10 @@
 
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
-import { OptimizedImage } from '@/components/images/OptimizedImage';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
-import { Icon } from '@/components/images/Icon';
 
 export default function AboutUs() {
-  const coreValues = [
-    {
-      icon: "chart",
-      title: "Built for Growth",
-      description: "Every system we build is designed to scale with you—not hold you back."
-    },
-    {
-      icon: "flash",
-      title: "Speed Matters",
-      description: "Fast websites, fast automation, fast results. We don't waste time."
-    },
-    {
-      icon: "check",
-      title: "Real ROI",
-      description: "We measure success in hours saved, leads generated, and revenue grown."
-    }
-  ];
-
-  const approach = [
-    {
-      number: "1",
-      title: "We Listen First",
-      description: "Most agencies pitch you a solution before understanding your problem. We start with discovery—learning how your business actually works, where you're stuck, and what you've already tried."
-    },
-    {
-      number: "2",
-      title: "We Build Custom, Not Templates",
-      description: "You won't get a template WordPress site or a generic automation flow. Every line of code, every workflow, every integration is built specifically for your business."
-    },
-    {
-      number: "3",
-      title: "We Stay Until It Works",
-      description: "Launch day isn't goodbye. We monitor, optimize, and support your systems long after deployment. If something breaks, we fix it. If something can improve, we improve it."
-    }
-  ];
-
-  const whyUs = [
-    {
-      title: "We're Not Here to Sell You More",
-      description: "If automation solves your problem better than a website, we'll tell you. If you don't need a Complete System, we won't push it. We recommend what actually makes sense for your business."
-    },
-    {
-      title: "We Speak Human, Not Jargon",
-      description: "No \"synergistic cloud-native solutions\" or \"AI-powered blockchain paradigms.\" We explain what we're building, why it matters, and how it helps—in plain English."
-    },
-    {
-      title: "We're Selective About Who We Work With",
-      description: "We take on a limited number of projects each month, which means your success gets our full attention. No account managers juggling 20 clients, just direct access to the team building your solution. You are the priority."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white dark:bg-black">
       {/* Hero Section */}
@@ -69,77 +16,118 @@ export default function AboutUs() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center max-w-4xl mx-auto">
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl leading-tight text-black dark:text-white mb-6">
-                We Build Systems That <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">Scale With You</span>
+                About Forte Web Designs
               </h1>
-              <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                Intelligent automation, custom software solutions, and integrated systems designed for modern businesses ready to grow.
-              </p>
+              <h2 className="text-2xl sm:text-3xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
+                What You're Actually Paying For When You Hire Us
+              </h2>
             </div>
           </SimpleScrollReveal>
         </div>
       </section>
 
-      {/* Founder Story Section */}
+      {/* Main Philosophy Section */}
       <section className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <SimpleScrollReveal direction="up" delay={200}>
-              <div className="text-center mb-12">
-                <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                  Hi, I'm Seth
-                </h2>
-                <h3 className="text-xl text-gray-600 dark:text-gray-300 font-medium">
-                  Founder of Forte Web Designs
+              <div className="mb-12">
+                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
+                  Hi, I'm Seth Forte, founder of Forte Web Designs.
                 </h3>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid lg:grid-cols-2 gap-12 items-center">
-              <SimpleScrollReveal direction="left" delay={300}>
-                <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <p>
-                    I founded Forte to solve a problem I kept seeing: businesses outgrowing their systems. Manual processes bottleneck growth. Template solutions break under pressure. Teams waste hours on work that technology should handle.
-                  </p>
-                  <p>
-                    The right automation saves 20+ hours per week. The right software solution scales with your growth. The right integrations surface insights you didn't know existed.
-                  </p>
-                  <p className="font-semibold text-gray-900 dark:text-white">
-                    But only if it's built for your specific business.
-                  </p>
-                  <p>
-                    We build custom systems—not templates or one-size-fits-all platforms. We learn how your business operates, identify what's slowing you down, and engineer intelligent solutions that handle the repetitive work automatically.
-                  </p>
-                  <p className="font-semibold text-gray-900 dark:text-white">
-                    You focus on strategy and growth. The system handles execution.
-                  </p>
-                </div>
+            <div className="space-y-8 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <SimpleScrollReveal direction="up" delay={300}>
+                <p>
+                  I want to ask you something: <strong className="text-gray-900 dark:text-white">What are you actually paying for when you hire a consultant?</strong>
+                </p>
               </SimpleScrollReveal>
 
-              <SimpleScrollReveal direction="right" delay={300}>
-                <div className="relative">
-                  <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-8">
-                    <div className="flex items-center justify-center h-full">
-                      <div className="text-center">
-                        <div className="relative w-32 h-32 mx-auto mb-4">
-                          <div className="w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-br from-blue-500 to-indigo-600 shadow-lg">
-                            <OptimizedImage
-                              src="/images/about/headshot.jpg"
-                              alt="Seth, Founder of Forte Web Designs"
-                              width={128}
-                              height={128}
-                              className="w-full h-full object-cover"
-                              priority={true}
-                              sizes="128px"
-                            />
-                          </div>
-                          {/* Gradient border effect */}
-                          <div className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 -z-10"></div>
-                        </div>
-                        <p className="text-gray-600 dark:text-gray-300 text-lg font-medium">Seth</p>
-                        <p className="text-gray-500 dark:text-gray-400">Founder & Lead Developer</p>
-                      </div>
-                    </div>
-                  </div>
+              <SimpleScrollReveal direction="up" delay={350}>
+                <p>
+                  Most people think they're paying for expertise. For the solution. For someone who knows how to build the thing.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={400}>
+                <p>
+                  But the truth is: Most consultants have it backwards.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={450}>
+                <p>
+                  They're trying to squeeze every dollar out of a single project. They think you're paying them for the technical work—for building things, for clicking buttons. They're optimizing for the transaction, not the relationship.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={500}>
+                <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                  That's not what this should be.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={550}>
+                <p>
+                  Even if we're only working together on a one-off project, I'm thinking strategically—what actually makes sense for where your business is headed, what sets you up for success long-term, not just what checks a box today. And if we work together multiple times? That's when the real compounding value happens.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={600}>
+                <p>
+                  I'm always taking the time to understand how your business actually works. I'm spotting the opportunities you're missing because you're too deep in the day-to-day. I'm invested in your actual success, not just completing a task and moving on.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={650}>
+                <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                  The technical solution isn't the value. Understanding your business is.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={700}>
+                <p>
+                  That's the value. Pinpointing the actual ROI. Understanding the pain points that are costing you time and money every single day. Understanding where you're actually trying to go, not just what you think you need built.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={750}>
+                <p>
+                  That's exactly why every proposal I send includes a full project plan—the gotchas, the inevitable forks in the road we could face, the hidden costs, the things you probably haven't considered, a complete solution outline—all free, no contract required.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={800}>
+                <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                  Because that's not the hard part.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={850}>
+                <p>
+                  The value is the partnership. The consistency. The long-term thinking. Someone who shows up and actually cares if the solution works after they're gone.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={900}>
+                <p>
+                  It really comes down to this: You don't build a business on transactions. You build it on relationships. And relationships? They're built on transparency, trust, and being genuinely invested in someone else's success.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={950}>
+                <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                  That's what Forte Web Designs is all about. That's what every project and every conversation reflects. It's not a philosophy—it's just how I work.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={1000}>
+                <div className="p-8 bg-blue-50 dark:bg-blue-900/20 rounded-2xl border-2 border-blue-200 dark:border-blue-700 mt-8">
+                  <p className="text-lg text-gray-800 dark:text-gray-200">
+                    <strong className="text-blue-600 dark:text-blue-400">If you're looking for the cheapest option, I'm not your person.</strong> But if you're looking for someone who thinks about your business like it's their own, who leads with generosity, who's building something that lasts—then we should talk.
+                  </p>
                 </div>
               </SimpleScrollReveal>
             </div>
@@ -147,107 +135,145 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Core Values Section */}
+      {/* Background Section */}
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                What We Stand For
+          <div className="max-w-4xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={100}>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+                My Background
               </h2>
-            </div>
-          </SimpleScrollReveal>
+            </SimpleScrollReveal>
 
-          <SimpleScrollReveal direction="up" delay={200}>
-            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {coreValues.map((value, index) => (
-                <div
-                  key={index}
-                  className="text-center p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hover:shadow-xl transition-shadow duration-300"
-                >
-                  <div className="flex justify-center mb-4">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center hover:scale-110 transition-transform duration-300 shadow-lg">
-                      <Icon name={value.icon} className="w-8 h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
-                    </div>
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {value.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {value.description}
-                  </p>
-                </div>
-              ))}
+            <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <SimpleScrollReveal direction="up" delay={200}>
+                <p>
+                  I've spent 5+ years building enterprise-grade automation systems at Wells Fargo—the kind that save companies hundreds of thousands annually and can't afford to break. I've combined that enterprise reliability with the agility and personal attention of a consulting practice.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={250}>
+                <p>
+                  I've been featured in Dallas Innovates, BUiLT, and Orbie publications for my work in automation and custom software development.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={300}>
+                <p>
+                  More importantly, I've helped businesses like yours save thousands of hours annually, eliminate bottlenecks that were costing real money, and build systems that actually scale with growth.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={350}>
+                <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                  But here's what matters most: I don't just build things and disappear. I'm here for the long term. I care about whether your systems work six months from now. I care about whether you're actually seeing ROI. I care about your success.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={400}>
+                <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                  That's the difference.
+                </p>
+              </SimpleScrollReveal>
             </div>
-          </SimpleScrollReveal>
+          </div>
         </div>
       </section>
 
-      {/* How We Work Section */}
+      {/* Why I Started Forte Section */}
       <section className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                How We Work
+          <div className="max-w-4xl mx-auto">
+            <SimpleScrollReveal direction="up" delay={100}>
+              <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+                Why I Started Forte
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Our process is simple: understand, build, optimize.
-              </p>
-            </div>
-          </SimpleScrollReveal>
+            </SimpleScrollReveal>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            {approach.map((step, index) => (
-              <SimpleScrollReveal key={index} direction="up" delay={200 + (index * 100)}>
-                <div className="flex flex-col md:flex-row items-start gap-6 p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-                  <div className="flex-shrink-0">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
-                      {step.number}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                      {step.title}
-                    </h3>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                      {step.description}
-                    </p>
-                  </div>
-                </div>
+            <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+              <SimpleScrollReveal direction="up" delay={200}>
+                <p>
+                  I kept seeing the same problem: businesses outgrowing their systems. Manual processes bottlenecking growth. Template solutions breaking under pressure. Teams wasting hours on work that technology should handle.
+                </p>
               </SimpleScrollReveal>
-            ))}
+
+              <SimpleScrollReveal direction="up" delay={250}>
+                <p>
+                  And I kept seeing consultants who treated every project like a transaction—build it, bill it, move on. No strategic thinking. No long-term investment in the client's success.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={300}>
+                <p className="text-xl font-semibold text-gray-900 dark:text-white">
+                  I started Forte to do it differently.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={350}>
+                <p>
+                  To build systems that don't break. To be honest when automation isn't the answer. To actually care whether clients succeed after I'm gone.
+                </p>
+              </SimpleScrollReveal>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
+      {/* What Makes Us Different Section */}
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                Why Work With Us
+                What Makes Us Different
               </h2>
-              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                We're honest, direct, and actually care about your results.
-              </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="max-w-4xl mx-auto space-y-8">
-            {whyUs.map((reason, index) => (
-              <SimpleScrollReveal key={index} direction="up" delay={200 + (index * 100)}>
-                <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                    {reason.title}
-                  </h3>
-                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                    {reason.description}
-                  </p>
-                </div>
-              </SimpleScrollReveal>
-            ))}
+          <div className="max-w-5xl mx-auto space-y-8">
+            <SimpleScrollReveal direction="up" delay={200}>
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  We Tell You When You Shouldn't Automate
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                  If fixing your process makes more sense than automating a broken one, I'll tell you. If you don't need a full system rebuild, I'll tell you. I turn down projects that don't make sense—even when it costs me revenue.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={250}>
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  We Think Long-Term, Even on One-Off Projects
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                  Even if we only work together once, I'm thinking about where your business is headed. What sets you up for scale. What creates compounding value. The relationship matters more than the transaction.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={300}>
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  You Work With Who You Hired
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                  No account managers. No junior developers. No bait-and-switch. You work directly with me—the person who understands your business, builds your systems, and cares about your results.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={350}>
+              <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+                  We Lead With Generosity
+                </h3>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                  Every proposal includes a complete project plan—gotchas, hidden costs, solution outline—free, no contract required. We prove value before asking for commitment.
+                </p>
+              </div>
+            </SimpleScrollReveal>
           </div>
         </div>
       </section>
@@ -258,17 +284,25 @@ export default function AboutUs() {
           <SimpleScrollReveal direction="up" delay={200}>
             <div className="text-center max-w-4xl mx-auto">
               <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-                Let's Talk About What You Actually Need
+                Let's Talk
               </h2>
               <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                No sales pitch. No pressure. Just an honest conversation about your business, your challenges, and whether we can help.
+                If this resonates with you, let's have a conversation. No sales pitch. No pressure. Just an honest discussion about your business, your challenges, and whether we're the right fit.
               </p>
-              <Link
-                href="/contact"
-                className="inline-flex items-center gap-2 bg-white text-blue-600 font-semibold px-12 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
-              >
-                Book Your Free Strategy Call
-              </Link>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center gap-2 bg-white text-blue-600 font-semibold px-12 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
+                >
+                  Book Your Free Strategy Call
+                </Link>
+                <Link
+                  href="/case-studies"
+                  className="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-12 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg"
+                >
+                  View Our Work
+                </Link>
+              </div>
             </div>
           </SimpleScrollReveal>
         </div>

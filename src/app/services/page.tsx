@@ -206,19 +206,64 @@ export default function ServicesPage() {
                       </Link>
                     </div>
 
-                    {/* Right: Benefits List */}
-                    <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                      <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
-                        What You Get:
-                      </h4>
-                      <ul className="space-y-3">
-                        {service.benefits.map((benefit, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <Icon name="check" className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                            <span className="text-gray-700 dark:text-gray-300">{benefit}</span>
-                          </li>
-                        ))}
-                      </ul>
+                    {/* Right: Scenario & Benefits */}
+                    <div className="space-y-6">
+                      {/* Scenario Block */}
+                      {service.id === 'ai-automation' && (
+                        <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-xl p-6 border-2 border-yellow-200 dark:border-yellow-700">
+                          <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                            Does this sound familiar?
+                          </h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            You're spending 15 hours a week routing leads, updating your CRM, and sending follow-up emails. Your team is growing but somehow you're busier than ever. You've tried Zapier—it broke. You hired a VA—they quit. You need something that actually works.
+                          </p>
+                        </div>
+                      )}
+                      {service.id === 'software-development' && (
+                        <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-xl p-6 border-2 border-yellow-200 dark:border-yellow-700">
+                          <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                            Sound like your situation?
+                          </h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Your business has unique workflows that no off-the-shelf software handles properly. You're forced to adapt your processes to fit generic platforms, or you're cobbling together 5 different tools with spreadsheets filling the gaps. You need software that fits how you actually work.
+                          </p>
+                        </div>
+                      )}
+                      {service.id === 'web-design' && (
+                        <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-xl p-6 border-2 border-yellow-200 dark:border-yellow-700">
+                          <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                            Is this you?
+                          </h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Your website looks like it was built in 2015. It loads slowly. The mobile experience is terrible. Visitors bounce before seeing your value. You know it's costing you business, but you don't want another template that looks like everyone else's.
+                          </p>
+                        </div>
+                      )}
+                      {service.id === 'integrations' && (
+                        <div className="bg-yellow-50 dark:bg-yellow-900/20 rounded-xl p-6 border-2 border-yellow-200 dark:border-yellow-700">
+                          <h4 className="text-lg font-bold text-gray-900 dark:text-white mb-3">
+                            Dealing with this?
+                          </h4>
+                          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                            Your team is copy-pasting data between Salesforce, your email platform, your forms, and three other tools. Information gets lost. Follow-ups get missed. Your CRM data is always out of date. You're paying for powerful tools but getting Frankenstein's monster.
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Benefits List */}
+                      <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                        <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
+                          What You Get:
+                        </h4>
+                        <ul className="space-y-3">
+                          {service.benefits.map((benefit, idx) => (
+                            <li key={idx} className="flex items-start gap-3">
+                              <Icon name="check" className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                              <span className="text-gray-700 dark:text-gray-300">{benefit}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>

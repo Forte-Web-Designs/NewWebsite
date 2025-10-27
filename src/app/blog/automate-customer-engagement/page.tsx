@@ -4,7 +4,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
-  title: 'How to Automate Customer Engagement to Reduce Churn | Forte Web Designs',
+  title: 'Your Customers Are Leaving Because You\'re Not Following Up Fast Enough | Forte Web Designs',
   description: 'Learn how automated customer engagement systems keep customers happy, reduce churn, and increase lifetime value—without overwhelming your support team.',
   keywords: 'customer engagement automation, reduce customer churn, customer retention, automated customer communication, customer success automation',
 };
@@ -35,7 +35,7 @@ export default function AutomateCustomerEngagementBlogPost() {
                 <span className="text-white font-semibold">Customer Success</span>
               </div>
               <h1 className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl text-white mb-6">
-                How to Automate Customer Engagement to Reduce Churn
+                Your Customers Are Leaving Because You're Not Following Up Fast Enough
               </h1>
               <div className="flex items-center justify-center gap-6 text-white/90 text-sm mb-8">
                 <span>Seth Forte</span>

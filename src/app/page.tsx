@@ -105,19 +105,24 @@ export default function Home() {
   // Trust pillars data
   const trustPillars = [
     {
-      icon: "star",
-      title: "Cross-Functional Expertise",
-      description: "Our team spans engineering, automation, and growth strategy. Every recommendation is researched, tested, and built for measurable outcomes."
+      icon: "shield",
+      title: "We Tell You When You Shouldn't Automate",
+      description: "Most consultants sell whatever gets the signature. We turn down projects that don't make sense. If fixing your process is smarter than automating a broken one, we'll tell you—even when it costs us revenue."
     },
     {
-      icon: "shield",
-      title: "Built for Scale",
-      description: "Custom systems designed to handle growth without breaking. No templates, no limitations—just intelligent architecture that evolves with your business."
+      icon: "flash",
+      title: "Your Success Is Measured in Months, Not Years",
+      description: "Most projects pay for themselves in 1-3 months. We're not building things that take years to show value. We deliver fast, measurable ROI—then optimize from there."
+    },
+    {
+      icon: "star",
+      title: "You Work With Who You Hired",
+      description: "No account managers. No junior developers. No bait-and-switch. You work directly with Seth—the person who understands your business, builds your systems, and cares about your results."
     },
     {
       icon: "support",
-      title: "Ongoing Optimization",
-      description: "Complete training, documentation, and support. Forte Care™ ensures your systems stay fast, secure, and continuously improving."
+      title: "We Lead With Generosity",
+      description: "Every proposal includes a complete project plan—gotchas, hidden costs, solution outline—free, no contract required. We prove value before asking for commitment because the technical work isn't the hard part. Understanding your business is."
     }
   ];
 
@@ -125,17 +130,17 @@ export default function Home() {
   const resourcesPreview = [
     {
       type: "BLOG POST",
-      title: "Automated Lead Management: What It Is and Why It Matters",
+      title: "Why Your Lead Routing Is Costing You $50K Annually (And How to Fix It)",
       link: "/blog/automated-lead-management"
     },
     {
-      type: "BLOG POST", 
-      title: "Sales Automation: The Essential Guide",
+      type: "BLOG POST",
+      title: "The Sales Automation That Actually Closes Deals (Not Generic Zapier Workflows)",
       link: "/blog/sales-automation-guide"
     },
     {
       type: "BLOG POST",
-      title: "How to Automate Customer Engagement to Reduce Churn", 
+      title: "Your Customers Are Leaving Because You're Not Following Up Fast Enough",
       link: "/blog/automate-customer-engagement"
     }
   ];
@@ -366,12 +371,12 @@ export default function Home() {
                   Why Choose Forte
                 </h2>
                 <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                  Strategic partners who build systems designed for scale, not just launch day.
+                  We optimize for relationships, not transactions. Here's what that actually means.
                 </p>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 md:auto-rows-fr">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:auto-rows-fr">
               {trustPillars.map((pillar, index) => (
                 <SimpleAnimatedCard key={index}>
                   <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8 text-center h-full flex flex-col min-h-[280px]">
