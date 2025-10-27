@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import ContactForm from "@/components/ContactForm";
+import { OptimizedImage } from '@/components/images/OptimizedImage';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 import { SectionBackgroundAnimation } from '@/components/animations/BackgroundAnimation';
 
@@ -29,22 +30,49 @@ export default function AboutUs() {
       {/* Main Philosophy Section */}
       <section className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <SimpleScrollReveal direction="up" delay={200}>
-              <div className="mb-12">
-                <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
-                  Hi, I'm Seth Forte, founder of Forte Web Designs.
-                </h3>
-              </div>
-            </SimpleScrollReveal>
-
-            <div className="space-y-8 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
-              <SimpleScrollReveal direction="up" delay={300}>
-                <p>
-                  I want to ask you something: <strong className="text-gray-900 dark:text-white">What are you actually paying for when you hire a consultant?</strong>
-                </p>
+          <div className="max-w-6xl mx-auto">
+            <div className="grid lg:grid-cols-2 gap-12 items-start mb-16">
+              <SimpleScrollReveal direction="left" delay={200}>
+                <div className="relative">
+                  <div className="aspect-w-4 aspect-h-5 rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 p-8">
+                    <div className="flex items-center justify-center h-full">
+                      <div className="text-center">
+                        <div className="relative w-48 h-48 mx-auto mb-4">
+                          <div className="w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-br from-blue-500 to-indigo-600 shadow-lg">
+                            <OptimizedImage
+                              src="/images/about/headshot.jpg"
+                              alt="Seth, Founder of Forte Web Designs"
+                              width={192}
+                              height={192}
+                              className="w-full h-full object-cover"
+                              priority={true}
+                              sizes="192px"
+                            />
+                          </div>
+                          <div className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 -z-10"></div>
+                        </div>
+                        <p className="text-gray-600 dark:text-gray-300 text-lg font-medium">Seth Forte</p>
+                        <p className="text-gray-500 dark:text-gray-400">Founder & Lead Developer</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </SimpleScrollReveal>
 
+              <SimpleScrollReveal direction="right" delay={200}>
+                <div>
+                  <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-8">
+                    Hi, I'm Seth Forte, founder of Forte Web Designs.
+                  </h3>
+                  <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                    I want to ask you something: <strong className="text-gray-900 dark:text-white">What are you actually paying for when you hire a consultant?</strong>
+                  </p>
+                </div>
+              </SimpleScrollReveal>
+            </div>
+
+            <div className="max-w-4xl mx-auto mt-12">
+              <div className="space-y-8 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <SimpleScrollReveal direction="up" delay={350}>
                 <p>
                   Most people think they're paying for expertise. For the solution. For someone who knows how to build the thing.
@@ -59,7 +87,7 @@ export default function AboutUs() {
 
               <SimpleScrollReveal direction="up" delay={450}>
                 <p>
-                  They're trying to squeeze every dollar out of a single project. They think you're paying them for the technical work—for building things, for clicking buttons. They're optimizing for the transaction, not the relationship.
+                  They're trying to squeeze every dollar out of a single project. They think you're paying them for the technical work: for building things, for clicking buttons. They're optimizing for the transaction, not the relationship.
                 </p>
               </SimpleScrollReveal>
 
@@ -71,7 +99,7 @@ export default function AboutUs() {
 
               <SimpleScrollReveal direction="up" delay={550}>
                 <p>
-                  Even if we're only working together on a one-off project, I'm thinking strategically—what actually makes sense for where your business is headed, what sets you up for success long-term, not just what checks a box today. And if we work together multiple times? That's when the real compounding value happens.
+                  Even if we're only working together on a one-off project, I'm thinking strategically: what actually makes sense for where your business is headed, what sets you up for success long-term, not just what checks a box today. And if we work together multiple times? That's when the real compounding value happens.
                 </p>
               </SimpleScrollReveal>
 
@@ -95,7 +123,7 @@ export default function AboutUs() {
 
               <SimpleScrollReveal direction="up" delay={750}>
                 <p>
-                  That's exactly why every proposal I send includes a full project plan—the gotchas, the inevitable forks in the road we could face, the hidden costs, the things you probably haven't considered, a complete solution outline—all free, no contract required.
+                  That's exactly why every proposal I send includes a full project plan: the gotchas, the inevitable forks in the road we could face, the hidden costs, the things you probably haven't considered, a complete solution outline. All free, no contract required.
                 </p>
               </SimpleScrollReveal>
 
@@ -119,17 +147,18 @@ export default function AboutUs() {
 
               <SimpleScrollReveal direction="up" delay={950}>
                 <p className="text-xl font-semibold text-gray-900 dark:text-white">
-                  That's what Forte Web Designs is all about. That's what every project and every conversation reflects. It's not a philosophy—it's just how I work.
+                  That's what Forte Web Designs is all about. That's what every project and every conversation reflects. It's not a philosophy. It's just how I work.
                 </p>
               </SimpleScrollReveal>
 
               <SimpleScrollReveal direction="up" delay={1000}>
                 <div className="p-8 bg-blue-50 dark:bg-blue-900/20 rounded-2xl border-2 border-blue-200 dark:border-blue-700 mt-8">
                   <p className="text-lg text-gray-800 dark:text-gray-200">
-                    <strong className="text-blue-600 dark:text-blue-400">If you're looking for the cheapest option, I'm not your person.</strong> But if you're looking for someone who thinks about your business like it's their own, who leads with generosity, who's building something that lasts—then we should talk.
+                    <strong className="text-blue-600 dark:text-blue-400">If you're looking for the cheapest option, I'm not your person.</strong> But if you're looking for someone who thinks about your business like it's their own, who leads with generosity, who's building something that lasts, then we should talk.
                   </p>
                 </div>
               </SimpleScrollReveal>
+            </div>
             </div>
           </div>
         </div>
@@ -148,7 +177,7 @@ export default function AboutUs() {
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <SimpleScrollReveal direction="up" delay={200}>
                 <p>
-                  I've spent 5+ years building enterprise-grade automation systems at Wells Fargo—the kind that save companies hundreds of thousands annually and can't afford to break. I've combined that enterprise reliability with the agility and personal attention of a consulting practice.
+                  I've spent 5+ years building enterprise-grade automation systems at Wells Fargo: the kind that save companies hundreds of thousands annually and can't afford to break. I've combined that enterprise reliability with the agility and personal attention of a consulting practice.
                 </p>
               </SimpleScrollReveal>
 
@@ -199,7 +228,7 @@ export default function AboutUs() {
 
               <SimpleScrollReveal direction="up" delay={250}>
                 <p>
-                  And I kept seeing consultants who treated every project like a transaction—build it, bill it, move on. No strategic thinking. No long-term investment in the client's success.
+                  And I kept seeing consultants who treated every project like a transaction: build it, bill it, move on. No strategic thinking. No long-term investment in the client's success.
                 </p>
               </SimpleScrollReveal>
 
@@ -237,7 +266,7 @@ export default function AboutUs() {
                   We Tell You When You Shouldn't Automate
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  If fixing your process makes more sense than automating a broken one, I'll tell you. If you don't need a full system rebuild, I'll tell you. I turn down projects that don't make sense—even when it costs me revenue.
+                  If fixing your process makes more sense than automating a broken one, I'll tell you. If you don't need a full system rebuild, I'll tell you. I turn down projects that don't make sense, even when it costs me revenue.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -259,7 +288,7 @@ export default function AboutUs() {
                   You Work With Who You Hired
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  No account managers. No junior developers. No bait-and-switch. You work directly with me—the person who understands your business, builds your systems, and cares about your results.
+                  No account managers. No junior developers. No bait-and-switch. You work directly with me: the person who understands your business, builds your systems, and cares about your results.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -270,7 +299,7 @@ export default function AboutUs() {
                   We Lead With Generosity
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  Every proposal includes a complete project plan—gotchas, hidden costs, solution outline—free, no contract required. We prove value before asking for commitment.
+                  Every proposal includes a complete project plan: gotchas, hidden costs, solution outline. Free, no contract required. We prove value before asking for commitment.
                 </p>
               </div>
             </SimpleScrollReveal>

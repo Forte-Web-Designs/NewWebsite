@@ -103,7 +103,7 @@ export function PricingPage() {
                 ROI-Focused Pricing
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Every investment should pay for itself. Our clients typically see 3-10x returns within 12 months, with most projects paying for themselves in 1-3 months. We're not cheap—but we're profitable.
+                Every investment should pay for itself. Our clients typically see 3-10x returns within 12 months, with most projects paying for themselves in 1-3 months. We're not cheap, but we're profitable.
               </p>
             </div>
 
@@ -121,7 +121,7 @@ export function PricingPage() {
                 No Hidden Costs
               </h3>
               <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Every proposal includes the gotchas, the hidden costs, the potential roadblocks—free, no contract required. We prove value before asking for commitment.
+                Every proposal includes the gotchas, the hidden costs, the potential roadblocks. Free, no contract required. We prove value before asking for commitment.
               </p>
             </div>
           </div>
@@ -454,7 +454,7 @@ export function PricingPage() {
                   What's included that makes this worth the investment?
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Strategic consulting, custom development (not templates), optimization, training, and ongoing support. Our approach is designed for ROI—clients typically see 3-10x returns within the first year, meaning the investment pays for itself.
+                  Strategic consulting, custom development (not templates), optimization, training, and ongoing support. Our approach is designed for ROI. Clients typically see 3-10x returns within the first year, meaning the investment pays for itself.
                 </p>
               </div>
               <div>
@@ -486,7 +486,7 @@ export function PricingPage() {
                   How do I know if this will work for my business?
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Book a free strategy call. We'll analyze your current situation, identify opportunities, and provide a clear roadmap with projected ROI. No pressure, no obligation—just honest assessment of whether we're a good fit.
+                  Book a free strategy call. We'll analyze your current situation, identify opportunities, and provide a clear roadmap with projected ROI. No pressure, no obligation. Just honest assessment of whether we're a good fit.
                 </p>
               </div>
               <div>
@@ -524,7 +524,7 @@ export function PricingPage() {
               Ready to scale your business?
             </h2>
             <p className="text-blue-100 mb-8 text-lg">
-              Book a free strategy call. We'll analyze your situation, identify opportunities, and provide a clear roadmap with projected ROI—no pressure, no obligation.
+              Book a free strategy call. We'll analyze your situation, identify opportunities, and provide a clear roadmap with projected ROI. No pressure, no obligation.
             </p>
             <Link
               href="/contact"

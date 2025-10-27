@@ -93,7 +93,7 @@ export default function Home() {
     {
       number: "3",
       title: "Build & Deploy",
-      description: "Our team builds, tests, and deploys your solution. From automation workflows to custom websites—delivered on time and on spec."
+      description: "Our team builds, tests, and deploys your solution. From automation workflows to custom websites, delivered on time and on spec."
     },
     {
       number: "4",
@@ -107,22 +107,22 @@ export default function Home() {
     {
       icon: "shield",
       title: "We Tell You When You Shouldn't Automate",
-      description: "Most consultants sell whatever gets the signature. We turn down projects that don't make sense. If fixing your process is smarter than automating a broken one, we'll tell you—even when it costs us revenue."
+      description: "Most consultants sell whatever gets the signature. We turn down projects that don't make sense. If fixing your process is smarter than automating a broken one, we'll tell you, even when it costs us revenue."
     },
     {
       icon: "flash",
       title: "Your Success Is Measured in Months, Not Years",
-      description: "Most projects pay for themselves in 1-3 months. We're not building things that take years to show value. We deliver fast, measurable ROI—then optimize from there."
+      description: "Most projects pay for themselves in 1-3 months. We're not building things that take years to show value. We deliver fast, measurable ROI, then optimize from there."
     },
     {
       icon: "star",
       title: "You Work With Who You Hired",
-      description: "No account managers. No junior developers. No bait-and-switch. You work directly with Seth—the person who understands your business, builds your systems, and cares about your results."
+      description: "No account managers. No junior developers. No bait-and-switch. You work directly with Seth: the person who understands your business, builds your systems, and cares about your results."
     },
     {
       icon: "support",
       title: "We Lead With Generosity",
-      description: "Every proposal includes a complete project plan—gotchas, hidden costs, solution outline—free, no contract required. We prove value before asking for commitment because the technical work isn't the hard part. Understanding your business is."
+      description: "Every proposal includes a complete project plan: gotchas, hidden costs, solution outline. Free, no contract required. We prove value before asking for commitment because the technical work isn't the hard part. Understanding your business is."
     }
   ];
 
