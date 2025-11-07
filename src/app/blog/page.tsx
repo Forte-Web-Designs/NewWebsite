@@ -60,14 +60,14 @@ const blogPosts = [
     gradient: 'from-purple-600 to-pink-600'
   },
   {
-    id: 'grapevine-web-design-building-site-stands-out-locally',
-    title: 'Grapevine Web Design: Building a Site That Stands Out Locally',
-    excerpt: 'Want to dominate the Grapevine and DFW digital landscape? Local web design isn\'t just about looking good—it\'s about connecting with your community, ranking in local searches, and building trust with neighbors who become customers.',
+    id: 'dallas-web-design-building-site-stands-out-locally',
+    title: 'Dallas Web Design: Building a Site That Stands Out Locally',
+    excerpt: 'Want to dominate the Dallas and DFW digital landscape? Local web design isn\'t just about looking good—it\'s about connecting with your community, ranking in local searches, and building trust with neighbors who become customers.',
     author: 'Seth Forte',
     date: '2025-08-18',
     readTime: '9 min read',
     category: 'Local Business',
-    tags: ['Grapevine Web Design', 'Local SEO', 'DFW Business', 'Web Design'],
+    tags: ['Dallas Web Design', 'Local SEO', 'DFW Business', 'Web Design'],
     featured: false,
     gradient: 'from-pink-600 to-red-600'
   },

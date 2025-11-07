@@ -41,10 +41,10 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
   businessName = "Forte Web Designs",
   description = "Business growth systems, AI automation, and custom website design services that give you time back and grow revenue. Serving Dallas-Fort Worth and nationwide.",
   address = {
-    streetAddress: "129 S Main St #260",
-    addressLocality: "Grapevine",
+    streetAddress: "5473 Blair Rd Ste 100 PMB 492829",
+    addressLocality: "Dallas",
     addressRegion: "TX",
-    postalCode: "76051",
+    postalCode: "75231-4227",
     addressCountry: "US"
   },
   phone = "(817) 873-6655",
@@ -167,9 +167,9 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
     "https://www.pinterest.com/fortewebdesigns",
     "https://www.yelp.com/biz/forte-web-designs",
     "https://www.google.com/maps/place/Forte+Web+Designs",
-    "https://www.bbb.org/us/tx/grapevine/profile/web-design/forte-web-designs",
-    "https://www.thumbtack.com/tx/grapevine/web-design/forte-web-designs",
-    "https://www.angi.com/companylist/us/tx/grapevine/forte-web-designs",
+    "https://www.bbb.org/us/tx/dallas/profile/web-design/forte-web-designs",
+    "https://www.thumbtack.com/tx/dallas/web-design/forte-web-designs",
+    "https://www.angi.com/companylist/us/tx/dallas/forte-web-designs",
     "https://www.houzz.com/pro/forte-web-designs",
     "https://www.clutch.co/profile/forte-web-designs"
   ],

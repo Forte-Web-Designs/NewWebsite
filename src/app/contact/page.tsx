@@ -182,17 +182,17 @@ export default function Contact() {
                 </div>
                 <div className="flex-1">
                   <h3 className="text-lg font-semibold mb-4 text-gray-900 dark:text-white">
-                    Business Growth Hub - Grapevine, TX
+                    Business Growth Hub - Dallas, TX
                   </h3>
 
                   {/* Location Information */}
                   <div className="mb-4 p-4 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
                     <div className="text-sm font-semibold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
                       <Icon name="star" className="w-4 h-4 text-blue-600" />
-                      129 S Main St #260
+                      5473 Blair Rd Ste 100 PMB 492829
                     </div>
                     <div className="text-sm text-gray-700 dark:text-gray-300 mb-2">
-                      <div>Grapevine, TX 76051</div>
+                      <div>Dallas, TX 75231-4227</div>
                     </div>
                     <div className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                       Your strategic partner for comprehensive business growth systems. Serving ambitious businesses nationwide from the heart of Dallas-Fort Worth.

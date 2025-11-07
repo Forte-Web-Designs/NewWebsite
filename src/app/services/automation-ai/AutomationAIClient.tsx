@@ -385,7 +385,7 @@ export default function AutomationAIClient() {
                 Ready to Automate Your Business?
               </h2>
               <p className="text-xl text-blue-100 mb-8">
-                Based in Grapevine, we help businesses across DFW implement AI automation that drives real results. Stop manual work and start growing.
+                Based in Dallas, we help businesses across DFW implement AI automation that drives real results. Stop manual work and start growing.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

@@ -224,7 +224,7 @@ const blogPosts = [
       <p><strong>Free Mobile-First Website Audit</strong></p>
       <p>We'll analyze your current mobile experience and show you exactly where you're losing potential customers. No generic reports—just specific, actionable insights for improving your mobile performance in the competitive DFW market.</p>
 
-      <p>📍 <em>Based in Grapevine, helping small businesses grow across Dallas–Fort Worth with mobile-first web design that actually converts.</em></p>
+      <p>📍 <em>Based in Dallas, helping small businesses grow across Dallas–Fort Worth with mobile-first web design that actually converts.</em></p>
 
       <p><a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">👉 Claim your free mobile-friendly website audit here</a></p>
     `,
@@ -237,19 +237,19 @@ const blogPosts = [
     featured: true
   },
   {
-    id: 'grapevine-web-design-building-site-stands-out-locally',
-    title: 'Grapevine Web Design: Building a Site That Stands Out Locally',
-    excerpt: 'Want to dominate the Grapevine and DFW digital landscape? Local web design isn\'t just about looking good—it\'s about connecting with your community, ranking in local searches, and building trust with neighbors who become customers.',
+    id: 'dallas-web-design-building-site-stands-out-locally',
+    title: 'Dallas Web Design: Building a Site That Stands Out Locally',
+    excerpt: 'Want to dominate the Dallas and DFW digital landscape? Local web design isn\'t just about looking good—it\'s about connecting with your community, ranking in local searches, and building trust with neighbors who become customers.',
     content: `
-      <p>Grapevine isn't just another suburb in the Dallas-Fort Worth metroplex—it's a community with its own character, its own customers, and its own competitive landscape. Your website should reflect that.</p>
+      <p>Dallas isn't just another suburb in the Dallas-Fort Worth metroplex—it's the heart of North Texas business, with its own character, its own customers, and its own competitive landscape. Your website should reflect that.</p>
 
       <p>Local web design means more than slapping your address in the footer. It means understanding your market, connecting with your community, and building digital experiences that resonate with people right here in North Texas.</p>
 
       <p>Here's how to build a website that doesn't just represent your business—but elevates it within the DFW market.</p>
 
-      <h2>🎯 Why Local Focus Matters for Your Grapevine Business</h2>
+      <h2>🎯 Why Local Focus Matters for Your Dallas Business</h2>
 
-      <p>When someone in Grapevine searches for a service you offer, they're not just looking for anyone—they're looking for someone nearby, someone they can trust, someone who understands their needs.</p>
+      <p>When someone in Dallas searches for a service you offer, they're not just looking for anyone—they're looking for someone nearby, someone they can trust, someone who understands their needs.</p>
 
       <p>Think about it: would you rather work with a business that clearly serves your area, or one that could be located anywhere? Local focus isn't limiting—it's powerful positioning.</p>
 
@@ -260,16 +260,16 @@ const blogPosts = [
         <li>Local searches are 3x more likely to convert than general searches</li>
       </ul>
 
-      <p>Your Grapevine web design should capitalize on this local intent from the moment visitors land on your site.</p>
+      <p>Your Dallas web design should capitalize on this local intent from the moment visitors land on your site.</p>
 
       <h2>🗺️ Location-Based SEO That Actually Works</h2>
 
-      <p>Local SEO isn't just about mentioning "Grapevine" a few times on your homepage. Effective location-based optimization requires strategic implementation throughout your entire site.</p>
+      <p>Local SEO isn't just about mentioning "Dallas" a few times on your homepage. Effective location-based optimization requires strategic implementation throughout your entire site.</p>
 
       <h3>Geographic Keywords That Connect</h3>
       <p>Instead of competing for generic terms like "web design," target location-specific phrases your customers actually use:</p>
       <ul>
-        <li>"Web design Grapevine"</li>
+        <li>"Web design Dallas"</li>
         <li>"DFW web development"</li>
         <li>"Southlake website design"</li>
         <li>"Dallas-Fort Worth digital marketing"</li>
@@ -282,7 +282,7 @@ const blogPosts = [
       <p>Help search engines understand your local relevance with proper schema markup including:</p>
       <ul>
         <li>Business address and phone number</li>
-        <li>Service areas (Grapevine, Southlake, Colleyville, etc.)</li>
+        <li>Service areas (Dallas, Southlake, Plano, etc.)</li>
         <li>Business hours and contact information</li>
         <li>Customer reviews and ratings</li>
       </ul>
@@ -295,14 +295,14 @@ const blogPosts = [
       <p>Integrate Google Maps directly into your contact page. When someone finds your business on their phone, they should be one tap away from getting directions to your location.</p>
 
       <h3>Click-to-Call Functionality</h3>
-      <p>Make your phone number instantly clickable on mobile devices. Local customers often prefer calling, especially for service-based businesses common in Grapevine.</p>
+      <p>Make your phone number instantly clickable on mobile devices. Local customers often prefer calling, especially for service-based businesses common in Dallas.</p>
 
       <h3>Local Business Hours Display</h3>
       <p>Clearly display your hours, especially if they vary by day or season. Include any special holiday hours that might affect DFW area customers.</p>
 
       <h2>🏡 Unique DFW Branding That Resonates</h2>
 
-      <p>Effective Grapevine web design reflects the character of North Texas while showcasing what makes your business unique within this market.</p>
+      <p>Effective Dallas web design reflects the character of North Texas while showcasing what makes your business unique within this market.</p>
 
       <h3>Community Connection</h3>
       <p>Feature local landmarks, community events, or partnerships that demonstrate your roots in the area. This builds trust and shows you're invested in the community's success.</p>
@@ -318,13 +318,13 @@ const blogPosts = [
       <p>The Dallas-Fort Worth area is home to countless businesses competing for the same local customers. Your website needs to clearly communicate why someone should choose you over the competition down the road.</p>
 
       <h3>Clear Value Proposition</h3>
-      <p>What do you do differently? Why should a Grapevine customer choose you over alternatives in Southlake or Dallas? Make this obvious within seconds of landing on your site.</p>
+      <p>What do you do differently? Why should a Dallas customer choose you over alternatives in Southlake or Plano? Make this obvious within seconds of landing on your site.</p>
 
       <h3>Local Expertise</h3>
       <p>Demonstrate deep knowledge of local challenges, regulations, or market conditions that affect your customers. This positions you as the obvious choice for area businesses.</p>
 
       <h3>Community Involvement</h3>
-      <p>Highlight your involvement in local organizations, sponsorships of area events, or partnerships with other Grapevine businesses. This builds credibility and shows long-term commitment to the community.</p>
+      <p>Highlight your involvement in local organizations, sponsorships of area events, or partnerships with other Dallas businesses. This builds credibility and shows long-term commitment to the community.</p>
 
       <h2>📈 Measuring Local Success</h2>
 
@@ -339,16 +339,16 @@ const blogPosts = [
 
       <h2>🤝 Ready to Build Something Special?</h2>
 
-      <p>Great Grapevine web design isn't about following templates—it's about understanding your market, your customers, and your goals, then building something that serves all three.</p>
+      <p>Great Dallas web design isn't about following templates—it's about understanding your market, your customers, and your goals, then building something that serves all three.</p>
 
       <p>Your website should work as hard as you do to attract local customers, build community trust, and grow your business within the competitive DFW market.</p>
 
       <p>If you're ready to build a website that truly represents your business and resonates with your local audience, let's start with a conversation about your goals.</p>
 
-      <p><strong>Free Website Audit for Grapevine Area Businesses</strong></p>
+      <p><strong>Free Website Audit for Dallas Area Businesses</strong></p>
       <p>We offer comprehensive 5-point website audits specifically designed for DFW businesses. We'll analyze your current site's local SEO performance, mobile experience, loading speed, and competitive positioning within the North Texas market.</p>
 
-      <p>📍 <em>Proudly serving Grapevine, Southlake, Colleyville, and all of Dallas-Fort Worth from our Grapevine headquarters.</em></p>
+      <p>📍 <em>Proudly serving Dallas, Southlake, Plano, and all of Dallas-Fort Worth from our Dallas headquarters.</em></p>
 
       <p><a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">👉 Claim your free local website audit here</a></p>
     `,
@@ -356,8 +356,8 @@ const blogPosts = [
     date: '2025-08-18',
     readTime: '9 min read',
     category: 'Local Business',
-    image: '/images/blog/grapevine-web-design-local.webp',
-    tags: ['Grapevine Web Design', 'Local SEO', 'DFW Business', 'Web Design', 'Local Business', 'Mobile Design'],
+    image: '/images/blog/dallas-web-design-local.webp',
+    tags: ['Dallas Web Design', 'Local SEO', 'DFW Business', 'Web Design', 'Local Business', 'Mobile Design'],
     featured: true
   },
   {
@@ -491,7 +491,7 @@ const blogPosts = [
 
       <p>If you'd like a professional audit of your website's performance, we offer free 5-point website audits for businesses nationwide. We'll show you exactly what's working, what's not, and how to improve your results.</p>
 
-      <p>📍 Based in Grapevine, Texas, proudly serving businesses nationwide from our DFW headquarters.</p>
+      <p>📍 Based in Dallas, Texas, proudly serving businesses nationwide from our DFW headquarters.</p>
 
       <p><a href="https://www.fortewebdesigns.com/solutions/seotool/" target="_blank" rel="noopener noreferrer">👉 Get your free website audit here</a></p>
     `,
@@ -510,7 +510,7 @@ const blogPosts = [
     content: `
       <p>If you've searched "professional web designers near me" in the Dallas–Fort Worth metroplex, you've probably been overwhelmed with options—from large digital marketing agencies to freelance web developers. But finding the right web design company isn't just about geographic proximity—it's about finding a professional team who understands your local business market, target audience behavior, and specific growth objectives.</p>
 
-      <p>At Forte Web Designs, based in Grapevine, we've helped dozens of DFW businesses build custom websites that not only showcase their brand professionally but drive measurable results through strategic web design and local SEO optimization.</p>
+      <p>At Forte Web Designs, based in Dallas, we've helped dozens of DFW businesses build custom websites that not only showcase their brand professionally but drive measurable results through strategic web design and local SEO optimization.</p>
 
       <h2>1. Look for Local DFW Market Expertise</h2>
 
@@ -1209,7 +1209,7 @@ const blogPosts = [
 
       <h2>Local Design. Real Results.</h2>
 
-      <p>We're based in Grapevine, TX, and we work with small businesses all over the Dallas-Fort Worth area. That means we understand:</p>
+      <p>We're based in Dallas, TX, and we work with small businesses all over the Dallas-Fort Worth area. That means we understand:</p>
 
       <ul>
         <li>How people in DFW search for services</li>

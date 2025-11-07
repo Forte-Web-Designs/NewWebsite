@@ -160,7 +160,7 @@ export default function Home() {
             "description": "DFW-based business growth systems company. We install Lead Catcher™, Quote Builder™, and Owner's Console™ systems.",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Grapevine", 
+              "addressLocality": "Dallas", 
               "addressRegion": "TX",
               "addressCountry": "US"
             },

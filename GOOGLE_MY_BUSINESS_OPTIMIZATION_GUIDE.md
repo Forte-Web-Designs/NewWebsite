@@ -12,7 +12,7 @@ Google My Business (now Google Business Profile) is the most important factor fo
 - Enter your business name: "Forte Web Designs"
 - Select business category: "Web Designer" (primary)
 - Add additional categories: "Website Designer", "Digital Marketing Agency", "SEO Agency"
-- Add your address: Grapevine, TX 76051
+- Add your address: Dallas, TX 75231
 - Add service areas: Dallas, Fort Worth, Plano, Frisco, Arlington, DFW Metro
 - Add phone number: (817) 873-6655
 - Add website: https://fortewebdesigns.com
@@ -57,7 +57,7 @@ Google My Business (now Google Business Profile) is the most important factor fo
 - **Phone:** (817) 873-6655
 - **Website:** https://fortewebdesigns.com
 - **Email:** info@fortewebdesigns.com
-- **Address:** Grapevine, TX 76051
+- **Address:** Dallas, TX 75231
 
 #### 3. Business Hours
 - **Monday-Friday:** 9:00 AM - 5:00 PM
@@ -173,7 +173,7 @@ Include location-based keywords naturally:
 - "Dallas web designer"
 - "Fort Worth web development"
 - "DFW digital marketing"
-- "Grapevine web design company"
+- "Dallas web design company"
 - "Texas custom websites"
 
 ### Phase 6: Monitoring & Analytics

@@ -8,7 +8,7 @@ Local business directories are crucial for establishing NAP (Name, Address, Phon
 Before submitting to directories, ensure you have consistent information:
 
 **Business Name:** Forte Web Designs
-**Address:** Grapevine, TX 76051
+**Address:** Dallas, TX 75231
 **Phone:** (817) 873-6655
 **Website:** https://fortewebdesigns.com
 **Email:** info@fortewebdesigns.com

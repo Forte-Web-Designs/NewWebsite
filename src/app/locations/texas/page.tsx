@@ -5,7 +5,7 @@ import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
   title: 'Texas Web Design & AI Automation | Forte Web Designs',
-  description: 'Professional web design and AI automation services in Texas. Custom websites, business automation, and growth systems for Texas businesses. Based in Grapevine, TX.',
+  description: 'Professional web design and AI automation services in Texas. Custom websites, business automation, and growth systems for Texas businesses. Based in Dallas, TX.',
   keywords: 'Texas web design, Dallas web design, Fort Worth web design, DFW web design, Texas AI automation, Austin web design, Houston web design, San Antonio web design, Texas digital marketing',
 };
 
@@ -48,7 +48,7 @@ export default function Texas() {
                 Texas Web Design & AI Automation
               </h1>
               <p className="text-xl lg:text-2xl text-blue-100 mb-8">
-                Professional web design and business automation for growing Texas businesses. 100% USA-based team serving Texas from our Grapevine headquarters.
+                Professional web design and business automation for growing Texas businesses. 100% USA-based team serving Texas from our Dallas headquarters.
               </p>
               <Link
                 href="/contact"
@@ -117,7 +117,7 @@ export default function Texas() {
                     🤝 Local Understanding, National Reach
                   </h3>
                   <p className="text-gray-700 dark:text-gray-300">
-                    Based in Grapevine, we understand the Texas business landscape. We know your market, your competitors, and what Texas customers expect. Plus, we're available for in-person meetings when needed.
+                    Based in Dallas, we understand the Texas business landscape. We know your market, your competitors, and what Texas customers expect. Plus, we're available for in-person meetings when needed.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -157,7 +157,7 @@ export default function Texas() {
                 Serving Texas Businesses Statewide
               </h2>
               <p className="text-xl text-gray-600 dark:text-gray-300 text-center mb-12">
-                From our Grapevine headquarters, we proudly serve businesses throughout Texas
+                From our Dallas headquarters, we proudly serve businesses throughout Texas
               </p>
             </SimpleScrollReveal>
 

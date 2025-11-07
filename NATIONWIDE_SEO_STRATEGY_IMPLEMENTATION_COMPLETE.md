@@ -11,7 +11,7 @@ Successfully updated SEO strategy across the entire website to maintain strong D
 **File:** `/src/app/services/ads/page.tsx`
 - **Metadata Added:** "Professional Google Ads Management | Expert PPC Services Nationwide from DFW"
 - **Hero Section:** Updated to "DFW-based team delivers professional Google Ads management nationwide"
-- **Final CTA:** Added "Based in Grapevine, Texas, proudly serving businesses nationwide from our DFW headquarters"
+- **Final CTA:** Added "Based in Dallas, Texas, proudly serving businesses nationwide from our DFW headquarters"
 - **IndustryLeadCTA:** Updated subtitle to include "DFW-based team that builds profitable ad campaigns nationwide"
 
 ### Social Media Service Page  
