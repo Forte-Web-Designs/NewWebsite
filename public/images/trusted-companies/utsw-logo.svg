@@ -1,0 +1,19 @@
+<!-- UTSW Logo -->
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- University of Texas Southwestern Medical Center -->
+  <g>
+    <!-- UT Shield -->
+    <path d="M20 15 L35 15 L40 25 L35 35 L20 35 L15 25 Z" fill="#BF5700" stroke="#8B4513" stroke-width="0.5"/>
+    <text x="27.5" y="27" text-anchor="middle" fill="white" font-family="Arial, sans-serif" font-size="8" font-weight="bold">UT</text>
+    
+    <!-- Southwestern text -->
+    <text x="50" y="25" fill="#003f7f" font-family="Arial, sans-serif" font-size="11" font-weight="bold">SOUTHWESTERN</text>
+    <text x="50" y="40" fill="#666" font-family="Arial, sans-serif" font-size="8">Medical Center</text>
+    
+    <!-- Medical cross symbol -->
+    <g transform="translate(130, 20)">
+      <rect x="-2" y="-8" width="4" height="16" fill="#c41e3a"/>
+      <rect x="-8" y="-2" width="16" height="4" fill="#c41e3a"/>
+    </g>
+  </g>
+</svg>

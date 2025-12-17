@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Screenshot Test</title>
+    <style>
+        body { 
+            font-family: Arial, sans-serif; 
+            padding: 20px; 
+            background: #1a1a1a; 
+            color: white; 
+        }
+        .container { 
+            max-width: 1200px; 
+            margin: 0 auto; 
+        }
+        .screenshot-container { 
+            display: flex; 
+            gap: 20px; 
+            margin-top: 20px; 
+        }
+        .screenshot { 
+            flex: 1; 
+            border: 1px solid #333; 
+            border-radius: 8px; 
+            overflow: hidden; 
+        }
+        .screenshot img { 
+            width: 100%; 
+            height: auto; 
+        }
+        .loading { 
+            padding: 20px; 
+            text-align: center; 
+            color: #888; 
+        }
+        .error { 
+            padding: 20px; 
+            text-align: center; 
+            color: #ff6b6b; 
+        }
+        button {
+            background: #007acc;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px 5px;
+        }
+        button:hover {
+            background: #005a9e;
+        }
+        input {
+            padding: 8px;
+            margin: 10px;
+            width: 300px;
+            border-radius: 4px;
+            border: 1px solid #333;
+            background: #2a2a2a;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Website Screenshot Test</h1>
+        <p>This page tests the screenshot API to ensure real website images are being captured.</p>
+        
+        <div>
+            <input type="text" id="urlInput" placeholder="Enter website URL (e.g., espn.com)" value="espn.com">
+            <button onclick="captureScreenshots()">Capture Screenshots</button>
+        </div>
+
+        <div class="screenshot-container">
+            <div class="screenshot">
+                <h3>Desktop Version</h3>
+                <div id="desktopResult" class="loading">Click "Capture Screenshots" to test</div>
+            </div>
+            <div class="screenshot">
+                <h3>Mobile Version</h3>
+                <div id="mobileResult" class="loading">Click "Capture Screenshots" to test</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function captureScreenshots() {
+            const url = document.getElementById('urlInput').value;
+            if (!url) {
+                alert('Please enter a URL');
+                return;
+            }
+
+            const desktopDiv = document.getElementById('desktopResult');
+            const mobileDiv = document.getElementById('mobileResult');
+
+            desktopDiv.innerHTML = '<div class="loading">Capturing desktop screenshot...</div>';
+            mobileDiv.innerHTML = '<div class="loading">Capturing mobile screenshot...</div>';
+
+            try {
+                // Capture desktop screenshot
+                const desktopResponse = await fetch('/api/screenshot', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url, device: 'desktop' })
+                });
+                const desktopData = await desktopResponse.json();
+
+                // Capture mobile screenshot
+                const mobileResponse = await fetch('/api/screenshot', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ url, device: 'mobile' })
+                });
+                const mobileData = await mobileResponse.json();
+
+                // Display results
+                if (desktopData.screenshot) {
+                    desktopDiv.innerHTML = `
+                        <img src="${desktopData.screenshot}" alt="Desktop screenshot">
+                        <p style="font-size: 12px; color: #888; padding: 10px;">
+                            ${desktopData.real ? '✅ Real screenshot' : '❌ Mock screenshot'} 
+                            (${desktopData.screenshot.length} chars)
+                        </p>
+                    `;
+                } else {
+                    desktopDiv.innerHTML = '<div class="error">Failed to capture desktop screenshot</div>';
+                }
+
+                if (mobileData.screenshot) {
+                    mobileDiv.innerHTML = `
+                        <img src="${mobileData.screenshot}" alt="Mobile screenshot">
+                        <p style="font-size: 12px; color: #888; padding: 10px;">
+                            ${mobileData.real ? '✅ Real screenshot' : '❌ Mock screenshot'} 
+                            (${mobileData.screenshot.length} chars)
+                        </p>
+                    `;
+                } else {
+                    mobileDiv.innerHTML = '<div class="error">Failed to capture mobile screenshot</div>';
+                }
+
+                console.log('Screenshot test results:', { desktopData, mobileData });
+
+            } catch (error) {
+                console.error('Screenshot test error:', error);
+                desktopDiv.innerHTML = '<div class="error">Error: ' + error.message + '</div>';
+                mobileDiv.innerHTML = '<div class="error">Error: ' + error.message + '</div>';
+            }
+        }
+    </script>
+</body>
+</html>

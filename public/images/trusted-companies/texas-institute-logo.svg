@@ -1,0 +1,23 @@
+<!-- Texas Institute Logo -->
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Texas outline with drill -->
+    <path d="M10 25 L15 20 L25 22 L30 18 L35 20 L40 25 L37 35 L33 40 L30 45 L25 48 L20 45 L15 40 L13 35 L10 30 Z" fill="#2d3748" stroke="#1a202c" stroke-width="0.5"/>
+    
+    <!-- Drill/equipment icon inside Texas -->
+    <rect x="22" y="28" width="1.5" height="12" fill="white"/>
+    <rect x="25" y="28" width="1.5" height="12" fill="white"/>
+    <rect x="27.5" y="28" width="1.5" height="12" fill="white"/>
+    <polygon points="21,28 29,28 25,23" fill="white"/>
+    <rect x="21" y="40" width="8" height="1.5" fill="white"/>
+    
+    <!-- Text -->
+    <text x="50" y="35" fill="#2d3748" font-family="Arial, sans-serif" font-size="18" font-weight="bold" letter-spacing="1px">TEXAS</text>
+    <text x="50" y="50" fill="#2d3748" font-family="Arial, sans-serif" font-size="14" font-weight="600">INSTITUTE</text>
+    
+    <!-- Decorative elements -->
+    <circle cx="135" cy="25" r="3" fill="#2d3748" opacity="0.3"/>
+    <circle cx="145" cy="35" r="2" fill="#2d3748" opacity="0.3"/>
+    <circle cx="140" cy="45" r="2.5" fill="#2d3748" opacity="0.3"/>
+  </g>
+</svg>

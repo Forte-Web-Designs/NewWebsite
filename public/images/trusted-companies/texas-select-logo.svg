@@ -1,0 +1,21 @@
+<!-- Texas Select Logo -->
+<svg width="160" height="80" viewBox="0 0 160 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Texas outline -->
+    <path d="M10 25 L15 20 L25 22 L30 18 L35 20 L40 25 L37 35 L33 40 L30 45 L25 48 L20 45 L15 40 L13 35 L10 30 Z" fill="#1e3a8a" stroke="#1d4ed8" stroke-width="0.5"/>
+    
+    <!-- Star inside Texas -->
+    <path d="M22.5 40 L24 36 L28 36 L25 33.5 L26.5 29.5 L22.5 32 L18.5 29.5 L20 33.5 L17 36 L21 36 Z" fill="white"/>
+    
+    <!-- Red swoosh element -->
+    <path d="M42 20 Q50 25 45 35 Q48 30 55 32 Q52 38 45 40" fill="#dc2626" stroke="#dc2626" stroke-width="1"/>
+    
+    <!-- Text -->
+    <text x="65" y="30" fill="#1e3a8a" font-family="Arial, sans-serif" font-size="18" font-weight="bold">TEXAS</text>
+    <text x="65" y="50" fill="#dc2626" font-family="Arial, sans-serif" font-size="18" font-weight="bold">SELECT</text>
+    
+    <!-- Small decorative stars -->
+    <path d="M135 25 L136 23 L138 23 L136.5 21.5 L137 19.5 L135 21 L133 19.5 L133.5 21.5 L132 23 L134 23 Z" fill="#dc2626"/>
+    <path d="M145 45 L146 43 L148 43 L146.5 41.5 L147 39.5 L145 41 L143 39.5 L143.5 41.5 L142 43 L144 43 Z" fill="#1e3a8a"/>
+  </g>
+</svg>
