@@ -41,7 +41,7 @@ export default function Footer() {
     {
       heading: "Services",
       points: [
-        { text: "AI Automation", href: "/services/automation-ai" },
+        { text: "Automation", href: "/services/automation-ai" },
         { text: "CRM & Integrations", href: "/services/integrations" },
         { text: "Custom Software", href: "/services/custom-software" },
         { text: "Web Design", href: "/services/web-design" },
@@ -94,7 +94,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>Custom AI automation and software development for ambitious businesses. We build intelligent systems that eliminate manual work and scale with your growth.</p>
+              <p>We build automation and custom software that eliminates manual work and scales with your growth. Based in Dallas, serving clients nationwide.</p>
               <p className="mt-3">
                 <strong>Headquartered in Dallas, Texas.</strong> Serving clients throughout Dallas-Fort Worth and nationwide with 100% USA-based team and support.
               </p>

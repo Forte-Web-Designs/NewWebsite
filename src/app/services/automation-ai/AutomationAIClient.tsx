@@ -111,7 +111,7 @@ export default function AutomationAIClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
-                AI Automation
+                Automation
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
                 Stop wasting time on work that should run itself. We build systems that handle the repetitive stuff so your team can focus on what actually matters.
