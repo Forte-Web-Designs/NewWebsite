@@ -639,7 +639,7 @@ export default function Home() {
                 </Link>
               </SimpleScrollReveal>
 
-              {/* KleinBros Agency */}
+              {/* KlnBros Agency */}
               <SimpleScrollReveal direction="up" delay={400}>
                 <Link href="/case-studies/german-marketing-agency" className="block group h-full">
                   <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
@@ -647,7 +647,7 @@ export default function Home() {
                       <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300">Emergency Recovery</span>
                     </div>
                     <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      KleinBros Agency
+                      KlnBros Agency
                     </h3>
                     <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
                       43 workflows saved, 2 hours to full recovery

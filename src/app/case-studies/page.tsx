@@ -116,7 +116,7 @@ const caseStudies = [
   },
   {
     id: 'german-marketing-agency',
-    title: 'KleinBros Agency',
+    title: 'KlnBros Agency',
     headline: '43 workflows saved, 2 hours to full recovery',
     tags: ['Emergency Recovery'],
     problem: "Client's VPS hit 100% disk full. Docker crashed. Their entire n8n automation infrastructure was down, and they couldn't even SSH in to diagnose. Their business operations depended on those workflows running.",
