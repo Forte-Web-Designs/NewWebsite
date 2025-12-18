@@ -69,6 +69,28 @@ export default function HollowBambooCaseStudy() {
         </div>
       </section>
 
+      {/* Video Walkthrough */}
+      <section className="py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <SimpleScrollReveal direction="up">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+                Video Walkthrough
+              </h2>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black">
+                <video
+                  controls
+                  className="w-full"
+                >
+                  <source src="/video-walkthroughs/Revolutionizing Inventory Management for Film Production.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Challenge Section */}
       <section className="py-16 sm:py-20 lg:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
