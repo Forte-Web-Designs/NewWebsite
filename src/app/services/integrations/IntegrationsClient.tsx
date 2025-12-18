@@ -3,43 +3,47 @@
 import Link from 'next/link';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
-export default function WebDesignClient() {
+export default function IntegrationsClient() {
   // What we build blocks
-  const designBlocks = [
+  const integrationBlocks = [
     {
-      title: "Custom Design",
-      description: "Your brand isn't generic. Your website shouldn't be either. We design from scratch based on your business, your audience, and what you're trying to accomplish.",
+      title: "CRM Setup and Optimization",
+      description: "Your CRM should be the source of truth for your business. We set it up properly, clean up the mess, and make sure it actually works the way you need it to.",
       examples: [
-        "Design that matches your brand identity",
-        "Layout built around your specific goals",
-        "No template limitations or \"that feature costs extra\""
+        "Pipeline stages that match your actual sales process",
+        "Custom fields that capture what matters",
+        "Automations that move deals forward without manual work",
+        "Data that's accurate and up to date"
       ]
     },
     {
-      title: "Performance",
-      description: "Slow sites lose visitors. We build sites that load fast because the code is clean and optimized, not bloated with plugins and page builder overhead.",
+      title: "System Connections",
+      description: "Your CRM, email platform, forms, accounting software, and everything else should share data automatically. We build the connections that make your stack work as one system.",
       examples: [
-        "90+ PageSpeed scores",
-        "Fast load times on mobile and desktop",
-        "No unnecessary code slowing things down"
+        "New leads flow into your CRM automatically",
+        "Customer data syncs across all platforms",
+        "No more copy-pasting between tools",
+        "Changes in one system update everywhere"
       ]
     },
     {
-      title: "SEO Foundation",
-      description: "A beautiful site that nobody finds is useless. We build with SEO fundamentals baked in from the start, not bolted on after.",
+      title: "Automated Handoffs",
+      description: "When a lead becomes a customer, when a deal closes, when a project kicks off, the right things should happen automatically. We build the handoffs so nothing gets dropped.",
       examples: [
-        "Clean URL structure and semantic HTML",
-        "Meta tags, schema markup, and proper headings",
-        "Mobile-responsive design (Google's ranking factor)"
+        "Sales to operations handoffs without manual work",
+        "Automatic task creation when deals move stages",
+        "Notifications to the right people at the right time",
+        "Nothing falls through the cracks"
       ]
     },
     {
-      title: "Lead Capture",
-      description: "Your website should generate leads, not just look good. We build with conversion in mind, making it easy for visitors to take the next step.",
+      title: "Dashboards and Reporting",
+      description: "You shouldn't have to check five tools to know what's happening. We build dashboards that pull data from across your stack and show you the truth in one place.",
       examples: [
-        "Clear calls to action throughout",
-        "Contact forms that actually work",
-        "Analytics and tracking so you know what's working"
+        "Real-time visibility into pipeline, revenue, and operations",
+        "Data from multiple sources in one view",
+        "Reports that generate automatically",
+        "No more digging through spreadsheets"
       ]
     }
   ];
@@ -47,24 +51,24 @@ export default function WebDesignClient() {
   // Problems this solves
   const problems = [
     {
-      problem: "Our website looks outdated and we're embarrassed to send people there.",
-      solution: "A modern, professional site that you're proud to share. Design that reflects where your business is today, not where it was five years ago."
+      problem: "My team is copy-pasting data between five different tools.",
+      solution: "Connections that sync data automatically. Enter it once, it shows up everywhere."
     },
     {
-      problem: "Our site loads slowly and people leave before it finishes.",
-      solution: "Hand-coded sites without the bloat. Fast load times that keep visitors engaged."
+      problem: "Our CRM is a mess and nobody trusts the data.",
+      solution: "Cleanup, proper setup, and systems that keep it accurate going forward."
     },
     {
-      problem: "We're not showing up in Google searches.",
-      solution: "SEO fundamentals built in from the start. Clean code, proper structure, and the technical foundation you need to rank."
+      problem: "Leads come in but nobody follows up fast enough.",
+      solution: "Automatic routing and notifications. Leads get to the right person instantly."
     },
     {
-      problem: "We get traffic but nobody contacts us.",
-      solution: "Design focused on conversion. Clear paths to contact, prominent calls to action, and forms that actually work."
+      problem: "Things fall through the cracks when deals close or projects kick off.",
+      solution: "Automated handoffs that trigger the right actions without anyone remembering to do it."
     },
     {
-      problem: "We used a template but it doesn't fit our business.",
-      solution: "Custom design built for your specific needs. No forcing your content into someone else's layout."
+      problem: "I have no idea what's happening without asking three people.",
+      solution: "Dashboards that show you pipeline, revenue, and operations in one place. Real-time, no digging."
     }
   ];
 
@@ -72,51 +76,71 @@ export default function WebDesignClient() {
   const steps = [
     {
       number: "1",
-      title: "Discovery",
-      description: "We learn about your business, your audience, and what you want the website to accomplish. Goals first, design second."
+      title: "Audit",
+      description: "We map out your current tools, how data flows (or doesn't), and where things break down. We find the gaps and the opportunities."
     },
     {
       number: "2",
-      title: "Design",
-      description: "We create mockups based on your brand and goals. You see exactly what you're getting before we write any code."
+      title: "Plan",
+      description: "You get a clear plan for what we'll connect, how data will flow, and what changes when it's done. No surprises."
     },
     {
       number: "3",
       title: "Build",
-      description: "Hand-coded development. Clean, fast, optimized. We build it right the first time."
+      description: "We build the connections, set up the automations, and test everything. We make sure it works before you rely on it."
     },
     {
       number: "4",
-      title: "Launch and Train",
-      description: "We launch, train you on updates, and make sure everything works. You're not dependent on us for simple changes."
+      title: "Train and Support",
+      description: "We show your team how it works and document everything. You're not dependent on us to understand your own systems."
     }
   ];
 
-  // What's included
-  const included = [
+  // Systems we work with
+  const systemCategories = [
     {
-      title: "Custom Design",
-      description: "Original design created for your business. Not a template with your logo swapped in."
+      category: "CRMs",
+      tools: "HubSpot, Salesforce, Pipedrive, Go High Level, Zoho, Monday.com"
     },
     {
-      title: "Clean Code",
-      description: "Hand-coded HTML, CSS, and JavaScript. No page builder bloat. Fast and maintainable."
+      category: "Email",
+      tools: "Mailchimp, ActiveCampaign, Klaviyo, ConvertKit, Gmail, Outlook"
     },
     {
-      title: "Mobile Responsive",
-      description: "Looks and works great on phones, tablets, and desktops. Not an afterthought."
+      category: "Forms",
+      tools: "Typeform, JotForm, Gravity Forms, Google Forms, Webflow"
     },
     {
-      title: "SEO Foundation",
-      description: "Technical SEO built in. Meta tags, schema, clean URLs, proper headings."
+      category: "Accounting",
+      tools: "QuickBooks, Xero, FreshBooks, Wave"
     },
     {
-      title: "Analytics Setup",
-      description: "Google Analytics configured so you can see what's working."
+      category: "E-commerce",
+      tools: "Shopify, WooCommerce, BigCommerce"
     },
     {
-      title: "Training",
-      description: "We show you how to make basic updates yourself. You're not stuck calling us for every small change."
+      category: "Project Management",
+      tools: "Asana, ClickUp, Notion, Basecamp"
+    },
+    {
+      category: "Communication",
+      tools: "Slack, Microsoft Teams, Twilio"
+    }
+  ];
+
+  // Results
+  const results = [
+    {
+      company: "Modern Bungalow",
+      result: "Shopify orders automatically trigger the right customer emails across 9 different scenarios. Zero manual work."
+    },
+    {
+      company: "CR Deals Cincinnati",
+      result: "Product data flows from inventory to listings to social channels automatically. 3,000 products monthly without bottlenecks."
+    },
+    {
+      company: "Kingfisher Ads",
+      result: "Ad spend data from Meta and Google pulls automatically into reporting. Monthly process cut from 2-4 hours to 15 minutes."
     }
   ];
 
@@ -128,10 +152,10 @@ export default function WebDesignClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
-                Web Design & Digital Presence
+                CRM & Integrations
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Hand-coded websites built to convert. Fast, SEO-optimized, and designed to showcase your brand. Not templates. Not page builders. Real code that performs.
+                Make your tools actually talk to each other. We connect your systems so data flows automatically and your team stops copy-pasting between platforms.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -162,13 +186,13 @@ export default function WebDesignClient() {
                 What We Build
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Your website is often the first impression. We build sites that load fast, rank well, and turn visitors into customers. No templates. No drag-and-drop builders. Hand-coded for performance.
+                You're paying for powerful tools but they don't work together. Your team wastes hours moving data between systems, and something always falls through the cracks. We fix that.
               </p>
             </div>
           </SimpleScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {designBlocks.map((block, index) => (
+            {integrationBlocks.map((block, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700 h-full">
                   <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-4">
@@ -227,8 +251,47 @@ export default function WebDesignClient() {
         </div>
       </section>
 
-      {/* How We Work Section */}
+      {/* Systems We Work With Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
+                Systems We Work With
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                We've connected hundreds of tools. Here are some of the most common.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            {systemCategories.map((category, index) => (
+              <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    {category.category}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm">
+                    {category.tools}
+                  </p>
+                </div>
+              </SimpleScrollReveal>
+            ))}
+          </div>
+
+          <SimpleScrollReveal direction="up">
+            <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="font-semibold">And more:</span> If it has an API, we can probably connect it. If you don't see your tool, ask.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* How We Work Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
@@ -257,47 +320,54 @@ export default function WebDesignClient() {
           </div>
 
           <SimpleScrollReveal direction="up">
-            <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
+            <div className="text-center p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Timeline:</span> Most websites take 2-4 weeks from kickoff to launch. We'll give you a specific timeline in your proposal.
+                <span className="font-semibold">Timeline:</span> Most integration projects take 2-4 weeks depending on complexity. We'll give you a specific timeline in your proposal.
               </p>
             </div>
           </SimpleScrollReveal>
         </div>
       </section>
 
-      {/* What's Included Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
+      {/* Results Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-12">
+            <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                What's Included
+                What Clients Have Achieved
               </h2>
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {included.map((item, index) => (
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {results.map((item, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-                <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                  <div className="flex items-start gap-3 mb-3">
-                    <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
-                      <svg className="w-3 h-3 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
-                      {item.title}
-                    </h3>
-                  </div>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm pl-8">
-                    {item.description}
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                  <p className="font-semibold text-gray-900 dark:text-white mb-2">
+                    {item.company}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {item.result}
                   </p>
                 </div>
               </SimpleScrollReveal>
             ))}
           </div>
+
+          <SimpleScrollReveal direction="up">
+            <div className="text-center">
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+              >
+                See All Case Studies
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </SimpleScrollReveal>
         </div>
       </section>
 
@@ -310,7 +380,7 @@ export default function WebDesignClient() {
                 Ready to Talk?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                If your website isn't working for your business, let's figure out what's possible. We'll look at your current site, understand your goals, and show you what a custom build could look like.
+                If your tools don't talk to each other and your team is wasting time on manual data work, let's figure out what's possible. We'll look at your current stack, find the gaps, and show you what connected systems could look like.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

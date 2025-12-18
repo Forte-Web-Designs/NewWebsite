@@ -1,137 +1,268 @@
 'use client';
 
-import { Icon } from '@/components/images/Icon';
 import Link from 'next/link';
 import SimpleScrollReveal from './animations/SimpleScrollReveal';
 
-const pricingTiers = [
+// Investment Options - Highest price first for anchoring
+const investmentTiers = [
   {
-    name: 'Automation',
-    price: '$3,500',
-    period: 'starting at',
-    description: 'AI-powered automation that saves 20+ hours per week and eliminates manual work',
+    name: 'Complete Business System',
+    priceRange: '$7,500 - $15,000+',
+    subhead: 'End-to-end transformation',
+    whatSolves: "You need a complete overhaul. Multiple systems that don't talk to each other, manual processes everywhere, no visibility into what's happening. You want it all fixed, properly.",
     features: [
-      'Custom workflow automation',
-      'CRM & tool integrations',
-      'Intelligent lead routing',
-      'Email & SMS automation',
-      'Real-time notifications & alerts',
-      'Dashboard & reporting',
-      'Continuous optimization & support'
+      'Full workflow audit and strategy',
+      'Custom software and automation suite',
+      'CRM optimization and integrations',
+      'Real-time dashboards and reporting',
+      'Team training and documentation',
+      '90 days of support and optimization'
     ],
-    cta: 'Book Strategy Call',
-    href: '/contact',
-    badge: 'Biggest Time Saver',
-    badgeColor: 'bg-purple-600',
-    roi: 'Typical time savings: 20-40 hrs/week'
+    outcomes: [
+      '40+ hours saved weekly',
+      'Complete operational visibility',
+      'Systems that scale with growth'
+    ],
+    timeline: '6-12 weeks',
+    cta: 'Book a Strategy Call',
+    href: '/contact'
   },
   {
-    name: 'Complete System',
-    price: '$5,000+',
-    period: 'custom pricing',
-    description: 'End-to-end business system with custom software, automation, CRM, analytics, and everything you need to scale',
+    name: 'Automation System',
+    priceRange: '$3,500 - $7,500',
+    subhead: 'Eliminate manual work',
+    whatSolves: "You're spending hours every week on repetitive tasks. Lead routing, follow-ups, data entry, reporting. You need systems that handle it automatically so your team can focus on work that matters.",
     features: [
-      'Custom software & full automation suite',
-      'CRM setup & sales pipeline optimization',
-      'Lead capture, routing & nurture sequences',
-      'Multi-channel marketing automation',
-      'Custom dashboards & real-time analytics',
-      'Team training & documentation',
-      'Dedicated project manager',
-      'Priority support & continuous optimization'
+      'Workflow analysis and optimization',
+      'Custom automation build',
+      'CRM and tool integrations',
+      'Error handling and monitoring',
+      'Training and documentation',
+      '60 days of support'
     ],
-    cta: 'Book Strategy Call',
+    outcomes: [
+      '20+ hours saved weekly',
+      'Zero missed follow-ups',
+      'Scales without adding headcount'
+    ],
+    timeline: '3-6 weeks',
+    cta: 'Book a Strategy Call',
     href: '/contact',
     popular: true,
-    badge: 'Best Value',
-    badgeColor: 'bg-blue-600',
-    roi: 'Typical revenue impact: 2-10x in 12 months'
+    badge: 'MOST POPULAR'
   },
   {
-    name: 'Website',
-    price: '$2,000',
-    period: 'starting at',
-    description: 'Professional website that showcases your brand and converts visitors into customers',
+    name: 'Starter Project',
+    priceRange: '$1,500 - $3,500',
+    subhead: 'Solve one problem well',
+    whatSolves: "You have a specific bottleneck that's costing you time. One workflow, one integration, one system that needs to work. You want it fixed without a massive project.",
     features: [
-      'Custom strategy & positioning',
-      'Professional design & development',
-      'Mobile-responsive & SEO optimized',
-      'Lead capture & conversion optimization',
-      'Analytics & tracking setup',
-      'Training & documentation',
-      '60 days of support & optimization'
+      'Focused workflow optimization',
+      'Single automation or integration',
+      'Testing and deployment',
+      'Documentation',
+      '30 days of support'
     ],
-    cta: 'Book Strategy Call',
+    outcomes: [
+      '5-10 hours saved weekly',
+      'One major pain point eliminated',
+      'Foundation for future automation'
+    ],
+    timeline: '2-3 weeks',
+    cta: 'Book a Strategy Call',
+    href: '/contact'
+  }
+];
+
+// Ongoing Support Tiers - Highest first
+const supportTiers = [
+  {
+    name: 'Priority Partner',
+    price: '$1,997',
+    period: '/month',
+    features: [
+      '20 hours of development or optimization monthly',
+      'Same-day response on all requests',
+      'Quarterly strategy sessions',
+      'After-hours emergency support',
+      'Proactive recommendations'
+    ],
+    bestFor: 'Mission-critical operations where downtime isn\'t an option',
+    cta: 'Get Started',
+    href: '/contact'
+  },
+  {
+    name: 'Growth Partner',
+    price: '$997',
+    period: '/month',
+    features: [
+      '8 hours of development or optimization monthly',
+      'Priority phone and Slack support',
+      'Quarterly system audits',
+      'Proactive recommendations',
+      'Monthly performance reports'
+    ],
+    bestFor: 'Businesses that want continuous improvement and fast support',
+    cta: 'Get Started',
     href: '/contact',
-    badge: 'Perfect Starting Point',
-    badgeColor: 'bg-green-600',
-    roi: 'Average ROI: 3-5x in first year'
+    recommended: true,
+    badge: 'RECOMMENDED'
+  },
+  {
+    name: 'Essential Care',
+    price: '$497',
+    period: '/month',
+    features: [
+      'Hosting, security, and monitoring',
+      '2 hours of updates or optimization monthly',
+      'Priority email support (24-hour response)',
+      'Monthly performance reports'
+    ],
+    bestFor: 'Keeping systems running smoothly with minimal ongoing changes',
+    cta: 'Get Started',
+    href: '/contact'
+  }
+];
+
+// Testimonials with attribution and outcomes
+const testimonials = [
+  {
+    quote: "Very good at thinking through the logic of how to best automate a process, and then executing on that vision. Definitely will work with him again.",
+    company: 'Modern Bungalow',
+    location: 'Denver furniture retailer',
+    result: '15+ hours monthly saved, 9 email scenarios automated'
+  },
+  {
+    quote: "Extremely attentive and responsive. Gave us an accurate timeline and met it. Highly recommend.",
+    company: 'Hollow Bamboo Film Productions',
+    location: '',
+    result: '20+ hours weekly saved tracking equipment across 6 locations'
+  },
+  {
+    quote: "Communication was 10/10. I felt very safe throughout the entire project.",
+    company: 'Yves Klein, Germany',
+    location: 'Marketing agency',
+    result: '43 workflows recovered, 2 hours to full operation after server crash'
+  },
+  {
+    quote: "Figured it out quickly and got everything working smoothly. Very responsive throughout.",
+    company: 'Prediction Market Trader',
+    location: '',
+    result: 'Hundreds of markets analyzed daily, manual research eliminated'
+  }
+];
+
+// FAQ items for objection handling
+const faqItems = [
+  {
+    question: 'How do you price custom software projects?',
+    answer: "Based on scope and complexity. After a discovery call, we provide a detailed proposal with clear deliverables, timeline, and investment. Projects typically range from $3,500 to $15,000+ depending on what you need. You own the source code."
+  },
+  {
+    question: "What's included in every project?",
+    answer: "Discovery and strategy, custom build, testing, training, documentation, and post-launch support. We don't hand you something and disappear. You get a system that works and the knowledge to manage it."
+  },
+  {
+    question: 'How long do projects take?',
+    answer: "Most automation projects take 2-4 weeks. Larger custom software projects take 4-8 weeks. We'll give you a specific timeline in your proposal."
+  },
+  {
+    question: "What if I'm not sure what I need?",
+    answer: "That's what the discovery call is for. We'll look at your situation, identify opportunities, and recommend the right scope. No pressure, no obligation."
+  },
+  {
+    question: 'Do you offer payment plans?',
+    answer: "Yes. Typically 50% upfront, 50% on completion. For larger projects, we do milestone-based payments aligned with deliverables."
+  },
+  {
+    question: 'What\'s your minimum project size?',
+    answer: "$1,500 for standalone projects. If your need is smaller than that, we're probably not the right fit, but we can point you in the right direction."
+  },
+  {
+    question: 'How do I know this will work for my business?',
+    answer: "We show you the ROI math before you commit. If the numbers don't make sense for your situation, we'll tell you. We turn down projects that won't deliver real value."
   }
 ];
 
 export function PricingPage() {
   return (
     <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      {/* Hero */}
+      {/* Section 1: Hero - Value-focused */}
       <div className="max-w-4xl mx-auto text-center mb-20">
         <SimpleScrollReveal direction="up">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Invest in growth, not expenses
+            Stop Losing Time and Money to Manual Work
           </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-4">
-            Custom solutions designed to deliver measurable ROI and scale your business
+          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
+            We build automation systems and custom software that pay for themselves in weeks, not years. Most clients see ROI in 4-8 weeks.
           </p>
-          <p className="text-base text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            Every project is tailored to your unique goals. Pricing reflects scope, complexity, and expected outcomes.
-          </p>
+          <Link
+            href="/contact"
+            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200"
+          >
+            Book a Strategy Call
+          </Link>
         </SimpleScrollReveal>
       </div>
 
-      {/* Pricing Context Section */}
-      <div className="max-w-6xl mx-auto mb-20">
+      {/* Section 2: ROI Frame - Key section */}
+      <div className="max-w-4xl mx-auto mb-24">
         <SimpleScrollReveal direction="up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            Why We Show Our Pricing
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            Most consultants hide their pricing because they're optimizing for the transaction. We don't. We believe in transparency because we're optimizing for relationships.
-          </p>
-
-          <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                ROI-Focused Pricing
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Every investment should pay for itself. Our clients typically see 3-10x returns within 12 months, with most projects paying for themselves in 1-3 months. We're not cheap, but we're profitable.
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
+            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+              What Is This Problem Costing You?
+            </h2>
+            <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+              <p>
+                Before we talk about investment, let's talk about what you're losing right now.
               </p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                Custom Work, Not Templates
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                You'll never get a WordPress template or a generic Zapier flow from us. Everything is custom-built for your specific business. That costs more upfront, but it's the difference between software that breaks and software that scales.
+              <p>
+                If your team spends 20 hours a week on manual work that could be automated, and you value that time at $40/hour, that's $3,200 a month. $38,400 a year. And that's just the labor cost, not the missed opportunities, the errors, or the growth you're leaving on the table.
               </p>
-            </div>
-
-            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
-              <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4">
-                No Hidden Costs
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                Every proposal includes the gotchas, the hidden costs, the potential roadblocks. Free, no contract required. We prove value before asking for commitment.
+              <p>
+                Most of our projects pay for themselves in 4-8 weeks. After that, it's pure value, month after month, for as long as the system runs.
+              </p>
+              <p className="font-medium text-gray-900 dark:text-white">
+                That's how we think about pricing. Not "what does this cost" but "when does this pay for itself."
               </p>
             </div>
           </div>
         </SimpleScrollReveal>
       </div>
 
-      {/* Pricing Cards */}
-      <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
-          {pricingTiers.map((tier, index) => (
+      {/* Section 3: How We Price Projects */}
+      <div className="max-w-4xl mx-auto mb-24">
+        <SimpleScrollReveal direction="up">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
+            How We Price Projects
+          </h2>
+          <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6 text-center max-w-3xl mx-auto">
+            <p>
+              We price based on the outcome you're trying to achieve, not the hours it takes us to build it.
+            </p>
+            <p>
+              Every project starts with a discovery call where we understand your situation, identify opportunities, and map out what's possible. Then we send a detailed proposal with clear scope, timeline, and investment, so you know exactly what you're getting and when you'll see returns.
+            </p>
+            <p className="font-medium text-gray-900 dark:text-white">
+              No hourly billing. No surprises. No hidden costs.
+            </p>
+          </div>
+        </SimpleScrollReveal>
+      </div>
+
+      {/* Section 4: Investment Options - Highest first, middle highlighted */}
+      <div className="max-w-7xl mx-auto mb-16">
+        <SimpleScrollReveal direction="up">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+            Investment Options
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+            Choose the scope that fits your situation. Every project is custom-built for your business.
+          </p>
+        </SimpleScrollReveal>
+
+        <div className="grid md:grid-cols-3 gap-8 mb-12">
+          {investmentTiers.map((tier, index) => (
             <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
               <div
                 className={`relative bg-white dark:bg-gray-900 rounded-2xl p-8 h-full flex flex-col ${
@@ -142,58 +273,181 @@ export function PricingPage() {
               >
                 {tier.badge && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                    <span className={`${tier.badgeColor} text-white px-3 sm:px-4 py-1 rounded-full text-xs sm:text-sm font-semibold`}>
+                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
                       {tier.badge}
                     </span>
                   </div>
                 )}
 
-                <div className="mb-8">
+                <div className="mb-6">
                   <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
                     {tier.name}
                   </h3>
-                  <div className="flex items-baseline gap-2 mb-4">
-                    <span className="text-4xl font-bold text-gray-900 dark:text-white">
-                      {tier.price}
-                    </span>
-                    <span className="text-gray-500 dark:text-gray-400 text-sm">
-                      {tier.period}
+                  <div className="flex items-baseline gap-2 mb-2">
+                    <span className="text-3xl font-bold text-gray-900 dark:text-white">
+                      {tier.priceRange}
                     </span>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 mb-3">
-                    {tier.description}
+                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">
+                    {tier.subhead}
                   </p>
-                  {tier.roi && (
-                    <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-amber-50 dark:bg-amber-900/20 rounded-full border border-amber-200 dark:border-amber-800">
-                      <svg className="w-4 h-4 text-amber-600 dark:text-amber-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-sm font-semibold text-amber-700 dark:text-amber-400">
-                        {tier.roi}
-                      </span>
-                    </div>
-                  )}
                 </div>
 
-                <ul className="space-y-4 mb-8 flex-grow">
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
+                    What this solves
+                  </h4>
+                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                    {tier.whatSolves}
+                  </p>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
+                    What's included
+                  </h4>
+                  <ul className="space-y-2">
+                    {tier.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <svg className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">
+                          {feature}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-6">
+                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
+                    Typical outcomes
+                  </h4>
+                  <ul className="space-y-2">
+                    {tier.outcomes.map((outcome, idx) => (
+                      <li key={idx} className="flex items-start gap-3">
+                        <svg className="w-5 h-5 text-amber-500 dark:text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                        </svg>
+                        <span className="text-gray-600 dark:text-gray-300 text-sm">
+                          {outcome}
+                        </span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="mb-8">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    <span className="font-medium">Timeline:</span> {tier.timeline}
+                  </p>
+                </div>
+
+                <div className="mt-auto">
+                  <Link
+                    href={tier.href}
+                    className={`block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                      tier.popular
+                        ? 'bg-blue-600 hover:bg-blue-700 text-white'
+                        : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white'
+                    }`}
+                  >
+                    {tier.cta}
+                  </Link>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          ))}
+        </div>
+
+        <SimpleScrollReveal direction="up">
+          <p className="text-center text-gray-600 dark:text-gray-300">
+            Not sure which fits? Book a strategy call and we'll help you figure out the right scope.
+          </p>
+        </SimpleScrollReveal>
+      </div>
+
+      {/* Section 4B: Also Available - Web Design (buried) */}
+      <div className="max-w-4xl mx-auto mb-24">
+        <SimpleScrollReveal direction="up">
+          <div className="text-center py-8 border-t border-b border-gray-200 dark:border-gray-700">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+              Also Available: Web Design
+            </h3>
+            <p className="text-gray-600 dark:text-gray-300 mb-4">
+              We also build custom websites for clients who need a complete digital presence alongside their automation systems. Hand-coded, fast-loading, SEO-optimized. Starting at $2,000.
+            </p>
+            <Link
+              href="/services/web-design"
+              className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+            >
+              Learn more about web design
+            </Link>
+          </div>
+        </SimpleScrollReveal>
+      </div>
+
+      {/* Section 5: Ongoing Support - Highest first */}
+      <div className="max-w-6xl mx-auto mb-24">
+        <SimpleScrollReveal direction="up">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+            Ongoing Support
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
+            For businesses that want continuous optimization and someone to call when something needs attention. No long-term contracts. Month-to-month.
+          </p>
+        </SimpleScrollReveal>
+
+        <div className="grid md:grid-cols-3 gap-6">
+          {supportTiers.map((tier, index) => (
+            <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
+              <div
+                className={`relative bg-white dark:bg-gray-900 rounded-xl p-6 h-full flex flex-col ${
+                  tier.recommended
+                    ? 'border-2 border-blue-600'
+                    : 'border border-gray-200 dark:border-gray-700'
+                }`}
+              >
+                {tier.badge && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
+                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                      {tier.badge}
+                    </span>
+                  </div>
+                )}
+
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  {tier.name}
+                </h3>
+                <div className="flex items-baseline gap-1 mb-4">
+                  <span className="text-3xl font-bold text-gray-900 dark:text-white">{tier.price}</span>
+                  <span className="text-sm text-gray-500 dark:text-gray-400">{tier.period}</span>
+                </div>
+
+                <ul className="space-y-3 mb-6 flex-grow">
                   {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-center gap-3">
-                      <svg className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    <li key={idx} className="flex items-start gap-3">
+                      <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
-                      <span className="text-gray-600 dark:text-gray-300 text-sm">
-                        {feature}
-                      </span>
+                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
+                <div className="mb-6">
+                  <p className="text-sm text-gray-500 dark:text-gray-400">
+                    <span className="font-medium">Best for:</span> {tier.bestFor}
+                  </p>
+                </div>
+
                 <Link
                   href={tier.href}
-                  className={`block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    tier.popular
-                      ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                      : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white'
+                  className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
+                    tier.recommended
+                      ? 'bg-blue-600 text-white hover:bg-blue-700'
+                      : 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100'
                   }`}
                 >
                   {tier.cta}
@@ -202,336 +456,107 @@ export function PricingPage() {
             </SimpleScrollReveal>
           ))}
         </div>
+      </div>
 
-        {/* Custom Software Callout */}
+      {/* Section 6: Results With Attribution - Testimonials */}
+      <div className="max-w-6xl mx-auto mb-24">
         <SimpleScrollReveal direction="up">
-          <div className="max-w-2xl mx-auto text-center mb-16">
-            <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 border-2 border-blue-200 dark:border-blue-700">
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Need Custom Software?
-              </h3>
-              <p className="text-gray-600 dark:text-gray-300 mb-6">
-                Building custom dashboards, internal tools, or specialized applications? Projects are scoped individually based on your workflow, requirements, and expected outcomes. Book a strategy call and we'll provide a detailed proposal with timeline and investment.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white hover:from-blue-700 hover:to-indigo-700 rounded-lg font-semibold transition-all duration-200 shadow-lg"
-                >
-                  Book a Strategy Call
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/services/custom-software"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white rounded-lg font-semibold transition-all duration-200"
-                >
-                  View Custom Software Services
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </div>
-          </div>
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+            What Clients Say
+          </h2>
+          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12">
+            Real results from real projects.
+          </p>
         </SimpleScrollReveal>
 
-        {/* Monthly Retainer Options */}
+        <div className="grid md:grid-cols-2 gap-8 mb-12">
+          {testimonials.map((testimonial, index) => (
+            <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
+                <blockquote className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6 flex-grow">
+                  "{testimonial.quote}"
+                </blockquote>
+                <div>
+                  <p className="font-semibold text-gray-900 dark:text-white">
+                    {testimonial.company}
+                  </p>
+                  {testimonial.location && (
+                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
+                      {testimonial.location}
+                    </p>
+                  )}
+                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 dark:bg-green-900/20 rounded-full border border-green-200 dark:border-green-800">
+                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
+                    </svg>
+                    <span className="text-sm font-medium text-green-700 dark:text-green-400">
+                      {testimonial.result}
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          ))}
+        </div>
+
         <SimpleScrollReveal direction="up">
-          <div className="max-w-6xl mx-auto mb-24">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-              Prefer Ongoing Partnership?
+          <div className="text-center">
+            <Link
+              href="/case-studies"
+              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+            >
+              See More Case Studies
+              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </SimpleScrollReveal>
+      </div>
+
+      {/* Section 7: Common Questions - Objection-handling FAQ */}
+      <div className="max-w-3xl mx-auto mb-24">
+        <SimpleScrollReveal direction="up">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+            Common Questions
+          </h2>
+          <div className="space-y-8">
+            {faqItems.map((item, index) => (
+              <div key={index}>
+                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+                  {item.question}
+                </h3>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  {item.answer}
+                </p>
+              </div>
+            ))}
+          </div>
+        </SimpleScrollReveal>
+      </div>
+
+      {/* Section 8: Final CTA with Authentic Scarcity */}
+      <div className="max-w-3xl mx-auto">
+        <SimpleScrollReveal direction="up">
+          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              Ready to Talk?
             </h2>
-            <p className="text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-              For businesses that want continuous optimization, dedicated support, and peace of mind knowing your systems are always running at peak performance.
+            <p className="text-blue-100 mb-8 text-lg leading-relaxed">
+              We take on 2-3 new projects each month to ensure every client gets the attention they deserve. Book a strategy call and we'll look at your situation, identify opportunities, and show you what's possible.
             </p>
-            
-            <div className="grid md:grid-cols-3 gap-6">
-              {/* Essential Care */}
-              <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  Essential Care
-                </h3>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-3xl font-bold text-gray-900 dark:text-white">$497</span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">/month</span>
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                  Keep your systems running smoothly with proactive monitoring and support.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-6">
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Hosting, security & performance monitoring
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Monthly performance reports
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Priority email support (24-hour response)
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Software updates & maintenance
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    2 hours of development/optimization per month
-                  </li>
-                </ul>
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200"
-                >
-                  Get Started
-                </Link>
-              </div>
-
-              {/* Growth Partner - RECOMMENDED */}
-              <div className="bg-white dark:bg-gray-900 border-2 border-blue-600 rounded-xl p-6 relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                  <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                    RECOMMENDED
-                  </span>
-                </div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  Growth Partner
-                </h3>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-3xl font-bold text-gray-900 dark:text-white">$997</span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">/month</span>
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                  Everything you need to continuously improve and scale your systems.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-6">
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Everything in Essential Care
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    8 hours of development/optimization per month
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Proactive recommendations & strategy
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Monthly optimization & A/B testing
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Priority phone & Slack support
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Quarterly system audits
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    First priority on urgent requests
-                  </li>
-                </ul>
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-blue-600 text-white hover:bg-blue-700 rounded-lg font-semibold transition-all duration-200"
-                >
-                  Get Started
-                </Link>
-              </div>
-
-              {/* Priority Partner */}
-              <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  Priority Partner
-                </h3>
-                <div className="flex items-baseline gap-2 mb-1">
-                  <span className="text-3xl font-bold text-gray-900 dark:text-white">$1,997</span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">/month</span>
-                </div>
-                <p className="text-sm text-gray-600 dark:text-gray-300 mb-4">
-                  White-glove service with dedicated attention for mission-critical operations.
-                </p>
-                <ul className="space-y-2 text-sm text-gray-600 dark:text-gray-300 mb-6">
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Everything in Growth Partner
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    20 hours of development/optimization per month
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Dedicated account manager
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Same-day response on all requests
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Custom reporting & analytics
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    Quarterly strategy sessions
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                    After-hours emergency support
-                  </li>
-                </ul>
-                <Link
-                  href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200"
-                >
-                  Get Started
-                </Link>
-              </div>
-            </div>
-            
-            <div className="text-center mt-8">
-              <p className="text-gray-600 dark:text-gray-300">
-                Need more than 20 hours per month? Contact us for custom enterprise support packages.
-              </p>
-            </div>
-          </div>
-        </SimpleScrollReveal>
-
-        {/* FAQ */}
-        <SimpleScrollReveal direction="up">
-          <div className="max-w-3xl mx-auto mt-24">
-            <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-              Frequently asked questions
-            </h2>
-            <div className="space-y-8">
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  What's included that makes this worth the investment?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Strategic consulting, custom development (not templates), optimization, training, and ongoing support. Our approach is designed for ROI. Clients typically see 3-10x returns within the first year, meaning the investment pays for itself.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  What's included in the investment?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Discovery & strategy, custom design/development, testing & QA, training & documentation, launch support, and 30 days of post-launch optimization. Final pricing is determined after we understand your specific goals and requirements.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  How much does custom software development cost?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Custom software projects typically range from $5,000-$50,000+ depending on complexity. After our discovery call, we provide detailed project estimates with clear timelines and deliverables. All projects include source code ownership, documentation, and training.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  What ongoing support do you provide?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Our retainer plans ($497-$1,997/month) provide ongoing maintenance, updates, optimization, and strategic support. Choose Essential Care for basic needs, Growth Partner for comprehensive support, or Priority Partner for hands-on strategic partnership. No long-term contracts required.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  How do I know if this will work for my business?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Book a free strategy call. We'll analyze your current situation, identify opportunities, and provide a clear roadmap with projected ROI. No pressure, no obligation. Just honest assessment of whether we're a good fit.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  Do you offer payment plans?
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300">
-                  Yes. We typically split projects into 50% upfront and 50% on completion. For larger projects ($20K+), we offer milestone-based payment schedules to align with deliverables. No long-term contracts required for retainer services.
-                </p>
-              </div>
-              <div>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  Why should I pay you instead of an offshore developer at $25/hour?
-                </h3>
-                <div className="space-y-3 text-gray-600 dark:text-gray-300">
-                  <p>
-                    Because cheap usually costs more in the long run. Offshore teams often lack business context, require extensive management, and build systems that break or don't scale. You'll spend months going back and forth, end up with something that doesn't work, and hire someone like us to rebuild it anyway.
-                  </p>
-                  <p>
-                    We're not selling cheap labor. We're selling strategic partnership. We understand your business, identify opportunities you're missing, and build systems that work after we're gone. Our clients see 3-10x ROI within 12 months because we're focused on outcomes, not hourly rates.
-                  </p>
-                  <p>
-                    If you just need code written to spec and you have the expertise to manage it, offshore makes sense. But if you want someone thinking strategically about your business and building systems that scale? That's us.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </SimpleScrollReveal>
-
-        {/* CTA */}
-        <SimpleScrollReveal direction="up">
-          <div className="max-w-3xl mx-auto mt-24 text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12">
-            <h2 className="text-3xl font-bold text-white mb-4">
-              Ready to scale your business?
-            </h2>
-            <p className="text-blue-100 mb-8 text-lg">
-              Book a free strategy call. We'll analyze your situation, identify opportunities, and provide a clear roadmap with projected ROI. No pressure, no obligation.
+            <p className="text-blue-200 mb-8">
+              If we're not the right fit, we'll tell you.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 dark:bg-gray-100 dark:text-blue-600 dark:hover:bg-white transition-all duration-200"
+              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 mb-4"
             >
-              Book Your Free Strategy Call
+              Book Your Strategy Call
             </Link>
+            <p className="text-blue-200 text-sm">
+              Free 30-minute call. No pressure. No obligation.
+            </p>
           </div>
         </SimpleScrollReveal>
       </div>

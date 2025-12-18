@@ -56,6 +56,13 @@ export default function Home() {
       link: "/services/automation-ai"
     },
     {
+      icon: "flash",
+      title: "CRM & Integrations",
+      subtitle: "Make your tools actually talk to each other",
+      description: "Your CRM says one thing, your spreadsheet says another, and someone's manually copying data between them. We connect your systems so data flows automatically and you get real-time visibility across your operation.",
+      link: "/services/integrations"
+    },
+    {
       icon: "services",
       title: "Custom Software Development",
       subtitle: "Built for how your business actually works",
@@ -67,14 +74,7 @@ export default function Home() {
       title: "Web Design & Digital Presence",
       subtitle: "Websites that do more than look good",
       description: "Hand-coded sites built to convert. Fast loading, SEO-optimized, designed to showcase your brand and drive results. Not templates. Not page builders. Real code that performs.",
-      link: "/services#web-design"
-    },
-    {
-      icon: "flash",
-      title: "CRM & Integrations",
-      subtitle: "Make your tools actually talk to each other",
-      description: "Your CRM says one thing, your spreadsheet says another, and someone's manually copying data between them. We connect your systems so data flows automatically and you get real-time visibility across your operation.",
-      link: "/services#integrations"
+      link: "/services/web-design"
     }
   ];
 

@@ -1,130 +1,137 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
-import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
-  title: 'Case Studies | Real Results from AI Automation & Web Design | Forte Web Designs',
-  description: 'See how we\'ve helped businesses save time and grow revenue with AI automation, custom web design, and intelligent integrations. Real projects, real results.',
+  title: 'Case Studies | Real Results from Automation Projects | Forte Web Designs',
+  description: 'Real projects with real outcomes. See how we\'ve saved clients 1,000+ hours annually, $52K in costs, and built systems that run autonomously.',
 };
 
 const caseStudies = [
   {
     id: 'fast-track-auction',
     title: 'CR Deals Cincinnati',
-    subtitle: 'Enterprise AI-Powered Marketplace Automation & Multi-Platform Social Distribution System',
-    challenge: 'Leading Cincinnati auction and resale operation facing critical scaling bottleneck with 1,500-3,000 monthly products overwhelming manual processes',
-    solution: 'Comprehensive enterprise-grade AI automation system with real-time market intelligence, automated content generation for 50-100 products daily, and multi-platform social distribution',
+    headline: '$52K annual savings processing 3,000 products monthly',
+    tags: ['E-commerce', 'AI Automation'],
+    problem: "Leading Cincinnati auction house was drowning in manual product listing work. Every item needed photography analysis, descriptions written, and posting across multiple sales channels. The manual process couldn't keep up with 1,500-3,000 products coming through each month.",
+    solution: "An AI system that handles the entire product pipeline. Analyzes photography automatically, generates listing content, and distributes to all sales channels. Runs around the clock without anyone touching it.",
     results: [
       '1,040+ hours saved annually',
-      '$52K annual labor cost savings',
-      '24/7 autonomous operation processing 3,000 products monthly'
+      '$52K annual cost savings',
+      '3,000 products processed monthly',
+      'Runs autonomously 24/7'
     ],
-    tags: ['FLAGSHIP PROJECT', 'Enterprise AI Automation', 'Multi-Platform Distribution', 'Market Intelligence'],
+    quote: null,
+    quoteAuthor: null,
     gradient: 'from-blue-600 to-indigo-600',
-    featured: true
+    hasVideo: true
   },
   {
     id: 'modern-bungalow',
     title: 'Modern Bungalow',
-    subtitle: 'Home Goods E-commerce Automation & Accounting Sync',
-    challenge: 'Premium home goods retailer struggling with manual order processing and QuickBooks sync causing 20+ hours/week of repetitive work',
-    solution: 'Custom n8n automation system with intelligent order sync, automated customer communications, and multi-channel inventory management for contemporary furniture business',
+    headline: '15+ hours monthly saved on customer communication',
+    tags: ['E-commerce', 'Shopify'],
+    problem: "Denver furniture retailer was manually sending 30-40 customer emails every day. Order confirmations, production updates, delivery coordination. Someone had to remember to send the right email at the right time, and things were falling through the cracks.",
+    solution: "A system that monitors Shopify orders and automatically sends the right email based on order status. Handles 9 different scenarios based on product type and delivery partner. Prevents duplicates and logs everything.",
     results: [
-      '95% reduction in manual data entry',
-      '20+ hours per week saved on order processing',
-      '100% order accuracy with zero duplicates'
+      '15+ hours saved monthly',
+      '9 email scenarios automated',
+      'Zero missed communications'
     ],
-    tags: ['Home Goods E-commerce', 'QuickBooks Integration', 'Shopify Automation'],
-    gradient: 'from-emerald-600 to-teal-600'
-  },
-  {
-    id: 'revolut',
-    title: 'Revolut (Fintech)',
-    subtitle: 'AI-Powered Financial Analytics & Automated Insight Generation',
-    challenge: 'Analyzing 200K+ transactions across 90 days to identify profitability drivers and develop £4M growth strategy',
-    solution: 'AI-powered financial analytics automation system with intelligent data cleaning, automated analysis, and executive reporting',
-    results: [
-      '90% reduction in analysis time through automation',
-      '40 hrs/week saved on manual reporting',
-      '£4M growth pathway identified and quantified'
-    ],
-    tags: ['AI Analytics', 'Financial Automation', 'Data Processing'],
-    gradient: 'from-indigo-600 to-purple-600'
+    quote: "Very good at thinking through the logic of how to best automate a process, and then executing on that vision. Definitely will work with him again.",
+    quoteAuthor: 'Modern Bungalow',
+    gradient: 'from-emerald-600 to-teal-600',
+    hasVideo: true
   },
   {
     id: 'hollow-bamboo',
     title: 'Hollow Bamboo Film Productions',
-    subtitle: 'Custom Google Sheets Inventory Automation System',
-    challenge: 'Manually tracking hundreds of equipment items across multiple film sets with no real-time visibility',
-    solution: 'Custom Google Sheets automation with QR code mobile access and real-time multi-location sync',
+    headline: '20+ hours weekly saved tracking equipment across 6 locations',
+    tags: ['Operations', 'Inventory'],
+    problem: "Film production company tracking hundreds of equipment items across multiple locations with paper lists and memory. No visibility into what was where, constant texting to track things down, and equipment getting lost between shoots.",
+    solution: "A custom inventory system using Google Sheets with QR code mobile access. Crew members scan equipment in and out from their phones. Real-time sync across all locations. Partial quantity tracking for consumables.",
     results: [
-      '20+ hrs/week saved on manual inventory updates',
-      '6 locations tracked with real-time sync',
-      '100% equipment visibility across all sets'
+      '20+ hours saved weekly',
+      '6 locations synced in real-time',
+      '100% equipment visibility',
+      'Fully mobile accessible'
     ],
-    tags: ['Google Sheets Automation', 'Inventory Management', 'Film Production'],
-    gradient: 'from-green-600 to-emerald-600'
+    quote: "Extremely attentive and responsive. Gave us an accurate timeline and met it. Highly recommend.",
+    quoteAuthor: 'Hollow Bamboo Film Productions',
+    gradient: 'from-green-600 to-emerald-600',
+    hasVideo: true
   },
   {
-    id: 'emi-kirschner-activecampaign',
-    title: 'Emi Kirschner Coaching',
-    subtitle: 'Strategic ActiveCampaign CRM Setup & Marketing Automation',
-    challenge: 'High-touch coaching business needed strategic CRM and automation to scale without sacrificing personal touch—8-12 hours/week lost to manual client management',
-    solution: 'Built complete ActiveCampaign ecosystem with 5 specialized pipelines, lifecycle automations (check-ins, referrals, birthdays), and multi-tool integrations (Kajabi, WordPress, ClickUp)',
+    id: 'revolut',
+    title: 'Revolut',
+    headline: '£4M growth pathway identified through automated analysis',
+    tags: ['Fintech', 'AI Analytics'],
+    problem: "Needed to analyze 200,000+ transactions across 90 days to identify what was actually driving profitability. The manual approach was taking weeks and couldn't keep up with the volume of data.",
+    solution: "An AI system that automated the entire analysis pipeline. Data cleaning, pattern recognition, and executive reporting. What used to take weeks now takes hours.",
     results: [
-      'Projected 8-12 hrs/week saved on manual CRM tasks',
-      'Estimated 20-30% increase in referral generation',
-      '15-25% improvement in lead conversion',
-      '$20K-$30K annual value in recovered time'
+      '£4M growth opportunity identified',
+      '200,000+ transactions analyzed',
+      '90% reduction in analysis time'
     ],
-    tags: ['CRM Strategy', 'ActiveCampaign', 'Coaching Business', 'Marketing Automation'],
-    gradient: 'from-purple-600 to-pink-600'
+    quote: null,
+    quoteAuthor: null,
+    gradient: 'from-indigo-600 to-purple-600',
+    hasVideo: false
   },
   {
-    id: 'kingfisher-ads-automation',
+    id: 'prediction-market-trader',
+    title: 'Prediction Market Trader',
+    headline: 'Hundreds of markets analyzed daily, manual research eliminated',
+    tags: ['AI', 'Data Automation'],
+    problem: "Prediction market trader was manually researching earnings call outcomes for hundreds of markets. Reading analyst reports, checking historical data, making forecasts one at a time. The research bottleneck limited how many opportunities he could evaluate.",
+    solution: "An n8n pipeline that pulls active markets from Kalshi's API, enriches each with company data, sends batches to GPT-4o for probability forecasting, and outputs everything to a Google Sheet with confidence scores and reasoning.",
+    results: [
+      'Hundreds of markets analyzed daily',
+      'Manual research eliminated',
+      'AI-powered probability forecasting',
+      'Decision-ready output'
+    ],
+    quote: "Figured it out quickly and got everything working smoothly. Very responsive throughout.",
+    quoteAuthor: 'Prediction Market Trader',
+    gradient: 'from-cyan-600 to-blue-600',
+    hasVideo: true
+  },
+  {
+    id: 'marketing-agency-reporting',
     title: 'Kingfisher Ads',
-    subtitle: 'Agency Operations Automation with AI-Powered Reporting',
-    challenge: 'Irish ad agency growth constrained by manual reporting, invoicing, and data analysis—19-25 hours/week spent on repetitive operations instead of client strategy',
-    solution: 'Built n8n automation system with GPT-4 integration for automated reporting (Meta, Google, Shopify, BigCommerce), ad spend-based invoicing with Xero, and unified dashboards with AI insights',
+    headline: 'Monthly ad spend reporting cut from 2-4 hours to 15 minutes',
+    tags: ['Agency', 'Reporting'],
+    problem: "Agency owner was manually logging into Meta and Google Ads every month, pulling spend data for each client, organizing it in spreadsheets, and calculating fees based on different billing structures. With a growing client roster, the process was becoming a bottleneck.",
+    solution: "An automated system that pulls spend data from both platforms via API, aggregates by client, calculates fees based on each client's billing structure (flat, percentage, or hybrid with caps), and outputs an invoice-ready report.",
     results: [
-      'Projected 19-25 hrs/week saved on operations',
-      '3-5x capacity increase without adding staff',
-      '30-40% reduction in support inquiries',
-      '$49K-$65K annual value in recovered time'
+      '2-4 hours reduced to 15 minutes monthly',
+      'Runs automatically on the 1st',
+      'Handles multiple fee structures',
+      'Scales with unlimited clients'
     ],
-    tags: ['Agency Automation', 'n8n', 'GPT-4', 'API Integration', 'Marketing Agency'],
-    gradient: 'from-cyan-600 to-blue-600'
+    quote: null,
+    quoteAuthor: null,
+    gradient: 'from-orange-600 to-amber-600',
+    hasVideo: true
   },
   {
-    id: 'compass-real-estate-ai-automation',
-    title: 'Compass Real Estate',
-    subtitle: 'AI Email & Drive Automation',
-    challenge: 'Real estate agents spending 11-17 hours/week on email drafting and file organization instead of closing deals',
-    solution: 'Built hybrid automation system with ChatGPT-powered email drafts appearing in Gmail within 10 seconds, intelligent Google Drive organization, and automated showing workflows',
+    id: 'german-marketing-agency',
+    title: 'KleinBros Agency',
+    headline: '43 workflows saved, 2 hours to full recovery',
+    tags: ['Emergency Recovery'],
+    problem: "Client's VPS hit 100% disk full. Docker crashed. Their entire n8n automation infrastructure was down, and they couldn't even SSH in to diagnose. Their business operations depended on those workflows running.",
+    solution: "Diagnosed the issue remotely (83GB SQLite database bloat from execution logs), found a creative solution using RAM as temporary backup space (the only space available), extracted all 43 workflows and 16 credentials, reset the database, restored everything, and configured auto-pruning to prevent recurrence.",
     results: [
-      '11-17 hours/week saved on admin work',
-      '50-60x faster email drafting (10 seconds vs 5-10 minutes)',
-      'Capacity to handle 20-30% more clients',
-      '$28K-$44K annual value in recovered time'
+      '83GB disk space recovered',
+      '43 workflows restored',
+      '16 credentials preserved',
+      '2 hours to full operation',
+      'Led to ongoing development contract'
     ],
-    tags: ['Real Estate', 'ChatGPT API', 'Gmail Automation', 'Google Drive'],
-    gradient: 'from-orange-600 to-amber-600'
-  },
-  {
-    id: 'handl-agency-automation',
-    title: 'HandL Agency',
-    subtitle: 'Three-Tier Operations Automation',
-    challenge: 'Agency growth limited by operational overhead—email management, meeting coordination, and invoice processing consuming 15-24 hours weekly',
-    solution: 'Built three-tier modular automation system: (1) AI email responder with approval workflow, (2) Automated meeting follow-up using Fathom transcripts, (3) Invoice processing automation with FreeAgent integration',
-    results: [
-      '15-24 hours/week saved across all tiers',
-      'Tier 1: 5-8 hrs/week ($13K-$20K annually)',
-      'Tier 2: 4-6 hrs/week ($10K-$15K annually)',
-      'Tier 3: 6-10 hrs/week ($15K-$26K annually)'
-    ],
-    tags: ['Marketing Agency', 'GPT-4', 'Three-Tier System', 'Modular Automation'],
-    gradient: 'from-violet-600 to-fuchsia-600'
+    quote: "Communication was 10/10. I felt very safe throughout the entire project knowing Seth was handling it.",
+    quoteAuthor: 'Yves Klein, Germany',
+    gradient: 'from-violet-600 to-fuchsia-600',
+    hasVideo: true
   }
 ];
 
@@ -136,11 +143,11 @@ export default function CaseStudiesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
-              <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white mb-6">
-                Client Success Stories
+              <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
+                Results
               </h1>
-              <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                See how we've helped companies eliminate manual work, automate operations, and scale with intelligent systems.
+              <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto">
+                Real projects. Real outcomes. See what we've built and the results clients got.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -153,92 +160,103 @@ export default function CaseStudiesPage() {
           <div className="grid md:grid-cols-2 gap-8">
             {caseStudies.map((study, index) => (
               <SimpleScrollReveal key={study.id} direction="up" delay={index * 100}>
-                <Link href={`/case-studies/${study.id}`} className="block group h-full">
-                  <div className={`${study.featured ? 'bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border-2 border-blue-200 dark:border-blue-700' : 'bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700'} rounded-2xl p-8 hover:shadow-2xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 h-full flex flex-col`}>
-                    {/* Featured Flag */}
-                    {study.featured && (
-                      <div className="inline-flex items-center gap-2 px-3 py-2 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full text-white text-xs font-bold mb-4 w-fit shadow-lg">
-                        FLAGSHIP ENTERPRISE PROJECT
-                      </div>
-                    )}
+                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                  {/* Tags */}
+                  <div className="flex flex-wrap gap-2 mb-4">
+                    {study.tags.map((tag, idx) => (
+                      <span
+                        key={idx}
+                        className="px-3 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
 
-                    {/* Header with Gradient */}
-                    <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br ${study.gradient} mb-6 shadow-lg group-hover:shadow-xl group-hover:scale-110 transition-all duration-300`}>
-                      <Icon name="check" className="w-8 h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
-                    </div>
+                  {/* Title & Headline */}
+                  <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                    {study.title}
+                  </h2>
+                  <p className={`text-lg font-semibold bg-gradient-to-r ${study.gradient} bg-clip-text text-transparent mb-6`}>
+                    {study.headline}
+                  </p>
 
-                    {/* Title & Subtitle */}
-                    <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      {study.title}
-                    </h2>
-                    <p className="text-lg font-medium text-gray-600 dark:text-gray-400 mb-6">
-                      {study.subtitle}
+                  {/* The Problem */}
+                  <div className="mb-4">
+                    <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">
+                      The problem
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      {study.problem}
                     </p>
+                  </div>
 
-                    {/* Challenge */}
-                    <div className="mb-4">
-                      <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 uppercase tracking-wide">
-                        Challenge
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm">
-                        {study.challenge}
-                      </p>
-                    </div>
+                  {/* What we built */}
+                  <div className="mb-6">
+                    <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">
+                      What we built
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+                      {study.solution}
+                    </p>
+                  </div>
 
-                    {/* Solution */}
-                    <div className="mb-6">
-                      <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2 uppercase tracking-wide">
-                        Solution
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-300 text-sm">
-                        {study.solution}
-                      </p>
-                    </div>
-
-                    {/* Results */}
-                    <div className="mb-6 flex-grow">
-                      <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-3 uppercase tracking-wide">
-                        Results
-                      </h3>
-                      <ul className="space-y-2">
-                        {study.results.map((result, idx) => (
-                          <li key={idx} className="flex items-start gap-3">
-                            <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
-                              <svg className="w-3 h-3 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                              </svg>
-                            </div>
-                            <span className="text-gray-700 dark:text-gray-300 text-sm">{result}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2 mb-6">
-                      {study.tags.map((tag, idx) => (
-                        <span
-                          key={idx}
-                          className={`px-3 py-1 rounded-full text-xs font-medium ${
-                            tag.includes('FLAGSHIP') 
-                              ? 'bg-gradient-to-r from-yellow-400 to-orange-500 text-white shadow-sm' 
-                              : 'bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-300'
-                          }`}
-                        >
-                          {tag}
-                        </span>
+                  {/* Results */}
+                  <div className="mb-6 flex-grow">
+                    <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide">
+                      Results
+                    </h3>
+                    <ul className="space-y-2">
+                      {study.results.map((result, idx) => (
+                        <li key={idx} className="flex items-start gap-3">
+                          <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
+                            <svg className="w-3 h-3 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                            </svg>
+                          </div>
+                          <span className="text-gray-700 dark:text-gray-300 text-sm">{result}</span>
+                        </li>
                       ))}
-                    </div>
+                    </ul>
+                  </div>
 
-                    {/* CTA */}
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold">
+                  {/* Quote */}
+                  {study.quote && (
+                    <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
+                      <p className="text-gray-600 dark:text-gray-300 text-sm italic mb-2">
+                        "{study.quote}"
+                      </p>
+                      <p className="text-gray-500 dark:text-gray-400 text-xs font-medium">
+                        {study.quoteAuthor}
+                      </p>
+                    </div>
+                  )}
+
+                  {/* CTAs */}
+                  <div className="flex flex-wrap gap-4">
+                    {study.hasVideo && (
+                      <Link
+                        href={`/case-studies/${study.id}#video`}
+                        className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium text-sm hover:text-blue-700 dark:hover:text-blue-300"
+                      >
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Watch the Walkthrough
+                      </Link>
+                    )}
+                    <Link
+                      href={`/case-studies/${study.id}`}
+                      className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 font-medium text-sm hover:text-gray-900 dark:hover:text-white"
+                    >
                       Read Full Case Study
-                      <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
-                    </div>
+                    </Link>
                   </div>
-                </Link>
+                </div>
               </SimpleScrollReveal>
             ))}
           </div>
@@ -254,25 +272,14 @@ export default function CaseStudiesPage() {
                 Ready to See Similar Results?
               </h2>
               <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Book a free strategy call. We'll analyze your workflows, identify opportunities, and show you exactly how we can help—no pressure, no obligation.
+                Book a free strategy call. We'll look at your workflows, identify opportunities, and show you what's possible. No pressure, no obligation.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg text-lg"
-                >
-                  Book Your Free Strategy Call
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-                <Link
-                  href="/services"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-all duration-200 text-lg"
-                >
-                  View Our Services
-                </Link>
-              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg text-lg"
+              >
+                Book Your Strategy Call
+              </Link>
             </div>
           </SimpleScrollReveal>
         </div>
