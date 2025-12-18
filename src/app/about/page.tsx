@@ -27,6 +27,28 @@ export default function AboutUs() {
         </div>
       </section>
 
+      {/* Video Section */}
+      <section className="py-12 sm:py-16 bg-white dark:bg-black">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <SimpleScrollReveal direction="up">
+              <p className="text-xl sm:text-2xl text-center text-gray-700 dark:text-gray-300 mb-8">
+                Prefer video? Here's the 2-minute version.
+              </p>
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl bg-black">
+                <video
+                  controls
+                  className="w-full"
+                >
+                  <source src="/video-walkthroughs/Business Growth Systems & AI Automation | Forte (DFW) - 26 October 2025.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </div>
+      </section>
+
       {/* Main Philosophy Section */}
       <section className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
