@@ -63,14 +63,14 @@ export default function Home() {
       link: "/services/integrations"
     },
     {
-      icon: "services",
+      icon: "code",
       title: "Custom Software Development",
       subtitle: "Built for how your business actually works",
       description: "Custom dashboards, internal tools, and applications built from scratch. No generic templates forcing you to change your workflow. No limitations from platforms built for everyone else. Software that fits your operations, not the other way around.",
       link: "/services/custom-software"
     },
     {
-      icon: "services",
+      icon: "click",
       title: "Web Design & Digital Presence",
       subtitle: "Websites that do more than look good",
       description: "Hand-coded sites built to convert. Fast loading, SEO-optimized, designed to showcase your brand and drive results. Not templates. Not page builders. Real code that performs.",
