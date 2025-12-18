@@ -236,7 +236,7 @@ export default function Home() {
 
                 {/* Subheadline */}
                 <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
-                  We build automation systems and custom software that eliminate manual work. Most clients save 20+ hours a week.
+                  Custom automation and software solutions that eliminate manual work. Most clients save 20+ hours a week.
                 </p>
 
                 {/* CTAs */}
