@@ -177,7 +177,7 @@ export default function AboutUs() {
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <SimpleScrollReveal direction="up" delay={200}>
                 <p>
-                  I've spent 5+ years building enterprise-grade automation systems at Wells Fargo: the kind that save companies hundreds of thousands annually and can't afford to break. I've combined that enterprise reliability with the agility and personal attention of a consulting practice.
+                  I've spent 5+ years building automation systems at Wells Fargo. The kind that handle millions of transactions, save hundreds of thousands annually, and can't afford to break. I've combined that enterprise reliability with the agility and personal attention of a consulting practice.
                 </p>
               </SimpleScrollReveal>
 
@@ -228,7 +228,7 @@ export default function AboutUs() {
 
               <SimpleScrollReveal direction="up" delay={250}>
                 <p>
-                  And I kept seeing consultants who treated every project like a transaction: build it, bill it, move on. No strategic thinking. No long-term investment in the client's success.
+                  And I kept seeing consultants who treated every project like a transaction. Build it, bill it, move on. No strategic thinking. No long-term investment in the client's success.
                 </p>
               </SimpleScrollReveal>
 
@@ -254,7 +254,7 @@ export default function AboutUs() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                What Makes Us Different
+                What Makes Me Different
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -263,7 +263,7 @@ export default function AboutUs() {
             <SimpleScrollReveal direction="up" delay={200}>
               <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  We Tell You When You Shouldn't Automate
+                  I Tell You When You Shouldn't Automate
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                   If fixing your process makes more sense than automating a broken one, I'll tell you. If you don't need a full system rebuild, I'll tell you. I turn down projects that don't make sense, even when it costs me revenue.
@@ -274,7 +274,7 @@ export default function AboutUs() {
             <SimpleScrollReveal direction="up" delay={250}>
               <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  We Think Long-Term, Even on One-Off Projects
+                  I Think Long-Term, Even on One-Off Projects
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                   Even if we only work together once, I'm thinking about where your business is headed. What sets you up for scale. What creates compounding value. The relationship matters more than the transaction.
@@ -285,7 +285,7 @@ export default function AboutUs() {
             <SimpleScrollReveal direction="up" delay={300}>
               <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  You Work With Who You Hired
+                  You Work Directly With Me
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                   No account managers. No junior developers. No bait-and-switch. You work directly with me: the person who understands your business, builds your systems, and cares about your results.
@@ -296,10 +296,10 @@ export default function AboutUs() {
             <SimpleScrollReveal direction="up" delay={350}>
               <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                  We Lead With Generosity
+                  I Lead With Generosity
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  Every proposal includes a complete project plan: gotchas, hidden costs, solution outline. Free, no contract required. We prove value before asking for commitment.
+                  Every proposal includes a complete project plan: gotchas, hidden costs, solution outline. Free, no contract required. I prove value before asking for commitment.
                 </p>
               </div>
             </SimpleScrollReveal>

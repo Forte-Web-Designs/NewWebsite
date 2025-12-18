@@ -3,43 +3,43 @@
 import Link from 'next/link';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
-export default function WebDesignClient() {
+export default function CustomSoftwareClient() {
   // What we build blocks
-  const designBlocks = [
+  const softwareBlocks = [
     {
-      title: "Custom Design",
-      description: "Your brand isn't generic. Your website shouldn't be either. We design from scratch based on your business, your audience, and what you're trying to accomplish.",
+      title: "Custom Dashboards",
+      description: "You shouldn't have to log into six different tools to understand your business. We build dashboards that pull your data into one view and show you what actually matters.",
       examples: [
-        "Design that matches your brand identity",
-        "Layout built around your specific goals",
-        "No template limitations or \"that feature costs extra\""
+        "Revenue and performance metrics in real-time",
+        "Multi-source data aggregation (CRM, payments, inventory, etc.)",
+        "Automated reports delivered on your schedule"
       ]
     },
     {
-      title: "Performance",
-      description: "Slow sites lose visitors. We build sites that load fast because the code is clean and optimized, not bloated with plugins and page builder overhead.",
+      title: "Internal Tools",
+      description: "When off-the-shelf software forces you to adapt your workflow, it creates friction. We build tools that match how your team actually works.",
       examples: [
-        "90+ PageSpeed scores",
-        "Fast load times on mobile and desktop",
-        "No unnecessary code slowing things down"
+        "Inventory management systems",
+        "Client portals and booking systems",
+        "Operational tools specific to your industry"
       ]
     },
     {
-      title: "SEO Foundation",
-      description: "A beautiful site that nobody finds is useless. We build with SEO fundamentals baked in from the start, not bolted on after.",
+      title: "Data Processing",
+      description: "Some data operations are too complex for standard automation platforms. We build systems that can handle heavy transformations and intelligent processing.",
       examples: [
-        "Clean URL structure and semantic HTML",
-        "Meta tags, schema markup, and proper headings",
-        "Mobile-responsive design (Google's ranking factor)"
+        "Bulk data transformations and cleanup",
+        "AI-powered analysis and categorization",
+        "Complex calculation engines"
       ]
     },
     {
-      title: "Lead Capture",
-      description: "Your website should generate leads, not just look good. We build with conversion in mind, making it easy for visitors to take the next step.",
+      title: "API Integrations",
+      description: "When tools don't talk to each other, someone has to manually move data. We build the connections that make your systems work as one.",
       examples: [
-        "Clear calls to action throughout",
-        "Contact forms that actually work",
-        "Analytics and tracking so you know what's working"
+        "Bi-directional sync between platforms",
+        "Custom middleware for legacy systems",
+        "Automated data flow between any systems with an API"
       ]
     }
   ];
@@ -47,24 +47,20 @@ export default function WebDesignClient() {
   // Problems this solves
   const problems = [
     {
-      problem: "Our website looks outdated and we're embarrassed to send people there.",
-      solution: "A modern, professional site that you're proud to share. Design that reflects where your business is today, not where it was five years ago."
+      problem: "We're using spreadsheets for things we shouldn't be.",
+      solution: "Custom tools replace spreadsheet workflows with purpose-built applications that handle validation, automation, and multi-user access."
     },
     {
-      problem: "Our site loads slowly and people leave before it finishes.",
-      solution: "Hand-coded sites without the bloat. Fast load times that keep visitors engaged."
+      problem: "Our software doesn't work the way we work.",
+      solution: "We build around your processes, not the other way around. No forcing your team to adapt to software limitations."
     },
     {
-      problem: "We're not showing up in Google searches.",
-      solution: "SEO fundamentals built in from the start. Clean code, proper structure, and the technical foundation you need to rank."
+      problem: "Data is scattered across multiple systems with no unified view.",
+      solution: "Dashboards that aggregate from anywhere. One login, full visibility, real-time updates."
     },
     {
-      problem: "We get traffic but nobody contacts us.",
-      solution: "Design focused on conversion. Clear paths to contact, prominent calls to action, and forms that actually work."
-    },
-    {
-      problem: "We used a template but it doesn't fit our business.",
-      solution: "Custom design built for your specific needs. No forcing your content into someone else's layout."
+      problem: "We've outgrown what off-the-shelf tools can do.",
+      solution: "Custom software scales with you. No feature limitations, no per-seat pricing, no waiting for vendors to build what you need."
     }
   ];
 
@@ -73,51 +69,49 @@ export default function WebDesignClient() {
     {
       number: "1",
       title: "Discovery",
-      description: "We learn about your business, your audience, and what you want the website to accomplish. Goals first, design second."
+      description: "We map your current workflows, identify the pain points, and define exactly what needs to be built. You'll know the scope, timeline, and investment before we start."
     },
     {
       number: "2",
       title: "Design",
-      description: "We create mockups based on your brand and goals. You see exactly what you're getting before we write any code."
+      description: "You'll see mockups and prototypes before we write production code. No surprises. You approve the design, then we build."
     },
     {
       number: "3",
       title: "Build",
-      description: "Hand-coded development. Clean, fast, optimized. We build it right the first time."
+      description: "Development with weekly updates. You'll see progress throughout, not just at the end. We test as we go."
     },
     {
       number: "4",
-      title: "Launch and Train",
-      description: "We launch, train you on updates, and make sure everything works. You're not dependent on us for simple changes."
+      title: "Handoff",
+      description: "You get working software, full documentation, and training for your team. We stick around to make sure everything runs smoothly."
+    }
+  ];
+
+  // Results
+  const results = [
+    {
+      company: "Hollow Bamboo Film Productions",
+      result: "20+ hours weekly saved with custom inventory system across 6 locations"
+    },
+    {
+      company: "Revolut",
+      result: "£4M growth pathway identified through automated analysis of 200K+ transactions"
+    },
+    {
+      company: "CR Deals Cincinnati",
+      result: "1,040+ hours saved annually with AI-powered product processing"
     }
   ];
 
   // What's included
   const included = [
-    {
-      title: "Custom Design",
-      description: "Original design created for your business. Not a template with your logo swapped in."
-    },
-    {
-      title: "Clean Code",
-      description: "Hand-coded HTML, CSS, and JavaScript. No page builder bloat. Fast and maintainable."
-    },
-    {
-      title: "Mobile Responsive",
-      description: "Looks and works great on phones, tablets, and desktops. Not an afterthought."
-    },
-    {
-      title: "SEO Foundation",
-      description: "Technical SEO built in. Meta tags, schema, clean URLs, proper headings."
-    },
-    {
-      title: "Analytics Setup",
-      description: "Google Analytics configured so you can see what's working."
-    },
-    {
-      title: "Training",
-      description: "We show you how to make basic updates yourself. You're not stuck calling us for every small change."
-    }
+    "Full source code ownership (no licensing fees)",
+    "Comprehensive documentation",
+    "Team training and onboarding",
+    "90 days of bug fixes included",
+    "Scalable, maintainable architecture",
+    "Ongoing support options available"
   ];
 
   return (
@@ -128,10 +122,10 @@ export default function WebDesignClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
-                Web Design & Digital Presence
+                Custom Software Development
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Hand-coded websites built to convert. Fast, SEO-optimized, and designed to showcase your brand. Not templates. Not page builders. Real code that performs.
+                When off-the-shelf tools don't cut it, we build software that fits how your business actually works. Dashboards, internal tools, integrations, and applications designed for your operations.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -162,13 +156,13 @@ export default function WebDesignClient() {
                 What We Build
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Your website is often the first impression. We build sites that load fast, rank well, and turn visitors into customers. No templates. No drag-and-drop builders. Hand-coded for performance.
+                We build software that actually fits how your business works. No generic templates forcing you to adapt your workflows. No limitations from platforms built for everyone else.
               </p>
             </div>
           </SimpleScrollReveal>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {designBlocks.map((block, index) => (
+            {softwareBlocks.map((block, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
                 <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700 h-full">
                   <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-4">
@@ -179,7 +173,7 @@ export default function WebDesignClient() {
                   </p>
                   <div>
                     <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
-                      What this means
+                      Examples
                     </p>
                     <ul className="space-y-2">
                       {block.examples.map((example, exIndex) => (
@@ -235,6 +229,9 @@ export default function WebDesignClient() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 How We Work
               </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                Custom software projects vary in scope and complexity. We'll scope your project specifically and give you a clear timeline and investment before any work begins.
+              </p>
             </div>
           </SimpleScrollReveal>
 
@@ -255,49 +252,81 @@ export default function WebDesignClient() {
               </SimpleScrollReveal>
             ))}
           </div>
-
-          <SimpleScrollReveal direction="up">
-            <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
-              <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Timeline:</span> Most websites take 2-4 weeks from kickoff to launch. We'll give you a specific timeline in your proposal.
-              </p>
-            </div>
-          </SimpleScrollReveal>
         </div>
       </section>
 
       {/* What's Included Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-12">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 What's Included
               </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-300">
+                Every custom software project includes:
+              </p>
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {included.map((item, index) => (
-              <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-                <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
-                  <div className="flex items-start gap-3 mb-3">
+          <SimpleScrollReveal direction="up">
+            <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
+              <div className="grid md:grid-cols-2 gap-4">
+                {included.map((item, index) => (
+                  <div key={index} className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">
                       <svg className="w-3 h-3 text-green-600 dark:text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <h3 className="font-semibold text-gray-900 dark:text-white">
-                      {item.title}
-                    </h3>
+                    <span className="text-gray-700 dark:text-gray-300">{item}</span>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm pl-8">
-                    {item.description}
+                ))}
+              </div>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Results Section */}
+      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center mb-16">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
+                What Clients Have Achieved
+              </h2>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="grid md:grid-cols-3 gap-6 mb-12">
+            {results.map((item, index) => (
+              <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
+                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                  <p className="font-semibold text-gray-900 dark:text-white mb-2">
+                    {item.company}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-300">
+                    {item.result}
                   </p>
                 </div>
               </SimpleScrollReveal>
             ))}
           </div>
+
+          <SimpleScrollReveal direction="up">
+            <div className="text-center">
+              <Link
+                href="/case-studies"
+                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+              >
+                See All Case Studies
+                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </Link>
+            </div>
+          </SimpleScrollReveal>
         </div>
       </section>
 
@@ -310,7 +339,7 @@ export default function WebDesignClient() {
                 Ready to Talk?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                If your website isn't working for your business, let's figure out what's possible. We'll look at your current site, understand your goals, and show you what a custom build could look like.
+                If you've hit the limits of what off-the-shelf tools can do, let's talk about what custom software could look like for your business. We'll scope it out, give you a clear picture of timeline and investment, and you can decide from there.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

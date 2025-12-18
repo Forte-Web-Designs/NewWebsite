@@ -2,17 +2,16 @@ import type { Metadata } from "next";
 import AutomationAIClient from './AutomationAIClient';
 
 export const metadata: Metadata = {
-  title: "AI Automation Services & Systems Integration | Forte",
-  description: "Stop manual work, start measurable growth. We build AI agents, automation pipelines, and owner dashboards—scoped to outcomes in 30–90 days.",
+  title: "AI Automation | Forte Web Designs",
+  description: "Stop wasting time on work that should run itself. We build automation systems that handle lead response, sales follow-up, customer communication, and reporting.",
   keywords: [
-    "AI automation services", "business process automation", "AI implementation partner", 
-    "AI agents", "automation pipelines", "owner dashboards", "AI systems integration",
-    "business automation Dallas", "AI consulting DFW", "automation consulting",
-    "AI technology stack", "custom AI assistants", "RAG pipelines", "n8n automations"
+    "AI automation", "business automation", "lead response automation",
+    "sales automation", "workflow automation", "n8n automation",
+    "business process automation", "CRM automation"
   ],
   openGraph: {
-    title: "AI Automation Services & Systems Integration | Forte",
-    description: "Stop manual work, start measurable growth. We build AI agents, automation pipelines, and owner dashboards—scoped to outcomes in 30–90 days.",
+    title: "AI Automation | Forte Web Designs",
+    description: "Stop wasting time on work that should run itself. We build automation systems that handle lead response, sales follow-up, customer communication, and reporting.",
     url: "https://fortewebdesigns.com/services/automation-ai/",
     type: "website"
   },

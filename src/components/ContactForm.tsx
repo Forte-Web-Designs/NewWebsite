@@ -290,7 +290,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                     Let&apos;s Discuss Your Project
                   </h2>
                   <p className={`text-lg ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
-                    Tell us about your business challenges and goals. We&apos;ll show you how intelligent automation and custom development can help.
+                    Tell me about your business challenges and goals. I&apos;ll show you what&apos;s possible.
                   </p>
                 </div>
               </SimpleScrollReveal>
