@@ -50,7 +50,7 @@ export default function Home() {
   const serviceLanes = [
     {
       icon: "puzzle",
-      title: "AI Automation",
+      title: "Automation",
       subtitle: "Systems that work while you don't",
       description: "Automate the repetitive stuff that eats up your week. Lead routing, follow-ups, data entry, reporting. Your team focuses on work that actually requires a human. The system handles everything else.",
       link: "/services/automation-ai"
@@ -236,7 +236,7 @@ export default function Home() {
 
                 {/* Subheadline */}
                 <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
-                  AI automation and custom software solutions for companies ready to eliminate manual work and accelerate growth.
+                  We build automation systems and custom software that eliminate manual work. Most clients save 20+ hours a week.
                 </p>
 
                 {/* CTAs */}

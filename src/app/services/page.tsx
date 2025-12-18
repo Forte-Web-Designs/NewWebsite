@@ -12,7 +12,7 @@ const services = [
   {
     id: "ai-automation",
     icon: "puzzle",
-    title: "AI Automation",
+    title: "Automation",
     subhead: "Eliminate repetitive work",
     description: "Automate the manual stuff that eats up your week. Lead routing, follow-ups, data entry, reporting. Your team focuses on work that actually requires a human.",
     href: "/services/automation-ai",
