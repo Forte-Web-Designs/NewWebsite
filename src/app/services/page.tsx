@@ -19,8 +19,17 @@ const services = [
     gradient: "from-blue-600 to-indigo-600"
   },
   {
+    id: "integrations",
+    icon: "flash",
+    title: "CRM & Integrations",
+    subhead: "Connect your tools",
+    description: "Make your CRM, email, forms, and tools actually work together. Clean data, automatic handoffs, real-time visibility.",
+    href: "/services/integrations",
+    gradient: "from-indigo-600 to-purple-600"
+  },
+  {
     id: "custom-software",
-    icon: "services",
+    icon: "code",
     title: "Custom Software",
     subhead: "Build what doesn't exist",
     description: "Custom dashboards, internal tools, and applications built for your specific workflows. No templates. No limitations. Software that fits how you work.",
@@ -29,21 +38,12 @@ const services = [
   },
   {
     id: "web-design",
-    icon: "services",
+    icon: "click",
     title: "Web Design",
     subhead: "Sites that convert",
     description: "Hand-coded websites built to perform. Fast loading, SEO-optimized, designed to turn visitors into customers.",
     href: "/services/web-design",
     gradient: "from-pink-600 to-red-600"
-  },
-  {
-    id: "integrations",
-    icon: "flash",
-    title: "CRM & Integrations",
-    subhead: "Connect your tools",
-    description: "Make your CRM, email, forms, and tools actually work together. Clean data, automatic handoffs, real-time visibility.",
-    href: "/services/integrations",
-    gradient: "from-indigo-600 to-purple-600"
   }
 ];
 
