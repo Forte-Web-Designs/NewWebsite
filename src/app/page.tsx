@@ -222,12 +222,12 @@ export default function Home() {
 
                 {/* Hero Headline */}
                 <h1
-                  className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-gray-900 dark:text-white mb-6 px-2"
+                  className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl leading-[1.15] text-gray-900 dark:text-white mb-4 sm:mb-6 px-1 sm:px-2"
                 >
-                  Business Growth Isn't Luck.<br />
-                  It's{" "}
+                  <span className="block sm:inline">Business Growth Isn't Luck.</span>
+                  <span className="block sm:inline"> It's{" "}</span>
                   <span
-                    className={`bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent transition-opacity duration-250 ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
+                    className={`bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent transition-opacity duration-250 inline-block min-w-[140px] sm:min-w-[180px] ${fadeInOut ? 'opacity-100' : 'opacity-0'}`}
                     aria-live="polite"
                   >
                     {rotatingWords[currentWordIndex]}
@@ -235,29 +235,29 @@ export default function Home() {
                 </h1>
 
                 {/* Subheadline */}
-                <p className="text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
                   AI automation and custom software solutions for companies ready to eliminate manual work and accelerate growth.
                 </p>
 
                 {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-2">
                   <Link
                     href="/contact"
                     onClick={() => handleCTAClick('primary', 'hero')}
-                    className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base"
                   >
                     Talk to Our Team
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
                   <a
                     href="#service-lanes"
                     onClick={() => handleCTAClick('secondary', 'hero')}
-                    className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:border-gray-400 dark:hover:border-gray-500 rounded-lg font-semibold transition-all duration-200"
+                    className="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:border-gray-400 dark:hover:border-gray-500 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base"
                   >
                     See How We Help
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
                   </a>
@@ -269,46 +269,46 @@ export default function Home() {
 
 
         {/* Service Lanes */}
-        <section id="service-lanes" className="py-12 sm:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
+        <section id="service-lanes" className="py-10 sm:py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                   What We Do
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2">
                   We help businesses eliminate manual work and build systems that scale. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
                 </p>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:auto-rows-fr">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 lg:auto-rows-fr">
               {serviceLanes.map((service, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 sm:p-8 hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 h-full group flex flex-col min-h-[320px]">
-                    <div className="flex items-start gap-4 mb-6">
+                  <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300 h-full group flex flex-col min-h-0 sm:min-h-[280px] lg:min-h-[320px]">
+                    <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                       <div className="flex-shrink-0">
-                        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                          <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                        <div className="w-11 h-11 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
+                          <Icon name={service.icon} className="w-5 h-5 sm:w-7 sm:h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-2">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="font-display font-bold text-base sm:text-lg lg:text-xl text-gray-900 dark:text-white mb-1 sm:mb-2">
                           {service.title}
                         </h3>
-                        <h4 className="text-base font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent mb-4">
+                        <h4 className="text-sm sm:text-base font-semibold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
                           {service.subtitle}
                         </h4>
                       </div>
                     </div>
 
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed mb-6 flex-grow">
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed mb-4 sm:mb-6 flex-grow">
                       {service.description}
                     </p>
 
                     <Link
                       href={service.link}
-                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors group-hover:gap-3 mt-auto"
+                      className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-semibold transition-colors group-hover:gap-3 mt-auto text-sm sm:text-base"
                     >
                       Learn more
                       <svg className="w-4 h-4 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -323,34 +323,34 @@ export default function Home() {
         </section>
 
         {/* 4-Step Process */}
-        <section id="snapshot-process" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <section id="snapshot-process" className="py-10 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4">
+              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4">
                   How We Work
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
                   A simple process that gets results
                 </p>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:auto-rows-fr">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 md:auto-rows-fr">
               {processSteps.map((step, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 h-full text-center flex flex-col min-h-[280px]">
-                    <div className="inline-flex items-center justify-center w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-full mb-4 mx-auto">
-                      <span className="text-lg font-bold text-primary-600 dark:text-primary-400">
+                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full text-center flex flex-col min-h-0 sm:min-h-[240px] lg:min-h-[280px]">
+                    <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 dark:bg-primary-900/30 rounded-full mb-3 sm:mb-4 mx-auto">
+                      <span className="text-base sm:text-lg font-bold text-primary-600 dark:text-primary-400">
                         {step.number}
                       </span>
                     </div>
 
-                    <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-3">
+                    <h3 className="font-display font-bold text-sm sm:text-base lg:text-lg text-gray-900 dark:text-white mb-2 sm:mb-3">
                       {step.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed flex-grow" style={{hyphens: 'none', wordBreak: 'normal'}}>
+                    <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm leading-relaxed flex-grow" style={{hyphens: 'none', wordBreak: 'normal'}}>
                       {step.description}
                     </p>
                   </div>
@@ -363,32 +363,32 @@ export default function Home() {
 
 
         {/* Trust Section */}
-        <section id="trust" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <section id="trust" className="py-10 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                   Why Clients Choose Forte
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2">
                   We optimize for relationships, not transactions. Here's what that means.
                 </p>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 md:auto-rows-fr">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 md:auto-rows-fr">
               {trustPillars.map((pillar, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-2xl p-6 sm:p-8 text-center h-full flex flex-col min-h-[280px]">
-                    <div className="w-16 h-16 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mx-auto mb-6 shadow-lg">
-                      <Icon name={pillar.icon} className="w-8 h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl sm:rounded-2xl p-5 sm:p-6 lg:p-8 text-center h-full flex flex-col min-h-0 sm:min-h-[260px] lg:min-h-[280px]">
+                    <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 rounded-lg sm:rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mx-auto mb-4 sm:mb-6 shadow-lg">
+                      <Icon name={pillar.icon} className="w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
 
-                    <h3 className="font-display font-bold text-lg sm:text-xl text-gray-900 dark:text-white mb-4">
+                    <h3 className="font-display font-bold text-base sm:text-lg lg:text-xl text-gray-900 dark:text-white mb-3 sm:mb-4">
                       {pillar.title}
                     </h3>
 
-                    <p className="text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
+                    <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed flex-grow">
                       {pillar.description}
                     </p>
                   </div>
@@ -399,14 +399,14 @@ export default function Home() {
         </section>
 
         {/* Real Results Section */}
-        <section className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
+        <section className="py-10 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                   Real Results
                 </h2>
-                <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2">
                   See what we've built and the outcomes clients got.
                 </p>
               </div>
@@ -414,47 +414,47 @@ export default function Home() {
 
             {/* Featured Case Study: CR Deals */}
             <SimpleScrollReveal direction="up" delay={100}>
-              <Link href="/case-studies/fast-track-auction" className="block group mb-8">
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-2xl p-8 sm:p-12 border-2 border-blue-200 dark:border-blue-700 hover:shadow-2xl transition-all duration-300 group-hover:border-blue-300 dark:group-hover:border-blue-600">
-                  <div className="flex flex-wrap gap-2 mb-4">
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">E-commerce</span>
-                    <span className="px-3 py-1 rounded-full text-xs font-medium bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300">AI Automation</span>
+              <Link href="/case-studies/fast-track-auction" className="block group mb-6 sm:mb-8">
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl sm:rounded-2xl p-5 sm:p-8 lg:p-12 border-2 border-blue-200 dark:border-blue-700 hover:shadow-2xl transition-all duration-300 group-hover:border-blue-300 dark:group-hover:border-blue-600">
+                  <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
+                    <span className="px-2 sm:px-3 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">E-commerce</span>
+                    <span className="px-2 sm:px-3 py-1 rounded-full text-xs font-medium bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300">AI Automation</span>
                   </div>
 
-                  <div className="grid lg:grid-cols-2 gap-8 sm:gap-12 items-center">
+                  <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center">
                     <div>
-                      <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         CR Deals Cincinnati
                       </h3>
-                      <p className="text-lg text-blue-600 dark:text-blue-400 font-semibold mb-4">
+                      <p className="text-base sm:text-lg text-blue-600 dark:text-blue-400 font-semibold mb-3 sm:mb-4">
                         $52K annual savings processing 3,000 products monthly
                       </p>
-                      <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                      <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                         Auction house was drowning in manual product listing work. We built an AI system that handles photography analysis, content generation, and distribution across sales channels. Runs around the clock without anyone touching it.
                       </p>
-                      <div className="flex flex-wrap gap-4 mb-6">
+                      <div className="flex flex-wrap gap-3 sm:gap-4 mb-4 sm:mb-6">
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">1,040+</div>
-                          <div className="text-xs text-gray-600 dark:text-gray-400">Hours saved annually</div>
+                          <div className="text-lg sm:text-2xl font-bold text-blue-600 dark:text-blue-400">1,040+</div>
+                          <div className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400">Hours saved annually</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-green-600 dark:text-green-400">$52K</div>
-                          <div className="text-xs text-gray-600 dark:text-gray-400">Annual savings</div>
+                          <div className="text-lg sm:text-2xl font-bold text-green-600 dark:text-green-400">$52K</div>
+                          <div className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400">Annual savings</div>
                         </div>
                         <div className="text-center">
-                          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">24/7</div>
-                          <div className="text-xs text-gray-600 dark:text-gray-400">Autonomous</div>
+                          <div className="text-lg sm:text-2xl font-bold text-purple-600 dark:text-purple-400">24/7</div>
+                          <div className="text-[10px] sm:text-xs text-gray-600 dark:text-gray-400">Autonomous</div>
                         </div>
                       </div>
-                      <div className="flex flex-wrap gap-4">
-                        <span className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold">
+                      <div className="flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-4">
+                        <span className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-semibold text-sm sm:text-base">
                           Watch the walkthrough
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                           </svg>
                         </span>
-                        <span className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 font-semibold group-hover:text-blue-600">
+                        <span className="inline-flex items-center gap-2 text-gray-600 dark:text-gray-400 font-semibold group-hover:text-blue-600 text-sm sm:text-base">
                           Read full case study
                           <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -468,32 +468,32 @@ export default function Home() {
             </SimpleScrollReveal>
 
             {/* Case Study Grid */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 sm:mb-12">
               {/* Modern Bungalow */}
               <SimpleScrollReveal direction="up" delay={150}>
                 <Link href="/case-studies/modern-bungalow" className="block group h-full">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">E-commerce</span>
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300">Shopify</span>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-emerald-100 dark:bg-emerald-900/50 text-emerald-700 dark:text-emerald-300">E-commerce</span>
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300">Shopify</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Modern Bungalow
                     </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                    <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
                       15+ hours monthly saved on customer emails
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                    <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Denver furniture retailer manually sending 30-40 customer emails daily. We built a system that monitors Shopify orders and sends the right email automatically across 9 different scenarios.
                     </p>
-                    <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
-                      <p className="text-gray-600 dark:text-gray-300 text-sm italic">
+                    <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
+                      <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm italic">
                         "Very good at thinking through the logic of how to best automate a process."
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-medium mt-auto">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
                       View case study
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>
@@ -504,28 +504,28 @@ export default function Home() {
               {/* Hollow Bamboo */}
               <SimpleScrollReveal direction="up" delay={200}>
                 <Link href="/case-studies/hollow-bamboo" className="block group h-full">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300">Operations</span>
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300">Inventory</span>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300">Operations</span>
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-yellow-100 dark:bg-yellow-900/50 text-yellow-700 dark:text-yellow-300">Inventory</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Hollow Bamboo Film Productions
                     </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                    <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
                       20+ hours weekly saved tracking equipment
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                    <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Film production company tracking hundreds of items across 6 locations with paper lists. We built a custom inventory system with QR code mobile access and real-time sync.
                     </p>
-                    <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
-                      <p className="text-gray-600 dark:text-gray-300 text-sm italic">
+                    <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
+                      <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm italic">
                         "Extremely attentive and responsive. Gave us an accurate timeline and met it."
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-medium mt-auto">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
                       View case study
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>
@@ -536,33 +536,33 @@ export default function Home() {
               {/* Revolut */}
               <SimpleScrollReveal direction="up" delay={250}>
                 <Link href="/case-studies/revolut" className="block group h-full">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300">Fintech</span>
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300">AI Analytics</span>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300">Fintech</span>
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300">AI Analytics</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Revolut
                     </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                    <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
                       £4M growth pathway identified
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                    <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Needed to analyze 200,000+ transactions to find profitability drivers. We built an AI system that automated the entire analysis. What took weeks now takes hours.
                     </p>
-                    <div className="flex flex-wrap gap-3 mb-4">
+                    <div className="flex flex-wrap gap-3 mb-3 sm:mb-4">
                       <div className="text-center">
-                        <div className="text-lg font-bold text-green-600 dark:text-green-400">200K+</div>
-                        <div className="text-xs text-gray-500">Transactions</div>
+                        <div className="text-base sm:text-lg font-bold text-green-600 dark:text-green-400">200K+</div>
+                        <div className="text-[10px] sm:text-xs text-gray-500">Transactions</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-lg font-bold text-blue-600 dark:text-blue-400">90%</div>
-                        <div className="text-xs text-gray-500">Faster</div>
+                        <div className="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400">90%</div>
+                        <div className="text-[10px] sm:text-xs text-gray-500">Faster</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-medium mt-auto">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
                       View case study
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>
@@ -573,28 +573,28 @@ export default function Home() {
               {/* Prediction Market Trader */}
               <SimpleScrollReveal direction="up" delay={300}>
                 <Link href="/case-studies/prediction-market-trader" className="block group h-full">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300">AI</span>
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">Data Automation</span>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300">AI</span>
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300">Data Automation</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Prediction Market Trader
                     </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                    <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
                       Hundreds of markets analyzed daily
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                    <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Trader manually researching earnings outcomes for hundreds of markets. We built a pipeline that pulls data, runs AI forecasting, and outputs decision-ready analysis automatically.
                     </p>
-                    <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
-                      <p className="text-gray-600 dark:text-gray-300 text-sm italic">
+                    <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
+                      <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm italic">
                         "Figured it out quickly and got everything working smoothly."
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-medium mt-auto">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
                       View case study
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>
@@ -605,33 +605,33 @@ export default function Home() {
               {/* Kingfisher Ads */}
               <SimpleScrollReveal direction="up" delay={350}>
                 <Link href="/case-studies/marketing-agency-reporting" className="block group h-full">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300">Agency</span>
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300">Reporting</span>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300">Agency</span>
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-amber-100 dark:bg-amber-900/50 text-amber-700 dark:text-amber-300">Reporting</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       Kingfisher Ads
                     </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                    <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
                       Monthly reporting cut from 2-4 hours to 15 minutes
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                    <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Agency owner manually pulling ad spend from Meta and Google Ads every month. We built a system that pulls from both platforms, calculates fees per client, and outputs invoice-ready reports.
                     </p>
-                    <div className="flex flex-wrap gap-3 mb-4">
+                    <div className="flex flex-wrap gap-3 mb-3 sm:mb-4">
                       <div className="text-center">
-                        <div className="text-lg font-bold text-green-600 dark:text-green-400">15 min</div>
-                        <div className="text-xs text-gray-500">vs 2-4 hours</div>
+                        <div className="text-base sm:text-lg font-bold text-green-600 dark:text-green-400">15 min</div>
+                        <div className="text-[10px] sm:text-xs text-gray-500">vs 2-4 hours</div>
                       </div>
                       <div className="text-center">
-                        <div className="text-lg font-bold text-blue-600 dark:text-blue-400">Auto</div>
-                        <div className="text-xs text-gray-500">On the 1st</div>
+                        <div className="text-base sm:text-lg font-bold text-blue-600 dark:text-blue-400">Auto</div>
+                        <div className="text-[10px] sm:text-xs text-gray-500">On the 1st</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-medium mt-auto">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
                       View case study
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>
@@ -642,27 +642,27 @@ export default function Home() {
               {/* KleinBros Agency */}
               <SimpleScrollReveal direction="up" delay={400}>
                 <Link href="/case-studies/german-marketing-agency" className="block group h-full">
-                  <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
-                    <div className="flex flex-wrap gap-2 mb-3">
-                      <span className="px-2 py-1 rounded-full text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300">Emergency Recovery</span>
+                  <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-600 transition-all duration-300 h-full flex flex-col">
+                    <div className="flex flex-wrap gap-1.5 sm:gap-2 mb-2 sm:mb-3">
+                      <span className="px-2 py-0.5 sm:py-1 rounded-full text-[10px] sm:text-xs font-medium bg-red-100 dark:bg-red-900/50 text-red-700 dark:text-red-300">Emergency Recovery</span>
                     </div>
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 dark:text-white mb-1.5 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       KleinBros Agency
                     </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold mb-3">
+                    <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
                       43 workflows saved, 2 hours to full recovery
                     </p>
-                    <p className="text-gray-600 dark:text-gray-300 text-sm mb-4 flex-grow">
+                    <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Client's server hit 100% disk full. Docker crashed. Entire automation infrastructure down. We diagnosed remotely, found a creative solution, and restored all 43 workflows in 2 hours.
                     </p>
-                    <div className="mb-4 p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
-                      <p className="text-gray-600 dark:text-gray-300 text-sm italic">
+                    <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
+                      <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm italic">
                         "Communication was 10/10. I felt very safe throughout the entire project."
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-medium mt-auto">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
                       View case study
-                      <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </div>
@@ -689,30 +689,30 @@ export default function Home() {
         </section>
 
         {/* Resources Preview */}
-        <section id="resources" className="py-12 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
+        <section id="resources" className="py-10 sm:py-16 lg:py-24 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12 sm:mb-16">
-                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-6">
+              <div className="text-center mb-8 sm:mb-12 lg:mb-16">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                   Learn & Grow
                 </h2>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-8 md:auto-rows-fr">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 mb-6 sm:mb-8 md:auto-rows-fr">
               {resourcesPreview.map((resource, index) => (
                 <SimpleAnimatedCard key={index}>
                   <Link href={resource.link} className="h-full block">
-                    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 h-full flex flex-col group min-h-[200px]">
-                      <div className="text-xs font-semibold text-primary-600 dark:text-primary-400 mb-3">
+                    <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl sm:rounded-2xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 h-full flex flex-col group min-h-0 sm:min-h-[180px] lg:min-h-[200px]">
+                      <div className="text-[10px] sm:text-xs font-semibold text-primary-600 dark:text-primary-400 mb-2 sm:mb-3">
                         {resource.type}
                       </div>
 
-                      <h3 className="font-display font-bold text-lg text-gray-900 dark:text-white mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors flex-grow">
+                      <h3 className="font-display font-bold text-base sm:text-lg text-gray-900 dark:text-white mb-3 sm:mb-4 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors flex-grow">
                         {resource.title}
                       </h3>
 
-                      <div className="text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors mt-auto">
+                      <div className="text-sm sm:text-base text-primary-600 dark:text-primary-400 font-semibold group-hover:text-primary-700 dark:group-hover:text-primary-300 transition-colors mt-auto">
                         Read blog →
                       </div>
                     </div>
@@ -723,9 +723,9 @@ export default function Home() {
 
             <SimpleScrollReveal direction="up">
               <div className="text-center">
-                <Link 
+                <Link
                   href="/blog"
-                  className="text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
+                  className="text-sm sm:text-base text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 font-semibold transition-colors"
                 >
                   All articles →
                 </Link>
@@ -735,43 +735,43 @@ export default function Home() {
         </section>
 
         {/* Contact Section with Form and Map */}
-        <section id="contact-section" className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
+        <section id="contact-section" className="py-12 sm:py-16 lg:py-24 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
             <SimpleScrollReveal direction="up">
-              <div className="text-center mb-12">
-                <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
+              <div className="text-center mb-8 sm:mb-12">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                   Let's Talk
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
+                <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2">
                   If you're spending 10+ hours a week on manual work, or you know there's growth you're missing because you don't have the systems to capture it, let's have a conversation. Even if you don't hire us, you'll walk away knowing what's possible.
                 </p>
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-12">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 mb-8 sm:mb-12">
               {/* Contact Form */}
               <div>
-                <Suspense fallback={<div className="h-96 bg-gray-100 dark:bg-gray-800 rounded-xl animate-pulse"></div>}>
+                <Suspense fallback={<div className="h-72 sm:h-96 bg-gray-100 dark:bg-gray-800 rounded-xl animate-pulse"></div>}>
                   <ContactForm />
                 </Suspense>
               </div>
 
               {/* Calendar Widget */}
-              <div className="bg-white dark:bg-gray-800 rounded-xl p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
-                <div className="flex items-start gap-3 mb-4">
-                  <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                    <Icon name="star" className="w-6 h-6" style={{filter: 'brightness(0) saturate(100%) invert(38%) sepia(95%) saturate(2533%) hue-rotate(207deg) brightness(101%) contrast(101%)'}} />
+              <div className="bg-white dark:bg-gray-800 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700 shadow-lg">
+                <div className="flex items-start gap-3 mb-3 sm:mb-4">
+                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+                    <Icon name="star" className="w-5 h-5 sm:w-6 sm:h-6" style={{filter: 'brightness(0) saturate(100%) invert(38%) sepia(95%) saturate(2533%) hue-rotate(207deg) brightness(101%) contrast(101%)'}} />
                   </div>
                   <div>
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-1 sm:mb-2">
                       Schedule a Strategy Call
                     </h3>
-                    <p className="text-sm text-gray-600 dark:text-gray-400">
+                    <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
                       Book a free 30-minute consultation to discuss your business goals and how we can help.
                     </p>
                   </div>
                 </div>
-                <Suspense fallback={<div className="h-96 bg-gray-100 dark:bg-gray-800 rounded-xl animate-pulse"></div>}>
+                <Suspense fallback={<div className="h-72 sm:h-96 bg-gray-100 dark:bg-gray-800 rounded-xl animate-pulse"></div>}>
                   <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
                 </Suspense>
               </div>
@@ -779,13 +779,13 @@ export default function Home() {
 
             {/* Map - Smaller and Below */}
             <div className="max-w-3xl mx-auto">
-              <div className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden h-[300px]">
+              <div className="bg-gray-100 dark:bg-gray-800 rounded-xl overflow-hidden h-[200px] sm:h-[250px] lg:h-[300px]">
                 <Suspense fallback={<div className="h-full bg-gray-200 dark:bg-gray-700 animate-pulse"></div>}>
                   <InteractiveMap />
                 </Suspense>
               </div>
-              <div className="text-center mt-4">
-                <p className="text-sm text-gray-500 dark:text-gray-400">
+              <div className="text-center mt-3 sm:mt-4">
+                <p className="text-xs sm:text-sm text-gray-500 dark:text-gray-400">
                   Serving businesses nationwide
                 </p>
               </div>
