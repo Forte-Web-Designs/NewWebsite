@@ -11,6 +11,740 @@ interface BlogPostPageProps {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'ai-bubble-part-6-what-happens-when-bubble-pops',
+    title: 'What Happens When The Bubble Pops',
+    excerpt: 'Two scenarios for the AI crash. Neither are pretty. The loud pop vs. the slow deflation, and what it means for developers and businesses building with AI.',
+    content: `
+      <p>We've covered the economics. The circular money. The AGI gamble. The threat from cheaper local models.</p>
+
+      <p>Now the question everyone's asking: What happens when the bubble pops?</p>
+
+      <p>There are two scenarios. In both cases, neither are pretty.</p>
+
+      <h2>Scenario 1: The Loud Pop</h2>
+
+      <p>OpenAI and other major AI companies can't find a path to profitability. Investors lose patience. Funding dries up.</p>
+
+      <p>Suddenly, OpenAI is in trouble.</p>
+
+      <p>And remember that "if we fail, you fail" strategy we talked about?</p>
+
+      <p>Microsoft has billions tied to OpenAI. NVIDIA's record sales depend on AI companies buying chips. AMD, Oracle, and others are all interconnected.</p>
+
+      <p>If OpenAI goes down, it doesn't go down alone.</p>
+
+      <p>Imagine Microsoft, NVIDIA, and AMD stock all taking major hits at basically the exact same time.</p>
+
+      <p>These aren't small companies. They're probably in your retirement fund. Your 401k. Your index funds.</p>
+
+      <p>The ripple effects could last years.</p>
+
+      <h2>Scenario 2: The Slow Deflation</h2>
+
+      <p>The companies find a way to cut losses. Scale back. Find some equilibrium between cost and revenue.</p>
+
+      <p>The bubble doesn't pop. It just deflates.</p>
+
+      <p>Less dramatic for sure. But still significant.</p>
+
+      <p>For us, this means investment slows. Hiring freezes. Layoffs. AI-focused startups slowly shut down.</p>
+
+      <p>AI doesn't go away. But the gold rush is over.</p>
+
+      <h2>What Happened With Dot-Com</h2>
+
+      <p>The Nasdaq dropped 80% over two years.</p>
+
+      <p>Not in one day. Two years of slow, grinding decline.</p>
+
+      <p>60% of companies were gone. 200,000 people laid off. $5 to $7 trillion in value just evaporated.</p>
+
+      <p>It wasn't instant. It was a slow bleed. Companies failing one by one. Funding rounds that never came. Acquisitions at pennies on the dollar.</p>
+
+      <h2>Which Scenario Is More Likely?</h2>
+
+      <p>Honestly? Probably somewhere in between.</p>
+
+      <p>Some companies will fail and make major headlines. Others will just fizzle out quietly.</p>
+
+      <p>The biggest companies will survive but at reduced valuations.</p>
+
+      <p>The market will consolidate. Just like streaming. Just like dot-com.</p>
+
+      <p>A few winners. Lots of losers. And everyone who built on the losing platforms scrambling to migrate.</p>
+
+      <h2>The Timeline</h2>
+
+      <p>Could be months. Could be years.</p>
+
+      <p>The big players have deep pockets. Microsoft, Google, Meta can burn cash longer than most.</p>
+
+      <p>But the math doesn't change. At some point, the bill comes due.</p>
+
+      <h2>What I'm Watching For</h2>
+
+      <p>The first sign will be pricing changes. When companies start raising API costs significantly, that's when you know the subsidies are ending.</p>
+
+      <p>Then layoffs. OpenAI, Anthropic, and others cutting staff to extend runway.</p>
+
+      <p>Then consolidation. Smaller players getting acquired or shutting down. Features getting cut. Services getting merged.</p>
+
+      <p>It won't be one dramatic moment. It'll be a series of adjustments as reality catches up with hype.</p>
+
+      <h2>What This Means For Developers</h2>
+
+      <p>If you're building systems that depend on AI APIs, you need contingency plans.</p>
+
+      <p>What happens if your primary API provider raises prices 5x? Can your business model handle that?</p>
+
+      <p>What happens if they shut down? How quickly can you migrate to an alternative?</p>
+
+      <p>What happens if the features you depend on get deprecated during consolidation?</p>
+
+      <p>These aren't hypothetical concerns anymore. This is what happens in every bubble.</p>
+
+      <h2>What This Means For Businesses</h2>
+
+      <p>If you're considering major AI investments, understand the risk.</p>
+
+      <p>The technology works. But the companies providing it might not survive in their current form.</p>
+
+      <p>Build systems that aren't dependent on a single provider. Have migration paths. Don't bet your entire operation on a company burning billions annually with no path to profitability.</p>
+
+      <h2>The Part That Actually Worries Me</h2>
+
+      <p>It's not that AI will go away. The technology is real and useful.</p>
+
+      <p>What worries me is the disruption during consolidation.</p>
+
+      <p>Features breaking. APIs changing. Prices spiking. Companies shutting down.</p>
+
+      <p>If you've built critical business systems on these platforms, that disruption is expensive and painful.</p>
+
+      <p>And unlike dot-com where websites were relatively easy to migrate, AI systems are deeply integrated. Moving from one provider to another isn't trivial.</p>
+
+      <h2>What I'm Doing</h2>
+
+      <p>I'm building with AI but not depending on it exclusively.</p>
+
+      <p>For critical client systems, I'm using AI to enhance processes, not replace them entirely. If the AI fails or gets too expensive, the core process still works.</p>
+
+      <p>I'm also testing local models more aggressively. Building contingency plans. Making sure I'm not locked into any single provider.</p>
+
+      <p>That's the smart approach in a bubble. Use the tools while they're cheap. But don't build your foundation on sand.</p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>The AI bubble is going to pop. The only question is how and when.</p>
+
+      <p>Some companies will survive. Most won't. The survivors will own the consolidated market.</p>
+
+      <p>If you're building with these tools, plan accordingly. Use them. Get value from them. But don't bet everything on companies that are burning billions with no clear path to profitability.</p>
+
+      <p>The music is going to stop eventually. Make sure you're not the one left without a chair.</p>
+
+      <p><em>Next up in Part 7: The replaceable developer problem. What this means for people who build with AI every day.</em></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-12-17',
+    readTime: '8 min read',
+    category: 'AI Industry',
+    image: '/images/blog/ai-bubble-pops.webp',
+    tags: ['AI Bubble', 'AI Industry', 'Technology Trends', 'Business Strategy'],
+    featured: true
+  },
+  {
+    id: 'ai-bubble-part-5-threat-from-below',
+    title: 'The Threat From Below',
+    excerpt: 'Local models are eating the market while OpenAI burns cash chasing AGI. The mega-model dilemma and why cheap, focused AI is winning.',
+    content: `
+      <p>So far we've talked about the unsustainable economics, circular money, and the AGI gamble.</p>
+
+      <p>There's another threat to the mega models that nobody's talking about. It's the threat from below.</p>
+
+      <p>While OpenAI, Anthropic, and Google burn billions building massive general-purpose models, something sneaky is happening.</p>
+
+      <p>Small, cheap, local models are starting to eat the market from the bottom.</p>
+
+      <h2>Here's A Real Example</h2>
+
+      <p>Austin, Texas is using an on-premise AI system for residential permits.</p>
+
+      <p>They aren't using GPT-5 or Claude. They're using a local model running on their own servers.</p>
+
+      <p>It's smaller. It's less capable overall. But it does the thing they care about very well.</p>
+
+      <p>And it's financially sustainable.</p>
+
+      <p>All they're paying is compute costs. No API fees. No subscriptions. No dependency on a company that might 10x their prices next year.</p>
+
+      <h2>The 95% Failure Rate</h2>
+
+      <p>Remember that MIT study? 95% of AI pilot projects fail.</p>
+
+      <p>Part of that failure is cost. Companies are trying to integrate these mega models into their workflows, and even at today's artificially low prices, the math doesn't work.</p>
+
+      <p>But what if those same projects used cheap local models instead?</p>
+
+      <p>Maybe some of those 95% would have succeeded.</p>
+
+      <p>That's the mega-model dilemma.</p>
+
+      <h2>The Impossible Position</h2>
+
+      <p>OpenAI and others are stuck.</p>
+
+      <p>Their models are expensive to build. Expensive to run. They're subsidizing usage now, but eventually prices have to go up.</p>
+
+      <p>When that happens, companies will start asking: Do we really need GPT-5 for this? Or can a smaller model do the job?</p>
+
+      <p>For a lot of use cases, the answer is going to be the smaller model.</p>
+
+      <h2>I'm Seeing This With Clients</h2>
+
+      <p>I've built automation systems for clients using both approaches.</p>
+
+      <p>One client needed AI to process customer inquiries. We tested GPT-4. It worked great. It was also expensive at scale.</p>
+
+      <p>We tested a smaller local model fine-tuned for their specific use case. It worked almost as well. Cost was a fraction.</p>
+
+      <p>They went with the local model.</p>
+
+      <p>That's happening more and more. The mega models are impressive. But impressive doesn't always mean practical.</p>
+
+      <h2>The Market Is Splitting</h2>
+
+      <p>Mega models are at the top. Chasing AGI. Burning cash. Hoping for a breakthrough.</p>
+
+      <p>Cheap focused models are at the bottom. Solving real problems at sustainable costs.</p>
+
+      <p>And the bottom is growing faster.</p>
+
+      <p>Every month, new local models get released. Llama. Mistral. Smaller versions that run on consumer hardware.</p>
+
+      <p>They're not as capable as GPT-4 or Claude. But they're good enough for specific tasks. And good enough at 1/10th the cost is a compelling value proposition.</p>
+
+      <h2>The Threat To OpenAI</h2>
+
+      <p>The threat to OpenAI isn't only running out of money.</p>
+
+      <p>It's becoming irrelevant for most practical use cases while they chase a moving target that might never arrive.</p>
+
+      <p>If AGI doesn't come, and local models keep getting better at specific tasks, what's the value proposition for expensive general-purpose models?</p>
+
+      <p>You're paying premium prices for capabilities you don't need.</p>
+
+      <h2>What This Looks Like In Practice</h2>
+
+      <p>Small businesses don't need GPT-5. They need something that automates their invoicing or handles basic customer service.</p>
+
+      <p>Local governments don't need AGI. They need systems that process permits or answer citizen questions.</p>
+
+      <p>Most companies don't need a model that can do everything. They need a model that does their specific thing really well.</p>
+
+      <p>That's what local models are becoming. Specialized tools for specific jobs at sustainable prices.</p>
+
+      <h2>The Inconvenient Truth</h2>
+
+      <p>OpenAI's entire business model depends on general-purpose models being so much better than specialized models that the price premium is worth it.</p>
+
+      <p>But as local models improve, that gap narrows.</p>
+
+      <p>And when the gap is small enough, most companies will choose the cheaper option.</p>
+
+      <p>Not because it's better. Because it's good enough.</p>
+
+      <h2>What I'm Doing</h2>
+
+      <p>I'm building with both.</p>
+
+      <p>For complex, variable tasks that require real flexibility, I use Claude or GPT-4.</p>
+
+      <p>For repetitive, well-defined tasks that don't change much, I'm increasingly using local models.</p>
+
+      <p>That's the practical approach. Use the right tool for the job, not the most expensive tool for everything.</p>
+
+      <p>And honestly? Most business automation falls into the second category. Repetitive, well-defined tasks.</p>
+
+      <p>That's local model territory. And it's getting bigger.</p>
+
+      <h2>The Bottom Line</h2>
+
+      <p>The mega models aren't going away. They're useful for certain things.</p>
+
+      <p>But the assumption that everyone needs them for everything? That's looking shakier every month.</p>
+
+      <p>The threat from below is real. And it's growing while the mega models burn billions chasing a breakthrough that might not come.</p>
+
+      <p><em>Next up in Part 6: What happens when the bubble pops. The loud pop versus the slow deflation. Neither are pretty.</em></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-12-16',
+    readTime: '7 min read',
+    category: 'AI Industry',
+    image: '/images/blog/ai-threat-from-below.webp',
+    tags: ['AI Bubble', 'Local Models', 'AI Industry', 'Technology Trends'],
+    featured: true
+  },
+  {
+    id: 'ai-bubble-part-4-agi-gamble',
+    title: 'The AGI Gamble',
+    excerpt: 'OpenAI is betting everything on a breakthrough that probably isn\'t coming. Why the AGI timeline doesn\'t add up and what it means for the bubble.',
+    content: `
+      <p>So far we've talked about the economics. The unsustainable math. The circular money.</p>
+
+      <p>But why do it? What justifies burning billions of dollars with no path to profitability?</p>
+
+      <p>There's a bigger bet happening behind all of this. OpenAI and other AI companies are gambling everything on AGI.</p>
+
+      <h2>What Is AGI?</h2>
+
+      <p>AGI stands for Artificial General Intelligence.</p>
+
+      <p>In simple terms, it's a model that doesn't just predict text or search quickly, but actually thinks, reasons, and solves problems it's never seen before.</p>
+
+      <p>Not a really good autocomplete. Actual intelligence.</p>
+
+      <p>That's the end goal. That's what justifies the billions in losses. That's the moonshot.</p>
+
+      <p>And to be fair, if it became reality, revolutionary wouldn't come close to describing the magnitude of this discovery for society.</p>
+
+      <h2>The Theory</h2>
+
+      <p>Here's the idea behind the massive investment.</p>
+
+      <p>Keep making models bigger. Keep feeding them more data. Eventually something clicks. The model stops being a really good autocomplete and starts being actually intelligent.</p>
+
+      <p>It's not a crazy theory. We've seen improvements with scale. GPT-4 is better than GPT-3. Claude Sonnet is better than earlier versions.</p>
+
+      <p>The bet is that if you keep scaling, you eventually hit a breakthrough. The model becomes genuinely intelligent instead of just really good at pattern matching.</p>
+
+      <p>That's what justifies losing money for five, ten years. Because if it works, you own the future.</p>
+
+      <h2>The Problem</h2>
+
+      <p>It's not working. Or rather, not fast enough.</p>
+
+      <p>GPT-5 came out. It was fine. Better than GPT-4 in some ways. But it wasn't a massive leap. Just a step.</p>
+
+      <p>We're starting to see diminishing returns.</p>
+
+      <p>Massive increases in compute, training data, and cost are producing smaller and smaller improvements.</p>
+
+      <p>The models are getting better. But not exponentially better. Incrementally better.</p>
+
+      <h2>What The Researchers Say</h2>
+
+      <p>The people who actually study how intelligence works are raising concerns.</p>
+
+      <p>Just adding more parameters and more data doesn't create intelligence. That approach has gotten us incredibly useful tools. But useful tools and general intelligence are not the same thing.</p>
+
+      <p>There might be fundamental limitations to this approach that no amount of scaling will overcome.</p>
+
+      <p>We might be approaching the ceiling of what transformer-based models can actually do.</p>
+
+      <h2>The Timeline Doesn't Add Up</h2>
+
+      <p>OpenAI is projecting losses until 2029. Outside researchers say it could be much longer than that.</p>
+
+      <p>Five years of continued losses. Billions more in spending. All betting on a breakthrough that the underlying technology might not be capable of producing.</p>
+
+      <p>At some point, the money runs out. At some point, investors stop believing. At some point, the bill comes due.</p>
+
+      <p>And if AGI doesn't arrive to justify all of this? The entire financial justification for these losses collapses.</p>
+
+      <h2>That's The Bubble</h2>
+
+      <p>This is what makes it a bubble and not just aggressive investment.</p>
+
+      <p>If the bet pays off, everyone wins. AGI changes everything, the companies that built it own the future, investors make fortunes.</p>
+
+      <p>But if the bet doesn't pay off? If AGI isn't achievable through this approach? Then you have companies that spent years burning billions with nothing to show for it except really good autocomplete.</p>
+
+      <p>That's when bubbles pop.</p>
+
+      <h2>What I Think</h2>
+
+      <p>I use AI tools constantly. They're incredibly useful for what they actually do.</p>
+
+      <p>Code generation. Content drafting. Data processing. Pattern recognition.</p>
+
+      <p>Those are real, valuable capabilities. But they're not intelligence. They're sophisticated pattern matching.</p>
+
+      <p>And honestly? For most practical use cases, sophisticated pattern matching is enough.</p>
+
+      <p>I don't need AGI to automate a client's email workflow. I need a good language model that can follow instructions consistently.</p>
+
+      <p>The problem is the business model requires AGI to justify the spending. Without it, the math doesn't work.</p>
+
+      <h2>The Real Risk</h2>
+
+      <p>The risk isn't that AI goes away. The technology is real and useful.</p>
+
+      <p>The risk is that we're building an entire industry on the assumption that AGI is coming soon, and it's not.</p>
+
+      <p>When that becomes clear, when investors realize the breakthrough isn't arriving on the timeline they expected, that's when the bubble pops.</p>
+
+      <p>Not because AI failed. Because the expectations were wrong.</p>
+
+      <h2>What This Means For Us</h2>
+
+      <p>If you're building with AI tools, plan for the tools we have now, not the tools we're promised.</p>
+
+      <p>Build systems that work with sophisticated pattern matching, not systems that require actual intelligence.</p>
+
+      <p>Because if AGI arrives in the next few years, great. Your systems will get better.</p>
+
+      <p>But if it doesn't? You've built something that works with the technology that actually exists, not the technology people hoped would exist.</p>
+
+      <p>That's the smart play in a bubble. Build for reality, not hype.</p>
+
+      <p><em>Next up in Part 5: The threat from below. Cheap local models are eating the market while the mega models burn cash chasing AGI.</em></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-12-15',
+    readTime: '8 min read',
+    category: 'AI Industry',
+    image: '/images/blog/ai-agi-gamble.webp',
+    tags: ['AI Bubble', 'AGI', 'AI Industry', 'Technology Trends'],
+    featured: true
+  },
+  {
+    id: 'ai-bubble-part-3-math-doesnt-work',
+    title: 'The Math That Doesn\'t Work',
+    excerpt: '$560 billion invested, $35 billion in revenue. That\'s a 16:1 ratio. The AI bubble by the numbers, and why the math is worse than most people realize.',
+    content: `
+      <p>We've talked about what bubbles are and what happens when they pop.</p>
+
+      <p>Now let's look at the actual numbers in AI. Because the math is worse than most people realize.</p>
+
+      <h2>The Gap Is Massive</h2>
+
+      <p>$560 billion invested in AI. $35 billion in revenue.</p>
+
+      <p>That's a 16:1 ratio of spending to revenue. No business survives that long term.</p>
+
+      <p>Tech companies are spending roughly $400 billion per year just to train and operate AI models. By 2030, the industry will need $2 trillion in annual revenue just to cover computing costs.</p>
+
+      <p>The projected actual revenue? Around $200 billion.</p>
+
+      <p>That's a $1.8 trillion gap. Just to break even.</p>
+
+      <h2>The Money Is Circular</h2>
+
+      <p>Here's where it gets weird.</p>
+
+      <p>You see a headline: "NVIDIA invests $100 billion in OpenAI."</p>
+
+      <p>Sounds massive. Like NVIDIA is really bullish on AI.</p>
+
+      <p>But where does OpenAI spend most of its money? Buying NVIDIA chips.</p>
+
+      <p>So NVIDIA gives money to OpenAI. OpenAI turns around and gives that same money right back to NVIDIA for GPUs.</p>
+
+      <p>Both companies announce huge numbers. NVIDIA reports record sales. OpenAI reports record investment.</p>
+
+      <p>But the money just went in a circle.</p>
+
+      <h2>It Gets Even More Complex</h2>
+
+      <p>OpenAI struck a deal with AMD. They'll purchase tens of billions in chips. In exchange, OpenAI becomes one of AMD's largest shareholders.</p>
+
+      <p>OpenAI buys AMD chips. AMD's stock goes up. OpenAI's shares in AMD increase in value. That value offsets the chip costs.</p>
+
+      <p>Money goes around. Everyone's numbers look great. But is anyone actually profitable?</p>
+
+      <p>This is the "if we fail, you fail" strategy.</p>
+
+      <h2>Strategic Interdependence</h2>
+
+      <p>OpenAI is deliberately tying itself to Microsoft, NVIDIA, AMD, and Oracle.</p>
+
+      <p>Not just as customers. As partners whose survival depends on OpenAI's success.</p>
+
+      <p>If OpenAI struggles, these deep-pocketed companies have massive incentive to prop them up. They can't afford to let OpenAI fail. Too much of their own value is tied to it.</p>
+
+      <p>Make yourself too interconnected to fail. It's a built-in survival strategy.</p>
+
+      <p>Smart? Maybe. Sustainable? That's the question.</p>
+
+      <h2>Meanwhile, In The Real World</h2>
+
+      <p>A recent MIT study found that 95% of AI pilot projects fail to yield meaningful results.</p>
+
+      <p>That's with $40 billion in corporate investment trying to integrate AI into actual business workflows.</p>
+
+      <p>Companies are trying to figure out where AI fits. Most can't make it work versus the cost. And that's at today's artificially low prices.</p>
+
+      <h2>The Pricing Problem</h2>
+
+      <p>Think about what you pay now.</p>
+
+      <p>ChatGPT Plus is $20 a month. Claude Pro is $20 a month.</p>
+
+      <p>To close the investment gap, those prices would need to be 15-20x higher. Around $300 to $400 a month.</p>
+
+      <p>That's not sustainable for most users.</p>
+
+      <p>Every query you make costs real money. They're subsidizing your usage, hoping to outlast the competition.</p>
+
+      <h2>Sound Familiar?</h2>
+
+      <p>It's the streaming playbook. It's the dot-com playbook.</p>
+
+      <p>Burn cash. Outlast competitors. Hope you're still standing when the bill comes due.</p>
+
+      <p>The difference is AI has way higher operational costs than streaming or websites ever did.</p>
+
+      <h2>OpenAI's Own Projections</h2>
+
+      <p>OpenAI is projecting losses until 2029.</p>
+
+      <p>Five more years of burning money. Hoping for a breakthrough that justifies all of it.</p>
+
+      <p>The headlines look better than reality. Circular money or not, the math still doesn't work.</p>
+
+      <p>You can't spend $16 for every $1 you make. Not forever.</p>
+
+      <h2>What This Means For Us</h2>
+
+      <p>I use these tools daily. They're incredibly valuable. They save me hours on client projects.</p>
+
+      <p>But I'm building on platforms that are fundamentally unprofitable.</p>
+
+      <p>At some point, that catches up. Either prices go way up, or companies go under, or both.</p>
+
+      <p>If you're building business systems that depend on AI APIs, you need to understand this isn't sustainable at current pricing.</p>
+
+      <p>Plan accordingly.</p>
+
+      <p><em>Next up in Part 4: The AGI gamble. OpenAI is betting everything on achieving general intelligence. And it's probably not coming.</em></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-12-14',
+    readTime: '7 min read',
+    category: 'AI Industry',
+    image: '/images/blog/ai-bubble-math.webp',
+    tags: ['AI Bubble', 'AI Industry', 'Technology Trends', 'Business Strategy'],
+    featured: true
+  },
+  {
+    id: 'ai-bubble-part-2-what-happens-when-bubbles-pop',
+    title: 'What Happens When Bubbles Pop',
+    excerpt: 'The dot-com crash shows us exactly what\'s coming for AI. 60% of companies failed, $5-7 trillion evaporated. But the survivors became Google, Amazon, and eBay.',
+    content: `
+      <p>Last post I explained what a bubble actually is. Companies burning cash, trying to outlast each other, hoping to be the last one standing.</p>
+
+      <p>Now let's talk about what happens when one pops.</p>
+
+      <p>Because we've seen this before. And it wasn't pretty.</p>
+
+      <h2>The Dot-Com Bubble</h2>
+
+      <p>Late 90s to early 2000s. Everyone was throwing money at anything with a ".com" in the name.</p>
+
+      <p>Pets.com spent millions on Super Bowl ads before they had a sustainable business model. Webvan raised $800 million to deliver groceries and burned through it in two years.</p>
+
+      <p>Investors were betting on potential, not profitability.</p>
+
+      <p>Sound familiar?</p>
+
+      <h2>When Reality Caught Up</h2>
+
+      <p>The Nasdaq dropped from 5,000 to 1,300. That's an 80% decline in market value.</p>
+
+      <p>But here's what people forget. It didn't happen overnight. It took about two years.</p>
+
+      <p>Companies kept failing. Running out of cash. Getting acquired for pennies on the dollar or just disappearing entirely.</p>
+
+      <p>It turned into $5 to $7 trillion in value. Gone.</p>
+
+      <p>60% of dot-com companies shut down entirely. 200,000 people laid off. Venture funding collapsed from $105 billion to $20 billion.</p>
+
+      <h2>The Part Everyone Misses</h2>
+
+      <p>The technology didn't disappear.</p>
+
+      <p>The internet didn't go away. It just turned out most companies building on it couldn't figure out how to make money.</p>
+
+      <p>Google, founded in 1998, survived. Now "Google" is a verb.</p>
+
+      <p>Amazon, founded in 1994, kept losing money for years. Everyone laughed at their quarterly reports. Now they dominate online retail.</p>
+
+      <p>eBay became synonymous with online auctions.</p>
+
+      <p>The bubble burst. Most companies failed. But the survivors who outlasted the chaos became the market leaders we know today.</p>
+
+      <h2>The Pattern Is Always The Same</h2>
+
+      <p>Bubble forms. Massive investment floods in. Too many competitors chasing the same opportunity.</p>
+
+      <p>Bubble pops. Cash runs out. Most companies fail.</p>
+
+      <p>The survivors consolidate the market and own it for the next decade.</p>
+
+      <p>That's what happened with the internet. That's what's happening with streaming right now. That's what's coming for AI.</p>
+
+      <h2>Why This Time Feels Different (But Isn't)</h2>
+
+      <p>I hear people say "AI is different because the technology actually works."</p>
+
+      <p>The internet actually worked too. E-commerce was real. Online services were valuable.</p>
+
+      <p>That didn't stop 60% of companies from failing when the money ran out.</p>
+
+      <p>The technology working doesn't mean the business model works. Those are two different things.</p>
+
+      <p>OpenAI has incredible technology. But they're losing money on every API call. That's not sustainable regardless of how good the models are.</p>
+
+      <h2>What This Means For AI</h2>
+
+      <p>The same consolidation is coming.</p>
+
+      <p>Right now there are dozens of AI companies. Most of them are burning investor cash, subsidizing usage, hoping to outlast each other.</p>
+
+      <p>When the bubble pops, most will fail. A few will survive and own the market.</p>
+
+      <p>The question is which ones. And what happens to all the businesses and developers who built on the platforms that don't make it.</p>
+
+      <h2>The Timeline</h2>
+
+      <p>With dot-com, it took about two years from peak to bottom.</p>
+
+      <p>With AI, we're probably early in that cycle. The money is still flowing. Companies are still raising massive rounds. Usage is still growing.</p>
+
+      <p>But the math doesn't work. At some point, it has to.</p>
+
+      <p>The companies with the deepest pockets will survive longest. Microsoft backing OpenAI. Google with Gemini. Meta with Llama.</p>
+
+      <p>The smaller players? They're on borrowed time.</p>
+
+      <h2>What I'm Watching For</h2>
+
+      <p>The first sign will be slower funding rounds. When VCs stop writing checks as easily, that's when the pressure starts.</p>
+
+      <p>Then you'll see companies trying to raise prices. Testing whether users will pay enough to cover actual costs.</p>
+
+      <p>Then layoffs. Cost cutting. Pivots. Acquisitions.</p>
+
+      <p>It won't be one dramatic crash. It'll be a slow grind as reality catches up with expectations.</p>
+
+      <p>That's what happened with dot-com. That's what's happening with streaming. That's what's coming for AI.</p>
+
+      <p><em>Next up in Part 3: The AI bubble by the numbers. And the math is ugly.</em></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-12-13',
+    readTime: '7 min read',
+    category: 'AI Industry',
+    image: '/images/blog/ai-bubble-dotcom.webp',
+    tags: ['AI Bubble', 'Dot-Com', 'AI Industry', 'Technology Trends'],
+    featured: true
+  },
+  {
+    id: 'ai-bubble-part-1-what-is-a-bubble',
+    title: 'The AI Bubble Is Real (And I Can Prove It With Netflix)',
+    excerpt: 'I\'ve been thinking about the AI bubble for months. Not whether it exists. It definitely exists. But what happens when it pops. Part 1 of a series breaking down what\'s actually happening.',
+    content: `
+      <p>I've been thinking about the AI bubble for months now.</p>
+
+      <p>Not whether it exists. It definitely exists. But what happens when it pops.</p>
+
+      <p>This is Part 1 of a series where I'm going to break down what's actually happening in the AI market, what history tells us about bubbles, and what it means for people like us who build with these tools every day.</p>
+
+      <p>Let's start with the basics. What even is a bubble?</p>
+
+      <h2>Look At Streaming Services Right Now</h2>
+
+      <p>Think about how many streaming services you have.</p>
+
+      <p>Netflix. HBO Max. Disney+. Hulu. Peacock. Paramount+. Apple TV+. Amazon Prime. Discovery+.</p>
+
+      <p>The list goes on.</p>
+
+      <p>Every single one of them has been losing money. For years. They're all exposed to subscription fatigue from people who can't afford eight different services at $15 each.</p>
+
+      <p>Nobody can sustain it. Everyone knows it.</p>
+
+      <p>But here's what most people miss. They're not trying to be profitable right now. They're trying to outlast each other.</p>
+
+      <h2>The War Of Attrition Strategy</h2>
+
+      <p>This is how bubbles actually work.</p>
+
+      <p>You burn cash. You lose money. You keep operating even though the math doesn't make sense.</p>
+
+      <p>Why? Because when your competitors run out of money first, you absorb them. Their content. Their subscribers. Their market share.</p>
+
+      <p>Suddenly you're not splitting the pie ten ways anymore. You're taking most of it.</p>
+
+      <p>And when you own most of the pie, you set the prices. You own the market.</p>
+
+      <p>That's a bubble. Companies burning cash in a war of attrition, hoping to be the last one standing when the music stops.</p>
+
+      <h2>This Isn't Theoretical Anymore</h2>
+
+      <p>Netflix just announced they're acquiring Warner Bros for $82.7 billion.</p>
+
+      <p>HBO. Harry Potter. Game of Thrones. DC. Friends. All those heavy hitters.</p>
+
+      <p>Warner Bros couldn't sustain the losses any longer. Netflix could. Now Netflix absorbs them.</p>
+
+      <p>The streaming bubble is consolidating right now. In real time. This is what the end of a bubble looks like.</p>
+
+      <p>Companies that couldn't outlast the cash burn are getting acquired by companies that could.</p>
+
+      <h2>AI Is Following The Exact Same Pattern</h2>
+
+      <p>Look at the AI market right now.</p>
+
+      <p>OpenAI. Anthropic. Google. Meta. Mistral. Cohere. Dozens of smaller players.</p>
+
+      <p>All of them burning massive amounts of cash. All of them losing money on every API call. All of them subsidizing usage hoping to outlast the competition.</p>
+
+      <p>Sound familiar?</p>
+
+      <p>The same pattern is forming. Too many players. Unsustainable economics. Everyone waiting to see who runs out of money first.</p>
+
+      <h2>Why This Matters For People Building With AI</h2>
+
+      <p>I use these tools every day. Claude for automation projects. GPT for client work. Local models for specific use cases.</p>
+
+      <p>Right now, they're incredibly cheap. Almost too cheap.</p>
+
+      <p>ChatGPT Plus is $20 a month. Claude Pro is $20 a month. API costs are subsidized to the point where they don't reflect actual operational costs.</p>
+
+      <p>That's bubble pricing. They're buying market share with investor money.</p>
+
+      <p>But that doesn't last forever. At some point, the math has to work. At some point, prices go up or companies go under.</p>
+
+      <p>If you're building business systems that depend on these APIs, you need to understand what's coming.</p>
+
+      <h2>The Pattern Always Plays Out The Same Way</h2>
+
+      <p>Bubble forms. Money floods in. Too many competitors. Unsustainable economics.</p>
+
+      <p>Bubble pops. Most companies fail. The survivors consolidate the market.</p>
+
+      <p>Then prices go up. Because the survivors don't have competition anymore.</p>
+
+      <p>We've seen this with streaming. We saw it with the dot-com boom. We're watching it happen with AI right now.</p>
+
+      <p>The question isn't whether the AI bubble will pop. It's when, and what happens after.</p>
+
+      <p>That's what this series is about. Understanding what's actually happening so you can make informed decisions about how you build with these tools.</p>
+
+      <p><em>Next up in Part 2: What the dot-com bubble actually looked like, and what it tells us about what's coming.</em></p>
+    `,
+    author: 'Seth Forte',
+    date: '2025-12-12',
+    readTime: '6 min read',
+    category: 'AI Industry',
+    image: '/images/blog/ai-bubble-netflix.webp',
+    tags: ['AI Bubble', 'AI Industry', 'Technology Trends', 'Business Strategy'],
+    featured: true
+  },
+  {
     id: 'business-growth-2025-strategy-automation-beat-guesswork',
     title: 'Business Growth in 2025: Why Strategy and Automation Beat Guesswork',
     excerpt: 'In today\'s market, business growth isn\'t luck—it\'s a system. The small businesses winning in 2025 aren\'t just rolling the dice on ads or hoping their websites get noticed. They\'re using data, automation, and consistent systems to turn every click, call, and lead into measurable growth.',

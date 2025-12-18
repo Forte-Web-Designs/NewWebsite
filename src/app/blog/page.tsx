@@ -12,6 +12,78 @@ export const metadata: Metadata = {
 // Blog posts data - In a real app, this would come from a CMS or database
 const blogPosts = [
   {
+    id: 'ai-bubble-part-6-what-happens-when-bubble-pops',
+    title: 'What Happens When The Bubble Pops',
+    excerpt: 'Two scenarios for the AI crash. Neither are pretty. The loud pop vs. the slow deflation, and what it means for developers and businesses building with AI.',
+    author: 'Seth Forte',
+    date: '2025-12-17',
+    readTime: '8 min read',
+    category: 'AI Industry',
+    tags: ['AI Bubble', 'AI Industry', 'Technology Trends', 'Business Strategy'],
+    featured: true,
+    gradient: 'from-red-600 to-orange-600'
+  },
+  {
+    id: 'ai-bubble-part-5-threat-from-below',
+    title: 'The Threat From Below',
+    excerpt: 'Local models are eating the market while OpenAI burns cash chasing AGI. The mega-model dilemma and why cheap, focused AI is winning.',
+    author: 'Seth Forte',
+    date: '2025-12-16',
+    readTime: '7 min read',
+    category: 'AI Industry',
+    tags: ['AI Bubble', 'Local Models', 'AI Industry', 'Technology Trends'],
+    featured: true,
+    gradient: 'from-orange-600 to-yellow-600'
+  },
+  {
+    id: 'ai-bubble-part-4-agi-gamble',
+    title: 'The AGI Gamble',
+    excerpt: 'OpenAI is betting everything on a breakthrough that probably isn\'t coming. Why the AGI timeline doesn\'t add up and what it means for the bubble.',
+    author: 'Seth Forte',
+    date: '2025-12-15',
+    readTime: '8 min read',
+    category: 'AI Industry',
+    tags: ['AI Bubble', 'AGI', 'AI Industry', 'Technology Trends'],
+    featured: true,
+    gradient: 'from-yellow-600 to-green-600'
+  },
+  {
+    id: 'ai-bubble-part-3-math-doesnt-work',
+    title: 'The Math That Doesn\'t Work',
+    excerpt: '$560 billion invested, $35 billion in revenue. That\'s a 16:1 ratio. The AI bubble by the numbers, and why the math is worse than most people realize.',
+    author: 'Seth Forte',
+    date: '2025-12-14',
+    readTime: '7 min read',
+    category: 'AI Industry',
+    tags: ['AI Bubble', 'AI Industry', 'Technology Trends', 'Business Strategy'],
+    featured: false,
+    gradient: 'from-green-600 to-teal-600'
+  },
+  {
+    id: 'ai-bubble-part-2-what-happens-when-bubbles-pop',
+    title: 'What Happens When Bubbles Pop',
+    excerpt: 'The dot-com crash shows us exactly what\'s coming for AI. 60% of companies failed, $5-7 trillion evaporated. But the survivors became Google, Amazon, and eBay.',
+    author: 'Seth Forte',
+    date: '2025-12-13',
+    readTime: '7 min read',
+    category: 'AI Industry',
+    tags: ['AI Bubble', 'Dot-Com', 'AI Industry', 'Technology Trends'],
+    featured: false,
+    gradient: 'from-teal-600 to-cyan-600'
+  },
+  {
+    id: 'ai-bubble-part-1-what-is-a-bubble',
+    title: 'The AI Bubble Is Real (And I Can Prove It With Netflix)',
+    excerpt: 'I\'ve been thinking about the AI bubble for months. Not whether it exists. It definitely exists. But what happens when it pops. Part 1 of a series breaking down what\'s actually happening.',
+    author: 'Seth Forte',
+    date: '2025-12-12',
+    readTime: '6 min read',
+    category: 'AI Industry',
+    tags: ['AI Bubble', 'AI Industry', 'Technology Trends', 'Business Strategy'],
+    featured: false,
+    gradient: 'from-cyan-600 to-blue-600'
+  },
+  {
     id: 'business-automation-roi-guide-2025',
     title: 'The Complete ROI Guide to Business Automation in 2025',
     excerpt: 'Real case studies showing $52K+ in annual savings, 1,040+ hours saved, and 340% first-year returns. Complete guide with calculations, implementation strategies, and proven results from enterprise automation systems.',
@@ -133,7 +205,7 @@ const blogPosts = [
   },
 ];
 
-const categories = ['All', 'AI Automation', 'Business Growth', 'Web Design', 'Local Business', 'SEO'];
+const categories = ['All', 'AI Industry', 'AI Automation', 'Business Growth', 'Web Design', 'Local Business', 'SEO'];
 
 export default function Blog() {
   const featuredPosts = blogPosts.filter(post => post.featured);
