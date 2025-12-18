@@ -491,11 +491,20 @@ export default function Home() {
                         "Very good at thinking through the logic of how to best automate a process."
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
-                      View case study
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    <div className="flex flex-wrap gap-3 mt-auto">
+                      <span className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Watch video
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium group-hover:text-blue-600">
+                        View case study
+                        <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -523,11 +532,20 @@ export default function Home() {
                         "Extremely attentive and responsive. Gave us an accurate timeline and met it."
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
-                      View case study
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    <div className="flex flex-wrap gap-3 mt-auto">
+                      <span className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Watch video
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium group-hover:text-blue-600">
+                        View case study
+                        <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -560,11 +578,20 @@ export default function Home() {
                         <div className="text-[10px] sm:text-xs text-gray-500">Faster</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
-                      View case study
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    <div className="flex flex-wrap gap-3 mt-auto">
+                      <span className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Watch video
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium group-hover:text-blue-600">
+                        View case study
+                        <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -592,11 +619,20 @@ export default function Home() {
                         "Figured it out quickly and got everything working smoothly."
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
-                      View case study
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    <div className="flex flex-wrap gap-3 mt-auto">
+                      <span className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Watch video
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium group-hover:text-blue-600">
+                        View case study
+                        <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -629,11 +665,20 @@ export default function Home() {
                         <div className="text-[10px] sm:text-xs text-gray-500">On the 1st</div>
                       </div>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
-                      View case study
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    <div className="flex flex-wrap gap-3 mt-auto">
+                      <span className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Watch video
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium group-hover:text-blue-600">
+                        View case study
+                        <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </Link>
@@ -660,11 +705,20 @@ export default function Home() {
                         "Communication was 10/10. I felt very safe throughout the entire project."
                       </p>
                     </div>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium mt-auto">
-                      View case study
-                      <svg className="w-3.5 h-3.5 sm:w-4 sm:h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+                    <div className="flex flex-wrap gap-3 mt-auto">
+                      <span className="inline-flex items-center gap-1.5 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                        Watch video
+                      </span>
+                      <span className="inline-flex items-center gap-1.5 text-gray-500 dark:text-gray-400 text-xs sm:text-sm font-medium group-hover:text-blue-600">
+                        View case study
+                        <svg className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </Link>
