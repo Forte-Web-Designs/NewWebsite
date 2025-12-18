@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import AutomationAIClient from './AutomationAIClient';
 
 export const metadata: Metadata = {
-  title: "AI Automation | Forte Web Designs",
+  title: "Automation | Forte Web Designs",
   description: "Stop wasting time on work that should run itself. We build automation systems that handle lead response, sales follow-up, customer communication, and reporting.",
   keywords: [
     "AI automation", "business automation", "lead response automation",
@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     "business process automation", "CRM automation"
   ],
   openGraph: {
-    title: "AI Automation | Forte Web Designs",
+    title: "Automation | Forte Web Designs",
     description: "Stop wasting time on work that should run itself. We build automation systems that handle lead response, sales follow-up, customer communication, and reporting.",
     url: "https://fortewebdesigns.com/services/automation-ai/",
     type: "website"
