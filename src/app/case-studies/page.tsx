@@ -76,7 +76,7 @@ const caseStudies = [
     quote: null,
     quoteAuthor: null,
     gradient: 'from-indigo-600 to-purple-600',
-    hasVideo: false
+    hasVideo: true
   },
   {
     id: 'prediction-market-trader',
