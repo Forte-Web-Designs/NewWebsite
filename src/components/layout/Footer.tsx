@@ -42,18 +42,10 @@ export default function Footer() {
       heading: "Services",
       points: [
         { text: "AI Automation", href: "/services/automation-ai" },
-        { text: "Custom Software", href: "/services#software-development" },
+        { text: "CRM & Integrations", href: "/services/integrations" },
+        { text: "Custom Software", href: "/services/custom-software" },
         { text: "Web Design", href: "/services/web-design" },
-        { text: "Forte Care™", href: "/services/forte-care" },
         { text: "Case Studies", href: "/case-studies" }
-      ]
-    },
-    {
-      heading: "Locations",
-      points: [
-        { text: "Texas", href: "/locations/texas" },
-        { text: "Oklahoma", href: "/locations/oklahoma" },
-        { text: "New Mexico", href: "/locations/new-mexico" }
       ]
     },
     {
@@ -62,6 +54,7 @@ export default function Footer() {
         { text: "About Us", href: "/about" },
         { text: "FAQ", href: "/faq" },
         { text: "Blog", href: "/blog" },
+        { text: "Pricing", href: "/pricing" },
         { text: "Contact", href: "/contact" }
       ]
     }
