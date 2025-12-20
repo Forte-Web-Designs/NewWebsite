@@ -68,22 +68,25 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     template: '%s | Forte Web Designs',
-    default: 'Business Growth Systems & AI Automation | Forte (DFW)',
+    default: 'Automation, Custom Software & Web Design | Forte Web Designs',
   },
-  description: "Forte builds outcome-driven systems—custom websites, AI automation, and dashboards—that give you time back and grow revenue. DFW-based, serving nationwide.",
+  description: "We build automation workflows, custom software, and websites that eliminate manual work and scale with your business. Based in Dallas, serving clients nationwide.",
   keywords: [
-    'business growth systems', 'AI automation for small business', 'DFW AI consultants', 'automation consulting',
-    'AI systems integration', 'custom website design', 'DFW web design', 'hand-coded websites',
-    'AI automation services', 'business process automation', 'AI implementation partner', 'AI agents',
-    'automation pipelines', 'owner dashboards', 'business growth solutions', 'growth systems partner',
-    'AI automation pricing', 'business growth systems pricing', 'website pricing', 'business growth snapshot',
-    'AI readiness assessment', 'automation audit', 'AI technology stack', 'AI infrastructure',
-    'n8n automations', 'AWS AI stack', 'custom AI assistants', 'RAG pipelines', 'AI case studies',
-    'automation case studies', 'AI consulting Dallas', 'AI consultant Fort Worth', 'automation consulting Dallas',
-    'business growth Dallas', 'DFW AI', 'DFW business growth', 'AI automation DFW', 'forte web designs'
+    'business automation', 'workflow automation', 'custom software development', 'automation consulting',
+    'process automation', 'custom website design', 'DFW web design', 'hand-coded websites',
+    'automation services', 'business process automation', 'CRM integrations', 'Zapier alternatives',
+    'n8n automations', 'Make.com', 'automation workflows', 'custom software Dallas',
+    'software development', 'web development', 'business software', 'automation systems',
+    'workflow optimization', 'business efficiency', 'Dallas software company', 'Fort Worth web design',
+    'Texas automation', 'DFW software', 'forte web designs'
   ],
   creator: 'Forte Web Designs',
   publisher: 'Forte Web Designs',
+  icons: {
+    icon: '/images/home/logo1.png',
+    shortcut: '/images/home/logo1.png',
+    apple: '/images/home/logo1.png',
+  },
   robots: {
     index: true,
     follow: true,
@@ -96,20 +99,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://fortewebdesigns.com',
-    title: 'Business Growth Systems & AI Automation | Forte (DFW)',
-    description: "Forte builds outcome-driven systems—custom websites, AI automation, and dashboards—that give you time back and grow revenue. DFW-based, serving nationwide.",
+    title: 'Automation, Custom Software & Web Design | Forte Web Designs',
+    description: "We build automation workflows, custom software, and websites that eliminate manual work and scale with your business. Based in Dallas, serving clients nationwide.",
     siteName: 'Forte Web Designs',
     images: [{
       url: 'https://fortewebdesigns.com/images/og-image.jpg',
       width: 1200,
       height: 630,
-      alt: 'Forte Web Designs - Business Growth Systems & AI Automation'
+      alt: 'Forte Web Designs - Automation, Custom Software & Web Design'
     }]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Business Growth Systems & AI Automation | Forte (DFW)',
-    description: "Forte builds outcome-driven systems—custom websites, AI automation, and dashboards—that give you time back and grow revenue. DFW-based, serving nationwide.",
+    title: 'Automation, Custom Software & Web Design | Forte Web Designs',
+    description: "We build automation workflows, custom software, and websites that eliminate manual work and scale with your business. Based in Dallas, serving clients nationwide.",
     images: ['https://fortewebdesigns.com/images/og-image.jpg']
   },
 };
