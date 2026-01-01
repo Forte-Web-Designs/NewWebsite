@@ -276,13 +276,15 @@ export default function Home() {
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                   What We Do
                 </h2>
-                <div className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
-                  <p>
-                    <strong className="text-gray-900 dark:text-white">We start every project by understanding what the problem is actually costing you.</strong> That might be hours lost to manual work, systems that don't talk to each other, security gaps you can't close, or growth you can't capture because you don't have the infrastructure to support it.
-                  </p>
-                  <p>
-                    Once we know what we're solving, everything else follows - including exactly when you'll see your investment back. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
-                  </p>
+                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl sm:rounded-2xl p-5 sm:p-8 max-w-3xl mx-auto">
+                  <div className="text-base sm:text-lg text-gray-600 dark:text-gray-300 space-y-4 text-left">
+                    <p>
+                      <strong className="text-gray-900 dark:text-white">We start every project by understanding what the problem is actually costing you.</strong> That might be hours lost to manual work, systems that don't talk to each other, security gaps you can't close, or growth you can't capture because you don't have the infrastructure to support it.
+                    </p>
+                    <p>
+                      Once we know what we're solving, everything else follows - including exactly when you'll see your investment back. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
+                    </p>
+                  </div>
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -341,10 +343,10 @@ export default function Home() {
               </div>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 md:auto-rows-fr">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8 sm:auto-rows-fr">
               {processSteps.map((step, index) => (
                 <SimpleAnimatedCard key={index}>
-                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full text-center flex flex-col min-h-0 sm:min-h-[240px] lg:min-h-[280px]">
+                  <div className="bg-white dark:bg-gray-700 border border-gray-200 dark:border-gray-600 rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full text-center flex flex-col sm:min-h-[240px] lg:min-h-[280px]">
                     <div className="inline-flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 bg-primary-100 dark:bg-primary-900/30 rounded-full mb-3 sm:mb-4 mx-auto">
                       <span className="text-base sm:text-lg font-bold text-primary-600 dark:text-primary-400">
                         {step.number}
@@ -799,7 +801,7 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gray-900 dark:text-white mb-4 sm:mb-6">
-                  Let's Talk
+                  Ready to Start?
                 </h2>
                 <div className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
                   <p>
