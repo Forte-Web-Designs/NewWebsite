@@ -166,10 +166,10 @@ export default function CaseStudiesPage() {
       {/* Case Studies Grid */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-8">
             {caseStudies.map((study, index) => (
               <SimpleScrollReveal key={study.id} direction="up" delay={index * 100}>
-                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
+                <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-2xl p-5 sm:p-8 hover:shadow-xl transition-all duration-300 h-full flex flex-col">
                   {/* Tags */}
                   <div className="flex flex-wrap gap-2 mb-4">
                     {study.tags.map((tag, idx) => (

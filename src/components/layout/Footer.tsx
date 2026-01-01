@@ -149,8 +149,11 @@ export default function Footer() {
         </div>
 
         <div className="mt-8">
-          <p className="dark:text-gray-400 text-gray-700 text-sm md:block hidden text-center">
+          <p className="dark:text-gray-400 text-gray-700 text-sm hidden md:block text-center">
             © {new Date().getFullYear()} Forte Web Designs - AI Automation & Custom Software Solutions Dallas Fort Worth Texas. All rights reserved.
+          </p>
+          <p className="dark:text-gray-400 text-gray-700 text-xs md:hidden text-center">
+            © {new Date().getFullYear()} Forte Web Designs. All rights reserved.
           </p>
         </div>
       </div>

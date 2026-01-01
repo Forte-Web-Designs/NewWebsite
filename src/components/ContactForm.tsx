@@ -281,7 +281,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
             : 'rounded-xl bg-white border border-gray-200 shadow-lg'
         }`}>
           {/* Content */}
-          <div className="relative z-10 p-8 md:p-12 pb-16 md:pb-20">
+          <div className="relative z-10 p-4 sm:p-8 md:p-12 pb-12 sm:pb-16 md:pb-20">
             <div className="max-w-2xl mx-auto">
               {/* Header */}
               <SimpleScrollReveal direction="up" delay={200}>
@@ -297,7 +297,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
 
               {/* Form */}
               <SimpleScrollReveal direction="up" delay={400}>
-                <div className={`rounded-2xl p-8 mb-8 shadow-2xl ${isDarkMode ? 'contact-form-card-dark' : 'contact-form-card-light'}`}>
+                <div className={`rounded-2xl p-4 sm:p-8 mb-6 sm:mb-8 shadow-2xl ${isDarkMode ? 'contact-form-card-dark' : 'contact-form-card-light'}`}>
                   
                   {/* Success Message - Better positioning for contact page */}
                   {showSuccess && (
