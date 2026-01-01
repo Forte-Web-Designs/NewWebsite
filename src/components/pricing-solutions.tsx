@@ -264,7 +264,7 @@ export function PricingPage() {
       </div>
 
       {/* Section 4: Investment Options - Highest first, middle highlighted */}
-      <div className="max-w-7xl mx-auto mb-16">
+      <div className="max-w-7xl mx-auto mb-10 sm:mb-16">
         <SimpleScrollReveal direction="up">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
             Investment Options
@@ -274,11 +274,11 @@ export function PricingPage() {
           </p>
         </SimpleScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12">
           {investmentTiers.map((tier, index) => (
             <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
               <div
-                className={`relative bg-white dark:bg-gray-900 rounded-2xl p-8 h-full flex flex-col ${
+                className={`relative bg-white dark:bg-gray-900 rounded-2xl p-5 sm:p-8 h-full flex flex-col ${
                   tier.popular
                     ? 'ring-2 ring-blue-600 shadow-xl'
                     : 'ring-1 ring-gray-200 dark:ring-gray-700'
@@ -382,9 +382,9 @@ export function PricingPage() {
       </div>
 
       {/* Section 4B: Also Available - Web Design (buried) */}
-      <div className="max-w-4xl mx-auto mb-24">
+      <div className="max-w-4xl mx-auto mb-12 sm:mb-24">
         <SimpleScrollReveal direction="up">
-          <div className="text-center py-8 border-t border-b border-gray-200 dark:border-gray-700">
+          <div className="text-center py-6 sm:py-8 border-t border-b border-gray-200 dark:border-gray-700">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
               Also Available: Web Design
             </h3>
@@ -402,7 +402,7 @@ export function PricingPage() {
       </div>
 
       {/* Section 5: Ongoing Support - Highest first */}
-      <div className="max-w-6xl mx-auto mb-24">
+      <div className="max-w-6xl mx-auto mb-12 sm:mb-24">
         <SimpleScrollReveal direction="up">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
             Ongoing Support
@@ -412,11 +412,11 @@ export function PricingPage() {
           </p>
         </SimpleScrollReveal>
 
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-4 sm:gap-6">
           {supportTiers.map((tier, index) => (
             <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
               <div
-                className={`relative bg-white dark:bg-gray-900 rounded-xl p-6 h-full flex flex-col ${
+                className={`relative bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 h-full flex flex-col ${
                   tier.recommended
                     ? 'border-2 border-blue-600'
                     : 'border border-gray-200 dark:border-gray-700'
@@ -472,7 +472,7 @@ export function PricingPage() {
       </div>
 
       {/* Section 6: Results With Attribution - Testimonials */}
-      <div className="max-w-6xl mx-auto mb-24">
+      <div className="max-w-6xl mx-auto mb-12 sm:mb-24">
         <SimpleScrollReveal direction="up">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
             What Clients Say
@@ -482,10 +482,10 @@ export function PricingPage() {
           </p>
         </SimpleScrollReveal>
 
-        <div className="grid md:grid-cols-2 gap-8 mb-12">
+        <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
           {testimonials.map((testimonial, index) => (
             <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
+              <div className="bg-white dark:bg-gray-900 rounded-xl p-5 sm:p-8 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
                 <blockquote className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6 flex-grow">
                   "{testimonial.quote}"
                 </blockquote>
@@ -528,12 +528,12 @@ export function PricingPage() {
       </div>
 
       {/* Section 7: Common Questions - Objection-handling FAQ */}
-      <div className="max-w-3xl mx-auto mb-24">
+      <div className="max-w-3xl mx-auto mb-12 sm:mb-24">
         <SimpleScrollReveal direction="up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8 sm:mb-12 text-center">
             Common Questions
           </h2>
-          <div className="space-y-8">
+          <div className="space-y-6 sm:space-y-8">
             {faqItems.map((item, index) => (
               <div key={index}>
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
@@ -551,7 +551,7 @@ export function PricingPage() {
       {/* Section 8: Final CTA with Authentic Scarcity */}
       <div className="max-w-3xl mx-auto">
         <SimpleScrollReveal direction="up">
-          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-12">
+          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 sm:p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
               Ready to Talk?
             </h2>

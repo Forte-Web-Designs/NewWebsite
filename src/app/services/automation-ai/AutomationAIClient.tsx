@@ -195,18 +195,18 @@ export default function AutomationAIClient() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 sm:mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 The Problems This Solves
               </h2>
             </div>
           </SimpleScrollReveal>
 
-          <div className="space-y-8">
+          <div className="space-y-4 sm:space-y-8">
             {problems.map((item, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-                <div className="bg-white dark:bg-gray-900 rounded-xl p-8 border border-gray-200 dark:border-gray-700">
-                  <p className="text-lg font-semibold text-gray-900 dark:text-white mb-4 italic">
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-5 sm:p-8 border border-gray-200 dark:border-gray-700">
+                  <p className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 italic">
                     "{item.problem}"
                   </p>
                   <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
@@ -223,7 +223,7 @@ export default function AutomationAIClient() {
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 sm:mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 How We Work
               </h2>
@@ -233,7 +233,7 @@ export default function AutomationAIClient() {
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-12">
+          <div className="grid md:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12">
             {steps.map((step, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
                 <div className="text-center">
@@ -265,17 +265,17 @@ export default function AutomationAIClient() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 sm:mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 What Clients Have Achieved
               </h2>
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
             {results.map((item, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-                <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700">
+                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700">
                   <p className="font-semibold text-gray-900 dark:text-white mb-2">
                     {item.company}
                   </p>

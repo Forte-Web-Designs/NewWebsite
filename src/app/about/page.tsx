@@ -274,53 +274,53 @@ export default function AboutUs() {
       <section className="py-16 sm:py-24">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SimpleScrollReveal direction="up" delay={100}>
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 What Makes Me Different
               </h2>
             </div>
           </SimpleScrollReveal>
 
-          <div className="max-w-5xl mx-auto space-y-8">
+          <div className="max-w-5xl mx-auto space-y-4 sm:space-y-8">
             <SimpleScrollReveal direction="up" delay={200}>
-              <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <div className="p-5 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                   I Tell You When You Shouldn't Automate
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
                   If fixing your process makes more sense than automating a broken one, I'll tell you. If you don't need a full system rebuild, I'll tell you. I turn down projects that don't make sense, even when it costs me revenue.
                 </p>
               </div>
             </SimpleScrollReveal>
 
             <SimpleScrollReveal direction="up" delay={250}>
-              <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <div className="p-5 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                   I Think Long-Term, Even on One-Off Projects
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
                   Even if we only work together once, I'm thinking about where your business is headed. What sets you up for scale. What creates compounding value. The relationship matters more than the transaction.
                 </p>
               </div>
             </SimpleScrollReveal>
 
             <SimpleScrollReveal direction="up" delay={300}>
-              <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <div className="p-5 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                   You Work Directly With Me
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
                   No account managers. No junior developers. No bait-and-switch. You work directly with me: the person who understands your business, builds your systems, and cares about your results.
                 </p>
               </div>
             </SimpleScrollReveal>
 
             <SimpleScrollReveal direction="up" delay={350}>
-              <div className="p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
-                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
+              <div className="p-5 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
                   I Lead With Generosity
                 </h3>
-                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
                   Every proposal includes a complete project plan: gotchas, hidden costs, solution outline. Free, no contract required. For complex projects, I offer a paid discovery phase - I get into your systems, prove the approach works, and you're not committed to the full build until we know it's viable. I prove value before asking for commitment.
                 </p>
               </div>
@@ -340,16 +340,16 @@ export default function AboutUs() {
               <p className="text-xl mb-8 text-blue-100 leading-relaxed">
                 If this resonates with you, let's have a conversation. No sales pitch. No pressure. Just an honest discussion about your business, your challenges, and whether we're the right fit.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center gap-2 bg-white text-blue-600 font-semibold px-12 py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-lg"
+                  className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 font-semibold px-6 sm:px-12 py-3 sm:py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg w-full sm:w-auto"
                 >
                   Book Your Free Strategy Call
                 </Link>
                 <Link
                   href="/case-studies"
-                  className="inline-flex items-center gap-2 border-2 border-white text-white font-semibold px-12 py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 text-lg"
+                  className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-6 sm:px-12 py-3 sm:py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 text-base sm:text-lg w-full sm:w-auto"
                 >
                   View Our Work
                 </Link>

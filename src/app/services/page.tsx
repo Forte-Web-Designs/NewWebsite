@@ -108,7 +108,7 @@ export default function ServicesPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 sm:mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 How We Help
               </h2>
@@ -118,11 +118,11 @@ export default function ServicesPage() {
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-2 gap-4 sm:gap-8">
             {services.map((service, index) => (
               <SimpleScrollReveal key={service.id} direction="up" delay={index * 100}>
                 <Link href={service.href} className="block group h-full">
-                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 h-full border border-gray-200 dark:border-gray-700 group-hover:border-blue-600">
+                  <div className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-5 sm:p-8 hover:shadow-xl transition-all duration-300 h-full border border-gray-200 dark:border-gray-700 group-hover:border-blue-600">
                     <div className={`inline-flex items-center justify-center w-14 h-14 rounded-xl bg-gradient-to-br ${service.gradient} mb-6`}>
                       <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
@@ -153,7 +153,7 @@ export default function ServicesPage() {
       <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
+            <div className="text-center mb-8 sm:mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 Results
               </h2>
@@ -163,18 +163,18 @@ export default function ServicesPage() {
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 mb-8 sm:mb-12">
             {results.map((result, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
                 <Link href={result.href} className="block group">
-                  <div className="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300 h-full border border-gray-200 dark:border-gray-700 group-hover:border-blue-600">
-                    <p className="text-xl font-bold text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <div className="bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 hover:shadow-lg transition-all duration-300 h-full border border-gray-200 dark:border-gray-700 group-hover:border-blue-600">
+                    <p className="text-base sm:text-xl font-bold text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {result.client}
                     </p>
-                    <p className="text-lg text-green-600 dark:text-green-400 font-semibold mb-4">
+                    <p className="text-sm sm:text-lg text-green-600 dark:text-green-400 font-semibold mb-2 sm:mb-4">
                       {result.metric}
                     </p>
-                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-sm font-medium">
+                    <div className="flex items-center gap-2 text-blue-600 dark:text-blue-400 text-xs sm:text-sm font-medium">
                       View Case Study
                       <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
