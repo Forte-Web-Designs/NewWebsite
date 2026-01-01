@@ -83,7 +83,7 @@ export default function Home() {
     {
       number: "1",
       title: "Discovery Call",
-      description: "We talk about what's slowing you down and whether automation makes sense. Honest assessment, no pitch."
+      description: "We talk about what's slowing you down and whether we can help. Honest assessment, no pitch."
     },
     {
       number: "2",
@@ -236,7 +236,7 @@ export default function Home() {
 
                 {/* Subheadline */}
                 <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
-                  Automation and custom software solutions for companies ready to eliminate manual work and accelerate growth.
+                  We solve the technical problems that hold growing businesses back. Automation, integrations, custom software, and the infrastructure you need to scale.
                 </p>
 
                 {/* CTAs */}
@@ -803,10 +803,10 @@ export default function Home() {
                 </h2>
                 <div className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
                   <p>
-                    If you're spending 10+ hours a week on manual work, or you know there's growth you're leaving on the table because you don't have the systems to capture it, let's have a conversation.
+                    If there's a technical problem holding your business back - manual work eating up your week, systems that don't talk to each other, or infrastructure you've outgrown - let's have a conversation.
                   </p>
                   <p>
-                    We'll start by figuring out what the problem is actually costing you. If automation makes sense, you'll know exactly when you'll see your investment back. If it doesn't, we'll tell you - even if it costs us the project.
+                    We'll start by figuring out what the problem is actually costing you. If we can help, you'll know exactly when you'll see your investment back. If we can't, we'll tell you - even if it costs us the project.
                   </p>
                   <p>
                     Either way, you'll walk away knowing what's possible.

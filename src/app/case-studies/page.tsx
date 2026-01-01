@@ -285,7 +285,7 @@ export default function CaseStudiesPage() {
                   Book a free strategy call. We'll figure out what your manual work is actually costing you, identify the biggest opportunities, and show you exactly when you'd see your investment back.
                 </p>
                 <p>
-                  If automation makes sense, you'll have a clear path forward. If it doesn't, we'll tell you. No pressure, no obligation.
+                  If we can help, you'll have a clear path forward. If we can't, we'll tell you. No pressure, no obligation.
                 </p>
               </div>
               <Link
