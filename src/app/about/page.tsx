@@ -321,7 +321,7 @@ export default function AboutUs() {
                   I Lead With Generosity
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-                  Every proposal includes a complete project plan: gotchas, hidden costs, solution outline. Free, no contract required. I prove value before asking for commitment.
+                  Every proposal includes a complete project plan: gotchas, hidden costs, solution outline. Free, no contract required. For complex projects, I offer a paid discovery phase - I get into your systems, prove the approach works, and you're not committed to the full build until we know it's viable. I prove value before asking for commitment.
                 </p>
               </div>
             </SimpleScrollReveal>

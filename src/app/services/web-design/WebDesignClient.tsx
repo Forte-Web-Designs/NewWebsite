@@ -65,6 +65,10 @@ export default function WebDesignClient() {
     {
       problem: "We used a template but it doesn't fit our business.",
       solution: "Custom design built for your specific needs. No forcing your content into someone else's layout."
+    },
+    {
+      problem: "We know we need a new site but it keeps getting pushed down the priority list.",
+      solution: "Every month with a site that doesn't convert is leads you're not getting. Every slow page load is a visitor who left before they saw what you offer. The longer you wait, the more first impressions you're losing."
     }
   ];
 
@@ -73,7 +77,7 @@ export default function WebDesignClient() {
     {
       number: "1",
       title: "Discovery",
-      description: "We learn about your business, your audience, and what you want the website to accomplish. Goals first, design second."
+      description: "We start by understanding what you want the website to actually do - generate leads, establish credibility, convert visitors. Then we learn about your business, your audience, and what success looks like. Goals first, design second."
     },
     {
       number: "2",
@@ -130,9 +134,14 @@ export default function WebDesignClient() {
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
                 Web Design & Digital Presence
               </h1>
-              <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Hand-coded websites built to convert. Fast, SEO-optimized, and designed to showcase your brand. Not templates. Not page builders. Real code that performs.
-              </p>
+              <div className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8 space-y-4">
+                <p>
+                  Your website is working for you or against you. Every slow load, every outdated page, every visitor who can't figure out how to contact you - that's a deal you might have closed.
+                </p>
+                <p>
+                  Hand-coded websites built to convert. Fast, SEO-optimized, and designed to showcase your brand. Not templates. Not page builders. Real code that performs.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
@@ -161,9 +170,14 @@ export default function WebDesignClient() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 What We Build
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Your website is often the first impression. We build sites that load fast, rank well, and turn visitors into customers. No templates. No drag-and-drop builders. Hand-coded for performance.
-              </p>
+              <div className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto space-y-4">
+                <p>
+                  Your website is often the first impression - and you don't get a second one. A slow, outdated, or confusing site costs you credibility before you ever get a chance to make your pitch.
+                </p>
+                <p>
+                  We build sites that load fast, rank well, and turn visitors into customers. No templates. No drag-and-drop builders. Hand-coded for performance.
+                </p>
+              </div>
             </div>
           </SimpleScrollReveal>
 
@@ -259,7 +273,7 @@ export default function WebDesignClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Timeline:</span> Most websites take 2-4 weeks from kickoff to launch. We'll give you a specific timeline in your proposal.
+                <span className="font-semibold">Timeline:</span> Most websites take 2-4 weeks from kickoff to launch. We'll give you a specific timeline and clear deliverables in your proposal - no surprises.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -309,9 +323,14 @@ export default function WebDesignClient() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Ready to Talk?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                If your website isn't working for your business, let's figure out what's possible. We'll look at your current site, understand your goals, and show you what a custom build could look like.
-              </p>
+              <div className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto space-y-4">
+                <p>
+                  If your website isn't working for your business - if it's slow, outdated, or not converting visitors into leads - let's figure out what it's costing you.
+                </p>
+                <p>
+                  We'll look at your current site, identify what's working and what's not, and show you what a custom build could do for your credibility and conversion. If it makes sense, you'll have a clear path forward. If your current site just needs tweaks, we'll tell you that too.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link

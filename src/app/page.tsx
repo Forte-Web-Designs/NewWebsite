@@ -51,15 +51,15 @@ export default function Home() {
     {
       icon: "puzzle",
       title: "Automation",
-      subtitle: "Systems that work while you don't",
-      description: "Automate the repetitive stuff that eats up your week. Lead routing, follow-ups, data entry, reporting. Your team focuses on work that actually requires a human. The system handles everything else.",
+      subtitle: "Get your team out of the weeds",
+      description: "The repetitive work eating up your week - lead routing, follow-ups, data entry, reporting - handled automatically. Your team focuses on work that actually moves the needle. The system handles everything that doesn't need a human.",
       link: "/services/automation-ai"
     },
     {
       icon: "flash",
       title: "CRM & Integrations",
-      subtitle: "Make your tools actually talk to each other",
-      description: "Your CRM says one thing, your spreadsheet says another, and someone's manually copying data between them. We connect your systems so data flows automatically and you get real-time visibility across your operation.",
+      subtitle: "One source of truth instead of three conflicting ones",
+      description: "Your CRM says one thing, your spreadsheet says another, and someone's manually copying data between them. We connect your systems so you stop arguing about which number is right and start making decisions with confidence.",
       link: "/services/integrations"
     },
     {
@@ -72,8 +72,8 @@ export default function Home() {
     {
       icon: "click",
       title: "Web Design & Digital Presence",
-      subtitle: "Websites that do more than look good",
-      description: "Hand-coded sites built to convert. Fast loading, SEO-optimized, designed to showcase your brand and drive results. Not templates. Not page builders. Real code that performs.",
+      subtitle: "Websites that convert, not just impress",
+      description: "Hand-coded sites built to turn visitors into customers. Fast loading, SEO-optimized, designed to showcase your brand and drive measurable results. Not templates. Not page builders. Real code that performs.",
       link: "/services/web-design"
     }
   ];
@@ -88,7 +88,7 @@ export default function Home() {
     {
       number: "2",
       title: "Custom Strategy",
-      description: "You get a detailed proposal with scope, timeline, investment, and ROI calculation. No vague promises."
+      description: "You get a detailed proposal with scope, timeline, investment, and ROI calculation. For complex projects, we start with a paid discovery phase - we prove the approach works before you commit to the full build. No vague promises. No guessing."
     },
     {
       number: "3",
@@ -122,7 +122,7 @@ export default function Home() {
     {
       icon: "support",
       title: "We Lead With Generosity",
-      description: "Every proposal includes a complete project plan with gotchas, hidden costs, and clear scope. Free, no contract required. We prove value before asking for commitment because the technical work isn't the hard part. Understanding your business is."
+      description: "Every proposal includes a complete project plan with gotchas, hidden costs, and clear scope. For complex projects, we offer a paid discovery phase where we prove the approach works before you commit to the full build - and if it won't work, you keep everything we've documented. We prove value before asking for commitment because the technical work isn't the hard part. Understanding your business is."
     }
   ];
 
@@ -276,9 +276,14 @@ export default function Home() {
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                   What We Do
                 </h2>
-                <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2">
-                  We help businesses eliminate manual work and build systems that scale. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
-                </p>
+                <div className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
+                  <p>
+                    <strong className="text-gray-900 dark:text-white">We start every project by understanding what the problem is costing you.</strong> Hours per week. Labor going to work that doesn't need a human. Growth you can't capture because your team is stuck in the weeds.
+                  </p>
+                  <p>
+                    Once we know that number, everything else follows - including exactly when you'll see your investment back. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
+                  </p>
+                </div>
               </div>
             </SimpleScrollReveal>
 
@@ -427,7 +432,7 @@ export default function Home() {
                         CR Deals Cincinnati
                       </h3>
                       <p className="text-base sm:text-lg text-blue-600 dark:text-blue-400 font-semibold mb-3 sm:mb-4">
-                        $52K annual savings processing 3,000 products monthly
+                        $52K annual savings - product listings that generate themselves
                       </p>
                       <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
                         Auction house was drowning in manual product listing work. We built an AI system that handles photography analysis, content generation, and distribution across sales channels. Runs around the clock without anyone touching it.
@@ -481,7 +486,7 @@ export default function Home() {
                       Modern Bungalow
                     </h3>
                     <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
-                      15+ hours monthly saved on customer emails
+                      Customer communication that runs itself - 15+ hours monthly back
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Denver furniture retailer manually sending 30-40 customer emails daily. We built a system that monitors Shopify orders and sends the right email automatically across 9 different scenarios.
@@ -522,7 +527,7 @@ export default function Home() {
                       Hollow Bamboo Film Productions
                     </h3>
                     <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
-                      20+ hours weekly saved tracking equipment
+                      Complete equipment visibility - 20+ hours weekly back
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Film production company tracking hundreds of items across 6 locations with paper lists. We built a custom inventory system with QR code mobile access and real-time sync.
@@ -563,7 +568,7 @@ export default function Home() {
                       Revolut
                     </h3>
                     <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
-                      £4M growth pathway identified
+                      £4M growth opportunity uncovered in weeks instead of months
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Needed to analyze 200,000+ transactions to find profitability drivers. We built an AI system that automated the entire analysis. What took weeks now takes hours.
@@ -609,7 +614,7 @@ export default function Home() {
                       Prediction Market Trader
                     </h3>
                     <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
-                      Hundreds of markets analyzed daily
+                      Hundreds of markets analyzed daily - research that runs while you sleep
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Trader manually researching earnings outcomes for hundreds of markets. We built a pipeline that pulls data, runs AI forecasting, and outputs decision-ready analysis automatically.
@@ -650,7 +655,7 @@ export default function Home() {
                       Kingfisher Ads
                     </h3>
                     <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
-                      Monthly reporting cut from 2-4 hours to 15 minutes
+                      Monthly reporting in 15 minutes instead of half a day
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Agency owner manually pulling ad spend from Meta and Google Ads every month. We built a system that pulls from both platforms, calculates fees per client, and outputs invoice-ready reports.
@@ -695,7 +700,7 @@ export default function Home() {
                       KlnBros Agency
                     </h3>
                     <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
-                      43 workflows saved, 2 hours to full recovery
+                      From 'everything is down' to fully operational in 2 hours
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Client's server hit 100% disk full. Docker crashed. Entire automation infrastructure down. We diagnosed remotely, found a creative solution, and restored all 43 workflows in 2 hours.
@@ -796,9 +801,17 @@ export default function Home() {
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gray-900 dark:text-white mb-4 sm:mb-6">
                   Let's Talk
                 </h2>
-                <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2">
-                  If you're spending 10+ hours a week on manual work, or you know there's growth you're missing because you don't have the systems to capture it, let's have a conversation. Even if you don't hire us, you'll walk away knowing what's possible.
-                </p>
+                <div className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
+                  <p>
+                    If you're spending 10+ hours a week on manual work, or you know there's growth you're leaving on the table because you don't have the systems to capture it, let's have a conversation.
+                  </p>
+                  <p>
+                    We'll start by figuring out what the problem is actually costing you. If automation makes sense, you'll know exactly when you'll see your investment back. If it doesn't, we'll tell you - even if it costs us the project.
+                  </p>
+                  <p>
+                    Either way, you'll walk away knowing what's possible.
+                  </p>
+                </div>
               </div>
             </SimpleScrollReveal>
 

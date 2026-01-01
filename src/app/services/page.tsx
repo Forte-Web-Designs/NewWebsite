@@ -13,8 +13,8 @@ const services = [
     id: "ai-automation",
     icon: "puzzle",
     title: "Automation",
-    subhead: "Eliminate repetitive work",
-    description: "Automate the manual stuff that eats up your week. Lead routing, follow-ups, data entry, reporting. Your team focuses on work that actually requires a human.",
+    subhead: "Get your hours back",
+    description: "The manual work eating up your week - lead routing, follow-ups, data entry, reporting - handled automatically. Your team focuses on work that actually moves the needle.",
     href: "/services/automation-ai",
     gradient: "from-blue-600 to-indigo-600"
   },
@@ -22,8 +22,8 @@ const services = [
     id: "integrations",
     icon: "flash",
     title: "CRM & Integrations",
-    subhead: "Connect your tools",
-    description: "Make your CRM, email, forms, and tools actually work together. Clean data, automatic handoffs, real-time visibility.",
+    subhead: "One source of truth",
+    description: "Stop arguing about which spreadsheet has the right number. Your CRM, email, forms, and tools working together with clean data, automatic handoffs, and real-time visibility across everything.",
     href: "/services/integrations",
     gradient: "from-indigo-600 to-purple-600"
   },
@@ -31,7 +31,7 @@ const services = [
     id: "custom-software",
     icon: "code",
     title: "Custom Software",
-    subhead: "Build what doesn't exist",
+    subhead: "Software that fits how you work",
     description: "Custom dashboards, internal tools, and applications built for your specific workflows. No templates. No limitations. Software that fits how you work.",
     href: "/services/custom-software",
     gradient: "from-purple-600 to-pink-600"
@@ -50,22 +50,22 @@ const services = [
 const results = [
   {
     client: "Modern Bungalow",
-    metric: "15+ hours saved monthly",
+    metric: "Customer emails that send themselves",
     href: "/case-studies/modern-bungalow"
   },
   {
     client: "Hollow Bamboo",
-    metric: "20+ hours saved weekly",
+    metric: "Complete equipment visibility",
     href: "/case-studies/hollow-bamboo"
   },
   {
     client: "CR Deals Cincinnati",
-    metric: "$52K annual savings",
+    metric: "Product listings that generate themselves",
     href: "/case-studies/fast-track-auction"
   },
   {
     client: "Revolut",
-    metric: "£4M growth pathway identified",
+    metric: "£4M opportunity uncovered",
     href: "/case-studies/revolut"
   }
 ];
@@ -82,7 +82,7 @@ export default function ServicesPage() {
                 What We Do
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                We build automation systems, custom software, and integrations that eliminate manual work and scale your business. Everything custom-built for how you actually operate.
+                We start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then we build automation systems, custom software, and integrations that pay for themselves fast and keep delivering after that. Everything custom-built for how you actually operate.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -211,7 +211,7 @@ export default function ServicesPage() {
                 Ready to Talk?
               </h2>
               <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Book a free strategy call. We'll look at your situation, identify opportunities, and show you what's possible. No pressure, no obligation.
+                Book a free strategy call. We'll figure out what the problem is actually costing you and whether automation makes sense. If it does, you'll know exactly when you'll see your investment back. If it doesn't, we'll tell you. No pressure, no obligation.
               </p>
               <Link
                 href="/contact"
