@@ -278,10 +278,10 @@ export default function Home() {
                 </h2>
                 <div className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
                   <p>
-                    <strong className="text-gray-900 dark:text-white">We start every project by understanding what the problem is costing you.</strong> Hours per week. Labor going to work that doesn't need a human. Growth you can't capture because your team is stuck in the weeds.
+                    <strong className="text-gray-900 dark:text-white">We start every project by understanding what the problem is actually costing you.</strong> That might be hours lost to manual work, systems that don't talk to each other, security gaps you can't close, or growth you can't capture because you don't have the infrastructure to support it.
                   </p>
                   <p>
-                    Once we know that number, everything else follows - including exactly when you'll see your investment back. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
+                    Once we know what we're solving, everything else follows - including exactly when you'll see your investment back. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
                   </p>
                 </div>
               </div>
