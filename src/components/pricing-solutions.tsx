@@ -81,13 +81,13 @@ const supportTiers = [
     price: '$1,997',
     period: '/month',
     features: [
-      '20 hours of development or optimization monthly',
-      'Same-day response on all requests',
-      'Quarterly strategy sessions',
-      'After-hours emergency support',
-      'Proactive recommendations'
+      'Same-day response on all requests - you jump the queue',
+      'After-hours emergency support when it matters',
+      'Quarterly strategy sessions to keep improving',
+      'Proactive recommendations before problems happen',
+      'Up to 20 hours of development or optimization included monthly'
     ],
-    bestFor: 'Mission-critical operations where downtime isn\'t an option',
+    bestFor: 'Mission-critical operations where you need someone who knows your system on speed dial',
     cta: 'Get Started',
     href: '/contact'
   },
@@ -96,13 +96,13 @@ const supportTiers = [
     price: '$997',
     period: '/month',
     features: [
-      '8 hours of development or optimization monthly',
-      'Priority phone and Slack support',
-      'Quarterly system audits',
-      'Proactive recommendations',
-      'Monthly performance reports'
+      'Priority phone and Slack support - fast answers when you need them',
+      'Quarterly system audits to catch issues early',
+      'Proactive recommendations for continuous improvement',
+      'Monthly performance reports',
+      'Up to 8 hours of development or optimization included monthly'
     ],
-    bestFor: 'Businesses that want continuous improvement and fast support',
+    bestFor: 'Businesses that want someone who knows their system available when they need them',
     cta: 'Get Started',
     href: '/contact',
     recommended: true,
@@ -113,10 +113,10 @@ const supportTiers = [
     price: '$497',
     period: '/month',
     features: [
-      'Hosting, security, and monitoring',
-      '2 hours of updates or optimization monthly',
+      'Hosting, security, and monitoring handled for you',
       'Priority email support (24-hour response)',
-      'Monthly performance reports'
+      'Monthly performance reports',
+      'Up to 2 hours of updates or optimization included monthly'
     ],
     bestFor: 'Keeping systems running smoothly with minimal ongoing changes',
     cta: 'Get Started',
@@ -130,25 +130,25 @@ const testimonials = [
     quote: "Very good at thinking through the logic of how to best automate a process, and then executing on that vision. Definitely will work with him again.",
     company: 'Modern Bungalow',
     location: 'Denver furniture retailer',
-    result: '15+ hours monthly saved, 9 email scenarios automated'
+    result: 'Customer communication that runs itself - 15+ hours monthly back'
   },
   {
     quote: "Extremely attentive and responsive. Gave us an accurate timeline and met it. Highly recommend.",
     company: 'Hollow Bamboo Film Productions',
     location: '',
-    result: '20+ hours weekly saved tracking equipment across 6 locations'
+    result: 'Complete equipment visibility - 20+ hours weekly back'
   },
   {
     quote: "Communication was 10/10. I felt very safe throughout the entire project.",
     company: 'Yves Klein, Germany',
     location: 'Marketing agency',
-    result: '43 workflows recovered, 2 hours to full operation after server crash'
+    result: "From 'everything is down' to fully operational in 2 hours"
   },
   {
     quote: "Figured it out quickly and got everything working smoothly. Very responsive throughout.",
     company: 'Prediction Market Trader',
     location: '',
-    result: 'Hundreds of markets analyzed daily, manual research eliminated'
+    result: 'Research that runs while you sleep - hundreds of markets analyzed daily'
   }
 ];
 
@@ -156,7 +156,7 @@ const testimonials = [
 const faqItems = [
   {
     question: 'How do you price custom software projects?',
-    answer: "Based on scope and complexity. After a discovery call, we provide a detailed proposal with clear deliverables, timeline, and investment. Projects typically range from $3,500 to $15,000+ depending on what you need. You own the source code."
+    answer: "Based on the outcome you're trying to achieve and what the problem is costing you now. After a discovery call, we provide a detailed proposal with clear deliverables, timeline, investment, and ROI calculation. For complex projects, we offer a paid discovery phase to prove the approach works before you commit to the full build. Projects typically range from $3,500 to $15,000+ depending on scope. You own the source code."
   },
   {
     question: "What's included in every project?",
@@ -181,6 +181,10 @@ const faqItems = [
   {
     question: 'How do I know this will work for my business?',
     answer: "We show you the ROI math before you commit. If the numbers don't make sense for your situation, we'll tell you. We turn down projects that won't deliver real value."
+  },
+  {
+    question: "What's the discovery phase?",
+    answer: "For complex projects, we offer a paid discovery phase before quoting the full build. We get into your systems, test the critical connections, and prove the approach will work. If it won't work as planned, you keep everything we've documented and you're not obligated to continue. If it does work, the discovery investment credits toward your full project. It protects both of us - you don't commit to a large build until we've proven it's viable."
   }
 ];
 
@@ -241,10 +245,13 @@ export function PricingPage() {
               We price based on the outcome you're trying to achieve, not the hours it takes us to build it.
             </p>
             <p>
-              Every project starts with a discovery call where we understand your situation, identify opportunities, and map out what's possible. Then we send a detailed proposal with clear scope, timeline, and investment, so you know exactly what you're getting and when you'll see returns.
+              Every project starts with a discovery call where we understand your situation, identify opportunities, and map out what's possible. Then we send a detailed proposal with clear scope, timeline, and investment.
+            </p>
+            <p>
+              For complex projects, we offer a paid discovery phase before the full build. We get into your systems, test the approach, and prove it works before you commit to the larger investment. If it won't work as planned, you keep everything we've documented. If it does, the discovery investment credits toward your project.
             </p>
             <p className="font-medium text-gray-900 dark:text-white">
-              No hourly billing. No surprises. No hidden costs.
+              No hourly billing. No surprises. No hidden costs. No paying for something until we've proven it will work.
             </p>
           </div>
         </SimpleScrollReveal>
@@ -395,7 +402,7 @@ export function PricingPage() {
             Ongoing Support
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            For businesses that want continuous optimization and someone to call when something needs attention. No long-term contracts. Month-to-month.
+            For businesses that want someone who knows their system available when they need them. Priority access, not hourly billing. No long-term contracts. Month-to-month.
           </p>
         </SimpleScrollReveal>
 

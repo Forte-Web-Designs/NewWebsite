@@ -69,6 +69,10 @@ export default function IntegrationsClient() {
     {
       problem: "I have no idea what's happening without asking three people.",
       solution: "Dashboards that show you pipeline, revenue, and operations in one place. Real-time, no digging."
+    },
+    {
+      problem: "We've been meaning to fix this for months but never get around to it.",
+      solution: "Every week you wait, you're paying twice: once in the hours wasted on manual data work, and again in the bad decisions made on conflicting information. The cost compounds. We help you see the real numbers so the decision is obvious."
     }
   ];
 
@@ -77,12 +81,12 @@ export default function IntegrationsClient() {
     {
       number: "1",
       title: "Audit",
-      description: "We map out your current tools, how data flows (or doesn't), and where things break down. We find the gaps and the opportunities."
+      description: "We start by understanding what disconnected systems are costing you - hours wasted, data conflicts, things falling through cracks. Then we map out your current tools, how data flows (or doesn't), and where the real opportunities are. Not everything needs connecting. We'll tell you what does and what doesn't."
     },
     {
       number: "2",
       title: "Plan",
-      description: "You get a clear plan for what we'll connect, how data will flow, and what changes when it's done. No surprises."
+      description: "You get a clear plan for what we'll connect, how data will flow, and what changes when it's done. For complex integrations, we start with a paid discovery phase - we test the actual connections before you commit to the full build. No surprises. No hoping it works."
     },
     {
       number: "3",
@@ -132,15 +136,15 @@ export default function IntegrationsClient() {
   const results = [
     {
       company: "Modern Bungalow",
-      result: "Shopify orders automatically trigger the right customer emails across 9 different scenarios. Zero manual work."
+      result: "Customer communication that runs itself - 9 order scenarios, zero manual work."
     },
     {
       company: "CR Deals Cincinnati",
-      result: "Product data flows from inventory to listings to social channels automatically. 3,000 products monthly without bottlenecks."
+      result: "Product listings that generate themselves - 3,000 monthly, no bottlenecks."
     },
     {
       company: "Kingfisher Ads",
-      result: "Ad spend data from Meta and Google pulls automatically into reporting. Monthly process cut from 2-4 hours to 15 minutes."
+      result: "Monthly reporting in 15 minutes instead of half a day - data pulls itself from Meta and Google."
     }
   ];
 
@@ -155,7 +159,7 @@ export default function IntegrationsClient() {
                 CRM & Integrations
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Make your tools actually talk to each other. We connect your systems so data flows automatically and your team stops copy-pasting between platforms.
+                One source of truth instead of three conflicting ones. We connect your systems so data flows automatically, your team stops copy-pasting between platforms, and you stop arguing about which spreadsheet has the right number.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -185,9 +189,14 @@ export default function IntegrationsClient() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 What We Build
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                You're paying for powerful tools but they don't work together. Your team wastes hours moving data between systems, and something always falls through the cracks. We fix that.
-              </p>
+              <div className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto space-y-4">
+                <p>
+                  You're paying for powerful tools but they don't work together. Your team wastes hours moving data between systems, something always falls through the cracks, and nobody can agree on which number is right.
+                </p>
+                <p>
+                  We fix that - and we start by figuring out what the disconnection is actually costing you. Hours per week, missed handoffs, decisions made on bad data. Once we know that number, you'll know exactly when you see your investment back.
+                </p>
+              </div>
             </div>
           </SimpleScrollReveal>
 
@@ -322,7 +331,7 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Timeline:</span> Most integration projects take 2-4 weeks depending on complexity. We'll give you a specific timeline in your proposal.
+                <span className="font-semibold">Timeline:</span> Most integration projects take 2-4 weeks depending on complexity. ROI typically happens in 4-8 weeks. We'll give you specific timelines and payback calculations in your proposal.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -379,9 +388,14 @@ export default function IntegrationsClient() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Ready to Talk?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                If your tools don't talk to each other and your team is wasting time on manual data work, let's figure out what's possible. We'll look at your current stack, find the gaps, and show you what connected systems could look like.
-              </p>
+              <div className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto space-y-4">
+                <p>
+                  If your tools don't talk to each other and your team is wasting time moving data around, let's figure out what it's actually costing you.
+                </p>
+                <p>
+                  We'll look at your current stack, find the gaps, and show you exactly when connected systems would pay for themselves. If integration makes sense, you'll have a clear path forward. If it doesn't, we'll tell you.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link

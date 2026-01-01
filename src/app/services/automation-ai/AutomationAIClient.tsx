@@ -61,6 +61,10 @@ export default function AutomationAIClient() {
     {
       problem: "We're growing but our processes can't keep up.",
       solution: "Automation scales without adding headcount. More volume, same team."
+    },
+    {
+      problem: "We know we should automate, but we keep putting it off.",
+      solution: "Every week you wait costs you the same hours and frustration. Most clients see ROI in 4-8 weeks. The math usually makes the decision obvious."
     }
   ];
 
@@ -69,7 +73,7 @@ export default function AutomationAIClient() {
     {
       number: "1",
       title: "Discovery",
-      description: "We look at your current workflows, find the bottlenecks, and identify what's worth automating. Not everything needs automation. We'll tell you what does and what doesn't."
+      description: "We start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then we look at your workflows, find the bottlenecks, and identify what's worth automating. Not everything needs automation. We'll tell you what does and what doesn't - even if it costs us the project. For complex projects, we offer a paid discovery phase where we prove the approach works before you commit to the full build."
     },
     {
       number: "2",
@@ -87,19 +91,19 @@ export default function AutomationAIClient() {
   const results = [
     {
       company: "Modern Bungalow",
-      result: "15+ hours monthly saved automating customer emails across 9 order scenarios"
+      result: "Customer emails that send themselves across 9 order scenarios"
     },
     {
       company: "Hollow Bamboo Film Productions",
-      result: "20+ hours weekly saved tracking equipment across 6 locations"
+      result: "Complete equipment visibility across 6 locations"
     },
     {
       company: "CR Deals Cincinnati",
-      result: "1,040+ hours saved annually processing 3,000 products monthly"
+      result: "Product listings that generate themselves for 3,000 items monthly"
     },
     {
       company: "Kingfisher Ads",
-      result: "Monthly reporting cut from 2-4 hours to 15 minutes"
+      result: "Monthly reporting that runs without anyone touching it"
     }
   ];
 
@@ -113,9 +117,14 @@ export default function AutomationAIClient() {
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
                 Automation
               </h1>
-              <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                Stop wasting time on work that should run itself. We build systems that handle the repetitive stuff so your team can focus on what actually matters.
-              </p>
+              <div className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8 space-y-4">
+                <p>
+                  How much is manual work actually costing you? Hours per week, labor on tasks that don't need a human, opportunities you can't get to because your team is stuck in the weeds.
+                </p>
+                <p>
+                  We build systems that handle the repetitive stuff so your team can focus on what actually matters. Most clients see ROI in 4-8 weeks.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
@@ -145,7 +154,7 @@ export default function AutomationAIClient() {
                 What We Build
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Automation isn't about replacing your team. It's about freeing them from the manual work that eats up their week. Here's what that looks like in practice.
+                Automation isn't about replacing your team. It's about freeing them from the manual work that eats up their week - and giving you a clear payback timeline on every project we build. Here's what that looks like in practice.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -245,7 +254,7 @@ export default function AutomationAIClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Timeline:</span> Most automation projects take 2-6 weeks depending on scope. We'll give you a specific timeline in your proposal.
+                <span className="font-semibold">Timeline:</span> Most automation projects take 2-6 weeks depending on scope. ROI typically happens in 4-8 weeks. We'll give you specific timelines and payback calculations in your proposal.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -303,7 +312,7 @@ export default function AutomationAIClient() {
                 Ready to Talk?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                If your team is spending hours on work that should run itself, let's figure out what's possible. We'll look at your situation, identify the opportunities, and show you what automation could look like for your business.
+                Book a free strategy call. We'll figure out what the problem is actually costing you and whether automation makes sense. If it does, you'll know exactly when you'll see your investment back. If it doesn't, we'll tell you. No pressure, no obligation.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

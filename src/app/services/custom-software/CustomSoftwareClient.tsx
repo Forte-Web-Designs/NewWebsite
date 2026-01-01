@@ -61,6 +61,10 @@ export default function CustomSoftwareClient() {
     {
       problem: "We've outgrown what off-the-shelf tools can do.",
       solution: "Custom software scales with you. No feature limitations, no per-seat pricing, no waiting for vendors to build what you need."
+    },
+    {
+      problem: "We know we need to fix this, but custom software sounds expensive.",
+      solution: "It's not about whether custom software costs money. It's about whether it costs less than the problem. We help you see the real numbers - what the workarounds cost now, what they'll cost as you grow, and exactly when a real solution pays for itself."
     }
   ];
 
@@ -69,7 +73,7 @@ export default function CustomSoftwareClient() {
     {
       number: "1",
       title: "Discovery",
-      description: "We map your current workflows, identify the pain points, and define exactly what needs to be built. You'll know the scope, timeline, and investment before we start."
+      description: "We start by understanding what the current workarounds are costing you - hours wasted, errors, growth you can't capture. Then we map your workflows, identify the pain points, and define exactly what needs to be built. You'll know the scope, timeline, investment, and payback period before we start. For complex projects, we start with a paid discovery phase - we dig into your operations and prove the approach works before you commit to the full build."
     },
     {
       number: "2",
@@ -92,15 +96,15 @@ export default function CustomSoftwareClient() {
   const results = [
     {
       company: "Hollow Bamboo Film Productions",
-      result: "20+ hours weekly saved with custom inventory system across 6 locations"
+      result: "Complete equipment visibility across 6 locations - 20+ hours weekly back"
     },
     {
       company: "Revolut",
-      result: "£4M growth pathway identified through automated analysis of 200K+ transactions"
+      result: "£4M growth opportunity uncovered - analysis that took weeks now takes hours"
     },
     {
       company: "CR Deals Cincinnati",
-      result: "1,040+ hours saved annually with AI-powered product processing"
+      result: "Product listings that generate themselves - 1,040+ hours back annually"
     }
   ];
 
@@ -124,9 +128,14 @@ export default function CustomSoftwareClient() {
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
                 Custom Software Development
               </h1>
-              <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                When off-the-shelf tools don't cut it, we build software that fits how your business actually works. Dashboards, internal tools, integrations, and applications designed for your operations.
-              </p>
+              <div className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8 space-y-4">
+                <p>
+                  When off-the-shelf tools don't cut it, you end up with spreadsheet workarounds, manual processes, and duct-taped solutions that break as you grow.
+                </p>
+                <p>
+                  We build software that fits how your business actually works - dashboards, internal tools, integrations, and applications designed for your operations. And we start by figuring out what the workarounds are actually costing you.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
@@ -155,9 +164,14 @@ export default function CustomSoftwareClient() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
                 What We Build
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                We build software that actually fits how your business works. No generic templates forcing you to adapt your workflows. No limitations from platforms built for everyone else.
-              </p>
+              <div className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto space-y-4">
+                <p>
+                  We build software that actually fits how your business works. No generic templates forcing you to adapt your workflows. No limitations from platforms built for everyone else.
+                </p>
+                <p>
+                  Before we scope anything, we figure out what the current workarounds are costing you - hours per week, errors, limitations on growth. Once we know that number, you'll know exactly when custom software pays for itself.
+                </p>
+              </div>
             </div>
           </SimpleScrollReveal>
 
@@ -252,6 +266,14 @@ export default function CustomSoftwareClient() {
               </SimpleScrollReveal>
             ))}
           </div>
+
+          <SimpleScrollReveal direction="up">
+            <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl border border-gray-200 dark:border-gray-700">
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="font-semibold">Timeline:</span> Custom software projects typically take 4-12 weeks depending on scope and complexity. We'll give you specific timelines and ROI calculations in your proposal.
+              </p>
+            </div>
+          </SimpleScrollReveal>
         </div>
       </section>
 
@@ -338,9 +360,14 @@ export default function CustomSoftwareClient() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Ready to Talk?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                If you've hit the limits of what off-the-shelf tools can do, let's talk about what custom software could look like for your business. We'll scope it out, give you a clear picture of timeline and investment, and you can decide from there.
-              </p>
+              <div className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto space-y-4">
+                <p>
+                  If you've hit the limits of what off-the-shelf tools can do and you're patching things together with spreadsheets and workarounds, let's figure out what that's actually costing you.
+                </p>
+                <p>
+                  We'll scope out what custom software could look like, give you a clear picture of timeline and investment, and show you exactly when it pays for itself. If it makes sense, you'll have a clear path forward. If it doesn't, we'll tell you.
+                </p>
+              </div>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
