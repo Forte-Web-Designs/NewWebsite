@@ -87,8 +87,8 @@ export default function Home() {
     },
     {
       number: "2",
-      title: "Custom Strategy",
-      description: "You get a detailed proposal with scope, timeline, investment, and ROI calculation. For complex projects, we start with a paid discovery phase - we prove the approach works before you commit to the full build. No vague promises. No guessing."
+      title: "Discovery & Proposal",
+      description: "For straightforward projects, you get a detailed proposal with scope, timeline, investment, and ROI calculation. For complex builds, we start with a paid discovery phase - we get into your systems, test the approach, and confirm it works before quoting the full project. If discovery reveals it won't work, you keep all our research. No obligation to continue."
     },
     {
       number: "3",
@@ -278,10 +278,15 @@ export default function Home() {
                 </h2>
                 <div className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
                   <p>
-                    <strong className="text-gray-900 dark:text-white">We start every project by understanding what the problem is costing you.</strong> Hours per week. Labor going to work that doesn't need a human. Growth you can't capture because your team is stuck in the weeds.
+                    <strong className="text-gray-900 dark:text-white">Before we talk about what we'll build, we need to understand what the problem is costing you.</strong> Hours per week. Labor that should be going elsewhere. Opportunities you can't get to because your team is stuck doing work a machine should handle.
                   </p>
                   <p>
-                    Once we know that number, everything else follows - including exactly when you'll see your investment back. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
+                    Once we know that number, everything else follows - including exactly when you'll see your investment back. If the math doesn't work, we'll tell you. We'd rather lose the project than build something that doesn't pay for itself.
+                  </p>
+                </div>
+                <div className="mt-6 sm:mt-8 p-4 sm:p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800 max-w-2xl mx-auto">
+                  <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 text-center">
+                    <strong className="text-gray-900 dark:text-white">Manual work doesn't stay the same cost.</strong> As you grow, it scales with you - more orders, more customers, more data entry, more mistakes. The businesses that break through aren't the ones with more people doing manual work. They're the ones who automated it six months ago.
                   </p>
                 </div>
               </div>
@@ -527,7 +532,7 @@ export default function Home() {
                       Hollow Bamboo Film Productions
                     </h3>
                     <p className="text-sm sm:text-base text-blue-600 dark:text-blue-400 font-semibold mb-2 sm:mb-3">
-                      Complete equipment visibility - 20+ hours weekly back
+                      Complete equipment visibility without the manual updates - 20+ hours weekly back
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
                       Film production company tracking hundreds of items across 6 locations with paper lists. We built a custom inventory system with QR code mobile access and real-time sync.

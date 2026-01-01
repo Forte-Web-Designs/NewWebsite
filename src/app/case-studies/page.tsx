@@ -11,15 +11,16 @@ const caseStudies = [
   {
     id: 'fast-track-auction',
     title: 'CR Deals Cincinnati',
-    headline: '$52K annual savings processing 3,000 products monthly',
+    headline: 'Product listings that generate themselves - $52K saved annually',
     tags: ['E-commerce', 'AI Automation'],
-    problem: "Leading Cincinnati auction house was drowning in manual product listing work. Every item needed photography analysis, descriptions written, and posting across multiple sales channels. The manual process couldn't keep up with 1,500-3,000 products coming through each month.",
+    problem: "Leading Cincinnati auction house was drowning in manual product listing work. Every item needed photography analysis, descriptions written, and posting across multiple sales channels. The manual process was eating 80+ hours a month and couldn't keep up with 1,500-3,000 products coming through each month.",
     solution: "An AI system that handles the entire product pipeline. Analyzes photography automatically, generates listing content, and distributes to all sales channels. Runs around the clock without anyone touching it.",
     results: [
       '1,040+ hours saved annually',
       '$52K annual cost savings',
       '3,000 products processed monthly',
-      'Runs autonomously 24/7'
+      'Runs autonomously 24/7',
+      'Paid for itself in the first month'
     ],
     quote: null,
     quoteAuthor: null,
@@ -29,14 +30,15 @@ const caseStudies = [
   {
     id: 'modern-bungalow',
     title: 'Modern Bungalow',
-    headline: '15+ hours monthly saved on customer communication',
+    headline: 'Customer communication that runs itself - 15+ hours monthly back',
     tags: ['E-commerce', 'Shopify'],
-    problem: "Denver furniture retailer was manually sending 30-40 customer emails every day. Order confirmations, production updates, delivery coordination. Someone had to remember to send the right email at the right time, and things were falling through the cracks.",
+    problem: "Denver furniture retailer was manually sending 30-40 customer emails every day - 15+ hours a month just on customer communication. Order confirmations, production updates, delivery coordination. Someone had to remember to send the right email at the right time, and things were falling through the cracks.",
     solution: "A system that monitors Shopify orders and automatically sends the right email based on order status. Handles 9 different scenarios based on product type and delivery partner. Prevents duplicates and logs everything.",
     results: [
       '15+ hours saved monthly',
       '9 email scenarios automated',
-      'Zero missed communications'
+      'Zero missed communications',
+      'ROI in under 8 weeks'
     ],
     quote: "Very good at thinking through the logic of how to best automate a process, and then executing on that vision. Definitely will work with him again.",
     quoteAuthor: 'Modern Bungalow',
@@ -46,15 +48,16 @@ const caseStudies = [
   {
     id: 'hollow-bamboo',
     title: 'Hollow Bamboo Film Productions',
-    headline: '20+ hours weekly saved tracking equipment across 6 locations',
+    headline: 'Complete equipment visibility across 6 locations - 20+ hours weekly back',
     tags: ['Operations', 'Inventory'],
-    problem: "Film production company tracking hundreds of equipment items across multiple locations with paper lists and memory. No visibility into what was where, constant texting to track things down, and equipment getting lost between shoots.",
+    problem: "Film production company tracking hundreds of equipment items across multiple locations with paper lists and memory. 20+ hours a week wasted on texting to track things down, no visibility into what was where, and equipment getting lost between shoots.",
     solution: "A custom inventory system using Google Sheets with QR code mobile access. Crew members scan equipment in and out from their phones. Real-time sync across all locations. Partial quantity tracking for consumables.",
     results: [
       '20+ hours saved weekly',
       '6 locations synced in real-time',
       '100% equipment visibility',
-      'Fully mobile accessible'
+      'Fully mobile accessible',
+      'Paid for itself in the first month'
     ],
     quote: "Extremely attentive and responsive. Gave us an accurate timeline and met it. Highly recommend.",
     quoteAuthor: 'Hollow Bamboo Film Productions',
@@ -64,7 +67,7 @@ const caseStudies = [
   {
     id: 'revolut',
     title: 'Revolut',
-    headline: '£4M growth pathway identified through automated analysis',
+    headline: '£4M growth opportunity uncovered - analysis that took weeks now takes hours',
     tags: ['Fintech', 'AI Analytics'],
     problem: "Needed to analyze 200,000+ transactions across 90 days to identify what was actually driving profitability. The manual approach was taking weeks and couldn't keep up with the volume of data.",
     solution: "An AI system that automated the entire analysis pipeline. Data cleaning, pattern recognition, and executive reporting. What used to take weeks now takes hours.",
@@ -81,7 +84,7 @@ const caseStudies = [
   {
     id: 'prediction-market-trader',
     title: 'Prediction Market Trader',
-    headline: 'Hundreds of markets analyzed daily, manual research eliminated',
+    headline: 'Research that runs while you sleep - hundreds of markets analyzed daily',
     tags: ['AI', 'Data Automation'],
     problem: "Prediction market trader was manually researching earnings call outcomes for hundreds of markets. Reading analyst reports, checking historical data, making forecasts one at a time. The research bottleneck limited how many opportunities he could evaluate.",
     solution: "An n8n pipeline that pulls active markets from Kalshi's API, enriches each with company data, sends batches to GPT-4o for probability forecasting, and outputs everything to a Google Sheet with confidence scores and reasoning.",
@@ -99,15 +102,16 @@ const caseStudies = [
   {
     id: 'marketing-agency-reporting',
     title: 'Kingfisher Ads',
-    headline: 'Monthly ad spend reporting cut from 2-4 hours to 15 minutes',
+    headline: 'Monthly reporting in 15 minutes instead of half a day',
     tags: ['Agency', 'Reporting'],
-    problem: "Agency owner was manually logging into Meta and Google Ads every month, pulling spend data for each client, organizing it in spreadsheets, and calculating fees based on different billing structures. With a growing client roster, the process was becoming a bottleneck.",
+    problem: "Agency owner was spending 2-4 hours every month manually logging into Meta and Google Ads, pulling spend data for each client, organizing it in spreadsheets, and calculating fees. With a growing client roster, the process was becoming a bottleneck that scaled with every new client.",
     solution: "An automated system that pulls spend data from both platforms via API, aggregates by client, calculates fees based on each client's billing structure (flat, percentage, or hybrid with caps), and outputs an invoice-ready report.",
     results: [
       '2-4 hours reduced to 15 minutes monthly',
       'Runs automatically on the 1st',
       'Handles multiple fee structures',
-      'Scales with unlimited clients'
+      'Scales with unlimited clients',
+      'ROI in under 6 weeks'
     ],
     quote: null,
     quoteAuthor: null,
@@ -117,7 +121,7 @@ const caseStudies = [
   {
     id: 'german-marketing-agency',
     title: 'KlnBros Agency',
-    headline: '43 workflows saved, 2 hours to full recovery',
+    headline: "From 'everything is down' to fully operational in 2 hours",
     tags: ['Emergency Recovery'],
     problem: "Client's VPS hit 100% disk full. Docker crashed. Their entire n8n automation infrastructure was down, and they couldn't even SSH in to diagnose. Their business operations depended on those workflows running.",
     solution: "Diagnosed the issue remotely (83GB SQLite database bloat from execution logs), found a creative solution using RAM as temporary backup space (the only space available), extracted all 43 workflows and 16 credentials, reset the database, restored everything, and configured auto-pruning to prevent recurrence.",
@@ -146,9 +150,14 @@ export default function CaseStudiesPage() {
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
                 Results
               </h1>
-              <p className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto">
-                Real projects. Real outcomes. See what we've built and the results clients got.
-              </p>
+              <div className="text-lg sm:text-xl text-blue-100 max-w-2xl mx-auto space-y-4">
+                <p>
+                  Real projects. Real outcomes. Most of these systems paid for themselves in 4-8 weeks - then kept delivering month after month.
+                </p>
+                <p>
+                  See what we've built, what it cost clients before we fixed it, and what changed after.
+                </p>
+              </div>
             </div>
           </SimpleScrollReveal>
         </div>
@@ -271,9 +280,14 @@ export default function CaseStudiesPage() {
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
                 Ready to See Similar Results?
               </h2>
-              <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Book a free strategy call. We'll look at your workflows, identify opportunities, and show you what's possible. No pressure, no obligation.
-              </p>
+              <div className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto space-y-4">
+                <p>
+                  Book a free strategy call. We'll figure out what your manual work is actually costing you, identify the biggest opportunities, and show you exactly when you'd see your investment back.
+                </p>
+                <p>
+                  If automation makes sense, you'll have a clear path forward. If it doesn't, we'll tell you. No pressure, no obligation.
+                </p>
+              </div>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg text-lg"
