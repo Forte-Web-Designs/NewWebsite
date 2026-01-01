@@ -82,7 +82,7 @@ export default function ServicesPage() {
                 What We Do
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                We start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then we build automation systems, custom software, and integrations that pay for themselves fast and keep delivering after that. Everything custom-built for how you actually operate.
+                We start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then we build the right solution: automation, integrations, custom software, or infrastructure that pays for itself fast and keeps delivering after that. Everything custom-built for how you actually operate.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -211,7 +211,7 @@ export default function ServicesPage() {
                 Ready to Talk?
               </h2>
               <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Book a free strategy call. We'll figure out what the problem is actually costing you and whether automation makes sense. If it does, you'll know exactly when you'll see your investment back. If it doesn't, we'll tell you. No pressure, no obligation.
+                Book a free strategy call. We'll figure out what the problem is actually costing you and whether we can help. If we can, you'll know exactly when you'll see your investment back. If we can't, we'll tell you. No pressure, no obligation.
               </p>
               <Link
                 href="/contact"

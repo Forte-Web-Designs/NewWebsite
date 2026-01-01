@@ -73,7 +73,7 @@ export default function AutomationAIClient() {
     {
       number: "1",
       title: "Discovery",
-      description: "We start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then we look at your workflows, find the bottlenecks, and identify what's worth automating. Not everything needs automation. We'll tell you what does and what doesn't - even if it costs us the project. For complex projects, we offer a paid discovery phase where we prove the approach works before you commit to the full build."
+      description: "We start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then we look at your workflows, find the bottlenecks, and identify what's worth automating. Not every workflow needs automation. We'll tell you what does and what doesn't - even if it costs us the project. For complex projects, we offer a paid discovery phase where we prove the approach works before you commit to the full build."
     },
     {
       number: "2",

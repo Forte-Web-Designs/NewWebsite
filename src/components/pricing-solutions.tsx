@@ -195,10 +195,10 @@ export function PricingPage() {
       <div className="max-w-4xl mx-auto text-center mb-20">
         <SimpleScrollReveal direction="up">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Stop Losing Time and Money to Manual Work
+            Stop Paying for Problems That Should Already Be Solved
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-            We build automation systems and custom software that pay for themselves in weeks, not years. Most clients see ROI in 4-8 weeks.
+            We solve the technical problems holding your business back - and we price based on what they're costing you, not how long they take us to fix. Most clients see ROI in 4-8 weeks.
           </p>
           <Link
             href="/contact"
@@ -221,10 +221,16 @@ export function PricingPage() {
                 Before we talk about investment, let's talk about what you're losing right now.
               </p>
               <p>
-                If your team spends 20 hours a week on manual work that could be automated, and you value that time at $40/hour, that's $3,200 a month. $38,400 a year. And that's just the labor cost, not the missed opportunities, the errors, or the growth you're leaving on the table.
+                Maybe it's hours - your team spending 20 hours a week on manual work that should be automated. At $40/hour, that's $38,400 a year walking out the door.
               </p>
               <p>
-                Most of our projects pay for themselves in 4-8 weeks. After that, it's pure value, month after month, for as long as the system runs.
+                Maybe it's risk - a security gap, compliance issue, or infrastructure problem that could cost you far more if it breaks.
+              </p>
+              <p>
+                Maybe it's opportunity - growth you can't capture because you don't have the systems to support it.
+              </p>
+              <p>
+                Most of our projects pay for themselves in 4-8 weeks. After that, it's pure value - savings, protection, or capacity you didn't have before.
               </p>
               <p className="font-medium text-gray-900 dark:text-white">
                 That's how we think about pricing. Not "what does this cost" but "when does this pay for itself."

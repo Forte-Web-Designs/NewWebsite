@@ -199,7 +199,7 @@ export default function AboutUs() {
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <SimpleScrollReveal direction="up" delay={200}>
                 <p>
-                  I've spent 5+ years building automation systems at Wells Fargo. The kind that handle millions of transactions, save hundreds of thousands annually, and can't afford to break. I've combined that enterprise reliability with the agility and personal attention of a consulting practice.
+                  I've spent 5+ years building enterprise systems at Wells Fargo. The kind that handle millions of transactions, save hundreds of thousands annually, and can't afford to break. I've combined that enterprise reliability with the agility and personal attention of a consulting practice.
                 </p>
               </SimpleScrollReveal>
 
@@ -262,7 +262,7 @@ export default function AboutUs() {
 
               <SimpleScrollReveal direction="up" delay={350}>
                 <p>
-                  To build systems that don't break. To be honest when automation isn't the answer. To actually care whether clients succeed after I'm gone.
+                  To build systems that don't break. To be honest when something isn't the right solution. To actually care whether clients succeed after I'm gone.
                 </p>
               </SimpleScrollReveal>
             </div>
