@@ -62,7 +62,7 @@ export default function AboutUs() {
                         <div className="relative w-48 h-48 mx-auto mb-4">
                           <div className="w-full h-full rounded-full overflow-hidden border-4 border-gradient-to-br from-blue-500 to-indigo-600 shadow-lg">
                             <OptimizedImage
-                              src="/images/about/headshot-41.jpg"
+                              src="/images/about/headshot-6.jpg"
                               alt="Seth, Founder of Forte Web Designs"
                               width={192}
                               height={192}
