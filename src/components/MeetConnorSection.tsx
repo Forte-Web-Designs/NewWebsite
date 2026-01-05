@@ -17,7 +17,7 @@ export default function MeetSethSection() {
                 <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-full blur opacity-60 group-hover:opacity-80 animate-pulse"></div>
                 <div className="relative w-32 h-32 sm:w-40 sm:h-40">
                   <OptimizedImage 
-                    src="/images/about/headshot.jpg" 
+                    src="/images/about/headshot-41.jpg" 
                     alt="Seth - Founder & Lead Developer of Forte Web Designs"
                     width={160}
                     height={160}
@@ -91,7 +91,7 @@ export default function MeetSethSection() {
                   <div className="absolute -inset-1 bg-gradient-to-r from-blue-500 via-purple-500 to-blue-500 rounded-full blur opacity-60 group-hover:opacity-80 animate-pulse"></div>
                   <div className="relative w-64 h-64">
                     <OptimizedImage 
-                      src="/images/about/headshot.jpg" 
+                      src="/images/about/headshot-41.jpg" 
                       alt="Seth - Founder & Lead Developer of Forte Web Designs"
                       width={256}
                       height={256}

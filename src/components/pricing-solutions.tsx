@@ -218,19 +218,10 @@ export function PricingPage() {
             </h2>
             <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                Before we talk about investment, let's talk about what you're losing right now.
+                Before we talk about investment, let's talk about what you're losing right now. Hours, risk, missed opportunities - it adds up fast.
               </p>
               <p>
-                Maybe it's hours - your team spending 20 hours a week on manual work that should be automated. At $40/hour, that's $38,400 a year walking out the door.
-              </p>
-              <p>
-                Maybe it's risk - a security gap, compliance issue, or infrastructure problem that could cost you far more if it breaks.
-              </p>
-              <p>
-                Maybe it's opportunity - growth you can't capture because you don't have the systems to support it.
-              </p>
-              <p>
-                Most of our projects pay for themselves in 4-8 weeks. After that, it's pure value - savings, protection, or capacity you didn't have before.
+                Most projects pay for themselves in 4-8 weeks. After that, it's pure value.
               </p>
               <p className="font-medium text-gray-900 dark:text-white">
                 That's how we think about pricing. Not "what does this cost" but "when does this pay for itself."
@@ -248,16 +239,13 @@ export function PricingPage() {
           </h2>
           <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6 text-center max-w-3xl mx-auto">
             <p>
-              We price based on the outcome you're trying to achieve, not the hours it takes us to build it.
+              We price based on the outcome, not hours. Discovery call → detailed proposal with scope, timeline, and investment.
             </p>
             <p>
-              Every project starts with a discovery call where we understand your situation, identify opportunities, and map out what's possible. Then we send a detailed proposal with clear scope, timeline, and investment.
-            </p>
-            <p>
-              For complex projects, we offer a paid discovery phase before the full build. We get into your systems, test the approach, and prove it works before you commit to the larger investment. If it won't work as planned, you keep everything we've documented. If it does, the discovery investment credits toward your project.
+              For complex projects, we offer a paid discovery phase first. We prove the approach works before you commit.
             </p>
             <p className="font-medium text-gray-900 dark:text-white">
-              No hourly billing. No surprises. No hidden costs. No paying for something until we've proven it will work.
+              No hourly billing. No surprises.
             </p>
           </div>
         </SimpleScrollReveal>
