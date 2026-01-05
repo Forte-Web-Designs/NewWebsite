@@ -52,29 +52,29 @@ export default function Home() {
       icon: "puzzle",
       title: "Automation",
       subtitle: "Get your team out of the weeds",
-      description: "The repetitive work eating up your week - lead routing, follow-ups, data entry, reporting - handled automatically. Your team focuses on work that actually moves the needle. The system handles everything that doesn't need a human.",
+      description: "The repetitive work eating up your week - lead routing, follow-ups, data entry, reporting - handled automatically. We build with n8n, Make.com, and Zapier, or direct API integrations when off-the-shelf doesn't cut it.",
       link: "/services/automation-ai"
     },
     {
       icon: "flash",
       title: "CRM & Integrations",
       subtitle: "One source of truth instead of three conflicting ones",
-      description: "Your CRM says one thing, your spreadsheet says another, and someone's manually copying data between them. We connect your systems so you stop arguing about which number is right and start making decisions with confidence.",
+      description: "Your CRM says one thing, your spreadsheet says another. We connect GoHighLevel, HubSpot, Salesforce, and your other tools so data flows automatically and you stop arguing about which number is right.",
       link: "/services/integrations"
     },
     {
       icon: "code",
       title: "Custom Software Development",
       subtitle: "Built for how your business actually works",
-      description: "Custom dashboards, internal tools, and applications built from scratch. No generic templates forcing you to change your workflow. No limitations from platforms built for everyone else. Software that fits your operations, not the other way around.",
+      description: "Custom dashboards, inventory systems, internal tools, and applications built from scratch. No generic templates. No platform limitations. Software that fits your operations, not the other way around.",
       link: "/services/custom-software"
     },
     {
-      icon: "click",
-      title: "Web Design & Digital Presence",
-      subtitle: "Websites that convert, not just impress",
-      description: "Hand-coded sites built to turn visitors into customers. Fast loading, SEO-optimized, designed to showcase your brand and drive measurable results. Not templates. Not page builders. Real code that performs.",
-      link: "/services/web-design"
+      icon: "shield",
+      title: "Security & Infrastructure",
+      subtitle: "Enterprise security without enterprise pricing",
+      description: "SSO and MFA implementation using FusionAuth, Keycloak, or the right tool for your stack. Identity management, access control, and the infrastructure you need to meet compliance requirements.",
+      link: "/services/security"
     }
   ];
 
@@ -107,22 +107,22 @@ export default function Home() {
     {
       icon: "shield",
       title: "We Tell You When You Shouldn't Automate",
-      description: "Most consultants sell whatever gets the signature. We turn down projects that don't make sense. If fixing your process is smarter than automating a broken one, we'll tell you, even when it costs us revenue."
+      description: "We turn down projects that don't make sense. If fixing your process is smarter than building something new, we'll tell you."
     },
     {
       icon: "flash",
       title: "Your ROI Is Measured in Weeks, Not Years",
-      description: "Most projects pay for themselves in 4-8 weeks. We don't build things that take years to show value. We deliver fast, measurable results, then keep improving from there."
+      description: "Most projects pay for themselves in 4-8 weeks. Fast, measurable results."
     },
     {
       icon: "star",
       title: "You Work With Who You Hired",
-      description: "No account managers. No junior developers. No bait-and-switch. You work directly with Seth, the person who understands your business, builds your systems, and cares about your results."
+      description: "No account managers. No junior developers. No bait-and-switch. You work directly with Seth."
     },
     {
       icon: "support",
       title: "We Lead With Generosity",
-      description: "Every proposal includes a complete project plan with gotchas, hidden costs, and clear scope. For complex projects, we offer a paid discovery phase where we prove the approach works before you commit to the full build - and if it won't work, you keep everything we've documented. We prove value before asking for commitment because the technical work isn't the hard part. Understanding your business is."
+      description: "Every proposal includes a complete project plan with gotchas, hidden costs, and clear scope. For complex projects, we prove the approach works before you commit to the full build."
     }
   ];
 
@@ -153,22 +153,51 @@ export default function Home() {
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
             "@context": "https://schema.org",
-            "@type": "Organization",
-            "name": "Forte Web Designs",
+            "@type": "ProfessionalService",
+            "name": "Seth Forte",
+            "alternateName": "Forte Web Designs",
             "url": "https://fortewebdesigns.com",
             "logo": "https://fortewebdesigns.com/images/forte-logo.png",
-            "description": "DFW-based business growth systems company. We install Lead Catcher™, Quote Builder™, and Owner's Console™ systems.",
+            "description": "Technical consulting for business automation, CRM integrations, custom software, and security infrastructure",
+            "email": "seth@fortewebdesigns.com",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Dallas", 
+              "addressLocality": "Grapevine",
               "addressRegion": "TX",
               "addressCountry": "US"
+            },
+            "areaServed": [
+              "Dallas",
+              "Fort Worth",
+              "Grapevine",
+              "Plano",
+              "Arlington",
+              "United States"
+            ],
+            "serviceType": [
+              "Business Automation",
+              "n8n Consulting",
+              "Make.com Consulting",
+              "Zapier Consulting",
+              "CRM Integration",
+              "GoHighLevel Consulting",
+              "API Integration",
+              "Custom Software Development",
+              "SSO Implementation",
+              "MFA Implementation",
+              "FusionAuth Consulting",
+              "Inventory Management Systems"
+            ],
+            "priceRange": "$$$$",
+            "founder": {
+              "@type": "Person",
+              "name": "Seth Forte",
+              "jobTitle": "Technical Consultant"
             },
             "sameAs": [
               "https://www.linkedin.com/company/forte-web-designs",
               "https://www.facebook.com/fortewebdesigns"
             ],
-            "areaServed": ["US", "DFW", "Dallas", "Fort Worth"],
             "aggregateRating": {
               "@type": "AggregateRating",
               "ratingValue": "5.0",
@@ -277,14 +306,9 @@ export default function Home() {
                   What We Do
                 </h2>
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl sm:rounded-2xl p-5 sm:p-8 max-w-3xl mx-auto">
-                  <div className="text-base sm:text-lg text-gray-600 dark:text-gray-300 space-y-4 text-left">
-                    <p>
-                      <strong className="text-gray-900 dark:text-white">We start every project by understanding what the problem is actually costing you.</strong> That might be hours lost to manual work, systems that don't talk to each other, security gaps you can't close, or growth you can't capture because you don't have the infrastructure to support it.
-                    </p>
-                    <p>
-                      Once we know what we're solving, everything else follows - including exactly when you'll see your investment back. The technical build is the easy part. What you're paying for is a team that understands your business and builds for where you're going, not just where you are today.
-                    </p>
-                  </div>
+                  <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 text-left">
+                    We start by understanding what the problem is costing you - hours, risk, missed opportunities. Once we know that, everything else follows, including exactly when you'll see your investment back. The technical build is the easy part.
+                  </p>
                 </div>
               </div>
             </SimpleScrollReveal>
@@ -805,13 +829,10 @@ export default function Home() {
                 </h2>
                 <div className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
                   <p>
-                    If there's a technical problem holding your business back - manual work eating up your week, systems that don't talk to each other, or infrastructure you've outgrown - let's have a conversation.
+                    Got a technical problem holding your business back? Let's talk.
                   </p>
                   <p>
-                    We'll start by figuring out what the problem is actually costing you. If we can help, you'll know exactly when you'll see your investment back. If we can't, we'll tell you - even if it costs us the project.
-                  </p>
-                  <p>
-                    Either way, you'll walk away knowing what's possible.
+                    If we can help, you'll know exactly when you'll see your investment back. If we can't, we'll tell you.
                   </p>
                 </div>
               </div>
