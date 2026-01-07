@@ -218,24 +218,23 @@ export default function Home() {
               </h2>
             </SimpleScrollReveal>
 
-            <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
               {services.map((service, index) => (
                 <SimpleScrollReveal key={service.title} direction="up" delay={index * 100} className="h-full">
-                  <Link href={service.href} className="group block text-center h-full flex flex-col items-center">
-                    <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-5">
-                      <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                  <Link href={service.href} className="group block h-full">
+                    <div className="flex flex-row sm:flex-col items-center sm:items-center gap-4 sm:gap-0 sm:text-center">
+                      <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 sm:mb-5 sm:mx-auto">
+                        <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                      </div>
+                      <div className="flex-1 sm:flex-none">
+                        <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                          {service.title}
+                        </h3>
+                        <p className="text-gray-600 dark:text-gray-400">
+                          {service.tagline}
+                        </p>
+                      </div>
                     </div>
-                    <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      {service.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-3 flex-grow">
-                      {service.tagline}
-                    </p>
-                    <span className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
-                    </span>
                   </Link>
                 </SimpleScrollReveal>
               ))}
