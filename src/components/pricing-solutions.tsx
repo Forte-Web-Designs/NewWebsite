@@ -223,13 +223,12 @@ export function PricingPage() {
                   Got a problem?
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  Book a call. No pitch, no pressure. Just tell me what's not working.
+                  Book a call. Just tell me what's not working.
                 </p>
                 <div className="relative rounded-xl overflow-hidden shadow-lg bg-black max-w-sm mx-auto lg:mx-0">
                   <video
                     controls
                     className="w-full"
-                    poster="/images/about/headshot-6.jpg"
                   >
                     <source src="/video-walkthroughs/Business Growth Systems & AI Automation | Forte (DFW) - 26 October 2025.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
