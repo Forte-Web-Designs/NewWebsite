@@ -220,7 +220,7 @@ export default function AboutUs() {
                 Let's Talk
               </h2>
               <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                No pitch, no pressure.
+                Book a call and tell me what's not working.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                 <Link
