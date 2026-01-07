@@ -57,6 +57,13 @@ export default function Footer() {
         { text: "Pricing", href: "/pricing" },
         { text: "Contact", href: "/contact" }
       ]
+    },
+    {
+      heading: "Connect",
+      points: [
+        { text: "LinkedIn", href: CONTACT_INFO.linkedin, icon: "linkedin.svg", external: true },
+        { text: "Email", href: CONTACT_INFO.emailHref, icon: "mail.svg", external: false }
+      ]
     }
   ];
   // #a1adf8
@@ -117,15 +124,15 @@ export default function Footer() {
                         {point}
                       </Link>
                     ) : section.heading === "Connect" ? (
-                      <Link
+                      <a
                         href={point.href}
-                        prefetch={true}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                        target={point.external ? "_blank" : undefined}
+                        rel={point.external ? "noopener noreferrer" : undefined}
+                        className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2"
                       >
+                        {point.icon && <Icon name={point.icon} alt={point.text} size={18} folder="footer" />}
                         {point.text}
-                      </Link>
+                      </a>
                     ) : (
                       <Link href={point.href} prefetch={true} className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                         {point.text}
