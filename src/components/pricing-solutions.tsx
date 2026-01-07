@@ -6,70 +6,70 @@ import SimpleScrollReveal from './animations/SimpleScrollReveal';
 // Investment Options - Highest price first for anchoring
 const investmentTiers = [
   {
-    name: 'Complete Business System',
+    name: 'Full System',
     priceRange: '$7,500 - $15,000+',
-    subhead: 'End-to-end transformation',
-    whatSolves: "You need a complete overhaul. Multiple systems that don't talk to each other, manual processes everywhere, no visibility into what's happening. You want it all fixed, properly.",
+    subhead: 'Everything connected',
+    whatSolves: "Multiple systems that don't talk to each other, manual processes everywhere, no visibility into what's happening. You want it all fixed properly.",
     features: [
-      'Full workflow audit and strategy',
-      'Custom software and automation suite',
-      'CRM optimization and integrations',
-      'Real-time dashboards and reporting',
-      'Team training and documentation',
-      '90 days of support and optimization'
+      'Full workflow audit',
+      'Custom software and automation',
+      'CRM setup and integrations',
+      'Dashboards and reporting',
+      'Training and documentation',
+      '90 days support'
     ],
     outcomes: [
-      '40+ hours saved weekly',
-      'Complete operational visibility',
-      'Systems that scale with growth'
+      '40+ hours/week back',
+      'Complete visibility',
+      'Systems that scale'
     ],
     timeline: '6-12 weeks',
-    cta: 'Book a Strategy Call',
+    cta: 'Book a Call',
     href: '/contact'
   },
   {
-    name: 'Automation System',
+    name: 'Automation',
     priceRange: '$3,500 - $7,500',
-    subhead: 'Eliminate manual work',
-    whatSolves: "You're spending hours every week on repetitive tasks. Lead routing, follow-ups, data entry, reporting. You need systems that handle it automatically so your team can focus on work that matters.",
+    subhead: 'The work that eats your week',
+    whatSolves: "Hours every week on repetitive tasks... lead routing, follow-ups, data entry, reporting. You need systems that handle it automatically.",
     features: [
-      'Workflow analysis and optimization',
+      'Workflow analysis',
       'Custom automation build',
       'CRM and tool integrations',
       'Error handling and monitoring',
       'Training and documentation',
-      '60 days of support'
+      '60 days support'
     ],
     outcomes: [
-      '20+ hours saved weekly',
+      '20+ hours/week back',
       'Zero missed follow-ups',
       'Scales without adding headcount'
     ],
     timeline: '3-6 weeks',
-    cta: 'Book a Strategy Call',
+    cta: 'Book a Call',
     href: '/contact',
     popular: true,
-    badge: 'MOST POPULAR'
+    badge: 'Most Common'
   },
   {
-    name: 'Starter Project',
+    name: 'Starter',
     priceRange: '$1,500 - $3,500',
-    subhead: 'Solve one problem well',
-    whatSolves: "You have a specific bottleneck that's costing you time. One workflow, one integration, one system that needs to work. You want it fixed without a massive project.",
+    subhead: 'One problem, fixed',
+    whatSolves: "A specific bottleneck that's costing you time. One workflow, one integration, one system that needs to work. Fixed without a massive project.",
     features: [
       'Focused workflow optimization',
       'Single automation or integration',
       'Testing and deployment',
       'Documentation',
-      '30 days of support'
+      '30 days support'
     ],
     outcomes: [
-      '5-10 hours saved weekly',
-      'One major pain point eliminated',
-      'Foundation for future automation'
+      '5-10 hours/week back',
+      'One major pain point gone',
+      'Foundation for future work'
     ],
     timeline: '2-3 weeks',
-    cta: 'Book a Strategy Call',
+    cta: 'Book a Call',
     href: '/contact'
   }
 ];
@@ -81,13 +81,13 @@ const supportTiers = [
     price: '$1,997',
     period: '/month',
     features: [
-      'Same-day response on all requests - you jump the queue',
-      'After-hours emergency support when it matters',
-      'Quarterly strategy sessions to keep improving',
-      'Proactive recommendations before problems happen',
-      'Up to 20 hours of development or optimization included monthly'
+      'Same-day response, you jump the queue',
+      'After-hours emergency support',
+      'Quarterly strategy sessions',
+      'Proactive recommendations',
+      'Up to 20 hours of work included monthly'
     ],
-    bestFor: 'Mission-critical operations where you need someone who knows your system on speed dial',
+    bestFor: 'Mission-critical operations where downtime isn\'t an option',
     cta: 'Get Started',
     href: '/contact'
   },
@@ -96,29 +96,29 @@ const supportTiers = [
     price: '$997',
     period: '/month',
     features: [
-      'Priority phone and Slack support - fast answers when you need them',
-      'Quarterly system audits to catch issues early',
-      'Proactive recommendations for continuous improvement',
+      'Priority phone and Slack support',
+      'Quarterly system audits',
+      'Proactive recommendations',
       'Monthly performance reports',
-      'Up to 8 hours of development or optimization included monthly'
+      'Up to 8 hours of work included monthly'
     ],
-    bestFor: 'Businesses that want someone who knows their system available when they need them',
+    bestFor: 'Someone who knows your system available when you need them',
     cta: 'Get Started',
     href: '/contact',
     recommended: true,
-    badge: 'RECOMMENDED'
+    badge: 'Recommended'
   },
   {
     name: 'Essential Care',
     price: '$497',
     period: '/month',
     features: [
-      'Hosting, security, and monitoring handled for you',
-      'Priority email support (24-hour response)',
+      'Hosting, security, and monitoring handled',
+      'Priority email support (24hr response)',
       'Monthly performance reports',
-      'Up to 2 hours of updates or optimization included monthly'
+      'Up to 2 hours of work included monthly'
     ],
-    bestFor: 'Keeping systems running smoothly with minimal ongoing changes',
+    bestFor: 'Keeping systems running with minimal ongoing changes',
     cta: 'Get Started',
     href: '/contact'
   }
@@ -155,36 +155,36 @@ const testimonials = [
 // FAQ items for objection handling
 const faqItems = [
   {
-    question: 'How do you price custom software projects?',
-    answer: "Based on the outcome you're trying to achieve and what the problem is costing you now. After a discovery call, we provide a detailed proposal with clear deliverables, timeline, investment, and ROI calculation. For complex projects, we offer a paid discovery phase to prove the approach works before you commit to the full build. Projects typically range from $3,500 to $15,000+ depending on scope. You own the source code."
+    question: 'How do you price projects?',
+    answer: "Based on the outcome you're trying to achieve and what the problem is costing you now. After a discovery call, you get a detailed proposal with clear deliverables, timeline, investment, and ROI calculation. For complex projects, I start with a paid discovery phase to prove the approach works before you commit. Projects typically range from $3,500 to $15,000+ depending on scope. You own the source code."
   },
   {
     question: "What's included in every project?",
-    answer: "Discovery and strategy, custom build, testing, training, documentation, and post-launch support. We don't hand you something and disappear. You get a system that works and the knowledge to manage it."
+    answer: "Discovery, custom build, testing, training, documentation, and post-launch support. I don't hand you something and disappear. You get a system that works and the knowledge to manage it."
   },
   {
     question: 'How long do projects take?',
-    answer: "Most automation projects take 2-4 weeks. Larger custom software projects take 4-8 weeks. We'll give you a specific timeline in your proposal."
+    answer: "Most automation projects take 2-4 weeks. Larger custom software projects take 4-8 weeks. You'll know the exact timeline before we start."
   },
   {
     question: "What if I'm not sure what I need?",
-    answer: "That's what the discovery call is for. We'll look at your situation, identify opportunities, and recommend the right scope. No pressure, no obligation."
+    answer: "That's what the discovery call is for. I'll look at your situation, identify opportunities, and recommend the right scope. No pressure."
   },
   {
     question: 'Do you offer payment plans?',
-    answer: "Yes. Typically 50% upfront, 50% on completion. For larger projects, we do milestone-based payments aligned with deliverables."
+    answer: "Yes. Typically 50% upfront, 50% on completion. For larger projects, milestone-based payments aligned with deliverables."
   },
   {
     question: 'What\'s your minimum project size?',
-    answer: "$1,500 for standalone projects. If your need is smaller than that, we're probably not the right fit, but we can point you in the right direction."
+    answer: "$1,500 for standalone projects. If your need is smaller than that, I'm probably not the right fit... but I can point you in the right direction."
   },
   {
     question: 'How do I know this will work for my business?',
-    answer: "We show you the ROI math before you commit. If the numbers don't make sense for your situation, we'll tell you. We turn down projects that won't deliver real value."
+    answer: "I show you the ROI math before you commit. If the numbers don't make sense for your situation, I'll tell you. I turn down projects that won't deliver real value."
   },
   {
     question: "What's the discovery phase?",
-    answer: "For complex projects, we offer a paid discovery phase before quoting the full build. We get into your systems, test the critical connections, and prove the approach will work. If it won't work as planned, you keep everything we've documented and you're not obligated to continue. If it does work, the discovery investment credits toward your full project. It protects both of us - you don't commit to a large build until we've proven it's viable."
+    answer: "For complex projects, I offer a paid discovery phase before quoting the full build. I get into your systems, test the critical connections, and prove the approach will work. If it won't work as planned, you keep everything I've documented and you're not obligated to continue. If it does work, the discovery investment credits toward your full project. It protects both of us... you don't commit to a large build until I've proven it's viable."
   }
 ];
 
@@ -195,16 +195,16 @@ export function PricingPage() {
       <div className="max-w-4xl mx-auto text-center mb-20">
         <SimpleScrollReveal direction="up">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            Stop Paying for Problems That Should Already Be Solved
+            What's This Problem Actually Costing You?
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-            We solve the technical problems holding your business back - and we price based on what they're costing you, not how long they take us to fix. Most clients see ROI in 4-8 weeks.
+            I price based on what you're losing right now, not how long it takes me to fix it. Most projects pay for themselves in 4-8 weeks.
           </p>
           <Link
             href="/contact"
             className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200"
           >
-            Book a Strategy Call
+            Book a Call
           </Link>
         </SimpleScrollReveal>
       </div>
@@ -214,35 +214,35 @@ export function PricingPage() {
         <SimpleScrollReveal direction="up">
           <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-              What Is This Problem Costing You?
+              The Math Should Work
             </h2>
             <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
               <p>
-                Before we talk about investment, let's talk about what you're losing right now. Hours, risk, missed opportunities - it adds up fast.
+                Before we talk about investment, let's talk about what you're losing right now. Hours, risk, missed opportunities... it adds up fast.
               </p>
               <p>
                 Most projects pay for themselves in 4-8 weeks. After that, it's pure value.
               </p>
               <p className="font-medium text-gray-900 dark:text-white">
-                That's how we think about pricing. Not "what does this cost" but "when does this pay for itself."
+                That's how I think about pricing. Not "what does this cost" but "when does this pay for itself."
               </p>
             </div>
           </div>
         </SimpleScrollReveal>
       </div>
 
-      {/* Section 3: How We Price Projects */}
+      {/* Section 3: How I Price */}
       <div className="max-w-4xl mx-auto mb-24">
         <SimpleScrollReveal direction="up">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            How We Price Projects
+            How I Price
           </h2>
           <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6 text-center max-w-3xl mx-auto">
             <p>
-              We price based on the outcome, not hours. Discovery call → detailed proposal with scope, timeline, and investment.
+              I price based on the outcome, not hours. Discovery call → detailed proposal with scope, timeline, and investment.
             </p>
             <p>
-              For complex projects, we offer a paid discovery phase first. We prove the approach works before you commit.
+              For complex projects, I start with a paid discovery phase. I prove the approach works before you commit to the full build.
             </p>
             <p className="font-medium text-gray-900 dark:text-white">
               No hourly billing. No surprises.
@@ -255,10 +255,10 @@ export function PricingPage() {
       <div className="max-w-7xl mx-auto mb-10 sm:mb-16">
         <SimpleScrollReveal direction="up">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-            Investment Options
+            Investment
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            Choose the scope that fits your situation. Every project is custom-built for your business.
+            Pick what fits. Every project is custom.
           </p>
         </SimpleScrollReveal>
 
@@ -364,26 +364,26 @@ export function PricingPage() {
 
         <SimpleScrollReveal direction="up">
           <p className="text-center text-gray-600 dark:text-gray-300">
-            Not sure which fits? Book a strategy call and we'll help you figure out the right scope.
+            Not sure which fits? Book a call and I'll help you figure it out.
           </p>
         </SimpleScrollReveal>
       </div>
 
-      {/* Section 4B: Also Available - Web Design (buried) */}
+      {/* Section 4B: Web Design */}
       <div className="max-w-4xl mx-auto mb-12 sm:mb-24">
         <SimpleScrollReveal direction="up">
           <div className="text-center py-6 sm:py-8 border-t border-b border-gray-200 dark:border-gray-700">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              Also Available: Web Design
+              Web Design
             </h3>
             <p className="text-gray-600 dark:text-gray-300 mb-4">
-              We also build custom websites for clients who need a complete digital presence alongside their automation systems. Hand-coded, fast-loading, SEO-optimized. Starting at $2,000.
+              Your website is just the front door. I build the site, connect it to your CRM, automate the follow-up, set up the dashboards. One person, whole system. Starting at $3,000 for website only. $5,000+ when connected to automation.
             </p>
             <Link
               href="/services/web-design"
               className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
             >
-              Learn more about web design
+              Learn more about web design →
             </Link>
           </div>
         </SimpleScrollReveal>
@@ -396,7 +396,7 @@ export function PricingPage() {
             Ongoing Support
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            For businesses that want someone who knows their system available when they need them. Priority access, not hourly billing. No long-term contracts. Month-to-month.
+            For businesses that want someone who knows their system on call. Priority access, not hourly billing. Month-to-month, cancel anytime.
           </p>
         </SimpleScrollReveal>
 
@@ -462,12 +462,9 @@ export function PricingPage() {
       {/* Section 6: Results With Attribution - Testimonials */}
       <div className="max-w-6xl mx-auto mb-12 sm:mb-24">
         <SimpleScrollReveal direction="up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
             What Clients Say
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12">
-            Real results from real projects.
-          </p>
         </SimpleScrollReveal>
 
         <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
@@ -515,11 +512,11 @@ export function PricingPage() {
         </SimpleScrollReveal>
       </div>
 
-      {/* Section 7: Common Questions - Objection-handling FAQ */}
+      {/* Section 7: Questions - Objection-handling FAQ */}
       <div className="max-w-3xl mx-auto mb-12 sm:mb-24">
         <SimpleScrollReveal direction="up">
           <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8 sm:mb-12 text-center">
-            Common Questions
+            Questions
           </h2>
           <div className="space-y-6 sm:space-y-8">
             {faqItems.map((item, index) => (
@@ -536,28 +533,25 @@ export function PricingPage() {
         </SimpleScrollReveal>
       </div>
 
-      {/* Section 8: Final CTA with Authentic Scarcity */}
+      {/* Section 8: Final CTA */}
       <div className="max-w-3xl mx-auto">
         <SimpleScrollReveal direction="up">
           <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 sm:p-12">
             <h2 className="text-3xl font-bold text-white mb-6">
-              Ready to Talk?
+              Got a Problem?
             </h2>
             <p className="text-blue-100 mb-8 text-lg leading-relaxed">
-              We take on 2-3 new projects each month to ensure every client gets the attention they deserve. Book a strategy call and we'll look at your situation, identify opportunities, and show you what's possible.
+              I take on 2-3 new projects each month. Book a call and I'll look at your situation, identify opportunities, and show you what's possible.
             </p>
             <p className="text-blue-200 mb-8">
-              If we're not the right fit, we'll tell you.
+              If I'm not the right fit, I'll tell you.
             </p>
             <Link
               href="/contact"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200 mb-4"
+              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200"
             >
-              Book Your Strategy Call
+              Book a Call
             </Link>
-            <p className="text-blue-200 text-sm">
-              Free 30-minute call. No pressure. No obligation.
-            </p>
           </div>
         </SimpleScrollReveal>
       </div>

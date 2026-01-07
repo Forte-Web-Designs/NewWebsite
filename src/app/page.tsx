@@ -51,29 +51,29 @@ export default function Home() {
     {
       icon: "puzzle",
       title: "Automation",
-      subtitle: "Get your team out of the weeds",
-      description: "The repetitive work eating up your week - lead routing, follow-ups, data entry, reporting - handled automatically. We build with n8n, Make.com, and Zapier, or direct API integrations when off-the-shelf doesn't cut it.",
+      subtitle: "The work that eats your week",
+      description: "Lead routing, follow-ups, data entry, reporting... handled automatically. I build with n8n, Make.com, Zapier, or direct API integrations when off-the-shelf doesn't cut it.",
       link: "/services/automation-ai"
     },
     {
       icon: "flash",
       title: "CRM & Integrations",
-      subtitle: "One source of truth instead of three conflicting ones",
-      description: "Your CRM says one thing, your spreadsheet says another. We connect GoHighLevel, HubSpot, Salesforce, and your other tools so data flows automatically and you stop arguing about which number is right.",
+      subtitle: "One number everyone trusts",
+      description: "Your CRM says one thing, your spreadsheet says another, and someone's got a third version in their head. I connect your tools so data flows automatically and you stop arguing about which number is right.",
       link: "/services/integrations"
     },
     {
       icon: "code",
-      title: "Custom Software Development",
-      subtitle: "Built for how your business actually works",
-      description: "Custom dashboards, inventory systems, internal tools, and applications built from scratch. No generic templates. No platform limitations. Software that fits your operations, not the other way around.",
+      title: "Custom Software",
+      subtitle: "Built around how you actually work",
+      description: "Dashboards, inventory systems, internal tools... built from scratch for your operations. Not a template you have to work around.",
       link: "/services/custom-software"
     },
     {
       icon: "shield",
       title: "Security & Infrastructure",
-      subtitle: "Enterprise security without enterprise pricing",
-      description: "SSO and MFA implementation using FusionAuth, Keycloak, or the right tool for your stack. Identity management, access control, and the infrastructure you need to meet compliance requirements.",
+      subtitle: "Enterprise security, normal budget",
+      description: "SSO, MFA, identity management, access control. The infrastructure you need to meet compliance requirements without the enterprise price tag.",
       link: "/services/security"
     }
   ];
@@ -82,23 +82,23 @@ export default function Home() {
   const processSteps = [
     {
       number: "1",
-      title: "Discovery Call",
-      description: "We talk about what's slowing you down and whether we can help. Honest assessment, no pitch."
+      title: "We Talk",
+      description: "You tell me what's broken. I ask questions. We figure out if I can help."
     },
     {
       number: "2",
-      title: "Custom Strategy",
-      description: "You get a detailed proposal with scope, timeline, investment, and ROI calculation. For complex projects, we start with a paid discovery phase - we prove the approach works before you commit to the full build. No vague promises. No guessing."
+      title: "You Get a Real Plan",
+      description: "Scope, timeline, investment, and when you'll see your money back. For complex projects, I prove the approach works before you commit to the full build."
     },
     {
       number: "3",
-      title: "Build & Deploy",
-      description: "We build, test, and deploy. Training and documentation included so you're not dependent on us."
+      title: "I Build It",
+      description: "Build, test, deploy. Training and documentation included so you're not dependent on me."
     },
     {
       number: "4",
-      title: "Ongoing Optimization",
-      description: "Available if you want it. Not required if you don't. We're here when you need us."
+      title: "I Stick Around (If You Want)",
+      description: "Ongoing support available. Not required. Most clients don't need it... the whole point is building something that just works."
     }
   ];
 
@@ -106,23 +106,23 @@ export default function Home() {
   const trustPillars = [
     {
       icon: "shield",
-      title: "We Tell You When You Shouldn't Automate",
-      description: "We turn down projects that don't make sense. If fixing your process is smarter than building something new, we'll tell you."
+      title: "I'll Tell You When Not to Build",
+      description: "I turn down projects that don't make sense. If fixing your process is smarter than building software, I'll tell you."
     },
     {
       icon: "flash",
-      title: "Your ROI Is Measured in Weeks, Not Years",
-      description: "Most projects pay for themselves in 4-8 weeks. Fast, measurable results."
+      title: "ROI in Weeks, Not Years",
+      description: "Most projects pay for themselves in 4-8 weeks. You'll know the number before we start."
     },
     {
       icon: "star",
-      title: "You Work With Who You Hired",
-      description: "No account managers. No junior developers. No bait-and-switch. You work directly with Seth."
+      title: "You Work With Me. Period.",
+      description: "No account managers. No handoffs. No junior developers learning on your project. Just me."
     },
     {
       icon: "support",
-      title: "We Lead With Generosity",
-      description: "Every proposal includes a complete project plan with gotchas, hidden costs, and clear scope. For complex projects, we prove the approach works before you commit to the full build."
+      title: "I Lead With Generosity",
+      description: "Every proposal includes a complete project plan with gotchas, hidden costs, and clear scope. No vague estimates. No surprises."
     }
   ];
 
@@ -265,7 +265,7 @@ export default function Home() {
 
                 {/* Subheadline */}
                 <p className="text-base sm:text-lg md:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-6 sm:mb-8 max-w-2xl mx-auto px-2">
-                  We solve the technical problems that hold growing businesses back. Automation, integrations, custom software, and the infrastructure you need to scale.
+                  I solve the technical problems that hold growing businesses back. Automation, integrations, custom software... and the infrastructure you need to scale.
                 </p>
 
                 {/* CTAs */}
@@ -275,7 +275,7 @@ export default function Home() {
                     onClick={() => handleCTAClick('primary', 'hero')}
                     className="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base"
                   >
-                    Talk to Our Team
+                    Let's Talk
                     <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -285,7 +285,7 @@ export default function Home() {
                     onClick={() => handleCTAClick('secondary', 'hero')}
                     className="inline-flex items-center justify-center w-full sm:w-auto px-6 sm:px-8 py-3 sm:py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:border-gray-400 dark:hover:border-gray-500 rounded-lg font-semibold transition-all duration-200 text-sm sm:text-base"
                   >
-                    See How We Help
+                    See What I Build
                     <svg className="ml-2 w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                     </svg>
@@ -303,11 +303,11 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
-                  What We Do
+                  What I Build
                 </h2>
                 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl sm:rounded-2xl p-5 sm:p-8 max-w-3xl mx-auto">
                   <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 text-left">
-                    We start by understanding what the problem is costing you - hours, risk, missed opportunities. Once we know that, everything else follows, including exactly when you'll see your investment back. The technical build is the easy part.
+                    Before I build anything, I figure out what the problem is actually costing you. Hours, risk, missed opportunities... once I know that number, everything else follows. Including exactly when you'll see your money back.
                   </p>
                 </div>
               </div>
@@ -359,10 +359,10 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-3 sm:mb-4">
-                  How We Work
+                  How It Works
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300">
-                  A simple process that gets results
+                  Simple. No surprises.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -399,10 +399,10 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-8 sm:mb-12 lg:mb-16">
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl text-gray-900 dark:text-white mb-4 sm:mb-6">
-                  Why Clients Choose Forte
+                  Why Clients Work With Me
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2">
-                  We optimize for relationships, not transactions. Here's what that means.
+                  I optimize for relationships, not transactions. Here's what that means.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -438,7 +438,7 @@ export default function Home() {
                   Real Results
                 </h2>
                 <p className="text-base sm:text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2">
-                  See what we've built and the outcomes clients got.
+                  Here's what I've built and the outcomes clients got.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -461,7 +461,7 @@ export default function Home() {
                         $52K annual savings - product listings that generate themselves
                       </p>
                       <p className="text-sm sm:text-base text-gray-700 dark:text-gray-300 mb-4 sm:mb-6 leading-relaxed">
-                        Auction house was drowning in manual product listing work. We built an AI system that handles photography analysis, content generation, and distribution across sales channels. Runs around the clock without anyone touching it.
+                        Auction house was drowning in manual product listing work. I built an AI system that handles photography analysis, content generation, and distribution across sales channels. Runs around the clock without anyone touching it.
                       </p>
                       <div className="flex flex-wrap gap-3 sm:gap-4 mb-4 sm:mb-6">
                         <div className="text-center">
@@ -515,7 +515,7 @@ export default function Home() {
                       Customer communication that runs itself - 15+ hours monthly back
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
-                      Denver furniture retailer manually sending 30-40 customer emails daily. We built a system that monitors Shopify orders and sends the right email automatically across 9 different scenarios.
+                      Denver furniture retailer manually sending 30-40 customer emails daily. I built a system that monitors Shopify orders and sends the right email automatically across 9 different scenarios.
                     </p>
                     <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
                       <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm italic">
@@ -556,7 +556,7 @@ export default function Home() {
                       Complete equipment visibility - 20+ hours weekly back
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
-                      Film production company tracking hundreds of items across 6 locations with paper lists. We built a custom inventory system with QR code mobile access and real-time sync.
+                      Film production company tracking hundreds of items across 6 locations with paper lists. I built a custom inventory system with QR code mobile access and real-time sync.
                     </p>
                     <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
                       <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm italic">
@@ -597,7 +597,7 @@ export default function Home() {
                       £4M growth opportunity uncovered in weeks instead of months
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
-                      Needed to analyze 200,000+ transactions to find profitability drivers. We built an AI system that automated the entire analysis. What took weeks now takes hours.
+                      Needed to analyze 200,000+ transactions to find profitability drivers. I built an AI system that automated the entire analysis. What took weeks now takes hours.
                     </p>
                     <div className="flex flex-wrap gap-3 mb-3 sm:mb-4">
                       <div className="text-center">
@@ -643,7 +643,7 @@ export default function Home() {
                       Hundreds of markets analyzed daily - research that runs while you sleep
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
-                      Trader manually researching earnings outcomes for hundreds of markets. We built a pipeline that pulls data, runs AI forecasting, and outputs decision-ready analysis automatically.
+                      Trader manually researching earnings outcomes for hundreds of markets. I built a pipeline that pulls data, runs AI forecasting, and outputs decision-ready analysis automatically.
                     </p>
                     <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
                       <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm italic">
@@ -684,7 +684,7 @@ export default function Home() {
                       Monthly reporting in 15 minutes instead of half a day
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
-                      Agency owner manually pulling ad spend from Meta and Google Ads every month. We built a system that pulls from both platforms, calculates fees per client, and outputs invoice-ready reports.
+                      Agency owner manually pulling ad spend from Meta and Google Ads every month. I built a system that pulls from both platforms, calculates fees per client, and outputs invoice-ready reports.
                     </p>
                     <div className="flex flex-wrap gap-3 mb-3 sm:mb-4">
                       <div className="text-center">
@@ -729,7 +729,7 @@ export default function Home() {
                       From 'everything is down' to fully operational in 2 hours
                     </p>
                     <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm mb-3 sm:mb-4 flex-grow">
-                      Client's server hit 100% disk full. Docker crashed. Entire automation infrastructure down. We diagnosed remotely, found a creative solution, and restored all 43 workflows in 2 hours.
+                      Client's server hit 100% disk full. Docker crashed. Entire automation infrastructure down. I diagnosed remotely, found a creative solution, and restored all 43 workflows in 2 hours.
                     </p>
                     <div className="mb-3 sm:mb-4 p-2.5 sm:p-3 bg-gray-50 dark:bg-gray-900 rounded-lg border-l-4 border-blue-600">
                       <p className="text-gray-600 dark:text-gray-300 text-xs sm:text-sm italic">
@@ -825,14 +825,14 @@ export default function Home() {
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-8 sm:mb-12">
                 <h2 className="font-display font-bold text-2xl sm:text-3xl lg:text-4xl xl:text-5xl text-gray-900 dark:text-white mb-4 sm:mb-6">
-                  Ready to Start?
+                  Ready to Talk?
                 </h2>
                 <div className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto px-2 space-y-4">
                   <p>
-                    Got a technical problem holding your business back? Let's talk.
+                    Got a technical problem holding your business back? Let's figure out if I can help.
                   </p>
                   <p>
-                    If we can help, you'll know exactly when you'll see your investment back. If we can't, we'll tell you.
+                    If I can, you'll know exactly when you'll see your money back. If I can't, I'll tell you.
                   </p>
                 </div>
               </div>
@@ -854,10 +854,10 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="text-lg sm:text-xl font-semibold text-gray-900 dark:text-white mb-1 sm:mb-2">
-                      Schedule a Strategy Call
+                      Schedule a Call
                     </h3>
                     <p className="text-xs sm:text-sm text-gray-600 dark:text-gray-400">
-                      Book a free 30-minute consultation to discuss your business goals and how we can help.
+                      30 minutes. No pitch. Just figuring out if I can help.
                     </p>
                   </div>
                 </div>

@@ -4,11 +4,11 @@ import Link from 'next/link';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
 export default function IntegrationsClient() {
-  // What we build blocks
+  // What I build blocks
   const integrationBlocks = [
     {
       title: "CRM Setup and Optimization",
-      description: "Your CRM should be the source of truth for your business. We set it up properly, clean up the mess, and make sure it actually works the way you need it to.",
+      description: "Your CRM should be the source of truth for your business. I set it up properly, clean up the mess, and make sure it actually works the way you need it to.",
       examples: [
         "Pipeline stages that match your actual sales process",
         "Custom fields that capture what matters",
@@ -18,7 +18,7 @@ export default function IntegrationsClient() {
     },
     {
       title: "System Connections",
-      description: "Your CRM, email platform, forms, accounting software, and everything else should share data automatically. We build the connections that make your stack work as one system.",
+      description: "Your CRM, email platform, forms, accounting software, and everything else should share data automatically. I build the connections that make your stack work as one system.",
       examples: [
         "New leads flow into your CRM automatically",
         "Customer data syncs across all platforms",
@@ -28,7 +28,7 @@ export default function IntegrationsClient() {
     },
     {
       title: "Automated Handoffs",
-      description: "When a lead becomes a customer, when a deal closes, when a project kicks off, the right things should happen automatically. We build the handoffs so nothing gets dropped.",
+      description: "When a lead becomes a customer, when a deal closes, when a project kicks off, the right things should happen automatically. I build the handoffs so nothing gets dropped.",
       examples: [
         "Sales to operations handoffs without manual work",
         "Automatic task creation when deals move stages",
@@ -38,7 +38,7 @@ export default function IntegrationsClient() {
     },
     {
       title: "Dashboards and Reporting",
-      description: "You shouldn't have to check five tools to know what's happening. We build dashboards that pull data from across your stack and show you the truth in one place.",
+      description: "You shouldn't have to check five tools to know what's happening. I build dashboards that pull data from across your stack and show you the truth in one place.",
       examples: [
         "Real-time visibility into pipeline, revenue, and operations",
         "Data from multiple sources in one view",
@@ -72,31 +72,31 @@ export default function IntegrationsClient() {
     },
     {
       problem: "We've been meaning to fix this for months but never get around to it.",
-      solution: "Every week you wait, you're paying twice: once in the hours wasted on manual data work, and again in the bad decisions made on conflicting information. The cost compounds. We help you see the real numbers so the decision is obvious."
+      solution: "Every week you wait, you're paying twice: once in the hours wasted on manual data work, and again in the bad decisions made on conflicting information. The cost compounds. I help you see the real numbers so the decision is obvious."
     }
   ];
 
-  // How we work steps
+  // How I work steps
   const steps = [
     {
       number: "1",
       title: "Audit",
-      description: "We start by understanding what disconnected systems are costing you - hours wasted, data conflicts, things falling through cracks. Then we map out your current tools, how data flows (or doesn't), and where the real opportunities are. Not everything needs connecting. We'll tell you what does and what doesn't."
+      description: "I start by understanding what disconnected systems are costing you - hours wasted, data conflicts, things falling through cracks. Then I map out your current tools, how data flows (or doesn't), and where the real opportunities are. Not everything needs connecting. I'll tell you what does and what doesn't."
     },
     {
       number: "2",
       title: "Plan",
-      description: "You get a clear plan for what we'll connect, how data will flow, and what changes when it's done. For complex integrations, we start with a paid discovery phase - we test the actual connections before you commit to the full build. No surprises. No hoping it works."
+      description: "You get a clear plan for what I'll connect, how data will flow, and what changes when it's done. For complex integrations, I start with a paid discovery phase - I test the actual connections before you commit to the full build. No surprises. No hoping it works."
     },
     {
       number: "3",
       title: "Build",
-      description: "We build the connections, set up the automations, and test everything. We make sure it works before you rely on it."
+      description: "I build the connections, set up the automations, and test everything. I make sure it works before you rely on it."
     },
     {
       number: "4",
       title: "Train and Support",
-      description: "We show your team how it works and document everything. You're not dependent on us to understand your own systems."
+      description: "I show your team how it works and document everything. You're not dependent on me to understand your own systems."
     }
   ];
 
@@ -159,7 +159,7 @@ export default function IntegrationsClient() {
                 CRM & Integrations
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                One source of truth instead of three conflicting ones. We connect your systems so data flows automatically, your team stops copy-pasting between platforms, and you stop arguing about which spreadsheet has the right number.
+                Your CRM says one thing, your spreadsheet says another, someone's got a third version in their head. I connect your systems so data flows automatically and you stop arguing about which number is right.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -187,14 +187,14 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                What We Build
+                What I Build
               </h2>
               <div className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto space-y-4">
                 <p>
                   You're paying for powerful tools but they don't work together. Your team wastes hours moving data between systems, something always falls through the cracks, and nobody can agree on which number is right.
                 </p>
                 <p>
-                  We fix that - and we start by figuring out what the disconnection is actually costing you. Hours per week, missed handoffs, decisions made on bad data. Once we know that number, you'll know exactly when you see your investment back.
+                  I fix that - and I start by figuring out what the disconnection is actually costing you. Hours per week, missed handoffs, decisions made on bad data. Once I know that number, you'll know exactly when you see your investment back.
                 </p>
               </div>
             </div>
@@ -238,7 +238,7 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                The Problems This Solves
+                Sound Familiar?
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -266,10 +266,10 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                Systems We Work With
+                Systems I Work With
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                We've connected hundreds of tools. Here are some of the most common.
+                I've connected hundreds of tools. Here are some of the most common.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -292,7 +292,7 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">And more:</span> If it has an API, we can probably connect it. If you don't see your tool, ask.
+                <span className="font-semibold">And more:</span> If it has an API, I can probably connect it. If you don't see your tool, ask.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -305,7 +305,7 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                How We Work
+                How I Work
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -331,7 +331,7 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center p-6 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Timeline:</span> Most integration projects take 2-4 weeks depending on complexity. ROI typically happens in 4-8 weeks. We'll give you specific timelines and payback calculations in your proposal.
+                <span className="font-semibold">Timeline:</span> Most integration projects take 2-4 weeks depending on complexity. ROI typically happens in 4-8 weeks. You'll get specific timelines and payback calculations in your proposal.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -386,29 +386,18 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
-                Ready to Talk?
+                Got a Problem?
               </h2>
-              <div className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto space-y-4">
-                <p>
-                  If your tools don't talk to each other and your team is wasting time moving data around, let's figure out what it's actually costing you.
-                </p>
-                <p>
-                  We'll look at your current stack, find the gaps, and show you exactly when connected systems would pay for themselves. If integration makes sense, you'll have a clear path forward. If it doesn't, we'll tell you.
-                </p>
-              </div>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                If I can help, you'll know exactly when you'll see your money back. If I can't, I'll tell you.
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg text-lg"
                 >
-                  Book a Strategy Call
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-all duration-200"
-                >
-                  View Pricing
+                  Book a Call
                 </Link>
               </div>
             </div>

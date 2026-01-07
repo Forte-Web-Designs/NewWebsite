@@ -20,7 +20,7 @@ export default function AboutUs() {
                 About Forte Web Designs
               </h1>
               <h2 className="text-2xl sm:text-3xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                What You're Actually Paying For When You Hire Us
+                What You're Actually Paying For When You Hire Me
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -233,7 +233,7 @@ export default function AboutUs() {
                   href="/case-studies"
                   className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-6 sm:px-12 py-3 sm:py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 text-base sm:text-lg w-full sm:w-auto"
                 >
-                  View Our Work
+                  View My Work
                 </Link>
               </div>
             </div>
