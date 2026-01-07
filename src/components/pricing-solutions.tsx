@@ -3,558 +3,222 @@
 import Link from 'next/link';
 import SimpleScrollReveal from './animations/SimpleScrollReveal';
 
-// Investment Options - Highest price first for anchoring
-const investmentTiers = [
+const tiers = [
   {
-    name: 'Full System',
-    priceRange: '$7,500 - $15,000+',
-    subhead: 'Everything connected',
-    whatSolves: "Multiple systems that don't talk to each other, manual processes everywhere, no visibility into what's happening. You want it all fixed properly.",
-    features: [
-      'Full workflow audit',
-      'Custom software and automation',
-      'CRM setup and integrations',
-      'Dashboards and reporting',
-      'Training and documentation',
-      '90 days support'
-    ],
-    outcomes: [
-      '40+ hours/week back',
-      'Complete visibility',
-      'Systems that scale'
-    ],
-    timeline: '6-12 weeks',
-    cta: 'Book a Call',
-    href: '/contact'
+    name: 'Starter',
+    price: '$1,500 - $3,500',
+    tagline: 'One problem, fixed.',
+    timeline: '2-3 weeks'
   },
   {
     name: 'Automation',
-    priceRange: '$3,500 - $7,500',
-    subhead: 'The work that eats your week',
-    whatSolves: "Hours every week on repetitive tasks... lead routing, follow-ups, data entry, reporting. You need systems that handle it automatically.",
-    features: [
-      'Workflow analysis',
-      'Custom automation build',
-      'CRM and tool integrations',
-      'Error handling and monitoring',
-      'Training and documentation',
-      '60 days support'
-    ],
-    outcomes: [
-      '20+ hours/week back',
-      'Zero missed follow-ups',
-      'Scales without adding headcount'
-    ],
+    price: '$3,500 - $7,500',
+    tagline: 'The work that eats your week.',
     timeline: '3-6 weeks',
-    cta: 'Book a Call',
-    href: '/contact',
-    popular: true,
-    badge: 'Most Common'
+    popular: true
   },
   {
-    name: 'Starter',
-    priceRange: '$1,500 - $3,500',
-    subhead: 'One problem, fixed',
-    whatSolves: "A specific bottleneck that's costing you time. One workflow, one integration, one system that needs to work. Fixed without a massive project.",
-    features: [
-      'Focused workflow optimization',
-      'Single automation or integration',
-      'Testing and deployment',
-      'Documentation',
-      '30 days support'
-    ],
-    outcomes: [
-      '5-10 hours/week back',
-      'One major pain point gone',
-      'Foundation for future work'
-    ],
-    timeline: '2-3 weeks',
-    cta: 'Book a Call',
-    href: '/contact'
+    name: 'Full System',
+    price: '$7,500 - $15,000+',
+    tagline: 'Everything connected.',
+    timeline: '6-12 weeks'
   }
 ];
 
-// Ongoing Support Tiers - Highest first
-const supportTiers = [
-  {
-    name: 'Priority Partner',
-    price: '$1,997',
-    period: '/month',
-    features: [
-      'Same-day response, you jump the queue',
-      'After-hours emergency support',
-      'Quarterly strategy sessions',
-      'Proactive recommendations',
-      'Up to 20 hours of work included monthly'
-    ],
-    bestFor: 'Mission-critical operations where downtime isn\'t an option',
-    cta: 'Get Started',
-    href: '/contact'
-  },
-  {
-    name: 'Growth Partner',
-    price: '$997',
-    period: '/month',
-    features: [
-      'Priority phone and Slack support',
-      'Quarterly system audits',
-      'Proactive recommendations',
-      'Monthly performance reports',
-      'Up to 8 hours of work included monthly'
-    ],
-    bestFor: 'Someone who knows your system available when you need them',
-    cta: 'Get Started',
-    href: '/contact',
-    recommended: true,
-    badge: 'Recommended'
-  },
-  {
-    name: 'Essential Care',
-    price: '$497',
-    period: '/month',
-    features: [
-      'Hosting, security, and monitoring handled',
-      'Priority email support (24hr response)',
-      'Monthly performance reports',
-      'Up to 2 hours of work included monthly'
-    ],
-    bestFor: 'Keeping systems running with minimal ongoing changes',
-    cta: 'Get Started',
-    href: '/contact'
-  }
+const results = [
+  { client: 'CR Deals Cincinnati', metric: '$52K/year saved', description: 'Product listings that generate themselves.' },
+  { client: 'Modern Bungalow', metric: '15 hrs/month back', description: 'Customer emails that send themselves.' },
+  { client: 'Hollow Bamboo', metric: '20 hrs/week back', description: 'Equipment tracking across 6 locations.' },
+  { client: 'Revolut', metric: '$4M opportunity found', description: 'Transaction analysis in hours, not weeks.' },
+  { client: 'Prediction Market Trader', metric: 'Research on autopilot', description: 'Hundreds of markets analyzed daily.' },
+  { client: 'Kingfisher Ads', metric: 'Reports in 15 min', description: 'Monthly reporting that runs itself.' },
+  { client: 'KlnBros Agency', metric: 'Back online in 2 hours', description: 'Emergency recovery, 43 workflows restored.' }
 ];
 
-// Testimonials with attribution and outcomes
-const testimonials = [
-  {
-    quote: "Very good at thinking through the logic of how to best automate a process, and then executing on that vision. Definitely will work with him again.",
-    company: 'Modern Bungalow',
-    location: 'Denver furniture retailer',
-    result: 'Customer communication that runs itself - 15+ hours monthly back'
-  },
-  {
-    quote: "Extremely attentive and responsive. Gave us an accurate timeline and met it. Highly recommend.",
-    company: 'Hollow Bamboo Film Productions',
-    location: '',
-    result: 'Complete equipment visibility - 20+ hours weekly back'
-  },
-  {
-    quote: "Communication was 10/10. I felt very safe throughout the entire project.",
-    company: 'Yves Klein, Germany',
-    location: 'Marketing agency',
-    result: "From 'everything is down' to fully operational in 2 hours"
-  },
-  {
-    quote: "Figured it out quickly and got everything working smoothly. Very responsive throughout.",
-    company: 'Prediction Market Trader',
-    location: '',
-    result: 'Research that runs while you sleep - hundreds of markets analyzed daily'
-  }
-];
-
-// FAQ items for objection handling
 const faqItems = [
   {
-    question: 'How do you price projects?',
-    answer: "Based on the outcome you're trying to achieve and what the problem is costing you now. After a discovery call, you get a detailed proposal with clear deliverables, timeline, investment, and ROI calculation. For complex projects, I start with a paid discovery phase to prove the approach works before you commit. Projects typically range from $3,500 to $15,000+ depending on scope. You own the source code."
-  },
-  {
-    question: "What's included in every project?",
-    answer: "Discovery, custom build, testing, training, documentation, and post-launch support. I don't hand you something and disappear. You get a system that works and the knowledge to manage it."
+    question: "What's included?",
+    answer: "Discovery, build, testing, training, documentation, support. You own everything."
   },
   {
     question: 'How long do projects take?',
-    answer: "Most automation projects take 2-4 weeks. Larger custom software projects take 4-8 weeks. You'll know the exact timeline before we start."
+    answer: "2-12 weeks depending on scope. You'll know before we start."
   },
   {
     question: "What if I'm not sure what I need?",
-    answer: "That's what the discovery call is for. I'll look at your situation, identify opportunities, and recommend the right scope. No pressure."
+    answer: "That's what the call is for. No pressure."
   },
   {
-    question: 'Do you offer payment plans?',
-    answer: "Yes. Typically 50% upfront, 50% on completion. For larger projects, milestone-based payments aligned with deliverables."
-  },
-  {
-    question: 'What\'s your minimum project size?',
-    answer: "$1,500 for standalone projects. If your need is smaller than that, I'm probably not the right fit... but I can point you in the right direction."
-  },
-  {
-    question: 'How do I know this will work for my business?',
-    answer: "I show you the ROI math before you commit. If the numbers don't make sense for your situation, I'll tell you. I turn down projects that won't deliver real value."
-  },
-  {
-    question: "What's the discovery phase?",
-    answer: "For complex projects, I offer a paid discovery phase before quoting the full build. I get into your systems, test the critical connections, and prove the approach will work. If it won't work as planned, you keep everything I've documented and you're not obligated to continue. If it does work, the discovery investment credits toward your full project. It protects both of us... you don't commit to a large build until I've proven it's viable."
+    question: 'Payment plans?',
+    answer: '50% upfront, 50% on completion. Milestone payments for larger projects.'
   }
 ];
 
 export function PricingPage() {
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
-      {/* Section 1: Hero - Value-focused */}
-      <div className="max-w-4xl mx-auto text-center mb-20">
-        <SimpleScrollReveal direction="up">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 dark:text-white mb-6">
-            What's This Problem Actually Costing You?
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto mb-8">
-            I price based on what you're losing right now, not how long it takes me to fix it. Most projects pay for themselves in 4-8 weeks.
-          </p>
-          <Link
-            href="/contact"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-200"
-          >
-            Book a Call
-          </Link>
-        </SimpleScrollReveal>
-      </div>
-
-      {/* Section 2: ROI Frame - Key section */}
-      <div className="max-w-4xl mx-auto mb-24">
-        <SimpleScrollReveal direction="up">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 md:p-12 border border-gray-200 dark:border-gray-700">
-            <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-              The Math Should Work
-            </h2>
-            <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-              <p>
-                Before we talk about investment, let's talk about what you're losing right now. Hours, risk, missed opportunities... it adds up fast.
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      {/* Hero */}
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center">
+              <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-6">
+                Pricing
+              </h1>
+              <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-10">
+                Most projects pay for themselves in 4-8 weeks.
               </p>
-              <p>
-                Most projects pay for themselves in 4-8 weeks. After that, it's pure value.
-              </p>
-              <p className="font-medium text-gray-900 dark:text-white">
-                That's how I think about pricing. Not "what does this cost" but "when does this pay for itself."
-              </p>
-            </div>
-          </div>
-        </SimpleScrollReveal>
-      </div>
-
-      {/* Section 3: How I Price */}
-      <div className="max-w-4xl mx-auto mb-24">
-        <SimpleScrollReveal direction="up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8 text-center">
-            How I Price
-          </h2>
-          <div className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed space-y-6 text-center max-w-3xl mx-auto">
-            <p>
-              I price based on the outcome, not hours. Discovery call → detailed proposal with scope, timeline, and investment.
-            </p>
-            <p>
-              For complex projects, I start with a paid discovery phase. I prove the approach works before you commit to the full build.
-            </p>
-            <p className="font-medium text-gray-900 dark:text-white">
-              No hourly billing. No surprises.
-            </p>
-          </div>
-        </SimpleScrollReveal>
-      </div>
-
-      {/* Section 4: Investment Options - Highest first, middle highlighted */}
-      <div className="max-w-7xl mx-auto mb-10 sm:mb-16">
-        <SimpleScrollReveal direction="up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-            Investment
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-2xl mx-auto">
-            Pick what fits. Every project is custom.
-          </p>
-        </SimpleScrollReveal>
-
-        <div className="grid md:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12">
-          {investmentTiers.map((tier, index) => (
-            <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
-              <div
-                className={`relative bg-white dark:bg-gray-900 rounded-2xl p-5 sm:p-8 h-full flex flex-col ${
-                  tier.popular
-                    ? 'ring-2 ring-blue-600 shadow-xl'
-                    : 'ring-1 ring-gray-200 dark:ring-gray-700'
-                }`}
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
               >
-                {tier.badge && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      {tier.badge}
-                    </span>
-                  </div>
-                )}
+                Book a Call
+              </Link>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
 
-                <div className="mb-6">
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+      {/* Pricing Tiers */}
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <div className="grid md:grid-cols-3 gap-8">
+            {tiers.map((tier, index) => (
+              <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
+                <div className={`text-center p-8 rounded-2xl ${tier.popular ? 'bg-white dark:bg-gray-900 shadow-lg ring-2 ring-blue-600' : ''}`}>
+                  {tier.popular && (
+                    <span className="inline-block px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-300 rounded-full mb-4">
+                      Most Common
+                    </span>
+                  )}
+                  <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
                     {tier.name}
                   </h3>
-                  <div className="flex items-baseline gap-2 mb-2">
-                    <span className="text-3xl font-bold text-gray-900 dark:text-white">
-                      {tier.priceRange}
-                    </span>
-                  </div>
-                  <p className="text-blue-600 dark:text-blue-400 font-medium mb-4">
-                    {tier.subhead}
+                  <p className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                    {tier.price}
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400 mb-2">
+                    {tier.tagline}
+                  </p>
+                  <p className="text-sm text-gray-500 dark:text-gray-500">
+                    {tier.timeline}
                   </p>
                 </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
-                    What this solves
-                  </h4>
-                  <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
-                    {tier.whatSolves}
-                  </p>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
-                    What's included
-                  </h4>
-                  <ul className="space-y-2">
-                    {tier.features.map((feature, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">
-                          {feature}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-6">
-                  <h4 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
-                    Typical outcomes
-                  </h4>
-                  <ul className="space-y-2">
-                    {tier.outcomes.map((outcome, idx) => (
-                      <li key={idx} className="flex items-start gap-3">
-                        <svg className="w-5 h-5 text-amber-500 dark:text-amber-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                        </svg>
-                        <span className="text-gray-600 dark:text-gray-300 text-sm">
-                          {outcome}
-                        </span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="mb-8">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    <span className="font-medium">Timeline:</span> {tier.timeline}
-                  </p>
-                </div>
-
-                <div className="mt-auto">
-                  <Link
-                    href={tier.href}
-                    className={`block text-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                      tier.popular
-                        ? 'bg-blue-600 hover:bg-blue-700 text-white'
-                        : 'bg-gray-100 hover:bg-gray-200 dark:bg-gray-800 dark:hover:bg-gray-700 text-gray-900 dark:text-white'
-                    }`}
-                  >
-                    {tier.cta}
-                  </Link>
-                </div>
-              </div>
-            </SimpleScrollReveal>
-          ))}
-        </div>
-
-        <SimpleScrollReveal direction="up">
-          <p className="text-center text-gray-600 dark:text-gray-300">
-            Not sure which fits? Book a call and I'll help you figure it out.
-          </p>
-        </SimpleScrollReveal>
-      </div>
-
-      {/* Section 4B: Web Design */}
-      <div className="max-w-4xl mx-auto mb-12 sm:mb-24">
-        <SimpleScrollReveal direction="up">
-          <div className="text-center py-6 sm:py-8 border-t border-b border-gray-200 dark:border-gray-700">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-              Web Design
-            </h3>
-            <p className="text-gray-600 dark:text-gray-300 mb-4">
-              Your website is just the front door. I build the site, connect it to your CRM, automate the follow-up, set up the dashboards. One person, whole system. Starting at $3,000 for website only. $5,000+ when connected to automation.
-            </p>
-            <Link
-              href="/services/web-design"
-              className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
-            >
-              Learn more about web design →
-            </Link>
-          </div>
-        </SimpleScrollReveal>
-      </div>
-
-      {/* Section 5: Ongoing Support - Highest first */}
-      <div className="max-w-6xl mx-auto mb-12 sm:mb-24">
-        <SimpleScrollReveal direction="up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4 text-center">
-            Ongoing Support
-          </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-300 text-center mb-12 max-w-3xl mx-auto">
-            For businesses that want someone who knows their system on call. Priority access, not hourly billing. Month-to-month, cancel anytime.
-          </p>
-        </SimpleScrollReveal>
-
-        <div className="grid md:grid-cols-3 gap-4 sm:gap-6">
-          {supportTiers.map((tier, index) => (
-            <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
-              <div
-                className={`relative bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 h-full flex flex-col ${
-                  tier.recommended
-                    ? 'border-2 border-blue-600'
-                    : 'border border-gray-200 dark:border-gray-700'
-                }`}
-              >
-                {tier.badge && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 whitespace-nowrap">
-                    <span className="bg-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
-                      {tier.badge}
-                    </span>
-                  </div>
-                )}
-
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  {tier.name}
-                </h3>
-                <div className="flex items-baseline gap-1 mb-4">
-                  <span className="text-3xl font-bold text-gray-900 dark:text-white">{tier.price}</span>
-                  <span className="text-sm text-gray-500 dark:text-gray-400">{tier.period}</span>
-                </div>
-
-                <ul className="space-y-3 mb-6 flex-grow">
-                  {tier.features.map((feature, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                      </svg>
-                      <span className="text-sm text-gray-600 dark:text-gray-300">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="mb-6">
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    <span className="font-medium">Best for:</span> {tier.bestFor}
-                  </p>
-                </div>
-
-                <Link
-                  href={tier.href}
-                  className={`block w-full text-center px-6 py-3 rounded-lg font-semibold transition-all duration-200 ${
-                    tier.recommended
-                      ? 'bg-blue-600 text-white hover:bg-blue-700'
-                      : 'bg-gray-900 dark:bg-white text-white dark:text-gray-900 hover:bg-gray-800 dark:hover:bg-gray-100'
-                  }`}
-                >
-                  {tier.cta}
-                </Link>
-              </div>
-            </SimpleScrollReveal>
-          ))}
-        </div>
-      </div>
-
-      {/* Section 6: Results With Attribution - Testimonials */}
-      <div className="max-w-6xl mx-auto mb-12 sm:mb-24">
-        <SimpleScrollReveal direction="up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-12 text-center">
-            What Clients Say
-          </h2>
-        </SimpleScrollReveal>
-
-        <div className="grid md:grid-cols-2 gap-4 sm:gap-8 mb-8 sm:mb-12">
-          {testimonials.map((testimonial, index) => (
-            <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-              <div className="bg-white dark:bg-gray-900 rounded-xl p-5 sm:p-8 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
-                <blockquote className="text-gray-600 dark:text-gray-300 text-lg leading-relaxed mb-6 flex-grow">
-                  "{testimonial.quote}"
-                </blockquote>
-                <div>
-                  <p className="font-semibold text-gray-900 dark:text-white">
-                    {testimonial.company}
-                  </p>
-                  {testimonial.location && (
-                    <p className="text-sm text-gray-500 dark:text-gray-400 mb-3">
-                      {testimonial.location}
-                    </p>
-                  )}
-                  <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-green-50 dark:bg-green-900/20 rounded-full border border-green-200 dark:border-green-800">
-                    <svg className="w-4 h-4 text-green-600 dark:text-green-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                    </svg>
-                    <span className="text-sm font-medium text-green-700 dark:text-green-400">
-                      {testimonial.result}
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </SimpleScrollReveal>
-          ))}
-        </div>
-
-        <SimpleScrollReveal direction="up">
-          <div className="text-center">
-            <Link
-              href="/case-studies"
-              className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
-            >
-              See More Case Studies
-              <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
-          </div>
-        </SimpleScrollReveal>
-      </div>
-
-      {/* Section 7: Questions - Objection-handling FAQ */}
-      <div className="max-w-3xl mx-auto mb-12 sm:mb-24">
-        <SimpleScrollReveal direction="up">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8 sm:mb-12 text-center">
-            Questions
-          </h2>
-          <div className="space-y-6 sm:space-y-8">
-            {faqItems.map((item, index) => (
-              <div key={index}>
-                <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
-                  {item.question}
-                </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {item.answer}
-                </p>
-              </div>
+              </SimpleScrollReveal>
             ))}
           </div>
-        </SimpleScrollReveal>
-      </div>
+        </div>
+      </section>
 
-      {/* Section 8: Final CTA */}
-      <div className="max-w-3xl mx-auto">
-        <SimpleScrollReveal direction="up">
-          <div className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-6 sm:p-12">
-            <h2 className="text-3xl font-bold text-white mb-6">
-              Got a Problem?
+      {/* Web Design Callout */}
+      <section className="py-12 sm:py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center border-y border-gray-200 dark:border-gray-700 py-8">
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="font-semibold text-gray-900 dark:text-white">Web Design</span> — Starting at $3,000. Website + CRM + automation as one system.{' '}
+                <Link href="/services/web-design" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+                  Learn more →
+                </Link>
+              </p>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Monthly Support Callout */}
+      <section className="py-12 sm:py-16 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center">
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="font-semibold text-gray-900 dark:text-white">Monthly Support</span> — $997-1,997/month. Someone who knows your system on call.{' '}
+                <Link href="/support" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+                  Learn more →
+                </Link>
+              </p>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* Results */}
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+          <SimpleScrollReveal direction="up">
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-6 text-center">
+              Results
             </h2>
-            <p className="text-blue-100 mb-8 text-lg leading-relaxed">
-              I take on 2-3 new projects each month. Book a call and I'll look at your situation, identify opportunities, and show you what's possible.
-            </p>
-            <p className="text-blue-200 mb-8">
-              If I'm not the right fit, I'll tell you.
-            </p>
-            <Link
-              href="/contact"
-              className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-all duration-200"
-            >
-              Book a Call
-            </Link>
+            <div className="text-center mb-12">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
+              >
+                Book a Call
+              </Link>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="space-y-0 border-t border-gray-200 dark:border-gray-700">
+            {results.map((result, index) => (
+              <SimpleScrollReveal key={result.client} direction="up" delay={index * 50}>
+                <div className="flex items-center justify-between py-5 border-b border-gray-200 dark:border-gray-700 group cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700/50 -mx-4 px-4 transition-colors">
+                  <div>
+                    <p className="font-medium text-gray-900 dark:text-white">
+                      {result.client} — <span className="text-gray-600 dark:text-gray-400">{result.metric}</span>
+                    </p>
+                    <p className="text-gray-500 dark:text-gray-500 text-sm">
+                      {result.description}
+                    </p>
+                  </div>
+                  <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </SimpleScrollReveal>
+            ))}
           </div>
-        </SimpleScrollReveal>
-      </div>
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+          <SimpleScrollReveal direction="up">
+            <div className="space-y-8">
+              {faqItems.map((item, index) => (
+                <div key={index}>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                    {item.question}
+                  </h3>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {item.answer}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <SimpleScrollReveal direction="up">
+            <div className="text-center">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-10">
+                Got a problem?
+              </h2>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-200"
+              >
+                Book a Call
+              </Link>
+            </div>
+          </SimpleScrollReveal>
+        </div>
+      </section>
     </div>
   );
 }
