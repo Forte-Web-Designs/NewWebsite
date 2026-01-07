@@ -254,7 +254,7 @@ export default function IntegrationsClient() {
                   Got a problem?
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400">
-                  Book a call. No pitch, no pressure. Just tell me what's not working.
+                  Book a call. Just tell me what's not working.
                 </p>
               </div>
             </SimpleScrollReveal>

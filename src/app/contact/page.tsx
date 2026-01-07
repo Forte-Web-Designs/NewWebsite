@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import { Suspense, lazy } from 'react';
 import ContactForm from "@/components/ContactForm";
+import { OptimizedImage } from '@/components/images/OptimizedImage';
 
 // Lazy load CalendlyWidget for better performance
 const CalendlyWidget = lazy(() => import("@/components/CalendlyWidget"));
@@ -24,17 +25,45 @@ export default function Contact() {
         <input name="timestamp" type="text" />
       </form>
 
-      {/* Hero Section */}
+      {/* Hero Section with Headshot */}
       <section className="pt-16 sm:pt-20 lg:pt-24 pb-8 sm:pb-12 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <div className="text-center">
+            <div className="w-24 h-24 mx-auto mb-6 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg">
+              <OptimizedImage
+                src="/images/about/headshot-6.jpg"
+                alt="Seth Forte"
+                width={96}
+                height={96}
+                className="w-full h-full object-cover"
+                sizes="96px"
+              />
+            </div>
             <h1 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4 sm:mb-6">
               Let's Talk
             </h1>
             <p className="text-base sm:text-lg lg:text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-              Tell us about your business and what you're trying to solve. We'll show you what's possible.
+              Book a call. Just tell me what's not working.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Video Section */}
+      <section className="py-8 sm:py-12 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-2xl">
+          <div className="relative rounded-2xl overflow-hidden shadow-xl bg-black">
+            <video
+              controls
+              className="w-full"
+            >
+              <source src="/video-walkthroughs/Business Growth Systems & AI Automation | Forte (DFW) - 26 October 2025.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-4">
+            2-minute intro
+          </p>
         </div>
       </section>
 
@@ -50,7 +79,7 @@ export default function Contact() {
                   Get in Touch
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Describe your situation and we'll get back to you within one business day.
+                  Describe your situation and I'll get back to you within one business day.
                 </p>
               </div>
               <ContactForm />
@@ -63,7 +92,7 @@ export default function Contact() {
                   Or Book a Call Directly
                 </h2>
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
-                  Skip the back-and-forth. Book a 30-minute strategy call and we'll talk through your situation live.
+                  Skip the back-and-forth. Book a 30-minute call and we'll talk through your situation live.
                 </p>
                 <Suspense fallback={
                   <div className="h-80 flex items-center justify-center">
@@ -95,7 +124,7 @@ export default function Contact() {
               <div>
                 <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-1">Location</p>
                 <p className="text-gray-700 dark:text-gray-300">
-                  Based in Dallas, Texas. Working with clients nationwide.
+                  Based in Dallas, Texas. Working with clients everywhere.
                 </p>
               </div>
             </div>

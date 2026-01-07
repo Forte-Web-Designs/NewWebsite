@@ -335,11 +335,8 @@ export default function Home() {
                   <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-4">
                     I'm Seth.
                   </h2>
-                  <p className="text-lg text-gray-600 dark:text-gray-400 mb-4">
-                    5+ years building enterprise systems. I care whether your systems work six months from now.
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400 mb-6">
-                    No account managers. No junior developers. You work directly with me.
+                  <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
+                    I solve the technical problems that hold growing businesses back. Automation, integrations, custom software.
                   </p>
                   <Link
                     href="/about"
@@ -359,7 +356,6 @@ export default function Home() {
                   <video
                     controls
                     className="w-full"
-                    poster="/images/about/headshot-6.jpg"
                   >
                     <source src="/video-walkthroughs/Business Growth Systems & AI Automation | Forte (DFW) - 26 October 2025.mp4" type="video/mp4" />
                     Your browser does not support the video tag.
