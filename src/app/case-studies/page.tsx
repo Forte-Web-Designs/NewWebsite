@@ -215,7 +215,7 @@ export default function CaseStudiesPage() {
                     <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wide">
                       Results
                     </h3>
-                    <ul className="space-y-3">
+                    <ul className="space-y-3 text-left">
                       {study.results.map((result, idx) => (
                         <li key={idx} className="flex items-start gap-3">
                           <div className="flex-shrink-0 w-5 h-5 mt-0.5 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center">
@@ -223,7 +223,7 @@ export default function CaseStudiesPage() {
                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                             </svg>
                           </div>
-                          <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">{result}</span>
+                          <span className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed flex-1">{result}</span>
                         </li>
                       ))}
                     </ul>
