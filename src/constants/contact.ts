@@ -6,7 +6,10 @@ export const CONTACT_INFO = {
   phoneHref: `tel:${process.env.NEXT_PUBLIC_BUSINESS_PHONE_RAW || '8178736655'}`,
   phoneHrefPlus: `tel:+1${process.env.NEXT_PUBLIC_BUSINESS_PHONE_RAW || '8178736655'}`,
   emailHref: `mailto:${process.env.NEXT_PUBLIC_BUSINESS_EMAIL || 'seth@fortewebdesigns.com'}`,
-  
+
+  // Social links
+  linkedin: 'https://www.linkedin.com/company/forte-web-designs',
+
   // Business info
   name: process.env.NEXT_PUBLIC_BUSINESS_NAME || 'Forte Web Designs',
   address: {

@@ -220,15 +220,15 @@ export default function Home() {
 
             <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
               {services.map((service, index) => (
-                <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
-                  <Link href={service.href} className="group block text-center">
-                    <div className="w-14 h-14 mx-auto mb-5 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                <SimpleScrollReveal key={service.title} direction="up" delay={index * 100} className="h-full">
+                  <Link href={service.href} className="group block text-center h-full flex flex-col items-center">
+                    <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-5">
                       <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
                     <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-3">
+                    <p className="text-gray-600 dark:text-gray-400 mb-3 flex-grow">
                       {service.tagline}
                     </p>
                     <span className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
