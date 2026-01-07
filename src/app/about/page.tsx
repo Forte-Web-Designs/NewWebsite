@@ -94,7 +94,7 @@ export default function AboutUs() {
                   </p>
                   <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-700">
                     <p className="text-gray-800 dark:text-gray-200">
-                      <strong className="text-blue-600 dark:text-blue-400">If you're looking for the cheapest option, I'm not your person.</strong> But if you want someone who thinks about your business like it's their own, we should talk.
+                      If you want someone who thinks about your business like it's their own, we should talk.
                     </p>
                   </div>
                 </div>
