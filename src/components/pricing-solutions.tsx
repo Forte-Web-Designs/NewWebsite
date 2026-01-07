@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import { OptimizedImage } from './images/OptimizedImage';
 import SimpleScrollReveal from './animations/SimpleScrollReveal';
 
 const tiers = [
@@ -201,22 +202,59 @@ export function PricingPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* CTA with Headshot & Calendly */}
       <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-10">
-                Got a problem?
-              </h2>
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-200"
-              >
-                Book a Call
-              </Link>
-            </div>
-          </SimpleScrollReveal>
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Left - Headshot & Brief */}
+            <SimpleScrollReveal direction="up">
+              <div className="text-center lg:text-left">
+                <div className="w-24 h-24 mx-auto lg:mx-0 mb-6 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg">
+                  <OptimizedImage
+                    src="/images/about/headshot-6.jpg"
+                    alt="Seth Forte"
+                    width={96}
+                    height={96}
+                    className="w-full h-full object-cover"
+                    sizes="96px"
+                  />
+                </div>
+                <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-4">
+                  Got a problem?
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 mb-6">
+                  Book a call. No pitch, no pressure. Just tell me what's not working.
+                </p>
+                <div className="relative rounded-xl overflow-hidden shadow-lg bg-black max-w-sm mx-auto lg:mx-0">
+                  <video
+                    controls
+                    className="w-full"
+                    poster="/images/about/headshot-6.jpg"
+                  >
+                    <source src="/video-walkthroughs/Business Growth Systems & AI Automation | Forte (DFW) - 26 October 2025.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mt-3 lg:text-left text-center">
+                  2-minute intro
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            {/* Right - Calendly */}
+            <SimpleScrollReveal direction="up" delay={100}>
+              <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
+                <iframe
+                  src="https://calendly.com/seth-fortewebdesigns/30min"
+                  width="100%"
+                  height="600"
+                  frameBorder="0"
+                  title="Schedule a call with Seth"
+                  className="w-full"
+                />
+              </div>
+            </SimpleScrollReveal>
+          </div>
         </div>
       </section>
     </div>
