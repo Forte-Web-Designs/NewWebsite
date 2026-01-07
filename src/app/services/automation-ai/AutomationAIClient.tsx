@@ -4,138 +4,69 @@ import Link from 'next/link';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
 export default function AutomationAIClient() {
-  // What I build blocks
-  const automationBlocks = [
+  const services = [
     {
-      title: "Lead Response and Follow-Up",
-      description: "When a lead comes in, time matters. I build systems that respond instantly, route to the right person, and follow up automatically until you get an answer. No leads falling through cracks. No manual reminders.",
-      examples: [
-        "Missed call text-back (responds in seconds, not hours)",
-        "Form submissions routed to the right team member",
-        "Automated follow-up sequences until they book or buy"
-      ]
+      title: "Lead Response",
+      description: "Respond instantly. Route to the right person. Follow up until you get an answer."
     },
     {
-      title: "Sales and Quoting",
-      description: "Getting quotes out fast wins deals. I build systems that help your team quote faster and follow up consistently without chasing spreadsheets.",
-      examples: [
-        "Quote templates that populate automatically",
-        "Follow-up reminders until you get a yes or no",
-        "Pipeline visibility so nothing gets stuck"
-      ]
+      title: "Sales & Quoting",
+      description: "Quote faster. Follow up consistently. See your pipeline."
     },
     {
       title: "Customer Communication",
-      description: "Your customers expect updates. I build systems that send the right message at the right time without anyone typing an email.",
-      examples: [
-        "Order status updates triggered by your systems",
-        "Appointment reminders that reduce no-shows",
-        "Review requests that actually get sent"
-      ]
+      description: "Order updates, reminders, review requests. Sent automatically."
     },
     {
-      title: "Reporting and Visibility",
-      description: "You shouldn't have to dig through three tools to know how your business is doing. I build dashboards that show you what's working and what needs attention.",
-      examples: [
-        "Weekly scorecards delivered automatically",
-        "Alerts when something needs your attention",
-        "Data pulled from multiple sources into one view"
-      ]
+      title: "Reporting",
+      description: "Dashboards that show what's working. No digging through tools."
     }
   ];
 
-  // Problems this solves
   const problems = [
     {
-      problem: "I'm dropping leads because no one follows up fast enough.",
-      solution: "Automation responds in seconds and keeps following up until you get an answer. Nothing falls through."
+      problem: "We're dropping leads because no one follows up fast enough.",
+      solution: "Automation responds in seconds. Nothing falls through."
     },
     {
-      problem: "My team spends hours on repetitive tasks instead of real work.",
-      solution: "Systems handle the repetitive stuff. Your team focuses on work that actually requires a human."
+      problem: "My team spends hours on repetitive tasks.",
+      solution: "Systems handle the repetitive stuff. Your team does real work."
     },
     {
-      problem: "I have no idea what's happening in my business without asking five people.",
-      solution: "Dashboards pull data from everywhere and show you what matters. No digging, no asking."
-    },
-    {
-      problem: "I'm growing but my processes can't keep up.",
-      solution: "Automation scales without adding headcount. More volume, same team."
-    },
-    {
-      problem: "I know I should automate, but I keep putting it off.",
-      solution: "Every week you wait costs you the same hours and frustration. Most clients see ROI in 4-8 weeks. The math usually makes the decision obvious."
+      problem: "We know we should automate but keep putting it off.",
+      solution: "Every week you wait costs the same hours. ROI in 4-8 weeks."
     }
   ];
 
-  // How I work steps
-  const steps = [
-    {
-      number: "1",
-      title: "Discovery",
-      description: "I start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then I look at your workflows, find the bottlenecks, and identify what's worth automating. Not every workflow needs automation. I'll tell you what does and what doesn't - even if it costs me the project. For complex projects, I offer a paid discovery phase where I prove the approach works before you commit to the full build."
-    },
-    {
-      number: "2",
-      title: "Build",
-      description: "I build the systems, test them with your team, and make sure everything works before going live. No \"hope it works\" deployments."
-    },
-    {
-      number: "3",
-      title: "Handoff",
-      description: "You get documentation, training, and support. The goal is systems that run without you calling me every week."
-    }
-  ];
-
-  // Results
   const results = [
-    {
-      company: "Modern Bungalow",
-      result: "Customer emails that send themselves across 9 order scenarios"
-    },
-    {
-      company: "Hollow Bamboo Film Productions",
-      result: "Complete equipment visibility across 6 locations"
-    },
-    {
-      company: "CR Deals Cincinnati",
-      result: "Product listings that generate themselves for 3,000 items monthly"
-    },
-    {
-      company: "Kingfisher Ads",
-      result: "Monthly reporting that runs without anyone touching it"
-    }
+    { client: "Modern Bungalow", metric: "15 hrs/month back" },
+    { client: "CR Deals", metric: "$52K/year saved" },
+    { client: "Kingfisher Ads", metric: "Reports in 15 min vs half a day" }
   ];
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-blue-600 to-indigo-600 pt-20 pb-16 sm:pt-24 sm:pb-20 lg:pt-32 lg:pb-24">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl relative z-10">
+      {/* Hero */}
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
-              <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-tight text-white mb-6">
+              <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-6">
                 Automation
               </h1>
-              <div className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8 space-y-4">
-                <p>
-                  How much is manual work actually costing you? Hours per week, labor on tasks that don't need a human, opportunities you can't get to because your team is stuck in the weeds.
-                </p>
-                <p>
-                  I build systems that handle the repetitive stuff so your team can focus on what actually matters. Most clients see ROI in 4-8 weeks.
-                </p>
-              </div>
-
+              <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-10">
+                The work that eats your week... handled automatically.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
                 >
-                  Book a Strategy Call
+                  Book a Call
                 </Link>
                 <Link
                   href="/pricing"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-all duration-200"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:border-gray-400 dark:hover:border-gray-500 rounded-lg font-semibold transition-all duration-200"
                 >
                   View Pricing
                 </Link>
@@ -145,45 +76,25 @@ export default function AutomationAIClient() {
         </div>
       </section>
 
-      {/* What I Build Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      {/* What I Build */}
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-16">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                What I Build
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Automation isn't about replacing your team. It's about freeing them from the manual work that eats up their week - and giving you a clear payback timeline on every project I build. Here's what that looks like in practice.
-              </p>
-            </div>
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-16 text-center">
+              What I Build
+            </h2>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-8">
-            {automationBlocks.map((block, index) => (
-              <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-                <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-8 border border-gray-200 dark:border-gray-700 h-full">
-                  <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-4">
-                    {block.title}
+          <div className="grid sm:grid-cols-2 gap-8 lg:gap-12">
+            {services.map((service, index) => (
+              <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
+                <div>
+                  <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-3">
+                    {service.title}
                   </h3>
-                  <p className="text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
-                    {block.description}
+                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    {service.description}
                   </p>
-                  <div>
-                    <p className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-3">
-                      Examples
-                    </p>
-                    <ul className="space-y-2">
-                      {block.examples.map((example, exIndex) => (
-                        <li key={exIndex} className="flex items-start gap-3">
-                          <svg className="w-5 h-5 text-blue-600 dark:text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                          </svg>
-                          <span className="text-gray-700 dark:text-gray-300 text-sm">{example}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
                 </div>
               </SimpleScrollReveal>
             ))}
@@ -191,25 +102,23 @@ export default function AutomationAIClient() {
         </div>
       </section>
 
-      {/* Problems This Solves Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      {/* Sound Familiar */}
+      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-8 sm:mb-16">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                The Problems This Solves
-              </h2>
-            </div>
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-16 text-center">
+              Sound Familiar?
+            </h2>
           </SimpleScrollReveal>
 
-          <div className="space-y-4 sm:space-y-8">
+          <div className="space-y-10">
             {problems.map((item, index) => (
               <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-                <div className="bg-white dark:bg-gray-900 rounded-xl p-5 sm:p-8 border border-gray-200 dark:border-gray-700">
-                  <p className="text-base sm:text-lg font-semibold text-gray-900 dark:text-white mb-3 sm:mb-4 italic">
+                <div>
+                  <p className="text-lg font-medium text-gray-900 dark:text-white mb-2 italic">
                     "{item.problem}"
                   </p>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                  <p className="text-gray-600 dark:text-gray-400">
                     {item.solution}
                   </p>
                 </div>
@@ -219,69 +128,53 @@ export default function AutomationAIClient() {
         </div>
       </section>
 
-      {/* How I Work Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      {/* How I Work */}
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-8 sm:mb-16">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                How I Work
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Every business is different. I don't sell a standard package. I figure out what's actually costing you time and money, then build the systems to fix it.
-              </p>
-            </div>
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-16 text-center">
+              How I Work
+            </h2>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-3 gap-4 sm:gap-8 mb-8 sm:mb-12">
-            {steps.map((step, index) => (
-              <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-600 to-indigo-600 text-white rounded-full flex items-center justify-center font-bold text-2xl mx-auto mb-6">
-                    {step.number}
-                  </div>
-                  <h3 className="font-bold text-xl text-gray-900 dark:text-white mb-4">
-                    {step.title}
-                  </h3>
-                  <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                    {step.description}
-                  </p>
-                </div>
-              </SimpleScrollReveal>
-            ))}
-          </div>
-
           <SimpleScrollReveal direction="up">
-            <div className="text-center p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-800">
+            <div className="space-y-6 mb-10">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold">Timeline:</span> Most automation projects take 2-6 weeks depending on scope. ROI typically happens in 4-8 weeks. We'll give you specific timelines and payback calculations in your proposal.
+                <span className="font-semibold text-gray-900 dark:text-white">1. Discovery</span> — I figure out what it's costing you and what's worth automating.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="font-semibold text-gray-900 dark:text-white">2. Build</span> — I build it, test it, make sure it works.
+              </p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <span className="font-semibold text-gray-900 dark:text-white">3. Handoff</span> — Documentation, training, support. You're not dependent on me.
               </p>
             </div>
+            <p className="text-gray-600 dark:text-gray-400 text-center">
+              Timeline: 2-6 weeks. ROI in 4-8 weeks.
+            </p>
           </SimpleScrollReveal>
         </div>
       </section>
 
-      {/* Results Section */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gray-50 dark:bg-gray-800">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
+      {/* Results */}
+      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <SimpleScrollReveal direction="up">
-            <div className="text-center mb-8 sm:mb-16">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                What Clients Have Achieved
-              </h2>
-            </div>
+            <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-16 text-center">
+              Results
+            </h2>
           </SimpleScrollReveal>
 
-          <div className="grid md:grid-cols-2 gap-4 sm:gap-6 mb-8 sm:mb-12">
-            {results.map((item, index) => (
-              <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
-                <div className="bg-white dark:bg-gray-900 rounded-xl p-4 sm:p-6 border border-gray-200 dark:border-gray-700">
-                  <p className="font-semibold text-gray-900 dark:text-white mb-2">
-                    {item.company}
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-300">
-                    {item.result}
-                  </p>
+          <div className="space-y-6 mb-12">
+            {results.map((result, index) => (
+              <SimpleScrollReveal key={result.client} direction="up" delay={index * 100}>
+                <div className="flex items-center justify-between py-4 border-b border-gray-200 dark:border-gray-700">
+                  <span className="font-medium text-gray-900 dark:text-white">
+                    {result.client}
+                  </span>
+                  <span className="text-gray-600 dark:text-gray-400">
+                    {result.metric}
+                  </span>
                 </div>
               </SimpleScrollReveal>
             ))}
@@ -291,9 +184,9 @@ export default function AutomationAIClient() {
             <div className="text-center">
               <Link
                 href="/case-studies"
-                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
               >
-                See All Case Studies
+                See all
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
@@ -303,32 +196,20 @@ export default function AutomationAIClient() {
         </div>
       </section>
 
-      {/* Final CTA */}
-      <section className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-blue-600 to-indigo-600">
+      {/* CTA */}
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
-                Ready to Talk?
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-10">
+                Got a problem?
               </h2>
-              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Book a free call. I'll figure out what the problem is actually costing you and whether automation makes sense. If it does, you'll know exactly when you'll see your money back. If it doesn't, I'll tell you. No pressure, no obligation.
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Link
-                  href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg"
-                >
-                  Book a Strategy Call
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-all duration-200"
-                >
-                  View Pricing
-                </Link>
-              </div>
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center px-10 py-5 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold text-lg transition-all duration-200"
+              >
+                Book a Call
+              </Link>
             </div>
           </SimpleScrollReveal>
         </div>
