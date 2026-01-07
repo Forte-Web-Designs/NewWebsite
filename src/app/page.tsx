@@ -285,8 +285,37 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Contact Section with Calendly */}
+        <section id="contact" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mb-12">
+                <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
+                  Let's Talk
+                </h2>
+                <p className="text-lg text-gray-600 dark:text-gray-400">
+                  Book a call and tell me what's not working.
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            <SimpleScrollReveal direction="up" delay={100}>
+              <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
+                <iframe
+                  src="https://calendly.com/seth-fortewebdesigns/30min"
+                  width="100%"
+                  height="700"
+                  frameBorder="0"
+                  title="Schedule a call with Seth"
+                  className="w-full"
+                />
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
         {/* CTA - Minimal */}
-        <section className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
+        <section className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <SimpleScrollReveal direction="up">
               <div className="text-center">
