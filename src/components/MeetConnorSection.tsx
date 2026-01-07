@@ -150,7 +150,7 @@ export default function MeetSethSection() {
                     </p>
                     
                     <p>
-                      No bloated plugins, no surprise crashes, no "sorry, that'll be an extra $200" fees. Whether you go with our Forte Foundation™ website design package to get started or create something completely custom with Forte Pro™ website design package, you're getting a partner who genuinely cares about your success.
+                      No bloated plugins, no surprise crashes, no "sorry, that'll be an extra $200" fees. Whether you go with the Forte Foundation™ package to get started or create something completely custom with Forte Pro™, you're getting a partner who genuinely cares about your success.
                     </p>
                   </div>
                 </div>

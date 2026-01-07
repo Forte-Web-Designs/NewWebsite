@@ -5,7 +5,7 @@ import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
   title: 'Services | AI Automation, Custom Software & Web Design | Forte Web Designs',
-  description: 'We build automation systems, custom software, and integrations that eliminate manual work and scale your business. Everything custom-built for how you actually operate.',
+  description: 'I build automation systems, custom software, and integrations that eliminate manual work and scale your business. Everything custom-built for how you actually operate.',
 };
 
 const services = [
@@ -13,8 +13,8 @@ const services = [
     id: "ai-automation",
     icon: "puzzle",
     title: "Automation",
-    subhead: "Get your hours back",
-    description: "The manual work eating up your week - lead routing, follow-ups, data entry, reporting - handled automatically. Your team focuses on work that actually moves the needle.",
+    subhead: "The work that eats your week",
+    description: "Lead routing, follow-ups, data entry, reporting... handled automatically. I build with n8n, Make.com, Zapier, or direct API integrations when off-the-shelf doesn't cut it.",
     href: "/services/automation-ai",
     gradient: "from-blue-600 to-indigo-600"
   },
@@ -22,8 +22,8 @@ const services = [
     id: "integrations",
     icon: "flash",
     title: "CRM & Integrations",
-    subhead: "One source of truth",
-    description: "Stop arguing about which spreadsheet has the right number. Your CRM, email, forms, and tools working together with clean data, automatic handoffs, and real-time visibility across everything.",
+    subhead: "One number everyone trusts",
+    description: "Your CRM says one thing, your spreadsheet says another, someone's got a third version in their head. I connect your tools so data flows automatically and you stop arguing about which number is right.",
     href: "/services/integrations",
     gradient: "from-indigo-600 to-purple-600"
   },
@@ -31,8 +31,8 @@ const services = [
     id: "custom-software",
     icon: "code",
     title: "Custom Software",
-    subhead: "Software that fits how you work",
-    description: "Custom dashboards, internal tools, and applications built for your specific workflows. No templates. No limitations. Software that fits how you work.",
+    subhead: "Built around how you actually work",
+    description: "Dashboards, inventory systems, internal tools... built from scratch for your operations. Not a template you have to work around.",
     href: "/services/custom-software",
     gradient: "from-purple-600 to-pink-600"
   },
@@ -40,8 +40,8 @@ const services = [
     id: "web-design",
     icon: "click",
     title: "Web Design",
-    subhead: "Sites that convert",
-    description: "Hand-coded websites built to perform. Fast loading, SEO-optimized, designed to turn visitors into customers.",
+    subhead: "The starting point",
+    description: "Your website is just the front door. I build the site, connect it to your CRM, automate the follow-up, set up the dashboards. One person, whole system.",
     href: "/services/web-design",
     gradient: "from-pink-600 to-red-600"
   }
@@ -50,22 +50,22 @@ const services = [
 const results = [
   {
     client: "Modern Bungalow",
-    metric: "Customer emails that send themselves",
+    metric: "15+ hours/month back",
     href: "/case-studies/modern-bungalow"
   },
   {
     client: "Hollow Bamboo",
-    metric: "Complete equipment visibility",
+    metric: "20+ hours/week back",
     href: "/case-studies/hollow-bamboo"
   },
   {
     client: "CR Deals Cincinnati",
-    metric: "Product listings that generate themselves",
+    metric: "$52K/year saved",
     href: "/case-studies/fast-track-auction"
   },
   {
     client: "Revolut",
-    metric: "£4M opportunity uncovered",
+    metric: "£4M opportunity found",
     href: "/case-studies/revolut"
   }
 ];
@@ -79,10 +79,10 @@ export default function ServicesPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h1 className="font-display font-bold text-3xl sm:text-4xl md:text-5xl lg:text-6xl leading-tight text-white mb-6">
-                What We Do
+                What I Build
               </h1>
               <p className="text-lg sm:text-xl text-blue-100 max-w-3xl mx-auto mb-8">
-                We start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then we build the right solution: automation, integrations, custom software, or infrastructure that pays for itself fast and keeps delivering after that. Everything custom-built for how you actually operate.
+                Before I build anything, I figure out what the problem is actually costing you... hours per week, labor costs, missed opportunities. Then I build something that pays for itself fast and keeps delivering after that. Custom-built for how you actually work.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                   href="/contact"
                   className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg"
                 >
-                  Book a Strategy Call
+                  Book a Call
                 </Link>
                 <Link
                   href="/pricing"
@@ -109,11 +109,8 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-8 sm:mb-16">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                How We Help
-              </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Choose the area that fits your situation, or combine them for maximum impact.
+              <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+                Pick what fits. Or combine them.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -154,12 +151,9 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-8 sm:mb-16">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                Results
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white">
+                What I've Built
               </h2>
-              <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-                Real outcomes from real projects.
-              </p>
             </div>
           </SimpleScrollReveal>
 
@@ -208,16 +202,16 @@ export default function ServicesPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
-                Ready to Talk?
+                Got a Problem?
               </h2>
               <p className="text-lg sm:text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Book a free strategy call. We'll figure out what the problem is actually costing you and whether we can help. If we can, you'll know exactly when you'll see your investment back. If we can't, we'll tell you. No pressure, no obligation.
+                If I can help, you'll know exactly when you'll see your money back. If I can't, I'll tell you.
               </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg text-lg"
               >
-                Book Your Strategy Call
+                Book a Call
               </Link>
             </div>
           </SimpleScrollReveal>

@@ -4,11 +4,11 @@ import Link from 'next/link';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
 export default function CustomSoftwareClient() {
-  // What we build blocks
+  // What I build blocks
   const softwareBlocks = [
     {
       title: "Custom Dashboards",
-      description: "You shouldn't have to log into six different tools to understand your business. We build dashboards that pull your data into one view and show you what actually matters.",
+      description: "You shouldn't have to log into six different tools to understand your business. I build dashboards that pull your data into one view and show you what actually matters.",
       examples: [
         "Revenue and performance metrics in real-time",
         "Multi-source data aggregation (CRM, payments, inventory, etc.)",
@@ -17,7 +17,7 @@ export default function CustomSoftwareClient() {
     },
     {
       title: "Internal Tools",
-      description: "When off-the-shelf software forces you to adapt your workflow, it creates friction. We build tools that match how your team actually works.",
+      description: "When off-the-shelf software forces you to adapt your workflow, it creates friction. I build tools that match how your team actually works.",
       examples: [
         "Inventory management systems",
         "Client portals and booking systems",
@@ -26,7 +26,7 @@ export default function CustomSoftwareClient() {
     },
     {
       title: "Data Processing",
-      description: "Some data operations are too complex for standard automation platforms. We build systems that can handle heavy transformations and intelligent processing.",
+      description: "Some data operations are too complex for standard automation platforms. I build systems that can handle heavy transformations and intelligent processing.",
       examples: [
         "Bulk data transformations and cleanup",
         "AI-powered analysis and categorization",
@@ -35,7 +35,7 @@ export default function CustomSoftwareClient() {
     },
     {
       title: "API Integrations",
-      description: "When tools don't talk to each other, someone has to manually move data. We build the connections that make your systems work as one.",
+      description: "When tools don't talk to each other, someone has to manually move data. I build the connections that make your systems work as one.",
       examples: [
         "Bi-directional sync between platforms",
         "Custom middleware for legacy systems",
@@ -52,7 +52,7 @@ export default function CustomSoftwareClient() {
     },
     {
       problem: "Our software doesn't work the way we work.",
-      solution: "We build around your processes, not the other way around. No forcing your team to adapt to software limitations."
+      solution: "I build around your processes, not the other way around. No forcing your team to adapt to software limitations."
     },
     {
       problem: "Data is scattered across multiple systems with no unified view.",
@@ -64,31 +64,31 @@ export default function CustomSoftwareClient() {
     },
     {
       problem: "We know we need to fix this, but custom software sounds expensive.",
-      solution: "It's not about whether custom software costs money. It's about whether it costs less than the problem. We help you see the real numbers - what the workarounds cost now, what they'll cost as you grow, and exactly when a real solution pays for itself."
+      solution: "It's not about whether custom software costs money. It's about whether it costs less than the problem. I help you see the real numbers - what the workarounds cost now, what they'll cost as you grow, and exactly when a real solution pays for itself."
     }
   ];
 
-  // How we work steps
+  // How I work steps
   const steps = [
     {
       number: "1",
       title: "Discovery",
-      description: "We start by understanding what the current workarounds are costing you - hours wasted, errors, growth you can't capture. Then we map your workflows, identify the pain points, and define exactly what needs to be built. You'll know the scope, timeline, investment, and payback period before we start. For complex projects, we start with a paid discovery phase - we dig into your operations and prove the approach works before you commit to the full build."
+      description: "I start by understanding what the current workarounds are costing you - hours wasted, errors, growth you can't capture. Then I map your workflows, identify the pain points, and define exactly what needs to be built. You'll know the scope, timeline, investment, and payback period before I start. For complex projects, I start with a paid discovery phase - I dig into your operations and prove the approach works before you commit to the full build."
     },
     {
       number: "2",
       title: "Design",
-      description: "You'll see mockups and prototypes before we write production code. No surprises. You approve the design, then we build."
+      description: "You'll see mockups and prototypes before I write production code. No surprises. You approve the design, then I build."
     },
     {
       number: "3",
       title: "Build",
-      description: "Development with weekly updates. You'll see progress throughout, not just at the end. We test as we go."
+      description: "Development with weekly updates. You'll see progress throughout, not just at the end. I test as I go."
     },
     {
       number: "4",
       title: "Handoff",
-      description: "You get working software, full documentation, and training for your team. We stick around to make sure everything runs smoothly."
+      description: "You get working software, full documentation, and training for your team. I stick around to make sure everything runs smoothly."
     }
   ];
 
@@ -133,7 +133,7 @@ export default function CustomSoftwareClient() {
                   When off-the-shelf tools don't cut it, you end up with spreadsheet workarounds, manual processes, and duct-taped solutions that break as you grow.
                 </p>
                 <p>
-                  We build software that fits how your business actually works - dashboards, internal tools, integrations, and applications designed for your operations. And we start by figuring out what the workarounds are actually costing you.
+                  I build software that fits how your business actually works - dashboards, internal tools, integrations, and applications designed for your operations. And I start by figuring out what the workarounds are actually costing you.
                 </p>
               </div>
 
@@ -162,14 +162,14 @@ export default function CustomSoftwareClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                What We Build
+                What I Build
               </h2>
               <div className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto space-y-4">
                 <p>
-                  We build software that actually fits how your business works. No generic templates forcing you to adapt your workflows. No limitations from platforms built for everyone else.
+                  I build software that actually fits how your business works. No generic templates forcing you to adapt your workflows. No limitations from platforms built for everyone else.
                 </p>
                 <p>
-                  Before we scope anything, we figure out what the current workarounds are costing you - hours per week, errors, limitations on growth. Once we know that number, you'll know exactly when custom software pays for itself.
+                  Before I scope anything, I figure out what the current workarounds are costing you - hours per week, errors, limitations on growth. Once I know that number, you'll know exactly when custom software pays for itself.
                 </p>
               </div>
             </div>
@@ -213,7 +213,7 @@ export default function CustomSoftwareClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                The Problems This Solves
+                Sound Familiar?
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -241,10 +241,10 @@ export default function CustomSoftwareClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                How We Work
+                How I Work
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Custom software projects vary in scope and complexity. We'll scope your project specifically and give you a clear timeline and investment before any work begins.
+                Custom software projects vary in scope and complexity. I'll scope your project specifically and give you a clear timeline and investment before any work begins.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -358,29 +358,18 @@ export default function CustomSoftwareClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
-                Ready to Talk?
+                Got a Problem?
               </h2>
-              <div className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto space-y-4">
-                <p>
-                  If you've hit the limits of what off-the-shelf tools can do and you're patching things together with spreadsheets and workarounds, let's figure out what that's actually costing you.
-                </p>
-                <p>
-                  We'll scope out what custom software could look like, give you a clear picture of timeline and investment, and show you exactly when it pays for itself. If it makes sense, you'll have a clear path forward. If it doesn't, we'll tell you.
-                </p>
-              </div>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                If I can help, you'll know exactly when you'll see your money back. If I can't, I'll tell you.
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg text-lg"
                 >
-                  Book a Strategy Call
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-all duration-200"
-                >
-                  View Pricing
+                  Book a Call
                 </Link>
               </div>
             </div>

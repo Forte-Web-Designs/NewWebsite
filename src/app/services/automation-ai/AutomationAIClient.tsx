@@ -4,11 +4,11 @@ import Link from 'next/link';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
 export default function AutomationAIClient() {
-  // What we build blocks
+  // What I build blocks
   const automationBlocks = [
     {
       title: "Lead Response and Follow-Up",
-      description: "When a lead comes in, time matters. We build systems that respond instantly, route to the right person, and follow up automatically until you get an answer. No leads falling through cracks. No manual reminders.",
+      description: "When a lead comes in, time matters. I build systems that respond instantly, route to the right person, and follow up automatically until you get an answer. No leads falling through cracks. No manual reminders.",
       examples: [
         "Missed call text-back (responds in seconds, not hours)",
         "Form submissions routed to the right team member",
@@ -17,7 +17,7 @@ export default function AutomationAIClient() {
     },
     {
       title: "Sales and Quoting",
-      description: "Getting quotes out fast wins deals. We build systems that help your team quote faster and follow up consistently without chasing spreadsheets.",
+      description: "Getting quotes out fast wins deals. I build systems that help your team quote faster and follow up consistently without chasing spreadsheets.",
       examples: [
         "Quote templates that populate automatically",
         "Follow-up reminders until you get a yes or no",
@@ -26,7 +26,7 @@ export default function AutomationAIClient() {
     },
     {
       title: "Customer Communication",
-      description: "Your customers expect updates. We build systems that send the right message at the right time without anyone typing an email.",
+      description: "Your customers expect updates. I build systems that send the right message at the right time without anyone typing an email.",
       examples: [
         "Order status updates triggered by your systems",
         "Appointment reminders that reduce no-shows",
@@ -35,7 +35,7 @@ export default function AutomationAIClient() {
     },
     {
       title: "Reporting and Visibility",
-      description: "You shouldn't have to dig through three tools to know how your business is doing. We build dashboards that show you what's working and what needs attention.",
+      description: "You shouldn't have to dig through three tools to know how your business is doing. I build dashboards that show you what's working and what needs attention.",
       examples: [
         "Weekly scorecards delivered automatically",
         "Alerts when something needs your attention",
@@ -47,7 +47,7 @@ export default function AutomationAIClient() {
   // Problems this solves
   const problems = [
     {
-      problem: "We're dropping leads because no one follows up fast enough.",
+      problem: "I'm dropping leads because no one follows up fast enough.",
       solution: "Automation responds in seconds and keeps following up until you get an answer. Nothing falls through."
     },
     {
@@ -59,31 +59,31 @@ export default function AutomationAIClient() {
       solution: "Dashboards pull data from everywhere and show you what matters. No digging, no asking."
     },
     {
-      problem: "We're growing but our processes can't keep up.",
+      problem: "I'm growing but my processes can't keep up.",
       solution: "Automation scales without adding headcount. More volume, same team."
     },
     {
-      problem: "We know we should automate, but we keep putting it off.",
+      problem: "I know I should automate, but I keep putting it off.",
       solution: "Every week you wait costs you the same hours and frustration. Most clients see ROI in 4-8 weeks. The math usually makes the decision obvious."
     }
   ];
 
-  // How we work steps
+  // How I work steps
   const steps = [
     {
       number: "1",
       title: "Discovery",
-      description: "We start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then we look at your workflows, find the bottlenecks, and identify what's worth automating. Not every workflow needs automation. We'll tell you what does and what doesn't - even if it costs us the project. For complex projects, we offer a paid discovery phase where we prove the approach works before you commit to the full build."
+      description: "I start by understanding what the problem is costing you - hours per week, labor costs, missed opportunities. Then I look at your workflows, find the bottlenecks, and identify what's worth automating. Not every workflow needs automation. I'll tell you what does and what doesn't - even if it costs me the project. For complex projects, I offer a paid discovery phase where I prove the approach works before you commit to the full build."
     },
     {
       number: "2",
       title: "Build",
-      description: "We build the systems, test them with your team, and make sure everything works before going live. No \"hope it works\" deployments."
+      description: "I build the systems, test them with your team, and make sure everything works before going live. No \"hope it works\" deployments."
     },
     {
       number: "3",
       title: "Handoff",
-      description: "You get documentation, training, and support. The goal is systems that run without you calling us every week."
+      description: "You get documentation, training, and support. The goal is systems that run without you calling me every week."
     }
   ];
 
@@ -122,7 +122,7 @@ export default function AutomationAIClient() {
                   How much is manual work actually costing you? Hours per week, labor on tasks that don't need a human, opportunities you can't get to because your team is stuck in the weeds.
                 </p>
                 <p>
-                  We build systems that handle the repetitive stuff so your team can focus on what actually matters. Most clients see ROI in 4-8 weeks.
+                  I build systems that handle the repetitive stuff so your team can focus on what actually matters. Most clients see ROI in 4-8 weeks.
                 </p>
               </div>
 
@@ -145,16 +145,16 @@ export default function AutomationAIClient() {
         </div>
       </section>
 
-      {/* What We Build Section */}
+      {/* What I Build Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                What We Build
+                What I Build
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Automation isn't about replacing your team. It's about freeing them from the manual work that eats up their week - and giving you a clear payback timeline on every project we build. Here's what that looks like in practice.
+                Automation isn't about replacing your team. It's about freeing them from the manual work that eats up their week - and giving you a clear payback timeline on every project I build. Here's what that looks like in practice.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -219,16 +219,16 @@ export default function AutomationAIClient() {
         </div>
       </section>
 
-      {/* How We Work Section */}
+      {/* How I Work Section */}
       <section className="py-16 sm:py-20 lg:py-24 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-8 sm:mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                How We Work
+                How I Work
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Every business is different. We don't sell a standard package. We figure out what's actually costing you time and money, then build the systems to fix it.
+                Every business is different. I don't sell a standard package. I figure out what's actually costing you time and money, then build the systems to fix it.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -312,7 +312,7 @@ export default function AutomationAIClient() {
                 Ready to Talk?
               </h2>
               <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                Book a free strategy call. We'll figure out what the problem is actually costing you and whether automation makes sense. If it does, you'll know exactly when you'll see your investment back. If it doesn't, we'll tell you. No pressure, no obligation.
+                Book a free call. I'll figure out what the problem is actually costing you and whether automation makes sense. If it does, you'll know exactly when you'll see your money back. If it doesn't, I'll tell you. No pressure, no obligation.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">

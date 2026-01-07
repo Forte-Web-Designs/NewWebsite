@@ -3,7 +3,7 @@ import IntegrationsClient from './IntegrationsClient';
 
 export const metadata: Metadata = {
   title: "CRM & Integrations | Forte Web Designs",
-  description: "Make your tools actually talk to each other. We connect your CRM, email, forms, and business systems so data flows automatically and your team stops copy-pasting between platforms.",
+  description: "Make your tools actually talk to each other. I connect your CRM, email, forms, and business systems so data flows automatically and your team stops copy-pasting between platforms.",
   keywords: [
     "CRM integration", "system integration", "HubSpot integration",
     "Salesforce integration", "API integration", "workflow automation",
@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: "CRM & Integrations | Forte Web Designs",
-    description: "Make your tools actually talk to each other. We connect your CRM, email, forms, and business systems so data flows automatically and your team stops copy-pasting between platforms.",
+    description: "Make your tools actually talk to each other. I connect your CRM, email, forms, and business systems so data flows automatically and your team stops copy-pasting between platforms.",
     url: "https://fortewebdesigns.com/services/integrations/",
     type: "website"
   },

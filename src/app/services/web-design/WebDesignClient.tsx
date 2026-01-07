@@ -4,11 +4,11 @@ import Link from 'next/link';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
 export default function WebDesignClient() {
-  // What we build blocks
+  // What I build blocks
   const designBlocks = [
     {
       title: "Custom Design",
-      description: "Your brand isn't generic. Your website shouldn't be either. We design from scratch based on your business, your audience, and what you're trying to accomplish.",
+      description: "Your brand isn't generic. Your website shouldn't be either. I design from scratch based on your business, your audience, and what you're trying to accomplish.",
       examples: [
         "Design that matches your brand identity",
         "Layout built around your specific goals",
@@ -17,7 +17,7 @@ export default function WebDesignClient() {
     },
     {
       title: "Performance",
-      description: "Slow sites lose visitors. We build sites that load fast because the code is clean and optimized, not bloated with plugins and page builder overhead.",
+      description: "Slow sites lose visitors. I build sites that load fast because the code is clean and optimized, not bloated with plugins and page builder overhead.",
       examples: [
         "90+ PageSpeed scores",
         "Fast load times on mobile and desktop",
@@ -26,7 +26,7 @@ export default function WebDesignClient() {
     },
     {
       title: "SEO Foundation",
-      description: "A beautiful site that nobody finds is useless. We build with SEO fundamentals baked in from the start, not bolted on after.",
+      description: "A beautiful site that nobody finds is useless. I build with SEO fundamentals baked in from the start, not bolted on after.",
       examples: [
         "Clean URL structure and semantic HTML",
         "Meta tags, schema markup, and proper headings",
@@ -35,7 +35,7 @@ export default function WebDesignClient() {
     },
     {
       title: "Lead Capture",
-      description: "Your website should generate leads, not just look good. We build with conversion in mind, making it easy for visitors to take the next step.",
+      description: "Your website should generate leads, not just look good. I build with conversion in mind, making it easy for visitors to take the next step.",
       examples: [
         "Clear calls to action throughout",
         "Contact forms that actually work",
@@ -72,27 +72,27 @@ export default function WebDesignClient() {
     }
   ];
 
-  // How we work steps
+  // How I work steps
   const steps = [
     {
       number: "1",
       title: "Discovery",
-      description: "We start by understanding what you want the website to actually do - generate leads, establish credibility, convert visitors. Then we learn about your business, your audience, and what success looks like. Goals first, design second."
+      description: "I start by understanding what you want the website to actually do - generate leads, establish credibility, convert visitors. Then I learn about your business, your audience, and what success looks like. Goals first, design second."
     },
     {
       number: "2",
       title: "Design",
-      description: "We create mockups based on your brand and goals. You see exactly what you're getting before we write any code."
+      description: "I create mockups based on your brand and goals. You see exactly what you're getting before I write any code."
     },
     {
       number: "3",
       title: "Build",
-      description: "Hand-coded development. Clean, fast, optimized. We build it right the first time."
+      description: "Hand-coded development. Clean, fast, optimized. I build it right the first time."
     },
     {
       number: "4",
       title: "Launch and Train",
-      description: "We launch, train you on updates, and make sure everything works. You're not dependent on us for simple changes."
+      description: "I launch, train you on updates, and make sure everything works. You're not dependent on me for simple changes."
     }
   ];
 
@@ -120,7 +120,7 @@ export default function WebDesignClient() {
     },
     {
       title: "Training",
-      description: "We show you how to make basic updates yourself. You're not stuck calling us for every small change."
+      description: "I show you how to make basic updates yourself. You're not stuck calling me for every small change."
     }
   ];
 
@@ -168,14 +168,14 @@ export default function WebDesignClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                What We Build
+                What I Build
               </h2>
               <div className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto space-y-4">
                 <p>
                   Your website is often the first impression - and you don't get a second one. A slow, outdated, or confusing site costs you credibility before you ever get a chance to make your pitch.
                 </p>
                 <p>
-                  We build sites that load fast, rank well, and turn visitors into customers. No templates. No drag-and-drop builders. Hand-coded for performance.
+                  I build sites that load fast, rank well, and turn visitors into customers. No templates. No drag-and-drop builders. Hand-coded for performance.
                 </p>
               </div>
             </div>
@@ -219,7 +219,7 @@ export default function WebDesignClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                The Problems This Solves
+                Sound Familiar?
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -247,7 +247,7 @@ export default function WebDesignClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center mb-16">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-                How We Work
+                How I Work
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -321,29 +321,18 @@ export default function WebDesignClient() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
-                Ready to Talk?
+                Got a Problem?
               </h2>
-              <div className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto space-y-4">
-                <p>
-                  If your website isn't working for your business - if it's slow, outdated, or not converting visitors into leads - let's figure out what it's costing you.
-                </p>
-                <p>
-                  We'll look at your current site, identify what's working and what's not, and show you what a custom build could do for your credibility and conversion. If it makes sense, you'll have a clear path forward. If your current site just needs tweaks, we'll tell you that too.
-                </p>
-              </div>
+              <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
+                If I can help, you'll know exactly when you'll see your money back. If I can't, I'll tell you.
+              </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <Link
                   href="/contact"
-                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 hover:bg-gray-100 rounded-lg font-semibold transition-all duration-200 shadow-lg text-lg"
                 >
-                  Book a Strategy Call
-                </Link>
-                <Link
-                  href="/pricing"
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-all duration-200"
-                >
-                  View Pricing
+                  Book a Call
                 </Link>
               </div>
             </div>
