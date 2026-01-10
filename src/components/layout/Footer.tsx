@@ -126,11 +126,11 @@ export default function Footer() {
                     ) : section.heading === "Connect" ? (
                       <a
                         href={point.href}
-                        target={point.external ? "_blank" : undefined}
-                        rel={point.external ? "noopener noreferrer" : undefined}
+                        target={"external" in point && point.external ? "_blank" : undefined}
+                        rel={"external" in point && point.external ? "noopener noreferrer" : undefined}
                         className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2"
                       >
-                        {point.icon && <Icon name={point.icon} alt={point.text} size={18} folder="footer" />}
+                        {"icon" in point && point.icon && <Icon name={point.icon} alt={point.text} size={18} folder="footer" />}
                         {point.text}
                       </a>
                     ) : (
