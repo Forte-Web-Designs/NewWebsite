@@ -141,13 +141,13 @@ export default function AutomationAIClient() {
           <SimpleScrollReveal direction="up">
             <div className="space-y-6 mb-10">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">1. Discovery</span> — I figure out what it's costing you and what's worth automating.
+                <span className="font-semibold text-gray-900 dark:text-white">1. Discovery</span> - I figure out what it's costing you and what's worth automating.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">2. Build</span> — I build it, test it, make sure it works.
+                <span className="font-semibold text-gray-900 dark:text-white">2. Build</span> - I build it, test it, make sure it works.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">3. Handoff</span> — Documentation, training, support. You're not dependent on me.
+                <span className="font-semibold text-gray-900 dark:text-white">3. Handoff</span> - Documentation, training, support. You're not dependent on me.
               </p>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-center">

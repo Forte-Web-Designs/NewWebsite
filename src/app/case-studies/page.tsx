@@ -4,7 +4,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
 export const metadata: Metadata = {
   title: 'Case Studies | Real Results from Automation Projects | Forte Web Designs',
-  description: 'Real projects with real outcomes. See how we\'ve saved clients 1,000+ hours annually, $52K in costs, and built systems that run autonomously.',
+  description: 'Real projects with real outcomes. See how I\'ve saved clients 1,000+ hours annually, $52K in costs, and built systems that run autonomously.',
 };
 
 const caseStudies = [
@@ -155,7 +155,7 @@ export default function CaseStudiesPage() {
                   Real projects. Real outcomes. Most of these systems paid for themselves in 4-8 weeks - then kept delivering month after month.
                 </p>
                 <p>
-                  See what we've built, what it cost clients before we fixed it, and what changed after.
+                  See what I've built, what it cost clients before I fixed it, and what changed after.
                 </p>
               </div>
             </div>
@@ -200,10 +200,10 @@ export default function CaseStudiesPage() {
                     </p>
                   </div>
 
-                  {/* What we built */}
+                  {/* What I built */}
                   <div className="mb-6">
                     <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-2 uppercase tracking-wide">
-                      What we built
+                      What I built
                     </h3>
                     <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                       {study.solution}

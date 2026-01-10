@@ -90,7 +90,7 @@ export default function AboutUs() {
                     The value is understanding your business. Spotting the opportunities you're missing. Building for where you're headed, not just what you think you need today.
                   </p>
                   <p>
-                    Every proposal I send includes a full project plan - gotchas, hidden costs, solution outline. Free, no contract required. Because the hard part isn't building. It's understanding.
+                    Every proposal I send includes a full project plan - gotchas, hidden costs, solution outline. It's free. No contract required. Because the hard part isn't building. It's understanding.
                   </p>
                   <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-700">
                     <p className="text-gray-800 dark:text-gray-200">
@@ -117,7 +117,13 @@ export default function AboutUs() {
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <SimpleScrollReveal direction="up" delay={200}>
                 <p>
-                  5+ years building enterprise systems at Wells Fargo - the kind that handle millions of transactions and can't afford to break. Featured in Dallas Innovates, BUiLT, and Orbie.
+                  5+ years building enterprise systems at Wells Fargo - the kind that handle millions of transactions and can't afford to break. Featured in Dallas Voyage, Dallas Innovates, BUiLT, and Orbie.
+                </p>
+              </SimpleScrollReveal>
+
+              <SimpleScrollReveal direction="up" delay={225}>
+                <p>
+                  Upwork: Rising Talent, 100% Job Success, 5-star feedback across every project so far.
                 </p>
               </SimpleScrollReveal>
 
@@ -227,7 +233,7 @@ export default function AboutUs() {
                   href="/contact"
                   className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 font-semibold px-6 sm:px-12 py-3 sm:py-4 rounded-xl hover:bg-blue-50 hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl text-base sm:text-lg w-full sm:w-auto"
                 >
-                  Book Your Free Strategy Call
+                  Book a Call
                 </Link>
                 <Link
                   href="/case-studies"

@@ -43,7 +43,7 @@ export default function WebDesignClient() {
     { tier: "Website only", range: "$3,000 - $6,000" },
     { tier: "Website + CRM", range: "$5,000 - $10,000" },
     { tier: "Website + CRM + automation", range: "$8,000 - $15,000" },
-    { tier: "Full system", range: "$12,000 - $25,000" }
+    { tier: "Website system", range: "$12,000 - $25,000" }
   ];
 
   return (
@@ -142,16 +142,16 @@ export default function WebDesignClient() {
           <SimpleScrollReveal direction="up">
             <div className="space-y-6 mb-10">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">1. Discovery</span> — I figure out what you actually need. Sometimes just a site, sometimes the whole system.
+                <span className="font-semibold text-gray-900 dark:text-white">1. Discovery</span> - I figure out what you actually need. Sometimes just a site, sometimes the whole system.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">2. Design</span> — You see mockups before I write code.
+                <span className="font-semibold text-gray-900 dark:text-white">2. Design</span> - You see mockups before I write code.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">3. Build</span> — Site, CRM, automation. Layers added as we go or all at once.
+                <span className="font-semibold text-gray-900 dark:text-white">3. Build</span> - Site, CRM, automation. Layers added as we go or all at once.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">4. Launch</span> — Training on updates. You're not stuck depending on me.
+                <span className="font-semibold text-gray-900 dark:text-white">4. Launch</span> - Training on updates. You're not stuck depending on me.
               </p>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-center">
@@ -196,7 +196,7 @@ export default function WebDesignClient() {
                 Already Have a Site?
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                We don't have to start over. I can just add:
+                You don't have to start over. I can just add:
               </p>
               <ul className="text-gray-700 dark:text-gray-300 space-y-2 mb-8">
                 <li>CRM connection</li>

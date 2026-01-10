@@ -149,16 +149,16 @@ export default function CustomSoftwareClient() {
           <SimpleScrollReveal direction="up">
             <div className="space-y-6 mb-10">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">1. Discovery</span> — I figure out what the workarounds are costing you.
+                <span className="font-semibold text-gray-900 dark:text-white">1. Discovery</span> - I figure out what the workarounds are costing you.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">2. Design</span> — You see mockups before I write code.
+                <span className="font-semibold text-gray-900 dark:text-white">2. Design</span> - You see mockups before I write code.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">3. Build</span> — Development with regular updates. You see progress throughout.
+                <span className="font-semibold text-gray-900 dark:text-white">3. Build</span> - Development with regular updates. You see progress throughout.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">4. Handoff</span> — Working software, documentation, training.
+                <span className="font-semibold text-gray-900 dark:text-white">4. Handoff</span> - Working software, documentation, training.
               </p>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-center">

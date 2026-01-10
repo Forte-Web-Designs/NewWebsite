@@ -218,22 +218,35 @@ export default function Home() {
               </h2>
             </SimpleScrollReveal>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 lg:gap-12">
+            <div className="space-y-6 sm:space-y-0 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 lg:gap-12">
               {services.map((service, index) => (
                 <SimpleScrollReveal key={service.title} direction="up" delay={index * 100} className="h-full">
                   <Link href={service.href} className="group block h-full">
-                    <div className="flex flex-row sm:flex-col items-start sm:items-center gap-4 sm:gap-0 sm:text-center">
-                      <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 sm:mb-5 sm:mx-auto">
+                    {/* Mobile: horizontal row layout */}
+                    <div className="flex items-center gap-4 sm:hidden">
+                      <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                         <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                       </div>
-                      <div className="flex-1 sm:flex-none min-w-0">
-                        <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-1 sm:mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      <div>
+                        <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                           {service.title}
                         </h3>
                         <p className="text-gray-600 dark:text-gray-400">
                           {service.tagline}
                         </p>
                       </div>
+                    </div>
+                    {/* Desktop: centered vertical layout */}
+                    <div className="hidden sm:flex sm:flex-col sm:items-center sm:text-center">
+                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-5">
+                        <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                      </div>
+                      <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        {service.title}
+                      </h3>
+                      <p className="text-gray-600 dark:text-gray-400">
+                        {service.tagline}
+                      </p>
                     </div>
                   </Link>
                 </SimpleScrollReveal>
