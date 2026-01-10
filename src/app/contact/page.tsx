@@ -142,7 +142,7 @@ export default function Contact() {
             </div>
             <div className="mt-6">
               <p className="text-sm text-gray-500 dark:text-gray-400">
-                Based in Dallas, Texas. Working with clients everywhere.
+                Based in DFW (Grapevine, TX). Working with clients everywhere.
               </p>
             </div>
           </div>

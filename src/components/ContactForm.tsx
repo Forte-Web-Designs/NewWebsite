@@ -356,7 +356,7 @@ export default function ContactForm({ className = "" }: ContactFormProps) {
                     <input type="hidden" name="form-name" value="contact" />
                     <div style={{ display: 'none' }}>
                       <label>
-                        Don't fill this out if you're human: <input name="bot-field" />
+                        Leave this field blank: <input name="bot-field" />
                       </label>
                     </div>
                   <div className="grid md:grid-cols-2 gap-6">

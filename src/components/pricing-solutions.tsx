@@ -67,7 +67,7 @@ export function PricingPage() {
                 Pricing
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-10">
-                Most projects pay for themselves in 4-8 weeks.
+                Most automation projects pay for themselves in 4-8 weeks.
               </p>
               <Link
                 href="/contact"
@@ -117,7 +117,7 @@ export function PricingPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center border-y border-gray-200 dark:border-gray-700 py-8">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">Web Design</span> — Starting at $3,000. Website + CRM + automation as one system.{' '}
+                <span className="font-semibold text-gray-900 dark:text-white">Web Design</span> - Starting at $3,000. Website, CRM, and automation as one system.{' '}
                 <Link href="/services/web-design" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
                   Learn more →
                 </Link>
@@ -133,7 +133,7 @@ export function PricingPage() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">Monthly Support</span> — $997-1,997/month. Someone who knows your system on call.{' '}
+                <span className="font-semibold text-gray-900 dark:text-white">Monthly Support</span> - $497-1,997/month. Someone who knows your system on call.{' '}
                 <Link href="/support" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
                   Learn more →
                 </Link>
@@ -166,7 +166,7 @@ export function PricingPage() {
                 <div className="flex items-center justify-between py-5 border-b border-gray-200 dark:border-gray-700 group cursor-pointer hover:bg-gray-100 dark:hover:bg-gray-700/50 -mx-4 px-4 transition-colors">
                   <div>
                     <p className="font-medium text-gray-900 dark:text-white">
-                      {result.client} — <span className="text-gray-600 dark:text-gray-400">{result.metric}</span>
+                      {result.client} - <span className="text-gray-600 dark:text-gray-400">{result.metric}</span>
                     </p>
                     <p className="text-gray-500 dark:text-gray-500 text-sm">
                       {result.description}

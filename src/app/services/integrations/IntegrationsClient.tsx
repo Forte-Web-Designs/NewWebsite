@@ -150,16 +150,16 @@ export default function IntegrationsClient() {
           <SimpleScrollReveal direction="up">
             <div className="space-y-6 mb-10">
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">1. Audit</span> — I map your tools, find the gaps, figure out what's costing you.
+                <span className="font-semibold text-gray-900 dark:text-white">1. Audit</span> - I map your tools, find the gaps, figure out what's costing you.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">2. Plan</span> — Clear plan for what gets connected and how data flows.
+                <span className="font-semibold text-gray-900 dark:text-white">2. Plan</span> - Clear plan for what gets connected and how data flows.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">3. Build</span> — I build it, test it, make sure it works before you rely on it.
+                <span className="font-semibold text-gray-900 dark:text-white">3. Build</span> - I build it, test it, make sure it works before you rely on it.
               </p>
               <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">4. Train</span> — Your team knows how it works. You're not dependent on me.
+                <span className="font-semibold text-gray-900 dark:text-white">4. Train</span> - Your team knows how it works. You're not dependent on me.
               </p>
             </div>
             <p className="text-gray-600 dark:text-gray-400 text-center">
