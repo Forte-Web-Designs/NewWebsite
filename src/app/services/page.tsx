@@ -92,19 +92,19 @@ export default function ServicesPage() {
       {/* Services - Minimal */}
       <section className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          {/* Mobile/Tablet: stacked list - use horizontal layout until lg */}
-          <div className="flex flex-col gap-8 lg:hidden max-w-md mx-auto sm:max-w-lg">
+          {/* Mobile/Tablet: 2x2 grid of centered boxes */}
+          <div className="grid grid-cols-2 gap-4 lg:hidden">
             {services.map((service, index) => (
-              <SimpleScrollReveal key={service.title} direction="up" delay={index * 100} className="w-full">
-                <Link href={service.href} className="group flex items-start gap-4 w-full">
-                  <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
-                    <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h2 className="font-semibold text-xl text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+              <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
+                <Link href={service.href} className="group block p-4 rounded-xl bg-white dark:bg-gray-900 shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex flex-col items-center text-center">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-3">
+                      <Icon name={service.icon} className="w-6 h-6 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                    </div>
+                    <h2 className="font-semibold text-base text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                       {service.title}
                     </h2>
-                    <p className="text-gray-600 dark:text-gray-400">
+                    <p className="text-xs text-gray-600 dark:text-gray-400">
                       {service.tagline}
                     </p>
                   </div>

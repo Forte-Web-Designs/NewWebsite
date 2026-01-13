@@ -175,10 +175,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* All three sections evenly spaced - stack on very small screens, 3 cols on 380px+ */}
-          <div className="grid grid-cols-2 min-[380px]:grid-cols-3 gap-4">
+          {/* Three columns with proper spacing */}
+          <div className="grid grid-cols-3 gap-4 text-center">
             {data.map((section, index) => (
-              <div key={index} className={`text-center ${index === 2 ? "col-span-2 min-[380px]:col-span-1" : ""}`}>
+              <div key={index}>
                 <h3 className="text-base font-semibold dark:text-white mb-3 text-gray-900">{section.heading}</h3>
                 <ul className="space-y-2">
                   {section.points.map((point, pointIndex) => (
@@ -188,13 +188,8 @@ export default function Footer() {
                           href={point.href}
                           target={"external" in point && point.external ? "_blank" : undefined}
                           rel={"external" in point && point.external ? "noopener noreferrer" : undefined}
-                          className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center justify-center gap-2"
+                          className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                         >
-                          {"icon" in point && point.icon && (
-                            <span className="dark:invert dark:brightness-200">
-                              <Icon name={point.icon} alt={point.text} size={16} folder="footer" />
-                            </span>
-                          )}
                           {point.text}
                         </a>
                       ) : (
