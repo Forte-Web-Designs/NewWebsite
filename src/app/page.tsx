@@ -219,14 +219,14 @@ export default function Home() {
             </SimpleScrollReveal>
 
             {/* Mobile/Tablet: stacked list layout */}
-            <div className="flex flex-col gap-6 lg:hidden">
+            <div className="flex flex-col gap-6 lg:hidden max-w-md mx-auto sm:max-w-lg">
               {services.map((service, index) => (
-                <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
-                  <Link href={service.href} className="group flex items-start gap-4">
+                <SimpleScrollReveal key={service.title} direction="up" delay={index * 100} className="w-full">
+                  <Link href={service.href} className="group flex items-start gap-4 w-full">
                     <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                       <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
-                    <div>
+                    <div className="flex-1 min-w-0">
                       <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {service.title}
                       </h3>
