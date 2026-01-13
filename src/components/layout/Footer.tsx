@@ -175,10 +175,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Three columns - Services takes more space since it has longer items */}
-          <div className="flex justify-between gap-6">
+          {/* Three columns with proper spacing */}
+          <div className="grid grid-cols-3 gap-4 text-center">
             {data.map((section, index) => (
-              <div key={index} className={index === 0 ? "flex-shrink-0" : index === 1 ? "flex-shrink-0" : "flex-shrink-0"}>
+              <div key={index}>
                 <h3 className="text-base font-semibold dark:text-white mb-3 text-gray-900">{section.heading}</h3>
                 <ul className="space-y-2">
                   {section.points.map((point, pointIndex) => (
@@ -188,17 +188,12 @@ export default function Footer() {
                           href={point.href}
                           target={"external" in point && point.external ? "_blank" : undefined}
                           rel={"external" in point && point.external ? "noopener noreferrer" : undefined}
-                          className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-2 whitespace-nowrap"
+                          className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
                         >
-                          {"icon" in point && point.icon && (
-                            <span className="dark:invert dark:brightness-200">
-                              <Icon name={point.icon} alt={point.text} size={16} folder="footer" />
-                            </span>
-                          )}
                           {point.text}
                         </a>
                       ) : (
-                        <Link href={point.href} prefetch={true} className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap">
+                        <Link href={point.href} prefetch={true} className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
                           {point.text}
                         </Link>
                       )}
