@@ -175,10 +175,10 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* All three sections evenly spaced - stack on very small screens, 3 cols on 380px+ */}
-          <div className="grid grid-cols-2 min-[380px]:grid-cols-3 gap-4">
+          {/* Three columns - Services takes more space since it has longer items */}
+          <div className="flex justify-between gap-6">
             {data.map((section, index) => (
-              <div key={index} className={`text-center ${index === 2 ? "col-span-2 min-[380px]:col-span-1" : ""}`}>
+              <div key={index} className={index === 0 ? "flex-shrink-0" : index === 1 ? "flex-shrink-0" : "flex-shrink-0"}>
                 <h3 className="text-base font-semibold dark:text-white mb-3 text-gray-900">{section.heading}</h3>
                 <ul className="space-y-2">
                   {section.points.map((point, pointIndex) => (
@@ -188,7 +188,7 @@ export default function Footer() {
                           href={point.href}
                           target={"external" in point && point.external ? "_blank" : undefined}
                           rel={"external" in point && point.external ? "noopener noreferrer" : undefined}
-                          className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center justify-center gap-2"
+                          className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors inline-flex items-center gap-2 whitespace-nowrap"
                         >
                           {"icon" in point && point.icon && (
                             <span className="dark:invert dark:brightness-200">
@@ -198,7 +198,7 @@ export default function Footer() {
                           {point.text}
                         </a>
                       ) : (
-                        <Link href={point.href} prefetch={true} className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        <Link href={point.href} prefetch={true} className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors whitespace-nowrap">
                           {point.text}
                         </Link>
                       )}
