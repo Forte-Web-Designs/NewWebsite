@@ -1,11 +1,7 @@
 import { Metadata } from 'next';
-import { Suspense, lazy } from 'react';
 import ContactForm from "@/components/ContactForm";
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import { CONTACT_INFO } from '@/constants/contact';
-
-// Lazy load CalendlyWidget for better performance
-const CalendlyWidget = lazy(() => import("@/components/CalendlyWidget"));
 
 export const metadata: Metadata = {
   title: 'Contact | Forte Web Designs',
@@ -95,13 +91,14 @@ export default function Contact() {
                 <p className="text-gray-600 dark:text-gray-300 mb-6">
                   Skip the back-and-forth. Book a 30-minute call and we'll talk through your situation live.
                 </p>
-                <Suspense fallback={
-                  <div className="h-80 flex items-center justify-center">
-                    <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600"></div>
-                  </div>
-                }>
-                  <CalendlyWidget url="https://calendly.com/seth-fortewebdesigns/30min" />
-                </Suspense>
+                <iframe
+                  src="https://calendly.com/seth-fortewebdesigns/30min"
+                  width="100%"
+                  height="600"
+                  frameBorder="0"
+                  title="Schedule a call with Seth"
+                  className="w-full rounded-lg"
+                />
               </div>
             </div>
           </div>

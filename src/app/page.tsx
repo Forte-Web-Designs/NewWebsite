@@ -227,7 +227,7 @@ export default function Home() {
                       <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
                         <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                       </div>
-                      <div>
+                      <div className="text-left flex-1">
                         <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                           {service.title}
                         </h3>

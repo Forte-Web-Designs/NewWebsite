@@ -52,6 +52,7 @@ export default function Footer() {
       heading: "Company",
       points: [
         { text: "About Us", href: "/about" },
+        { text: "Testimonials", href: "/testimonials" },
         { text: "FAQ", href: "/faq" },
         { text: "Blog", href: "/blog" },
         { text: "Pricing", href: "/pricing" },
