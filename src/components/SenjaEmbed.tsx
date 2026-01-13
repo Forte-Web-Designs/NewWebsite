@@ -4,24 +4,16 @@ import { useEffect } from 'react';
 
 export default function SenjaEmbed() {
   useEffect(() => {
-    // Load the iframeResizer script
+    // Load the Senja widget script
     const script = document.createElement('script');
-    script.src = 'https://widget.senja.io/js/iframeResizer.min.js';
+    script.src = 'https://widget.senja.io/widget/74461d3c-0665-4a4d-893f-dc39fbe22006/platform.js';
+    script.type = 'text/javascript';
     script.async = true;
-    script.onload = () => {
-      // Initialize iframeResizer after script loads
-      if (typeof window !== 'undefined' && (window as any).iFrameResize) {
-        (window as any).iFrameResize(
-          { log: false, checkOrigin: false },
-          '#senja-collector-iframe'
-        );
-      }
-    };
     document.head.appendChild(script);
 
     return () => {
       // Cleanup script on unmount
-      const existingScript = document.querySelector('script[src="https://widget.senja.io/js/iframeResizer.min.js"]');
+      const existingScript = document.querySelector('script[src="https://widget.senja.io/widget/74461d3c-0665-4a4d-893f-dc39fbe22006/platform.js"]');
       if (existingScript) {
         existingScript.remove();
       }
@@ -30,16 +22,12 @@ export default function SenjaEmbed() {
 
   return (
     <div className="w-full">
-      <iframe
-        id="senja-collector-iframe"
-        src="https://senja.io/p/fortewebdesigns/r/BujDSc?mode=embed"
-        allow="camera;microphone"
-        title="Senja testimonials"
-        frameBorder={0}
-        scrolling="no"
-        width="100%"
-        height="700"
-        className="w-full min-h-[700px]"
+      <div
+        className="senja-embed"
+        data-id="74461d3c-0665-4a4d-893f-dc39fbe22006"
+        data-mode="shadow"
+        data-lazyload="false"
+        style={{ display: 'block', width: '100%' }}
       />
     </div>
   );

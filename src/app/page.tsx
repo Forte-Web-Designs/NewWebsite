@@ -218,8 +218,8 @@ export default function Home() {
               </h2>
             </SimpleScrollReveal>
 
-            {/* Mobile: stacked list layout */}
-            <div className="flex flex-col gap-6 sm:hidden">
+            {/* Mobile/Tablet: stacked list layout */}
+            <div className="flex flex-col gap-6 lg:hidden">
               {services.map((service, index) => (
                 <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
                   <Link href={service.href} className="group flex items-start gap-4">
@@ -239,8 +239,8 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Desktop: grid layout */}
-            <div className="hidden sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-8 lg:gap-12">
+            {/* Desktop: 4-column grid layout */}
+            <div className="hidden lg:grid lg:grid-cols-4 lg:gap-12">
               {services.map((service, index) => (
                 <SimpleScrollReveal key={service.title} direction="up" delay={index * 100} className="h-full">
                   <Link href={service.href} className="group block h-full">
