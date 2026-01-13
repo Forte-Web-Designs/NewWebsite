@@ -100,7 +100,7 @@ export default function ServicesPage() {
                     <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
-                    <div className="flex-1">
+                    <div className="flex-1 text-left">
                       <h2 className="font-semibold text-xl text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {service.title}
                       </h2>
