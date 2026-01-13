@@ -90,9 +90,10 @@ export default function Footer() {
           </div>
         )}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        {/* Desktop layout */}
+        <div className="hidden lg:grid lg:grid-cols-4 gap-8">
           {/* Logo and company info */}
-          <div className="col-span-2 md:col-span-2 lg:col-span-1">
+          <div>
             <div className="flex items-center mb-4">
               <div className="block dark:hidden">
                 <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={100} folder="home" />
@@ -144,6 +145,69 @@ export default function Footer() {
               </ul>
             </div>
           ))}
+        </div>
+
+        {/* Mobile/Tablet layout */}
+        <div className="lg:hidden">
+          {/* Logo and company info - full width on mobile */}
+          <div className="mb-8">
+            <div className="flex items-center mb-4">
+              <div className="block dark:hidden">
+                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={100} folder="home" />
+              </div>
+              <div className="hidden dark:block">
+                <Icon name="logo1.png" alt="Forte Logo (Dark Mode)" size={100} folder="home" />
+              </div>
+            </div>
+            <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
+              <p>We solve the technical problems that hold growing businesses back - automation, integrations, custom software, and the infrastructure you need to scale. Based in Dallas, serving clients nationwide.</p>
+              <p className="mt-3">
+                <strong>Headquartered in Dallas, Texas.</strong> Serving clients throughout Dallas-Fort Worth and nationwide with 100% USA-based team and support.
+              </p>
+            </div>
+            <div className="flex gap-2 mt-5 flex-wrap">
+              <Icon name="mail.svg" alt="email" size={20} folder="footer" />
+              <a className="text-sm font-normal dark:text-white text-gray-800" href={CONTACT_INFO.emailHref}>{CONTACT_INFO.email}</a>
+            </div>
+          </div>
+
+          {/* Services and Company side by side */}
+          <div className="grid grid-cols-2 gap-8 mb-8">
+            {data.slice(0, 2).map((section, index) => (
+              <div key={index}>
+                <h3 className="text-lg font-semibold dark:text-white mb-4 text-gray-900">{section.heading}</h3>
+                <ul className="space-y-2">
+                  {section.points.map((point, pointIndex) => (
+                    <li key={pointIndex}>
+                      <Link href={point.href} prefetch={true} className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                        {point.text}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          {/* Connect section - full width */}
+          <div>
+            <h3 className="text-lg font-semibold dark:text-white mb-4 text-gray-900">{data[2].heading}</h3>
+            <ul className="space-y-2">
+              {data[2].points.map((point, pointIndex) => (
+                <li key={pointIndex}>
+                  <a
+                    href={point.href}
+                    target={"external" in point && point.external ? "_blank" : undefined}
+                    rel={"external" in point && point.external ? "noopener noreferrer" : undefined}
+                    className="dark:text-gray-300 text-gray-700 text-sm hover:text-blue-600 dark:hover:text-blue-400 transition-colors flex items-center gap-2"
+                  >
+                    {"icon" in point && point.icon && <Icon name={point.icon} alt={point.text} size={18} folder="footer" />}
+                    {point.text}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         {/* Service Areas for SEO */}

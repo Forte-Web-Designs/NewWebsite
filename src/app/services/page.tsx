@@ -92,7 +92,29 @@ export default function ServicesPage() {
       {/* Services - Minimal */}
       <section className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          <div className="grid sm:grid-cols-2 gap-12 lg:gap-16">
+          {/* Mobile: stacked list */}
+          <div className="flex flex-col gap-8 sm:hidden">
+            {services.map((service, index) => (
+              <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
+                <Link href={service.href} className="group flex items-start gap-4">
+                  <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                    <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
+                  </div>
+                  <div>
+                    <h2 className="font-semibold text-xl text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                      {service.title}
+                    </h2>
+                    <p className="text-gray-600 dark:text-gray-400">
+                      {service.tagline}
+                    </p>
+                  </div>
+                </Link>
+              </SimpleScrollReveal>
+            ))}
+          </div>
+
+          {/* Desktop: 2-column grid */}
+          <div className="hidden sm:grid sm:grid-cols-2 gap-12 lg:gap-16">
             {services.map((service, index) => (
               <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
                 <Link href={service.href} className="group block">
@@ -100,7 +122,7 @@ export default function ServicesPage() {
                     <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
                       <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
-                    <div className="flex-1 text-left">
+                    <div className="flex-1">
                       <h2 className="font-semibold text-xl text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                         {service.title}
                       </h2>
