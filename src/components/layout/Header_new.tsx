@@ -181,13 +181,13 @@ export default function Header() {
             {/* Desktop Logo - Hidden on mobile */}
             <Link href="/" prefetch={true} className="hidden md:flex items-center transition-all duration-300 hover:scale-105 cursor-pointer">
               <img
-                src="/images/home/logo2.png"
+                src="/images/home/logo-header-light.svg"
                 alt="Forte Logo (Light Mode)"
                 className="block dark:hidden"
                 height={48}
               />
               <img
-                src="/images/home/logo1.png"
+                src="/images/home/logo-dark.svg"
                 alt="Forte Logo (Dark Mode)"
                 className="hidden dark:block"
                 height={48}

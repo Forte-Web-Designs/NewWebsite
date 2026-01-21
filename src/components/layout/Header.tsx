@@ -81,12 +81,12 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
               <img
-                src="/images/home/logo2.png"
+                src="/images/home/logo-header-light.svg"
                 alt="Forte"
                 className="h-10 block dark:hidden"
               />
               <img
-                src="/images/home/logo1.png"
+                src="/images/home/logo-dark.svg"
                 alt="Forte"
                 className="h-10 hidden dark:block"
               />
