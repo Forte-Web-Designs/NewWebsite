@@ -96,10 +96,10 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <div className="block dark:hidden">
-                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={100} folder="home" />
+                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={150} folder="home" />
               </div>
               <div className="hidden dark:block">
-                <Icon name="logo1.png" alt="Forte Logo (Dark Mode)" size={100} folder="home" />
+                <Icon name="logo-dark.svg" alt="Forte Logo (Dark Mode)" size={150} folder="home" />
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
@@ -157,10 +157,10 @@ export default function Footer() {
           <div className="mb-8">
             <div className="flex items-center mb-4">
               <div className="block dark:hidden">
-                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={100} folder="home" />
+                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={150} folder="home" />
               </div>
               <div className="hidden dark:block">
-                <Icon name="logo1.png" alt="Forte Logo (Dark Mode)" size={100} folder="home" />
+                <Icon name="logo-dark.svg" alt="Forte Logo (Dark Mode)" size={150} folder="home" />
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
