@@ -170,14 +170,14 @@ export default function ServicesPage() {
             </p>
           </SimpleScrollReveal>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {capabilities.map((cap, index) => (
               <SimpleScrollReveal key={cap.title} direction="up" delay={index * 100}>
-                <div>
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                <div className="text-center p-4">
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-base">
                     {cap.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
                     {cap.description}
                   </p>
                 </div>
