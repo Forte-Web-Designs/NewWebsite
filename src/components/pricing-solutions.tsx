@@ -163,7 +163,7 @@ export function PricingPage() {
             <SimpleScrollReveal direction="up">
               <div className="text-center border-b border-gray-200 dark:border-gray-700 pb-8">
                 <p className="text-gray-700 dark:text-gray-300">
-                  <span className="font-semibold text-gray-900 dark:text-white">Automation and Custom Software</span> - Starting at $500. One-off builds, integrations, API work, and workflow fixes.{' '}
+                  <span className="font-semibold text-gray-900 dark:text-white">Automation and Custom Software</span> - Starting at $1,000. One-off builds, integrations, API work, and workflow fixes.{' '}
                   <Link href="/services/automation-ai" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
                     Learn more →
                   </Link>
