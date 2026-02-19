@@ -29,28 +29,40 @@ export default function Home() {
   // Service lanes data - minimal
   const services = [
     {
-      icon: "puzzle",
-      title: "Automation",
-      tagline: "The work that eats your week.",
-      href: "/services/automation-ai"
+      icon: "search1",
+      title: "Get Found",
+      tagline: "SEO, ads, content, outreach.",
+      href: "/services/get-found"
+    },
+    {
+      icon: "cursor",
+      title: "Capture It",
+      tagline: "Funnels, landing pages, booking.",
+      href: "/services/capture-it"
     },
     {
       icon: "flash",
-      title: "CRM & Integrations",
-      tagline: "One number everyone trusts.",
-      href: "/services/integrations"
+      title: "Work the Lead",
+      tagline: "CRM, pipeline, follow-up.",
+      href: "/services/work-the-lead"
     },
     {
-      icon: "code",
-      title: "Custom Software",
-      tagline: "Built around how you work.",
-      href: "/services/custom-software"
+      icon: "puzzle",
+      title: "Serve the Customer",
+      tagline: "Invoicing, onboarding, operations.",
+      href: "/services/serve-the-customer"
     },
     {
-      icon: "click",
-      title: "Web Design",
-      tagline: "The starting point.",
-      href: "/services/web-design"
+      icon: "star",
+      title: "Keep and Grow",
+      tagline: "Reviews, referrals, reactivation.",
+      href: "/services/keep-and-grow"
+    },
+    {
+      icon: "cube",
+      title: "See Everything",
+      tagline: "Reporting, dashboards, data.",
+      href: "/services/see-everything"
     }
   ];
 
@@ -214,7 +226,7 @@ export default function Home() {
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <SimpleScrollReveal direction="up">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 text-center">
-                What I Build
+                The System Behind Your Business
               </h2>
             </SimpleScrollReveal>
 
@@ -239,8 +251,8 @@ export default function Home() {
               ))}
             </div>
 
-            {/* Desktop: 4-column grid layout */}
-            <div className="hidden lg:grid lg:grid-cols-4 lg:gap-12">
+            {/* Desktop: 3-column grid layout */}
+            <div className="hidden lg:grid lg:grid-cols-3 lg:gap-12">
               {services.map((service, index) => (
                 <SimpleScrollReveal key={service.title} direction="up" delay={index * 100} className="h-full">
                   <Link href={service.href} className="group block h-full">
@@ -290,6 +302,9 @@ export default function Home() {
             </div>
 
             <SimpleScrollReveal direction="up">
+              <p className="text-center text-sm text-gray-500 dark:text-gray-500 mb-8">
+                These systems are still running.
+              </p>
               <div className="text-center">
                 <Link
                   href="/case-studies"
@@ -355,7 +370,7 @@ export default function Home() {
                     I'm Seth.
                   </h2>
                   <p className="text-lg text-gray-600 dark:text-gray-400 mb-6">
-                    I solve the technical problems that hold growing businesses back. Automation, integrations, custom software.
+                    I build the system your business runs on. The part that connects your tools, automates the manual work, and shows you what's actually working.
                   </p>
                   <Link
                     href="/about"

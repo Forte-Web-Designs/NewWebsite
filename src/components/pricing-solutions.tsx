@@ -7,22 +7,35 @@ import SimpleScrollReveal from './animations/SimpleScrollReveal';
 const tiers = [
   {
     name: 'Starter',
-    price: '$1,500 - $3,500',
-    tagline: 'One problem, fixed.',
-    timeline: '2-3 weeks'
+    price: '$1,500 - $4,000',
+    tagline: 'Get the basics in place.',
+    timeline: '1-3 weeks',
+    products: [
+      { name: 'Capture It', description: 'Funnels, landing pages, booking', href: '/services/capture-it' },
+      { name: 'See Everything', description: 'Reporting, dashboards, data', href: '/services/see-everything' }
+    ]
   },
   {
-    name: 'Automation',
+    name: 'Growth',
     price: '$3,500 - $7,500',
-    tagline: 'The work that eats your week.',
+    tagline: 'Build the engine.',
     timeline: '3-6 weeks',
-    popular: true
+    popular: true,
+    products: [
+      { name: 'Work the Lead', description: 'CRM, pipeline, follow-up', href: '/services/work-the-lead' },
+      { name: 'Serve the Customer', description: 'Invoicing, onboarding, operations', href: '/services/serve-the-customer' }
+    ]
   },
   {
-    name: 'Full System',
+    name: 'Scale',
     price: '$7,500 - $15,000+',
     tagline: 'Everything connected.',
-    timeline: '6-12 weeks'
+    timeline: '6-12 weeks',
+    products: [
+      { name: 'Get Found', description: 'SEO, ads, content, outreach', href: '/services/get-found' },
+      { name: 'Keep and Grow', description: 'Reviews, referrals, reactivation', href: '/services/keep-and-grow' },
+      { name: 'Full Foundation', description: 'All six stages, built or rebuilt', href: '/services' }
+    ]
   }
 ];
 
@@ -39,15 +52,19 @@ const results = [
 const faqItems = [
   {
     question: "What's included?",
-    answer: "Discovery, build, testing, training, documentation, support. You own everything."
+    answer: "Discovery, build, testing, training, documentation, support. You own everything. Every project includes the Runbook... a living document that maps your entire system so you're never dependent on us."
   },
   {
     question: 'How long do projects take?',
-    answer: "2-12 weeks depending on scope. You'll know before we start."
+    answer: "1-12 weeks depending on scope. Starter tier is 1-3 weeks. Growth is 3-6 weeks. Scale is 6-12 weeks. You'll know before we start."
   },
   {
     question: "What if I'm not sure what I need?",
-    answer: "That's what the call is for. No pressure."
+    answer: "That's what the call is for. I figure out where you are, what's missing, and what makes sense to build first. No pressure."
+  },
+  {
+    question: "What if I already have some things in place?",
+    answer: "Most businesses do. We figure out what's working, what's not connected, and what's missing. You don't rebuild what's already good. We just fill the gaps and connect the pieces."
   },
   {
     question: 'Payment plans?',
@@ -67,7 +84,7 @@ export function PricingPage() {
                 Pricing
               </h1>
               <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 mb-10">
-                Most automation projects pay for themselves in 4-8 weeks.
+                Most projects pay for themselves in 4-8 weeks.
               </p>
               <Link
                 href="/contact"
@@ -86,24 +103,39 @@ export function PricingPage() {
           <div className="grid md:grid-cols-3 gap-8">
             {tiers.map((tier, index) => (
               <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
-                <div className={`text-center p-8 rounded-2xl ${tier.popular ? 'bg-white dark:bg-gray-900 shadow-lg ring-2 ring-blue-600' : ''}`}>
-                  {tier.popular && (
-                    <span className="inline-block px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-300 rounded-full mb-4">
-                      Most Common
-                    </span>
-                  )}
-                  <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
-                    {tier.name}
-                  </h3>
-                  <p className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3">
-                    {tier.price}
-                  </p>
-                  <p className="text-gray-600 dark:text-gray-400 mb-2">
-                    {tier.tagline}
-                  </p>
-                  <p className="text-sm text-gray-500 dark:text-gray-500">
-                    {tier.timeline}
-                  </p>
+                <div className={`p-8 rounded-2xl h-full ${tier.popular ? 'bg-white dark:bg-gray-900 shadow-lg ring-2 ring-blue-600' : ''}`}>
+                  <div className="text-center mb-6">
+                    {tier.popular && (
+                      <span className="inline-block px-3 py-1 text-xs font-semibold text-blue-600 bg-blue-100 dark:bg-blue-900 dark:text-blue-300 rounded-full mb-4">
+                        Most Common
+                      </span>
+                    )}
+                    <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">
+                      {tier.name}
+                    </h3>
+                    <p className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-3">
+                      {tier.price}
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400 mb-2">
+                      {tier.tagline}
+                    </p>
+                    <p className="text-sm text-gray-500 dark:text-gray-500">
+                      {tier.timeline}
+                    </p>
+                  </div>
+
+                  <div className="border-t border-gray-200 dark:border-gray-700 pt-5 space-y-3">
+                    {tier.products.map((product) => (
+                      <Link key={product.name} href={product.href} className="block group">
+                        <p className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors text-sm">
+                          {product.name}
+                        </p>
+                        <p className="text-xs text-gray-500 dark:text-gray-500">
+                          {product.description}
+                        </p>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </SimpleScrollReveal>
             ))}
@@ -111,35 +143,60 @@ export function PricingPage() {
         </div>
       </section>
 
-      {/* Web Design Callout */}
-      <section className="py-12 sm:py-16 bg-white dark:bg-gray-900">
+      {/* Additional Services */}
+      <section className="py-16 sm:py-20 bg-white dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center border-y border-gray-200 dark:border-gray-700 py-8">
-              <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">Web Design</span> - Starting at $3,000. Website, CRM, and automation as one system.{' '}
-                <Link href="/services/web-design" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
-                  Learn more →
-                </Link>
-              </p>
-            </div>
-          </SimpleScrollReveal>
-        </div>
-      </section>
+          <div className="space-y-8">
+            {/* Web Design */}
+            <SimpleScrollReveal direction="up">
+              <div className="text-center border-b border-gray-200 dark:border-gray-700 pb-8">
+                <p className="text-gray-700 dark:text-gray-300">
+                  <span className="font-semibold text-gray-900 dark:text-white">Web Design</span> - Starting at $3,000. Websites that connect to your system, not just sit there.{' '}
+                  <Link href="/services/web-design" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+                    Learn more →
+                  </Link>
+                </p>
+              </div>
+            </SimpleScrollReveal>
 
-      {/* Monthly Support Callout */}
-      <section className="py-12 sm:py-16 bg-white dark:bg-gray-900">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-          <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <p className="text-gray-700 dark:text-gray-300">
-                <span className="font-semibold text-gray-900 dark:text-white">Monthly Support</span> - $497-1,997/month. Someone who knows your system on call.{' '}
-                <Link href="/support" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
-                  Learn more →
-                </Link>
-              </p>
-            </div>
-          </SimpleScrollReveal>
+            {/* Automation and Custom Software */}
+            <SimpleScrollReveal direction="up">
+              <div className="text-center border-b border-gray-200 dark:border-gray-700 pb-8">
+                <p className="text-gray-700 dark:text-gray-300">
+                  <span className="font-semibold text-gray-900 dark:text-white">Automation and Custom Software</span> - Starting at $500. One-off builds, integrations, API work, and workflow fixes.{' '}
+                  <Link href="/services/automation-ai" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+                    Learn more →
+                  </Link>
+                </p>
+              </div>
+            </SimpleScrollReveal>
+
+            {/* Monthly Support */}
+            <SimpleScrollReveal direction="up">
+              <div className="text-center pb-4">
+                <p className="text-gray-700 dark:text-gray-300 mb-6">
+                  <span className="font-semibold text-gray-900 dark:text-white">Monthly Support</span> - $497-$1,997/month. Three tiers depending on what you need:
+                </p>
+                <div className="grid sm:grid-cols-3 gap-4 max-w-3xl mx-auto">
+                  <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800">
+                    <p className="font-semibold text-gray-900 dark:text-white text-sm mb-1">Maintain</p>
+                    <p className="text-blue-600 dark:text-blue-400 font-bold mb-2">$497/mo</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Monitoring, bug fixes, priority support. Up to 3 hours/month.</p>
+                  </div>
+                  <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800">
+                    <p className="font-semibold text-gray-900 dark:text-white text-sm mb-1">Optimize</p>
+                    <p className="text-blue-600 dark:text-blue-400 font-bold mb-2">$997/mo</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Everything in Maintain plus ongoing optimization, monthly reporting, proactive improvements. Up to 8 hours/month.</p>
+                  </div>
+                  <div className="p-4 rounded-xl bg-gray-50 dark:bg-gray-800">
+                    <p className="font-semibold text-gray-900 dark:text-white text-sm mb-1">Scale</p>
+                    <p className="text-blue-600 dark:text-blue-400 font-bold mb-2">$1,997/mo</p>
+                    <p className="text-xs text-gray-600 dark:text-gray-400">Everything in Optimize plus new builds, system expansion, dedicated availability. Up to 20 hours/month.</p>
+                  </div>
+                </div>
+              </div>
+            </SimpleScrollReveal>
+          </div>
         </div>
       </section>
 
