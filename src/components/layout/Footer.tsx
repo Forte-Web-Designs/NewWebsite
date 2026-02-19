@@ -41,10 +41,12 @@ export default function Footer() {
     {
       heading: "Services",
       points: [
-        { text: "Automation", href: "/services/automation-ai" },
-        { text: "CRM & Integrations", href: "/services/integrations" },
-        { text: "Custom Software", href: "/services/custom-software" },
-        { text: "Web Design", href: "/services/web-design" },
+        { text: "Get Found", href: "/services/get-found" },
+        { text: "Capture It", href: "/services/capture-it" },
+        { text: "Work the Lead", href: "/services/work-the-lead" },
+        { text: "Serve the Customer", href: "/services/serve-the-customer" },
+        { text: "Keep and Grow", href: "/services/keep-and-grow" },
+        { text: "See Everything", href: "/services/see-everything" },
         { text: "Case Studies", href: "/case-studies" }
       ]
     },

@@ -5,34 +5,71 @@ import { Icon } from '@/components/images/Icon';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 
 export const metadata: Metadata = {
-  title: 'Services | AI Automation, Custom Software & Web Design | Forte Web Designs',
-  description: 'Automation, integrations, custom software, and web design. Custom-built for how you actually operate.',
+  title: 'Services | The System Behind Your Business | Forte Web Designs',
+  description: 'Every business needs the same six things. We build whichever ones are missing. Get found, capture leads, work the pipeline, serve customers, grow revenue, and see everything.',
 };
 
 const services = [
   {
-    icon: "puzzle",
-    title: "Automation",
-    tagline: "The work that eats your week.",
-    href: "/services/automation-ai"
+    icon: "search1",
+    title: "Get Found",
+    subtitle: "SEO, Ads, Content, Outreach",
+    description: "We build the system that brings people to your business and tracks where they came from. So you know what's working and what's wasting money.",
+    href: "/services/get-found"
+  },
+  {
+    icon: "cursor",
+    title: "Capture It",
+    subtitle: "Funnels, Landing Pages, Booking",
+    description: "A place for every visitor to land that turns a stranger into a name in your system. Not just a homepage with a contact form.",
+    href: "/services/capture-it"
   },
   {
     icon: "flash",
-    title: "CRM & Integrations",
-    tagline: "One number everyone trusts.",
-    href: "/services/integrations"
+    title: "Work the Lead",
+    subtitle: "CRM, Pipeline, Automated Follow-Up",
+    description: "One source of truth for every lead and customer. Every lead gets worked consistently whether you're available or not.",
+    href: "/services/work-the-lead"
   },
   {
-    icon: "code",
+    icon: "puzzle",
+    title: "Serve the Customer",
+    subtitle: "Invoicing, Onboarding, Operations",
+    description: "QuickBooks knows what the CRM knows. Onboarding, project management, and communication all wired together so the back office runs.",
+    href: "/services/serve-the-customer"
+  },
+  {
+    icon: "star",
+    title: "Keep and Grow",
+    subtitle: "Reviews, Referrals, Reactivation",
+    description: "Your past customers are the cheapest to sell to. We build the systems that keep you in front of them... review requests, referral campaigns, and reactivation for people who went quiet.",
+    href: "/services/keep-and-grow"
+  },
+  {
+    icon: "cube",
+    title: "See Everything",
+    subtitle: "Reporting, Dashboards, Data",
+    description: "Where are leads coming from. How many turned into customers. What's the cost per lead. Which stage is leaking. No more guessing.",
+    href: "/services/see-everything"
+  }
+];
+
+const capabilities = [
+  {
+    title: "Automation",
+    description: "Workflows that replace the manual work eating your week."
+  },
+  {
     title: "Custom Software",
-    tagline: "Built around how you work.",
-    href: "/services/custom-software"
+    description: "When off-the-shelf tools don't fit how you actually work."
   },
   {
-    icon: "click",
+    title: "Integrations and APIs",
+    description: "Connecting the tools you already use so data moves once."
+  },
+  {
     title: "Web Design",
-    tagline: "The starting point.",
-    href: "/services/web-design"
+    description: "Websites that connect to your system, not just sit there."
   }
 ];
 
@@ -67,9 +104,12 @@ export default function ServicesPage() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
-              <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-10">
-                What I Build
+              <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-6">
+                The System Behind Your Business
               </h1>
+              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
+                Every business needs the same six things. We build whichever ones are missing.
+              </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                 <a
                   href="#book-a-call"
@@ -89,54 +129,58 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Services - Minimal */}
+      {/* The Six Stages */}
       <section className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          {/* Mobile/Tablet: 2x2 grid of centered boxes */}
-          <div className="grid grid-cols-2 gap-4 lg:hidden">
+          {/* Mobile: stacked cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {services.map((service, index) => (
               <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
-                <Link href={service.href} className="group block p-4 rounded-xl bg-white dark:bg-gray-900 shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex flex-col items-center text-center">
-                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-3">
+                <div className="group block p-6 rounded-xl bg-white dark:bg-gray-900 shadow-sm hover:shadow-md transition-shadow h-full">
+                  <div className="flex flex-col">
+                    <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-4">
                       <Icon name={service.icon} className="w-6 h-6 text-white" style={{filter: 'brightness(0) invert(1)'}} />
                     </div>
-                    <h2 className="font-semibold text-base text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    <h2 className="font-semibold text-xl text-gray-900 dark:text-white mb-1">
                       {service.title}
                     </h2>
-                    <p className="text-xs text-gray-600 dark:text-gray-400">
-                      {service.tagline}
+                    <p className="text-sm font-medium text-blue-600 dark:text-blue-400 mb-3">
+                      {service.subtitle}
+                    </p>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+                      {service.description}
                     </p>
                   </div>
-                </Link>
+                </div>
               </SimpleScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
 
-          {/* Desktop: 2-column grid */}
-          <div className="hidden lg:grid lg:grid-cols-2 gap-16">
-            {services.map((service, index) => (
-              <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
-                <Link href={service.href} className="group block">
-                  <div className="flex items-start gap-5">
-                    <div className="w-14 h-14 flex-shrink-0 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
-                    </div>
-                    <div className="flex-1">
-                      <h2 className="font-semibold text-xl text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {service.title}
-                      </h2>
-                      <p className="text-gray-600 dark:text-gray-400 mb-3">
-                        {service.tagline}
-                      </p>
-                      <span className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium opacity-0 group-hover:opacity-100 transition-opacity">
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                        </svg>
-                      </span>
-                    </div>
-                  </div>
-                </Link>
+      {/* How We Build It */}
+      <section className="py-16 sm:py-20 bg-white dark:bg-gray-900">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+          <SimpleScrollReveal direction="up">
+            <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-3 text-center">
+              How We Build It
+            </h2>
+            <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-xl mx-auto">
+              We build these systems using whatever the job needs. These are the tools in the toolbox.
+            </p>
+          </SimpleScrollReveal>
+
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            {capabilities.map((cap, index) => (
+              <SimpleScrollReveal key={cap.title} direction="up" delay={index * 100}>
+                <div>
+                  <h3 className="font-semibold text-gray-900 dark:text-white mb-1">
+                    {cap.title}
+                  </h3>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    {cap.description}
+                  </p>
+                </div>
               </SimpleScrollReveal>
             ))}
           </div>
