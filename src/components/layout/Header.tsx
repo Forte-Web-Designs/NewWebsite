@@ -80,9 +80,14 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
               <img
-                src="/images/home/LaunchForteLogo.png"
+                src="/images/home/logo-header-light.svg"
                 alt="Forte Web Designs"
-                className="h-10"
+                className="h-10 block dark:hidden"
+              />
+              <img
+                src="/images/home/logo-dark.svg"
+                alt="Forte Web Designs"
+                className="h-10 hidden dark:block"
               />
             </Link>
 
@@ -90,8 +95,8 @@ export default function Header() {
             <nav className="hidden md:flex items-center space-x-8 flex-1 justify-center">
               <HeaderLink href="/">Home</HeaderLink>
               <HeaderLink href="/services">Services</HeaderLink>
-              <HeaderLink href="/case-studies">Work</HeaderLink>
-              <HeaderLink href="/blog">Writing</HeaderLink>
+              <HeaderLink href="/case-studies">Results</HeaderLink>
+              <HeaderLink href="/blog">Blog</HeaderLink>
               <HeaderLink href="/about">About</HeaderLink>
             </nav>
 
@@ -191,7 +196,7 @@ export default function Header() {
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                 }`}
               >
-                Work
+                Results
               </Link>
               <Link
                 href="/blog"
@@ -202,7 +207,7 @@ export default function Header() {
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                 }`}
               >
-                Writing
+                Blog
               </Link>
               <Link
                 href="/about"

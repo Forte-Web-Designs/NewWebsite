@@ -52,7 +52,7 @@ export default function Footer() {
       points: [
         { text: "About", href: "/about" },
         { text: "Case Studies", href: "/case-studies" },
-        { text: "Writing", href: "/blog" },
+        { text: "Blog", href: "/blog" },
         { text: "Contact", href: "/contact" }
       ]
     },
@@ -92,7 +92,12 @@ export default function Footer() {
           {/* Logo and company info */}
           <div>
             <div className="flex items-center mb-4">
-              <img src="/images/home/LaunchForteLogo.png" alt="Forte Web Designs Logo" style={{ width: 150 }} />
+              <div className="block dark:hidden">
+                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={150} folder="home" />
+              </div>
+              <div className="hidden dark:block">
+                <Icon name="logo-dark.svg" alt="Forte Logo (Dark Mode)" size={150} folder="home" />
+              </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
               <p>Based in Dallas, Texas. Serving clients nationwide.</p>
@@ -145,7 +150,12 @@ export default function Footer() {
           {/* Logo and company info - full width on mobile */}
           <div className="mb-8">
             <div className="flex items-center mb-4">
-              <img src="/images/home/LaunchForteLogo.png" alt="Forte Web Designs Logo" style={{ width: 150 }} />
+              <div className="block dark:hidden">
+                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={150} folder="home" />
+              </div>
+              <div className="hidden dark:block">
+                <Icon name="logo-dark.svg" alt="Forte Logo (Dark Mode)" size={150} folder="home" />
+              </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
               <p>Based in Dallas, Texas. Serving clients nationwide.</p>

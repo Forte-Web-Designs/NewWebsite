@@ -117,17 +117,11 @@ export default function AboutUs() {
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <SimpleScrollReveal direction="up" delay={200}>
                 <p>
-                  5+ years building enterprise systems at Wells Fargo - the kind that handle millions of transactions and can't afford to break. Featured in Dallas Voyage, Dallas Innovates, BUiLT, and Orbie.
+                  5+ years building enterprise systems - the kind that handle millions of transactions and can't afford to break. Featured in Dallas Voyage, Dallas Innovates, BUiLT, and Orbie.
                 </p>
               </SimpleScrollReveal>
 
               <SimpleScrollReveal direction="up" delay={225}>
-                <p>
-                  Upwork: Rising Talent, 100% Job Success, 5-star feedback across every project so far.
-                </p>
-              </SimpleScrollReveal>
-
-              <SimpleScrollReveal direction="up" delay={250}>
                 <p className="text-xl font-semibold text-gray-900 dark:text-white">
                   I don't just build things and disappear. I care whether your systems work six months from now.
                 </p>
