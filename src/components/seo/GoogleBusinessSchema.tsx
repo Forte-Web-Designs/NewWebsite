@@ -128,7 +128,7 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
     "Automation Consulting",
     "Business Growth Snapshot",
     "AI Readiness Assessment",
-    "Automation Audit",
+    "Infrastructure Review",
     "Web Design",
     "Website Development",
     "E-commerce Development",

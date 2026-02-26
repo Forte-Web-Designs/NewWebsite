@@ -4,7 +4,7 @@ import Link from 'next/link';
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
-export default function AutomationAuditClient() {
+export default function InfrastructureReviewClient() {
   const deliverables = [
     { title: "Current State Map", description: "A clear picture of every tool, workflow, and process you're running today." },
     { title: "Opportunity List", description: "The biggest wins — ranked by impact and effort. What to fix first." },
@@ -22,24 +22,24 @@ export default function AutomationAuditClient() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Hero */}
-      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl text-gray-900 dark:text-white mb-4">
-                Automation Audit
+                Infrastructure Review
               </h1>
               <p className="text-xl sm:text-2xl text-blue-600 dark:text-blue-400 font-medium mb-6">
                 Not sure where to start? Start here.
               </p>
               <p className="text-lg text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                I review your current setup, identify the biggest opportunities, and give you a prioritized roadmap with ROI estimates. If you decide to move forward with a build, the audit fee applies as credit toward the project.
+                I review your current setup, identify the biggest opportunities, and give you a prioritized roadmap with ROI estimates. If you decide to move forward with a build, the review fee applies as credit toward the project.
               </p>
               <Link
                 href="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
               >
-                Book an Audit
+                Book a Review
               </Link>
             </div>
           </SimpleScrollReveal>
@@ -47,7 +47,7 @@ export default function AutomationAuditClient() {
       </section>
 
       {/* What You Get */}
-      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-12 text-center">
@@ -68,7 +68,7 @@ export default function AutomationAuditClient() {
       </section>
 
       {/* Who It's For */}
-      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-12 text-center">
@@ -91,7 +91,7 @@ export default function AutomationAuditClient() {
       </section>
 
       {/* How It Works */}
-      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+      <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-12 text-center">
@@ -109,7 +109,7 @@ export default function AutomationAuditClient() {
             <SimpleScrollReveal direction="up" delay={100}>
               <div className="text-center">
                 <div className="w-10 h-10 rounded-full bg-blue-600 text-white flex items-center justify-center font-bold mx-auto mb-4">2</div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Audit</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Review</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">I dig into your systems, map what's working, and identify the biggest opportunities.</p>
               </div>
             </SimpleScrollReveal>
@@ -123,14 +123,14 @@ export default function AutomationAuditClient() {
           </div>
           <SimpleScrollReveal direction="up">
             <p className="text-center text-sm text-gray-500 dark:text-gray-400 mt-8">
-              If you decide to build, the audit fee applies as credit toward the project.
+              If you decide to build, the review fee applies as credit toward the project.
             </p>
           </SimpleScrollReveal>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <SimpleScrollReveal direction="up">

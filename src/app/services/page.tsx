@@ -68,6 +68,10 @@ const capabilities = [
   {
     title: "Integrations and APIs",
     description: "Connecting the tools you already use so data moves once."
+  },
+  {
+    title: "Websites & Funnels",
+    description: "Click funnels, landing pages, and web design built to capture and convert leads."
   }
 ];
 
@@ -82,7 +86,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900">
       {/* Header */}
-      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
+      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
@@ -104,7 +108,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Tiers */}
-      <section className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
+      <section className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <div className="space-y-8">
             {tiers.map((tier, index) => (
@@ -159,7 +163,7 @@ export default function ServicesPage() {
       </section>
 
       {/* How I Build It */}
-      <section className="py-16 sm:py-20 bg-white dark:bg-gray-900">
+      <section className="py-16 sm:py-20 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-3 text-center">
@@ -170,7 +174,7 @@ export default function ServicesPage() {
             </p>
           </SimpleScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
             {capabilities.map((cap, index) => (
               <SimpleScrollReveal key={cap.title} direction="up" delay={index * 100}>
                 <div className="text-center p-4">
@@ -185,19 +189,11 @@ export default function ServicesPage() {
             ))}
           </div>
 
-          <SimpleScrollReveal direction="up">
-            <p className="text-center text-gray-500 dark:text-gray-400 text-sm mt-8">
-              I also do web design when it's part of the system.{' '}
-              <Link href="/contact" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
-                Ask me about it.
-              </Link>
-            </p>
-          </SimpleScrollReveal>
         </div>
       </section>
 
-      {/* Automation Audit CTA */}
-      <section className="py-20 sm:py-24 bg-gray-50 dark:bg-gray-800">
+      {/* Infrastructure Review CTA */}
+      <section className="py-20 sm:py-24 bg-gray-50 dark:bg-gray-800 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
           <SimpleScrollReveal direction="up">
             <div className="text-center">
@@ -205,13 +201,13 @@ export default function ServicesPage() {
                 Not sure where to start?
               </h2>
               <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                Most people aren't. The Automation Audit reviews your current setup, identifies the biggest opportunities, and gives you a prioritized roadmap with ROI estimates. If you move forward with a build, the audit fee applies as credit.
+                Most people aren't. The Infrastructure Review looks at your current setup, identifies the biggest opportunities, and gives you a prioritized roadmap with ROI estimates. If you move forward with a build, the review fee applies as credit.
               </p>
               <Link
-                href="/services/automation-audit"
+                href="/services/infrastructure-review"
                 className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
               >
-                Book an Audit
+                Book a Review
               </Link>
             </div>
           </SimpleScrollReveal>
@@ -219,7 +215,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Results */}
-      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
           <SimpleScrollReveal direction="up">
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 text-center">
@@ -262,7 +258,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA with Headshot & Calendly */}
-      <section id="book-a-call" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
+      <section id="book-a-call" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800 overflow-hidden">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             <SimpleScrollReveal direction="up">
