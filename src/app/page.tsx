@@ -67,23 +67,6 @@ export default function Home() {
     { client: "Revolut", metric: "$4M found", description: "Transaction analysis that used to take weeks", href: "/case-studies/revolut" }
   ];
 
-  const writing = [
-    {
-      title: "Audit Your Lifestyle",
-      description: "A simple friction audit framework that helps you identify and eliminate daily annoyances. The same thinking scales to business processes.",
-      href: "/blog/ai-bubble-part-6-what-happens-when-bubble-pops"
-    },
-    {
-      title: "What You're Paying For When You Hire A Consultant",
-      description: "It's not the technical work. It's understanding your business and genuine investment in your success.",
-      href: "/blog/business-automation-roi-guide-2025"
-    },
-    {
-      title: "Technical Skills Won't Save You Anymore",
-      description: "The technical implementation is becoming commodity. The strategic thinking isn't.",
-      href: "/blog/ai-bubble-part-5-threat-from-below"
-    }
-  ];
 
   return (
     <>
@@ -135,7 +118,7 @@ export default function Home() {
                 </h1>
 
                 <p className="text-lg sm:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-                  Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Most of the work I do is invisible... it just makes everything else work the way it should.
+                  Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -329,52 +312,6 @@ export default function Home() {
                   className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
                 >
                   See all results
-                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </Link>
-              </div>
-            </SimpleScrollReveal>
-          </div>
-        </section>
-
-        {/* WRITING */}
-        <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
-          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-            <SimpleScrollReveal direction="up">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6 text-center uppercase tracking-wide">
-                Writing
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 text-center mb-16 max-w-2xl mx-auto">
-                I write about growing a business, systems, and the stuff nobody talks about... like what you're actually building all of this for.
-              </p>
-            </SimpleScrollReveal>
-
-            <div className="space-y-8">
-              {writing.map((post, index) => (
-                <SimpleScrollReveal key={post.title} direction="up" delay={index * 100}>
-                  <Link href={post.href} className="block group">
-                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-600 dark:text-gray-400 mb-3">
-                      {post.description}
-                    </p>
-                    <span className="text-blue-600 dark:text-blue-400 font-medium text-sm">
-                      Read
-                    </span>
-                  </Link>
-                </SimpleScrollReveal>
-              ))}
-            </div>
-
-            <SimpleScrollReveal direction="up">
-              <div className="text-center mt-12">
-                <Link
-                  href="/blog"
-                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
-                >
-                  View all writing
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

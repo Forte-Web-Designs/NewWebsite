@@ -34,12 +34,12 @@ export const NavigationSchema: React.FC<NavigationSchemaProps> = ({
       description: "Foundation, Growth, and Scale automation systems"
     },
     {
-      name: "Work",
+      name: "Results",
       url: "https://fortewebdesigns.com/case-studies",
       description: "Case studies and client results"
     },
     {
-      name: "Writing",
+      name: "Blog",
       url: "https://fortewebdesigns.com/blog",
       description: "Insights on business systems and automation"
     },
