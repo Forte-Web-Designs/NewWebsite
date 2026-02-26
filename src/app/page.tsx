@@ -118,7 +118,7 @@ export default function Home() {
                 </h1>
 
                 <p className="text-lg sm:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-                  Automation, CRM pipelines, reporting dashboards, funnels, websites, and the infrastructure that holds it all together.
+                  Automation, CRM pipelines, reporting dashboards, lead generation, funnels, websites, and the infrastructure that holds it all together.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -239,16 +239,14 @@ export default function Home() {
         </section>
 
         {/* Web Design - subtle mention */}
-        <section className="py-12 sm:py-16 bg-white dark:bg-gray-900 overflow-hidden">
+        <section className="py-12 sm:py-16 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
-            <SimpleScrollReveal direction="up">
-              <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-                I also build websites, click funnels, and landing pages designed to capture and convert leads.{' '}
-                <Link href="/contact" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
-                  Ask me about it.
-                </Link>
-              </p>
-            </SimpleScrollReveal>
+            <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
+              I also build websites, click funnels, and landing pages designed to capture and convert leads.{' '}
+              <Link href="/contact" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+                Ask me about it.
+              </Link>
+            </p>
           </div>
         </section>
 
