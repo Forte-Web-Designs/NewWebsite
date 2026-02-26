@@ -173,7 +173,7 @@ export default function Home() {
               </div>
               <p className="text-center text-sm text-gray-500 dark:text-gray-400 italic">
                 As Featured in{' '}
-                <a href="http://voyagedallas.com/interview/rising-stars-meet-seth-forte-of-forte-web-designs/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline">
+                <a href="https://voyagedallas.com/interview/community-highlights-meet-seth-forte-of-forte-web-designs/" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 underline">
                   Voyage Dallas Magazine
                 </a>
               </p>
