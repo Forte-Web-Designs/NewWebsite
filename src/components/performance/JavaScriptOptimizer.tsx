@@ -164,8 +164,8 @@ function JavaScriptOptimizer() {
     // Preload likely next pages
     preloadOnInteraction([
       '/contact',
-      '/pricing',
       '/services',
+      '/case-studies',
       '/about'
     ]);
   }, []);

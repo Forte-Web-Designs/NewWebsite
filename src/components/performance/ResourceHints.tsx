@@ -24,8 +24,8 @@ function ResourceHints() {
       
       // Prefetch likely navigation targets
       { rel: 'prefetch', href: '/contact' },
-      { rel: 'prefetch', href: '/pricing' },
       { rel: 'prefetch', href: '/services' },
+      { rel: 'prefetch', href: '/case-studies' },
       
       // Preload critical assets
       { rel: 'preload', href: '/fonts/InterDisplay-Regular.woff2', as: 'font', type: 'font/woff2', crossOrigin: 'anonymous' },

@@ -85,40 +85,20 @@ export const WebsiteSchema: React.FC<WebsiteSchemaProps> = ({
     "hasPart": [
       {
         "@type": "WebPage",
-        "@id": `${url}/about#webpage`,
-        "url": `${url}/about`,
-        "name": "About Us - Forte Web Designs",
-        "description": "Learn about our team, mission, and approach to custom web design and development.",
-        "isPartOf": {
-          "@id": `${url}#website`
-        }
-      },
-      {
-        "@type": "WebPage", 
-        "@id": `${url}/pricing#webpage`,
-        "url": `${url}/pricing`,
-        "name": "Pricing - Web Design Services",
-        "description": "Transparent pricing for custom website design, SEO, and digital marketing services.",
+        "@id": `${url}/services#webpage`,
+        "url": `${url}/services`,
+        "name": "Services - Forte Web Designs",
+        "description": "Foundation, Growth, and Scale automation systems for growing businesses.",
         "isPartOf": {
           "@id": `${url}#website`
         }
       },
       {
         "@type": "WebPage",
-        "@id": `${url}/solutions#webpage`,
-        "url": `${url}/solutions`,
-        "name": "Solutions - Web Design & Digital Marketing",
-        "description": "Comprehensive web design solutions including SEO, Google Ads, and ongoing website care.",
-        "isPartOf": {
-          "@id": `${url}#website`
-        }
-      },
-      {
-        "@type": "WebPage",
-        "@id": `${url}/about/work#webpage`,
-        "url": `${url}/about/work`,
-        "name": "Portfolio - Our Web Design Work",
-        "description": "View our portfolio of custom websites and successful client projects.",
+        "@id": `${url}/case-studies#webpage`,
+        "url": `${url}/case-studies`,
+        "name": "Work - Client Results",
+        "description": "Case studies and results from automation and systems projects.",
         "isPartOf": {
           "@id": `${url}#website`
         }
@@ -127,8 +107,18 @@ export const WebsiteSchema: React.FC<WebsiteSchemaProps> = ({
         "@type": "WebPage",
         "@id": `${url}/blog#webpage`,
         "url": `${url}/blog`,
-        "name": "Blog - Web Design Tips & Insights",
-        "description": "Expert insights on web design, SEO, and digital marketing for businesses.",
+        "name": "Writing - Business & Systems Insights",
+        "description": "Insights on business systems, automation, and growing a business.",
+        "isPartOf": {
+          "@id": `${url}#website`
+        }
+      },
+      {
+        "@type": "WebPage",
+        "@id": `${url}/about#webpage`,
+        "url": `${url}/about`,
+        "name": "About - Forte Web Designs",
+        "description": "About Forte Web Designs and our approach to systems and automation.",
         "isPartOf": {
           "@id": `${url}#website`
         }
@@ -137,8 +127,8 @@ export const WebsiteSchema: React.FC<WebsiteSchemaProps> = ({
         "@type": "WebPage",
         "@id": `${url}/contact#webpage`,
         "url": `${url}/contact`,
-        "name": "Contact Us - Get Your Free Quote",
-        "description": "Contact Forte Web Designs for a free consultation and website quote.",
+        "name": "Contact - Book a Call",
+        "description": "Book a call to discuss your project with Forte Web Designs.",
         "isPartOf": {
           "@id": `${url}#website`
         }
