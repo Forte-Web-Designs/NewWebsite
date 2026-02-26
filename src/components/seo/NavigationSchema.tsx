@@ -26,37 +26,32 @@ export const NavigationSchema: React.FC<NavigationSchemaProps> = ({
     {
       name: "Home",
       url: "https://fortewebdesigns.com",
-      description: "Custom websites that grow with your business"
+      description: "Systems architecture and automation consulting"
     },
     {
-      name: "About", 
-      url: "https://fortewebdesigns.com/about",
-      description: "Learn about our team and approach to web design"
+      name: "Services",
+      url: "https://fortewebdesigns.com/services",
+      description: "Foundation, Growth, and Scale automation systems"
     },
     {
-      name: "Pricing",
-      url: "https://fortewebdesigns.com/pricing", 
-      description: "Transparent pricing for web design services"
+      name: "Work",
+      url: "https://fortewebdesigns.com/case-studies",
+      description: "Case studies and client results"
     },
     {
-      name: "Solutions",
-      url: "https://fortewebdesigns.com/solutions",
-      description: "Web design, SEO, and digital marketing services"
-    },
-    {
-      name: "Portfolio",
-      url: "https://fortewebdesigns.com/about/work",
-      description: "View our custom website portfolio and client work"
-    },
-    {
-      name: "Blog",
+      name: "Writing",
       url: "https://fortewebdesigns.com/blog",
-      description: "Web design tips and digital marketing insights"
+      description: "Insights on business systems and automation"
+    },
+    {
+      name: "About",
+      url: "https://fortewebdesigns.com/about",
+      description: "About Forte Web Designs"
     },
     {
       name: "Contact",
       url: "https://fortewebdesigns.com/contact",
-      description: "Get your free website consultation and quote"
+      description: "Book a call to discuss your project"
     }
   ]
 }) => {

@@ -3,7 +3,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState, useEffect } from 'react';
 import { ThemeToggle } from '@/components/ThemeToggle';
-import { Icon } from '@/components/images/Icon';
 import { useTheme } from '../../app/providers/ThemeProvider';
 
 const HeaderLink = ({ href, children }: { href: string; children: React.ReactNode }) => {
@@ -81,14 +80,9 @@ export default function Header() {
             {/* Logo */}
             <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
               <img
-                src="/images/home/logo-header-light.svg"
-                alt="Forte"
-                className="h-10 block dark:hidden"
-              />
-              <img
-                src="/images/home/logo-dark.svg"
-                alt="Forte"
-                className="h-10 hidden dark:block"
+                src="/images/home/LaunchForteLogo.png"
+                alt="Forte Web Designs"
+                className="h-10"
               />
             </Link>
 
@@ -96,8 +90,8 @@ export default function Header() {
             <nav className="hidden md:flex items-center space-x-8 flex-1 justify-center">
               <HeaderLink href="/">Home</HeaderLink>
               <HeaderLink href="/services">Services</HeaderLink>
-              <HeaderLink href="/pricing">Pricing</HeaderLink>
-              <HeaderLink href="/case-studies">Case Studies</HeaderLink>
+              <HeaderLink href="/case-studies">Work</HeaderLink>
+              <HeaderLink href="/blog">Writing</HeaderLink>
               <HeaderLink href="/about">About</HeaderLink>
             </nav>
 
@@ -189,17 +183,6 @@ export default function Header() {
                 Services
               </Link>
               <Link
-                href="/pricing"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
-                  pathname === '/pricing'
-                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
-                }`}
-              >
-                Pricing
-              </Link>
-              <Link
                 href="/case-studies"
                 onClick={() => setMobileMenuOpen(false)}
                 className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
@@ -208,7 +191,18 @@ export default function Header() {
                     : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
                 }`}
               >
-                Case Studies
+                Work
+              </Link>
+              <Link
+                href="/blog"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+                  pathname === '/blog'
+                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                }`}
+              >
+                Writing
               </Link>
               <Link
                 href="/about"
@@ -220,17 +214,6 @@ export default function Header() {
                 }`}
               >
                 About
-              </Link>
-              <Link
-                href="/blog"
-                onClick={() => setMobileMenuOpen(false)}
-                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
-                  pathname === '/blog'
-                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
-                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
-                }`}
-              >
-                Blog
               </Link>
               <Link
                 href="/contact"

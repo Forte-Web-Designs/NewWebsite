@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
-import { Icon } from "@/components/images/Icon";
 import { OptimizedImage } from '@/components/images/OptimizedImage';
 import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 
@@ -13,7 +12,7 @@ export default function Home() {
   // Rotating words for the hero
   const rotatingWords = ["A System", "Using The Right Data", "A Framework", "A Process", "Execution"];
 
-  // Rotating words animation with fade effect and no layout shift
+  // Rotating words animation with fade effect
   useEffect(() => {
     const interval = setInterval(() => {
       setFadeInOut(false);
@@ -26,67 +25,63 @@ export default function Home() {
     return () => clearInterval(interval);
   }, [rotatingWords.length]);
 
-  // Service lanes data - minimal
-  const services = [
+  const stats = [
+    { value: "5+", sublabel: "ENTERPRISE SYSTEMS" },
+    { value: "100+", sublabel: "HRS/MONTH RETURNED" },
+    { value: "Worldwide", sublabel: "CLIENTS SERVED" },
+    { value: "$4M+", sublabel: "CLIENT VALUE IDENTIFIED" }
+  ];
+
+  const clientLogos = [
+    "Revolut", "Modern Bungalow", "Eden Medical", "Kingfisher Ads",
+    "CR Deals Cincinnati", "Hollow Bamboo", "UDI Group"
+  ];
+
+  const tiers = [
     {
-      icon: "search1",
-      title: "Get Found",
-      tagline: "SEO, ads, content, outreach.",
-      href: "/services/get-found"
+      name: "Foundation",
+      tagline: "Get your system built and your first leads flowing.",
+      timeline: "1-2 WEEKS",
+      description: "CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from. And your first lead source connected and producing, because nobody should walk away with an empty system.",
+      href: "/services/foundation"
     },
     {
-      icon: "cursor",
-      title: "Capture It",
-      tagline: "Funnels, landing pages, booking.",
-      href: "/services/capture-it"
+      name: "Growth",
+      tagline: "Turn leads into revenue. Know what's working.",
+      timeline: "2-3 WEEKS",
+      description: "Leads mean nothing if you don't know where they came from, can't follow up fast enough, or have no way to tell what's actually converting. Growth adds automated follow-up sequences, sales funnels, booking systems, SMS, and the tracking and attribution that shows you exactly which channels produce revenue and which ones waste money.",
+      href: "/services/growth"
     },
     {
-      icon: "flash",
-      title: "Work the Lead",
-      tagline: "CRM, pipeline, follow-up.",
-      href: "/services/work-the-lead"
-    },
-    {
-      icon: "puzzle",
-      title: "Serve the Customer",
-      tagline: "Invoicing, onboarding, operations.",
-      href: "/services/serve-the-customer"
-    },
-    {
-      icon: "star",
-      title: "Keep and Grow",
-      tagline: "Reviews, referrals, reactivation.",
-      href: "/services/keep-and-grow"
-    },
-    {
-      icon: "cube",
-      title: "See Everything",
-      tagline: "Reporting, dashboards, data.",
-      href: "/services/see-everything"
+      name: "Scale",
+      tagline: "Optimize what's working. Grow without adding headcount.",
+      timeline: "3-4 WEEKS",
+      description: "Reporting dashboards so you stop guessing. Outbound systems to find prospects instead of waiting for them. AI agents that answer calls and chat 24/7. Content engines that keep you visible. And monthly management so someone's actually watching the machine. Built for businesses that already have leads and want to multiply what's working.",
+      href: "/services/scale"
     }
   ];
 
-  // Results - minimal one-liners
   const results = [
+    { client: "CR Deals Cincinnati", metric: "$52K/yr saved", description: "AI-powered product listings across marketplaces", href: "/case-studies/fast-track-auction" },
+    { client: "Hollow Bamboo", metric: "20 hrs/wk back", description: "Equipment tracking across 6 film locations", href: "/case-studies/hollow-bamboo" },
+    { client: "Revolut", metric: "$4M found", description: "Transaction analysis that used to take weeks", href: "/case-studies/revolut" }
+  ];
+
+  const writing = [
     {
-      client: "CR Deals Cincinnati",
-      metric: "$52K/year saved",
-      href: "/case-studies/fast-track-auction"
+      title: "Audit Your Lifestyle",
+      description: "A simple friction audit framework that helps you identify and eliminate daily annoyances. The same thinking scales to business processes.",
+      href: "/blog/ai-bubble-part-6-what-happens-when-bubble-pops"
     },
     {
-      client: "Modern Bungalow",
-      metric: "15 hrs/month back",
-      href: "/case-studies/modern-bungalow"
+      title: "What You're Paying For When You Hire A Consultant",
+      description: "It's not the technical work. It's understanding your business and genuine investment in your success.",
+      href: "/blog/business-automation-roi-guide-2025"
     },
     {
-      client: "Revolut",
-      metric: "$4M opportunity found",
-      href: "/case-studies/revolut"
-    },
-    {
-      client: "Hollow Bamboo",
-      metric: "20 hrs/week back",
-      href: "/case-studies/hollow-bamboo"
+      title: "Technical Skills Won't Save You Anymore",
+      description: "The technical implementation is becoming commodity. The strategic thinking isn't.",
+      href: "/blog/ai-bubble-part-5-threat-from-below"
     }
   ];
 
@@ -102,84 +97,33 @@ export default function Home() {
             "name": "Seth Forte",
             "alternateName": "Forte Web Designs",
             "url": "https://fortewebdesigns.com",
-            "logo": "https://fortewebdesigns.com/images/forte-logo.png",
-            "description": "Technical consulting for business automation, CRM integrations, custom software, and security infrastructure",
+            "logo": "https://fortewebdesigns.com/images/home/LaunchForteLogo.png",
+            "description": "Systems architecture and automation consulting for growing businesses",
             "email": "seth@fortewebdesigns.com",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Grapevine",
+              "addressLocality": "Dallas",
               "addressRegion": "TX",
               "addressCountry": "US"
             },
-            "areaServed": [
-              "Dallas",
-              "Fort Worth",
-              "Grapevine",
-              "Plano",
-              "Arlington",
-              "United States"
-            ],
-            "serviceType": [
-              "Business Automation",
-              "n8n Consulting",
-              "Make.com Consulting",
-              "Zapier Consulting",
-              "CRM Integration",
-              "GoHighLevel Consulting",
-              "API Integration",
-              "Custom Software Development",
-              "SSO Implementation",
-              "MFA Implementation",
-              "FusionAuth Consulting",
-              "Inventory Management Systems"
-            ],
-            "priceRange": "$$$$",
+            "areaServed": "United States",
+            "serviceType": ["Business Automation", "CRM Integration", "Custom Software Development", "Reporting Dashboards"],
             "founder": {
               "@type": "Person",
               "name": "Seth Forte",
-              "jobTitle": "Technical Consultant"
-            },
-            "sameAs": [
-              "https://www.linkedin.com/company/forte-web-designs",
-              "https://www.facebook.com/fortewebdesigns"
-            ],
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": "5.0",
-              "reviewCount": "50"
+              "jobTitle": "Systems Architect & Automation Consultant"
             }
           })
         }}
       />
 
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "BreadcrumbList",
-            "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://fortewebdesigns.com"
-              }
-            ]
-          })
-        }}
-      />
-
       <div className="min-h-screen bg-white dark:bg-gray-900">
-        {/* Hero Section - KEPT AS-IS */}
-        <section id="hero" className="relative overflow-hidden bg-white dark:bg-gray-900 pt-24 pb-20 sm:pt-32 sm:pb-28 lg:pt-40 lg:pb-36">
+        {/* Hero Section */}
+        <section id="hero" className="relative overflow-hidden bg-white dark:bg-gray-900 pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <SimpleScrollReveal direction="up">
               <div className="text-center">
-                {/* Hero Headline */}
-                <h1
-                  className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-gray-900 dark:text-white mb-6"
-                >
+                <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl leading-[1.1] text-gray-900 dark:text-white mb-6">
                   <span className="block sm:inline">Business Growth Isn't Luck.</span>
                   <span className="block sm:inline"> It's{" "}</span>
                   <span
@@ -190,111 +134,234 @@ export default function Home() {
                   </span>
                 </h1>
 
-                {/* Subheadline */}
                 <p className="text-lg sm:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-                  I solve the technical problems that hold growing businesses back. Automation, integrations, custom software... and the infrastructure you need to scale.
+                  Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Most of the work I do is invisible... it just makes everything else work the way it should.
                 </p>
 
-                {/* CTAs */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
                   <Link
                     href="/contact"
                     className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
                   >
-                    Let's Talk
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
+                    Book a Call
                   </Link>
-                  <a
-                    href="#services"
+                  <Link
+                    href="/case-studies"
                     className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-900 dark:text-white hover:border-gray-400 dark:hover:border-gray-500 rounded-lg font-semibold transition-all duration-200"
                   >
-                    See What I Build
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </a>
+                    See My Work
+                  </Link>
                 </div>
               </div>
             </SimpleScrollReveal>
           </div>
         </section>
 
-        {/* What I Build - Minimal */}
-        <section id="services" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
+        {/* Stats Bar */}
+        <section className="py-12 sm:py-16 bg-gray-50 dark:bg-gray-800">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-            <SimpleScrollReveal direction="up">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 text-center">
-                The System Behind Your Business
-              </h2>
-            </SimpleScrollReveal>
-
-            {/* Mobile/Tablet: 2x2 grid of centered boxes */}
-            <div className="grid grid-cols-2 gap-4 lg:hidden">
-              {services.map((service, index) => (
-                <SimpleScrollReveal key={service.title} direction="up" delay={index * 100}>
-                  <Link href={service.href} className="group block p-4 rounded-xl bg-white dark:bg-gray-800 shadow-sm hover:shadow-md transition-shadow">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center mb-3">
-                        <Icon name={service.icon} className="w-6 h-6 text-white" style={{filter: 'brightness(0) invert(1)'}} />
-                      </div>
-                      <h3 className="font-semibold text-base text-gray-900 dark:text-white mb-1 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-xs text-gray-600 dark:text-gray-400">
-                        {service.tagline}
-                      </p>
-                    </div>
-                  </Link>
-                </SimpleScrollReveal>
-              ))}
-            </div>
-
-            {/* Desktop: 3-column grid layout */}
-            <div className="hidden lg:grid lg:grid-cols-3 lg:gap-12">
-              {services.map((service, index) => (
-                <SimpleScrollReveal key={service.title} direction="up" delay={index * 100} className="h-full">
-                  <Link href={service.href} className="group block h-full">
-                    <div className="flex flex-col items-center text-center">
-                      <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 mb-5">
-                        <Icon name={service.icon} className="w-7 h-7 text-white" style={{filter: 'brightness(0) invert(1)'}} />
-                      </div>
-                      <h3 className="font-semibold text-xl text-gray-900 dark:text-white mb-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                        {service.title}
-                      </h3>
-                      <p className="text-gray-600 dark:text-gray-400">
-                        {service.tagline}
-                      </p>
-                    </div>
-                  </Link>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+              {stats.map((stat, index) => (
+                <SimpleScrollReveal key={index} direction="up" delay={index * 100}>
+                  <div>
+                    <p className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">
+                      {stat.value}
+                    </p>
+                    <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mt-1">
+                      {stat.sublabel}
+                    </p>
+                  </div>
                 </SimpleScrollReveal>
               ))}
             </div>
           </div>
         </section>
 
-        {/* Results - Minimal */}
-        <section className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-gray-900">
+        {/* Client Logos */}
+        <section className="py-10 sm:py-12 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <SimpleScrollReveal direction="up">
+              <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 mb-4">
+                {clientLogos.map((logo) => (
+                  <span key={logo} className="text-sm sm:text-base font-medium text-gray-400 dark:text-gray-500">
+                    {logo}
+                  </span>
+                ))}
+              </div>
+              <p className="text-center text-sm text-gray-500 dark:text-gray-400 italic">
+                As Featured in Voyage Dallas Magazine
+              </p>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* WHAT I BUILD */}
+        <section id="services" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <SimpleScrollReveal direction="up">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6 text-center uppercase tracking-wide">
+                What I Build
+              </h2>
+              <p className="text-lg text-gray-600 dark:text-gray-400 text-center mb-16 max-w-3xl mx-auto">
+                Most businesses that come to me are dealing with one of three things: they have no systems at all, they have systems that don't talk to each other, or they've outgrown what they built and it's starting to break.
+              </p>
+              <p className="text-base text-gray-500 dark:text-gray-400 text-center mb-16">
+                The fix depends on where you are.
+              </p>
+            </SimpleScrollReveal>
+
+            <div className="space-y-8">
+              {tiers.map((tier, index) => (
+                <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
+                  <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm">
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
+                      <div>
+                        <h3 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
+                          {tier.name}
+                        </h3>
+                        <p className="text-blue-600 dark:text-blue-400 font-medium mt-1">
+                          {tier.tagline}
+                        </p>
+                      </div>
+                      <span className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider whitespace-nowrap">
+                        {tier.timeline}
+                      </span>
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                      {tier.description}
+                    </p>
+                    <Link
+                      href={tier.href}
+                      className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
+                    >
+                      Learn more
+                      <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
+                </SimpleScrollReveal>
+              ))}
+            </div>
+
+            <SimpleScrollReveal direction="up">
+              <p className="text-center text-gray-600 dark:text-gray-400 mt-12 text-sm">
+                Every system is scoped, documented, tested, and handed off with training. You own everything I build.
+              </p>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Web Design - subtle mention */}
+        <section className="py-12 sm:py-16 bg-white dark:bg-gray-900">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <SimpleScrollReveal direction="up">
+              <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
+                I also do web design and custom software when it's part of the system.{' '}
+                <Link href="/contact" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
+                  Ask me about it.
+                </Link>
+              </p>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* Automation Audit CTA */}
+        <section className="py-20 sm:py-24 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+            <SimpleScrollReveal direction="up">
+              <div className="text-center">
+                <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-4">
+                  Not sure where to start?
+                </h2>
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  Most people aren't. That's what the Automation Audit is for.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
+                  I review your current setup, identify the biggest opportunities, and give you a prioritized roadmap with ROI estimates. If you decide to move forward with a build, the audit fee applies as credit toward the project.
+                </p>
+                <Link
+                  href="/services/automation-audit"
+                  className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
+                >
+                  Book an Audit
+                </Link>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* RESULTS */}
+        <section className="py-24 sm:py-32 bg-white dark:bg-gray-900">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <SimpleScrollReveal direction="up">
-              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 text-center">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 text-center uppercase tracking-wide">
                 Results
               </h2>
             </SimpleScrollReveal>
 
-            <div className="space-y-6 mb-12">
+            <div className="space-y-0 border-t border-gray-200 dark:border-gray-700">
               {results.map((result, index) => (
                 <SimpleScrollReveal key={result.client} direction="up" delay={index * 100}>
                   <Link
                     href={result.href}
-                    className="flex items-center justify-between py-4 border-b border-gray-200 dark:border-gray-700 group hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
+                    className="flex items-center justify-between py-5 border-b border-gray-200 dark:border-gray-700 group hover:bg-gray-50 dark:hover:bg-gray-800/50 -mx-4 px-4 transition-colors"
                   >
-                    <span className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                      {result.client}
-                    </span>
-                    <span className="text-gray-600 dark:text-gray-400">
-                      {result.metric}
+                    <div>
+                      <p className="font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                        {result.metric}
+                      </p>
+                      <p className="text-sm text-gray-500 dark:text-gray-400">{result.client}</p>
+                      <p className="text-sm text-gray-400 dark:text-gray-500">{result.description}</p>
+                    </div>
+                    <svg className="w-5 h-5 text-gray-400 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors flex-shrink-0 ml-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </Link>
+                </SimpleScrollReveal>
+              ))}
+            </div>
+
+            <SimpleScrollReveal direction="up">
+              <div className="text-center mt-8">
+                <Link
+                  href="/case-studies"
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
+                >
+                  See all results
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
+        {/* WRITING */}
+        <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <SimpleScrollReveal direction="up">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6 text-center uppercase tracking-wide">
+                Writing
+              </h2>
+              <p className="text-gray-600 dark:text-gray-400 text-center mb-16 max-w-2xl mx-auto">
+                I write about growing a business, systems, and the stuff nobody talks about... like what you're actually building all of this for.
+              </p>
+            </SimpleScrollReveal>
+
+            <div className="space-y-8">
+              {writing.map((post, index) => (
+                <SimpleScrollReveal key={post.title} direction="up" delay={index * 100}>
+                  <Link href={post.href} className="block group">
+                    <h3 className="text-xl font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+                      {post.title}
+                    </h3>
+                    <p className="text-gray-600 dark:text-gray-400 mb-3">
+                      {post.description}
+                    </p>
+                    <span className="text-blue-600 dark:text-blue-400 font-medium text-sm">
+                      Read
                     </span>
                   </Link>
                 </SimpleScrollReveal>
@@ -302,15 +369,12 @@ export default function Home() {
             </div>
 
             <SimpleScrollReveal direction="up">
-              <p className="text-center text-sm text-gray-500 dark:text-gray-500 mb-8">
-                These systems are still running.
-              </p>
-              <div className="text-center">
+              <div className="text-center mt-12">
                 <Link
-                  href="/case-studies"
+                  href="/blog"
                   className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
                 >
-                  See all
+                  View all writing
                   <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>

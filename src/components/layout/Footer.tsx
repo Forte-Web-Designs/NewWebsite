@@ -41,23 +41,18 @@ export default function Footer() {
     {
       heading: "Services",
       points: [
-        { text: "Get Found", href: "/services/get-found" },
-        { text: "Capture It", href: "/services/capture-it" },
-        { text: "Work the Lead", href: "/services/work-the-lead" },
-        { text: "Serve the Customer", href: "/services/serve-the-customer" },
-        { text: "Keep and Grow", href: "/services/keep-and-grow" },
-        { text: "See Everything", href: "/services/see-everything" },
-        { text: "Case Studies", href: "/case-studies" }
+        { text: "Foundation", href: "/services/foundation" },
+        { text: "Growth", href: "/services/growth" },
+        { text: "Scale", href: "/services/scale" },
+        { text: "Automation Audit", href: "/services/automation-audit" }
       ]
     },
     {
       heading: "Company",
       points: [
-        { text: "About Us", href: "/about" },
-        { text: "Testimonials", href: "/testimonials" },
-        { text: "FAQ", href: "/faq" },
-        { text: "Blog", href: "/blog" },
-        { text: "Pricing", href: "/pricing" },
+        { text: "About", href: "/about" },
+        { text: "Case Studies", href: "/case-studies" },
+        { text: "Writing", href: "/blog" },
         { text: "Contact", href: "/contact" }
       ]
     },
@@ -97,18 +92,10 @@ export default function Footer() {
           {/* Logo and company info */}
           <div>
             <div className="flex items-center mb-4">
-              <div className="block dark:hidden">
-                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={150} folder="home" />
-              </div>
-              <div className="hidden dark:block">
-                <Icon name="logo-dark.svg" alt="Forte Logo (Dark Mode)" size={150} folder="home" />
-              </div>
+              <img src="/images/home/LaunchForteLogo.png" alt="Forte Web Designs Logo" style={{ width: 150 }} />
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>We solve the technical problems that hold growing businesses back - automation, integrations, custom software, and the infrastructure you need to scale. Based in Dallas, serving clients nationwide.</p>
-              <p className="mt-3">
-                <strong>Headquartered in Dallas, Texas.</strong> Serving clients throughout Dallas-Fort Worth and nationwide with 100% USA-based team and support.
-              </p>
+              <p>Based in Dallas, Texas. Serving clients nationwide.</p>
             </div>
             <div className="flex gap-2 mt-5 flex-wrap">
               <Icon name="mail.svg" alt="email" size={20} folder="footer" />
@@ -158,18 +145,10 @@ export default function Footer() {
           {/* Logo and company info - full width on mobile */}
           <div className="mb-8">
             <div className="flex items-center mb-4">
-              <div className="block dark:hidden">
-                <Icon name="logo-light.svg" alt="Forte Logo (Light Mode)" size={150} folder="home" />
-              </div>
-              <div className="hidden dark:block">
-                <Icon name="logo-dark.svg" alt="Forte Logo (Dark Mode)" size={150} folder="home" />
-              </div>
+              <img src="/images/home/LaunchForteLogo.png" alt="Forte Web Designs Logo" style={{ width: 150 }} />
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>We solve the technical problems that hold growing businesses back - automation, integrations, custom software, and the infrastructure you need to scale. Based in Dallas, serving clients nationwide.</p>
-              <p className="mt-3">
-                <strong>Headquartered in Dallas, Texas.</strong> Serving clients throughout Dallas-Fort Worth and nationwide with 100% USA-based team and support.
-              </p>
+              <p>Based in Dallas, Texas. Serving clients nationwide.</p>
             </div>
             <div className="flex gap-2 mt-5 flex-wrap">
               <Icon name="mail.svg" alt="email" size={20} folder="footer" />
@@ -207,21 +186,8 @@ export default function Footer() {
           </div>
         </div>
 
-        {/* Service Areas for SEO */}
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-700">
-          <div className="text-center mb-4">
-            <h3 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">Service Areas</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
-              Headquartered in Dallas, Texas, serving clients throughout DFW and nationwide.
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-8">
-          <p className="dark:text-gray-400 text-gray-700 text-sm hidden md:block text-center">
-            © {new Date().getFullYear()} Forte Web Designs - AI Automation & Custom Software Solutions Dallas Fort Worth Texas. All rights reserved.
-          </p>
-          <p className="dark:text-gray-400 text-gray-700 text-xs md:hidden text-center">
+          <p className="dark:text-gray-400 text-gray-700 text-sm text-center">
             © {new Date().getFullYear()} Forte Web Designs. All rights reserved.
           </p>
         </div>

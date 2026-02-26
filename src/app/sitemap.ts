@@ -5,7 +5,7 @@ export const dynamic = 'force-static'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://fortewebdesigns.com'
-  
+
   return [
     // Core Pages
     {
@@ -26,19 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: 'monthly',
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/pricing`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    {
-      url: `${baseUrl}/growth-audit`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.9,
-    },
-    
+
     // Services Pages
     {
       url: `${baseUrl}/services`,
@@ -47,102 +35,44 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/automation-ai`,
+      url: `${baseUrl}/services/foundation`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
     {
-      url: `${baseUrl}/services/web-design`,
+      url: `${baseUrl}/services/growth`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.9,
     },
-    
-    // DFW Local Service Pages
     {
-      url: `${baseUrl}/dfw/ai-consulting`,
+      url: `${baseUrl}/services/scale`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     },
     {
-      url: `${baseUrl}/dfw/automation-consulting`,
+      url: `${baseUrl}/services/automation-audit`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.8,
+      priority: 0.9,
     },
-    {
-      url: `${baseUrl}/dfw/business-growth-systems`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly',
-      priority: 0.8,
-    },
-    
-    // Documentation Pages
-    {
-      url: `${baseUrl}/docs/technology-stack`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    {
-      url: `${baseUrl}/docs/ai-agents`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.7,
-    },
-    
-    // Blog
+
+    // Blog / Writing
     {
       url: `${baseUrl}/blog`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.6,
+      priority: 0.7,
     },
-    {
-      url: `${baseUrl}/blog/30-90-day-ai-playbook-small-service-businesses`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/owner-dashboards-metrics-that-predict-cash-flow`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/automating-first-touch-without-new-software`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/7-lightweight-automations-that-pay-for-themselves`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/ai-agents-vs-chatbots-what-small-businesses-actually-need`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    {
-      url: `${baseUrl}/blog/how-to-measure-roi-of-automation-in-90-days`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly',
-      priority: 0.6,
-    },
-    
-    // Case Studies
+
+    // Case Studies / Work
     {
       url: `${baseUrl}/case-studies`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
-      priority: 0.7,
-    }
+      priority: 0.8,
+    },
   ]
 }

@@ -307,7 +307,7 @@ export default function AIAutomationMythsBlogPost() {
                   </svg>
                 </Link>
                 <Link
-                  href="/services/automation-ai"
+                  href="/services"
                   className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white hover:bg-white hover:text-blue-600 rounded-lg font-semibold transition-all duration-200"
                 >
                   Learn About Our Automation Services

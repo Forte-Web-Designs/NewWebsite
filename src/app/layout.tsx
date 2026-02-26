@@ -68,9 +68,9 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: {
     template: '%s | Forte Web Designs',
-    default: 'Automation, Custom Software & Web Design | Forte Web Designs',
+    default: 'Systems Architecture & Automation Consulting | Forte Web Designs',
   },
-  description: "We build automation workflows, custom software, and websites that eliminate manual work and scale with your business. Based in Dallas, serving clients nationwide.",
+  description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Dallas, serving clients nationwide.",
   keywords: [
     'business automation', 'workflow automation', 'custom software development', 'automation consulting',
     'process automation', 'custom website design', 'DFW web design', 'hand-coded websites',
@@ -83,9 +83,9 @@ export const metadata: Metadata = {
   creator: 'Forte Web Designs',
   publisher: 'Forte Web Designs',
   icons: {
-    icon: '/images/home/logo1.png',
-    shortcut: '/images/home/logo1.png',
-    apple: '/images/home/logo1.png',
+    icon: '/images/home/LaunchForteLogo.png',
+    shortcut: '/images/home/LaunchForteLogo.png',
+    apple: '/images/home/LaunchForteLogo.png',
   },
   robots: {
     index: true,
@@ -99,20 +99,20 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://fortewebdesigns.com',
-    title: 'Automation, Custom Software & Web Design | Forte Web Designs',
-    description: "We build automation workflows, custom software, and websites that eliminate manual work and scale with your business. Based in Dallas, serving clients nationwide.",
+    title: 'Systems Architecture & Automation Consulting | Forte Web Designs',
+    description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Dallas, serving clients nationwide.",
     siteName: 'Forte Web Designs',
     images: [{
       url: 'https://fortewebdesigns.com/images/og-image.jpg',
       width: 1200,
       height: 630,
-      alt: 'Forte Web Designs - Automation, Custom Software & Web Design'
+      alt: 'Forte Web Designs - Systems Architecture & Automation Consulting'
     }]
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Automation, Custom Software & Web Design | Forte Web Designs',
-    description: "We build automation workflows, custom software, and websites that eliminate manual work and scale with your business. Based in Dallas, serving clients nationwide.",
+    title: 'Systems Architecture & Automation Consulting | Forte Web Designs',
+    description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Dallas, serving clients nationwide.",
     images: ['https://fortewebdesigns.com/images/og-image.jpg']
   },
 };
