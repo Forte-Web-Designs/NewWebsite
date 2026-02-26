@@ -44,7 +44,7 @@ export default function Footer() {
         { text: "Foundation", href: "/services/foundation" },
         { text: "Growth", href: "/services/growth" },
         { text: "Scale", href: "/services/scale" },
-        { text: "Automation Audit", href: "/services/automation-audit" }
+        { text: "Infrastructure Review", href: "/services/infrastructure-review" }
       ]
     },
     {

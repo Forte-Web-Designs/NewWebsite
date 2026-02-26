@@ -118,7 +118,7 @@ export default function Home() {
                 </h1>
 
                 <p className="text-lg sm:text-xl leading-relaxed text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-                  Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together.
+                  Automation, CRM pipelines, reporting dashboards, funnels, websites, and the infrastructure that holds it all together.
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -141,7 +141,7 @@ export default function Home() {
         </section>
 
         {/* Stats Bar */}
-        <section className="py-12 sm:py-16 bg-gray-50 dark:bg-gray-800">
+        <section className="py-12 sm:py-16 bg-gray-50 dark:bg-gray-800 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
               {stats.map((stat, index) => (
@@ -161,7 +161,7 @@ export default function Home() {
         </section>
 
         {/* Client Logos */}
-        <section className="py-10 sm:py-12 bg-white dark:bg-gray-900">
+        <section className="py-10 sm:py-12 bg-white dark:bg-gray-900 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <SimpleScrollReveal direction="up">
               <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10 mb-4">
@@ -182,7 +182,7 @@ export default function Home() {
         </section>
 
         {/* WHAT I BUILD */}
-        <section id="services" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
+        <section id="services" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <SimpleScrollReveal direction="up">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6 text-center uppercase tracking-wide">
@@ -239,11 +239,11 @@ export default function Home() {
         </section>
 
         {/* Web Design - subtle mention */}
-        <section className="py-12 sm:py-16 bg-white dark:bg-gray-900">
+        <section className="py-12 sm:py-16 bg-white dark:bg-gray-900 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
             <SimpleScrollReveal direction="up">
               <p className="text-center text-gray-500 dark:text-gray-400 text-sm">
-                I also do web design and custom software when it's part of the system.{' '}
+                I also build websites, click funnels, and landing pages designed to capture and convert leads.{' '}
                 <Link href="/contact" className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium">
                   Ask me about it.
                 </Link>
@@ -252,8 +252,8 @@ export default function Home() {
           </div>
         </section>
 
-        {/* Automation Audit CTA */}
-        <section className="py-20 sm:py-24 bg-gray-50 dark:bg-gray-800">
+        {/* Infrastructure Review CTA */}
+        <section className="py-20 sm:py-24 bg-gray-50 dark:bg-gray-800 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
             <SimpleScrollReveal direction="up">
               <div className="text-center">
@@ -261,16 +261,16 @@ export default function Home() {
                   Not sure where to start?
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-4">
-                  Most people aren't. That's what the Automation Audit is for.
+                  Most people aren't. That's what the Infrastructure Review is for.
                 </p>
                 <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                  I review your current setup, identify the biggest opportunities, and give you a prioritized roadmap with ROI estimates. If you decide to move forward with a build, the audit fee applies as credit toward the project.
+                  I review your current setup, identify the biggest opportunities, and give you a prioritized roadmap with ROI estimates. If you decide to move forward with a build, the review fee applies as credit toward the project.
                 </p>
                 <Link
-                  href="/services/automation-audit"
+                  href="/services/infrastructure-review"
                   className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
                 >
-                  Book an Audit
+                  Book a Review
                 </Link>
               </div>
             </SimpleScrollReveal>
@@ -278,7 +278,7 @@ export default function Home() {
         </section>
 
         {/* RESULTS */}
-        <section className="py-24 sm:py-32 bg-white dark:bg-gray-900">
+        <section className="py-24 sm:py-32 bg-white dark:bg-gray-900 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <SimpleScrollReveal direction="up">
               <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 text-center uppercase tracking-wide">
@@ -325,7 +325,7 @@ export default function Home() {
         </section>
 
         {/* About Me Section */}
-        <section className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-gray-900">
+        <section className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-gray-900 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
             <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
               {/* Left - Headshot & Brief */}
@@ -379,7 +379,7 @@ export default function Home() {
         </section>
 
         {/* Contact Section with Calendly */}
-        <section id="contact" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800">
+        <section id="contact" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
             <SimpleScrollReveal direction="up">
               <div className="text-center mb-12">
