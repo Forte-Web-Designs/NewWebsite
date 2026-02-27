@@ -96,6 +96,7 @@ export default function Header() {
               <HeaderLink href="/">Home</HeaderLink>
               <HeaderLink href="/services">Services</HeaderLink>
               <HeaderLink href="/case-studies">Results</HeaderLink>
+              <HeaderLink href="/testimonials">Reviews</HeaderLink>
               <HeaderLink href="/blog">Blog</HeaderLink>
               <HeaderLink href="/about">About</HeaderLink>
             </nav>
@@ -197,6 +198,17 @@ export default function Header() {
                 }`}
               >
                 Results
+              </Link>
+              <Link
+                href="/testimonials"
+                onClick={() => setMobileMenuOpen(false)}
+                className={`text-lg font-medium py-3 px-4 rounded-lg transition-colors ${
+                  pathname === '/testimonials'
+                    ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400'
+                    : 'text-gray-700 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-800'
+                }`}
+              >
+                Reviews
               </Link>
               <Link
                 href="/blog"
