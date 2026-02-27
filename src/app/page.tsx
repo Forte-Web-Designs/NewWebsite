@@ -36,7 +36,7 @@ export default function Home() {
             "email": "seth@fortewebdesigns.com",
             "address": { "@type": "PostalAddress", "addressLocality": "Grapevine", "addressRegion": "TX", "addressCountry": "US" },
             "areaServed": "United States",
-            "serviceType": ["Business Automation", "CRM Integration", "Custom Software Development", "Reporting Dashboards"],
+            "serviceType": ["Business Automation", "CRM Integration", "Custom Software Development", "Web Design"],
             "founder": { "@type": "Person", "name": "Seth Forte" }
           })
         }}
@@ -48,6 +48,23 @@ export default function Home() {
         <section className="pt-32 pb-24 px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-4xl mx-auto">
             <SimpleScrollReveal direction="up">
+
+              {/* Voyage Dallas Badge */}
+              <a
+                href="https://voyagedallas.com/interview/community-highlights-meet-seth-forte-of-forte-web-designs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mb-10 px-4 py-2 bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-blue-300 rounded-full text-sm font-semibold border border-blue-200 dark:border-blue-800 hover:bg-blue-100 dark:hover:bg-blue-950 transition-colors"
+              >
+                <svg className="w-4 h-4 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 12h6m-3-4h3" />
+                </svg>
+                Featured in Voyage Dallas Magazine
+                <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                </svg>
+              </a>
+
               <h1 className="font-display font-bold text-5xl sm:text-6xl md:text-7xl leading-[1.05] tracking-tight text-gray-900 dark:text-white mb-6">
                 Growth isn't luck.
                 <br />
@@ -86,29 +103,19 @@ export default function Home() {
             {["Revolut", "Modern Bungalow", "Eden Medical", "Kingfisher Ads", "CR Deals", "Hollow Bamboo", "UDI Group"].map((name) => (
               <span key={name} className="text-sm font-medium text-gray-300 dark:text-gray-600">{name}</span>
             ))}
-            <span className="hidden sm:block text-gray-200 dark:text-gray-700">·</span>
-            <a
-              href="https://voyagedallas.com/interview/community-highlights-meet-seth-forte-of-forte-web-designs/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-sm text-gray-400 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
-            >
-              Featured in Voyage Dallas ↗
-            </a>
           </div>
         </div>
 
         {/* ─── STATS ────────────────────────────────────────────────────── */}
         <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-8">
-          <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-10">
+          <div className="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-3 gap-10 text-center">
             {[
               { value: "$52K", label: "Saved per year", sub: "CR Deals Cincinnati" },
-              { value: "20hrs", label: "Returned per week", sub: "Hollow Bamboo Films" },
+              { value: "20 hrs", label: "Returned per week", sub: "Hollow Bamboo Films" },
               { value: "$4M", label: "Opportunity identified", sub: "Revolut" },
-              { value: "23+", label: "Completed projects", sub: "All 5-star rated" },
             ].map((stat, i) => (
               <SimpleScrollReveal key={i} direction="up" delay={i * 75}>
-                <div className="text-center">
+                <div>
                   <p className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-2">{stat.value}</p>
                   <p className="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">{stat.label}</p>
                   <p className="text-sm text-gray-400 dark:text-gray-500">{stat.sub}</p>
@@ -135,27 +142,27 @@ export default function Home() {
             <div className="grid sm:grid-cols-2 gap-6">
               {[
                 {
-                  step: "01", name: "Foundation", timeline: "1–2 weeks",
+                  step: "01", name: "Foundation", timeline: "1-2 weeks",
                   tagline: "Get your system built and everything connected.",
-                  description: "CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from.",
+                  description: "CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from. And your first lead source connected so you're not starting with an empty system.",
                   href: "/services/foundation"
                 },
                 {
-                  step: "02", name: "Launch", timeline: "1–3 weeks",
+                  step: "02", name: "Launch", timeline: "1-3 weeks",
                   tagline: "Get people into the system. Start generating revenue.",
-                  description: "Ad strategy, sales funnels, nurture sequences, and booking automation that turn strangers into leads and leads into customers, automatically.",
+                  description: "Foundation gave you the platform. Launch gives you the campaigns. Ad strategy, sales funnels, nurture sequences, and booking automation that turn strangers into leads and leads into customers, automatically.",
                   href: "/services/launch"
                 },
                 {
-                  step: "03", name: "Growth", timeline: "2–3 weeks",
+                  step: "03", name: "Growth", timeline: "2-3 weeks",
                   tagline: "Add channels. Convert more. Handle the volume.",
-                  description: "One channel is working. Now multiply it. More lead sources, agents for after-hours response, outbound prospecting, review automation, and deeper integrations.",
+                  description: "One channel is working. Now multiply it. More lead sources, agents for after-hours response, outbound prospecting, review automation, and the integrations that let you run more without hiring more.",
                   href: "/services/growth"
                 },
                 {
-                  step: "04", name: "Scale", timeline: "3–4 weeks",
+                  step: "04", name: "Scale", timeline: "3-4 weeks",
                   tagline: "Optimize what's working. Grow without adding headcount.",
-                  description: "Reporting dashboards. Outbound prospecting systems. Agents that answer calls and chat 24/7. Content engines. Monthly management so someone's watching the machine.",
+                  description: "Reporting dashboards so you stop guessing. Outbound systems to find prospects instead of waiting for them. Agents that answer calls and chat 24/7. Content engines that keep you visible. And monthly management so someone's actually watching the machine.",
                   href: "/services/scale"
                 },
               ].map((tier, index) => (
@@ -184,6 +191,26 @@ export default function Home() {
               ))}
             </div>
 
+            {/* Web Design Callout */}
+            <SimpleScrollReveal direction="up">
+              <div className="mt-6 bg-white dark:bg-gray-950 rounded-2xl p-7 border border-gray-200 dark:border-gray-800 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-5">
+                <div>
+                  <p className="text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-widest mb-1">Also available</p>
+                  <p className="text-lg font-bold text-gray-900 dark:text-white mb-1">Web Design, Landing Pages and Funnels</p>
+                  <p className="text-sm text-gray-500 dark:text-gray-400">Custom websites, click funnels, and lead capture pages built to convert. Available as a standalone service or alongside any stage.</p>
+                </div>
+                <Link
+                  href="/services/web-design"
+                  className="flex-shrink-0 inline-flex items-center gap-2 px-5 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-white rounded-lg font-semibold text-sm transition-colors"
+                >
+                  Learn more
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </SimpleScrollReveal>
+
             <SimpleScrollReveal direction="up">
               <div className="mt-10 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 pt-8 border-t border-gray-200 dark:border-gray-800">
                 <p className="text-sm text-gray-400 dark:text-gray-500">
@@ -193,7 +220,10 @@ export default function Home() {
                   href="/services/infrastructure-review"
                   className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors whitespace-nowrap"
                 >
-                  Not sure where to start? Book a Review →
+                  Not sure where to start? Book a Review
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
                 </Link>
               </div>
             </SimpleScrollReveal>
@@ -244,7 +274,10 @@ export default function Home() {
 
             <SimpleScrollReveal direction="up">
               <Link href="/case-studies" className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
-                See all case studies →
+                See all case studies
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </SimpleScrollReveal>
           </div>
@@ -272,7 +305,7 @@ export default function Home() {
                   project: "Product Sync Automation"
                 },
                 {
-                  quote: "Extremely knowledgeable and patient. He thought outside the box to offer solutions we did not consider. Highly recommend — we will use him again in the future.",
+                  quote: "Extremely knowledgeable and patient. He thought outside the box to offer solutions we did not consider. Highly recommend and we will use him again in the future.",
                   name: "Power Apps Client",
                   project: "Review System Development"
                 },
@@ -305,7 +338,10 @@ export default function Home() {
 
             <SimpleScrollReveal direction="up">
               <Link href="/testimonials" className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
-                See all 15 reviews →
+                See all 15 reviews
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </SimpleScrollReveal>
           </div>
@@ -329,13 +365,16 @@ export default function Home() {
                 About Forte
               </h2>
               <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-5">
-                Seth spent 5 years building enterprise systems at Wells Fargo — where downtime costs six figures an hour. Now we solve the same class of problems for growing businesses: automation, integrations, custom software, and the infrastructure that holds it all together.
+                Seth spent 5 years building enterprise-grade systems where downtime costs six figures an hour. Now we solve the same class of problems for growing businesses: automation, integrations, custom software, and the infrastructure that holds it all together.
               </p>
               <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400 leading-relaxed mb-8">
                 We start every project by figuring out what the problem is actually costing you. If the math works, we build it. If it doesn't, we'll tell you.
               </p>
               <Link href="/about" className="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 transition-colors">
-                Our story →
+                Our story
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
               </Link>
             </SimpleScrollReveal>
 
@@ -360,7 +399,7 @@ export default function Home() {
                   Tell us what's broken.
                 </h2>
                 <p className="text-base sm:text-lg text-gray-500 dark:text-gray-400">
-                  Book a free call. No pitch, no pressure — just figuring out if we can help.
+                  Book a free call. No pitch, no pressure. Just figuring out if we can help.
                 </p>
               </div>
             </SimpleScrollReveal>
