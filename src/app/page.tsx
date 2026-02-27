@@ -322,6 +322,85 @@ export default function Home() {
           </div>
         </section>
 
+        {/* Reviews Section */}
+        <section className="py-24 sm:py-32 bg-gray-50 dark:bg-gray-800 overflow-hidden">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+            <SimpleScrollReveal direction="up">
+              <h2 className="font-display font-bold text-3xl sm:text-4xl text-gray-900 dark:text-white mb-16 text-center">
+                What Clients Say
+              </h2>
+            </SimpleScrollReveal>
+
+            <div className="grid md:grid-cols-3 gap-6 mb-10">
+              {[
+                {
+                  quote: "Seth is my go-to for all of my automation projects now and he's making my business run so much more smoothly and efficiently. His process in defining the project scope ahead of time ensures that I get everything I need and we're on the same page throughout the process.",
+                  name: "Shopify / Xero Client",
+                  project: "Product Sync Automation"
+                },
+                {
+                  quote: "Seth was amazing. Extremely knowledgeable and patient. He thought outside the box to offer us solutions we did not consider. Highly recommend Seth and we will use him in the future.",
+                  name: "Power Apps Client",
+                  project: "Review System Development"
+                },
+                {
+                  quote: "Seth delivered an exceptional automation that transformed a key aspect of our daily operations. He not only built the system, but also guided us through it in real-time, ensuring we were fully comfortable. Professional, incredibly responsive, and has tons of ideas.",
+                  name: "Legal Tech Client",
+                  project: "Court Records Automation"
+                },
+                {
+                  quote: "I can just detail my process and pain points and he figures out how to streamline and then automate. He's communicative and forthcoming with all of the details along the way, and stays with it until we get the tech working perfectly.",
+                  name: "Small Business Client",
+                  project: "Workflow Automation"
+                },
+                {
+                  quote: "Seth is an amazing rare breed. He is not just focused on what is asked of him, he actually scopes the need to make sure the work meets your need to the maximum level. Brilliant Developer and the kind of man you wished was your neighbor.",
+                  name: "AWS Client",
+                  project: "Asset Management Platform"
+                },
+                {
+                  quote: "He figured out the problem immediately. Fixed it in 2 hours when he quoted 3-4. And the kicker? He did this while on vacation. Super easy to work with. Clearly knows his stuff. The workflow runs perfectly now and he added error handling so it won't break again.",
+                  name: "n8n Client",
+                  project: "Workflow Fix"
+                }
+              ].map((review, index) => (
+                <SimpleScrollReveal key={index} direction="up" delay={index * 75}>
+                  <div className="bg-white dark:bg-gray-900 rounded-xl p-6 border border-gray-200 dark:border-gray-700 h-full flex flex-col">
+                    <div className="flex gap-0.5 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-4 h-4 text-yellow-400 fill-current" viewBox="0 0 20 20">
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed flex-1 mb-4">
+                      "{review.quote}"
+                    </p>
+                    <div>
+                      <p className="font-semibold text-gray-900 dark:text-white text-sm">{review.name}</p>
+                      <p className="text-gray-500 dark:text-gray-500 text-xs">{review.project}</p>
+                    </div>
+                  </div>
+                </SimpleScrollReveal>
+              ))}
+            </div>
+
+            <SimpleScrollReveal direction="up">
+              <div className="text-center">
+                <Link
+                  href="/testimonials"
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
+                >
+                  See all reviews
+                  <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+            </SimpleScrollReveal>
+          </div>
+        </section>
+
         {/* About Me Section */}
         <section className="py-24 sm:py-32 lg:py-40 bg-white dark:bg-gray-900 overflow-hidden">
           <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
