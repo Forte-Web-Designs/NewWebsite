@@ -674,7 +674,7 @@ export default function BusinessAutomationROIGuideBlogPost() {
             </SimpleScrollReveal>
 
             <SimpleScrollReveal direction="up" delay={300}>
-              <Link href="/services" className="block group">
+              <Link href="/services/automation-ai" className="block group">
                 <div className="bg-white dark:bg-gray-900 rounded-xl p-6 hover:shadow-lg transition-all duration-300 h-full border border-gray-200 dark:border-gray-700 group-hover:border-blue-600">
                   <div className="inline-flex items-center gap-2 bg-purple-100 dark:bg-purple-900/30 rounded-full px-3 py-1 mb-4">
                     <Icon name="puzzle" className="w-4 h-4 text-purple-600" />

@@ -115,7 +115,7 @@ export default function TestimonialsPage() {
                 What clients say about working together.
               </p>
               <p className="text-gray-500 dark:text-gray-500">
-                {reviews.length} reviews · All 5-star · From Upwork
+                {reviews.length} reviews · All 5-star · From verified clients
               </p>
             </div>
           </SimpleScrollReveal>
