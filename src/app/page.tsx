@@ -85,7 +85,7 @@ export default function Home() {
             "email": "seth@fortewebdesigns.com",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Dallas",
+              "addressLocality": "Grapevine",
               "addressRegion": "TX",
               "addressCountry": "US"
             },

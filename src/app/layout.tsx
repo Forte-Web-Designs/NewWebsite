@@ -70,14 +70,14 @@ export const metadata: Metadata = {
     template: '%s | Forte Web Designs',
     default: 'Systems Architecture & Automation Consulting | Forte Web Designs',
   },
-  description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Dallas, serving clients nationwide.",
+  description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Grapevine, Texas. Serving clients nationwide.",
   keywords: [
     'business automation', 'workflow automation', 'custom software development', 'automation consulting',
     'process automation', 'custom website design', 'DFW web design', 'hand-coded websites',
     'automation services', 'business process automation', 'CRM integrations', 'Zapier alternatives',
-    'n8n automations', 'Make.com', 'automation workflows', 'custom software Dallas',
+    'n8n automations', 'Make.com', 'automation workflows', 'custom software Grapevine',
     'software development', 'web development', 'business software', 'automation systems',
-    'workflow optimization', 'business efficiency', 'Dallas software company', 'Fort Worth web design',
+    'workflow optimization', 'business efficiency', 'Grapevine software company', 'Fort Worth web design',
     'Texas automation', 'DFW software', 'forte web designs'
   ],
   creator: 'Forte Web Designs',
@@ -100,7 +100,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://fortewebdesigns.com',
     title: 'Systems Architecture & Automation Consulting | Forte Web Designs',
-    description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Dallas, serving clients nationwide.",
+    description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Grapevine, Texas. Serving clients nationwide.",
     siteName: 'Forte Web Designs',
     images: [{
       url: 'https://fortewebdesigns.com/images/og-image.jpg',
@@ -112,7 +112,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Systems Architecture & Automation Consulting | Forte Web Designs',
-    description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Dallas, serving clients nationwide.",
+    description: "Automation, CRM pipelines, reporting dashboards, and the infrastructure that holds it all together. Based in Grapevine, Texas. Serving clients nationwide.",
     images: ['https://fortewebdesigns.com/images/og-image.jpg']
   },
 };
@@ -148,12 +148,12 @@ export default function RootLayout({
         
         {/* Local Business Verification */}
         <meta name="geo.region" content="US-TX" />
-        <meta name="geo.placename" content="Dallas-Fort Worth" />
-        <meta name="geo.position" content="32.7767;-96.7970" />
-        <meta name="ICBM" content="32.7767, -96.7970" />
+        <meta name="geo.placename" content="Grapevine, Texas" />
+        <meta name="geo.position" content="32.9343;-97.0781" />
+        <meta name="ICBM" content="32.9343, -97.0781" />
         
         {/* Local SEO Enhanced Tags */}
-        <meta name="coverage" content="Texas, Dallas, Fort Worth, DFW" />
+        <meta name="coverage" content="Texas, Grapevine, Dallas, Fort Worth, DFW" />
         <meta name="distribution" content="local" />
         <meta name="audience" content="local businesses" />
         <meta name="target" content="small business owners" />

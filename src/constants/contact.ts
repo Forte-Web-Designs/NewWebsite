@@ -14,7 +14,7 @@ export const CONTACT_INFO = {
   name: process.env.NEXT_PUBLIC_BUSINESS_NAME || 'Forte Web Designs',
   address: {
     street: process.env.NEXT_PUBLIC_BUSINESS_ADDRESS_STREET || '5473 Blair Rd Ste 100 PMB 492829',
-    city: process.env.NEXT_PUBLIC_BUSINESS_ADDRESS_CITY || 'Dallas',
+    city: process.env.NEXT_PUBLIC_BUSINESS_ADDRESS_CITY || 'Grapevine',
     state: process.env.NEXT_PUBLIC_BUSINESS_ADDRESS_STATE || 'TX',
     zip: process.env.NEXT_PUBLIC_BUSINESS_ADDRESS_ZIP || '75231-4227'
   }

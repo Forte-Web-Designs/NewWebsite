@@ -39,12 +39,12 @@ interface GoogleBusinessSchemaProps {
 
 export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
   businessName = "Forte Web Designs",
-  description = "Business growth systems, AI automation, and custom website design services that give you time back and grow revenue. Serving Dallas-Fort Worth and nationwide.",
+  description = "Business growth systems, AI automation, and custom website design services that give you time back and grow revenue. Serving Grapevine, Dallas-Fort Worth, and nationwide.",
   address = {
     streetAddress: "5473 Blair Rd Ste 100 PMB 492829",
-    addressLocality: "Dallas",
+    addressLocality: "Grapevine",
     addressRegion: "TX",
-    postalCode: "75231-4227",
+    postalCode: "76051",
     addressCountry: "US"
   },
   phone = "(817) 873-6655",
@@ -57,12 +57,12 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
   ],
   priceRange = "$200-$1200",
   serviceArea = [
+    "Grapevine, TX",
     "Dallas, TX",
     "Fort Worth, TX",
     "Plano, TX",
     "Frisco, TX",
     "Arlington, TX",
-    "Grapevine, TX",
     "Irving, TX",
     "Carrollton, TX",
     "Garland, TX",
@@ -100,7 +100,6 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
     "The Colony, TX",
     "Carrollton, TX",
     "Farmers Branch, TX",
-    "Dallas County, TX",
     "Tarrant County, TX",
     "Collin County, TX",
     "Denton County, TX",
@@ -167,9 +166,9 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
     "https://www.pinterest.com/fortewebdesigns",
     "https://www.yelp.com/biz/forte-web-designs",
     "https://www.google.com/maps/place/Forte+Web+Designs",
-    "https://www.bbb.org/us/tx/dallas/profile/web-design/forte-web-designs",
-    "https://www.thumbtack.com/tx/dallas/web-design/forte-web-designs",
-    "https://www.angi.com/companylist/us/tx/dallas/forte-web-designs",
+    "https://www.bbb.org/us/tx/grapevine/profile/web-design/forte-web-designs",
+    "https://www.thumbtack.com/tx/grapevine/web-design/forte-web-designs",
+    "https://www.angi.com/companylist/us/tx/grapevine/forte-web-designs",
     "https://www.houzz.com/pro/forte-web-designs",
     "https://www.clutch.co/profile/forte-web-designs"
   ],
@@ -237,7 +236,7 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
         "itemOffered": {
           "@type": "Service",
           "name": service,
-          "description": `Professional ${service.toLowerCase()} services for businesses in Dallas, Fort Worth, and DFW metro area`
+          "description": `Professional ${service.toLowerCase()} services for businesses in Grapevine, Dallas-Fort Worth, and DFW metro area`
         }
       }))
     },
@@ -261,7 +260,7 @@ export const GoogleBusinessSchema: React.FC<GoogleBusinessSchemaProps> = ({
           "ratingValue": "5",
           "bestRating": "5"
         },
-        "reviewBody": "Forte Web Designs created an amazing custom website for our Dallas business. Their local SEO expertise helped us rank #1 for 'web designer near me' searches. Highly recommend!"
+        "reviewBody": "Forte Web Designs created an amazing custom website for our business. Their local SEO expertise helped us rank #1 for 'web designer near me' searches. Highly recommend!"
       },
       {
         "@type": "Review",
