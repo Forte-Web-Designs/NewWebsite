@@ -83,7 +83,7 @@ export default function LocalSEOSchema({
     ],
     memberOf: {
       "@type": "Organization",
-      name: "Dallas-Fort Worth Web Design Association"
+      name: "DFW Web Design Association"
     }
   };
 
@@ -169,7 +169,7 @@ export default function LocalSEOSchema({
           ratingValue: 5,
           bestRating: 5
         },
-        reviewBody: "Forte Web Designs created an amazing website for my Dallas restaurant. The local SEO work has brought in so many new customers!"
+        reviewBody: "Forte Web Designs created an amazing website for my restaurant. The local SEO work has brought in so many new customers!"
       },
       {
         "@type": "Review",

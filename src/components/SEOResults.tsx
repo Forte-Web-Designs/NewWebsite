@@ -638,7 +638,7 @@ export default function SEOResults({ results, auditedUrl, headerRef, gradesRef }
           <p style="font-size: 14px; margin: 8px 0;">📧 Email: ${CONTACT_INFO.email}</p>
           <p style="font-size: 14px; margin: 8px 0;">🌐 Visit: fortewebdesigns.com</p>
           <p style="font-size: 12px; margin-top: 15px; opacity: 0.9;">
-            Serving businesses across Dallas-Fort Worth with custom web design, SEO, and digital marketing solutions.
+            Serving businesses across Grapevine, Dallas-Fort Worth, and nationwide with custom web design, SEO, and digital marketing solutions.
           </p>
         </div>
       </body>

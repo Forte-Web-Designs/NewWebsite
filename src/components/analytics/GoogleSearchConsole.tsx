@@ -17,12 +17,12 @@ export default function GoogleSearchConsole() {
       
       {/* Local Business Verification */}
       <meta name="geo.region" content="US-TX" />
-      <meta name="geo.placename" content="Dallas-Fort Worth" />
-      <meta name="geo.position" content="32.7767;-96.7970" />
-      <meta name="ICBM" content="32.7767, -96.7970" />
-      
+      <meta name="geo.placename" content="Grapevine, Texas" />
+      <meta name="geo.position" content="32.9343;-97.0781" />
+      <meta name="ICBM" content="32.9343, -97.0781" />
+
       {/* Local SEO Enhanced Tags */}
-      <meta name="coverage" content="Texas, Dallas, Fort Worth, DFW" />
+      <meta name="coverage" content="Texas, Grapevine, Dallas, Fort Worth, DFW" />
       <meta name="distribution" content="local" />
       <meta name="audience" content="local businesses" />
       <meta name="target" content="small business owners" />

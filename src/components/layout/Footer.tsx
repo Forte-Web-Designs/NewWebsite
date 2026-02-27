@@ -100,7 +100,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>Based in Dallas, Texas. Serving clients nationwide.</p>
+              <p>Based in Grapevine, Texas. Serving clients nationwide.</p>
             </div>
             <div className="flex gap-2 mt-5 flex-wrap">
               <Icon name="mail.svg" alt="email" size={20} folder="footer" />
@@ -158,7 +158,7 @@ export default function Footer() {
               </div>
             </div>
             <div className="space-y-1 text-sm dark:text-gray-300 text-gray-700">
-              <p>Based in Dallas, Texas. Serving clients nationwide.</p>
+              <p>Based in Grapevine, Texas. Serving clients nationwide.</p>
             </div>
             <div className="flex gap-2 mt-5 flex-wrap">
               <Icon name="mail.svg" alt="email" size={20} folder="footer" />
