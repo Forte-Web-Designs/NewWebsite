@@ -11,9 +11,9 @@ export const metadata: Metadata = {
 const tiers = [
   {
     name: "Foundation",
-    tagline: "Get your system built and your first leads flowing.",
-    timeline: "1-2 WEEKS",
-    description: "CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from. And your first lead source connected and producing, because nobody should walk away with an empty system.",
+    tagline: "Get your system built and everything connected.",
+    timeline: "1–2 WEEKS",
+    description: "CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from. And your first lead source connected so you're not starting with an empty system.",
     includes: [
       "CRM setup with sales pipeline",
       "Payment processing",
@@ -25,32 +25,47 @@ const tiers = [
     href: "/services/foundation"
   },
   {
-    name: "Growth",
-    tagline: "Turn leads into revenue. Know what's working.",
-    timeline: "2-3 WEEKS",
-    description: "Leads mean nothing if you don't know where they came from, can't follow up fast enough, or have no way to tell what's actually converting. Growth adds automated follow-up sequences, sales funnels, booking systems, SMS, and the tracking and attribution that shows you exactly which channels produce revenue and which ones waste money.",
+    name: "Launch",
+    tagline: "Get people into the system. Start generating revenue.",
+    timeline: "1–3 WEEKS",
+    description: "Foundation gave you the platform. Launch gives you the campaigns. Ad strategy, sales funnels, nurture sequences, and booking automation that turn strangers into leads and leads into customers, automatically.",
     includes: [
-      "Automated follow-up sequences",
+      "Ad strategy and traffic",
       "Sales funnels",
-      "Booking systems",
-      "SMS integration",
-      "Channel attribution",
-      "Conversion tracking"
+      "Email/SMS nurture sequences",
+      "Instant lead response",
+      "Booking automation",
+      "Inbound lead capture"
+    ],
+    href: "/services/launch"
+  },
+  {
+    name: "Growth",
+    tagline: "Add channels. Convert more. Handle the volume.",
+    timeline: "2–3 WEEKS",
+    description: "One channel is working. Now multiply it. Add more lead sources, AI agents for after-hours response, outbound prospecting, review automation, and the integrations that let you run more without hiring more.",
+    includes: [
+      "Multi-channel lead capture",
+      "Outbound cold email",
+      "AI agents (after-hours)",
+      "Review automation",
+      "Advanced integrations",
+      "Outbound prospecting"
     ],
     href: "/services/growth"
   },
   {
     name: "Scale",
     tagline: "Optimize what's working. Grow without adding headcount.",
-    timeline: "3-4 WEEKS",
-    description: "Reporting dashboards so you stop guessing. Outbound systems to find prospects instead of waiting for them. AI agents that answer calls and chat 24/7. Content engines that keep you visible. And monthly management so someone's actually watching the machine. Built for businesses that already have leads and want to multiply what's working.",
+    timeline: "3–4 WEEKS",
+    description: "Reporting dashboards so you stop guessing. Outbound systems to find prospects instead of waiting for them. AI agents that answer calls and chat 24/7. Content engines that keep you visible. And monthly management so someone's actually watching the machine.",
     includes: [
       "Reporting dashboards",
       "Outbound prospecting systems",
-      "AI agents (calls + chat)",
-      "Content engines",
+      "AI voice and chat agents",
+      "Content engine",
       "Monthly management",
-      "Full system optimization"
+      "Multi-channel expansion"
     ],
     href: "/services/scale"
   }
