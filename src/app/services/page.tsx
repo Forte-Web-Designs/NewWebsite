@@ -152,7 +152,7 @@ export default function ServicesPage() {
 
       {/* ── TIERS ─────────────────────────────────────────────────── */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
 
           <SimpleScrollReveal direction="up">
             <div className="mb-10 max-w-xl mx-auto text-center">
@@ -225,7 +225,7 @@ export default function ServicesPage() {
 
       {/* ── HOW WE BUILD IT ───────────────────────────────────────── */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
 
           <SimpleScrollReveal direction="up">
             <div className="mb-14 text-center max-w-xl mx-auto">
@@ -285,7 +285,7 @@ export default function ServicesPage() {
 
       {/* ── RESULTS ───────────────────────────────────────────────── */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
 
           <SimpleScrollReveal direction="up">
             <div className="mb-14 max-w-xl mx-auto text-center sm:mx-0 sm:text-left">
@@ -332,7 +332,7 @@ export default function ServicesPage() {
 
       {/* ── BOOK A CALL ───────────────────────────────────────────── */}
       <section id="book-a-call" className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-6xl grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
+        <div className="mx-auto max-w-4xl grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
 
           <SimpleScrollReveal direction="up">
             <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full ring-2 ring-blue-100 dark:ring-blue-900 mb-8">

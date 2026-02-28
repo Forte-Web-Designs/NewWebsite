@@ -57,7 +57,7 @@ export default function Contact() {
 
       {/* ── MAIN CONTENT ──────────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 sm:py-20">
-        <div className="mx-auto max-w-6xl grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto max-w-4xl grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
 
           {/* Contact form */}
           <div>
@@ -99,7 +99,7 @@ export default function Contact() {
 
       {/* ── CONTACT INFO ──────────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
           <div className="flex flex-col items-center gap-8 text-center sm:flex-row sm:justify-center sm:text-left">
 
             <a

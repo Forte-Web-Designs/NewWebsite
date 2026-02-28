@@ -208,7 +208,7 @@ export default function Home() {
 
         {/* ── CLIENT STRIP ─────────────────────────────────────────── */}
         <div className="border-y border-gray-100 py-5 px-4 sm:px-6 lg:px-8 dark:border-gray-800">
-          <div className="mx-auto max-w-6xl flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
+          <div className="mx-auto max-w-4xl flex flex-wrap items-center justify-center gap-x-10 gap-y-3">
             {[
               "Revolut",
               "Modern Bungalow",
@@ -230,7 +230,7 @@ export default function Home() {
 
         {/* ── STATS ────────────────────────────────────────────────── */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32">
-          <div className="mx-auto max-w-5xl grid grid-cols-1 gap-12 text-center sm:grid-cols-3">
+          <div className="mx-auto max-w-4xl grid grid-cols-1 gap-12 text-center sm:grid-cols-3">
             {STATS.map((s, i) => (
               <SimpleScrollReveal key={s.value} direction="up" delay={i * 80}>
                 <div>
@@ -251,7 +251,7 @@ export default function Home() {
 
         {/* ── SERVICES ─────────────────────────────────────────────── */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
-          <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-4xl">
 
             {/* Section header */}
             <SimpleScrollReveal direction="up">
@@ -368,7 +368,7 @@ export default function Home() {
 
         {/* ── RESULTS ──────────────────────────────────────────────── */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32">
-          <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-4xl">
 
             <SimpleScrollReveal direction="up">
               <div className="mb-14 max-w-xl">
@@ -434,7 +434,7 @@ export default function Home() {
 
         {/* ── REVIEWS ──────────────────────────────────────────────── */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
-          <div className="mx-auto max-w-6xl">
+          <div className="mx-auto max-w-4xl">
 
             <SimpleScrollReveal direction="up">
               <div className="mb-14 max-w-xl">
@@ -498,7 +498,7 @@ export default function Home() {
 
         {/* ── ABOUT ────────────────────────────────────────────────── */}
         <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32">
-          <div className="mx-auto max-w-6xl grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
+          <div className="mx-auto max-w-4xl grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
 
             <SimpleScrollReveal direction="up">
               <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full ring-2 ring-blue-100 dark:ring-blue-900 mb-8">

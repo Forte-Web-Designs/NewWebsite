@@ -211,7 +211,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${roboto.variable} ${inter.variable} ${interDisplay.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
+      <body className={`${roboto.variable} ${inter.variable} ${interDisplay.variable} antialiased min-h-screen flex flex-col pb-14`} suppressHydrationWarning>
         <CriticalCSS />
         <ResourceHints />
         <JavaScriptOptimizer />

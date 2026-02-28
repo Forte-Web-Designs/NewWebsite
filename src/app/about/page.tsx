@@ -64,7 +64,7 @@ export default function AboutUs() {
 
       {/* ── INTRO ─────────────────────────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 sm:py-28 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-6xl grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-start">
+        <div className="mx-auto max-w-4xl grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-start">
 
           {/* Headshot */}
           <SimpleScrollReveal direction="up">
@@ -185,7 +185,7 @@ export default function AboutUs() {
 
       {/* ── WHAT MAKES US DIFFERENT ───────────────────────────────── */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 sm:py-28 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
 
           <SimpleScrollReveal direction="up">
             <div className="mb-14 text-center">

@@ -152,7 +152,7 @@ export default function CaseStudiesPage() {
 
       {/* ── CASE STUDIES GRID ─────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 sm:py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
           <div className="grid gap-5 md:grid-cols-2 items-stretch">
             {caseStudies.map((study, i) => (
               <SimpleScrollReveal key={study.id} direction="up" delay={i * 60} className="h-full">
