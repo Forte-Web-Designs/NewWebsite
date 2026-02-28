@@ -52,14 +52,12 @@
 
         /* Stage cards */
         .stage-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem}
-        .stage-card{position:relative;background:var(--card-bg);border:1px solid transparent;border-radius:10px;padding:1.75rem;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform 0.2s ease,box-shadow 0.25s ease;isolation:isolate}
-        .stage-card::before{content:'';position:absolute;inset:-1px;border-radius:11px;z-index:-1;opacity:0.45;transition:opacity 0.3s ease}
+        .stage-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:1.75rem;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:border-color 0.2s ease,transform 0.15s ease}
         .stage-card:hover{transform:translateY(-2px);text-decoration:none}
-        .stage-card:hover::before{opacity:1}
-        .stage-card.stage-foundation::before{background:linear-gradient(135deg,#8a8578,#c4b99a,#8a8578)}
-        .stage-card.stage-launch::before{background:linear-gradient(135deg,#0088DB,#38b2f5,#0055aa)}
-        .stage-card.stage-growth::before{background:linear-gradient(135deg,#5fb88a,#86efac,#3d9e6e)}
-        .stage-card.stage-scale::before{background:linear-gradient(135deg,#38b2f5,#7dd3fc,#0088DB)}
+        .stage-card.stage-foundation{border-left:4px solid #8a8578}
+        .stage-card.stage-launch{border-left:4px solid var(--accent)}
+        .stage-card.stage-growth{border-left:4px solid #5fb88a}
+        .stage-card.stage-scale{border-left:4px solid var(--accent-warm)}
         .stage-number{width:28px;height:28px;border-radius:50%;font-size:0.8rem;font-weight:700;color:#fff;display:flex;align-items:center;justify-content:center;margin-bottom:0.85rem}
         .stage-foundation .stage-number{background:#8a8578}
         .stage-launch .stage-number{background:var(--accent)}
@@ -211,31 +209,14 @@
                 <span class="stage-link">Learn more &rarr;</span>
             </a>
         </div>
-        <p style="font-size:0.875rem;color:var(--text-muted);">Web design, landing pages, and conversion funnels available standalone or alongside any stage.</p>
+        <p style="font-size:0.875rem;color:var(--text-muted);text-align:center;">Web design, landing pages, and conversion funnels available standalone or alongside any stage.</p>
     </div>
 
     <hr class="section-divider">
 
     <!-- CREDIBILITY -->
     <div class="credibility-section reveal">
-        <div class="credibility-bar">
-            <div class="credibility-item">
-                <span class="stat">5+ Years</span>
-                <span class="label">Enterprise Systems</span>
-            </div>
-            <div class="credibility-item">
-                <span class="stat">100+</span>
-                <span class="label">Hrs/Month Returned</span>
-            </div>
-            <div class="credibility-item">
-                <span class="stat">Worldwide</span>
-                <span class="label">Clients Served</span>
-            </div>
-            <div class="credibility-item">
-                <span class="stat">$4M+</span>
-                <span class="label">Client Value Identified</span>
-            </div>
-        </div>
+        <p style="font-size:0.72rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.12em;text-align:center;margin-bottom:0.85rem;">Trusted by teams at</p>
         <div class="client-row">
             Revolut<span class="divider">|</span>Modern Bungalow<span class="divider">|</span>Eden Medical<span class="divider">|</span>Kingfisher Ads<span class="divider">|</span>CR Deals Cincinnati<span class="divider">|</span>Hollow Bamboo<span class="divider">|</span>UDI Group
         </div>
@@ -321,7 +302,7 @@
     <!-- VIDEO -->
     <div class="reveal">
         <p class="section-title">See How We Work</p>
-        <video class="site-video" controls preload="none" poster="/images/about/headshot-6.jpg">
+        <video class="site-video" controls preload="none" poster="/images/Screenshot%202026-02-27%20at%2011.03.04%20PM.png">
             <source src="/video-walkthroughs/Business%20Growth%20Systems%20%26%20AI%20Automation%20%7C%20Forte%20(DFW)%20-%2026%20October%202025.mp4" type="video/mp4">
         </video>
     </div>
@@ -338,12 +319,6 @@
         </div>
     </div>
 
-    <div class="reveal" style="margin-top:3rem;">
-        <a href="https://voyagedallas.com/interview/community-highlights-meet-seth-forte-of-forte-web-designs/" target="_blank" rel="noopener" class="voyage-badge">
-            <span class="voyage-badge-star">&#9733;</span>
-            <span class="voyage-badge-text">As Featured in <strong>Voyage Dallas Magazine</strong></span>
-        </a>
-    </div>
 
     <!-- FOOTER -->
     <div class="footer-section">
