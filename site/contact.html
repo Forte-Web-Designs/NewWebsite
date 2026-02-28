@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Forte Web Designs</title>
+    <meta name="description" content="Get in touch with Forte Web Designs. Book a discovery call or send a message to discuss your automation and growth system needs.">
+    <link rel="canonical" href="https://fortewebdesigns.com/contact.html">
+    <link rel="icon" href="/images/home/logo-header-light.svg">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
+        a:hover{text-decoration:underline}
+        .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+        .reveal.revealed{opacity:1;transform:translateY(0)}
+        .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
+        .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
+        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-nav{display:flex;gap:1.5rem;align-items:center}
+        .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
+        .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
+        .main-content{max-width:860px;margin:0 auto;padding:5rem 2rem 6rem}
+        .section-divider{border:none;border-top:1px solid var(--border);margin:4rem 0}
+        .section-title{font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:2.5rem}
+        .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
+        .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
+        .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none;border:none;cursor:pointer;width:100%}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,115,74,0.35);text-decoration:none}
+
+        /* Contact form */
+        .contact-form-wrap{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:2rem;margin-bottom:1.5rem}
+        .form-group{margin-bottom:1.25rem}
+        .form-label{display:block;font-size:0.82rem;font-weight:600;color:var(--text-secondary);margin-bottom:0.4rem;text-transform:uppercase;letter-spacing:0.06em}
+        .form-input,.form-textarea,.form-select{width:100%;background:var(--background);border:1px solid var(--border);border-radius:6px;padding:0.7rem 1rem;font-size:0.95rem;color:var(--text-primary);font-family:inherit;transition:border-color 0.2s ease;outline:none}
+        .form-input:focus,.form-textarea:focus,.form-select:focus{border-color:var(--accent)}
+        .form-input::placeholder,.form-textarea::placeholder{color:var(--text-muted)}
+        .form-textarea{min-height:130px;resize:vertical;line-height:1.6}
+        .form-row{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
+        .form-success{background:rgba(95,184,138,0.1);border:1px solid #5fb88a;border-radius:8px;padding:1rem 1.25rem;font-size:0.9rem;color:#5fb88a;margin-top:1rem;display:none}
+        .form-error{background:rgba(232,115,74,0.1);border:1px solid var(--accent);border-radius:8px;padding:1rem 1.25rem;font-size:0.9rem;color:var(--accent);margin-top:1rem;display:none}
+        .honeypot{display:none}
+
+        /* Contact info */
+        .contact-info-row{display:flex;gap:1rem;flex-wrap:wrap;margin-bottom:3rem}
+        .contact-info-item{background:var(--card-bg);border:1px solid var(--border);border-radius:8px;padding:1.25rem 1.5rem;flex:1;min-width:180px}
+        .contact-info-label{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.35rem}
+        .contact-info-value{font-size:0.9rem;color:var(--text-primary)}
+        .contact-info-value a{color:var(--text-secondary)}
+        .contact-info-value a:hover{color:var(--accent)}
+
+        /* Calendly */
+        .calendly-wrap{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+        .calendly-wrap iframe{display:block;border:none;width:100%;min-height:700px}
+
+        /* Footer */
+        .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
+        .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
+        .footer-columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+        .footer-col h4{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem}
+        .footer-col ul{list-style:none}
+        .footer-col li{margin-bottom:0.5rem}
+        .footer-col a{color:var(--text-secondary);font-size:0.9rem}
+        .footer-col a:hover{color:var(--accent)}
+        .footer-bottom{padding-top:1.5rem;border-top:1px solid var(--border)}
+        .footer-location{color:var(--text-muted);font-size:0.85rem;margin-bottom:0.35rem}
+        .copyright{color:var(--text-muted);font-size:0.85rem}
+
+        @media(max-width:768px){
+            .header-container{padding:0.75rem 1.25rem}
+            .header-nav{gap:0.85rem}
+            .header-nav a{font-size:0.82rem}
+            .main-content{padding:3rem 1.25rem 4rem}
+            .form-row{grid-template-columns:1fr}
+            .calendly-wrap iframe{min-height:600px}
+            .footer-columns{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:480px){
+            .footer-columns{grid-template-columns:1fr}
+            .header-nav a:not(.nav-cta){display:none}
+            .contact-info-row{flex-direction:column}
+        }
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTP7GMJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="header-logo">Forte Web Designs</a>
+        <nav class="header-nav">
+            <a href="/index.html">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/reviews.html">Reviews</a>
+            <a href="/writing.html">Writing</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+
+    <!-- HERO -->
+    <div style="margin-bottom:3.5rem;">
+        <p class="section-title">Contact</p>
+        <h1 class="page-title">Let's talk.</h1>
+        <p class="body-text" style="max-width:560px;">
+            Send a message below or book a call directly. A 30-minute discovery call is usually the fastest way to figure out if we're a fit and what it would take to solve your problem.
+        </p>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info-row reveal">
+        <div class="contact-info-item">
+            <div class="contact-info-label">Email</div>
+            <div class="contact-info-value"><a href="mailto:seth@fortewebdesigns.com">seth@fortewebdesigns.com</a></div>
+        </div>
+        <div class="contact-info-item">
+            <div class="contact-info-label">Location</div>
+            <div class="contact-info-value">Grapevine, TX &mdash; Serving nationwide</div>
+        </div>
+        <div class="contact-info-item">
+            <div class="contact-info-label">Response Time</div>
+            <div class="contact-info-value">Within 1 business day</div>
+        </div>
+    </div>
+
+    <!-- CONTACT FORM -->
+    <div class="reveal">
+        <p class="section-title">Send a Message</p>
+        <div class="contact-form-wrap">
+            <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contact-form">
+                <input type="hidden" name="form-name" value="contact">
+                <p class="honeypot"><label>Don't fill this out: <input name="bot-field"></label></p>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label class="form-label" for="name">Name</label>
+                        <input class="form-input" type="text" id="name" name="name" placeholder="Your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label class="form-label" for="email">Email</label>
+                        <input class="form-input" type="email" id="email" name="email" placeholder="your@email.com" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="company">Company (optional)</label>
+                    <input class="form-input" type="text" id="company" name="company" placeholder="Your company">
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="subject">What do you need help with?</label>
+                    <select class="form-select" id="subject" name="subject">
+                        <option value="">Select one...</option>
+                        <option value="foundation">Foundation — CRM, payments, email setup</option>
+                        <option value="launch">Launch — Funnels, ads, nurture sequences</option>
+                        <option value="growth">Growth — Multi-channel, AI agents, outbound</option>
+                        <option value="scale">Scale — Dashboards, advanced automation</option>
+                        <option value="web">Web design / landing page</option>
+                        <option value="other">Something else</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label" for="message">Message</label>
+                    <textarea class="form-textarea" id="message" name="message" placeholder="Tell me about your project or problem. The more context the better." required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Send Message</button>
+                <div class="form-success" id="form-success">
+                    Message sent — I'll be in touch within 1 business day.
+                </div>
+                <div class="form-error" id="form-error">
+                    Something went wrong. Please try again or email seth@fortewebdesigns.com directly.
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- CALENDLY -->
+    <div class="reveal">
+        <p class="section-title">Or Book Directly</p>
+        <p class="body-text" style="margin-bottom:1.5rem;">Prefer to skip the back-and-forth? Pick a time that works for you.</p>
+        <div class="calendly-wrap">
+            <iframe src="https://calendly.com/seth-fortewebdesigns/30min" title="Book a call with Seth Forte"></iframe>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-section">
+        <a href="mailto:seth@fortewebdesigns.com" class="footer-email-main">seth@fortewebdesigns.com</a>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/foundation.html">Foundation</a></li>
+                    <li><a href="/launch.html">Launch</a></li>
+                    <li><a href="/growth.html">Growth</a></li>
+                    <li><a href="/scale.html">Scale</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/work.html">Work</a></li>
+                    <li><a href="/reviews.html">Reviews</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/forte-web-designs" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:seth@fortewebdesigns.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-location">Based in Grapevine, Texas. Serving clients nationwide.</p>
+            <p class="copyright">&copy; 2026 Seth Forte. All rights reserved.</p>
+        </div>
+    </div>
+
+</main>
+
+<script>
+(function(){
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        fetch('/', {
+            method: 'POST',
+            headers: {'Content-Type': 'application/x-www-form-urlencoded'},
+            body: new URLSearchParams(data).toString()
+        }).then(function(res) {
+            if (res.ok) {
+                form.reset();
+                document.getElementById('form-success').style.display = 'block';
+                document.getElementById('form-error').style.display = 'none';
+            } else {
+                document.getElementById('form-error').style.display = 'block';
+                document.getElementById('form-success').style.display = 'none';
+            }
+        }).catch(function() {
+            document.getElementById('form-error').style.display = 'block';
+            document.getElementById('form-success').style.display = 'none';
+        });
+    });
+})();
+</script>
+<script src="/scroll-reveal.js"></script>
+<script src="/theme-toggle.js"></script>
+<script src="/scroll-top.js"></script>
+</body>
+</html>

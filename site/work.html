@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Work | Forte Web Designs</title>
+    <meta name="description" content="Case studies and client results. Real outcomes from automation, integrations, and growth systems built for businesses across the US.">
+    <link rel="canonical" href="https://fortewebdesigns.com/work.html">
+    <link rel="icon" href="/images/home/logo-header-light.svg">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
+        a:hover{text-decoration:underline}
+        .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+        .reveal.revealed{opacity:1;transform:translateY(0)}
+        .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
+        .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
+        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-nav{display:flex;gap:1.5rem;align-items:center}
+        .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
+        .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
+        .main-content{max-width:860px;margin:0 auto;padding:5rem 2rem 6rem}
+        .section-divider{border:none;border-top:1px solid var(--border);margin:4rem 0}
+        .section-title{font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:2.5rem}
+        .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
+        .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
+        .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,115,74,0.35);text-decoration:none}
+
+        /* Case study cards */
+        .case-study{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:2rem;margin-bottom:1.25rem}
+        .cs-header{display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem;margin-bottom:1.25rem;flex-wrap:wrap}
+        .cs-client{font-size:1.15rem;font-weight:700;color:var(--text-primary);margin-bottom:0.2rem}
+        .cs-industry{font-size:0.8rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.07em}
+        .cs-metric{text-align:right;flex-shrink:0}
+        .cs-metric-num{font-size:1.5rem;font-weight:700;color:var(--accent);letter-spacing:-0.02em;display:block;line-height:1.2}
+        .cs-metric-label{font-size:0.78rem;color:var(--text-muted)}
+        .cs-tags{display:flex;flex-wrap:wrap;gap:0.5rem;margin-bottom:1rem}
+        .cs-tag{background:var(--background-alt);border:1px solid var(--border);border-radius:4px;padding:0.2rem 0.6rem;font-size:0.75rem;color:var(--text-muted)}
+        .cs-body{color:var(--text-secondary);font-size:0.9rem;line-height:1.7}
+        .cs-result-list{list-style:none;margin-top:1rem}
+        .cs-result-list li{font-size:0.875rem;color:var(--text-secondary);padding:0.3rem 0;border-bottom:1px solid var(--border)}
+        .cs-result-list li:last-child{border-bottom:none}
+        .cs-result-list li::before{content:"→ ";color:var(--accent);font-size:0.8rem}
+
+        /* Footer */
+        .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
+        .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
+        .footer-columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+        .footer-col h4{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem}
+        .footer-col ul{list-style:none}
+        .footer-col li{margin-bottom:0.5rem}
+        .footer-col a{color:var(--text-secondary);font-size:0.9rem}
+        .footer-col a:hover{color:var(--accent)}
+        .footer-bottom{padding-top:1.5rem;border-top:1px solid var(--border)}
+        .footer-location{color:var(--text-muted);font-size:0.85rem;margin-bottom:0.35rem}
+        .copyright{color:var(--text-muted);font-size:0.85rem}
+
+        @media(max-width:768px){
+            .header-container{padding:0.75rem 1.25rem}
+            .header-nav{gap:0.85rem}
+            .header-nav a{font-size:0.82rem}
+            .main-content{padding:3rem 1.25rem 4rem}
+            .cs-header{flex-direction:column;gap:0.5rem}
+            .cs-metric{text-align:left}
+            .footer-columns{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:480px){
+            .footer-columns{grid-template-columns:1fr}
+            .header-nav a:not(.nav-cta){display:none}
+        }
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTP7GMJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="header-logo">Forte Web Designs</a>
+        <nav class="header-nav">
+            <a href="/index.html">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/reviews.html">Reviews</a>
+            <a href="/writing.html">Writing</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+
+    <!-- HERO -->
+    <div style="margin-bottom:4rem;">
+        <p class="section-title">Case Studies</p>
+        <h1 class="page-title">Real systems.<br>Measurable results.</h1>
+        <p class="body-text" style="max-width:640px;">
+            Every project starts with understanding exactly what the problem is costing the business. Here's what happens when we build the fix.
+        </p>
+    </div>
+
+    <!-- CASE STUDIES -->
+    <div class="reveal">
+        <div class="case-study">
+            <div class="cs-header">
+                <div>
+                    <div class="cs-client">CR Deals Cincinnati</div>
+                    <div class="cs-industry">Real Estate Wholesaling</div>
+                </div>
+                <div class="cs-metric">
+                    <span class="cs-metric-num">$52K</span>
+                    <span class="cs-metric-label">saved per year</span>
+                </div>
+            </div>
+            <div class="cs-tags">
+                <span class="cs-tag">CRM Automation</span>
+                <span class="cs-tag">Lead Intake</span>
+                <span class="cs-tag">Disposition Workflow</span>
+                <span class="cs-tag">Follow-Up Sequences</span>
+            </div>
+            <p class="cs-body">CR Deals was manually handling every step of their wholesale real estate pipeline — lead intake, seller follow-up, buyer notifications, and deal disposition all required human intervention. The team was spending hours each day on tasks that should have been automated.</p>
+            <ul class="cs-result-list">
+                <li>Automated lead intake from multiple sources into a unified CRM pipeline</li>
+                <li>SMS and email follow-up sequences running without manual involvement</li>
+                <li>Buyer notification system for new properties with automated interest tracking</li>
+                <li>$52,000 in annual labor cost eliminated through automation</li>
+            </ul>
+        </div>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <div>
+                    <div class="cs-client">Hollow Bamboo Films</div>
+                    <div class="cs-industry">Film Production</div>
+                </div>
+                <div class="cs-metric">
+                    <span class="cs-metric-num">20 hrs</span>
+                    <span class="cs-metric-label">returned per week</span>
+                </div>
+            </div>
+            <div class="cs-tags">
+                <span class="cs-tag">Project Management</span>
+                <span class="cs-tag">Invoicing Automation</span>
+                <span class="cs-tag">Client Scheduling</span>
+                <span class="cs-tag">File Delivery</span>
+            </div>
+            <p class="cs-body">Hollow Bamboo was running their entire production business on a combination of email, spreadsheets, and manual follow-up. Quotes, contracts, scheduling, invoicing, and file delivery all required back-and-forth that ate up their week.</p>
+            <ul class="cs-result-list">
+                <li>Automated quote-to-contract flow with e-signature and deposit collection</li>
+                <li>Client portal for project status, deliverables, and feedback</li>
+                <li>Automatic invoice generation and payment reminders</li>
+                <li>20 hours per week returned to creative work</li>
+            </ul>
+        </div>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <div>
+                    <div class="cs-client">Revolut</div>
+                    <div class="cs-industry">Fintech / Data Analysis</div>
+                </div>
+                <div class="cs-metric">
+                    <span class="cs-metric-num">$4M</span>
+                    <span class="cs-metric-label">opportunity identified</span>
+                </div>
+            </div>
+            <div class="cs-tags">
+                <span class="cs-tag">Data Analysis</span>
+                <span class="cs-tag">SQL</span>
+                <span class="cs-tag">Reporting</span>
+                <span class="cs-tag">Revenue Intelligence</span>
+            </div>
+            <p class="cs-body">Engaged on an internal data project to analyze transaction patterns and identify revenue leakage across a specific product line. By building custom queries and a structured analysis framework, we surfaced a $4M revenue opportunity that had been sitting in the data undetected.</p>
+            <ul class="cs-result-list">
+                <li>Custom SQL analysis across multi-million row dataset</li>
+                <li>Identified specific transaction patterns causing revenue leakage</li>
+                <li>Delivered actionable report with prioritized recommendations</li>
+                <li>$4M opportunity identified and handed to product team</li>
+            </ul>
+        </div>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <div>
+                    <div class="cs-client">Modern Bungalow</div>
+                    <div class="cs-industry">E-Commerce / Furniture</div>
+                </div>
+                <div class="cs-metric">
+                    <span class="cs-metric-num">15 hrs</span>
+                    <span class="cs-metric-label">saved per month</span>
+                </div>
+            </div>
+            <div class="cs-tags">
+                <span class="cs-tag">Order Management</span>
+                <span class="cs-tag">Shopify Integration</span>
+                <span class="cs-tag">Vendor Sync</span>
+                <span class="cs-tag">Customer Notifications</span>
+            </div>
+            <p class="cs-body">Modern Bungalow was manually managing order status updates, vendor communications, and customer notifications for their furniture e-commerce store. The process was error-prone and time-consuming, especially during high-volume periods.</p>
+            <ul class="cs-result-list">
+                <li>Shopify order management integrated with vendor fulfillment system</li>
+                <li>Automated customer status updates at each stage of fulfillment</li>
+                <li>Vendor communication workflows eliminating manual email chains</li>
+                <li>15 hours per month returned to the team</li>
+            </ul>
+        </div>
+
+        <div class="case-study">
+            <div class="cs-header">
+                <div>
+                    <div class="cs-client">Legal Tech Client</div>
+                    <div class="cs-industry">Legal Services</div>
+                </div>
+                <div class="cs-metric">
+                    <span class="cs-metric-num">8 hrs</span>
+                    <span class="cs-metric-label">saved per day</span>
+                </div>
+            </div>
+            <div class="cs-tags">
+                <span class="cs-tag">Court Records</span>
+                <span class="cs-tag">Web Scraping</span>
+                <span class="cs-tag">Document Processing</span>
+                <span class="cs-tag">Database Integration</span>
+            </div>
+            <p class="cs-body">A legal services firm was spending 8 hours a day manually pulling court records, formatting data, and updating their internal system. The work was repetitive, high-stakes, and completely automatable.</p>
+            <ul class="cs-result-list">
+                <li>Automated court records collection from multiple county systems</li>
+                <li>Structured data extraction and formatting pipeline</li>
+                <li>Direct integration with firm's case management database</li>
+                <li>8 hours of daily manual work eliminated entirely</li>
+            </ul>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- CTA -->
+    <div class="reveal">
+        <h2 style="font-size:1.4rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">See what we can build for you.</h2>
+        <p class="body-text">Every engagement starts with a discovery call where we map out what the problem is costing you. If the math works, we build it.</p>
+        <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-section">
+        <a href="mailto:seth@fortewebdesigns.com" class="footer-email-main">seth@fortewebdesigns.com</a>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/foundation.html">Foundation</a></li>
+                    <li><a href="/launch.html">Launch</a></li>
+                    <li><a href="/growth.html">Growth</a></li>
+                    <li><a href="/scale.html">Scale</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/work.html">Work</a></li>
+                    <li><a href="/reviews.html">Reviews</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/forte-web-designs" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:seth@fortewebdesigns.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-location">Based in Grapevine, Texas. Serving clients nationwide.</p>
+            <p class="copyright">&copy; 2026 Seth Forte. All rights reserved.</p>
+        </div>
+    </div>
+
+</main>
+
+<script src="/scroll-reveal.js"></script>
+<script src="/theme-toggle.js"></script>
+<script src="/scroll-top.js"></script>
+</body>
+</html>

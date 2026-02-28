@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | Forte Web Designs</title>
+    <meta name="description" content="Forte Web Designs — automation systems, integrations, and growth infrastructure for growing businesses. Based in Grapevine, TX. Serving clients nationwide.">
+    <link rel="canonical" href="https://fortewebdesigns.com/about.html">
+    <link rel="icon" href="/images/home/logo-header-light.svg">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
+        a:hover{text-decoration:underline}
+        .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+        .reveal.revealed{opacity:1;transform:translateY(0)}
+        .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
+        .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
+        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-nav{display:flex;gap:1.5rem;align-items:center}
+        .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
+        .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
+        .main-content{max-width:860px;margin:0 auto;padding:5rem 2rem 6rem}
+        .section-divider{border:none;border-top:1px solid var(--border);margin:4rem 0}
+        .section-title{font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:2.5rem}
+        .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
+        .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
+        .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,115,74,0.35);text-decoration:none}
+        .btn-secondary{display:inline-block;border:1px solid var(--border);color:var(--text-secondary);padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:all 0.2s ease;text-decoration:none}
+        .btn-secondary:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
+
+        /* Profile */
+        .profile-row{display:flex;gap:2.5rem;align-items:flex-start;margin-bottom:3rem}
+        .profile-photo{width:120px;height:120px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--border)}
+
+        /* Differentiators */
+        .diff-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+        .diff-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:1.75rem}
+        .diff-title{font-size:1rem;font-weight:700;color:var(--text-primary);margin-bottom:0.6rem}
+        .diff-body{font-size:0.875rem;color:var(--text-secondary);line-height:1.7}
+
+        /* Stack */
+        .stack-list{display:flex;flex-wrap:wrap;gap:0.5rem}
+        .stack-tag{background:var(--card-bg);border:1px solid var(--border);border-radius:5px;padding:0.3rem 0.75rem;font-size:0.8rem;color:var(--text-secondary)}
+
+        /* Footer */
+        .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
+        .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
+        .footer-columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+        .footer-col h4{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem}
+        .footer-col ul{list-style:none}
+        .footer-col li{margin-bottom:0.5rem}
+        .footer-col a{color:var(--text-secondary);font-size:0.9rem}
+        .footer-col a:hover{color:var(--accent)}
+        .footer-bottom{padding-top:1.5rem;border-top:1px solid var(--border)}
+        .footer-location{color:var(--text-muted);font-size:0.85rem;margin-bottom:0.35rem}
+        .copyright{color:var(--text-muted);font-size:0.85rem}
+
+        @media(max-width:768px){
+            .header-container{padding:0.75rem 1.25rem}
+            .header-nav{gap:0.85rem}
+            .header-nav a{font-size:0.82rem}
+            .main-content{padding:3rem 1.25rem 4rem}
+            .profile-row{flex-direction:column;gap:1.5rem}
+            .diff-grid{grid-template-columns:1fr}
+            .footer-columns{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:480px){
+            .footer-columns{grid-template-columns:1fr}
+            .header-nav a:not(.nav-cta){display:none}
+        }
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTP7GMJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="header-logo">Forte Web Designs</a>
+        <nav class="header-nav">
+            <a href="/index.html">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/reviews.html">Reviews</a>
+            <a href="/writing.html">Writing</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+
+    <!-- HERO -->
+    <div style="margin-bottom:4rem;">
+        <p class="section-title">About</p>
+        <h1 class="page-title">We start with<br>what the problem costs.</h1>
+    </div>
+
+    <!-- PROFILE -->
+    <div class="profile-row reveal">
+        <img src="/images/about/headshot-6.jpg" alt="Seth Forte" class="profile-photo">
+        <div>
+            <p style="font-size:1.1rem;font-weight:600;color:var(--text-primary);margin-bottom:0.25rem;">Seth Forte</p>
+            <p style="font-size:0.875rem;color:var(--text-muted);margin-bottom:1.25rem;">Founder &mdash; Grapevine, Texas</p>
+            <p class="body-text">I started Forte Web Designs to solve a problem I kept seeing: businesses spending money on tools, ads, and headcount before they had a system that actually worked. The lead comes in, nobody follows up. The ad converts, but the funnel leaks. The team grows, but operations don't scale.</p>
+            <p class="body-text">We fix that. Before any project starts, we map out what the problem is actually costing — in time, in lost revenue, in manual work. If the math works, we build it. If it doesn't, we'll tell you that and save you both time.</p>
+            <p class="body-text">We work with service businesses, e-commerce brands, and growth-stage companies across the US. Most clients come through referral because the work speaks for itself.</p>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- DIFFERENTIATORS -->
+    <div class="reveal">
+        <p class="section-title">How We Work Differently</p>
+        <div class="diff-grid">
+            <div class="diff-card">
+                <div class="diff-title">We start with the math</div>
+                <div class="diff-body">Every project begins by calculating what the problem is actually costing you. If the ROI doesn't work, we don't build it. This means we never oversell scope and clients always know what they're getting.</div>
+            </div>
+            <div class="diff-card">
+                <div class="diff-title">You own everything we build</div>
+                <div class="diff-body">We document every system, train you on how it works, and hand it over. No retainers required to keep the lights on. We want clients to stay because the work is good — not because we've made them dependent.</div>
+            </div>
+            <div class="diff-card">
+                <div class="diff-title">Clear scope, no surprises</div>
+                <div class="diff-body">Before we write a single line of code or touch a workflow, we define exactly what's being built and why. You know what you're getting, when you're getting it, and what it's supposed to do. No scope creep.</div>
+            </div>
+            <div class="diff-card">
+                <div class="diff-title">We solve the real problem</div>
+                <div class="diff-body">Most clients come in asking for a specific tool or feature. We always ask what problem that's actually solving. Sometimes the answer changes what we build. Sometimes it saves them money. Always it makes the solution better.</div>
+            </div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- STACK -->
+    <div class="reveal">
+        <p class="section-title">Tools We Work With</p>
+        <div class="stack-list">
+            <span class="stack-tag">GoHighLevel</span>
+            <span class="stack-tag">HubSpot</span>
+            <span class="stack-tag">Salesforce</span>
+            <span class="stack-tag">Make (Integromat)</span>
+            <span class="stack-tag">Zapier</span>
+            <span class="stack-tag">n8n</span>
+            <span class="stack-tag">Airtable</span>
+            <span class="stack-tag">Notion</span>
+            <span class="stack-tag">Shopify</span>
+            <span class="stack-tag">Stripe</span>
+            <span class="stack-tag">Twilio</span>
+            <span class="stack-tag">SendGrid</span>
+            <span class="stack-tag">Klaviyo</span>
+            <span class="stack-tag">ActiveCampaign</span>
+            <span class="stack-tag">Google Ads</span>
+            <span class="stack-tag">Meta Ads</span>
+            <span class="stack-tag">Calendly</span>
+            <span class="stack-tag">ClickFunnels</span>
+            <span class="stack-tag">Webflow</span>
+            <span class="stack-tag">OpenAI API</span>
+            <span class="stack-tag">Python</span>
+            <span class="stack-tag">SQL</span>
+            <span class="stack-tag">Google Apps Script</span>
+            <span class="stack-tag">Power Automate</span>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- CTA -->
+    <div class="reveal">
+        <h2 style="font-size:1.4rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">Let's talk about your system.</h2>
+        <p class="body-text">A 30-minute call is usually enough to understand what's broken and whether we're the right fit to fix it. No obligation — just a clear picture of what's possible.</p>
+        <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
+            <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
+            <a href="/work.html" class="btn-secondary">See Our Work</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-section">
+        <a href="mailto:seth@fortewebdesigns.com" class="footer-email-main">seth@fortewebdesigns.com</a>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/foundation.html">Foundation</a></li>
+                    <li><a href="/launch.html">Launch</a></li>
+                    <li><a href="/growth.html">Growth</a></li>
+                    <li><a href="/scale.html">Scale</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/work.html">Work</a></li>
+                    <li><a href="/reviews.html">Reviews</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/forte-web-designs" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:seth@fortewebdesigns.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-location">Based in Grapevine, Texas. Serving clients nationwide.</p>
+            <p class="copyright">&copy; 2026 Seth Forte. All rights reserved.</p>
+        </div>
+    </div>
+
+</main>
+
+<script src="/scroll-reveal.js"></script>
+<script src="/theme-toggle.js"></script>
+<script src="/scroll-top.js"></script>
+</body>
+</html>
