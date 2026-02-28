@@ -86,9 +86,20 @@
         .review-author{font-size:0.8rem;font-weight:600;color:var(--text-primary)}
         .review-project{font-size:0.75rem;color:var(--text-muted);margin-top:0.1rem}
 
-        /* Featured clients */
-        .clients-strip{display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center}
-        .client-pill{background:var(--card-bg);border:1px solid var(--border);border-radius:6px;padding:0.4rem 0.9rem;font-size:0.85rem;font-weight:500;color:var(--text-secondary);white-space:nowrap}
+        /* 5-star badge */
+        .stars-badge{display:inline-flex;align-items:center;gap:0.5rem;background:var(--card-bg);border:1px solid var(--border);border-radius:20px;padding:0.35rem 0.9rem;font-size:0.8rem;text-decoration:none;color:var(--text-secondary);margin-bottom:1.5rem;transition:border-color 0.2s ease}
+        .stars-badge:hover{border-color:var(--accent);text-decoration:none}
+        .stars-badge-stars{color:#f4c542;letter-spacing:0.05em}
+
+        /* Credibility block */
+        .credibility-section{text-align:center;margin-bottom:0}
+        .credibility-bar{display:grid;grid-template-columns:1fr 1fr 1fr 1fr;gap:1rem;padding:1.5rem 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:1.5rem}
+        .credibility-item{text-align:center;padding:0.5rem 0.25rem}
+        .credibility-item .stat{font-size:1.15rem;font-weight:700;color:var(--accent);display:block;margin-bottom:0.3rem;text-shadow:0 0 20px rgba(0,136,219,0.3)}
+        .credibility-item .label{font-size:0.7rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.06em;line-height:1.4}
+        .client-row{text-align:center;color:var(--text-muted);font-size:0.85rem;letter-spacing:0.03em;line-height:2}
+        .client-row .divider{margin:0 0.4rem;opacity:0.35}
+        @media(max-width:600px){.credibility-bar{grid-template-columns:1fr 1fr}}
 
         /* Video */
         .site-video{width:100%;border-radius:10px;border:1px solid var(--border);display:block}
@@ -150,7 +161,11 @@
 <main class="main-content">
 
     <!-- HERO -->
-    <div style="margin-bottom:4rem;text-align:center;">
+    <div style="margin-bottom:2.5rem;text-align:center;">
+        <a href="/reviews.html" class="stars-badge animate-fade-in">
+            <span class="stars-badge-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span>5.0 rated &middot; See what clients say</span>
+        </a>
         <h1 class="rotating-tagline animate-fade-up animate-delay-1">Business Growth Isn't Luck. It's <span class="rotating-word">A System</span></h1>
         <p class="body-text animate-fade-up animate-delay-2" style="font-size:1.1rem;max-width:640px;margin-left:auto;margin-right:auto;">
             We build the automation systems, pipelines, conversion funnels, and high-converting websites that turn traffic into leads, eliminate manual work, and make growth repeatable.
@@ -201,18 +216,28 @@
 
     <hr class="section-divider">
 
-    <!-- CLIENTS -->
-    <div class="reveal">
-        <p class="section-title">Featured Clients</p>
-        <div class="clients-strip">
-            <span class="client-pill">UDI Group</span>
-            <span class="client-pill">San Florida</span>
-            <span class="client-pill">Modern Bungalow</span>
-            <span class="client-pill">CR Deals Cincinnati</span>
-            <span class="client-pill">Revolut</span>
-            <span class="client-pill">Eden Medical</span>
-            <span class="client-pill">Hollow Bamboo</span>
-            <span class="client-pill">Kingfisher Ads</span>
+    <!-- CREDIBILITY -->
+    <div class="credibility-section reveal">
+        <div class="credibility-bar">
+            <div class="credibility-item">
+                <span class="stat">5+ Years</span>
+                <span class="label">Enterprise Systems</span>
+            </div>
+            <div class="credibility-item">
+                <span class="stat">100+</span>
+                <span class="label">Hrs/Month Returned</span>
+            </div>
+            <div class="credibility-item">
+                <span class="stat">Worldwide</span>
+                <span class="label">Clients Served</span>
+            </div>
+            <div class="credibility-item">
+                <span class="stat">$4M+</span>
+                <span class="label">Client Value Identified</span>
+            </div>
+        </div>
+        <div class="client-row">
+            Revolut<span class="divider">|</span>Modern Bungalow<span class="divider">|</span>Eden Medical<span class="divider">|</span>Kingfisher Ads<span class="divider">|</span>CR Deals Cincinnati<span class="divider">|</span>Hollow Bamboo<span class="divider">|</span>UDI Group
         </div>
     </div>
 
@@ -296,7 +321,7 @@
     <!-- VIDEO -->
     <div class="reveal">
         <p class="section-title">See How We Work</p>
-        <video class="site-video" controls preload="none" poster="/images/home/hero.jpg">
+        <video class="site-video" controls preload="none" poster="/images/about/headshot-6.jpg">
             <source src="/video-walkthroughs/Business%20Growth%20Systems%20%26%20AI%20Automation%20%7C%20Forte%20(DFW)%20-%2026%20October%202025.mp4" type="video/mp4">
         </video>
     </div>
