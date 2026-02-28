@@ -55,6 +55,10 @@
         /* Video */
         .site-video{width:100%;border-radius:10px;border:1px solid var(--border);display:block}
 
+        /* Calendly */
+        .calendly-wrap{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:1.5rem}
+        .calendly-wrap iframe{display:block;border:none;width:100%;min-height:630px}
+
         /* Footer */
         .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
         .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
@@ -79,7 +83,6 @@
         }
         @media(max-width:480px){
             .footer-columns{grid-template-columns:1fr}
-            .header-nav a:not(.nav-cta){display:none}
         }
     </style>
 </head>
@@ -126,7 +129,7 @@
 
     <!-- VIDEO -->
     <div class="reveal" style="margin:3rem 0;">
-        <video class="site-video" controls preload="none">
+        <video class="site-video" controls preload="none" poster="/images/about/headshot-6.jpg">
             <source src="/video-walkthroughs/Business%20Growth%20Systems%20%26%20AI%20Automation%20%7C%20Forte%20(DFW)%20-%2026%20October%202025.mp4" type="video/mp4">
         </video>
     </div>
@@ -201,6 +204,18 @@
         </div>
     </div>
 
+
+    <hr class="section-divider">
+
+    <!-- BOOK A CALL -->
+    <div class="reveal">
+        <p class="section-title">Book a Call</p>
+        <p class="body-text" style="margin-bottom:1.5rem;">Prefer to skip the back-and-forth? Pick a time and let's talk.</p>
+        <div class="calendly-wrap">
+            <iframe src="https://calendly.com/seth-fortewebdesigns/30min" title="Book a call with Seth Forte"></iframe>
+        </div>
+    </div>
+
     <!-- FOOTER -->
     <div class="footer-section">
         <a href="mailto:seth@fortewebdesigns.com" class="footer-email-main">seth@fortewebdesigns.com</a>
@@ -242,5 +257,6 @@
 <script src="/scroll-reveal.js"></script>
 <script src="/theme-toggle.js"></script>
 <script src="/scroll-top.js"></script>
+<script src="/hamburger.js"></script>
 </body>
 </html>

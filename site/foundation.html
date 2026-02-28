@@ -61,6 +61,10 @@
         .stage-nav a:hover{border-color:var(--accent);color:var(--accent)}
         .stage-nav a.current{border-color:#8a8578;color:#8a8578;background:rgba(138,133,120,0.1)}
 
+        /* Calendly */
+        .calendly-wrap{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:1.5rem}
+        .calendly-wrap iframe{display:block;border:none;width:100%;min-height:630px}
+
         /* Footer */
         .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
         .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
@@ -84,7 +88,6 @@
         }
         @media(max-width:480px){
             .footer-columns{grid-template-columns:1fr}
-            .header-nav a:not(.nav-cta){display:none}
         }
     </style>
 </head>
@@ -130,42 +133,42 @@
         <p class="section-title">What's Included</p>
         <div class="deliverable-list">
             <div class="deliverable-item">
-                <div class="deliverable-icon">CRM</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">CRM Setup &amp; Configuration</div>
                     <div class="deliverable-desc">We set up your CRM (GoHighLevel, HubSpot, or similar), configure pipelines, and connect it to your existing tools. No more leads tracked in a spreadsheet or lost in your inbox.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">$</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Payment Processing</div>
                     <div class="deliverable-desc">Stripe, Square, or PayPal integrated directly into your booking flow or sales process. Invoices, subscriptions, and one-time payments all connected and automated.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">@</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Email Deliverability</div>
                     <div class="deliverable-desc">Custom domain email setup, DKIM, SPF, and DMARC records configured. Your emails stop landing in spam and your sender reputation is protected before you send a single campaign.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">BOOK</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Booking &amp; Scheduling</div>
                     <div class="deliverable-desc">Calendly or native CRM scheduling connected to your calendar, confirmation emails, reminders, and follow-up sequences. Clients book; it just works.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">LEAD</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Lead Tracking &amp; Pipeline</div>
                     <div class="deliverable-desc">Every lead source captured and tagged. Pipeline stages configured so you always know where a deal is and what's next. No more leads falling through the cracks.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">AUTO</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Basic Follow-Up Automation</div>
                     <div class="deliverable-desc">Automated SMS and email follow-up when a lead comes in or a form is submitted. Speed-to-lead handled automatically so you respond before your competitor does.</div>
@@ -204,6 +207,18 @@
         <a href="/launch.html">2 Launch &rarr;</a>
         <a href="/growth.html">3 Growth</a>
         <a href="/scale.html">4 Scale</a>
+    </div>
+
+
+    <hr class="section-divider">
+
+    <!-- BOOK A CALL -->
+    <div class="reveal">
+        <p class="section-title">Book a Call</p>
+        <p class="body-text" style="margin-bottom:1.5rem;">Prefer to skip the back-and-forth? Pick a time and let's talk.</p>
+        <div class="calendly-wrap">
+            <iframe src="https://calendly.com/seth-fortewebdesigns/30min" title="Book a call with Seth Forte"></iframe>
+        </div>
     </div>
 
     <!-- FOOTER -->
@@ -247,5 +262,6 @@
 <script src="/scroll-reveal.js"></script>
 <script src="/theme-toggle.js"></script>
 <script src="/scroll-top.js"></script>
+<script src="/hamburger.js"></script>
 </body>
 </html>
