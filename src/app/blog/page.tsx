@@ -173,7 +173,7 @@ export default function Blog() {
 
       {/* ── POSTS GRID ────────────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 sm:py-20 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-6xl">
+        <div className="mx-auto max-w-4xl">
           <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-stretch">
             {blogPosts.map((post, i) => (
               <SimpleScrollReveal key={post.id} direction="up" delay={Math.min(i * 40, 300)} className="h-full">
