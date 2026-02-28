@@ -299,12 +299,12 @@ export default function ServicesPage() {
               <SimpleScrollReveal key={r.client} direction="up" delay={i * 60}>
                 <Link
                   href={r.href}
-                  className="group flex items-center justify-between py-5 transition-colors"
+                  className="group flex items-center justify-between gap-4 py-5 transition-colors"
                 >
-                  <span className="text-base font-semibold text-gray-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
+                  <span className="min-w-0 flex-1 text-base font-semibold text-gray-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
                     {r.client}
                   </span>
-                  <div className="flex items-center gap-3">
+                  <div className="flex flex-shrink-0 items-center gap-3">
                     <span className="text-base font-bold text-gray-700 dark:text-gray-300">
                       {r.metric}
                     </span>

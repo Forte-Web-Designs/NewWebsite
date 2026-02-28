@@ -198,37 +198,6 @@ export default function FoundationPage() {
         </div>
       </section>
 
-      {/* ── TIMELINE ──────────────────────────────────────────────── */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32">
-        <div className="mx-auto max-w-4xl">
-          <SimpleScrollReveal direction="up">
-            <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400 text-center">
-              Timeline
-            </p>
-            <h2 className="mb-10 text-center text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-              What to expect
-            </h2>
-          </SimpleScrollReveal>
-          <div className="grid gap-5 sm:grid-cols-3">
-            {[
-              { label: 'Discovery to Handoff', sub: '1–2 weeks end to end', icon: '01' },
-              { label: 'Full Ownership', sub: 'Everything documented - you own it all', icon: '02' },
-              { label: 'Post-Delivery Support', sub: '7–14 days included after handoff', icon: '03' },
-            ].map((item, i) => (
-              <SimpleScrollReveal key={i} direction="up" delay={i * 70}>
-                <div className="rounded-2xl border border-gray-200 bg-white p-7 text-center dark:border-gray-800 dark:bg-gray-950">
-                  <div className="mx-auto mb-4 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-xs font-bold text-white shadow-md shadow-blue-500/20">
-                    {item.icon}
-                  </div>
-                  <p className="mb-1.5 text-base font-bold text-gray-900 dark:text-white">{item.label}</p>
-                  <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">{item.sub}</p>
-                </div>
-              </SimpleScrollReveal>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── NEXT STEP ─────────────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-900">
         <div className="mx-auto max-w-3xl">
