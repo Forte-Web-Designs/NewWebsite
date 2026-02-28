@@ -15,7 +15,7 @@ const TIERS = [
     timeline: '1-2 weeks',
     tagline: 'Get your system built and everything connected.',
     description:
-      'CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from. And your first lead source connected so you\'re not starting with an empty system.',
+      "CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from. And your first lead source connected so you're not starting with an empty system.",
     includes: [
       'CRM setup with sales pipeline',
       'Payment processing',
@@ -64,9 +64,9 @@ const TIERS = [
     step: '04',
     name: 'Scale',
     timeline: '3-4 weeks',
-    tagline: 'Optimize what\'s working. Grow without adding headcount.',
+    tagline: "Optimize what's working. Grow without adding headcount.",
     description:
-      'Reporting dashboards so you stop guessing. Outbound systems to find prospects instead of waiting for them. Agents that answer calls and chat 24/7. Content engines that keep you visible. And monthly management so someone\'s actually watching the machine.',
+      "Reporting dashboards so you stop guessing. Outbound systems to find prospects instead of waiting for them. Agents that answer calls and chat 24/7. Content engines that keep you visible. And monthly management so someone's actually watching the machine.",
     includes: [
       'Reporting dashboards',
       'Outbound prospecting systems',
@@ -116,16 +116,22 @@ export default function ServicesPage() {
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(59,130,246,0.08),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(59,130,246,0.12),transparent)]"
         />
         <div className="relative mx-auto max-w-4xl text-center">
-          <SimpleScrollReveal direction="up">
+          <SimpleScrollReveal direction="up" delay={0}>
             <p className="mb-4 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
               Services
             </p>
+          </SimpleScrollReveal>
+          <SimpleScrollReveal direction="up" delay={80}>
             <h1 className="mb-6 font-bold tracking-tight text-gray-900 dark:text-white text-5xl sm:text-6xl md:text-7xl leading-[1.06]">
               What We Build
             </h1>
+          </SimpleScrollReveal>
+          <SimpleScrollReveal direction="up" delay={160}>
             <p className="mx-auto mb-10 max-w-2xl text-lg sm:text-xl leading-relaxed text-gray-500 dark:text-gray-400">
               Most businesses that come to us are dealing with one of three things: no systems at all, systems that don't talk to each other, or systems they've outgrown that are starting to break. The fix depends on where you are.
             </p>
+          </SimpleScrollReveal>
+          <SimpleScrollReveal direction="up" delay={240}>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Link
                 href="/contact"
@@ -149,7 +155,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl">
 
           <SimpleScrollReveal direction="up">
-            <div className="mb-14 max-w-xl">
+            <div className="mb-10 max-w-xl">
               <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
                 The System
               </p>
@@ -162,56 +168,76 @@ export default function ServicesPage() {
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid gap-5 sm:grid-cols-2">
-            {TIERS.map((tier, i) => (
-              <SimpleScrollReveal key={tier.name} direction="up" delay={i * 70}>
-                <div className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-800 dark:bg-gray-950">
-                  <div className="mb-6 flex items-center justify-between">
-                    <span className="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400">
+          {/* Timeline progress bar */}
+          <SimpleScrollReveal direction="up" delay={80}>
+            <div className="mb-10 flex items-center">
+              {TIERS.map((tier, i) => (
+                <div key={tier.step} className="flex flex-1 items-center">
+                  <div className="flex flex-col items-center gap-1.5 flex-shrink-0">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-xs font-bold text-white shadow-md shadow-blue-500/20">
                       {tier.step}
-                    </span>
-                    <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-                      {tier.timeline}
+                    </div>
+                    <span className="hidden text-xs font-medium text-gray-500 dark:text-gray-400 sm:block whitespace-nowrap">
+                      {tier.name}
                     </span>
                   </div>
-                  <h3 className="mb-1.5 text-xl font-bold text-gray-900 dark:text-white">
-                    {tier.name}
-                  </h3>
-                  <p className="mb-4 text-sm font-medium text-blue-600 dark:text-blue-400">
-                    {tier.tagline}
-                  </p>
-                  <p className="mb-6 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
-                    {tier.description}
-                  </p>
-                  <ul className="mb-6 grid grid-cols-1 gap-2 sm:grid-cols-2 flex-1">
-                    {tier.includes.map((item) => (
-                      <li key={item} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                        <svg
-                          className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                        >
-                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                        </svg>
-                        {item}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={tier.href}
-                    className="group inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-                  >
-                    Learn more
-                    <svg
-                      className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
+                  {i < TIERS.length - 1 && (
+                    <div className="mx-2 flex flex-1 items-center gap-1">
+                      <div className="h-px flex-1 bg-gradient-to-r from-blue-400 to-indigo-400 dark:from-blue-600 dark:to-indigo-600" />
+                      <svg className="h-3 w-3 flex-shrink-0 text-indigo-400 dark:text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </SimpleScrollReveal>
+
+          {/* Stage cards with gradient borders */}
+          <div className="grid gap-5 sm:grid-cols-2">
+            {TIERS.map((tier, i) => (
+              <SimpleScrollReveal key={tier.name} direction="up" delay={i * 80}>
+                {/* Gradient border wrapper */}
+                <div className="h-full rounded-2xl p-px bg-gradient-to-br from-blue-500/60 via-indigo-500/30 to-transparent dark:from-blue-500/50 dark:via-indigo-500/20">
+                  <div className="flex h-full flex-col rounded-2xl bg-white p-8 dark:bg-gray-950">
+                    <div className="mb-6 flex items-center justify-between">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-xs font-bold text-white shadow-sm shadow-blue-500/30">
+                        {tier.step}
+                      </div>
+                      <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+                        {tier.timeline}
+                      </span>
+                    </div>
+                    <h3 className="mb-1.5 text-xl font-bold text-gray-900 dark:text-white">
+                      {tier.name}
+                    </h3>
+                    <p className="mb-4 text-sm font-medium text-blue-600 dark:text-blue-400">
+                      {tier.tagline}
+                    </p>
+                    <p className="mb-6 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                      {tier.description}
+                    </p>
+                    <ul className="mb-6 grid grid-cols-1 gap-2 sm:grid-cols-2 flex-1">
+                      {tier.includes.map((item) => (
+                        <li key={item} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                          <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          {item}
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={tier.href}
+                      className="group inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                     >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                    </svg>
-                  </Link>
+                      Learn more
+                      <svg className="h-4 w-4 transition-transform group-hover:translate-x-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                    </Link>
+                  </div>
                 </div>
               </SimpleScrollReveal>
             ))}
@@ -244,14 +270,15 @@ export default function ServicesPage() {
             </div>
           </SimpleScrollReveal>
 
-          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {/* Equal-height capability cards via grid + h-full */}
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4 items-stretch">
             {CAPABILITIES.map((cap, i) => (
               <SimpleScrollReveal key={cap.title} direction="up" delay={i * 70}>
-                <div className="rounded-2xl border border-gray-200 bg-gray-50 p-7 dark:border-gray-800 dark:bg-gray-900">
-                  <h3 className="mb-2 text-base font-bold text-gray-900 dark:text-white">
+                <div className="flex h-full flex-col rounded-2xl border border-gray-200 bg-gray-50 p-7 dark:border-gray-800 dark:bg-gray-900">
+                  <h3 className="mb-3 text-base font-bold text-gray-900 dark:text-white">
                     {cap.title}
                   </h3>
-                  <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
+                  <p className="flex-1 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                     {cap.description}
                   </p>
                 </div>
@@ -305,7 +332,7 @@ export default function ServicesPage() {
               <SimpleScrollReveal key={r.client} direction="up" delay={i * 60}>
                 <Link
                   href={r.href}
-                  className="group flex items-center justify-between py-5 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
+                  className="group flex items-center justify-between py-5 transition-colors"
                 >
                   <span className="text-base font-semibold text-gray-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
                     {r.client}
@@ -314,12 +341,7 @@ export default function ServicesPage() {
                     <span className="text-base font-bold text-gray-700 dark:text-gray-300">
                       {r.metric}
                     </span>
-                    <svg
-                      className="h-4 w-4 text-gray-300 transition-colors group-hover:text-blue-500 dark:text-gray-700"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
+                    <svg className="h-4 w-4 text-gray-300 transition-colors group-hover:text-blue-500 dark:text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
@@ -329,10 +351,7 @@ export default function ServicesPage() {
           </div>
 
           <SimpleScrollReveal direction="up">
-            <Link
-              href="/case-studies"
-              className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
-            >
+            <Link href="/case-studies" className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300">
               See all case studies →
             </Link>
           </SimpleScrollReveal>
