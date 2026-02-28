@@ -20,7 +20,7 @@ const DELIVERABLES = [
   {
     title: 'Lead Capture',
     description:
-      'Your first lead source connected and producing. Whether that's a Meta ad, a website form, or a landing page opt-in — leads flow directly into your CRM, tagged by source, with an instant auto-response and team notification.',
+      "Your first lead source connected and producing. Whether that's a Meta ad, a website form, or a landing page opt-in — leads flow directly into your CRM, tagged by source, with an instant auto-response and team notification.",
   },
   {
     title: 'CRM and Pipeline',
@@ -62,7 +62,7 @@ const DELIVERABLES = [
 const SOUND_FAMILIAR = [
   'Contacts in spreadsheets, no pipeline',
   'Paying for a CRM nobody configured',
-  'Tracking is broken — can't tell what works',
+  "Tracking is broken — can't tell what works",
   'Emails landing in spam',
   'Running everything on manual follow-up',
   'Built a CRM but have zero leads in it',
