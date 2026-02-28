@@ -159,6 +159,7 @@ export default function Home() {
           <div className="relative mx-auto max-w-4xl text-center">
 
             {/* Press badge */}
+            <SimpleScrollReveal direction="up" delay={0}>
             <div className="flex justify-center mb-8">
               <a
                 href="https://voyagedallas.com/interview/community-highlights-meet-seth-forte-of-forte-web-designs/"
@@ -189,8 +190,10 @@ export default function Home() {
                 </svg>
               </a>
             </div>
+            </SimpleScrollReveal>
 
             {/* Headline */}
+            <SimpleScrollReveal direction="up" delay={100}>
             <h1 className="mb-6 font-bold tracking-tight text-gray-900 dark:text-white text-5xl sm:text-6xl md:text-7xl leading-[1.06]">
               Growth isn't luck.
               <br />
@@ -205,14 +208,18 @@ export default function Home() {
               </span>
               .
             </h1>
+            </SimpleScrollReveal>
 
             {/* Subheading */}
+            <SimpleScrollReveal direction="up" delay={180}>
             <p className="mx-auto mb-10 max-w-2xl text-lg sm:text-xl leading-relaxed text-gray-500 dark:text-gray-400">
               We build the automation systems, pipelines, and infrastructure
               that eliminate manual work and make growth repeatable.
             </p>
+            </SimpleScrollReveal>
 
             {/* CTAs */}
+            <SimpleScrollReveal direction="up" delay={260}>
             <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Link
                 href="/contact"
@@ -227,6 +234,8 @@ export default function Home() {
                 See Our Work
               </Link>
             </div>
+            </SimpleScrollReveal>
+
           </div>
         </section>
 
@@ -244,7 +253,7 @@ export default function Home() {
             ].map((name) => (
               <span
                 key={name}
-                className="text-sm font-medium text-gray-300 dark:text-gray-600"
+                className="text-sm font-medium text-gray-500 dark:text-gray-400"
               >
                 {name}
               </span>
@@ -473,7 +482,7 @@ export default function Home() {
                   What clients say.
                 </h2>
                 <p className="mt-3 text-sm text-gray-500 dark:text-gray-400">
-                  15 reviews · All 5-star · From verified clients
+                  5-star reviews from verified clients
                 </p>
               </div>
             </SimpleScrollReveal>

@@ -134,7 +134,7 @@ export default function TestimonialsPage() {
               What clients say.
             </h1>
             <p className="text-base text-gray-500 dark:text-gray-400 sm:text-lg">
-              {reviews.length} reviews · All 5-star · From verified clients
+              {reviews.length} five-star reviews from verified clients
             </p>
           </SimpleScrollReveal>
         </div>
