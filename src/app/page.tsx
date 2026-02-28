@@ -220,7 +220,7 @@ export default function Home() {
             ].map((name) => (
               <span
                 key={name}
-                className="text-sm font-medium text-gray-500 dark:text-gray-400"
+                className="text-sm font-medium text-gray-600 dark:text-gray-400"
               >
                 {name}
               </span>
@@ -353,14 +353,10 @@ export default function Home() {
 
             {/* Footer note */}
             <SimpleScrollReveal direction="up">
-              <div className="mt-10 flex flex-col gap-4 border-t border-gray-200 pt-8 sm:flex-row sm:items-center sm:justify-between dark:border-gray-800">
-                <p className="text-sm text-gray-400 dark:text-gray-500">
-                  Every system is scoped, documented, tested, and handed off.
-                  You own everything.
-                </p>
+              <div className="mt-10 border-t border-gray-200 pt-8 dark:border-gray-800">
                 <Link
                   href="/services/infrastructure-review"
-                  className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300 whitespace-nowrap"
+                  className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                 >
                   Not sure where to start? Book a Review →
                 </Link>
@@ -522,11 +518,9 @@ export default function Home() {
                 About Forte
               </h2>
               <p className="mb-5 text-base leading-relaxed text-gray-500 dark:text-gray-400 sm:text-lg">
-                Seth spent 5 years building enterprise-grade systems where
-                downtime costs six figures an hour. Now we solve the same class
-                of problems for growing businesses: automation, integrations,
-                custom software, and the infrastructure that holds it all
-                together.
+                We solve a wide variety of problems for growing businesses:
+                automation, integrations, custom software, and the infrastructure
+                that holds it all together.
               </p>
               <p className="mb-8 text-base leading-relaxed text-gray-500 dark:text-gray-400 sm:text-lg">
                 We start every project by figuring out what the problem is
@@ -574,9 +568,8 @@ export default function Home() {
                 <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
                   Tell us what's broken.
                 </h2>
-                <p className="text-base text-gray-500 dark:text-gray-400 sm:text-lg">
-                  Book a free call. No pitch, no pressure. Just figuring out if
-                  we can help.
+                <p className="text-base text-gray-700 dark:text-gray-300 sm:text-lg">
+                  Book a free call.
                 </p>
               </div>
             </SimpleScrollReveal>
