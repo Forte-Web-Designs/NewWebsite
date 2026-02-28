@@ -97,20 +97,14 @@ export default function GrowthPage() {
             </p>
           </SimpleScrollReveal>
           <SimpleScrollReveal direction="up" delay={240}>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
+            <a
+                href="https://calendly.com/seth-fortewebdesigns/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
               >
-                Book a Call
-              </Link>
-              <Link
-                href="/services/infrastructure-review"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-8 py-3.5 text-base font-semibold text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800/60 dark:text-white dark:hover:bg-gray-800"
-              >
-                Not sure? Book a Review
-              </Link>
-            </div>
+                Book a Review
+              </a>
           </SimpleScrollReveal>
         </div>
       </section>
@@ -239,7 +233,7 @@ export default function GrowthPage() {
                 Once leads are flowing and converting, the next step is Scale.
               </h3>
               <p className="mb-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400 sm:text-base">
-                Reporting, optimization, and expansion — so you know what's working best and can do more of it without breaking what's already producing.
+                Reporting, optimization, and expansion - so you know what's working best and can do more of it without breaking what's already producing.
               </p>
               <Link
                 href="/services/scale"
@@ -263,34 +257,16 @@ export default function GrowthPage() {
               Not sure which Growth systems you need?
             </p>
             <Link
-              href="/services/infrastructure-review"
+              href="https://calendly.com/seth-fortewebdesigns/30min"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Book an Infrastructure Review — it identifies your highest-ROI opportunities and credits toward any project.
+              Book an Infrastructure Review - it identifies your highest-ROI opportunities and credits toward any project.
               <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-          </SimpleScrollReveal>
-        </div>
-      </section>
-
-      {/* ── CONTACT FORM ──────────────────────────────────────────── */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-3xl">
-          <SimpleScrollReveal direction="up">
-            <div className="mb-10 text-center">
-              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-                Get in touch
-              </p>
-              <h2 className="mb-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                Ready to multiply what's working?
-              </h2>
-              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                Tell us what's already producing and where you want to go. We'll build the systems to get you there.
-              </p>
-            </div>
-            <ContactForm />
           </SimpleScrollReveal>
         </div>
       </section>

@@ -5,7 +5,7 @@ import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
   title: 'Why Your Lead Routing Is Costing You $50K Annually (And How to Fix It) | Forte Web Designs',
-  description: 'Learn how automated lead management systems help businesses capture, qualify, and convert leads faster—saving 15+ hours per week and increasing conversion rates by 40%.',
+  description: 'Learn how automated lead management systems help businesses capture, qualify, and convert leads faster-saving 15+ hours per week and increasing conversion rates by 40%.',
   keywords: 'automated lead management, lead automation, CRM automation, sales automation, lead nurturing',
 };
 
@@ -56,7 +56,7 @@ export default function AutomatedLeadManagementBlogPost() {
           <SimpleScrollReveal direction="up">
             <div className="prose dark:prose-invert prose-lg max-w-none">
               <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                If you're manually following up with every lead, updating spreadsheets, and trying to remember who needs what—you're wasting 10-20 hours per week on work a system could handle in seconds.
+                If you're manually following up with every lead, updating spreadsheets, and trying to remember who needs what-you're wasting 10-20 hours per week on work a system could handle in seconds.
               </p>
 
               <p>
@@ -92,7 +92,7 @@ export default function AutomatedLeadManagementBlogPost() {
               </h3>
 
               <p>
-                Research shows that companies that respond to leads within 5 minutes are <strong>9x more likely to convert</strong> than those who wait an hour. Most businesses take hours—or even days—to respond.
+                Research shows that companies that respond to leads within 5 minutes are <strong>9x more likely to convert</strong> than those who wait an hour. Most businesses take hours-or even days-to respond.
               </p>
 
               <p>
@@ -108,7 +108,7 @@ export default function AutomatedLeadManagementBlogPost() {
               </p>
 
               <p>
-                Automated systems ensure every lead is captured, tracked, and followed up with—no exceptions. If a lead doesn't respond, the system automatically sends follow-ups until they engage or opt out.
+                Automated systems ensure every lead is captured, tracked, and followed up with-no exceptions. If a lead doesn't respond, the system automatically sends follow-ups until they engage or opt out.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -160,7 +160,7 @@ export default function AutomatedLeadManagementBlogPost() {
               </div>
 
               <p>
-                All of this happens automatically—no manual data entry, no forgetting to follow up, no leads lost in email threads.
+                All of this happens automatically-no manual data entry, no forgetting to follow up, no leads lost in email threads.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
@@ -200,7 +200,7 @@ export default function AutomatedLeadManagementBlogPost() {
               </ol>
 
               <p>
-                If you're not technical, that's where we come in. We build custom lead management systems that integrate with your existing tools and workflows—no manual work required.
+                If you're not technical, that's where we come in. We build custom lead management systems that integrate with your existing tools and workflows-no manual work required.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
@@ -208,7 +208,7 @@ export default function AutomatedLeadManagementBlogPost() {
               </h2>
 
               <p>
-                Automated lead management isn't optional anymore. Your competitors are responding faster, following up more consistently, and converting more leads—because they're using systems that work 24/7.
+                Automated lead management isn't optional anymore. Your competitors are responding faster, following up more consistently, and converting more leads-because they're using systems that work 24/7.
               </p>
 
               <p>
@@ -225,7 +225,7 @@ export default function AutomatedLeadManagementBlogPost() {
                   Ready to Automate Your Lead Management?
                 </h3>
                 <p className="text-blue-100 mb-6">
-                  Book a free strategy call and we'll show you exactly how to capture, qualify, and convert more leads—automatically.
+                  Book a free strategy call and we'll show you exactly how to capture, qualify, and convert more leads-automatically.
                 </p>
                 <Link
                   href="/contact"

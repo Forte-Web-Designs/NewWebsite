@@ -59,7 +59,7 @@ export default function AIAutomationMythsBlogPost() {
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                Yet despite the proven results, many small business owners still hold outdated beliefs about AI automation that keep them stuck doing manual work. Here's what most business owners get wrong about AI—and what it can actually do for you.
+                Yet despite the proven results, many small business owners still hold outdated beliefs about AI automation that keep them stuck doing manual work. Here's what most business owners get wrong about AI-and what it can actually do for you.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6 mt-12">
@@ -67,7 +67,7 @@ export default function AIAutomationMythsBlogPost() {
               </h2>
 
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                <strong>The Reality:</strong> AI automation has become incredibly affordable—often paying for itself within 60-90 days.
+                <strong>The Reality:</strong> AI automation has become incredibly affordable-often paying for itself within 60-90 days.
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
@@ -76,7 +76,7 @@ export default function AIAutomationMythsBlogPost() {
 
               <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600 p-6 rounded-r-lg mb-8">
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
-                  <strong>Real Example:</strong> A Grapevine plumbing company invested $3,500 in missed-call text-back automation and quote follow-up systems. Within 90 days, they captured 12 additional jobs they would have lost—generating $18,000 in new revenue. ROI: 414%.
+                  <strong>Real Example:</strong> A Grapevine plumbing company invested $3,500 in missed-call text-back automation and quote follow-up systems. Within 90 days, they captured 12 additional jobs they would have lost-generating $18,000 in new revenue. ROI: 414%.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   The system continues generating returns month after month with minimal ongoing costs.
@@ -100,7 +100,7 @@ export default function AIAutomationMythsBlogPost() {
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Smart automation connects your existing tools through APIs and webhooks—creating a unified system where data flows automatically between platforms. No replacement necessary.
+                Smart automation connects your existing tools through APIs and webhooks-creating a unified system where data flows automatically between platforms. No replacement necessary.
               </p>
 
               <ul className="list-disc pl-6 mb-8 space-y-3 text-gray-700 dark:text-gray-300">
@@ -131,7 +131,7 @@ export default function AIAutomationMythsBlogPost() {
                 <ul className="space-y-3 text-gray-700 dark:text-gray-300">
                   <li className="flex items-start gap-3">
                     <Icon name="check" className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                    <span><strong>Instant response:</strong> Text-back within 60 seconds of a missed call—every single time</span>
+                    <span><strong>Instant response:</strong> Text-back within 60 seconds of a missed call-every single time</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <Icon name="check" className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -179,7 +179,7 @@ export default function AIAutomationMythsBlogPost() {
 
               <div className="bg-blue-50 dark:bg-blue-900/20 border-l-4 border-blue-600 p-6 rounded-r-lg mb-8">
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                  <strong>Even 1-person businesses benefit from automation.</strong> When you're wearing every hat in your business, automating routine tasks isn't a luxury—it's essential for survival and growth.
+                  <strong>Even 1-person businesses benefit from automation.</strong> When you're wearing every hat in your business, automating routine tasks isn't a luxury-it's essential for survival and growth.
                 </p>
               </div>
 
@@ -278,7 +278,7 @@ export default function AIAutomationMythsBlogPost() {
               </p>
 
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                The question isn't whether automation works for small businesses—thousands of examples prove it does. The question is: how much longer can you afford to do manually what could be automated?
+                The question isn't whether automation works for small businesses-thousands of examples prove it does. The question is: how much longer can you afford to do manually what could be automated?
               </p>
             </div>
           </SimpleScrollReveal>

@@ -93,7 +93,7 @@ export default function HandLAgencyCaseStudy() {
                 The Challenge
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                HandL Agency, a successful digital marketing firm, was drowning in operational overhead. As they grew, admin work started consuming more time than actual client work. Three specific areas were particularly painful: routine email responses (5-8 hours/week), meeting follow-ups and coordination (4-6 hours/week), and invoice processing (6-10 hours/week). Combined, these repetitive tasks were eating 15-24 hours weekly—time that should have been spent on strategy and client success.
+                HandL Agency, a successful digital marketing firm, was drowning in operational overhead. As they grew, admin work started consuming more time than actual client work. Three specific areas were particularly painful: routine email responses (5-8 hours/week), meeting follow-ups and coordination (4-6 hours/week), and invoice processing (6-10 hours/week). Combined, these repetitive tasks were eating 15-24 hours weekly-time that should have been spent on strategy and client success.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
                 The agency was at a crossroads: hire more operations staff (expensive and difficult to manage) or find a way to automate the bottlenecks. Manual invoice processing had a 10-15% error rate, delayed responses were hurting client relationships, and meeting follow-ups were inconsistent. They needed a solution that could scale with their growth without proportional overhead increase.
@@ -105,7 +105,7 @@ export default function HandLAgencyCaseStudy() {
                 The Solution
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                We built a three-tier automation system, each tier addressing different complexity levels. Tier 1: AI-powered email responder handles routine client questions with GPT-4 drafts and human approval. Tier 2: Meeting follow-up automation uses Fathom transcripts to generate summaries, action items, and next-meeting scheduling automatically. Tier 3: Invoice processing monitors Gmail and vendor portals, extracts data via OCR, and populates tracking sheets—reducing errors to near-zero. The result: they reclaimed 15-24 hours per week and can now handle 2x the client load without adding operations staff.
+                We built a three-tier automation system, each tier addressing different complexity levels. Tier 1: AI-powered email responder handles routine client questions with GPT-4 drafts and human approval. Tier 2: Meeting follow-up automation uses Fathom transcripts to generate summaries, action items, and next-meeting scheduling automatically. Tier 3: Invoice processing monitors Gmail and vendor portals, extracts data via OCR, and populates tracking sheets-reducing errors to near-zero. The result: they reclaimed 15-24 hours per week and can now handle 2x the client load without adding operations staff.
               </p>
             </SimpleScrollReveal>
           </div>
@@ -133,7 +133,7 @@ export default function HandLAgencyCaseStudy() {
                     AI Email Responder
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    GPT-4 analyzes incoming emails and generates draft responses in company tone. Team approves before sending. Handles routine questions, service inquiries, and scheduling—saving 5-8 hours weekly.
+                    GPT-4 analyzes incoming emails and generates draft responses in company tone. Team approves before sending. Handles routine questions, service inquiries, and scheduling-saving 5-8 hours weekly.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -148,7 +148,7 @@ export default function HandLAgencyCaseStudy() {
                     Meeting Follow-Up
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Automatically retrieves Fathom transcripts, generates summaries with action items, creates follow-up emails, schedules next meetings, and saves notes to Drive—saving 4-6 hours weekly.
+                    Automatically retrieves Fathom transcripts, generates summaries with action items, creates follow-up emails, schedules next meetings, and saves notes to Drive-saving 4-6 hours weekly.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -163,7 +163,7 @@ export default function HandLAgencyCaseStudy() {
                     Invoice Processing
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    Monitors Gmail and vendor portals, extracts invoice data via OCR, populates tracking sheets, and generates monthly reports—reducing errors to &lt;1% and saving 6-10 hours weekly.
+                    Monitors Gmail and vendor portals, extracts invoice data via OCR, populates tracking sheets, and generates monthly reports-reducing errors to &lt;1% and saving 6-10 hours weekly.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -296,7 +296,7 @@ export default function HandLAgencyCaseStudy() {
                       AI-Powered Email Analysis
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Gmail API monitors designated inbox. When emails arrive, GPT-4 analyzes content and generates draft responses matching company tone. Drafts go to team for approval—usually no edits needed. Auto-send after 15-minute review window or immediate approval.
+                      Gmail API monitors designated inbox. When emails arrive, GPT-4 analyzes content and generates draft responses matching company tone. Drafts go to team for approval-usually no edits needed. Auto-send after 15-minute review window or immediate approval.
                     </p>
                   </div>
                 </div>

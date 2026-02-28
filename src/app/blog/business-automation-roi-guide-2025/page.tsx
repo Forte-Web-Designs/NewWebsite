@@ -64,7 +64,7 @@ export default function BusinessAutomationROIGuideBlogPost() {
                   Every business owner asks the same question: "Will automation actually save me money, or is it just another expensive tech experiment?"
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                  After implementing automation systems for dozens of businesses over the past three years, I can tell you the answer with real numbers: properly implemented automation doesn't just save money—it transforms entire business operations while delivering measurable returns that compound year over year.
+                  After implementing automation systems for dozens of businesses over the past three years, I can tell you the answer with real numbers: properly implemented automation doesn't just save money-it transforms entire business operations while delivering measurable returns that compound year over year.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
                   In this guide, I'll break down the exact ROI calculations from real client implementations, show you how to calculate your own potential savings, and give you a framework for measuring automation success that goes beyond just "saving time."
@@ -107,7 +107,7 @@ export default function BusinessAutomationROIGuideBlogPost() {
                   Understanding True Automation ROI: Beyond Just "Saving Time"
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                  Most businesses make the mistake of only calculating time savings when evaluating automation ROI. But that's like judging a restaurant by only looking at the appetizers—you're missing the main course and dessert.
+                  Most businesses make the mistake of only calculating time savings when evaluating automation ROI. But that's like judging a restaurant by only looking at the appetizers-you're missing the main course and dessert.
                 </p>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
                   True automation ROI includes five key components:
@@ -392,7 +392,7 @@ export default function BusinessAutomationROIGuideBlogPost() {
                   Calculate Your Own Automation ROI
                 </h2>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                  Use this framework to estimate your potential automation ROI. Be conservative with your estimates—it's better to under-promise and over-deliver.
+                  Use this framework to estimate your potential automation ROI. Be conservative with your estimates-it's better to under-promise and over-deliver.
                 </p>
                 
                 <div className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl p-8 border-2 border-blue-200 dark:border-blue-700">
@@ -583,7 +583,7 @@ export default function BusinessAutomationROIGuideBlogPost() {
                     </li>
                     <li className="flex items-start gap-3">
                       <Icon name="check" className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-                      <span><strong>The biggest returns come from scalability,</strong> not just time savings—automation enables growth that would otherwise require significant staffing increases.</span>
+                      <span><strong>The biggest returns come from scalability,</strong> not just time savings-automation enables growth that would otherwise require significant staffing increases.</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <Icon name="check" className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
@@ -593,7 +593,7 @@ export default function BusinessAutomationROIGuideBlogPost() {
                 </div>
                 
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                  The question isn't whether automation can deliver ROI—it's whether you're ready to implement systems that will scale with your business and compound returns year over year.
+                  The question isn't whether automation can deliver ROI-it's whether you're ready to implement systems that will scale with your business and compound returns year over year.
                 </p>
                 
                 <div className="bg-gradient-to-br from-green-600 to-emerald-600 rounded-2xl p-8 text-white text-center">

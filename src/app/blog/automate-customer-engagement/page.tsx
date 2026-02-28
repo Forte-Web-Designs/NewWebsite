@@ -5,7 +5,7 @@ import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
   title: 'Your Customers Are Leaving Because You\'re Not Following Up Fast Enough | Forte Web Designs',
-  description: 'Learn how automated customer engagement systems keep customers happy, reduce churn, and increase lifetime value—without overwhelming your support team.',
+  description: 'Learn how automated customer engagement systems keep customers happy, reduce churn, and increase lifetime value-without overwhelming your support team.',
   keywords: 'customer engagement automation, reduce customer churn, customer retention, automated customer communication, customer success automation',
 };
 
@@ -64,7 +64,7 @@ export default function AutomateCustomerEngagementBlogPost() {
               </p>
 
               <p>
-                Customer engagement automation solves this. It keeps your customers happy, engaged, and loyal—without overwhelming your team with manual outreach. Here's how.
+                Customer engagement automation solves this. It keeps your customers happy, engaged, and loyal-without overwhelming your team with manual outreach. Here's how.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
@@ -72,7 +72,7 @@ export default function AutomateCustomerEngagementBlogPost() {
               </h2>
 
               <p>
-                Customer engagement automation uses software to deliver personalized, timely communication to your customers throughout their journey—without manual intervention.
+                Customer engagement automation uses software to deliver personalized, timely communication to your customers throughout their journey-without manual intervention.
               </p>
 
               <p>
@@ -89,7 +89,7 @@ export default function AutomateCustomerEngagementBlogPost() {
               </ul>
 
               <p>
-                The goal: Keep customers engaged, prevent churn, and maximize lifetime value—all automatically.
+                The goal: Keep customers engaged, prevent churn, and maximize lifetime value-all automatically.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
@@ -101,11 +101,11 @@ export default function AutomateCustomerEngagementBlogPost() {
               </h3>
 
               <p>
-                Most churn isn't due to product issues—it's due to neglect. Customers don't feel valued. They don't hear from you until it's time to renew. By then, it's too late.
+                Most churn isn't due to product issues-it's due to neglect. Customers don't feel valued. They don't hear from you until it's time to renew. By then, it's too late.
               </p>
 
               <p>
-                Automated engagement ensures customers hear from you regularly—even when your team is busy. Birthday emails, milestone celebrations, usage tips, and check-ins keep your brand top of mind.
+                Automated engagement ensures customers hear from you regularly-even when your team is busy. Birthday emails, milestone celebrations, usage tips, and check-ins keep your brand top of mind.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -275,7 +275,7 @@ export default function AutomateCustomerEngagementBlogPost() {
               </h3>
 
               <p>
-                If a customer stops engaging, don't just keep sending emails. Trigger a human touchpoint—phone call, personal email, or special offer.
+                If a customer stops engaging, don't just keep sending emails. Trigger a human touchpoint-phone call, personal email, or special offer.
               </p>
 
               <h2 className="text-3xl font-bold text-gray-900 dark:text-white mt-12 mb-6">
@@ -326,7 +326,7 @@ export default function AutomateCustomerEngagementBlogPost() {
               </h2>
 
               <p>
-                Customer engagement isn't a "nice to have"—it's essential for sustainable growth. Every customer who churns costs you revenue, referrals, and reputation.
+                Customer engagement isn't a "nice to have"-it's essential for sustainable growth. Every customer who churns costs you revenue, referrals, and reputation.
               </p>
 
               <p>

@@ -29,7 +29,7 @@ const caseStudies = [
     title: 'Modern Bungalow',
     tags: ['E-commerce', 'Shopify'],
     metric: '15 hrs/month back',
-    problem: 'Denver furniture retailer was manually sending 30–40 customer emails every day — 15+ hours a month just on customer communication. Order confirmations, production updates, delivery coordination. Someone had to remember to send the right email at the right time, and things were falling through the cracks.',
+    problem: 'Denver furniture retailer was manually sending 30–40 customer emails every day - 15+ hours a month just on customer communication. Order confirmations, production updates, delivery coordination. Someone had to remember to send the right email at the right time, and things were falling through the cracks.',
     solution: 'A system that monitors Shopify orders and automatically sends the right email based on order status. Handles 9 different scenarios based on product type and delivery partner. Prevents duplicates and logs everything.',
     results: [
       '15+ hours saved monthly',
@@ -144,7 +144,7 @@ export default function CaseStudiesPage() {
           </SimpleScrollReveal>
           <SimpleScrollReveal direction="up" delay={160}>
             <p className="mx-auto max-w-2xl text-lg sm:text-xl leading-relaxed text-gray-500 dark:text-gray-400">
-              Most of these systems paid for themselves in 4–8 weeks — then kept delivering month after month.
+              Most of these systems paid for themselves in 4–8 weeks - then kept delivering month after month.
             </p>
           </SimpleScrollReveal>
         </div>
@@ -216,7 +216,7 @@ export default function CaseStudiesPage() {
                         "{study.quote}"
                       </p>
                       <p className="mt-2 text-xs font-medium text-gray-400 dark:text-gray-500">
-                        — {study.quoteAuthor}
+                        - {study.quoteAuthor}
                       </p>
                     </div>
                   )}

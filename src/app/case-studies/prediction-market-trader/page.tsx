@@ -163,7 +163,7 @@ export default function PredictionMarketTraderCaseStudy() {
                   Decision-Ready Output
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Results automatically populate a Google Sheet with market details, AI predictions, confidence levels, and reasoning—ready for immediate trading decisions.
+                  Results automatically populate a Google Sheet with market details, AI predictions, confidence levels, and reasoning-ready for immediate trading decisions.
                 </p>
               </div>
             </div>
@@ -306,7 +306,7 @@ export default function PredictionMarketTraderCaseStudy() {
                     Output & Action
                   </h3>
                   <p className="text-lg text-gray-600 dark:text-gray-300">
-                    All results are automatically written to a Google Sheet with market details, AI predictions, confidence levels, and reasoning—ready for the trader to review and act on immediately.
+                    All results are automatically written to a Google Sheet with market details, AI predictions, confidence levels, and reasoning-ready for the trader to review and act on immediately.
                   </p>
                 </div>
               </div>
@@ -324,7 +324,7 @@ export default function PredictionMarketTraderCaseStudy() {
                 "Figured it out quickly and got everything working smoothly. Very responsive throughout."
               </blockquote>
               <div className="text-lg text-gray-600 dark:text-gray-400">
-                — Prediction Market Trader
+                - Prediction Market Trader
               </div>
             </div>
           </SimpleScrollReveal>

@@ -14,7 +14,7 @@ const testimonials = [
     role: "Professional Services",
   },
   {
-    text: `Forte didn't just build a site — they built us a system. We now understand where our leads come from and how to grow.`,
+    text: `Forte didn't just build a site - they built us a system. We now understand where our leads come from and how to grow.`,
     author: "SparkCommerce",
     role: "Startup",
   },

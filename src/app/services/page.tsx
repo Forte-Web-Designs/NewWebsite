@@ -132,20 +132,14 @@ export default function ServicesPage() {
             </p>
           </SimpleScrollReveal>
           <SimpleScrollReveal direction="up" delay={240}>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
+            <a
+                href="https://calendly.com/seth-fortewebdesigns/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
               >
-                Book a Call
-              </Link>
-              <Link
-                href="/services/infrastructure-review"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-8 py-3.5 text-base font-semibold text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800/60 dark:text-white dark:hover:bg-gray-800"
-              >
-                Not sure? Book a Review
-              </Link>
-            </div>
+                Book a Review
+              </a>
           </SimpleScrollReveal>
         </div>
       </section>
@@ -191,8 +185,8 @@ export default function ServicesPage() {
                     </p>
                     <ul className="mb-6 grid grid-cols-1 gap-2 sm:grid-cols-2 flex-1">
                       {tier.includes.map((item) => (
-                        <li key={item} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                          <svg className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <li key={item} className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                          <svg className="h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                           </svg>
                           {item}
@@ -273,12 +267,14 @@ export default function ServicesPage() {
             <p className="mb-10 text-base leading-relaxed text-gray-500 dark:text-gray-400 sm:text-lg">
               We look at your current setup, identify the biggest opportunities, and hand you a prioritized roadmap with ROI estimates. If you move forward with a build, the review fee applies as credit.
             </p>
-            <Link
-              href="/services/infrastructure-review"
+            <a
+              href="https://calendly.com/seth-fortewebdesigns/30min"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
             >
               Book a Review
-            </Link>
+            </a>
           </SimpleScrollReveal>
         </div>
       </section>

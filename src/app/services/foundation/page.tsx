@@ -20,7 +20,7 @@ const DELIVERABLES = [
   {
     title: 'Lead Capture',
     description:
-      "Your first lead source connected and producing. Whether that's a Meta ad, a website form, or a landing page opt-in — leads flow directly into your CRM, tagged by source, with an instant auto-response and team notification.",
+      "Your first lead source connected and producing. Whether that's a Meta ad, a website form, or a landing page opt-in - leads flow directly into your CRM, tagged by source, with an instant auto-response and team notification.",
   },
   {
     title: 'CRM and Pipeline',
@@ -50,7 +50,7 @@ const DELIVERABLES = [
   {
     title: 'Integrations',
     description:
-      '1–2 core integrations connecting your most important tools. Calendar, forms, payment processor — whatever needs to talk to the CRM.',
+      '1–2 core integrations connecting your most important tools. Calendar, forms, payment processor - whatever needs to talk to the CRM.',
   },
   {
     title: 'Documentation and Training',
@@ -62,7 +62,7 @@ const DELIVERABLES = [
 const SOUND_FAMILIAR = [
   'Contacts in spreadsheets, no pipeline',
   'Paying for a CRM nobody configured',
-  "Tracking is broken — can't tell what works",
+  "Tracking is broken - can't tell what works",
   'Emails landing in spam',
   'Running everything on manual follow-up',
   'Built a CRM but have zero leads in it',
@@ -97,20 +97,14 @@ export default function FoundationPage() {
             </p>
           </SimpleScrollReveal>
           <SimpleScrollReveal direction="up" delay={240}>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
+            <a
+                href="https://calendly.com/seth-fortewebdesigns/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
               >
-                Book a Call
-              </Link>
-              <Link
-                href="/services/infrastructure-review"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-8 py-3.5 text-base font-semibold text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800/60 dark:text-white dark:hover:bg-gray-800"
-              >
-                Not sure? Book a Review
-              </Link>
-            </div>
+                Book a Review
+              </a>
           </SimpleScrollReveal>
         </div>
       </section>
@@ -218,7 +212,7 @@ export default function FoundationPage() {
           <div className="grid gap-5 sm:grid-cols-3">
             {[
               { label: 'Discovery to Handoff', sub: '1–2 weeks end to end', icon: '01' },
-              { label: 'Full Ownership', sub: 'Everything documented — you own it all', icon: '02' },
+              { label: 'Full Ownership', sub: 'Everything documented - you own it all', icon: '02' },
               { label: 'Post-Delivery Support', sub: '7–14 days included after handoff', icon: '03' },
             ].map((item, i) => (
               <SimpleScrollReveal key={i} direction="up" delay={i * 70}>
@@ -271,34 +265,16 @@ export default function FoundationPage() {
               Not sure if Foundation is where you start?
             </p>
             <Link
-              href="/services/infrastructure-review"
+              href="https://calendly.com/seth-fortewebdesigns/30min"
               className="inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Book an Infrastructure Review — it identifies exactly where you are and what to build first, and credits toward any project.
+              Book an Infrastructure Review - it identifies exactly where you are and what to build first, and credits toward any project.
               <svg className="h-4 w-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </Link>
-          </SimpleScrollReveal>
-        </div>
-      </section>
-
-      {/* ── CONTACT FORM ──────────────────────────────────────────── */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-3xl">
-          <SimpleScrollReveal direction="up">
-            <div className="mb-10 text-center">
-              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-                Get in touch
-              </p>
-              <h2 className="mb-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                Ready to build the foundation?
-              </h2>
-              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                Tell us where you are and what's not working. We'll take it from there.
-              </p>
-            </div>
-            <ContactForm />
           </SimpleScrollReveal>
         </div>
       </section>

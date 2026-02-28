@@ -13,7 +13,7 @@ const SYSTEMS = [
   {
     title: 'Reporting and Dashboards',
     description:
-      'One place to see what\'s working. Ad spend, lead sources, pipeline, revenue — pulled together automatically so you\'re never guessing.',
+      'One place to see what\'s working. Ad spend, lead sources, pipeline, revenue - pulled together automatically so you\'re never guessing.',
   },
   {
     title: 'Outbound Prospecting',
@@ -23,7 +23,7 @@ const SYSTEMS = [
   {
     title: 'AI Voice and Chat Agents',
     description:
-      'AI that answers your phone 24/7, qualifies callers, and books appointments directly on your calendar — without a human in the loop.',
+      'AI that answers your phone 24/7, qualifies callers, and books appointments directly on your calendar - without a human in the loop.',
   },
   {
     title: 'Content Engine',
@@ -38,7 +38,7 @@ const SYSTEMS = [
   {
     title: 'Multi-Channel Expansion',
     description:
-      'Add SMS, WhatsApp, new ad platforms, or outbound channels on top of what\'s already working — without rebuilding from scratch.',
+      'Add SMS, WhatsApp, new ad platforms, or outbound channels on top of what\'s already working - without rebuilding from scratch.',
   },
 ];
 
@@ -69,20 +69,14 @@ export default function ScalePage() {
             </p>
           </SimpleScrollReveal>
           <SimpleScrollReveal direction="up" delay={240}>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
-              >
-                Book a Call
-              </Link>
-              <Link
-                href="/services/infrastructure-review"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-8 py-3.5 text-base font-semibold text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800/60 dark:text-white dark:hover:bg-gray-800"
-              >
-                Start with a Review
-              </Link>
-            </div>
+            <a
+              href="https://calendly.com/seth-fortewebdesigns/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
+            >
+              Book a Review
+            </a>
           </SimpleScrollReveal>
         </div>
       </section>
@@ -145,40 +139,14 @@ export default function ScalePage() {
               </Link>{' '}
               first.
             </p>
-            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-              <Link
-                href="/contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
-              >
-                Book a Call
-              </Link>
-              <Link
-                href="/services/infrastructure-review"
-                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-8 py-3.5 text-base font-semibold text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800/60 dark:text-white dark:hover:bg-gray-800"
-              >
-                Start with a Review
-              </Link>
-            </div>
-          </SimpleScrollReveal>
-        </div>
-      </section>
-
-      {/* ── CONTACT FORM ──────────────────────────────────────────── */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
-        <div className="mx-auto max-w-3xl">
-          <SimpleScrollReveal direction="up">
-            <div className="mb-10 text-center">
-              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
-                Get in touch
-              </p>
-              <h2 className="mb-3 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                Ready to scale what's working?
-              </h2>
-              <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400">
-                Tell us where you are and what you're trying to multiply. We'll take it from there.
-              </p>
-            </div>
-            <ContactForm />
+            <a
+              href="https://calendly.com/seth-fortewebdesigns/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
+            >
+              Book a Review
+            </a>
           </SimpleScrollReveal>
         </div>
       </section>

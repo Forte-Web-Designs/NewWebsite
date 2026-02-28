@@ -96,7 +96,7 @@ export default function KingfisherAdsCaseStudy() {
                 Kingfisher Ads, a growing Irish online advertising agency, manages ad campaigns across Meta, Google, Shopify, and BigCommerce for multiple clients. As they took on more clients, they hit a classic agency problem: operational overhead was growing faster than revenue.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                The team was drowning in repetitive work—pulling data from ad platforms, generating client reports, calculating and creating invoices based on ad spend, managing client communications across Slack and ClickUp. Every new client meant 10-15 hours of additional weekly admin work. They couldn't afford to hire more staff just to handle operations, but without automation, they were maxing out capacity. The business was growth-constrained by manual processes, not by demand or capability.
+                The team was drowning in repetitive work-pulling data from ad platforms, generating client reports, calculating and creating invoices based on ad spend, managing client communications across Slack and ClickUp. Every new client meant 10-15 hours of additional weekly admin work. They couldn't afford to hire more staff just to handle operations, but without automation, they were maxing out capacity. The business was growth-constrained by manual processes, not by demand or capability.
               </p>
             </SimpleScrollReveal>
 
@@ -146,7 +146,7 @@ export default function KingfisherAdsCaseStudy() {
                     Automated Invoicing
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Ad spend-based invoice generation with Xero integration. Automatic fee calculation, professional invoice creation, and payment tracking—eliminating billing errors entirely.
+                    Ad spend-based invoice generation with Xero integration. Automatic fee calculation, professional invoice creation, and payment tracking-eliminating billing errors entirely.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -329,7 +329,7 @@ export default function KingfisherAdsCaseStudy() {
                       Automated Billing & Accounting
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Ad spend is monitored in real-time, agency fees are calculated automatically, and professional invoices are generated in Xero accounting system. Payment tracking, reconciliation, and overdue reminders all run automatically—eliminating manual billing work entirely.
+                      Ad spend is monitored in real-time, agency fees are calculated automatically, and professional invoices are generated in Xero accounting system. Payment tracking, reconciliation, and overdue reminders all run automatically-eliminating manual billing work entirely.
                     </p>
                   </div>
                 </div>

@@ -94,10 +94,10 @@ export default function ModernBungalowCaseStudy() {
                 The Challenge
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Modern Bungalow, a premium home goods and furniture retailer specializing in contemporary design, was experiencing rapid growth through their Shopify store. However, their success was creating operational bottlenecks—every order required manual data entry into QuickBooks, customer communications were handled individually, and order fulfillment workflows were completely manual processes consuming entire workdays.
+                Modern Bungalow, a premium home goods and furniture retailer specializing in contemporary design, was experiencing rapid growth through their Shopify store. However, their success was creating operational bottlenecks-every order required manual data entry into QuickBooks, customer communications were handled individually, and order fulfillment workflows were completely manual processes consuming entire workdays.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                The native Shopify-QuickBooks integration wasn't suited for their sophisticated business model—it created duplicate entries, couldn't handle their custom pricing structures for trade customers, and failed to sync properly during high-volume sales periods. With their focus on quality home furnishings and exceptional customer experience, their team was spending 20+ hours per week on repetitive administrative tasks instead of growing the business and serving customers.
+                The native Shopify-QuickBooks integration wasn't suited for their sophisticated business model-it created duplicate entries, couldn't handle their custom pricing structures for trade customers, and failed to sync properly during high-volume sales periods. With their focus on quality home furnishings and exceptional customer experience, their team was spending 20+ hours per week on repetitive administrative tasks instead of growing the business and serving customers.
               </p>
             </SimpleScrollReveal>
 
@@ -154,7 +154,7 @@ export default function ModernBungalowCaseStudy() {
                     Intelligent Order Sync
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Real-time order synchronization from Shopify to QuickBooks with automatic tax allocation, fee calculation, and proper revenue recognition—handling complex scenarios that native integrations miss.
+                    Real-time order synchronization from Shopify to QuickBooks with automatic tax allocation, fee calculation, and proper revenue recognition-handling complex scenarios that native integrations miss.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -261,7 +261,7 @@ export default function ModernBungalowCaseStudy() {
                         Order Capture & Validation
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300">
-                        When a customer places an order on Shopify, the system immediately validates payment, checks inventory availability, and initiates the automated workflow—all within seconds of order placement.
+                        When a customer places an order on Shopify, the system immediately validates payment, checks inventory availability, and initiates the automated workflow-all within seconds of order placement.
                       </p>
                     </div>
                   </div>
@@ -297,7 +297,7 @@ export default function ModernBungalowCaseStudy() {
                         Automated Customer Communication
                       </h3>
                       <p className="text-gray-600 dark:text-gray-300">
-                        Personalized email workflows trigger automatically based on order status, customer history, and product type. From order confirmation to shipping notifications to post-purchase follow-ups—all handled without manual intervention.
+                        Personalized email workflows trigger automatically based on order status, customer history, and product type. From order confirmation to shipping notifications to post-purchase follow-ups-all handled without manual intervention.
                       </p>
                     </div>
                   </div>
@@ -318,7 +318,7 @@ export default function ModernBungalowCaseStudy() {
                   The Business Impact
                 </h3>
                 <p className="text-lg lg:text-xl text-gray-700 dark:text-gray-300 text-center leading-relaxed">
-                  This automation system transformed Modern Bungalow's operations, allowing them to maintain their commitment to exceptional customer service while scaling efficiently. The team went from spending entire days on manual order processing to having everything handled automatically—freeing them to focus on curating beautiful home goods, building customer relationships, and expanding their contemporary furniture collection. The system now processes hundreds of orders weekly with zero manual intervention while maintaining the attention to detail their brand is known for.
+                  This automation system transformed Modern Bungalow's operations, allowing them to maintain their commitment to exceptional customer service while scaling efficiently. The team went from spending entire days on manual order processing to having everything handled automatically-freeing them to focus on curating beautiful home goods, building customer relationships, and expanding their contemporary furniture collection. The system now processes hundreds of orders weekly with zero manual intervention while maintaining the attention to detail their brand is known for.
                 </p>
               </div>
             </SimpleScrollReveal>

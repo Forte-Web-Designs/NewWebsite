@@ -75,7 +75,7 @@ const blogPosts = [
   {
     id: 'business-growth-2025-strategy-automation-beat-guesswork',
     title: 'Business Growth in 2025: Why Strategy and Automation Beat Guesswork',
-    excerpt: "In today's market, business growth isn't luck — it's a system. The businesses winning in 2025 are using data, automation, and consistent systems.",
+    excerpt: "In today's market, business growth isn't luck - it's a system. The businesses winning in 2025 are using data, automation, and consistent systems.",
     date: '2025-09-26',
     readTime: '7 min',
     category: 'Business Growth',
@@ -99,7 +99,7 @@ const blogPosts = [
   {
     id: 'dallas-web-design-building-site-stands-out-locally',
     title: 'Dallas Web Design: Building a Site That Stands Out Locally',
-    excerpt: "Local web design isn't just about looking good — it's about connecting with your community, ranking in local searches, and building trust with neighbors who become customers.",
+    excerpt: "Local web design isn't just about looking good - it's about connecting with your community, ranking in local searches, and building trust with neighbors who become customers.",
     date: '2025-08-18',
     readTime: '9 min',
     category: 'Web Design',
