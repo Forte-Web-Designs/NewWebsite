@@ -177,7 +177,7 @@ const faqData = [
   },
   {
     question: 'Why do you charge a setup fee?',
-    answer: 'Setup covers custom development, CRM buildout, and automation wiring — once done, the system runs smoothly.'
+    answer: 'Setup covers custom development, CRM buildout, and automation wiring - once done, the system runs smoothly.'
   },
   {
     question: 'What happens after the 12-month minimum?',
@@ -185,7 +185,7 @@ const faqData = [
   },
   {
     question: 'Do I own my system if I cancel?',
-    answer: 'Yes. Everything we build for you is yours — website, automations, CRM setup.'
+    answer: 'Yes. Everything we build for you is yours - website, automations, CRM setup.'
   },
   {
     question: 'Can I pay one-time instead of monthly?',

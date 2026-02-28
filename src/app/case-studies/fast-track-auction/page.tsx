@@ -104,7 +104,7 @@ export default function CRDealsCaseStudy() {
                   <li>• <strong>1,500-3,000 monthly products</strong> overwhelming manual processes</li>
                 </ul>
                 <p className="text-lg font-medium text-gray-800 dark:text-gray-200 bg-red-50 dark:bg-red-900/20 p-4 rounded-lg">
-                  The team was spending over 1,000 hours annually on tasks that could be automated—preventing them from focusing on high-value activities like sourcing profitable inventory, negotiating with suppliers, and serving customers.
+                  The team was spending over 1,000 hours annually on tasks that could be automated-preventing them from focusing on high-value activities like sourcing profitable inventory, negotiating with suppliers, and serving customers.
                 </p>
               </div>
             </div>
@@ -136,7 +136,7 @@ export default function CRDealsCaseStudy() {
                   <li>• <strong>Enterprise monitoring</strong> with proactive alerts and error handling</li>
                 </ul>
                 <p className="text-lg font-medium text-gray-800 dark:text-gray-200 bg-green-50 dark:bg-green-900/20 p-4 rounded-lg">
-                  The system operates 24/7, processing 1,500-3,000 products monthly while saving 1,040+ hours annually—equivalent to hiring a full-time employee without the overhead.
+                  The system operates 24/7, processing 1,500-3,000 products monthly while saving 1,040+ hours annually-equivalent to hiring a full-time employee without the overhead.
                 </p>
               </div>
             </div>
@@ -147,7 +147,7 @@ export default function CRDealsCaseStudy() {
             <div className="mb-12">
               <h3 className="text-2xl font-bold text-gray-900 dark:text-white text-center mb-4">Key System Features</h3>
               <p className="text-lg text-gray-600 dark:text-gray-300 text-center max-w-3xl mx-auto mb-12">
-                Built with enterprise-grade technology to handle high-volume processing, real-time market intelligence, and multi-platform distribution—all operating autonomously 24/7.
+                Built with enterprise-grade technology to handle high-volume processing, real-time market intelligence, and multi-platform distribution-all operating autonomously 24/7.
               </p>
             </div>
             
@@ -159,7 +159,7 @@ export default function CRDealsCaseStudy() {
                       Enterprise AI Product Scoring & Market Intelligence
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      Advanced OpenAI GPT-4 system evaluates 1,500-3,000 monthly products by comparing acquisition costs against real-time Amazon and eBay market data. Calculates profit margins accounting for fees and shipping, analyzes Google Trends for demand forecasting, applies custom business rules (25-30% minimum margins, category prioritization, automatic used-item exclusion), and scores profitability potential 0-100. Only high-potential products receive listing resources—maximizing ROI on every post.
+                      Advanced OpenAI GPT-4 system evaluates 1,500-3,000 monthly products by comparing acquisition costs against real-time Amazon and eBay market data. Calculates profit margins accounting for fees and shipping, analyzes Google Trends for demand forecasting, applies custom business rules (25-30% minimum margins, category prioritization, automatic used-item exclusion), and scores profitability potential 0-100. Only high-potential products receive listing resources-maximizing ROI on every post.
                     </p>
                   </div>
                 </div>
@@ -185,7 +185,7 @@ export default function CRDealsCaseStudy() {
                       Multi-Source Data Integration
                     </h4>
                     <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                      Enterprise integration with Lightspeed POS (real-time inventory and pricing), Google Sheets (manual product entry), and wholesale feed APIs from B-Stock and Liquidation.com (high-volume sourcing). Automatically normalizes disparate data formats, extracts key fields (SKU, cost, description, images, MSRP), validates data quality, handles missing fields intelligently, and creates unified product records—eliminating manual data entry and reconciliation.
+                      Enterprise integration with Lightspeed POS (real-time inventory and pricing), Google Sheets (manual product entry), and wholesale feed APIs from B-Stock and Liquidation.com (high-volume sourcing). Automatically normalizes disparate data formats, extracts key fields (SKU, cost, description, images, MSRP), validates data quality, handles missing fields intelligently, and creates unified product records-eliminating manual data entry and reconciliation.
                     </p>
                   </div>
                 </div>
@@ -272,7 +272,7 @@ export default function CRDealsCaseStudy() {
                   Annual Labor Savings
                 </p>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
-                  Based on $20-50/hour opportunity cost—equivalent to a full-time employee without overhead
+                  Based on $20-50/hour opportunity cost-equivalent to a full-time employee without overhead
                 </p>
               </div>
 
@@ -384,7 +384,7 @@ export default function CRDealsCaseStudy() {
                 How The System Works
               </h2>
               <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                Four-stage intelligent automation pipeline processing data from sourcing through social distribution—operating continuously without human intervention.
+                Four-stage intelligent automation pipeline processing data from sourcing through social distribution-operating continuously without human intervention.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -401,7 +401,7 @@ export default function CRDealsCaseStudy() {
                       Multi-Source Data Ingestion & Normalization
                     </h3>
                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                      Product data flows automatically from three distinct sources: Lightspeed POS (real-time inventory and pricing), Google Sheets (manual product entry), and wholesale APIs from B-Stock and Liquidation.com (high-volume sourcing). The n8n automation platform normalizes different data formats, extracts and maps key fields (SKU, description, cost, MSRP, quantity, images, categories), validates data quality, handles missing fields intelligently, and creates unified product objects ready for AI processing—eliminating manual data entry, copy-paste errors, and spreadsheet reconciliation consuming hours daily.
+                      Product data flows automatically from three distinct sources: Lightspeed POS (real-time inventory and pricing), Google Sheets (manual product entry), and wholesale APIs from B-Stock and Liquidation.com (high-volume sourcing). The n8n automation platform normalizes different data formats, extracts and maps key fields (SKU, description, cost, MSRP, quantity, images, categories), validates data quality, handles missing fields intelligently, and creates unified product objects ready for AI processing-eliminating manual data entry, copy-paste errors, and spreadsheet reconciliation consuming hours daily.
                     </p>
                   </div>
                 </div>
@@ -419,7 +419,7 @@ export default function CRDealsCaseStudy() {
                       Enterprise AI Product Analysis & Market Intelligence
                     </h3>
                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                      OpenAI GPT-4 evaluates each of 1,500-3,000 monthly products against current market conditions by querying Amazon and eBay APIs for real-time comparable pricing, calculating optimal sell prices balancing competitiveness with CR Deals' 25-30% minimum margin requirements, analyzing Google Trends for demand forecasting and seasonality, applying custom business rules (prioritize Tools/Home Improvement/Electronics/Furniture, automatically exclude used/damaged items), scoring profitability potential 0-100, and filtering products below thresholds. Only products meeting all criteria proceed to content generation—ensuring CR Deals invests resources exclusively in high-potential inventory.
+                      OpenAI GPT-4 evaluates each of 1,500-3,000 monthly products against current market conditions by querying Amazon and eBay APIs for real-time comparable pricing, calculating optimal sell prices balancing competitiveness with CR Deals' 25-30% minimum margin requirements, analyzing Google Trends for demand forecasting and seasonality, applying custom business rules (prioritize Tools/Home Improvement/Electronics/Furniture, automatically exclude used/damaged items), scoring profitability potential 0-100, and filtering products below thresholds. Only products meeting all criteria proceed to content generation-ensuring CR Deals invests resources exclusively in high-potential inventory.
                     </p>
                   </div>
                 </div>
@@ -437,7 +437,7 @@ export default function CRDealsCaseStudy() {
                       High-Volume Content Generation & Image Optimization
                     </h3>
                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                      AI creates platform-specific content for 50-100 products daily including marketplace-optimized titles with strategic keywords, benefit-driven descriptions with 8-12 compelling bullets highlighting value propositions while maintaining CR Deals' brand voice, relevant hashtags combining trending and evergreen tags for maximum reach, and accurate category classifications for proper Facebook Marketplace placement. Simultaneously, the image processing system automatically crops photos to platform specifications (1:1 square, 4:5 portrait), applies CR Deals watermark for brand recognition and theft prevention, optimizes file sizes for fast mobile loading, and handles multiple images per product—all without manual Photoshop work or graphic design time.
+                      AI creates platform-specific content for 50-100 products daily including marketplace-optimized titles with strategic keywords, benefit-driven descriptions with 8-12 compelling bullets highlighting value propositions while maintaining CR Deals' brand voice, relevant hashtags combining trending and evergreen tags for maximum reach, and accurate category classifications for proper Facebook Marketplace placement. Simultaneously, the image processing system automatically crops photos to platform specifications (1:1 square, 4:5 portrait), applies CR Deals watermark for brand recognition and theft prevention, optimizes file sizes for fast mobile loading, and handles multiple images per product-all without manual Photoshop work or graphic design time.
                     </p>
                   </div>
                 </div>
@@ -455,7 +455,7 @@ export default function CRDealsCaseStudy() {
                       Automated Social Distribution & Performance Tracking
                     </h3>
                     <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
-                      Scheduled posts publish automatically to CR Deals' Facebook Page and Instagram via Meta Graph API with intelligent queuing based on product priority scores (highest-profit items posted first), daily "Deal Drop" promotional campaigns scheduled for optimal engagement times, cross-platform posting maintaining consistent 7-day weekly brand presence, performance tracking monitoring engagement metrics (likes, comments, shares, clicks), error handling with automated email/SMS alerts if posts fail, and real-time dashboard updates showing post status. The system operates continuously 24/7, processing 50-100 products daily, maintaining consistent social presence, and driving customer engagement—all without manual posting, content scheduling, or social media management time.
+                      Scheduled posts publish automatically to CR Deals' Facebook Page and Instagram via Meta Graph API with intelligent queuing based on product priority scores (highest-profit items posted first), daily "Deal Drop" promotional campaigns scheduled for optimal engagement times, cross-platform posting maintaining consistent 7-day weekly brand presence, performance tracking monitoring engagement metrics (likes, comments, shares, clicks), error handling with automated email/SMS alerts if posts fail, and real-time dashboard updates showing post status. The system operates continuously 24/7, processing 50-100 products daily, maintaining consistent social presence, and driving customer engagement-all without manual posting, content scheduling, or social media management time.
                     </p>
                   </div>
                 </div>

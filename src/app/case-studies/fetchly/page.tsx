@@ -5,7 +5,7 @@ import { Icon } from '@/components/images/Icon';
 
 export const metadata: Metadata = {
   title: 'Fetchly Case Study | AI Executive Assistant in Slack | Forte Web Designs',
-  description: 'How we built a custom AI executive assistant for Fetchly that saved 15+ hours per week by integrating Gmail, Calendar, monday.com, and Contacts—all within Slack.',
+  description: 'How we built a custom AI executive assistant for Fetchly that saved 15+ hours per week by integrating Gmail, Calendar, monday.com, and Contacts-all within Slack.',
 };
 
 export default function FetchlyCaseStudy() {
@@ -66,7 +66,7 @@ export default function FetchlyCaseStudy() {
                 The Challenge
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                Fetchly's leadership team was drowning in administrative work—email management, calendar scheduling, task coordination across monday.com, and contact management. They needed intelligent automation that could handle complex administrative tasks while maintaining their brand voice and integrating seamlessly with existing workflows.
+                Fetchly's leadership team was drowning in administrative work-email management, calendar scheduling, task coordination across monday.com, and contact management. They needed intelligent automation that could handle complex administrative tasks while maintaining their brand voice and integrating seamlessly with existing workflows.
               </p>
             </SimpleScrollReveal>
 
@@ -75,7 +75,7 @@ export default function FetchlyCaseStudy() {
                 The Solution
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                We built a custom AI executive assistant that lives entirely within Slack and integrates with Gmail, Google Calendar, monday.com, and Google Contacts. The system handles email drafting, calendar management, task coordination, and provides proactive daily briefings—eliminating 15+ hours of weekly administrative overhead.
+                We built a custom AI executive assistant that lives entirely within Slack and integrates with Gmail, Google Calendar, monday.com, and Google Contacts. The system handles email drafting, calendar management, task coordination, and provides proactive daily briefings-eliminating 15+ hours of weekly administrative overhead.
               </p>
             </SimpleScrollReveal>
           </div>
@@ -228,7 +228,7 @@ export default function FetchlyCaseStudy() {
                       Multi-Platform API Integration
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Gmail API handles email drafting, labeling, and inbox management. Google Calendar API manages availability and scheduling. monday.com API coordinates tasks and boards. Google Contacts API enriches contact information—all accessible through Slack commands.
+                      Gmail API handles email drafting, labeling, and inbox management. Google Calendar API manages availability and scheduling. monday.com API coordinates tasks and boards. Google Contacts API enriches contact information-all accessible through Slack commands.
                     </p>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ export default function FetchlyCaseStudy() {
                 This AI assistant transformed our business. What used to take hours each day now happens automatically in Slack. We've reclaimed our focus on growth while maintaining better organization than ever.
               </p>
               <div className="text-white/90 font-semibold">
-                — Fetchly Leadership Team
+                - Fetchly Leadership Team
               </div>
             </SimpleScrollReveal>
           </div>

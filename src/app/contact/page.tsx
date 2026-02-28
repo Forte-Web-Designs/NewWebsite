@@ -164,7 +164,7 @@ export default function Contact() {
                 Location
               </p>
               <p className="text-base font-semibold text-gray-700 dark:text-gray-300">
-                Grapevine, TX — working everywhere
+                Grapevine, TX - working everywhere
               </p>
             </div>
 

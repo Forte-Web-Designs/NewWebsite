@@ -133,7 +133,7 @@ export default function HollowBambooCaseStudy() {
                   We built a custom Google Sheets automation system that transforms static spreadsheets into a dynamic, real-time inventory management platform. The system uses Google Apps Script, QUERY formulas, and conditional formatting to create an automated tracking solution that updates instantly across all locations.
                 </p>
                 <p>
-                  The solution provides mobile QR code access for field crews, automated data validation to prevent errors, and intelligent reporting that flags overdue rentals, missing equipment, and low-stock items—all without requiring external platforms or monthly SaaS fees.
+                  The solution provides mobile QR code access for field crews, automated data validation to prevent errors, and intelligent reporting that flags overdue rentals, missing equipment, and low-stock items-all without requiring external platforms or monthly SaaS fees.
                 </p>
               </div>
             </div>
@@ -152,7 +152,7 @@ export default function HollowBambooCaseStudy() {
                   QR Code Mobile Check-Out System
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Field crews scan a QR code to access a Google Form that updates the master inventory instantly. No apps to download, no training required—equipment location updates automatically across all tracking views.
+                  Field crews scan a QR code to access a Google Form that updates the master inventory instantly. No apps to download, no training required-equipment location updates automatically across all tracking views.
                 </p>
               </div>
 
@@ -305,7 +305,7 @@ export default function HollowBambooCaseStudy() {
                     Apps Script Automation
                   </h3>
                   <p className="text-lg text-gray-600 dark:text-gray-300">
-                    Google Apps Script triggers on form submission, searches the Master Inventory for the equipment item, and automatically updates current location, status (Available → Checked Out), and timestamp—all in real-time.
+                    Google Apps Script triggers on form submission, searches the Master Inventory for the equipment item, and automatically updates current location, status (Available → Checked Out), and timestamp-all in real-time.
                   </p>
                 </div>
               </div>
@@ -375,7 +375,7 @@ export default function HollowBambooCaseStudy() {
                   Data Validation & Integrity
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Custom dropdown validation using Named Ranges ensures data consistency across 1,000+ rows. Users can only select from predefined categories, locations, conditions, and statuses—eliminating typos and data quality issues.
+                  Custom dropdown validation using Named Ranges ensures data consistency across 1,000+ rows. Users can only select from predefined categories, locations, conditions, and statuses-eliminating typos and data quality issues.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -386,7 +386,7 @@ export default function HollowBambooCaseStudy() {
                   Apps Script Event-Driven Automation
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300">
-                  Form submission trigger executes onFormSubmit() function that parses form data, searches Master Inventory by equipment name, updates location and status fields, and appends timestamped notes—all in milliseconds.
+                  Form submission trigger executes onFormSubmit() function that parses form data, searches Master Inventory by equipment name, updates location and status fields, and appends timestamped notes-all in milliseconds.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -425,7 +425,7 @@ export default function HollowBambooCaseStudy() {
                 Solution: Flexible Tracking System
               </h3>
               <p className="text-lg text-gray-600 dark:text-gray-300">
-                Hybrid tracking where prep kits can be logged as single "parent" line items OR broken down into individual sub-items when needed. If items get separated, they can be tracked individually without losing the prep kit relationship—giving flexibility without complexity.
+                Hybrid tracking where prep kits can be logged as single "parent" line items OR broken down into individual sub-items when needed. If items get separated, they can be tracked individually without losing the prep kit relationship-giving flexibility without complexity.
               </p>
             </div>
           </SimpleScrollReveal>
@@ -438,10 +438,10 @@ export default function HollowBambooCaseStudy() {
           <SimpleScrollReveal direction="up">
             <div className="text-center">
               <blockquote className="text-2xl sm:text-3xl font-medium text-gray-900 dark:text-white mb-8 leading-relaxed">
-                "Everything looks awesome so far, really liking how it's shaping up. The automation is exactly what we needed—our crew can finally focus on the shoot instead of hunting for equipment."
+                "Everything looks awesome so far, really liking how it's shaping up. The automation is exactly what we needed-our crew can finally focus on the shoot instead of hunting for equipment."
               </blockquote>
               <div className="text-lg text-gray-600 dark:text-gray-400">
-                — Dustin Shea, Assistant Location Manager, Hollow Bamboo
+                - Dustin Shea, Assistant Location Manager, Hollow Bamboo
               </div>
             </div>
           </SimpleScrollReveal>
@@ -466,7 +466,7 @@ export default function HollowBambooCaseStudy() {
                   <div className="w-2 h-2 bg-green-500 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">No Monthly Fees</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Built entirely on Google Workspace—no additional SaaS subscriptions or per-user costs</p>
+                    <p className="text-gray-600 dark:text-gray-300">Built entirely on Google Workspace-no additional SaaS subscriptions or per-user costs</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
@@ -506,7 +506,7 @@ export default function HollowBambooCaseStudy() {
                   <div className="w-2 h-2 bg-teal-500 rounded-full mt-3 flex-shrink-0"></div>
                   <div>
                     <h3 className="font-semibold text-gray-900 dark:text-white">Production-Ready</h3>
-                    <p className="text-gray-600 dark:text-gray-300">Handles real-world chaos—rushed wraps, equipment splits, rental tracking, and multi-location coordination</p>
+                    <p className="text-gray-600 dark:text-gray-300">Handles real-world chaos-rushed wraps, equipment splits, rental tracking, and multi-location coordination</p>
                   </div>
                 </div>
               </div>

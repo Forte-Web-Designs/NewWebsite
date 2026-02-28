@@ -28,7 +28,7 @@ const pricingTiers = [
   {
     id: 'growth',
     emoji: '⚡',
-    name: 'Growth Layer — Automation',
+    name: 'Growth Layer - Automation',
     price: '$3,500–$7,500 + $300–$600/mo',
     subtitle: null,
     description: 'Smart automations that turn inquiries into booked jobs and deals.',
@@ -45,7 +45,7 @@ const pricingTiers = [
   {
     id: 'scaling',
     emoji: '📊',
-    name: 'Scaling Layer — Business Systems', 
+    name: 'Scaling Layer - Business Systems', 
     price: '$5,000–$12,000 + $500–$1,000/mo',
     subtitle: null,
     description: 'Complete business command center with CRM, dashboards, and integrated automations.',
@@ -62,7 +62,7 @@ const pricingTiers = [
   {
     id: 'pro',
     emoji: '🚀',
-    name: 'Pro Systems — All Layers',
+    name: 'Pro Systems - All Layers',
     price: 'Custom Quote (typically $10k–$20k + $800–$1,500/mo)',
     subtitle: null,
     description: 'Foundation + Growth + Scaling combined for maximum ROI and fastest implementation.',
@@ -148,7 +148,7 @@ const comparisonFeatures = [
 const faqData = [
   {
     question: 'Why do Growth/Scaling have ranges?',
-    answer: 'Because complexity varies by workflows, integrations, and industry. Pricing depends on scope of work, industry complexity, and growth goals — not company size.'
+    answer: 'Because complexity varies by workflows, integrations, and industry. Pricing depends on scope of work, industry complexity, and growth goals - not company size.'
   },
   {
     question: 'Do I own my system if I cancel?',
@@ -188,7 +188,7 @@ export function PricingPage() {
             
             <div className="max-w-4xl mx-auto space-y-4 text-center">
               <p className="text-xl text-gray-600 dark:text-gray-300 leading-relaxed">
-                Growth shouldn't be complicated. At Forte, every project starts with a <strong>Foundation website</strong> — then layers of <strong>Automation</strong> and <strong>Systems</strong> can be added as you grow.
+                Growth shouldn't be complicated. At Forte, every project starts with a <strong>Foundation website</strong> - then layers of <strong>Automation</strong> and <strong>Systems</strong> can be added as you grow.
               </p>
               
               <p className="text-lg text-gray-500 dark:text-gray-400">
@@ -319,7 +319,7 @@ export function PricingPage() {
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
                   <div className="text-3xl mb-3">🏢</div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Industry Complexity</h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Healthcare vs. plumbing vs. ecommerce — each has different compliance, integration, and workflow needs.</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">Healthcare vs. plumbing vs. ecommerce - each has different compliance, integration, and workflow needs.</p>
                 </div>
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-6">
                   <div className="text-3xl mb-3">🎯</div>
@@ -375,22 +375,22 @@ export function PricingPage() {
                       </td>
                       <td className="py-4 px-4 text-center">
                         <span className={row.foundation ? 'text-green-500 text-xl' : 'text-gray-400 text-xl'}>
-                          {row.foundation ? '✅' : '—'}
+                          {row.foundation ? '✅' : '-'}
                         </span>
                       </td>
                       <td className="py-4 px-4 text-center">
                         <span className={row.growth ? 'text-green-500 text-xl' : 'text-gray-400 text-xl'}>
-                          {row.growth ? '✅' : '—'}
+                          {row.growth ? '✅' : '-'}
                         </span>
                       </td>
                       <td className="py-4 px-4 text-center">
                         <span className={row.scaling ? 'text-green-500 text-xl' : 'text-gray-400 text-xl'}>
-                          {row.scaling ? '✅' : '—'}
+                          {row.scaling ? '✅' : '-'}
                         </span>
                       </td>
                       <td className="py-4 px-4 text-center">
                         <span className={row.pro ? 'text-green-500 text-xl' : 'text-gray-400 text-xl'}>
-                          {row.pro ? '✅' : '—'}
+                          {row.pro ? '✅' : '-'}
                         </span>
                       </td>
                     </tr>
@@ -486,7 +486,7 @@ export function PricingPage() {
               </div>
               
               <p className="text-gray-600 dark:text-gray-300 mb-6">
-                We'll analyze your current setup and show you exactly where opportunities are slipping through the cracks — plus give you 2-3 quick wins you can implement immediately.
+                We'll analyze your current setup and show you exactly where opportunities are slipping through the cracks - plus give you 2-3 quick wins you can implement immediately.
               </p>
               
               <div className="space-y-4">

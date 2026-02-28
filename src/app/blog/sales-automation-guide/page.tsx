@@ -56,7 +56,7 @@ export default function SalesAutomationGuideBlogPost() {
           <SimpleScrollReveal direction="up">
             <div className="prose dark:prose-invert prose-lg max-w-none">
               <p className="text-xl text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                Your sales team spends 64% of their time on administrative tasks—data entry, follow-ups, scheduling meetings, updating CRMs. Only 36% is spent actually selling.
+                Your sales team spends 64% of their time on administrative tasks-data entry, follow-ups, scheduling meetings, updating CRMs. Only 36% is spent actually selling.
               </p>
 
               <p>
@@ -72,7 +72,7 @@ export default function SalesAutomationGuideBlogPost() {
               </h2>
 
               <p>
-                Sales automation uses software to handle repetitive, manual tasks in your sales process. It doesn't replace salespeople—it makes them more productive.
+                Sales automation uses software to handle repetitive, manual tasks in your sales process. It doesn't replace salespeople-it makes them more productive.
               </p>
 
               <p>
@@ -106,7 +106,7 @@ export default function SalesAutomationGuideBlogPost() {
               </h3>
 
               <p>
-                The first company to respond to a lead wins 50% of the time. Automation ensures your team responds within minutes—not hours or days. Instant email responses, automatic lead routing, and real-time notifications keep your sales process moving fast.
+                The first company to respond to a lead wins 50% of the time. Automation ensures your team responds within minutes-not hours or days. Instant email responses, automatic lead routing, and real-time notifications keep your sales process moving fast.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -114,7 +114,7 @@ export default function SalesAutomationGuideBlogPost() {
               </h3>
 
               <p>
-                Manual processes fail. Salespeople forget to follow up. Emails get buried. Leads fall through cracks. Automation ensures every prospect gets the same high-quality experience—every time.
+                Manual processes fail. Salespeople forget to follow up. Emails get buried. Leads fall through cracks. Automation ensures every prospect gets the same high-quality experience-every time.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -232,7 +232,7 @@ export default function SalesAutomationGuideBlogPost() {
               </h3>
 
               <p>
-                Automation doesn't fix a bad process—it just makes it faster. Before you automate, document and optimize your sales process. Remove unnecessary steps, clarify handoffs, and define what "qualified" means.
+                Automation doesn't fix a bad process-it just makes it faster. Before you automate, document and optimize your sales process. Remove unnecessary steps, clarify handoffs, and define what "qualified" means.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -240,7 +240,7 @@ export default function SalesAutomationGuideBlogPost() {
               </h3>
 
               <p>
-                Don't automate everything. High-value touchpoints (closing calls, negotiations, relationship-building) should stay human. Use automation to free up time for these critical moments—not replace them.
+                Don't automate everything. High-value touchpoints (closing calls, negotiations, relationship-building) should stay human. Use automation to free up time for these critical moments-not replace them.
               </p>
 
               <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mt-8 mb-4">
@@ -320,7 +320,7 @@ export default function SalesAutomationGuideBlogPost() {
                   Ready to Automate Your Sales Process?
                 </h3>
                 <p className="text-green-100 mb-6">
-                  Book a free strategy call and we'll build a custom sales automation system for your business—no templates, just results.
+                  Book a free strategy call and we'll build a custom sales automation system for your business-no templates, just results.
                 </p>
                 <Link
                   href="/contact"

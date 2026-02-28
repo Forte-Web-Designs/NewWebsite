@@ -228,7 +228,7 @@ export default function SummitGamingLoungeCaseStudy() {
                       AI-Powered User Recognition
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      The system identifies existing members, links profiles across platforms, and routes new users appropriately—all in real-time with conversational memory.
+                      The system identifies existing members, links profiles across platforms, and routes new users appropriately-all in real-time with conversational memory.
                     </p>
                   </div>
                 </div>
@@ -266,7 +266,7 @@ export default function SummitGamingLoungeCaseStudy() {
                 This AI concierge system transformed how we operate. We can now focus on creating amazing experiences for our members instead of managing bookings all day.
               </p>
               <div className="text-white/90 font-semibold">
-                — Summit Gaming Lounge Team
+                - Summit Gaming Lounge Team
               </div>
             </SimpleScrollReveal>
           </div>

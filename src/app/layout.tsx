@@ -5,7 +5,6 @@ import "./globals.css";
 import ConditionalHeader from "@/components/layout/ConditionalHeader";
 import Footer from "@/components/layout/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import AIChat from "@/components/AIChat";
 import MobileStickyCTA from "@/components/MobileStickyCA";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import CriticalCSS from "@/components/performance/CriticalCSS";
@@ -233,7 +232,6 @@ export default function RootLayout({
           </div>
           <Footer />
           <ScrollToTopButton />
-          <AIChat />
           <MobileStickyCTA />
           <PerformanceMonitor />
         </ThemeProvider>

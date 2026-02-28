@@ -119,7 +119,7 @@ export default function RevolutCaseStudy() {
               </h2>
               <div className="prose prose-lg max-w-none text-gray-600 dark:text-gray-300">
                 <p>
-                  We built an AI-powered financial analytics automation system that processes massive transaction datasets, automatically identifies profitability patterns, quantifies initiative impacts, and generates executive-ready insights. The system includes intelligent data cleaning, automated pre/post analysis, dynamic PowerBI dashboards with real-time filtering, and automated report generation—eliminating weeks of manual analysis work.
+                  We built an AI-powered financial analytics automation system that processes massive transaction datasets, automatically identifies profitability patterns, quantifies initiative impacts, and generates executive-ready insights. The system includes intelligent data cleaning, automated pre/post analysis, dynamic PowerBI dashboards with real-time filtering, and automated report generation-eliminating weeks of manual analysis work.
                 </p>
               </div>
             </div>
@@ -299,7 +299,7 @@ export default function RevolutCaseStudy() {
                 "This automated analytics system eliminated weeks of manual analysis work. We now have real-time visibility into our profitability drivers and can make data-driven decisions instantly."
               </blockquote>
               <div className="text-lg text-gray-600 dark:text-gray-400">
-                — Fintech Leadership Team
+                - Fintech Leadership Team
               </div>
             </div>
           </SimpleScrollReveal>

@@ -8,7 +8,7 @@ import SimpleScrollReveal from '@/components/animations/SimpleScrollReveal';
 const DIFFERENTIATORS = [
   {
     title: "We Tell You When You Shouldn't Automate",
-    body: "If fixing your process makes more sense than building something new, we'll tell you — even when it costs us revenue.",
+    body: "If fixing your process makes more sense than building something new, we'll tell you - even when it costs us revenue.",
   },
   {
     title: 'We Think Long-Term, Even on One-Off Projects',

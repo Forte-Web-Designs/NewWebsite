@@ -71,10 +71,10 @@ export default function CompassRealEstateCaseStudy() {
                 The Challenge
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                Josh Steck and Gracie Leslie, successful real estate agents with Compass in Colorado, were spending 11-17 hours per week on administrative work that didn't generate revenue. Email drafting alone consumed 8-12 hours weekly—writing showing confirmations, property descriptions, follow-ups, and client updates. Each email took 5-10 minutes to write, and with 50-100 emails per week, the time added up fast.
+                Josh Steck and Gracie Leslie, successful real estate agents with Compass in Colorado, were spending 11-17 hours per week on administrative work that didn't generate revenue. Email drafting alone consumed 8-12 hours weekly-writing showing confirmations, property descriptions, follow-ups, and client updates. Each email took 5-10 minutes to write, and with 50-100 emails per week, the time added up fast.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                File management was another pain point. Property photos, contracts, and documents scattered across Google Drive meant 2-3 hours weekly just searching for files. They needed a system that could handle the volume while maintaining the personal touch their clients valued—fast email responses without sacrificing quality, and organized files without manual sorting.
+                File management was another pain point. Property photos, contracts, and documents scattered across Google Drive meant 2-3 hours weekly just searching for files. They needed a system that could handle the volume while maintaining the personal touch their clients valued-fast email responses without sacrificing quality, and organized files without manual sorting.
               </p>
             </SimpleScrollReveal>
 
@@ -83,7 +83,7 @@ export default function CompassRealEstateCaseStudy() {
                 The Solution
               </h2>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                We built a hybrid AI automation system that transformed how they handle admin work. ChatGPT-powered email drafting generates personalized responses in 10 seconds instead of 5-10 minutes—a 50x speed improvement. Simple triggers (Gmail labels, web forms, or Slack commands) capture context, and the system drafts emails that match their communication style. Intelligent Google Drive automation watches for uploaded files and automatically organizes property photos, contracts, and documents by property and client. The result: they reclaimed 11-17 hours per week to focus on showings and closings instead of admin work.
+                We built a hybrid AI automation system that transformed how they handle admin work. ChatGPT-powered email drafting generates personalized responses in 10 seconds instead of 5-10 minutes-a 50x speed improvement. Simple triggers (Gmail labels, web forms, or Slack commands) capture context, and the system drafts emails that match their communication style. Intelligent Google Drive automation watches for uploaded files and automatically organizes property photos, contracts, and documents by property and client. The result: they reclaimed 11-17 hours per week to focus on showings and closings instead of admin work.
               </p>
             </SimpleScrollReveal>
           </div>
@@ -138,7 +138,7 @@ export default function CompassRealEstateCaseStudy() {
                     Showing Workflow Automation
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    Automated showing confirmations, calendar invites with property details, 24-hour reminders, and post-showing follow-ups—all generated with context-aware AI drafting.
+                    Automated showing confirmations, calendar invites with property details, 24-hour reminders, and post-showing follow-ups-all generated with context-aware AI drafting.
                   </p>
                 </div>
               </SimpleScrollReveal>
@@ -223,7 +223,7 @@ export default function CompassRealEstateCaseStudy() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <span className="text-gray-700 dark:text-gray-300">Better work-life balance—reclaim nights and weekends from admin work</span>
+                    <span className="text-gray-700 dark:text-gray-300">Better work-life balance-reclaim nights and weekends from admin work</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <div className="flex-shrink-0 w-6 h-6 rounded-full bg-green-100 dark:bg-green-900/30 flex items-center justify-center mt-0.5">

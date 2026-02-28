@@ -354,12 +354,14 @@ export default function Home() {
             {/* Footer note */}
             <SimpleScrollReveal direction="up">
               <div className="mt-10 border-t border-gray-200 pt-8 dark:border-gray-800">
-                <Link
-                  href="/services/infrastructure-review"
+                <a
+                  href="https://calendly.com/seth-fortewebdesigns/30min"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                 >
                   Not sure where to start? Book a Review →
-                </Link>
+                </a>
               </div>
             </SimpleScrollReveal>
 

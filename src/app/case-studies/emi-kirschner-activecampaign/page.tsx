@@ -74,7 +74,7 @@ export default function EmiKirschnerCaseStudy() {
                 Emi Kirschner runs a high-touch executive coaching business serving powerhouse entrepreneurs. Her work blends strategic consulting with deep coaching to help visionaries build businesses that run beautifully without running them into the ground.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-8">
-                After a decade of growth, her backend systems were holding her back. Client data was scattered across Gmail, spreadsheets, and various platforms. Manual follow-ups were consuming 8-12 hours per week. With multiple program types (1:1 coaching, intensive programs, and group coaching), she needed a CRM that could handle complexity while keeping the personal, high-touch feel her clients valued. The real challenge wasn't just tech setup—it was designing systems that aligned with her unique client journey and supported sustainable long-term growth.
+                After a decade of growth, her backend systems were holding her back. Client data was scattered across Gmail, spreadsheets, and various platforms. Manual follow-ups were consuming 8-12 hours per week. With multiple program types (1:1 coaching, intensive programs, and group coaching), she needed a CRM that could handle complexity while keeping the personal, high-touch feel her clients valued. The real challenge wasn't just tech setup-it was designing systems that aligned with her unique client journey and supported sustainable long-term growth.
               </p>
             </SimpleScrollReveal>
 
@@ -281,7 +281,7 @@ export default function EmiKirschnerCaseStudy() {
                       Intelligent Pipeline Routing
                     </h3>
                     <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      Five specialized pipelines automatically route contacts based on their journey stage—from networking and lead generation through program-specific onboarding. Each pipeline includes automated status updates, task assignments, and milestone tracking.
+                      Five specialized pipelines automatically route contacts based on their journey stage-from networking and lead generation through program-specific onboarding. Each pipeline includes automated status updates, task assignments, and milestone tracking.
                     </p>
                   </div>
                 </div>
