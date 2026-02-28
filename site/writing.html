@@ -110,88 +110,103 @@
     <!-- POST LIST -->
     <div class="post-list reveal">
 
-        <div class="post-row">
+        <a href="/posts/crm-fail.html" class="post-row">
             <div class="post-content">
                 <div class="post-tag">Automation</div>
                 <div class="post-title">Why Most CRM Setups Fail Within 90 Days (And How to Fix It)</div>
                 <div class="post-excerpt">The tool isn't the problem. Most CRMs fail because nobody builds the workflow around the human behavior. Here's the pattern we see over and over.</div>
             </div>
             <div class="post-date">Jan 2026</div>
-        </div>
+        </a>
 
-        <div class="post-row">
+        <a href="/posts/speed-to-lead.html" class="post-row">
             <div class="post-content">
                 <div class="post-tag">Growth Systems</div>
                 <div class="post-title">The Speed-to-Lead Problem: Why You're Losing 78% of Your Inbound Leads</div>
-                <div class="post-excerpt">Research is clear, respond within 5 minutes or you lose the lead. Most businesses respond in hours. Here's how to fix it with automation.</div>
+                <div class="post-excerpt">Research is clear — respond within 5 minutes or you lose the lead. Most businesses respond in hours. Here's how to fix it with automation.</div>
             </div>
             <div class="post-date">Jan 2026</div>
-        </div>
+        </a>
 
-        <div class="post-row">
+        <a href="/posts/landing-page-framework.html" class="post-row">
             <div class="post-content">
                 <div class="post-tag">Web Design</div>
                 <div class="post-title">Landing Pages That Convert: The 7-Element Framework We Use on Every Build</div>
                 <div class="post-excerpt">Most landing pages look good but don't convert. The difference isn't design, it's structure. Here are the seven elements every high-converting page needs.</div>
             </div>
             <div class="post-date">Dec 2025</div>
-        </div>
+        </a>
 
-        <div class="post-row">
+        <a href="/posts/automation-roi.html" class="post-row">
             <div class="post-content">
                 <div class="post-tag">Automation</div>
                 <div class="post-title">Before You Hire: How to Calculate the ROI of Automating a Task</div>
                 <div class="post-excerpt">Every automation project starts with the same question: does the math work? Here's the simple framework we use to decide whether to build or skip.</div>
             </div>
             <div class="post-date">Dec 2025</div>
-        </div>
+        </a>
 
-        <div class="post-row">
+        <a href="/posts/ai-agents.html" class="post-row">
             <div class="post-content">
                 <div class="post-tag">AI</div>
                 <div class="post-title">After-Hours AI Agents: What They're Good At and Where They Break Down</div>
                 <div class="post-excerpt">AI agents are genuinely useful for specific things. But most businesses either over-deploy them or never use them at all. Here's the honest breakdown.</div>
             </div>
             <div class="post-date">Nov 2025</div>
-        </div>
+        </a>
 
-        <div class="post-row">
+        <!-- Hidden posts — revealed by "See all" -->
+        <a href="/posts/outbound-sequence.html" class="post-row post-hidden">
             <div class="post-content">
                 <div class="post-tag">Growth Systems</div>
                 <div class="post-title">The Outbound Sequence That Booked 12 Calls in 30 Days (Full Template)</div>
                 <div class="post-excerpt">Cold outreach still works when it's done right. Here's the exact sequence structure, timing, and copy framework we use, and the reasoning behind each decision.</div>
             </div>
             <div class="post-date">Nov 2025</div>
-        </div>
+        </a>
 
-        <div class="post-row">
+        <a href="/posts/cr-deals-case-study.html" class="post-row post-hidden">
             <div class="post-content">
                 <div class="post-tag">Automation</div>
                 <div class="post-title">How We Automated $52,000 Worth of Annual Work for a Real Estate Wholesaler</div>
                 <div class="post-excerpt">A full walkthrough of the CR Deals Cincinnati project, the problem, the system we built, and what we'd do differently if we started today.</div>
             </div>
             <div class="post-date">Oct 2025</div>
-        </div>
+        </a>
 
-        <div class="post-row">
+        <a href="/posts/page-builders.html" class="post-row post-hidden">
             <div class="post-content">
                 <div class="post-tag">Web Design</div>
                 <div class="post-title">Why We Stopped Using Page Builders (And What We Use Instead)</div>
                 <div class="post-excerpt">Page builders are fast to start and slow to scale. Here's the stack we moved to, why it loads faster and converts better, and when page builders still make sense.</div>
             </div>
             <div class="post-date">Oct 2025</div>
-        </div>
+        </a>
 
-        <div class="post-row">
+        <a href="/posts/foundation-first.html" class="post-row post-hidden">
             <div class="post-content">
                 <div class="post-tag">Growth Systems</div>
                 <div class="post-title">The Foundation First Rule: Why Businesses Waste Thousands on Ads Before They're Ready</div>
                 <div class="post-excerpt">Running ads to a broken funnel is like filling a leaky bucket. Here's how to know if your foundation is ready, and what to fix before you spend a dollar on traffic.</div>
             </div>
             <div class="post-date">Sep 2025</div>
-        </div>
+        </a>
 
     </div>
+    <div style="margin-top:2rem;text-align:center;">
+        <button id="show-all-posts" style="background:none;border:1px solid var(--border);color:var(--text-secondary);padding:0.65rem 1.5rem;border-radius:6px;font-size:0.9rem;cursor:pointer;transition:border-color 0.2s,color 0.2s;">See all posts &darr;</button>
+    </div>
+    <script>
+        (function(){
+            var btn = document.getElementById('show-all-posts');
+            var hidden = document.querySelectorAll('.post-hidden');
+            hidden.forEach(function(el){ el.style.display='none'; });
+            btn.addEventListener('click', function(){
+                hidden.forEach(function(el){ el.style.display='flex'; });
+                btn.style.display='none';
+            });
+        })();
+    </script>
 
 
     <hr class="section-divider">

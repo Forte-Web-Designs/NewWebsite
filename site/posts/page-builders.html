@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why We Stopped Using Page Builders | Forte Web Designs</title>
+    <meta name="description" content="Page builders are fast to start and slow to scale. Here's the stack we moved to, why it loads faster and converts better, and when page builders still make sense.">
+    <link rel="canonical" href="https://fortewebdesigns.com/posts/page-builders.html">
+    <link rel="icon" href="/images/home/logo-header-light.svg">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--text-primary:#edf2f7;--text-secondary:#94a3b8;--text-muted:#64748b;--accent:#0088DB;--accent-warm:#38b2f5;--background:#0d1117;--background-alt:#121a28;--border:#1e2a3a;--card-bg:#172030}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(0,136,219,0.07) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(56,178,245,0.04) 0%,transparent 50%);background-attachment:fixed}
+        a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
+        a:hover{text-decoration:underline}
+        .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
+        .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+        .header-logo{text-decoration:none;display:flex;align-items:center}
+        .header-logo:hover{opacity:0.85;text-decoration:none}
+        .logo-img{height:34px;width:auto;display:block}
+        .logo-img-light{display:none}
+        [data-theme="light"] .logo-img-dark{display:none}
+        [data-theme="light"] .logo-img-light{display:block}
+        .header-nav{display:flex;gap:1.5rem;align-items:center}
+        .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
+        .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
+        .main-content{max-width:720px;margin:0 auto;padding:5rem 2rem 6rem}
+        .post-tag{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:1rem;display:block}
+        .post-title{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em;line-height:1.25}
+        .post-meta{font-size:0.82rem;color:var(--text-muted);margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+        .post-body h2{font-size:1.25rem;font-weight:700;color:var(--text-primary);margin:2.5rem 0 1rem}
+        .post-body p{color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.8}
+        .post-body ul,.post-body ol{color:var(--text-secondary);margin:0 0 1.5rem 1.5rem;line-height:1.8}
+        .post-body li{margin-bottom:0.5rem}
+        .post-body strong{color:var(--text-primary);font-weight:600}
+        .callout{background:var(--card-bg);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;padding:1.25rem 1.5rem;margin:2rem 0}
+        .callout p{margin:0;color:var(--text-secondary)}
+        .back-link{display:inline-block;font-size:0.85rem;color:var(--text-muted);margin-bottom:2.5rem}
+        .back-link:hover{color:var(--accent)}
+        .cta-block{margin-top:4rem;padding:2rem;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;text-align:center}
+        .cta-block p{color:var(--text-secondary);margin-bottom:1.25rem}
+        .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,136,219,0.35);text-decoration:none}
+        .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
+        .footer-bottom{padding-top:1.5rem;border-top:1px solid var(--border)}
+        .footer-location{color:var(--text-muted);font-size:0.85rem;margin-bottom:0.35rem}
+        .copyright{color:var(--text-muted);font-size:0.85rem}
+        @media(max-width:768px){.header-container{padding:0.75rem 1.25rem}.header-nav{gap:0.85rem}.header-nav a{font-size:0.82rem}.main-content{padding:3rem 1.25rem 4rem}}
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTP7GMJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="header-logo">
+            <img src="/images/home/logo-dark.svg" class="logo-img logo-img-dark" alt="Forte Web Designs">
+            <img src="/images/home/logo-header-light.svg" class="logo-img logo-img-light" alt="Forte Web Designs">
+        </a>
+        <nav class="header-nav">
+            <a href="/index.html">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/reviews.html">Reviews</a>
+            <a href="/writing.html" class="active">Writing</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+    <a href="/writing.html" class="back-link">&larr; Back to Writing</a>
+
+    <span class="post-tag">Web Design</span>
+    <h1 class="post-title">Why We Stopped Using Page Builders (And What We Use Instead)</h1>
+    <div class="post-meta">October 2025 &middot; 5 min read</div>
+
+    <div class="post-body">
+        <p>Page builders — Elementor, Divi, Webflow to some extent, GHL's built-in editor — made sense when we were building sites fast for clients who wanted to self-manage their content. They're visual, they're quick, and they feel powerful until you need the site to do something specific.</p>
+
+        <p>Then you hit the wall. The site slows down because the builder loads a megabyte of JavaScript for every page. You want a component to behave a certain way and you spend three hours fighting the drag-and-drop interface. You try to integrate with a specific tool and the builder's ecosystem doesn't support it cleanly. You spend more time working around the platform than building what you actually need.</p>
+
+        <p>We moved away from page builders about 18 months ago. Here's what we learned.</p>
+
+        <h2>The Real Cost of Page Builder Speed</h2>
+
+        <p>Page builders are fast to start and slow at everything else. The first page takes an hour. But iteration is slow — you're clicking through menus instead of editing code. Performance is slow — a Divi or Elementor page typically loads 800KB–1.5MB of CSS and JS before your actual content. And maintenance is slow — a plugin update breaks a layout, and you're hunting through nested rows and columns trying to figure out what changed.</p>
+
+        <p>For a business whose website is a lead generation tool, page load speed directly affects conversion rate. A page that loads in 1.2 seconds converts meaningfully better than one that loads in 3.8 seconds. Page builders make it structurally difficult to hit that 1.2s target.</p>
+
+        <h2>What We Use Now</h2>
+
+        <p>For most client projects today, we build in plain HTML, CSS, and JavaScript. No framework overhead, no builder dependency, no plugin ecosystem to maintain. A typical page we build loads in under 1 second and scores 95+ on Google PageSpeed.</p>
+
+        <p>For clients who need to self-manage content — blog posts, team pages, product listings — we use a lightweight headless CMS that outputs clean HTML. The client gets an editor. The site stays fast.</p>
+
+        <p>For more complex web applications, we use React or Next.js where the added framework overhead is justified by the functionality it enables. But for marketing sites and landing pages, it's almost never justified.</p>
+
+        <div class="callout">
+            <p><strong>The test we use:</strong> Run your current site through Google PageSpeed Insights. If your mobile score is below 70, your site is likely costing you leads. Speed is a conversion issue, not just a technical one.</p>
+        </div>
+
+        <h2>When Page Builders Still Make Sense</h2>
+
+        <p>We're not ideologues about this. Page builders are the right choice when:</p>
+
+        <ul>
+            <li>The client needs to make frequent, significant layout changes without a developer</li>
+            <li>The site is a prototype or MVP that needs to launch in days, not weeks</li>
+            <li>The existing ecosystem (WordPress plugins, integrations) is already built around a specific platform and switching costs are high</li>
+            <li>Performance isn't a primary concern (internal tools, password-protected portals)</li>
+        </ul>
+
+        <p>In these cases, a page builder might be the pragmatic choice. The mistake is using a page builder by default when the project actually justifies a custom build.</p>
+
+        <h2>The Conversation We Now Have With Clients</h2>
+
+        <p>Before we build anything, we ask: who maintains this after we're done, and what are they capable of? If the answer is "nobody" or "our marketing team needs to update blog posts," we design accordingly — usually a static site with a simple CMS for content. If the answer is "the developer team manages it," we build for performance and flexibility.</p>
+
+        <p>The tool should match the use case. Page builders matched a use case that was common five years ago and less common now. Build for how the site actually gets used, not for how fast you can deliver the first draft.</p>
+    </div>
+
+    <div class="cta-block">
+        <p>Need a fast, high-converting site built the right way? We build custom sites as part of our Launch stage.</p>
+        <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Book a Free Call</a>
+    </div>
+
+    <div class="footer-section">
+        <div class="footer-bottom">
+            <p class="footer-location">Based in Grapevine, Texas. Serving clients nationwide.</p>
+            <p class="copyright">&copy; 2026 Forte Web Designs. All rights reserved.</p>
+        </div>
+    </div>
+</main>
+
+<script src="/scroll-reveal.js"></script>
+<script src="/theme-toggle.js"></script>
+<script src="/scroll-top.js"></script>
+<script src="/hamburger.js"></script>
+</body>
+</html>
