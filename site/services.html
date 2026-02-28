@@ -56,14 +56,26 @@
         .stage-card p{color:var(--text-secondary);font-size:0.9rem;line-height:1.6;flex:1}
         .stage-link{font-size:0.85rem;color:var(--accent);margin-top:1rem;display:inline-block}
 
-        /* Capabilities */
-        .cap-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
-        .cap-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:1.5rem}
-        .cap-title{font-size:0.95rem;font-weight:600;color:var(--text-primary);margin-bottom:0.75rem}
-        .cap-list{list-style:none}
-        .cap-list li{font-size:0.875rem;color:var(--text-secondary);padding:0.3rem 0;border-bottom:1px solid var(--border);line-height:1.5}
-        .cap-list li:last-child{border-bottom:none}
-        .cap-list li::before{content:"→ ";color:var(--accent);font-size:0.8rem}
+        /* Pricing/services table */
+        .pricing-section{margin-bottom:2rem}
+        .pricing-stage{margin-bottom:2.5rem}
+        .pricing-stage-header{display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;flex-wrap:wrap}
+        .pricing-stage-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0}
+        .pricing-stage-dot.stage-dot-foundation{background:#8a8578}
+        .pricing-stage-dot.stage-dot-launch{background:var(--accent)}
+        .pricing-stage-dot.stage-dot-grow{background:#5fb88a}
+        .pricing-stage-dot.stage-dot-scale{background:var(--accent-warm)}
+        .pricing-stage-label{font-size:0.75rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;text-decoration:none}
+        .pricing-stage-label.stage-label-foundation{color:#8a8578}
+        .pricing-stage-label.stage-label-launch{color:var(--accent)}
+        .pricing-stage-label.stage-label-grow{color:#5fb88a}
+        .pricing-stage-label.stage-label-scale{color:var(--accent-warm)}
+        .pricing-stage-tagline{font-size:0.78rem;color:var(--text-muted);font-style:italic}
+        .pricing-table{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+        .pricing-row{display:flex;align-items:center;padding:0.8rem 1.5rem;border-bottom:1px solid var(--border);transition:background 0.15s ease}
+        .pricing-row:last-child{border-bottom:none}
+        .pricing-row:hover{background:rgba(255,255,255,0.03)}
+        .pricing-name{font-size:0.92rem;color:var(--text-secondary)}
 
         /* Calendly */
         .calendly-wrap{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:1.5rem}
@@ -125,7 +137,7 @@
         <p class="section-title">Services</p>
         <h1 class="page-title">Four stages.<br>One continuous system.</h1>
         <p class="body-text" style="font-size:1.1rem;max-width:640px;margin-left:auto;margin-right:auto">
-            Most businesses don't have a growth problem. They have a systems problem. We build the infrastructure that fixes it, from the first CRM setup to a fully automated, multi-channel growth engine.
+            Most businesses don't have a growth problem. They have a systems problem. We build the infrastructure that fixes it, from the first CRM setup to a fully automated, multi channel growth engine.
         </p>
         <div style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center;">
             <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
@@ -133,93 +145,85 @@
         </div>
     </div>
 
-    <!-- STAGES -->
-    <div class="reveal">
-        <p class="section-title">The Four Stages</p>
-        <div class="stage-grid">
-            <a href="/foundation.html" class="stage-card stage-foundation">
-                <div class="stage-number">1</div>
-                <div class="stage-title">Foundation</div>
-                <div class="stage-tagline">Get your system built and everything connected.</div>
-                <p>CRM, payment processing, email deliverability, booking forms, lead tracking. Before you spend on ads or sales, you need infrastructure that doesn't leak.</p>
-                <span class="stage-link">Learn more &rarr;</span>
-            </a>
-            <a href="/launch.html" class="stage-card stage-launch">
-                <div class="stage-number">2</div>
-                <div class="stage-title">Launch</div>
-                <div class="stage-tagline">Get people into the system. Start generating revenue.</div>
-                <p>Ad strategy, sales funnels, nurture sequences, booking automation. Turn cold traffic into booked calls and paying customers.</p>
-                <span class="stage-link">Learn more &rarr;</span>
-            </a>
-            <a href="/growth.html" class="stage-card stage-growth">
-                <div class="stage-number">3</div>
-                <div class="stage-title">Growth</div>
-                <div class="stage-tagline">Add channels. Convert more. Handle the volume.</div>
-                <p>Multi-channel lead capture, outbound prospecting, after-hours AI agents, review automation. Now you scale what works.</p>
-                <span class="stage-link">Learn more &rarr;</span>
-            </a>
-            <a href="/scale.html" class="stage-card stage-scale">
-                <div class="stage-number">4</div>
-                <div class="stage-title">Scale</div>
-                <div class="stage-tagline">Optimize what's working. Grow without adding headcount.</div>
-                <p>Reporting dashboards, outbound systems, 24/7 AI agents, content engines. Full automation across every part of the business.</p>
-                <span class="stage-link">Learn more &rarr;</span>
-            </a>
-        </div>
-        <p style="font-size:0.875rem;color:var(--text-muted);">Web design, landing pages, and conversion funnels available standalone or alongside any stage.</p>
-    </div>
-
-    <hr class="section-divider">
-
-    <!-- CAPABILITIES -->
+    <!-- WHAT WE BUILD (organized by stage) -->
     <div class="reveal">
         <p class="section-title">What We Build</p>
-        <div class="cap-grid">
-            <div class="cap-card">
-                <div class="cap-title">Automation & Integrations</div>
-                <ul class="cap-list">
-                    <li>CRM setup and configuration</li>
-                    <li>Multi-step workflow automation</li>
-                    <li>API integrations between platforms</li>
-                    <li>Email and SMS automation sequences</li>
-                    <li>Zapier / Make / n8n workflows</li>
-                    <li>Data sync across tools</li>
-                </ul>
+        <p class="body-text" style="max-width:600px;margin-bottom:2.5rem;">Every service maps to a stage. You don't have to do all four — start where you are.</p>
+        <div class="pricing-section">
+
+            <!-- FOUNDATION -->
+            <div class="pricing-stage">
+                <div class="pricing-stage-header">
+                    <div class="pricing-stage-dot stage-dot-foundation"></div>
+                    <a href="/foundation.html" class="pricing-stage-label stage-label-foundation">Stage 1 — Foundation</a>
+                    <span class="pricing-stage-tagline">Get your system built and everything connected</span>
+                </div>
+                <div class="pricing-table">
+                    <div class="pricing-row"><span class="pricing-name">CRM &amp; Business Infrastructure</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Client Onboarding Automation</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Stripe &amp; Payment Integration</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Power Platform Fix &amp; Build</span></div>
+                    <div class="pricing-row"><span class="pricing-name">API Integrations &amp; Data Sync</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Booking &amp; Scheduling Systems</span></div>
+                </div>
             </div>
-            <div class="cap-card">
-                <div class="cap-title">Web & Conversion</div>
-                <ul class="cap-list">
-                    <li>High-converting landing pages</li>
-                    <li>Sales funnels end-to-end</li>
-                    <li>Lead capture forms and flows</li>
-                    <li>Booking and scheduling systems</li>
-                    <li>E-commerce integrations</li>
-                    <li>A/B testing and optimization</li>
-                </ul>
+
+            <!-- LAUNCH -->
+            <div class="pricing-stage">
+                <div class="pricing-stage-header">
+                    <div class="pricing-stage-dot stage-dot-launch"></div>
+                    <a href="/launch.html" class="pricing-stage-label stage-label-launch">Stage 2 — Launch</a>
+                    <span class="pricing-stage-tagline">Get people into the system. Start generating revenue.</span>
+                </div>
+                <div class="pricing-table">
+                    <div class="pricing-row"><span class="pricing-name">Traffic &amp; First Leads Starter</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Sales Funnel Automation</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Email &amp; SMS Nurture Sequences</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Booking System + Tracking</span></div>
+                    <div class="pricing-row"><span class="pricing-name">High-Converting Landing Pages</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Lead Capture Forms &amp; Flows</span></div>
+                </div>
             </div>
-            <div class="cap-card">
-                <div class="cap-title">AI & Agents</div>
-                <ul class="cap-list">
-                    <li>After-hours AI response agents</li>
-                    <li>24/7 lead qualification bots</li>
-                    <li>AI-powered outbound sequences</li>
-                    <li>Customer support automation</li>
-                    <li>Content generation pipelines</li>
-                    <li>Custom GPT integrations</li>
-                </ul>
+
+            <!-- GROW -->
+            <div class="pricing-stage">
+                <div class="pricing-stage-header">
+                    <div class="pricing-stage-dot stage-dot-grow"></div>
+                    <a href="/growth.html" class="pricing-stage-label stage-label-grow">Stage 3 — Growth</a>
+                    <span class="pricing-stage-tagline">Add channels. Convert more. Handle the volume.</span>
+                </div>
+                <div class="pricing-table">
+                    <div class="pricing-row"><span class="pricing-name">Meta Lead Ads to CRM</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Inbound Lead Capture</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Outbound Cold Email</span></div>
+                    <div class="pricing-row"><span class="pricing-name">WhatsApp / Chat Bot</span></div>
+                    <div class="pricing-row"><span class="pricing-name">AI Voice Agent</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Review &amp; Reputation Automation</span></div>
+                    <div class="pricing-row"><span class="pricing-name">After-Hours AI Response Agent</span></div>
+                </div>
             </div>
-            <div class="cap-card">
-                <div class="cap-title">Data & Reporting</div>
-                <ul class="cap-list">
-                    <li>Custom reporting dashboards</li>
-                    <li>Lead source attribution</li>
-                    <li>Revenue tracking by channel</li>
-                    <li>KPI monitoring and alerts</li>
-                    <li>Data cleanup and migration</li>
-                    <li>Spreadsheet automation</li>
-                </ul>
+
+            <!-- SCALE -->
+            <div class="pricing-stage">
+                <div class="pricing-stage-header">
+                    <div class="pricing-stage-dot stage-dot-scale"></div>
+                    <a href="/scale.html" class="pricing-stage-label stage-label-scale">Stage 4 — Scale</a>
+                    <span class="pricing-stage-tagline">Optimize what's working. Grow without adding headcount.</span>
+                </div>
+                <div class="pricing-table">
+                    <div class="pricing-row"><span class="pricing-name">Ad Reporting Dashboard</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Content Repurposing Pipeline</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Social Media Scheduling</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Customer Support Routing</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Recruiting Pipeline</span></div>
+                    <div class="pricing-row"><span class="pricing-name">E-Commerce Automation</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Custom Reporting &amp; KPI Dashboards</span></div>
+                    <div class="pricing-row"><span class="pricing-name">Lead Source Attribution</span></div>
+                </div>
             </div>
+
         </div>
+        <p style="font-size:0.875rem;color:var(--text-muted);margin-top:-0.75rem;">Web design, landing pages, and conversion funnels available standalone or alongside any stage.</p>
     </div>
 
     <hr class="section-divider">
@@ -240,7 +244,7 @@
     <!-- BOOK A CALL -->
     <div class="reveal">
         <p class="section-title">Book a Call</p>
-        <p class="body-text" style="margin-bottom:1.5rem;">Prefer to skip the back-and-forth? Pick a time and let's talk.</p>
+        <p class="body-text" style="margin-bottom:1.5rem;">Prefer to skip the back and forth? Pick a time and let's talk.</p>
         <div class="calendly-wrap">
             <iframe src="https://calendly.com/seth-fortewebdesigns/30min" title="Book a call with Seth Forte"></iframe>
         </div>
