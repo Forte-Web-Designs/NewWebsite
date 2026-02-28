@@ -61,6 +61,10 @@
         .stage-nav a:hover{border-color:var(--accent);color:var(--accent)}
         .stage-nav a.current{border-color:#5fb88a;color:#5fb88a;background:rgba(95,184,138,0.1)}
 
+        /* Calendly */
+        .calendly-wrap{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;overflow:hidden;margin-top:1.5rem}
+        .calendly-wrap iframe{display:block;border:none;width:100%;min-height:630px}
+
         /* Footer */
         .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
         .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
@@ -84,7 +88,6 @@
         }
         @media(max-width:480px){
             .footer-columns{grid-template-columns:1fr}
-            .header-nav a:not(.nav-cta){display:none}
         }
     </style>
 </head>
@@ -130,42 +133,42 @@
         <p class="section-title">What's Included</p>
         <div class="deliverable-list">
             <div class="deliverable-item">
-                <div class="deliverable-icon">MCH</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Multi-Channel Lead Capture</div>
                     <div class="deliverable-desc">Expand beyond one source. Website, social, Google, referral, and inbound all feeding into the same CRM with proper tagging and attribution. You'll know exactly where every lead is coming from.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">OUT</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Outbound Prospecting Sequences</div>
                     <div class="deliverable-desc">Cold email and LinkedIn outreach built and automated. List building, personalization at scale, sequence cadence, and inbox management. Outbound that doesn't feel like spam.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">AI</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">After-Hours AI Agents</div>
                     <div class="deliverable-desc">Leads don't stop coming in at 5pm. AI agents handle initial contact, qualify leads, and book calls while you sleep, so you're not losing warm leads to a competitor who responded first.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">REV</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Review Automation</div>
                     <div class="deliverable-desc">Automated review request sequences triggered after project completion, delivery, or payment. Google, Facebook, and Trustpilot reviews captured at the peak of client satisfaction.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">SOC</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Social Media Automation</div>
                     <div class="deliverable-desc">Scheduling, repurposing, and auto-DM sequences for Instagram and LinkedIn. Turn content into leads automatically without spending hours in the apps every day.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">LOC</div>
+                <div class="deliverable-icon">&#9679;</div>
                 <div>
                     <div class="deliverable-title">Multi-Location Support</div>
                     <div class="deliverable-desc">For businesses with multiple locations or service areas, we build systems that route leads to the right team, track performance by location, and keep reporting unified.</div>
@@ -204,6 +207,18 @@
         <a href="/launch.html">&larr; 2 Launch</a>
         <a href="/growth.html" class="current">3 Growth</a>
         <a href="/scale.html">4 Scale &rarr;</a>
+    </div>
+
+
+    <hr class="section-divider">
+
+    <!-- BOOK A CALL -->
+    <div class="reveal">
+        <p class="section-title">Book a Call</p>
+        <p class="body-text" style="margin-bottom:1.5rem;">Prefer to skip the back-and-forth? Pick a time and let's talk.</p>
+        <div class="calendly-wrap">
+            <iframe src="https://calendly.com/seth-fortewebdesigns/30min" title="Book a call with Seth Forte"></iframe>
+        </div>
     </div>
 
     <!-- FOOTER -->
@@ -247,5 +262,6 @@
 <script src="/scroll-reveal.js"></script>
 <script src="/theme-toggle.js"></script>
 <script src="/scroll-top.js"></script>
+<script src="/hamburger.js"></script>
 </body>
 </html>
