@@ -158,39 +158,6 @@ export default function Home() {
 
           <div className="relative mx-auto max-w-4xl text-center">
 
-            {/* Press badge */}
-            <SimpleScrollReveal direction="up" delay={0}>
-            <div className="flex justify-center mb-8">
-              <a
-                href="https://voyagedallas.com/interview/community-highlights-meet-seth-forte-of-forte-web-designs/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-1.5 text-sm font-medium text-blue-700 shadow-sm transition-all hover:border-blue-300 hover:shadow dark:border-blue-800/60 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:border-blue-700"
-              >
-                <svg
-                  className="h-3.5 w-3.5 text-blue-500"
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3 1h10v1H5V6zm0 3h10v1H5V9zm0 3h6v1H5v-1z" />
-                </svg>
-                Featured in Voyage Dallas Magazine
-                <svg
-                  className="h-3 w-3 opacity-50 transition-opacity group-hover:opacity-100"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                  />
-                </svg>
-              </a>
-            </div>
-            </SimpleScrollReveal>
 
             {/* Headline */}
             <SimpleScrollReveal direction="up" delay={100}>

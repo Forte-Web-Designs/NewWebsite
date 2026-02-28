@@ -136,6 +136,19 @@ export default function TestimonialsPage() {
             <p className="text-base text-gray-500 dark:text-gray-400 sm:text-lg">
               {reviews.length} five-star reviews from verified clients
             </p>
+            <div className="mt-6 flex justify-center">
+              <a
+                href="https://voyagedallas.com/interview/community-highlights-meet-seth-forte-of-forte-web-designs/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group inline-flex items-center gap-2 rounded-full border border-blue-200 bg-white px-4 py-1.5 text-sm font-medium text-blue-700 shadow-sm transition-all hover:border-blue-300 hover:shadow dark:border-blue-800/60 dark:bg-blue-950/40 dark:text-blue-300 dark:hover:border-blue-700"
+              >
+                <svg className="h-3.5 w-3.5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+                  <path d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3 1h10v1H5V6zm0 3h10v1H5V9zm0 3h6v1H5v-1z" />
+                </svg>
+                Featured in Voyage Dallas Magazine
+              </a>
+            </div>
           </SimpleScrollReveal>
         </div>
       </section>
@@ -143,10 +156,10 @@ export default function TestimonialsPage() {
       {/* ── REVIEWS GRID ──────────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 sm:py-20 bg-gray-50 dark:bg-gray-900">
         <div className="mx-auto max-w-6xl">
-          <div className="columns-1 gap-5 space-y-5 md:columns-2 lg:columns-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3 items-stretch">
             {reviews.map((review, i) => (
-              <SimpleScrollReveal key={i} direction="up" delay={Math.min(i * 40, 300)}>
-                <div className="break-inside-avoid rounded-2xl border border-gray-200 bg-white p-7 dark:border-gray-800 dark:bg-gray-950">
+              <SimpleScrollReveal key={i} direction="up" delay={Math.min(i * 40, 300)} className="h-full">
+                <div className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-7 dark:border-gray-800 dark:bg-gray-950">
                   {/* Stars */}
                   <div className="mb-5 flex gap-0.5">
                     {Array.from({ length: 5 }).map((_, j) => (
@@ -160,7 +173,7 @@ export default function TestimonialsPage() {
                     ))}
                   </div>
                   {/* Quote */}
-                  <p className="mb-6 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
+                  <p className="mb-6 flex-1 text-sm leading-relaxed text-gray-600 dark:text-gray-400">
                     "{review.quote}"
                   </p>
                   {/* Attribution */}
