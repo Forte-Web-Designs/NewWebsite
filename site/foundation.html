@@ -4,23 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foundation | Forte Web Designs</title>
-    <meta name="description" content="Stage 1: Get your system built and everything connected. CRM, payments, email deliverability, booking, and lead tracking — the infrastructure that doesn't leak.">
+    <meta name="description" content="Stage 1: Get your system built and everything connected. CRM, payments, email deliverability, booking, and lead tracking, the infrastructure that doesn't leak.">
     <link rel="canonical" href="https://fortewebdesigns.com/foundation.html">
     <link rel="icon" href="/images/home/logo-header-light.svg">
     <!-- GTM -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
-        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        :root{--text-primary:#edf2f7;--text-secondary:#94a3b8;--text-muted:#64748b;--accent:#0088DB;--accent-warm:#38b2f5;--background:#0d1117;--background-alt:#121a28;--border:#1e2a3a;--card-bg:#172030}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(0,136,219,0.07) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(56,178,245,0.04) 0%,transparent 50%);background-attachment:fixed}
         a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
         a:hover{text-decoration:underline}
         .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
         .reveal.revealed{opacity:1;transform:translateY(0)}
         .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
         .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
-        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
-        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-logo{text-decoration:none;display:flex;align-items:center}
+        .header-logo:hover{opacity:0.85;text-decoration:none}
+        .logo-img{height:34px;width:auto;display:block}
+        .logo-img-light{display:none}
+        [data-theme="light"] .logo-img-dark{display:none}
+        [data-theme="light"] .logo-img-light{display:block}
         .header-nav{display:flex;gap:1.5rem;align-items:center}
         .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
         .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
@@ -30,7 +34,7 @@
         .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
         .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
         .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
-        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,115,74,0.35);text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,136,219,0.35);text-decoration:none}
         .btn-secondary{display:inline-block;border:1px solid var(--border);color:var(--text-secondary);padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:all 0.2s ease;text-decoration:none}
         .btn-secondary:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
 
@@ -89,7 +93,10 @@
 
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="header-logo">Forte Web Designs</a>
+        <a href="/" class="header-logo">
+            <img src="/images/home/logo-dark.svg" class="logo-img logo-img-dark" alt="Forte Web Designs">
+            <img src="/images/home/logo-header-light.svg" class="logo-img logo-img-light" alt="Forte Web Designs">
+        </a>
         <nav class="header-nav">
             <a href="/index.html">Home</a>
             <a href="/services.html">Services</a>
@@ -110,7 +117,7 @@
         <h1 class="page-title">Foundation</h1>
         <p style="font-size:1.1rem;color:var(--text-secondary);font-style:italic;margin-bottom:1.25rem;">Get your system built and everything connected.</p>
         <p class="body-text" style="max-width:640px;">
-            Before you spend on ads or hire a sales team, you need infrastructure that doesn't leak. Most businesses are running on duct tape — a CRM nobody uses, emails landing in spam, a booking form that goes nowhere. We fix all of that first.
+            Before you spend on ads or hire a sales team, you need infrastructure that doesn't leak. Most businesses are running on duct tape, a CRM nobody uses, emails landing in spam, a booking form that goes nowhere. We fix all of that first.
         </p>
         <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
             <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
@@ -144,21 +151,21 @@
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#128197;</div>
+                <div class="deliverable-icon">BOOK</div>
                 <div>
                     <div class="deliverable-title">Booking &amp; Scheduling</div>
                     <div class="deliverable-desc">Calendly or native CRM scheduling connected to your calendar, confirmation emails, reminders, and follow-up sequences. Clients book; it just works.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#128200;</div>
+                <div class="deliverable-icon">LEAD</div>
                 <div>
                     <div class="deliverable-title">Lead Tracking &amp; Pipeline</div>
                     <div class="deliverable-desc">Every lead source captured and tagged. Pipeline stages configured so you always know where a deal is and what's next. No more leads falling through the cracks.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#9881;</div>
+                <div class="deliverable-icon">AUTO</div>
                 <div>
                     <div class="deliverable-title">Basic Follow-Up Automation</div>
                     <div class="deliverable-desc">Automated SMS and email follow-up when a lead comes in or a form is submitted. Speed-to-lead handled automatically so you respond before your competitor does.</div>
@@ -187,7 +194,7 @@
     <!-- CTA -->
     <div class="reveal">
         <h2 style="font-size:1.4rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">Ready to build the foundation?</h2>
-        <p class="body-text">We start with a 30-minute call to understand your current setup and figure out what needs to be built. No pressure, no pitch — just a clear picture of what it would take.</p>
+        <p class="body-text">We start with a 30-minute call to understand your current setup and figure out what needs to be built. No pressure, no pitch, just a clear picture of what it would take.</p>
         <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Schedule a Call</a>
     </div>
 
