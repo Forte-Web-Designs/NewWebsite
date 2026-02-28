@@ -20,7 +20,7 @@ export default function AboutUs() {
                 About Forte Web Designs
               </h1>
               <h2 className="text-2xl sm:text-3xl text-gray-700 dark:text-gray-300 leading-relaxed max-w-3xl mx-auto">
-                What You're Actually Paying For When You Hire Me
+                What You're Actually Paying For When You Hire Us
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -74,7 +74,7 @@ export default function AboutUs() {
                           <div className="absolute inset-0 w-full h-full rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 -z-10"></div>
                         </div>
                         <p className="text-gray-600 dark:text-gray-300 text-lg font-medium">Seth Forte</p>
-                        <p className="text-gray-500 dark:text-gray-400">Founder & Lead Developer</p>
+                        <p className="text-gray-500 dark:text-gray-400">Founder and Lead Developer</p>
                       </div>
                     </div>
                   </div>
@@ -90,7 +90,7 @@ export default function AboutUs() {
                     The value is understanding your business. Spotting the opportunities you're missing. Building for where you're headed, not just what you think you need today.
                   </p>
                   <p>
-                    Every proposal I send includes a full project plan - gotchas, hidden costs, solution outline. It's free. No contract required. Because the hard part isn't building. It's understanding.
+                    Every proposal we send includes a full project plan: gotchas, hidden costs, solution outline. It's free. No contract required. Because the hard part isn't building. It's understanding.
                   </p>
                   <div className="p-6 bg-blue-50 dark:bg-blue-900/20 rounded-xl border border-blue-200 dark:border-blue-700">
                     <p className="text-gray-800 dark:text-gray-200">
@@ -110,20 +110,20 @@ export default function AboutUs() {
           <div className="max-w-4xl mx-auto">
             <SimpleScrollReveal direction="up" delay={100}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-                My Background
+                Our Background
               </h2>
             </SimpleScrollReveal>
 
             <div className="space-y-6 text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <SimpleScrollReveal direction="up" delay={200}>
                 <p>
-                  5+ years building enterprise systems - the kind that handle millions of transactions and can't afford to break. Featured in Voyage Dallas, BUiLT, and Orbie.
+                  5+ years building enterprise systems: the kind that handle millions of transactions and can't afford to break. Featured in Voyage Dallas, BUiLT, and Orbie.
                 </p>
               </SimpleScrollReveal>
 
               <SimpleScrollReveal direction="up" delay={225}>
                 <p className="text-xl font-semibold text-gray-900 dark:text-white">
-                  I don't just build things and disappear. I care whether your systems work six months from now.
+                  We don't just build things and disappear. We care whether your systems work six months from now.
                 </p>
               </SimpleScrollReveal>
             </div>
@@ -131,20 +131,20 @@ export default function AboutUs() {
         </div>
       </section>
 
-      {/* Why I Started Forte Section */}
+      {/* Why We Started Forte Section */}
       <section className="py-16 sm:py-24 bg-gray-50 dark:bg-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <SimpleScrollReveal direction="up" delay={100}>
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-8">
-                Why I Started Forte
+                Why We Started Forte
               </h2>
             </SimpleScrollReveal>
 
             <div className="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
               <SimpleScrollReveal direction="up" delay={200}>
                 <p>
-                  I kept seeing businesses outgrow their systems while consultants treated every project like a transaction. I started Forte to do it differently.
+                  We kept seeing businesses outgrow their systems while consultants treated every project like a transaction. We started Forte to do it differently.
                 </p>
               </SimpleScrollReveal>
             </div>
@@ -158,7 +158,7 @@ export default function AboutUs() {
           <SimpleScrollReveal direction="up" delay={100}>
             <div className="text-center mb-8 sm:mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-                What Makes Me Different
+                What Makes Us Different
               </h2>
             </div>
           </SimpleScrollReveal>
@@ -167,10 +167,10 @@ export default function AboutUs() {
             <SimpleScrollReveal direction="up" delay={200}>
               <div className="p-5 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-                  I Tell You When You Shouldn't Automate
+                  We Tell You When You Shouldn't Automate
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                  If fixing your process makes more sense than building something new, I'll tell you - even when it costs me revenue.
+                  If fixing your process makes more sense than building something new, we'll tell you — even when it costs us revenue.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -178,10 +178,10 @@ export default function AboutUs() {
             <SimpleScrollReveal direction="up" delay={250}>
               <div className="p-5 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-                  I Think Long-Term, Even on One-Off Projects
+                  We Think Long-Term, Even on One-Off Projects
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                  Even on one-off projects, I'm thinking about where your business is headed. What sets you up for scale.
+                  Even on one-off projects, we're thinking about where your business is headed. What sets you up for scale.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -189,10 +189,10 @@ export default function AboutUs() {
             <SimpleScrollReveal direction="up" delay={300}>
               <div className="p-5 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-                  You Work Directly With Me
+                  You Work Directly With Seth
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                  No account managers. No junior developers. No bait-and-switch. You work directly with me.
+                  No account managers. No junior developers. No bait-and-switch. You work directly with Seth.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -200,10 +200,10 @@ export default function AboutUs() {
             <SimpleScrollReveal direction="up" delay={350}>
               <div className="p-5 sm:p-8 bg-white dark:bg-gray-800 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
                 <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-3 sm:mb-4">
-                  I Lead With Generosity
+                  We Lead With Generosity
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-base sm:text-lg">
-                  Every proposal includes a complete project plan - gotchas, hidden costs, clear scope. For complex projects, I prove the approach works before you commit.
+                  Every proposal includes a complete project plan: gotchas, hidden costs, clear scope. For complex projects, we prove the approach works before you commit.
                 </p>
               </div>
             </SimpleScrollReveal>
@@ -220,7 +220,7 @@ export default function AboutUs() {
                 Let's Talk
               </h2>
               <p className="text-xl mb-8 text-blue-100 leading-relaxed">
-                Book a call and tell me what's not working.
+                Book a call and tell us what's not working.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center">
                 <Link
@@ -233,7 +233,7 @@ export default function AboutUs() {
                   href="/case-studies"
                   className="inline-flex items-center justify-center gap-2 border-2 border-white text-white font-semibold px-6 sm:px-12 py-3 sm:py-4 rounded-xl hover:bg-white hover:text-blue-600 transition-all duration-300 text-base sm:text-lg w-full sm:w-auto"
                 >
-                  View My Work
+                  View Our Work
                 </Link>
               </div>
             </div>

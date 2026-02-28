@@ -5,150 +5,193 @@ import { OptimizedImage } from '@/components/images/OptimizedImage';
 
 export const metadata: Metadata = {
   title: 'Services | Forte Web Designs',
-  description: 'Foundation, Growth, and Scale — three tiers of systems built for where your business is right now. Automation, CRM, reporting, and the infrastructure to grow.',
+  description: 'Four stages of systems built for where your business is right now. Automation, CRM, reporting, web design, and the infrastructure to grow.',
 };
 
-const tiers = [
+const TIERS = [
   {
-    name: "Foundation",
-    tagline: "Get your system built and everything connected.",
-    timeline: "1–2 WEEKS",
-    description: "CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from. And your first lead source connected so you're not starting with an empty system.",
+    step: '01',
+    name: 'Foundation',
+    timeline: '1-2 weeks',
+    tagline: 'Get your system built and everything connected.',
+    description:
+      'CRM with a real sales pipeline. Payment processing. Email that actually lands in inboxes. Booking and intake forms. Tracking so you know where leads come from. And your first lead source connected so you\'re not starting with an empty system.',
     includes: [
-      "CRM setup with sales pipeline",
-      "Payment processing",
-      "Email deliverability",
-      "Booking and intake forms",
-      "Lead source tracking",
-      "First lead channel connected"
+      'CRM setup with sales pipeline',
+      'Payment processing',
+      'Email deliverability',
+      'Booking and intake forms',
+      'Lead source tracking',
+      'First lead channel connected',
     ],
-    href: "/services/foundation"
+    href: '/services/foundation',
   },
   {
-    name: "Launch",
-    tagline: "Get people into the system. Start generating revenue.",
-    timeline: "1–3 WEEKS",
-    description: "Foundation gave you the platform. Launch gives you the campaigns. Ad strategy, sales funnels, nurture sequences, and booking automation that turn strangers into leads and leads into customers, automatically.",
+    step: '02',
+    name: 'Launch',
+    timeline: '1-3 weeks',
+    tagline: 'Get people into the system. Start generating revenue.',
+    description:
+      'Foundation gave you the platform. Launch gives you the campaigns. Ad strategy, sales funnels, nurture sequences, and booking automation that turn strangers into leads and leads into customers, automatically.',
     includes: [
-      "Ad strategy and traffic",
-      "Sales funnels",
-      "Email/SMS nurture sequences",
-      "Instant lead response",
-      "Booking automation",
-      "Inbound lead capture"
+      'Ad strategy and traffic',
+      'Sales funnels',
+      'Email and SMS nurture sequences',
+      'Instant lead response',
+      'Booking automation',
+      'Inbound lead capture',
     ],
-    href: "/services/launch"
+    href: '/services/launch',
   },
   {
-    name: "Growth",
-    tagline: "Add channels. Convert more. Handle the volume.",
-    timeline: "2–3 WEEKS",
-    description: "One channel is working. Now multiply it. Add more lead sources, AI agents for after-hours response, outbound prospecting, review automation, and the integrations that let you run more without hiring more.",
+    step: '03',
+    name: 'Growth',
+    timeline: '2-3 weeks',
+    tagline: 'Add channels. Convert more. Handle the volume.',
+    description:
+      'One channel is working. Now multiply it. More lead sources, agents for after-hours response, outbound prospecting, review automation, and the integrations that let you run more without hiring more.',
     includes: [
-      "Multi-channel lead capture",
-      "Outbound cold email",
-      "AI agents (after-hours)",
-      "Review automation",
-      "Advanced integrations",
-      "Outbound prospecting"
+      'Multi-channel lead capture',
+      'Outbound cold email',
+      'After-hours agents',
+      'Review automation',
+      'Advanced integrations',
+      'Outbound prospecting',
     ],
-    href: "/services/growth"
+    href: '/services/growth',
   },
   {
-    name: "Scale",
-    tagline: "Optimize what's working. Grow without adding headcount.",
-    timeline: "3–4 WEEKS",
-    description: "Reporting dashboards so you stop guessing. Outbound systems to find prospects instead of waiting for them. AI agents that answer calls and chat 24/7. Content engines that keep you visible. And monthly management so someone's actually watching the machine.",
+    step: '04',
+    name: 'Scale',
+    timeline: '3-4 weeks',
+    tagline: 'Optimize what\'s working. Grow without adding headcount.',
+    description:
+      'Reporting dashboards so you stop guessing. Outbound systems to find prospects instead of waiting for them. Agents that answer calls and chat 24/7. Content engines that keep you visible. And monthly management so someone\'s actually watching the machine.',
     includes: [
-      "Reporting dashboards",
-      "Outbound prospecting systems",
-      "AI voice and chat agents",
-      "Content engine",
-      "Monthly management",
-      "Multi-channel expansion"
+      'Reporting dashboards',
+      'Outbound prospecting systems',
+      'Voice and chat agents',
+      'Content engine',
+      'Monthly management',
+      'Multi-channel expansion',
     ],
-    href: "/services/scale"
-  }
+    href: '/services/scale',
+  },
 ];
 
-const capabilities = [
+const CAPABILITIES = [
   {
-    title: "Automation",
-    description: "Workflows that replace the manual work eating your week."
+    title: 'Automation',
+    description: 'Workflows that replace the manual work eating your week.',
   },
   {
-    title: "Custom Software",
-    description: "When off-the-shelf tools don't fit how you actually work."
+    title: 'Custom Software',
+    description: "When off-the-shelf tools don't fit how you actually work.",
   },
   {
-    title: "Integrations and APIs",
-    description: "Connecting the tools you already use so data moves once."
+    title: 'Integrations and APIs',
+    description: 'Connecting the tools you already use so data moves once.',
   },
   {
-    title: "Websites & Funnels",
-    description: "Click funnels, landing pages, and web design built to capture and convert leads."
-  }
+    title: 'Web Design and Funnels',
+    description: 'Click funnels, landing pages, and websites built to capture and convert leads.',
+  },
 ];
 
-const results = [
-  { client: "CR Deals Cincinnati", metric: "$52K/year saved", href: "/case-studies/fast-track-auction" },
-  { client: "Modern Bungalow", metric: "15 hrs/month back", href: "/case-studies/modern-bungalow" },
-  { client: "Revolut", metric: "$4M opportunity found", href: "/case-studies/revolut" },
-  { client: "Hollow Bamboo", metric: "20 hrs/week back", href: "/case-studies/hollow-bamboo" }
+const RESULTS = [
+  { client: 'CR Deals Cincinnati', metric: '$52K/year saved', href: '/case-studies/fast-track-auction' },
+  { client: 'Modern Bungalow', metric: '15 hrs/month back', href: '/case-studies/modern-bungalow' },
+  { client: 'Revolut', metric: '$4M opportunity found', href: '/case-studies/revolut' },
+  { client: 'Hollow Bamboo', metric: '20 hrs/week back', href: '/case-studies/hollow-bamboo' },
 ];
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900">
-      {/* Header */}
-      <section className="pt-24 pb-16 sm:pt-32 sm:pb-20 lg:pt-40 lg:pb-24 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+    <div className="bg-white dark:bg-gray-950">
+
+      {/* ── HERO ──────────────────────────────────────────────────── */}
+      <section className="relative pt-32 pb-24 px-4 sm:px-6 lg:px-8">
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(59,130,246,0.08),transparent)] dark:bg-[radial-gradient(ellipse_80%_50%_at_50%_-10%,rgba(59,130,246,0.12),transparent)]"
+        />
+        <div className="relative mx-auto max-w-4xl text-center">
           <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <h1 className="font-display font-bold text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-gray-900 dark:text-white mb-6">
-                What I Build
-              </h1>
-              <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-10 max-w-2xl mx-auto">
-                Most businesses that come to me are dealing with one of three things: they have no systems at all, they have systems that don't talk to each other, or they've outgrown what they built and it's starting to break. The fix depends on where you are.
-              </p>
+            <p className="mb-4 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+              Services
+            </p>
+            <h1 className="mb-6 font-bold tracking-tight text-gray-900 dark:text-white text-5xl sm:text-6xl md:text-7xl leading-[1.06]">
+              What We Build
+            </h1>
+            <p className="mx-auto mb-10 max-w-2xl text-lg sm:text-xl leading-relaxed text-gray-500 dark:text-gray-400">
+              Most businesses that come to us are dealing with one of three things: no systems at all, systems that don't talk to each other, or systems they've outgrown that are starting to break. The fix depends on where you are.
+            </p>
+            <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
               <Link
                 href="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
               >
                 Book a Call
+              </Link>
+              <Link
+                href="/services/infrastructure-review"
+                className="w-full sm:w-auto inline-flex items-center justify-center rounded-lg border border-gray-200 bg-white px-8 py-3.5 text-base font-semibold text-gray-800 transition-colors hover:bg-gray-50 dark:border-gray-700 dark:bg-gray-800/60 dark:text-white dark:hover:bg-gray-800"
+              >
+                Not sure? Book a Review
               </Link>
             </div>
           </SimpleScrollReveal>
         </div>
       </section>
 
-      {/* Tiers */}
-      <section className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          <div className="space-y-8">
-            {tiers.map((tier, index) => (
-              <SimpleScrollReveal key={tier.name} direction="up" delay={index * 100}>
-                <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 sm:p-10 shadow-sm">
-                  <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4 mb-4">
-                    <div>
-                      <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">
-                        {tier.name}
-                      </h2>
-                      <p className="text-blue-600 dark:text-blue-400 font-medium mt-1">
-                        {tier.tagline}
-                      </p>
-                    </div>
-                    <span className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider whitespace-nowrap">
+      {/* ── TIERS ─────────────────────────────────────────────────── */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
+        <div className="mx-auto max-w-6xl">
+
+          <SimpleScrollReveal direction="up">
+            <div className="mb-14 max-w-xl">
+              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                The System
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                Four stages. One complete system.
+              </h2>
+              <p className="mt-4 text-base text-gray-500 dark:text-gray-400 sm:text-lg">
+                Each stage builds on the last. Most businesses are missing at least one.
+              </p>
+            </div>
+          </SimpleScrollReveal>
+
+          <div className="grid gap-5 sm:grid-cols-2">
+            {TIERS.map((tier, i) => (
+              <SimpleScrollReveal key={tier.name} direction="up" delay={i * 70}>
+                <div className="flex h-full flex-col rounded-2xl border border-gray-200 bg-white p-8 dark:border-gray-800 dark:bg-gray-950">
+                  <div className="mb-6 flex items-center justify-between">
+                    <span className="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-400">
+                      {tier.step}
+                    </span>
+                    <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400">
                       {tier.timeline}
                     </span>
                   </div>
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-6">
+                  <h3 className="mb-1.5 text-xl font-bold text-gray-900 dark:text-white">
+                    {tier.name}
+                  </h3>
+                  <p className="mb-4 text-sm font-medium text-blue-600 dark:text-blue-400">
+                    {tier.tagline}
+                  </p>
+                  <p className="mb-6 text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                     {tier.description}
                   </p>
-                  <ul className="grid sm:grid-cols-2 gap-2 mb-6">
+                  <ul className="mb-6 grid grid-cols-1 gap-2 sm:grid-cols-2 flex-1">
                     {tier.includes.map((item) => (
                       <li key={item} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
-                        <svg className="w-4 h-4 text-blue-600 dark:text-blue-400 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg
+                          className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600 dark:text-blue-400"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                         {item}
@@ -157,10 +200,15 @@ export default function ServicesPage() {
                   </ul>
                   <Link
                     href={tier.href}
-                    className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
+                    className="group inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
                   >
                     Learn more
-                    <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="h-4 w-4 transition-transform group-hover:translate-x-0.5"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </Link>
@@ -170,33 +218,40 @@ export default function ServicesPage() {
           </div>
 
           <SimpleScrollReveal direction="up">
-            <p className="text-center text-gray-600 dark:text-gray-400 mt-12 text-sm">
-              Every system is scoped, documented, tested, and handed off with training. You own everything I build.
+            <p className="mt-10 text-center text-sm text-gray-400 dark:text-gray-500">
+              Every system is scoped, documented, tested, and handed off with training. You own everything we build.
             </p>
           </SimpleScrollReveal>
+
         </div>
       </section>
 
-      {/* How I Build It */}
-      <section className="py-16 sm:py-20 bg-white dark:bg-gray-900 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      {/* ── HOW WE BUILD IT ───────────────────────────────────────── */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32">
+        <div className="mx-auto max-w-6xl">
+
           <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-3 text-center">
-              How I Build It
-            </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-center mb-12 max-w-xl mx-auto">
-              These systems get built using whatever the job needs. These are the tools in the toolbox.
-            </p>
+            <div className="mb-14 text-center max-w-xl mx-auto">
+              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                Capabilities
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                How We Build It
+              </h2>
+              <p className="mt-4 text-base text-gray-500 dark:text-gray-400">
+                These systems get built using whatever the job needs. These are the tools in the toolbox.
+              </p>
+            </div>
           </SimpleScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
-            {capabilities.map((cap, index) => (
-              <SimpleScrollReveal key={cap.title} direction="up" delay={index * 100}>
-                <div className="text-center p-4">
-                  <h3 className="font-semibold text-gray-900 dark:text-white mb-2 text-base">
+          <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {CAPABILITIES.map((cap, i) => (
+              <SimpleScrollReveal key={cap.title} direction="up" delay={i * 70}>
+                <div className="rounded-2xl border border-gray-200 bg-gray-50 p-7 dark:border-gray-800 dark:bg-gray-900">
+                  <h3 className="mb-2 text-base font-bold text-gray-900 dark:text-white">
                     {cap.title}
                   </h3>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                  <p className="text-sm leading-relaxed text-gray-500 dark:text-gray-400">
                     {cap.description}
                   </p>
                 </div>
@@ -207,111 +262,126 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* Infrastructure Review CTA */}
-      <section className="py-20 sm:py-24 bg-gray-50 dark:bg-gray-800 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-3xl">
+      {/* ── INFRASTRUCTURE REVIEW CTA ─────────────────────────────── */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
+        <div className="mx-auto max-w-3xl text-center">
           <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-4">
-                Not sure where to start?
-              </h2>
-              <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-                Most people aren't. The Infrastructure Review looks at your current setup, identifies the biggest opportunities, and gives you a prioritized roadmap with ROI estimates. If you move forward with a build, the review fee applies as credit.
-              </p>
-              <Link
-                href="/services/infrastructure-review"
-                className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-all duration-200"
-              >
-                Book a Review
-              </Link>
-            </div>
+            <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+              Not sure where to start?
+            </p>
+            <h2 className="mb-5 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              Book an Infrastructure Review
+            </h2>
+            <p className="mb-10 text-base leading-relaxed text-gray-500 dark:text-gray-400 sm:text-lg">
+              We look at your current setup, identify the biggest opportunities, and hand you a prioritized roadmap with ROI estimates. If you move forward with a build, the review fee applies as credit.
+            </p>
+            <Link
+              href="/services/infrastructure-review"
+              className="inline-flex items-center justify-center rounded-lg bg-blue-600 px-8 py-3.5 text-base font-semibold text-white transition-colors hover:bg-blue-700"
+            >
+              Book a Review
+            </Link>
           </SimpleScrollReveal>
         </div>
       </section>
 
-      {/* Results */}
-      <section className="py-24 sm:py-32 bg-white dark:bg-gray-900 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+      {/* ── RESULTS ───────────────────────────────────────────────── */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32">
+        <div className="mx-auto max-w-6xl">
+
           <SimpleScrollReveal direction="up">
-            <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-16 text-center">
-              Results
-            </h2>
+            <div className="mb-14 max-w-xl">
+              <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+                Results
+              </p>
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+                Real projects. Real outcomes.
+              </h2>
+            </div>
           </SimpleScrollReveal>
 
-          <div className="space-y-6 mb-12">
-            {results.map((result, index) => (
-              <SimpleScrollReveal key={result.client} direction="up" delay={index * 100}>
+          <div className="mb-10 divide-y divide-gray-100 dark:divide-gray-800">
+            {RESULTS.map((r, i) => (
+              <SimpleScrollReveal key={r.client} direction="up" delay={i * 60}>
                 <Link
-                  href={result.href}
-                  className="flex items-center justify-between py-4 border-b border-gray-200 dark:border-gray-700 group hover:border-blue-600 dark:hover:border-blue-400 transition-colors"
+                  href={r.href}
+                  className="group flex items-center justify-between py-5 transition-colors hover:text-blue-600 dark:hover:text-blue-400"
                 >
-                  <span className="font-medium text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                    {result.client}
+                  <span className="text-base font-semibold text-gray-900 transition-colors group-hover:text-blue-600 dark:text-white dark:group-hover:text-blue-400">
+                    {r.client}
                   </span>
-                  <span className="text-gray-600 dark:text-gray-400">
-                    {result.metric}
-                  </span>
+                  <div className="flex items-center gap-3">
+                    <span className="text-base font-bold text-gray-700 dark:text-gray-300">
+                      {r.metric}
+                    </span>
+                    <svg
+                      className="h-4 w-4 text-gray-300 transition-colors group-hover:text-blue-500 dark:text-gray-700"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </Link>
               </SimpleScrollReveal>
             ))}
           </div>
 
           <SimpleScrollReveal direction="up">
-            <div className="text-center">
-              <Link
-                href="/case-studies"
-                className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium transition-colors"
-              >
-                See all results
-                <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
-              </Link>
+            <Link
+              href="/case-studies"
+              className="text-sm font-semibold text-blue-600 transition-colors hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            >
+              See all case studies →
+            </Link>
+          </SimpleScrollReveal>
+
+        </div>
+      </section>
+
+      {/* ── BOOK A CALL ───────────────────────────────────────────── */}
+      <section id="book-a-call" className="py-24 px-4 sm:px-6 lg:px-8 sm:py-32 bg-gray-50 dark:bg-gray-900">
+        <div className="mx-auto max-w-6xl grid gap-12 lg:grid-cols-2 lg:gap-20 lg:items-center">
+
+          <SimpleScrollReveal direction="up">
+            <div className="flex h-14 w-14 items-center justify-center overflow-hidden rounded-full ring-2 ring-blue-100 dark:ring-blue-900 mb-8">
+              <OptimizedImage
+                src="/images/about/headshot-6.jpg"
+                alt="Seth Forte"
+                width={56}
+                height={56}
+                className="h-full w-full object-cover"
+                sizes="56px"
+              />
+            </div>
+            <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
+              Get in touch
+            </p>
+            <h2 className="mb-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
+              Got a problem?
+            </h2>
+            <p className="text-base leading-relaxed text-gray-500 dark:text-gray-400 sm:text-lg">
+              Book a call. Just tell us what's not working.
+            </p>
+          </SimpleScrollReveal>
+
+          <SimpleScrollReveal direction="up" delay={100}>
+            <div className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-950">
+              <iframe
+                src="https://calendly.com/seth-fortewebdesigns/30min"
+                width="100%"
+                height="650"
+                frameBorder="0"
+                title="Schedule a call with Forte"
+                className="w-full"
+              />
             </div>
           </SimpleScrollReveal>
+
         </div>
       </section>
 
-      {/* CTA with Headshot & Calendly */}
-      <section id="book-a-call" className="py-24 sm:py-32 lg:py-40 bg-gray-50 dark:bg-gray-800 overflow-hidden">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-            <SimpleScrollReveal direction="up">
-              <div className="text-center lg:text-left">
-                <div className="w-24 h-24 mx-auto lg:mx-0 mb-6 rounded-full overflow-hidden border-4 border-blue-600 shadow-lg">
-                  <OptimizedImage
-                    src="/images/about/headshot-6.jpg"
-                    alt="Seth Forte"
-                    width={96}
-                    height={96}
-                    className="w-full h-full object-cover"
-                    sizes="96px"
-                  />
-                </div>
-                <h2 className="font-display font-bold text-2xl sm:text-3xl text-gray-900 dark:text-white mb-4">
-                  Got a problem?
-                </h2>
-                <p className="text-gray-600 dark:text-gray-400 mb-6">
-                  Book a call. Just tell me what's not working.
-                </p>
-              </div>
-            </SimpleScrollReveal>
-
-            <SimpleScrollReveal direction="up" delay={100}>
-              <div className="bg-white dark:bg-gray-900 rounded-2xl shadow-lg overflow-hidden">
-                <iframe
-                  src="https://calendly.com/seth-fortewebdesigns/30min"
-                  width="100%"
-                  height="600"
-                  frameBorder="0"
-                  title="Schedule a call with Seth"
-                  className="w-full"
-                />
-              </div>
-            </SimpleScrollReveal>
-          </div>
-        </div>
-      </section>
     </div>
   );
 }
