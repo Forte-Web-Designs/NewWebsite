@@ -180,8 +180,7 @@ export default function Home() {
             {/* Subheading */}
             <SimpleScrollReveal direction="up" delay={180}>
             <p className="mx-auto mb-10 max-w-2xl text-lg sm:text-xl leading-relaxed text-gray-500 dark:text-gray-400">
-              We build the automation systems, pipelines, and infrastructure
-              that eliminate manual work and make growth repeatable.
+              We build the automation systems, pipelines, conversion funnels, and high-converting websites that turn traffic into leads, eliminate manual work, and make growth repeatable.
             </p>
             </SimpleScrollReveal>
 

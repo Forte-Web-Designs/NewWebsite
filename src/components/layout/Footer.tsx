@@ -80,7 +80,7 @@ export default function Footer() {
           </div>
 
           {/* Connect */}
-          <div>
+          <div className="col-span-2 sm:col-span-1">
             <h3 className="mb-3 text-xs font-bold uppercase tracking-widest text-gray-400 dark:text-gray-500">
               Connect
             </h3>

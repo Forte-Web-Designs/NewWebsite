@@ -80,6 +80,19 @@ export default function Contact() {
             </div>
           </div>
 
+          {/* Contact form */}
+          <div>
+            <div className="mb-5">
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+                Send a message
+              </h2>
+              <p className="text-base text-gray-500 dark:text-gray-400">
+                Prefer email? Describe your situation and we'll get back to you within one business day.
+              </p>
+            </div>
+            <ContactForm />
+          </div>
+
           {/* Calendly */}
           <div>
             <div className="mb-5">
@@ -100,19 +113,6 @@ export default function Contact() {
                 className="w-full"
               />
             </div>
-          </div>
-
-          {/* Contact form */}
-          <div>
-            <div className="mb-5">
-              <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
-                Send a message
-              </h2>
-              <p className="text-base text-gray-500 dark:text-gray-400">
-                Prefer email? Describe your situation and we'll get back to you within one business day.
-              </p>
-            </div>
-            <ContactForm />
           </div>
 
         </div>
