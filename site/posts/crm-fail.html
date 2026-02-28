@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Why Most CRM Setups Fail Within 90 Days | Forte Web Designs</title>
+    <meta name="description" content="The tool isn't the problem. Most CRMs fail because nobody builds the workflow around the human behavior. Here's the pattern we see over and over.">
+    <link rel="canonical" href="https://fortewebdesigns.com/posts/crm-fail.html">
+    <link rel="icon" href="/images/home/logo-header-light.svg">
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--text-primary:#edf2f7;--text-secondary:#94a3b8;--text-muted:#64748b;--accent:#0088DB;--accent-warm:#38b2f5;--background:#0d1117;--background-alt:#121a28;--border:#1e2a3a;--card-bg:#172030}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(0,136,219,0.07) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(56,178,245,0.04) 0%,transparent 50%);background-attachment:fixed}
+        a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
+        a:hover{text-decoration:underline}
+        .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
+        .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+        .header-logo{text-decoration:none;display:flex;align-items:center}
+        .header-logo:hover{opacity:0.85;text-decoration:none}
+        .logo-img{height:34px;width:auto;display:block}
+        .logo-img-light{display:none}
+        [data-theme="light"] .logo-img-dark{display:none}
+        [data-theme="light"] .logo-img-light{display:block}
+        .header-nav{display:flex;gap:1.5rem;align-items:center}
+        .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
+        .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
+        .main-content{max-width:720px;margin:0 auto;padding:5rem 2rem 6rem}
+        .post-tag{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);margin-bottom:1rem;display:block}
+        .post-title{font-size:clamp(1.6rem,4vw,2.2rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em;line-height:1.25}
+        .post-meta{font-size:0.82rem;color:var(--text-muted);margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+        .post-body h2{font-size:1.25rem;font-weight:700;color:var(--text-primary);margin:2.5rem 0 1rem}
+        .post-body p{color:var(--text-secondary);margin-bottom:1.5rem;line-height:1.8}
+        .post-body ul,.post-body ol{color:var(--text-secondary);margin:0 0 1.5rem 1.5rem;line-height:1.8}
+        .post-body li{margin-bottom:0.5rem}
+        .post-body strong{color:var(--text-primary);font-weight:600}
+        .callout{background:var(--card-bg);border:1px solid var(--border);border-left:4px solid var(--accent);border-radius:8px;padding:1.25rem 1.5rem;margin:2rem 0}
+        .callout p{margin:0;color:var(--text-secondary)}
+        .back-link{display:inline-block;font-size:0.85rem;color:var(--text-muted);margin-bottom:2.5rem}
+        .back-link:hover{color:var(--accent)}
+        .cta-block{margin-top:4rem;padding:2rem;background:var(--card-bg);border:1px solid var(--border);border-radius:10px;text-align:center}
+        .cta-block p{color:var(--text-secondary);margin-bottom:1.25rem}
+        .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,136,219,0.35);text-decoration:none}
+        .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
+        .footer-bottom{padding-top:1.5rem;border-top:1px solid var(--border)}
+        .footer-location{color:var(--text-muted);font-size:0.85rem;margin-bottom:0.35rem}
+        .copyright{color:var(--text-muted);font-size:0.85rem}
+        @media(max-width:768px){.header-container{padding:0.75rem 1.25rem}.header-nav{gap:0.85rem}.header-nav a{font-size:0.82rem}.main-content{padding:3rem 1.25rem 4rem}}
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTP7GMJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="header-logo">
+            <img src="/images/home/logo-dark.svg" class="logo-img logo-img-dark" alt="Forte Web Designs">
+            <img src="/images/home/logo-header-light.svg" class="logo-img logo-img-light" alt="Forte Web Designs">
+        </a>
+        <nav class="header-nav">
+            <a href="/index.html">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/reviews.html">Reviews</a>
+            <a href="/writing.html" class="active">Writing</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+    <a href="/writing.html" class="back-link">&larr; Back to Writing</a>
+
+    <span class="post-tag">Automation</span>
+    <h1 class="post-title">Why Most CRM Setups Fail Within 90 Days (And How to Fix It)</h1>
+    <div class="post-meta">January 2026 &middot; 6 min read</div>
+
+    <div class="post-body">
+        <p>We've audited a lot of CRM setups at this point. GoHighLevel accounts with 400 unused custom fields. HubSpot instances where every contact is stuck in stage one of a pipeline nobody checks. Salesforce implementations that cost $40,000 to build and get used as a fancy spreadsheet.</p>
+
+        <p>The pattern is always the same: the tool isn't the problem. The tool is fine. The problem is that the workflow was never built around how the humans actually behave.</p>
+
+        <h2>The 90-Day Cliff</h2>
+
+        <p>Here's what typically happens. A business decides they need a CRM. They pick one, pay for it, spend a weekend entering contacts, and start using it. For about three weeks, things look good. Deals get logged. Follow-ups get set. Someone on the team is actually excited about it.</p>
+
+        <p>Then week four hits. Someone's on vacation. A deal closes without getting updated. A follow-up gets missed because the task was buried. Now the data is stale and nobody trusts it. By month three, the CRM is open in a tab that nobody checks and the team is back to a shared spreadsheet and a stack of sticky notes.</p>
+
+        <p>This isn't a technology failure. It's a behavior design failure.</p>
+
+        <h2>The Three Things That Actually Kill CRMs</h2>
+
+        <p><strong>1. No trigger-based entry points.</strong> If adding a contact to your CRM requires someone to manually open the tool and type in information, it will stop happening within weeks. Every lead source — your website forms, your ad platforms, your inbound calls — needs to push directly into the CRM automatically. If a human has to decide to do it, they won't.</p>
+
+        <p><strong>2. Too many required fields.</strong> The more fields you require, the less often people complete them. We've seen CRMs where sales reps have to fill out 22 fields to create a new contact. Nobody does it. Build for the minimum viable data you actually need to work a lead: name, contact info, source, stage. Everything else is optional and can be filled in later.</p>
+
+        <p><strong>3. No feedback loop for the team using it.</strong> People stop using systems that feel like they're inputting into a void. If the CRM isn't saving your reps time — if it's not surfacing who to call today, reminding them about open deals, showing them what's working — it will feel like overhead. Build the views and automations that make the CRM useful to the people doing the work, not just the manager reviewing reports.</p>
+
+        <h2>What a CRM That Sticks Actually Looks Like</h2>
+
+        <p>The setups that hold are built around three principles:</p>
+
+        <p><strong>Automated intake.</strong> Every form submission, ad lead, and inbound inquiry flows directly into the CRM with a pipeline stage, a follow-up task, and a notification to whoever owns that lead. No manual entry required.</p>
+
+        <p><strong>A working dashboard, not a data warehouse.</strong> The default view for every sales rep should answer one question: what do I do today? That means a list of leads that need follow-up, deals that are stalling, and tasks that are overdue. Not a spreadsheet of 3,000 contacts with no prioritization.</p>
+
+        <p><strong>Stage-based automations.</strong> When a lead moves from "contacted" to "proposal sent," something should happen automatically — a follow-up sequence should kick off, the rep should get a reminder to check in after three days, and a Slack notification should go to whoever manages the pipeline. The CRM should be doing work, not just storing data.</p>
+
+        <div class="callout">
+            <p><strong>The test:</strong> Ask your team what they did in the CRM yesterday. If the answer is "I updated a few things," it's a data warehouse. If the answer is "it reminded me to follow up with three people and I closed one of them," it's a working system.</p>
+        </div>
+
+        <h2>The Fix</h2>
+
+        <p>If your CRM has already drifted, don't try to fix it by getting the team to use it more. That never works. Instead: audit what's broken (usually it's intake and follow-up automation), rebuild those two things first, and make sure the default view is useful before you ask anyone to log in again.</p>
+
+        <p>A CRM that runs on willpower will fail. A CRM that runs on automation and good UX will outlast the people who set it up.</p>
+
+        <p>That's the difference between a tool your team tolerates and a system that actually drives revenue.</p>
+    </div>
+
+    <div class="cta-block">
+        <p>Need a CRM setup that your team will actually use? We build and fix CRM systems as part of our Foundation stage.</p>
+        <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Book a Free Call</a>
+    </div>
+
+    <div class="footer-section">
+        <div class="footer-bottom">
+            <p class="footer-location">Based in Grapevine, Texas. Serving clients nationwide.</p>
+            <p class="copyright">&copy; 2026 Forte Web Designs. All rights reserved.</p>
+        </div>
+    </div>
+</main>
+
+<script src="/scroll-reveal.js"></script>
+<script src="/theme-toggle.js"></script>
+<script src="/scroll-top.js"></script>
+<script src="/hamburger.js"></script>
+</body>
+</html>
