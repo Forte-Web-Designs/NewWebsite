@@ -57,41 +57,62 @@ export default function Contact() {
 
       {/* ── MAIN CONTENT ──────────────────────────────────────────── */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 sm:py-20">
-        <div className="mx-auto max-w-4xl grid grid-cols-1 gap-10 lg:grid-cols-2 lg:gap-16">
+        <div className="mx-auto max-w-4xl flex flex-col gap-14">
 
-          {/* Contact form */}
+          {/* Video */}
           <div>
-            <div className="mb-8">
+            <div className="mb-5">
               <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
-                Send a message
+                See what we build
               </h2>
               <p className="text-base text-gray-500 dark:text-gray-400">
-                Describe your situation and we'll get back to you within one business day.
+                A quick look at how we approach automation, systems, and growth for small businesses.
               </p>
             </div>
-            <ContactForm />
+            <div className="overflow-hidden rounded-2xl bg-gray-900 shadow-xl">
+              <video controls className="w-full">
+                <source
+                  src="/video-walkthroughs/Business Growth Systems & AI Automation | Forte (DFW) - 26 October 2025.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
 
           {/* Calendly */}
           <div>
-            <div className="mb-8">
+            <div className="mb-5">
               <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
                 Book a call directly
               </h2>
               <p className="text-base text-gray-500 dark:text-gray-400">
-                Skip the back-and-forth. Book a 30-minute call and we'll talk through your situation live.
+                Skip the back-and-forth. Pick a time and we'll talk through your situation live.
               </p>
             </div>
             <div className="overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-sm dark:border-gray-800 dark:bg-gray-900">
               <iframe
                 src="https://calendly.com/seth-fortewebdesigns/30min"
                 width="100%"
-                height="650"
+                height="700"
                 frameBorder="0"
                 title="Schedule a call with Forte"
                 className="w-full"
               />
             </div>
+          </div>
+
+          {/* Contact form */}
+          <div>
+            <div className="mb-5">
+              <h2 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white mb-2">
+                Send a message
+              </h2>
+              <p className="text-base text-gray-500 dark:text-gray-400">
+                Prefer email? Describe your situation and we'll get back to you within one business day.
+              </p>
+            </div>
+            <ContactForm />
           </div>
 
         </div>
