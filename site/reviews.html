@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reviews | Forte Web Designs</title>
+    <meta name="description" content="Client reviews and testimonials for Forte Web Designs. See what businesses say about working with us on automation, integrations, and growth systems.">
+    <link rel="canonical" href="https://fortewebdesigns.com/reviews.html">
+    <link rel="icon" href="/images/home/logo-header-light.svg">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
+        a:hover{text-decoration:underline}
+        .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+        .reveal.revealed{opacity:1;transform:translateY(0)}
+        .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
+        .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
+        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-nav{display:flex;gap:1.5rem;align-items:center}
+        .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
+        .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
+        .main-content{max-width:860px;margin:0 auto;padding:5rem 2rem 6rem}
+        .section-divider{border:none;border-top:1px solid var(--border);margin:4rem 0}
+        .section-title{font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:2.5rem}
+        .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
+        .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
+        .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,115,74,0.35);text-decoration:none}
+
+        /* Review cards */
+        .review-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem}
+        .review-card{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:1.5rem}
+        .review-stars{color:var(--accent-warm);font-size:0.85rem;margin-bottom:0.6rem;letter-spacing:2px}
+        .review-quote{font-size:0.9rem;line-height:1.7;color:var(--text-secondary);margin-bottom:0.85rem;font-style:italic}
+        .review-author{font-size:0.8rem;font-weight:600;color:var(--text-primary)}
+        .review-project{font-size:0.75rem;color:var(--text-muted);margin-top:0.1rem}
+
+        /* Rating summary */
+        .rating-summary{background:var(--card-bg);border:1px solid var(--border);border-radius:10px;padding:2rem;text-align:center;margin-bottom:3rem}
+        .rating-num{font-size:3rem;font-weight:700;color:var(--text-primary);letter-spacing:-0.03em;display:block}
+        .rating-stars{color:var(--accent-warm);font-size:1.1rem;letter-spacing:3px;margin:0.35rem 0}
+        .rating-label{font-size:0.85rem;color:var(--text-muted)}
+
+        /* Footer */
+        .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
+        .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
+        .footer-columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+        .footer-col h4{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem}
+        .footer-col ul{list-style:none}
+        .footer-col li{margin-bottom:0.5rem}
+        .footer-col a{color:var(--text-secondary);font-size:0.9rem}
+        .footer-col a:hover{color:var(--accent)}
+        .footer-bottom{padding-top:1.5rem;border-top:1px solid var(--border)}
+        .footer-location{color:var(--text-muted);font-size:0.85rem;margin-bottom:0.35rem}
+        .copyright{color:var(--text-muted);font-size:0.85rem}
+
+        @media(max-width:768px){
+            .header-container{padding:0.75rem 1.25rem}
+            .header-nav{gap:0.85rem}
+            .header-nav a{font-size:0.82rem}
+            .main-content{padding:3rem 1.25rem 4rem}
+            .review-grid{grid-template-columns:1fr}
+            .footer-columns{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:480px){
+            .footer-columns{grid-template-columns:1fr}
+            .header-nav a:not(.nav-cta){display:none}
+        }
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTP7GMJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="header-logo">Forte Web Designs</a>
+        <nav class="header-nav">
+            <a href="/index.html">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/reviews.html">Reviews</a>
+            <a href="/writing.html">Writing</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+
+    <!-- HERO -->
+    <div style="margin-bottom:3rem;">
+        <p class="section-title">Client Reviews</p>
+        <h1 class="page-title">What clients say.</h1>
+        <p class="body-text" style="max-width:600px;">
+            Every project starts with a clear scope and ends with a system that works. Here's what clients say about the process and the results.
+        </p>
+    </div>
+
+    <!-- RATING SUMMARY -->
+    <div class="rating-summary reveal">
+        <span class="rating-num">5.0</span>
+        <div class="rating-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="rating-label">Average across all platforms</div>
+    </div>
+
+    <!-- REVIEWS -->
+    <div class="review-grid reveal">
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-quote">"Seth is my go-to for all of my automation projects now. His process in defining the project scope ahead of time ensures that I get everything I need and we're on the same page throughout. I've worked with many freelancers and Seth is one of the best."</p>
+            <div class="review-author">Shopify / Xero Client</div>
+            <div class="review-project">Product Sync Automation</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-quote">"Extremely knowledgeable and patient. He thought outside the box to offer solutions we did not consider. Highly recommend and we will use him again. Communication was excellent throughout the entire project."</p>
+            <div class="review-author">Power Apps Client</div>
+            <div class="review-project">Review System Development</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-quote">"Delivered an exceptional automation that transformed a key aspect of our daily operations. Professional, incredibly responsive, and has tons of ideas. Would work with Seth again in a heartbeat."</p>
+            <div class="review-author">Legal Tech Client</div>
+            <div class="review-project">Court Records Automation</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-quote">"Seth quickly understood the project and delivered a great solution. Communicated clearly throughout and the work was completed ahead of schedule. The automation works exactly as described."</p>
+            <div class="review-author">Enterprise Client</div>
+            <div class="review-project">Automation Consulting</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-quote">"Fantastic work. Seth built exactly what we needed and walked us through how everything works so we can maintain it ourselves. Very clear communication, fast delivery, and the result exceeded our expectations."</p>
+            <div class="review-author">SaaS Client</div>
+            <div class="review-project">CRM Integration</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-quote">"Seth helped us figure out a complex integration problem we'd been stuck on for months. He got it done in a few days, explained everything clearly, and was available whenever we had questions. Will definitely hire again."</p>
+            <div class="review-author">E-Commerce Client</div>
+            <div class="review-project">Platform Integration</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-quote">"The level of detail in Seth's scoping process was impressive. By the time we started, we both knew exactly what was being built and why. No surprises, no scope creep, just results. Exceptional work."</p>
+            <div class="review-author">Service Business Client</div>
+            <div class="review-project">Lead Automation System</div>
+        </div>
+        <div class="review-card">
+            <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <p class="review-quote">"We hired Seth to build our reporting dashboard and he delivered something that would have cost us 10x from an agency. Clean, functional, and exactly what we asked for. Highly recommend for any data or automation project."</p>
+            <div class="review-author">Marketing Agency Client</div>
+            <div class="review-project">Reporting Dashboard</div>
+        </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- CTA -->
+    <div class="reveal">
+        <h2 style="font-size:1.4rem;font-weight:700;color:var(--text-primary);margin-bottom:1rem;">Want results like these?</h2>
+        <p class="body-text">Book a 30-minute discovery call. We'll map out what your biggest problem is actually costing you, and whether building a solution makes sense.</p>
+        <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-section">
+        <a href="mailto:seth@fortewebdesigns.com" class="footer-email-main">seth@fortewebdesigns.com</a>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/foundation.html">Foundation</a></li>
+                    <li><a href="/launch.html">Launch</a></li>
+                    <li><a href="/growth.html">Growth</a></li>
+                    <li><a href="/scale.html">Scale</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/work.html">Work</a></li>
+                    <li><a href="/reviews.html">Reviews</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/forte-web-designs" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:seth@fortewebdesigns.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-location">Based in Grapevine, Texas. Serving clients nationwide.</p>
+            <p class="copyright">&copy; 2026 Seth Forte. All rights reserved.</p>
+        </div>
+    </div>
+
+</main>
+
+<script src="/scroll-reveal.js"></script>
+<script src="/theme-toggle.js"></script>
+<script src="/scroll-top.js"></script>
+</body>
+</html>

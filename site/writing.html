@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing | Forte Web Designs</title>
+    <meta name="description" content="Articles on automation, growth systems, and building business infrastructure that actually works. No fluff — just frameworks and lessons from real projects.">
+    <link rel="canonical" href="https://fortewebdesigns.com/writing.html">
+    <link rel="icon" href="/images/home/logo-header-light.svg">
+    <!-- GTM -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
+    <style>
+        *{margin:0;padding:0;box-sizing:border-box}
+        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
+        a:hover{text-decoration:underline}
+        .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
+        .reveal.revealed{opacity:1;transform:translateY(0)}
+        .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
+        .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
+        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
+        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-nav{display:flex;gap:1.5rem;align-items:center}
+        .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
+        .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
+        .main-content{max-width:860px;margin:0 auto;padding:5rem 2rem 6rem}
+        .section-divider{border:none;border-top:1px solid var(--border);margin:4rem 0}
+        .section-title{font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:2.5rem}
+        .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
+        .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
+
+        /* Post list */
+        .post-list{border-top:1px solid var(--border)}
+        .post-row{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;padding:1.5rem 0;border-bottom:1px solid var(--border);text-decoration:none;color:inherit;transition:color 0.15s;cursor:pointer}
+        .post-row:hover .post-title{color:var(--accent)}
+        .post-content{flex:1;min-width:0}
+        .post-tag{font-size:0.72rem;font-weight:600;text-transform:uppercase;letter-spacing:0.08em;color:var(--text-muted);margin-bottom:0.4rem}
+        .post-title{font-size:1rem;font-weight:600;color:var(--text-primary);line-height:1.4;margin-bottom:0.3rem;transition:color 0.15s}
+        .post-excerpt{font-size:0.875rem;color:var(--text-secondary);line-height:1.6}
+        .post-date{font-size:0.78rem;color:var(--text-muted);flex-shrink:0;padding-top:0.2rem;white-space:nowrap}
+
+        /* Footer */
+        .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
+        .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
+        .footer-columns{display:grid;grid-template-columns:1fr 1fr 1fr;gap:2rem;margin-bottom:2.5rem}
+        .footer-col h4{font-size:0.75rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.08em;margin-bottom:1rem}
+        .footer-col ul{list-style:none}
+        .footer-col li{margin-bottom:0.5rem}
+        .footer-col a{color:var(--text-secondary);font-size:0.9rem}
+        .footer-col a:hover{color:var(--accent)}
+        .footer-bottom{padding-top:1.5rem;border-top:1px solid var(--border)}
+        .footer-location{color:var(--text-muted);font-size:0.85rem;margin-bottom:0.35rem}
+        .copyright{color:var(--text-muted);font-size:0.85rem}
+
+        @media(max-width:768px){
+            .header-container{padding:0.75rem 1.25rem}
+            .header-nav{gap:0.85rem}
+            .header-nav a{font-size:0.82rem}
+            .main-content{padding:3rem 1.25rem 4rem}
+            .post-date{display:none}
+            .footer-columns{grid-template-columns:1fr 1fr}
+        }
+        @media(max-width:480px){
+            .footer-columns{grid-template-columns:1fr}
+            .header-nav a:not(.nav-cta){display:none}
+        }
+    </style>
+</head>
+<body>
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MTP7GMJ3" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<header class="site-header">
+    <div class="header-container">
+        <a href="/" class="header-logo">Forte Web Designs</a>
+        <nav class="header-nav">
+            <a href="/index.html">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/work.html">Work</a>
+            <a href="/reviews.html">Reviews</a>
+            <a href="/writing.html">Writing</a>
+            <a href="/about.html">About</a>
+            <a href="/contact.html">Contact</a>
+        </nav>
+    </div>
+</header>
+
+<main class="main-content">
+
+    <!-- HERO -->
+    <div style="margin-bottom:4rem;">
+        <p class="section-title">Writing</p>
+        <h1 class="page-title">Frameworks, lessons,<br>and things that actually work.</h1>
+        <p class="body-text" style="max-width:580px;">
+            No fluff. These are the systems, patterns, and decisions we see working (and failing) across dozens of client projects.
+        </p>
+    </div>
+
+    <!-- POST LIST -->
+    <div class="post-list reveal">
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">Automation</div>
+                <div class="post-title">Why Most CRM Setups Fail Within 90 Days (And How to Fix It)</div>
+                <div class="post-excerpt">The tool isn't the problem. Most CRMs fail because nobody builds the workflow around the human behavior. Here's the pattern we see over and over.</div>
+            </div>
+            <div class="post-date">Jan 2026</div>
+        </div>
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">Growth Systems</div>
+                <div class="post-title">The Speed-to-Lead Problem: Why You're Losing 78% of Your Inbound Leads</div>
+                <div class="post-excerpt">Research is clear — respond within 5 minutes or you lose the lead. Most businesses respond in hours. Here's how to fix it with automation.</div>
+            </div>
+            <div class="post-date">Jan 2026</div>
+        </div>
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">Web Design</div>
+                <div class="post-title">Landing Pages That Convert: The 7-Element Framework We Use on Every Build</div>
+                <div class="post-excerpt">Most landing pages look good but don't convert. The difference isn't design — it's structure. Here are the seven elements every high-converting page needs.</div>
+            </div>
+            <div class="post-date">Dec 2025</div>
+        </div>
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">Automation</div>
+                <div class="post-title">Before You Hire: How to Calculate the ROI of Automating a Task</div>
+                <div class="post-excerpt">Every automation project starts with the same question: does the math work? Here's the simple framework we use to decide whether to build or skip.</div>
+            </div>
+            <div class="post-date">Dec 2025</div>
+        </div>
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">AI</div>
+                <div class="post-title">After-Hours AI Agents: What They're Good At and Where They Break Down</div>
+                <div class="post-excerpt">AI agents are genuinely useful for specific things. But most businesses either over-deploy them or never use them at all. Here's the honest breakdown.</div>
+            </div>
+            <div class="post-date">Nov 2025</div>
+        </div>
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">Growth Systems</div>
+                <div class="post-title">The Outbound Sequence That Booked 12 Calls in 30 Days (Full Template)</div>
+                <div class="post-excerpt">Cold outreach still works when it's done right. Here's the exact sequence structure, timing, and copy framework we use — and the reasoning behind each decision.</div>
+            </div>
+            <div class="post-date">Nov 2025</div>
+        </div>
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">Automation</div>
+                <div class="post-title">How We Automated $52,000 Worth of Annual Work for a Real Estate Wholesaler</div>
+                <div class="post-excerpt">A full walkthrough of the CR Deals Cincinnati project — the problem, the system we built, and what we'd do differently if we started today.</div>
+            </div>
+            <div class="post-date">Oct 2025</div>
+        </div>
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">Web Design</div>
+                <div class="post-title">Why We Stopped Using Page Builders (And What We Use Instead)</div>
+                <div class="post-excerpt">Page builders are fast to start and slow to scale. Here's the stack we moved to, why it loads faster and converts better, and when page builders still make sense.</div>
+            </div>
+            <div class="post-date">Oct 2025</div>
+        </div>
+
+        <div class="post-row">
+            <div class="post-content">
+                <div class="post-tag">Growth Systems</div>
+                <div class="post-title">The Foundation First Rule: Why Businesses Waste Thousands on Ads Before They're Ready</div>
+                <div class="post-excerpt">Running ads to a broken funnel is like filling a leaky bucket. Here's how to know if your foundation is ready — and what to fix before you spend a dollar on traffic.</div>
+            </div>
+            <div class="post-date">Sep 2025</div>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer-section">
+        <a href="mailto:seth@fortewebdesigns.com" class="footer-email-main">seth@fortewebdesigns.com</a>
+        <div class="footer-columns">
+            <div class="footer-col">
+                <h4>Services</h4>
+                <ul>
+                    <li><a href="/foundation.html">Foundation</a></li>
+                    <li><a href="/launch.html">Launch</a></li>
+                    <li><a href="/growth.html">Growth</a></li>
+                    <li><a href="/scale.html">Scale</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/work.html">Work</a></li>
+                    <li><a href="/reviews.html">Reviews</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <ul>
+                    <li><a href="https://www.linkedin.com/company/forte-web-designs" target="_blank" rel="noopener">LinkedIn</a></li>
+                    <li><a href="mailto:seth@fortewebdesigns.com">Email</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-location">Based in Grapevine, Texas. Serving clients nationwide.</p>
+            <p class="copyright">&copy; 2026 Seth Forte. All rights reserved.</p>
+        </div>
+    </div>
+
+</main>
+
+<script src="/scroll-reveal.js"></script>
+<script src="/theme-toggle.js"></script>
+<script src="/scroll-top.js"></script>
+</body>
+</html>
