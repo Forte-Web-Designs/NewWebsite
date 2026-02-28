@@ -11,16 +11,20 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
-        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        :root{--text-primary:#edf2f7;--text-secondary:#94a3b8;--text-muted:#64748b;--accent:#0088DB;--accent-warm:#38b2f5;--background:#0d1117;--background-alt:#121a28;--border:#1e2a3a;--card-bg:#172030}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(0,136,219,0.07) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(56,178,245,0.04) 0%,transparent 50%);background-attachment:fixed}
         a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
         a:hover{text-decoration:underline}
         .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
         .reveal.revealed{opacity:1;transform:translateY(0)}
         .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
         .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
-        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
-        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-logo{text-decoration:none;display:flex;align-items:center}
+        .header-logo:hover{opacity:0.85;text-decoration:none}
+        .logo-img{height:34px;width:auto;display:block}
+        .logo-img-light{display:none}
+        [data-theme="light"] .logo-img-dark{display:none}
+        [data-theme="light"] .logo-img-light{display:block}
         .header-nav{display:flex;gap:1.5rem;align-items:center}
         .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
         .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
@@ -30,7 +34,7 @@
         .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
         .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
         .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
-        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,115,74,0.35);text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,136,219,0.35);text-decoration:none}
         .btn-secondary{display:inline-block;border:1px solid var(--border);color:var(--text-secondary);padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:all 0.2s ease;text-decoration:none}
         .btn-secondary:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
 
@@ -89,7 +93,10 @@
 
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="header-logo">Forte Web Designs</a>
+        <a href="/" class="header-logo">
+            <img src="/images/home/logo-dark.svg" class="logo-img logo-img-dark" alt="Forte Web Designs">
+            <img src="/images/home/logo-header-light.svg" class="logo-img logo-img-light" alt="Forte Web Designs">
+        </a>
         <nav class="header-nav">
             <a href="/index.html">Home</a>
             <a href="/services.html">Services</a>
@@ -123,42 +130,42 @@
         <p class="section-title">What's Included</p>
         <div class="deliverable-list">
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#9741;</div>
+                <div class="deliverable-icon">MCH</div>
                 <div>
                     <div class="deliverable-title">Multi-Channel Lead Capture</div>
                     <div class="deliverable-desc">Expand beyond one source. Website, social, Google, referral, and inbound all feeding into the same CRM with proper tagging and attribution. You'll know exactly where every lead is coming from.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#128228;</div>
+                <div class="deliverable-icon">OUT</div>
                 <div>
                     <div class="deliverable-title">Outbound Prospecting Sequences</div>
                     <div class="deliverable-desc">Cold email and LinkedIn outreach built and automated. List building, personalization at scale, sequence cadence, and inbox management. Outbound that doesn't feel like spam.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#129302;</div>
+                <div class="deliverable-icon">AI</div>
                 <div>
                     <div class="deliverable-title">After-Hours AI Agents</div>
-                    <div class="deliverable-desc">Leads don't stop coming in at 5pm. AI agents handle initial contact, qualify leads, and book calls while you sleep — so you're not losing warm leads to a competitor who responded first.</div>
+                    <div class="deliverable-desc">Leads don't stop coming in at 5pm. AI agents handle initial contact, qualify leads, and book calls while you sleep, so you're not losing warm leads to a competitor who responded first.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#11088;</div>
+                <div class="deliverable-icon">REV</div>
                 <div>
                     <div class="deliverable-title">Review Automation</div>
                     <div class="deliverable-desc">Automated review request sequences triggered after project completion, delivery, or payment. Google, Facebook, and Trustpilot reviews captured at the peak of client satisfaction.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#128101;</div>
+                <div class="deliverable-icon">SOC</div>
                 <div>
                     <div class="deliverable-title">Social Media Automation</div>
                     <div class="deliverable-desc">Scheduling, repurposing, and auto-DM sequences for Instagram and LinkedIn. Turn content into leads automatically without spending hours in the apps every day.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#127981;</div>
+                <div class="deliverable-icon">LOC</div>
                 <div>
                     <div class="deliverable-title">Multi-Location Support</div>
                     <div class="deliverable-desc">For businesses with multiple locations or service areas, we build systems that route leads to the right team, track performance by location, and keep reporting unified.</div>

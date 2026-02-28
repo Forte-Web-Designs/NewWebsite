@@ -11,12 +11,13 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
-        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        :root{--text-primary:#edf2f7;--text-secondary:#94a3b8;--text-muted:#64748b;--accent:#0088DB;--accent-warm:#38b2f5;--background:#0d1117;--background-alt:#121a28;--border:#1e2a3a;--card-bg:#172030}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(0,136,219,0.07) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(56,178,245,0.04) 0%,transparent 50%);background-attachment:fixed}
         a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
         a:hover{text-decoration:underline}
         @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
         @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+        @keyframes gradientShift{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
         .animate-fade-in{animation:fadeIn 0.6s ease forwards}
         .animate-fade-up{animation:fadeInUp 0.6s ease forwards}
         .animate-delay-1{animation-delay:0.1s;opacity:0}
@@ -26,8 +27,12 @@
         .reveal.revealed{opacity:1;transform:translateY(0)}
         .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
         .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
-        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
-        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-logo{text-decoration:none;display:flex;align-items:center}
+        .header-logo:hover{opacity:0.85;text-decoration:none}
+        .logo-img{height:34px;width:auto;display:block}
+        .logo-img-light{display:none}
+        [data-theme="light"] .logo-img-dark{display:none}
+        [data-theme="light"] .logo-img-light{display:block}
         .header-nav{display:flex;gap:1.5rem;align-items:center}
         .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
         .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
@@ -35,22 +40,15 @@
         .section-divider{border:none;border-top:1px solid var(--border);margin:4rem 0}
         .section-title{font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:2.5rem}
         .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
-        .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
         .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
-        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,115,74,0.35);text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,136,219,0.35);text-decoration:none}
         .btn-secondary{display:inline-block;border:1px solid var(--border);color:var(--text-secondary);padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:all 0.2s ease;text-decoration:none}
         .btn-secondary:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
 
         /* Hero */
-        .hero-label{font-size:0.8rem;font-weight:600;color:var(--text-muted);text-transform:uppercase;letter-spacing:0.12em;margin-bottom:1.25rem}
-        .rotating-word{color:var(--accent);display:inline-block;min-width:200px;transition:opacity 0.3s}
-
-        /* Stats */
-        .stats-row{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--border);border-radius:10px;overflow:hidden;margin:3rem 0}
-        .stat-item{padding:1.75rem 1.5rem;text-align:center;border-right:1px solid var(--border)}
-        .stat-item:last-child{border-right:none}
-        .stat-num{font-size:1.75rem;font-weight:700;color:var(--text-primary);letter-spacing:-0.02em;display:block}
-        .stat-label{font-size:0.82rem;color:var(--text-muted);margin-top:0.2rem}
+        .rotating-tagline{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1.25rem;letter-spacing:-0.02em;line-height:1.3}
+        .rotating-word{display:inline-block;font-weight:700;background:linear-gradient(135deg,#0088DB,#38b2f5,#0088DB,#38b2f5);background-size:300% 300%;-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;animation:gradientShift 6s ease infinite;transition:opacity 0.4s ease}
+        @media(max-width:600px){.rotating-tagline{font-size:1.5rem}}
 
         /* Stage cards */
         .stage-grid{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;margin-bottom:1.5rem}
@@ -86,6 +84,9 @@
         .review-author{font-size:0.8rem;font-weight:600;color:var(--text-primary)}
         .review-project{font-size:0.75rem;color:var(--text-muted);margin-top:0.1rem}
 
+        /* Video */
+        .site-video{width:100%;border-radius:10px;border:1px solid var(--border);display:block}
+
         /* Footer */
         .footer-section{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
         .footer-email-main{color:var(--text-secondary);font-size:1rem;margin-bottom:2.5rem;display:block}
@@ -104,9 +105,6 @@
             .header-nav{gap:0.85rem}
             .header-nav a{font-size:0.82rem}
             .main-content{padding:3rem 1.25rem 4rem}
-            .stats-row{grid-template-columns:1fr}
-            .stat-item{border-right:none;border-bottom:1px solid var(--border)}
-            .stat-item:last-child{border-bottom:none}
             .stage-grid{grid-template-columns:1fr}
             .review-grid{grid-template-columns:1fr}
             .footer-columns{grid-template-columns:1fr 1fr}
@@ -122,7 +120,10 @@
 
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="header-logo">Forte Web Designs</a>
+        <a href="/" class="header-logo">
+            <img src="/images/home/logo-dark.svg" class="logo-img logo-img-dark" alt="Forte Web Designs">
+            <img src="/images/home/logo-header-light.svg" class="logo-img logo-img-light" alt="Forte Web Designs">
+        </a>
         <nav class="header-nav">
             <a href="/index.html">Home</a>
             <a href="/services.html">Services</a>
@@ -139,10 +140,7 @@
 
     <!-- HERO -->
     <div style="margin-bottom:4rem;">
-        <p class="hero-label animate-fade-in">Grapevine, TX &mdash; Serving clients nationwide</p>
-        <h1 class="page-title animate-fade-up animate-delay-1">
-            Growth isn't luck.<br>It's <span id="rotating-word">A System</span>
-        </h1>
+        <h1 class="rotating-tagline animate-fade-up animate-delay-1">Business Growth Isn't Luck. It's <span class="rotating-word">A System</span></h1>
         <p class="body-text animate-fade-up animate-delay-2" style="font-size:1.1rem;max-width:640px;">
             We build the automation systems, pipelines, conversion funnels, and high-converting websites that turn traffic into leads, eliminate manual work, and make growth repeatable.
         </p>
@@ -152,27 +150,11 @@
         </div>
     </div>
 
-    <!-- STATS -->
-    <div class="stats-row reveal">
-        <div class="stat-item">
-            <span class="stat-num">$52K</span>
-            <span class="stat-label">saved per year &mdash; CR Deals Cincinnati</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-num">20 hrs</span>
-            <span class="stat-label">returned per week &mdash; Hollow Bamboo Films</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-num">$4M</span>
-            <span class="stat-label">opportunity found &mdash; Revolut</span>
-        </div>
-    </div>
-
     <hr class="section-divider">
 
     <!-- SERVICES -->
     <div class="reveal">
-        <p class="section-title">Services &mdash; Four Stages</p>
+        <p class="section-title">Services</p>
         <div class="stage-grid">
             <a href="/foundation.html" class="stage-card stage-foundation">
                 <div class="stage-number">1</div>
@@ -274,11 +256,21 @@
         <div style="display:flex;gap:1.5rem;align-items:flex-start;">
             <img src="/images/about/headshot-6.jpg" alt="Seth Forte" style="width:72px;height:72px;border-radius:50%;object-fit:cover;flex-shrink:0;border:2px solid var(--border);">
             <div>
-                <p style="font-weight:600;color:var(--text-primary);margin-bottom:0.5rem;">Seth Forte &mdash; Grapevine, TX</p>
+                <p style="font-weight:600;color:var(--text-primary);margin-bottom:0.5rem;">Seth Forte, Founder</p>
                 <p class="body-text" style="margin-bottom:1rem;">We solve a wide variety of problems for growing businesses: automation, integrations, custom software, and the infrastructure that holds it all together. We start every project by figuring out what the problem is actually costing you. If the math works, we build it. If it doesn't, we'll tell you.</p>
                 <a href="/about.html" class="btn-secondary" style="font-size:0.875rem;padding:0.55rem 1.25rem;">More about us &rarr;</a>
             </div>
         </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <!-- VIDEO -->
+    <div class="reveal">
+        <p class="section-title">See How We Work</p>
+        <video class="site-video" controls preload="none">
+            <source src="/video-walkthroughs/Business%20Growth%20Systems%20%26%20AI%20Automation%20%7C%20Forte%20(DFW)%20-%2026%20October%202025.mp4" type="video/mp4">
+        </video>
     </div>
 
     <!-- FOOTER -->
@@ -320,20 +312,19 @@
 </main>
 
 <script>
-// Rotating word
 (function(){
-    var el = document.getElementById('rotating-word');
+    var words = ['A System','Using The Right Data','A Framework','A Process','Execution'];
+    var index = 0;
+    var el = document.querySelector('.rotating-word');
     if (!el) return;
-    var words = ['A System','The Right Data','A Framework','A Process','Execution'];
-    var i = 0;
     setInterval(function(){
         el.style.opacity = '0';
         setTimeout(function(){
-            i = (i+1) % words.length;
-            el.textContent = words[i];
+            index = (index + 1) % words.length;
+            el.textContent = words[index];
             el.style.opacity = '1';
-        }, 300);
-    }, 2500);
+        }, 400);
+    }, 3000);
 })();
 </script>
 <script src="/scroll-reveal.js"></script>

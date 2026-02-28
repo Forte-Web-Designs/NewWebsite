@@ -11,16 +11,20 @@
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-MTP7GMJ3');</script>
     <style>
         *{margin:0;padding:0;box-sizing:border-box}
-        :root{--text-primary:#f0ece4;--text-secondary:#b8b2a8;--text-muted:#8a8578;--accent:#e8734a;--accent-warm:#f0b866;--background:#0f1117;--background-alt:#161922;--border:#2b2f3d;--card-bg:#1c1f2b}
-        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(232,115,74,0.06) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(240,184,102,0.04) 0%,transparent 50%);background-attachment:fixed}
+        :root{--text-primary:#edf2f7;--text-secondary:#94a3b8;--text-muted:#64748b;--accent:#0088DB;--accent-warm:#38b2f5;--background:#0d1117;--background-alt:#121a28;--border:#1e2a3a;--card-bg:#172030}
+        body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;font-size:17px;line-height:1.7;color:var(--text-primary);background:var(--background);background-image:radial-gradient(ellipse at 20% 0%,rgba(0,136,219,0.07) 0%,transparent 50%),radial-gradient(ellipse at 80% 100%,rgba(56,178,245,0.04) 0%,transparent 50%);background-attachment:fixed}
         a{color:var(--accent);text-decoration:none;transition:color 0.2s ease}
         a:hover{text-decoration:underline}
         .reveal{opacity:0;transform:translateY(16px);transition:opacity 0.5s ease,transform 0.5s ease}
         .reveal.revealed{opacity:1;transform:translateY(0)}
         .site-header{position:sticky;top:0;z-index:100;background:var(--background);border-bottom:1px solid var(--border)}
         .header-container{max-width:1000px;margin:0 auto;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between}
-        .header-logo{font-size:1.1rem;font-weight:600;color:var(--text-primary);text-decoration:none}
-        .header-logo:hover{color:var(--accent);text-decoration:none}
+        .header-logo{text-decoration:none;display:flex;align-items:center}
+        .header-logo:hover{opacity:0.85;text-decoration:none}
+        .logo-img{height:34px;width:auto;display:block}
+        .logo-img-light{display:none}
+        [data-theme="light"] .logo-img-dark{display:none}
+        [data-theme="light"] .logo-img-light{display:block}
         .header-nav{display:flex;gap:1.5rem;align-items:center}
         .header-nav a{color:var(--text-secondary);font-size:0.9rem;text-decoration:none;transition:color 0.2s ease}
         .header-nav a:hover,.header-nav a.active{color:var(--text-primary)}
@@ -30,7 +34,7 @@
         .body-text{color:var(--text-secondary);margin-bottom:1.75rem;line-height:1.8}
         .page-title{font-size:clamp(1.75rem,4vw,2.5rem);font-weight:700;color:var(--text-primary);margin-bottom:1rem;letter-spacing:-0.02em}
         .btn-primary{display:inline-block;background:var(--accent);color:#fff;padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:transform 0.2s ease,box-shadow 0.2s ease;text-decoration:none}
-        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(232,115,74,0.35);text-decoration:none}
+        .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,136,219,0.35);text-decoration:none}
         .btn-secondary{display:inline-block;border:1px solid var(--border);color:var(--text-secondary);padding:0.75rem 1.75rem;border-radius:6px;font-size:0.95rem;font-weight:500;transition:all 0.2s ease;text-decoration:none}
         .btn-secondary:hover{border-color:var(--accent);color:var(--accent);text-decoration:none}
 
@@ -89,7 +93,10 @@
 
 <header class="site-header">
     <div class="header-container">
-        <a href="/" class="header-logo">Forte Web Designs</a>
+        <a href="/" class="header-logo">
+            <img src="/images/home/logo-dark.svg" class="logo-img logo-img-dark" alt="Forte Web Designs">
+            <img src="/images/home/logo-header-light.svg" class="logo-img logo-img-light" alt="Forte Web Designs">
+        </a>
         <nav class="header-nav">
             <a href="/index.html">Home</a>
             <a href="/services.html">Services</a>
@@ -110,7 +117,7 @@
         <h1 class="page-title">Launch</h1>
         <p style="font-size:1.1rem;color:var(--text-secondary);font-style:italic;margin-bottom:1.25rem;">Get people into the system. Start generating revenue.</p>
         <p class="body-text" style="max-width:640px;">
-            Once your foundation is solid, it's time to drive traffic and convert it. We build the ads, funnels, and automations that turn cold traffic into booked calls and paying customers — without you having to follow up manually.
+            Once your foundation is solid, it's time to drive traffic and convert it. We build the ads, funnels, and automations that turn cold traffic into booked calls and paying customers, without you having to follow up manually.
         </p>
         <div style="display:flex;gap:0.75rem;flex-wrap:wrap;">
             <a href="https://calendly.com/seth-fortewebdesigns/30min" target="_blank" rel="noopener" class="btn-primary">Book a Call</a>
@@ -123,45 +130,45 @@
         <p class="section-title">What's Included</p>
         <div class="deliverable-list">
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#128200;</div>
+                <div class="deliverable-icon">ADS</div>
                 <div>
                     <div class="deliverable-title">Ad Strategy &amp; Setup</div>
-                    <div class="deliverable-desc">Facebook, Instagram, and Google ad campaigns built from scratch — audience targeting, creative direction, copy, and budget structure. We set up the campaigns that actually match your offer to your buyer.</div>
+                    <div class="deliverable-desc">Facebook, Instagram, and Google ad campaigns built from scratch, audience targeting, creative direction, copy, and budget structure. We set up the campaigns that actually match your offer to your buyer.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#9654;</div>
+                <div class="deliverable-icon">FNL</div>
                 <div>
                     <div class="deliverable-title">Sales Funnels &amp; Landing Pages</div>
                     <div class="deliverable-desc">High-converting landing pages and multi-step funnels that move leads from cold traffic to booked call or purchase. Built with your offer, your audience, and your conversion goal in mind.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#128233;</div>
+                <div class="deliverable-icon">SEQ</div>
                 <div>
                     <div class="deliverable-title">Email &amp; SMS Nurture Sequences</div>
-                    <div class="deliverable-desc">Automated sequences that follow up with leads at the right time, with the right message. Open a lead, don't close them immediately — follow up over 7-14 days and let the sequence do the work.</div>
+                    <div class="deliverable-desc">Automated sequences that follow up with leads at the right time, with the right message. Open a lead, don't close them immediately, follow up over 7-14 days and let the sequence do the work.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#128197;</div>
+                <div class="deliverable-icon">BOOK</div>
                 <div>
                     <div class="deliverable-title">Booking Automation</div>
-                    <div class="deliverable-desc">Seamless flow from ad click to booked call — form submission triggers confirmation, calendar invite, prep email, and reminder sequence. No manual scheduling. No dropped balls.</div>
+                    <div class="deliverable-desc">Seamless flow from ad click to booked call, form submission triggers confirmation, calendar invite, prep email, and reminder sequence. No manual scheduling. No dropped balls.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#127891;</div>
+                <div class="deliverable-icon">OPT</div>
                 <div>
                     <div class="deliverable-title">Lead Magnets &amp; Opt-In Flows</div>
-                    <div class="deliverable-desc">Build your list with a valuable freebie, checklist, or guide — then drop leads into a nurture sequence. Works alongside paid traffic or as a standalone organic strategy.</div>
+                    <div class="deliverable-desc">Build your list with a valuable freebie, checklist, or guide, then drop leads into a nurture sequence. Works alongside paid traffic or as a standalone organic strategy.</div>
                 </div>
             </div>
             <div class="deliverable-item">
-                <div class="deliverable-icon">&#128257;</div>
+                <div class="deliverable-icon">RTG</div>
                 <div>
                     <div class="deliverable-title">Retargeting Setup</div>
-                    <div class="deliverable-desc">Pixel setup and retargeting audiences for website visitors, video viewers, and form openers. Most people don't convert on the first touch — retargeting brings them back.</div>
+                    <div class="deliverable-desc">Pixel setup and retargeting audiences for website visitors, video viewers, and form openers. Most people don't convert on the first touch, retargeting brings them back.</div>
                 </div>
             </div>
         </div>
