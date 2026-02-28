@@ -5,7 +5,6 @@ import "./globals.css";
 import ConditionalHeader from "@/components/layout/ConditionalHeader";
 import Footer from "@/components/layout/Footer";
 import ScrollToTopButton from "@/components/ScrollToTopButton";
-import MobileStickyCTA from "@/components/MobileStickyCA";
 import { ThemeProvider } from "./providers/ThemeProvider";
 import CriticalCSS from "@/components/performance/CriticalCSS";
 import PerformanceMonitor from "@/components/performance/PerformanceMonitor";
@@ -210,7 +209,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${roboto.variable} ${inter.variable} ${interDisplay.variable} antialiased min-h-screen flex flex-col pb-14`} suppressHydrationWarning>
+      <body className={`${roboto.variable} ${inter.variable} ${interDisplay.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
         <CriticalCSS />
         <ResourceHints />
         <JavaScriptOptimizer />
@@ -232,7 +231,6 @@ export default function RootLayout({
           </div>
           <Footer />
           <ScrollToTopButton />
-          <MobileStickyCTA />
           <PerformanceMonitor />
         </ThemeProvider>
       </body>

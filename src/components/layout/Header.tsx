@@ -1,7 +1,7 @@
 'use client';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ThemeToggle } from '@/components/ThemeToggle';
 
 const NAV_LINKS = [
@@ -37,7 +37,14 @@ const HeaderLink = ({ href, children }: { href: string; children: React.ReactNod
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [atTop, setAtTop] = useState(true);
   const pathname = usePathname();
+
+  useEffect(() => {
+    const onScroll = () => setAtTop(window.scrollY < 300);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
     <>
@@ -71,14 +78,14 @@ export default function Header() {
               ))}
             </nav>
 
-            {/* Desktop right: theme toggle */}
+            {/* Desktop right: theme toggle (hidden when scrolled down — floating one takes over) */}
             <div className="hidden md:flex items-center">
-              <ThemeToggle />
+              {atTop && <ThemeToggle />}
             </div>
 
             {/* Mobile: theme toggle + hamburger */}
             <div className="md:hidden flex items-center gap-3">
-              <ThemeToggle />
+              {atTop && <ThemeToggle />}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 className="p-1 text-gray-700 dark:text-gray-300"
