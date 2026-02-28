@@ -155,7 +155,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl">
 
           <SimpleScrollReveal direction="up">
-            <div className="mb-10 max-w-xl">
+            <div className="mb-10 max-w-xl mx-auto text-center sm:mx-0 sm:text-left">
               <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
                 The System
               </p>
@@ -201,13 +201,10 @@ export default function ServicesPage() {
                 {/* Gradient border wrapper */}
                 <div className="h-full rounded-2xl p-px bg-gradient-to-br from-blue-500/60 via-indigo-500/30 to-transparent dark:from-blue-500/50 dark:via-indigo-500/20">
                   <div className="flex h-full flex-col rounded-2xl bg-white p-8 dark:bg-gray-950">
-                    <div className="mb-6 flex items-center justify-between">
+                    <div className="mb-6">
                       <div className="flex h-8 w-8 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-xs font-bold text-white shadow-sm shadow-blue-500/30">
                         {tier.step}
                       </div>
-                      <span className="rounded-full bg-gray-100 px-2.5 py-0.5 text-xs font-medium text-gray-500 dark:bg-gray-800 dark:text-gray-400">
-                        {tier.timeline}
-                      </span>
                     </div>
                     <h3 className="mb-1.5 text-xl font-bold text-gray-900 dark:text-white">
                       {tier.name}
@@ -317,7 +314,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl">
 
           <SimpleScrollReveal direction="up">
-            <div className="mb-14 max-w-xl">
+            <div className="mb-14 max-w-xl mx-auto text-center sm:mx-0 sm:text-left">
               <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
                 Results
               </p>

@@ -45,8 +45,8 @@ export default function FAQ() {
       a: "I don't disappear after launch. Support is included. If something breaks, I fix it."
     },
     {
-      q: "Do you work with businesses outside Dallas?",
-      a: "Yes. Based in Dallas, working with clients nationwide. Everything is remote."
+      q: "Do you work with businesses outside Grapevine?",
+      a: "Yes. Based in Grapevine, TX, working with clients nationwide. Everything is remote."
     }
   ];
 
