@@ -155,7 +155,7 @@ export default function ServicesPage() {
         <div className="mx-auto max-w-6xl">
 
           <SimpleScrollReveal direction="up">
-            <div className="mb-10 max-w-xl mx-auto text-center sm:mx-0 sm:text-left">
+            <div className="mb-10 max-w-xl mx-auto text-center">
               <p className="mb-3 text-xs font-bold uppercase tracking-widest text-blue-600 dark:text-blue-400">
                 The System
               </p>
@@ -165,32 +165,6 @@ export default function ServicesPage() {
               <p className="mt-4 text-base text-gray-500 dark:text-gray-400 sm:text-lg">
                 Each stage builds on the last. Most businesses are missing at least one.
               </p>
-            </div>
-          </SimpleScrollReveal>
-
-          {/* Timeline progress bar */}
-          <SimpleScrollReveal direction="up" delay={80}>
-            <div className="mb-10 flex items-center">
-              {TIERS.map((tier, i) => (
-                <div key={tier.step} className="flex flex-1 items-center">
-                  <div className="flex flex-col items-center gap-1.5 flex-shrink-0">
-                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-xs font-bold text-white shadow-md shadow-blue-500/20">
-                      {tier.step}
-                    </div>
-                    <span className="hidden text-xs font-medium text-gray-500 dark:text-gray-400 sm:block whitespace-nowrap">
-                      {tier.name}
-                    </span>
-                  </div>
-                  {i < TIERS.length - 1 && (
-                    <div className="mx-2 flex flex-1 items-center gap-1">
-                      <div className="h-px flex-1 bg-gradient-to-r from-blue-400 to-indigo-400 dark:from-blue-600 dark:to-indigo-600" />
-                      <svg className="h-3 w-3 flex-shrink-0 text-indigo-400 dark:text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                  )}
-                </div>
-              ))}
             </div>
           </SimpleScrollReveal>
 
