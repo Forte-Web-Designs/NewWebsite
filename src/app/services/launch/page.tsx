@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 const PROBLEMS = [
   'Your CRM is set up perfectly. Zero contacts in it. A pipeline with no deals is just a pretty diagram.',
   'You post on social media when you remember. Maybe 5–10 leads a month trickle in. Not enough to build a business on.',
-  'Someone fills out a form. You see the email three hours later. By then they've already called your competitor.',
+  "Someone fills out a form. You see the email three hours later. By then they've already called your competitor.",
   'No funnel. No nurture sequence. No way to turn a stranger into a customer without doing every step manually.',
 ];
 

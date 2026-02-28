@@ -11,8 +11,8 @@ export const metadata: Metadata = {
 
 const COST_OF_NOTHING = [
   'Every lead that hits a broken form or dead inbox is revenue you already paid for and lost.',
-  'Every email that lands in spam burns the sender reputation you'll need later.',
-  'Every week without tracking is a week you're spending money blind.',
+  "Every email that lands in spam burns the sender reputation you'll need later.",
+  "Every week without tracking is a week you're spending money blind.",
   'Every manual follow-up you forget is a customer your competitor gets instead.',
 ];
 
@@ -45,7 +45,7 @@ const DELIVERABLES = [
   {
     title: 'Tracking',
     description:
-      'Google Analytics or Meta Pixel installed. Basic conversion events configured. You'll know where traffic is coming from and what it's doing.',
+      "Google Analytics or Meta Pixel installed. Basic conversion events configured. You'll know where traffic is coming from and what it's doing.",
   },
   {
     title: 'Integrations',
@@ -55,7 +55,7 @@ const DELIVERABLES = [
   {
     title: 'Documentation and Training',
     description:
-      'System overview document, credentials, a Loom walkthrough of everything, and post-handoff support so you're not lost after delivery.',
+      "System overview document, credentials, a Loom walkthrough of everything, and post-handoff support so you're not lost after delivery.",
   },
 ];
 
